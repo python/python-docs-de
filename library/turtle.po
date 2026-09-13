@@ -3901,7 +3901,7 @@ msgstr ""
 
 #: ../../library/turtle.rst:2288
 msgid "one of the values 1.0 or 255"
-msgstr "einer der Werte 1.0 oder 255""
+msgstr "einer der Werte 1.0 oder 255"
 
 #: ../../library/turtle.rst:2290
 msgid ""
