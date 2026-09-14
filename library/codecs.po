@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-05 16:53+0200\n"
+"POT-Creation-Date: 2026-09-14 20:17+0000\n"
 "PO-Revision-Date: 2025-09-16 00:00+0000\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
 "Language: de\n"
@@ -1326,15 +1326,15 @@ msgid ""
 "charmap encoded file starts with these byte values (which would e.g. map to"
 msgstr ""
 
-#: ../../library/codecs.rst:0
+#: ../../library/codecs.rst:1049
 msgid "LATIN SMALL LETTER I WITH DIAERESIS"
 msgstr ""
 
-#: ../../library/codecs.rst:0
+#: ../../library/codecs.rst:1050
 msgid "RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK"
 msgstr ""
 
-#: ../../library/codecs.rst:0
+#: ../../library/codecs.rst:1051
 msgid "INVERTED QUESTION MARK"
 msgstr ""
 
