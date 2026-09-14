@@ -35,6 +35,19 @@ jobs:
           cd cpython-src/Doc
           PATH="./venv/bin:$PATH" make gettext
 
+      - name: gettext installieren (für msgmerge)
+        run: sudo apt-get update && sudo apt-get install -y gettext
+
+      - name: msgmerge gegen alle .po-Dateien laufen lassen
+        run: |
+          for pot in $(find cpython-src/Doc/build/gettext -name "*.pot"); do
+            rel="${pot#cpython-src/Doc/build/gettext/}"
+            po="${rel%.pot}.po"
+            if [ -f "$po" ]; then
+              msgmerge --quiet --update "$po" "$pot"
+            fi
+          done
+
       - name: msgmerge gegen alle .po-Dateien laufen lassen
         run: |
           for pot in $(find cpython-src/Doc/build/gettext -name "*.pot"); do
