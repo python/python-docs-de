@@ -5050,7 +5050,7 @@ msgstr "Türme von Hannoi"
 
 #: ../../library/turtle.rst:2843
 msgid "Rectangular Turtles as Hanoi discs (:func:`shape`, :func:`shapesize`)"
-msgstr "Rechteckige Turtles als Hanoi-Scheiben (:func:shape, :func:shapesize)"
+msgstr "Rechteckige Turtles als Hanoi-Scheiben (:func:`shape`, :func:`shapesize`)"
 
 #: ../../library/turtle.rst:2847
 msgid "``nim``"
