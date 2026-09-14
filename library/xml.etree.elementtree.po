@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-22 12:07+0200\n"
+"POT-Creation-Date: 2026-09-14 20:17+0000\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
@@ -40,7 +40,7 @@ msgid "This module will use a fast implementation whenever available."
 msgstr ""
 
 #: ../../library/xml.etree.elementtree.rst:17
-msgid "The :mod:`!xml.etree.cElementTree` module is deprecated."
+msgid "The :mod:`!xml.etree.cElementTree` alias of this module is deprecated."
 msgstr ""
 
 #: ../../library/xml.etree.elementtree.rst:23
