@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -875,9 +874,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/difflib.rst:722
-#, fuzzy
 msgid "Differ example"
-msgstr "Zum Beispiel::"
+msgstr "Differ-Beispiel"
 
 #: ../../library/difflib.rst:724
 msgid ""

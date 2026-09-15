@@ -6,14 +6,13 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
+"Last-Translator: @sba72\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -3553,9 +3552,8 @@ msgid ""
 msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.17.rst:79
-#, fuzzy
 msgid ":mod:`tkinter`:"
-msgstr "tkinter"
+msgstr ":mod:`tkinter`:"
 
 #: ../../deprecations/pending-removal-in-3.17.rst:81
 msgid ""
@@ -3572,13 +3570,13 @@ msgid "Pending removal in Python 3.18"
 msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.18.rst:4
-#, fuzzy
 msgid ""
 "No longer accept a boolean value when a file descriptor is expected. "
 "(Contributed by Serhiy Storchaka in :gh:`82626`.)"
 msgstr ""
-"Verwende stattdessen :class:`ast.Constant`. (Beigetragen von Serhiy "
-"Storchaka in :gh:`90953`.)"
+"Es wird kein boolescher Wert mehr akzeptiert, wenn ein "
+"Dateideskriptor erwartet wird. (Beigetragen von Serhiy Storchaka "
+"in :gh:`82626`.)"
 
 #: ../../deprecations/pending-removal-in-3.18.rst:9
 msgid ""
@@ -3795,10 +3793,9 @@ msgid ":mod:`zlib`"
 msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.20.rst:40
-#, fuzzy
 msgid "(Contributed by Hugo van Kemenade and Stan Ulbrych in :gh:`76007`.)"
 msgstr ""
-"(Beigetragen von Jason R. Coombs und Hugo van Kemenade in :gh:`93963`.)"
+"(Beigetragen von Hugo van Kemenade und Stan Ulbrych in :gh:`76007`.)"
 
 #: ../../deprecations/pending-removal-in-3.20.rst:44
 msgid ""

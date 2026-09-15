@@ -6,14 +6,13 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
 "PO-Revision-Date: 2025-09-16 00:01+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
+"Last-Translator: @sba72\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -1968,7 +1967,6 @@ msgstr ""
 
 #: ../../library/threading.rst:1479 ../../library/threading.rst:1516
 #: ../../library/threading.rst:1567
-#, fuzzy
 msgid "Example:"
 msgstr "Zum Beispiel::"
 
