@@ -3574,9 +3574,8 @@ msgid ""
 "No longer accept a boolean value when a file descriptor is expected. "
 "(Contributed by Serhiy Storchaka in :gh:`82626`.)"
 msgstr ""
-"Es wird kein boolescher Wert mehr akzeptiert, wenn ein "
-"Dateideskriptor erwartet wird. (Beigetragen von Serhiy Storchaka "
-"in :gh:`82626`.)"
+"Es wird kein boolescher Wert mehr akzeptiert, wenn ein Dateideskriptor "
+"erwartet wird. (Beigetragen von Serhiy Storchaka in :gh:`82626`.)"
 
 #: ../../deprecations/pending-removal-in-3.18.rst:9
 msgid ""
@@ -3794,8 +3793,7 @@ msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.20.rst:40
 msgid "(Contributed by Hugo van Kemenade and Stan Ulbrych in :gh:`76007`.)"
-msgstr ""
-"(Beigetragen von Hugo van Kemenade und Stan Ulbrych in :gh:`76007`.)"
+msgstr "(Beigetragen von Hugo van Kemenade und Stan Ulbrych in :gh:`76007`.)"
 
 #: ../../deprecations/pending-removal-in-3.20.rst:44
 msgid ""

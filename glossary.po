@@ -2422,10 +2422,9 @@ msgid ""
 "array in other languages than to a linked list since access to elements is "
 "*O*\\ (1).  See :ref:`time-complexity`."
 msgstr ""
-"Eine eingebaute Python-:term:`Sequenz <sequence>`. Trotz ihres Namens "
-"ähnelt sie eher einem Array in anderen Sprachen als einer "
-"verketteten Liste, da der Zugriff auf Elemente *O*\\ (1) ist. Siehe "
-":ref:`time-complexity`."
+"Eine eingebaute Python-:term:`Sequenz <sequence>`. Trotz ihres Namens ähnelt "
+"sie eher einem Array in anderen Sprachen als einer verketteten Liste, da der "
+"Zugriff auf Elemente *O*\\ (1) ist. Siehe :ref:`time-complexity`."
 
 #: ../../glossary.rst:954
 msgid "list comprehension"

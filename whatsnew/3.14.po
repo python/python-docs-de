@@ -4654,8 +4654,7 @@ msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.20.rst:40
 msgid "(Contributed by Hugo van Kemenade and Stan Ulbrych in :gh:`76007`.)"
-msgstr ""
-"(Beigetragen von Hugo van Kemenade and Stan Ulbrych in :gh:`93963`.)"
+msgstr "(Beigetragen von Hugo van Kemenade and Stan Ulbrych in :gh:`93963`.)"
 
 #: ../../deprecations/pending-removal-in-3.20.rst:44
 msgid ""
