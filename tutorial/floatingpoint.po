@@ -449,8 +449,8 @@ msgid ""
 "again giving the exact value stored by your computer:"
 msgstr ""
 "Die Methode  :meth:`float.hex`  gibt einen Float-Wert im Hexadezimalformat "
-"(Basis 16) aus und liefert wiederum den exakten Wert, der auf deinem Computer "
-"gespeichert ist:"
+"(Basis 16) aus und liefert wiederum den exakten Wert, der auf deinem "
+"Computer gespeichert ist:"
 
 #: ../../tutorial/floatingpoint.rst:199
 msgid ""

@@ -57,9 +57,9 @@ msgid ""
 "This will keep :func:`os.open` from shadowing the built-in :func:`open` "
 "function which operates much differently."
 msgstr ""
-"Verwende unbedingt den Stil ``import os`` anstelle von ``from os import "
-"*`` “. Dadurch wird verhindert, dass :func:`os.open` die integrierte "
-"Funktion :func:`open` überschreibt, die ganz anders funktioniert."
+"Verwende unbedingt den Stil ``import os`` anstelle von ``from os import *`` "
+"“. Dadurch wird verhindert, dass :func:`os.open` die integrierte Funktion :"
+"func:`open` überschreibt, die ganz anders funktioniert."
 
 #: ../../tutorial/stdlib.rst:29
 msgid ""
