@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR Swen Bachmann <142266608+sba72@users.noreply.github.com>, 2026.
 #
-# Translators:
+# Translators: @sba72
 # python-doc bot, 2025
 #
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-15 09:12+0000\n"
 "PO-Revision-Date: 2026-08-6 00:02+0000\n"
-"Last-Translator: Swen Bachmann <142266608+sba72@users.noreply.github.com>\n"
+"Last-Translator: @sba72\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -49,7 +49,6 @@ msgid ""
 msgstr ""
 
 #: ../../tutorial/whatnow.rst:17
-#, fuzzy
 msgid ""
 ":ref:`library-index`: gives complete (though terse) reference material about "
 "types, functions, and the modules in the standard library.  The standard "

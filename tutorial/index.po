@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-15 09:12+0000\n"
 "PO-Revision-Date: 2026-07-31 21:31+0000\n"
-"Last-Translator: \n"
+"Last-Translator: @sba72\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -87,7 +87,6 @@ msgstr ""
 "Tutorial auch offline gelesen werden kann."
 
 #: ../../tutorial/index.rst:33
-#, fuzzy
 msgid ""
 "For a description of standard objects and modules, see :ref:`builtins-index` "
 "and :ref:`library-index`.  :ref:`reference-index` gives a more formal "

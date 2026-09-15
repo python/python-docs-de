@@ -204,7 +204,6 @@ msgstr ""
 "eines anderen iterierbaren Objekts nacheinander durchzugehen:"
 
 #: ../../reference/compound_stmts.rst:160
-#, fuzzy
 msgid ""
 "The :token:`~python-grammar:starred_expression_list` expression is evaluated "
 "once; it should yield an :term:`iterable` object. An :term:`iterator` is "

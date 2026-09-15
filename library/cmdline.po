@@ -3,17 +3,16 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Translators:
+# Translators: @sba72
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-05 16:53+0200\n"
 "PO-Revision-Date: 2025-09-16 00:00+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
+"Last-Translator: @sba72\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -63,16 +62,15 @@ msgstr ":ref:`dis <dis-cli>`"
 
 #: ../../library/cmdline.rst:17
 msgid ":ref:`doctest <doctest-cli>`"
-msgstr ""
+msgstr ":ref:`doctest <doctest-cli>`"
 
 #: ../../library/cmdline.rst:18
 msgid ":mod:`!encodings.rot_13`"
 msgstr ":mod:`!encodings.rot_13`"
 
 #: ../../library/cmdline.rst:19
-#, fuzzy
 msgid ":ref:`ensurepip <ensurepip-cli>`"
-msgstr ":ref:`gzip <gzip-cli>`"
+msgstr ":ref:`ensurepip <ensurepip-cli>`"
 
 #: ../../library/cmdline.rst:20
 msgid ":mod:`filecmp`"
@@ -95,9 +93,8 @@ msgid ":ref:`http.server <http-server-cli>`"
 msgstr ":ref:`http.server <http-server-cli>`"
 
 #: ../../library/cmdline.rst:25
-#, fuzzy
 msgid ":ref:`idlelib <idlelib-cli>`"
-msgstr ":ref:`dis <dis-cli>`"
+msgstr ":ref:`idlelib <idlelib-cli>`"
 
 #: ../../library/cmdline.rst:26
 msgid ":ref:`inspect <inspect-module-cli>`"
@@ -112,13 +109,12 @@ msgid ":ref:`mimetypes <mimetypes-cli>`"
 msgstr ""
 
 #: ../../library/cmdline.rst:29
-#, fuzzy
 msgid ":ref:`pdb <pdb-cli>`"
-msgstr ":ref:`dis <dis-cli>`"
+msgstr ":ref:`pdb <pdb-cli>`"
 
 #: ../../library/cmdline.rst:30
 msgid ":ref:`pickle <pickle-cli>`"
-msgstr ""
+msgstr ":ref:`pickle <pickle-cli>`"
 
 #: ../../library/cmdline.rst:31
 msgid ":ref:`pickletools <pickletools-cli>`"
@@ -126,7 +122,7 @@ msgstr ":ref:`pickletools <pickletools-cli>`"
 
 #: ../../library/cmdline.rst:32
 msgid ":ref:`platform <platform-cli>`"
-msgstr ""
+msgstr ":ref:`platform <platform-cli>`"
 
 #: ../../library/cmdline.rst:33
 msgid ":mod:`poplib`"
@@ -158,7 +154,7 @@ msgstr ":mod:`quopri`"
 
 #: ../../library/cmdline.rst:40
 msgid ":ref:`random <random-cli>`"
-msgstr ""
+msgstr ":ref:`random <random-cli>`"
 
 #: ../../library/cmdline.rst:41
 msgid ":mod:`runpy`"
@@ -170,11 +166,11 @@ msgstr ":ref:`site <site-commandline>`"
 
 #: ../../library/cmdline.rst:43
 msgid ":ref:`sqlite3 <sqlite3-cli>`"
-msgstr ""
+msgstr ":ref:`sqlite3 <sqlite3-cli>`"
 
 #: ../../library/cmdline.rst:44
 msgid ":ref:`symtable <symtable-cli>`"
-msgstr ""
+msgstr ":ref:`symtable <symtable-cli>`"
 
 #: ../../library/cmdline.rst:45
 msgid ":ref:`sysconfig <sysconfig-cli>`"
@@ -214,17 +210,15 @@ msgstr ":ref:`unittest <unittest-command-line-interface>`"
 
 #: ../../library/cmdline.rst:54
 msgid ":ref:`uuid <uuid-cli>`"
-msgstr ""
+msgstr ":ref:`uuid <uuid-cli>`"
 
 #: ../../library/cmdline.rst:55
-#, fuzzy
 msgid ":ref:`venv <venv-cli>`"
-msgstr ":ref:`trace <trace-cli>`"
+msgstr ":ref:`venv <venv-cli>`"
 
 #: ../../library/cmdline.rst:56
-#, fuzzy
 msgid ":ref:`webbrowser <webbrowser-cli>`"
-msgstr ":ref:`profile <profile-cli>`"
+msgstr ":ref:`webbrowser <webbrowser-cli>`"
 
 #: ../../library/cmdline.rst:57
 msgid ":ref:`zipapp <zipapp-command-line-interface>`"
