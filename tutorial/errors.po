@@ -249,8 +249,8 @@ msgid ""
 "If no exception occurs, the *except clause* is skipped and execution of the :"
 "keyword:`try` statement is finished."
 msgstr ""
-"Wenn keine Ausnahme auftritt, wird die *except-Klausel* übersprungen, "
-"und die Ausführung der :keyword:`try`-Anweisung ist abgeschlossen."
+"Wenn keine Ausnahme auftritt, wird die *except-Klausel* übersprungen, und "
+"die Ausführung der :keyword:`try`-Anweisung ist abgeschlossen."
 
 #: ../../tutorial/errors.rst:111
 msgid ""
@@ -1109,9 +1109,9 @@ msgid ""
 msgstr ""
 "Einige Objekte definieren Standardbereinigungsaktionen, die durchgeführt "
 "werden, wenn das Objekt nicht mehr benötigt wird, unabhängig davon, ob der "
-"Vorgang mit dem Objekt erfolgreich war oder fehlgeschlagen ist. Schau dir "
-" das folgende Beispiel an, in dem versucht wird, eine Datei zu öffnen "
-"und ihren Inhalt auf dem Bildschirm auszugeben. ::"
+"Vorgang mit dem Objekt erfolgreich war oder fehlgeschlagen ist. Schau dir  "
+"das folgende Beispiel an, in dem versucht wird, eine Datei zu öffnen und "
+"ihren Inhalt auf dem Bildschirm auszugeben. ::"
 
 #: ../../tutorial/errors.rst:499
 msgid ""
