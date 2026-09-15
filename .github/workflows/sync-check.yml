@@ -3,7 +3,7 @@ name: Sync Check with Upstream
 on:
   schedule:
     - cron: '0 3 * * 1'   # jeden Montag um 3 Uhr nachts
-  workflow_dispatch:        # manuell auslösbar über GitHub-Weboberfläche
+  workflow_dispatch:
 
 jobs:
   check-sync:
@@ -25,6 +25,9 @@ jobs:
           ref: ${{ matrix.version }}
           path: cpython-src
 
+      - name: gettext installieren (für msgmerge)
+        run: sudo apt-get update && sudo apt-get install -y gettext
+
       - name: Python + Sphinx einrichten
         run: |
           python3 -m venv cpython-src/Doc/venv
@@ -35,8 +38,8 @@ jobs:
           cd cpython-src/Doc
           PATH="./venv/bin:$PATH" make gettext
 
-      - name: gettext installieren (für msgmerge)
-        run: sudo apt-get update && sudo apt-get install -y gettext
+      - name: powrap installieren (für einheitliche Zeilenumbrüche)
+        run: pip install --break-system-packages powrap
 
       - name: msgmerge gegen alle .po-Dateien laufen lassen
         run: |
@@ -44,17 +47,8 @@ jobs:
             rel="${pot#cpython-src/Doc/build/gettext/}"
             po="${rel%.pot}.po"
             if [ -f "$po" ]; then
-              msgmerge --quiet --update "$po" "$pot"
-            fi
-          done
-
-      - name: msgmerge gegen alle .po-Dateien laufen lassen
-        run: |
-          for pot in $(find cpython-src/Doc/build/gettext -name "*.pot"); do
-            rel="${pot#cpython-src/Doc/build/gettext/}"
-            po="${rel%.pot}.po"
-            if [ -f "$po" ]; then
-              msgmerge --quiet --update "$po" "$pot"
+              msgmerge --quiet --update --backup=none "$po" "$pot"
+              powrap "$po"
             fi
           done
 
