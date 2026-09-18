@@ -1301,7 +1301,7 @@ msgstr ""
 
 #: ../../glossary.rst:507
 msgid "exhausted"
-msgstr ""
+msgstr "erschöpft"
 
 #: ../../glossary.rst:509
 msgid ""
@@ -1310,6 +1310,10 @@ msgid ""
 "func:`next`) raise :exc:`StopIteration` (or :exc:`StopAsyncIteration` in the "
 "case of an :term:`asynchronous iterator`)."
 msgstr ""
+"Ein :term:`iterator`, der alle seine Werte produziert hat, wird als "
+":dfn:`exhausted` bezeichnet. Weitere Versuche, den nächsten Wert abzurufen "
+"(zum Beispiel Aufrufe von :func:`next`), lösen :exc:`StopIteration` aus "
+"(bzw. :exc:`StopAsyncIteration` im Fall eines :term:`asynchronous iterator`)."
 
 #: ../../glossary.rst:515
 msgid "expression"
