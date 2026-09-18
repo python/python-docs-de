@@ -102,11 +102,11 @@ msgstr ":ref:`inspect <inspect-module-cli>`"
 
 #: ../../library/cmdline.rst:27
 msgid ":ref:`json <json-commandline>`"
-msgstr ""
+msgstr ":ref:`json <json-commandline>`"
 
 #: ../../library/cmdline.rst:28
 msgid ":ref:`mimetypes <mimetypes-cli>`"
-msgstr ""
+msgstr ":ref:`mimetypes <mimetypes-cli>`"
 
 #: ../../library/cmdline.rst:29
 msgid ":ref:`pdb <pdb-cli>`"
@@ -230,20 +230,19 @@ msgstr ":ref:`zipfile <zipfile-commandline>`"
 
 #: ../../library/cmdline.rst:60
 msgid "See also the :ref:`Python command-line interface <using-on-general>`."
-msgstr ""
-"Siehe auch :ref:`Python Befehlszeilenschnittstelle <using-on-general>`."
+msgstr "Siehe auch :ref:`Python Befehlszeilenschnittstelle <using-on-general>`."
 
-#~ msgid ":mod:`ensurepip`"
-#~ msgstr ":mod:`ensurepip`"
+# ~ msgid ":mod:`ensurepip`"
+# ~ msgstr ":mod:`ensurepip`"
 
-#~ msgid ":mod:`!idlelib`"
-#~ msgstr ":mod:`!idlelib`"
+# ~ msgid ":mod:`!idlelib`"
+# ~ msgstr ":mod:`!idlelib`"
 
-#~ msgid ":mod:`pdb`"
-#~ msgstr ":mod:`pdb`"
+# ~ msgid ":mod:`pdb`"
+# ~ msgstr ":mod:`pdb`"
 
-#~ msgid ":mod:`venv`"
-#~ msgstr ":mod:`venv`"
+# ~ msgid ":mod:`venv`"
+# ~ msgstr ":mod:`venv`"
 
-#~ msgid ":mod:`webbrowser`"
-#~ msgstr ":mod:`webbrowser`"
+# ~ msgid ":mod:`webbrowser`"
+# ~ msgstr ":mod:`webbrowser`"
