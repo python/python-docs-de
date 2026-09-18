@@ -230,19 +230,5 @@ msgstr ":ref:`zipfile <zipfile-commandline>`"
 
 #: ../../library/cmdline.rst:60
 msgid "See also the :ref:`Python command-line interface <using-on-general>`."
-msgstr "Siehe auch :ref:`Python Befehlszeilenschnittstelle <using-on-general>`."
-
-# ~ msgid ":mod:`ensurepip`"
-# ~ msgstr ":mod:`ensurepip`"
-
-# ~ msgid ":mod:`!idlelib`"
-# ~ msgstr ":mod:`!idlelib`"
-
-# ~ msgid ":mod:`pdb`"
-# ~ msgstr ":mod:`pdb`"
-
-# ~ msgid ":mod:`venv`"
-# ~ msgstr ":mod:`venv`"
-
-# ~ msgid ":mod:`webbrowser`"
-# ~ msgstr ":mod:`webbrowser`"
+msgstr ""
+"Siehe auch :ref:`Python Befehlszeilenschnittstelle <using-on-general>`."
