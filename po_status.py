@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-po_status.py — Listet alle .po-Dateien in einem Verzeichnisbaum mit
+po_status.py — listet alles .po-Dateien in einem Verzeichnisbaum mit
 Übersetzungsstand (x/y), Prozent, Dateigröße und Pfad und Status Gesamtübersetzung.
+Gleicht Strings mit englischen Original-Dateien ab.
 """
 import argparse
 import re
@@ -53,6 +54,18 @@ def is_core(rel_path: Path) -> bool:
     return rel in CORE_FILES or rel.startswith(CORE_DIRS)
 
 
+def find_missing(pot_dir: Path, root: Path, excludes: set) -> list:
+    """Liefert .po-Pfade, zu denen es eine Vorlage, aber keine Übersetzung gibt."""
+    missing = []
+    for pot in sorted(pot_dir.rglob("*.pot")):
+        rel = pot.relative_to(pot_dir).with_suffix(".po")
+        if excludes.intersection(rel.parts):
+            continue
+        if not (root / rel).exists():
+            missing.append(rel)
+    return missing
+
+
 def human_size(num_bytes: int) -> str:
     for unit in ("B", "KB", "MB"):
         if num_bytes < 1024:
@@ -69,6 +82,9 @@ def main():
     parser.add_argument("--sort", choices=["path", "percent", "size"], default="percent")
     parser.add_argument("--max-percent", type=float, default=100.1,
                          help="Nur Dateien mit weniger als diesem Prozentwert anzeigen")
+    parser.add_argument("--pot-dir",
+                        help="Ordner mit .pot-Vorlagen; listet Seiten ohne .po-Datei")
+
     args = parser.parse_args()
 
     root = Path(args.path).resolve()
@@ -137,7 +153,19 @@ def main():
         print(f"Dateien mit Syntaxfehler:      {error_count}")
     print(f"Gesamtstand über alle Dateien:  {total_translated}/{total_strings} Strings "
           f"({overall_pct:.2f}%)")
-    print("* = Pflichtdatei für den Sprachumschalter")
+    print()
+    print("* Pflichtdatei für den Sprachumschalter")
+
+    if args.pot_dir:
+        missing = find_missing(Path(args.pot_dir).resolve(), root, excludes)
+        print()
+        if missing:
+            print(f"Fehlende Übersetzungsdateien ({len(missing)}):")
+            for rel in missing:
+                marker = "* " if is_core(rel) else "  "
+                print(f"{marker}{rel}")
+        else:
+            print("Keine fehlenden Übersetzungsdateien.")
 
 
 if __name__ == "__main__":
