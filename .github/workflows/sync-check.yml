@@ -35,7 +35,7 @@ jobs:
 
       - name: Frische POT-Dateien bauen
         run: |
-          cd cpython-src/Doc
+          cd cpython-src/doc
           PATH="./venv/bin:$PATH" make gettext
 
       - name: powrap installieren (für einheitliche Zeilenumbrüche)
@@ -48,14 +48,17 @@ jobs:
             po="${rel%.pot}.po"
             if [ -f "$po" ]; then
               msgmerge --quiet --update --backup=none "$po" "$pot"
-              powrap "$po"
+            else
+              mkdir -p "$(dirname "$po")"
+              msginit --no-translator --locale=de --input="$pot" --output-file="$po"
             fi
+            powrap "$po"
           done
 
       - name: Prüfen, ob sich etwas geändert hat
         id: check
         run: |
-          if git diff --quiet; then
+          if [ -z "$(git status --porcelain)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
