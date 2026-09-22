@@ -5,6 +5,7 @@
 #
 # Translators:
 # python-doc bot, 2025
+# sba72, s026
 #
 msgid ""
 msgstr ""
