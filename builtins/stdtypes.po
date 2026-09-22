@@ -5,6 +5,7 @@
 #
 # Translators:
 # python-doc bot, 2025
+# sba72, 2026
 #
 msgid ""
 msgstr ""
@@ -11352,13 +11353,13 @@ msgid ""
 "exist, rather it requires an (external) *definition* for a module named "
 "*foo* somewhere.)"
 msgstr ""
-"Die einzige spezielle Operation auf einem Modul ist der Attributzugriff: ``m."
-"name``, wobei *m* ein Modul ist und *name* auf einen in *m*s Symboltabelle "
-"definierten Namen zugreift. Modulattributen können Werte zugewiesen werden. "
-"(Beachte, dass die Anweisung :keyword:`import` genau genommen keine "
-"Operation auf einem Modulobjekt ist; ``import foo`` erfordert nicht, dass "
-"ein Modulobjekt namens *foo* existiert, sondern eine (externe) *Definition* "
-"für ein Modul namens *foo* irgendwo vorhanden ist.)"
+"Die einzige spezielle Operation auf einem Modul ist der Attributzugriff: "
+"``m.name``, wobei *m* ein Modul ist und *name* auf einen Namen zugreift, der "
+"in der Symboltabelle von *m* definiert ist. Modulattributen können Werte "
+"zugewiesen werden. (Beachte, dass die Anweisung :keyword:`import` genau "
+"genommen keine Operation auf einem Modulobjekt ist; ``import foo`` erfordert "
+"nicht, dass ein Modulobjekt namens *foo* existiert, sondern dass irgendwo "
+"eine (externe) *Definition* für ein Modul namens *foo* vorhanden ist.)"
 
 #: ../../library/stdtypes.rst:6268
 msgid ""
@@ -11384,7 +11385,7 @@ msgid ""
 "'sys' (built-in)>``.  If loaded from a file, they are written as ``<module "
 "'os' from '/usr/local/lib/pythonX.Y/os.pyc'>``."
 msgstr ""
-"In den Interpreter eingebaute Module werden so geschrieben: ``<module "
+"In den Interpreter integrierte Module werden so geschrieben: ``<module "
 "'sys' (built-in)>``. Wenn sie aus einer Datei geladen werden, werden sie als "
 "``<module 'os' from '/usr/local/lib/pythonX.Y/os.pyc'>`` geschrieben."
 
