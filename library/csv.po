@@ -5,6 +5,7 @@
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 #, fuzzy
 msgid ""
