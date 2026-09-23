@@ -35,7 +35,7 @@ jobs:
 
       - name: Frische POT-Dateien bauen
         run: |
-          cd cpython-src/doc
+          cd cpython-src/Doc
           PATH="./venv/bin:$PATH" make gettext
 
       - name: powrap installieren (für einheitliche Zeilenumbrüche)
