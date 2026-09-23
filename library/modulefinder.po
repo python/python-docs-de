@@ -20,8 +20,7 @@ msgstr ""
 
 #: ../../library/modulefinder.rst:2
 msgid ":mod:`!modulefinder` --- Find modules used by a script"
-msgstr ""
-":mod:`!modulefinder` --- Von einem Skript verwendete Module finden"
+msgstr ":mod:`!modulefinder` --- Von einem Skript verwendete Module finden"
 
 #: ../../library/modulefinder.rst:7
 msgid "**Source code:** :source:`Lib/modulefinder.py`"
@@ -36,9 +35,9 @@ msgid ""
 msgstr ""
 "Dieses Modul stellt die Klasse :class:`ModuleFinder` bereit, mit der sich "
 "die Menge der von einem Skript importierten Module ermitteln lässt. "
-"``modulefinder.py`` kann auch selbst als Skript ausgeführt werden, wobei "
-"der Dateiname eines Python-Skripts als Argument übergeben wird; "
-"anschließend wird ein Bericht über die importierten Module ausgegeben."
+"``modulefinder.py`` kann auch selbst als Skript ausgeführt werden, wobei der "
+"Dateiname eines Python-Skripts als Argument übergeben wird; anschließend "
+"wird ein Bericht über die importierten Module ausgegeben."
 
 #: ../../library/modulefinder.rst:19
 msgid ""
@@ -53,8 +52,8 @@ msgid ""
 "Allows specifying that the module named *oldname* is in fact the package "
 "named *newname*."
 msgstr ""
-"Ermöglicht es anzugeben, dass das Modul namens *oldname* in Wirklichkeit "
-"das Paket namens *newname* ist."
+"Ermöglicht es anzugeben, dass das Modul namens *oldname* in Wirklichkeit das "
+"Paket namens *newname* ist."
 
 #: ../../library/modulefinder.rst:30
 msgid ""
@@ -96,8 +95,8 @@ msgid ""
 "A dictionary mapping module names to modules. See :ref:`modulefinder-"
 "example`."
 msgstr ""
-"Ein Dictionary, das Modulnamen auf Module abbildet. Siehe "
-":ref:`modulefinder-example`."
+"Ein Dictionary, das Modulnamen auf Module abbildet. Siehe :ref:`modulefinder-"
+"example`."
 
 #: ../../library/modulefinder.rst:59
 msgid "Example usage of :class:`ModuleFinder`"

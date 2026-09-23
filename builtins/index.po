@@ -48,8 +48,8 @@ msgid ""
 msgstr ""
 "Zu den integrierten Objekten gehören außerdem Funktionen und Ausnahmen – "
 "Objekte, die sich in jedem Python-Code ohne eine :keyword:`import`-Anweisung "
-"verwenden lassen. Einige davon sind Teil der Kernsprache, viele sind für "
-"die Kernsemantik jedoch nicht wesentlich und werden nur hier beschrieben."
+"verwenden lassen. Einige davon sind Teil der Kernsprache, viele sind für die "
+"Kernsemantik jedoch nicht wesentlich und werden nur hier beschrieben."
 
 #: ../../builtins/index.rst:21
 msgid ""
