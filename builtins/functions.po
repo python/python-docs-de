@@ -1,10 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -12,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-23 06:17+0000\n"
 "PO-Revision-Date: 2026-08-16 00:01+0000\n"
-"Last-Translator: Swen Bachmann <142266608+sba72@users.noreply.github.com>\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -445,14 +444,14 @@ msgstr ""
 "    return True"
 
 #: ../../builtins/functions.rst:89
-#, fuzzy
 msgid ""
 "When awaited, return the next item from the given :term:`asynchronous "
 "iterator`, or *default* if given and the iterator is :term:`exhausted`."
 msgstr ""
-"Gibt, wenn erwartet, das nächste Element des angegebenen :term:`asynchronen "
-"Iterators <asynchronous iterator>` zurück – oder *default*, falls angegeben "
-"und der Iterator erschöpft ist."
+"Gibt beim Erwarten das nächste Element des angegebenen "
+":term:`asynchronen Iterators <asynchronous iterator>` zurück – oder "
+"*default*, falls angegeben und der Iterator :term:`erschöpft <exhausted>` "
+"ist."
 
 #: ../../builtins/functions.rst:92
 msgid ""
@@ -2424,7 +2423,6 @@ msgstr ""
 "anderen Gültigkeitsbereichen gegenüber früheren Versionen unverändert."
 
 #: ../../builtins/functions.rst:1215
-#, fuzzy
 msgid ""
 "Return an iterator that applies *function* to every item of *iterable*, "
 "yielding the results.  If additional *iterables* arguments are passed, "
@@ -2436,14 +2434,15 @@ msgid ""
 "argument tuples, see :func:`itertools.starmap`."
 msgstr ""
 "Gibt einen Iterator zurück, der *function* auf jedes Element von *iterable* "
-"anwendet und die Ergebnisse liefert. Werden weitere *iterable*-Argumente "
+"anwendet und die Ergebnisse liefert. Werden weitere *iterables*-Argumente "
 "übergeben, muss *function* entsprechend viele Argumente entgegennehmen und "
-"wird parallel auf die Elemente aller Iterables angewendet. Bei mehreren "
-"Iterables endet der Iterator, sobald das kürzeste Iterable erschöpft ist. "
-"Ist *strict* auf ``True`` gesetzt und eines der Iterables vor den anderen "
-"erschöpft, wird ein :exc:`ValueError` ausgelöst. Für Fälle, in denen die "
-"Eingabewerte für die Funktion bereits als Argument-Tupel vorliegen, siehe :"
-"func:`itertools.starmap`.“"
+"wird parallel auf die Elemente aller iterierbaren Objekte angewendet. Bei "
+"mehreren iterierbaren Objekten endet der Iterator, sobald das kürzeste "
+":term:`erschöpft <exhausted>` ist. Ist *strict* auf ``True`` gesetzt und "
+"eines der iterierbaren Objekte vor den anderen erschöpft, wird ein "
+":exc:`ValueError` ausgelöst. Für Fälle, in denen die Eingabewerte für die "
+"Funktion bereits als Argument-Tupel vorliegen, siehe "
+":func:`itertools.starmap`."
 
 #: ../../builtins/functions.rst:1224
 msgid "Added the *strict* parameter."
@@ -2545,16 +2544,16 @@ msgstr ""
 "[0]`` und ``heapq.nsmallest(1, iterable, key=keyfunc)``.“"
 
 #: ../../builtins/functions.rst:1299
-#, fuzzy
 msgid ""
 "Retrieve the next item from the :term:`iterator` by calling its :meth:"
 "`~iterator.__next__` method.  If *default* is given, it is returned if the "
 "iterator is :term:`exhausted`, otherwise :exc:`StopIteration` is raised."
 msgstr ""
-"Rufe das nächste Element aus dem :term:`Iterator <iterator>` ab, indem "
-"dessen :meth:`~iterator.__next__`-Methode aufgerufen wird. Wenn *default* "
-"angegeben ist, wird dieser Wert zurückgegeben, falls der Iterator erschöpft "
-"ist; andernfalls wird :exc:`StopIteration` ausgelöst."
+"Ruft das nächste Element aus dem :term:`Iterator <iterator>` ab, indem "
+"dessen Methode :meth:`~iterator.__next__` aufgerufen wird. Wenn *default* "
+"angegeben ist, wird dieser Wert zurückgegeben, falls der Iterator "
+":term:`erschöpft <exhausted>` ist; andernfalls wird :exc:`StopIteration` "
+"ausgelöst."
 
 #: ../../builtins/functions.rst:1306
 msgid ""
@@ -4336,15 +4335,15 @@ msgstr ""
 "bietet drei verschiedene Ansätze für den Umgang mit diesem Problem:"
 
 #: ../../builtins/functions.rst:2177
-#, fuzzy
 msgid ""
 "By default, :func:`zip` stops when the shortest iterable is :term:"
 "`exhausted`. It will ignore the remaining items in the longer iterables, "
 "cutting off the result to the length of the shortest iterable::"
 msgstr ""
-"Standardmäßig hält :func:`zip` an, sobald das kürzeste Iterable erschöpft "
-"ist. Es ignoriert die verbleibenden Elemente in den längeren Iterables und "
-"begrenzt das Ergebnis auf die Länge des kürzesten Iterables::"
+"Standardmäßig hält :func:`zip` an, sobald das kürzeste iterierbare Objekt "
+":term:`erschöpft <exhausted>` ist. Es ignoriert die verbleibenden Elemente "
+"in den längeren iterierbaren Objekten und begrenzt das Ergebnis auf die "
+"Länge des kürzesten::"
 
 #: ../../builtins/functions.rst:2181
 msgid ""
@@ -4374,13 +4373,12 @@ msgstr ""
 "[('a', 1), ('b', 2), ('c', 3)]"
 
 #: ../../builtins/functions.rst:2191
-#, fuzzy
 msgid ""
 "Unlike the default behavior, it raises a :exc:`ValueError` if one iterable "
 "is :term:`exhausted` before the others:"
 msgstr ""
 "Im Gegensatz zum Standardverhalten löst es einen :exc:`ValueError` aus, wenn "
-"ein Iterable vor den anderen vollständig durchlaufen ist:"
+"ein iterierbares Objekt vor den anderen :term:`erschöpft <exhausted>` ist:"
 
 #: ../../builtins/functions.rst:2209
 msgid ""
