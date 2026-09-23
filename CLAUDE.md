@@ -10,7 +10,7 @@ als Gettext-Dateien (`.po`). Übersetzt wird ausschließlich der `msgstr`.
 - „string" → „Zeichenkette" (nicht „String" oder „Zeichenfolge")
 - „iterable" → „iterierbares Objekt"
 - Funktionsbeschreibungen in der 3. Person: „Gibt … zurück"
-- Deutsche Anführungszeichen „…", nie um Rollen oder Code herum
+- Deutsche Anführungszeichen „…“, nie um Rollen oder Code herum
 
 ## reST- und PO-Syntax
 - `msgid` NIEMALS ändern, auch nicht bei Tippfehlern im Original
