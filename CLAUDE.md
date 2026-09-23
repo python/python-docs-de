@@ -14,6 +14,8 @@ als Gettext-Dateien (`.po`). Übersetzt wird ausschließlich der `msgstr`.
 - „unraisable exception" → „nicht weiterleitbare Ausnahme
   (unraisable exception)" beim ersten Vorkommen, danach kurz
 - „free-threaded build" → „Build mit freien Threads" (laut Glossar)
+- Bei Fachbegriffen ist `glossary.po` maßgeblich. Im Zweifel dort
+  nachschlagen, bevor ein Begriff neu übersetzt wird.
 
 ## reST- und PO-Syntax
 - `msgid` NIEMALS ändern, auch nicht bei Tippfehlern im Original
