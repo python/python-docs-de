@@ -1,10 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -12,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-23 06:17+0000\n"
 "PO-Revision-Date: 2026-08-16 00:01+0000\n"
-"Last-Translator: Swen Bachmann <142266608+sba72@users.noreply.github.com>\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +20,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../builtins/functions.rst:5
-#, fuzzy
 msgid "Built-in functions"
 msgstr "Integrierte Funktionen"
 
@@ -458,14 +456,14 @@ msgstr ""
 "    return True"
 
 #: ../../builtins/functions.rst:91
-#, fuzzy
 msgid ""
 "When awaited, return the next item from the given :term:`asynchronous "
 "iterator`, or *default* if given and the iterator is :term:`exhausted`."
 msgstr ""
-"Gibt, wenn erwartet, das nächste Element des angegebenen :term:`asynchronen "
-"Iterators <asynchronous iterator>` zurück – oder *default*, falls angegeben "
-"und der Iterator erschöpft ist."
+"Gibt beim Erwarten das nächste Element des angegebenen "
+":term:`asynchronen Iterators <asynchronous iterator>` zurück – oder "
+"*default*, falls angegeben und der Iterator :term:`erschöpft <exhausted>` "
+"ist."
 
 #: ../../builtins/functions.rst:94
 msgid ""
@@ -2473,7 +2471,6 @@ msgstr ""
 "anderen Gültigkeitsbereichen gegenüber früheren Versionen unverändert."
 
 #: ../../builtins/functions.rst:1249
-#, fuzzy
 msgid ""
 "Return an iterator that applies *function* to every item of *iterable*, "
 "yielding the results.  If additional *iterables* arguments are passed, "
@@ -2485,14 +2482,15 @@ msgid ""
 "argument tuples, see :func:`itertools.starmap`."
 msgstr ""
 "Gibt einen Iterator zurück, der *function* auf jedes Element von *iterable* "
-"anwendet und die Ergebnisse liefert. Werden weitere *iterable*-Argumente "
+"anwendet und die Ergebnisse liefert. Werden weitere *iterables*-Argumente "
 "übergeben, muss *function* entsprechend viele Argumente entgegennehmen und "
-"wird parallel auf die Elemente aller Iterables angewendet. Bei mehreren "
-"Iterables endet der Iterator, sobald das kürzeste Iterable erschöpft ist. "
-"Ist *strict* auf ``True`` gesetzt und eines der Iterables vor den anderen "
-"erschöpft, wird ein :exc:`ValueError` ausgelöst. Für Fälle, in denen die "
-"Eingabewerte für die Funktion bereits als Argument-Tupel vorliegen, siehe :"
-"func:`itertools.starmap`."
+"wird parallel auf die Elemente aller iterierbaren Objekte angewendet. Bei "
+"mehreren iterierbaren Objekten endet der Iterator, sobald das kürzeste "
+":term:`erschöpft <exhausted>` ist. Ist *strict* auf ``True`` gesetzt und "
+"eines der iterierbaren Objekte vor den anderen erschöpft, wird ein "
+":exc:`ValueError` ausgelöst. Für Fälle, in denen die Eingabewerte für die "
+"Funktion bereits als Argument-Tupel vorliegen, siehe "
+":func:`itertools.starmap`."
 
 #: ../../builtins/functions.rst:1258
 msgid "Added the *strict* parameter."
@@ -2594,16 +2592,16 @@ msgstr ""
 "[0]`` und ``heapq.nsmallest(1, iterable, key=keyfunc)``."
 
 #: ../../builtins/functions.rst:1333
-#, fuzzy
 msgid ""
 "Retrieve the next item from the :term:`iterator` by calling its :meth:"
 "`~iterator.__next__` method.  If *default* is given, it is returned if the "
 "iterator is :term:`exhausted`, otherwise :exc:`StopIteration` is raised."
 msgstr ""
-"Rufe das nächste Element aus dem :term:`Iterator <iterator>` ab, indem "
-"dessen :meth:`~iterator.__next__`-Methode aufgerufen wird. Wenn *default* "
-"angegeben ist, wird dieser Wert zurückgegeben, falls der Iterator erschöpft "
-"ist; andernfalls wird :exc:`StopIteration` ausgelöst."
+"Ruft das nächste Element aus dem :term:`Iterator <iterator>` ab, indem "
+"dessen Methode :meth:`~iterator.__next__` aufgerufen wird. Wenn *default* "
+"angegeben ist, wird dieser Wert zurückgegeben, falls der Iterator "
+":term:`erschöpft <exhausted>` ist; andernfalls wird :exc:`StopIteration` "
+"ausgelöst."
 
 #: ../../builtins/functions.rst:1340
 msgid ""
@@ -2674,7 +2672,6 @@ msgstr ""
 "geschlossen wird, es sei denn, *closefd* ist auf ``False`` gesetzt.)"
 
 #: ../../builtins/functions.rst:1391
-#, fuzzy
 msgid ""
 "*mode* is an optional string that specifies the mode in which the file is "
 "opened.  It defaults to ``'r'`` which means open for reading in text mode. "
@@ -2694,11 +2691,12 @@ msgstr ""
 "``'x'`` für die exklusive Erstellung und ``'a'`` zum Anhängen (was auf "
 "*einigen* Unix-Systemen bedeutet, dass *alle* Schreibvorgänge Daten an das "
 "Ende der Datei anhängen, unabhängig von der aktuellen Schreib-/"
-"Leseposition). Wenn im Textmodus kein *encoding* angegeben wird, hängt die "
-"verwendete Zeichenkodierung vom Betriebssystem ab: :func:`locale."
-"getencoding` wird aufgerufen, um die Kodierung der aktuellen Locale zu "
-"ermitteln. (Verwende für das Lesen und Schreiben von Rohbytes den Binärmodus "
-"und lass *encoding* weg.) Die verfügbaren Modi sind:"
+"Leseposition). Wenn im Textmodus kein *encoding* angegeben wird, wird "
+"standardmäßig UTF-8 verwendet; ist der :ref:`Python-UTF-8-Modus "
+"<utf8-mode>` deaktiviert, wird :func:`locale.getencoding` aufgerufen, um "
+"die Kodierung der aktuellen Locale zu ermitteln. (Verwende für das Lesen "
+"und Schreiben von Rohbytes den Binärmodus und lass *encoding* weg.) Die "
+"verfügbaren Modi sind:"
 
 #: ../../builtins/functions.rst:1409
 msgid "Character"
@@ -2779,7 +2777,6 @@ msgstr ""
 "Modi ``'r+'`` und ``'r+b'`` öffnen die Datei ohne Kürzung."
 
 #: ../../builtins/functions.rst:1424
-#, fuzzy
 msgid ""
 "As mentioned in the :ref:`io-overview`, Python distinguishes between binary "
 "and text I/O.  Files opened in binary mode (including ``'b'`` in the *mode* "
@@ -2793,10 +2790,9 @@ msgstr ""
 "und Text-E/A. Dateien, die im Binärmodus geöffnet werden (wobei das Argument "
 "*mode* ein ``'b'`` enthält), geben ihren Inhalt als :class:`bytes`-Objekte "
 "ohne jegliche Dekodierung zurück. Im Textmodus (der Standardeinstellung oder "
-"wenn das Argument *mode* ein ``'t'`` enthält) wird der Dateiinhalt als :"
-"class:`str` zurückgegeben, wobei die Bytes zuvor mithilfe einer "
-"plattformabhängigen Kodierung oder – falls angegeben – mithilfe des "
-"spezifizierten *encoding* dekodiert wurden."
+"wenn das Argument *mode* ein ``'t'`` enthält) wird der Dateiinhalt als "
+":class:`str` zurückgegeben, wobei die Bytes zuvor mit der Standardkodierung "
+"oder – falls angegeben – mit dem spezifizierten *encoding* dekodiert wurden."
 
 #: ../../builtins/functions.rst:1434
 msgid ""
@@ -2855,7 +2851,6 @@ msgstr ""
 "das für Binärdateien beschriebene Verfahren."
 
 #: ../../builtins/functions.rst:1457
-#, fuzzy
 msgid ""
 "*encoding* is the name of the encoding used to decode or encode the file. "
 "This should only be used in text mode.  The default encoding is UTF-8; if :"
@@ -2867,10 +2862,13 @@ msgid ""
 msgstr ""
 "*encoding* ist der Name der Zeichenkodierung, die zum Dekodieren oder "
 "Kodieren der Datei verwendet wird. Dies sollte nur im Textmodus verwendet "
-"werden. Die Standardkodierung ist plattformabhängig (entsprechend dem "
-"Rückgabewert von :func:`locale.getencoding`), es kann jedoch jede von Python "
-"unterstützte :term:`Textkodierung <text encoding>` verwendet werden. Eine "
-"Liste der unterstützten Kodierungen findest du im Modul :mod:`codecs`."
+"werden. Die Standardkodierung ist UTF-8; ist der :ref:`Python-UTF-8-Modus "
+"<utf8-mode>` deaktiviert, ist die Standardeinstellung plattformabhängig "
+"(entsprechend dem Rückgabewert von :func:`locale.getencoding`). Es kann "
+"jede von Python unterstützte :term:`Textkodierung <text encoding>` "
+"verwendet werden, und ``encoding=\"locale\"`` gibt die Kodierung der "
+"aktuellen Locale ausdrücklich an. Eine Liste der unterstützten Kodierungen "
+"findest du im Modul :mod:`codecs`."
 
 #: ../../builtins/functions.rst:1465
 msgid ""
@@ -3113,6 +3111,8 @@ msgid ""
 "UTF-8 is now the default encoding, instead of the platform-dependent locale "
 "encoding (:pep:`686`)."
 msgstr ""
+"UTF-8 ist jetzt die Standardkodierung anstelle der plattformabhängigen "
+"Locale-Kodierung (:pep:`686`)."
 
 #: ../../builtins/functions.rst:1585
 msgid "Return the ordinal value of a character."
@@ -4477,15 +4477,15 @@ msgstr ""
 "bietet drei verschiedene Ansätze für den Umgang mit diesem Problem:"
 
 #: ../../builtins/functions.rst:2257
-#, fuzzy
 msgid ""
 "By default, :func:`zip` stops when the shortest iterable is :term:"
 "`exhausted`. It will ignore the remaining items in the longer iterables, "
 "cutting off the result to the length of the shortest iterable::"
 msgstr ""
-"Standardmäßig hält :func:`zip` an, sobald das kürzeste Iterable erschöpft "
-"ist. Es ignoriert die verbleibenden Elemente in den längeren Iterables und "
-"begrenzt das Ergebnis auf die Länge des kürzesten Iterables::"
+"Standardmäßig hält :func:`zip` an, sobald das kürzeste iterierbare Objekt "
+":term:`erschöpft <exhausted>` ist. Es ignoriert die verbleibenden Elemente "
+"in den längeren iterierbaren Objekten und begrenzt das Ergebnis auf die "
+"Länge des kürzesten::"
 
 #: ../../builtins/functions.rst:2261
 msgid ""
@@ -4515,13 +4515,12 @@ msgstr ""
 "[('a', 1), ('b', 2), ('c', 3)]"
 
 #: ../../builtins/functions.rst:2271
-#, fuzzy
 msgid ""
 "Unlike the default behavior, it raises a :exc:`ValueError` if one iterable "
 "is :term:`exhausted` before the others:"
 msgstr ""
 "Im Gegensatz zum Standardverhalten löst es einen :exc:`ValueError` aus, wenn "
-"ein Iterable vor den anderen vollständig durchlaufen ist:"
+"ein iterierbares Objekt vor den anderen :term:`erschöpft <exhausted>` ist:"
 
 #: ../../builtins/functions.rst:2289
 msgid ""

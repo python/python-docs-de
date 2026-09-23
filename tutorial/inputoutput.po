@@ -1,10 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# python-doc bot, 2025
 # Swen Bachmann, 2026
 #
 msgid ""
@@ -13,8 +12,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-23 06:17+0000\n"
 "PO-Revision-Date: 2026-08-30 00:02+0000\n"
-"Last-Translator: Swen Bachmann <142266608+sba72@users.noreply.github.com>\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +21,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../tutorial/inputoutput.rst:5
-#, fuzzy
 msgid "Input and output"
 msgstr "Eingabe und Ausgabe"
 
@@ -38,7 +36,6 @@ msgstr ""
 "Kapitel werden einige dieser Möglichkeiten behandelt."
 
 #: ../../tutorial/inputoutput.rst:15
-#, fuzzy
 msgid "Fancier output formatting"
 msgstr "Erweiterte Formatierungsmöglichkeiten für die Ausgabe"
 
@@ -244,9 +241,8 @@ msgstr ""
 "deutlich weniger Kontrolle über die Formatierung."
 
 #: ../../tutorial/inputoutput.rst:115
-#, fuzzy
 msgid "Formatted string literals"
-msgstr "formatiertes String-Literal"
+msgstr "Formatierte Zeichenketten-Literale"
 
 #: ../../tutorial/inputoutput.rst:117
 msgid ""
@@ -352,9 +348,8 @@ msgstr ""
 "diese Formatvorgaben findest du im Referenzhandbuch unter :ref:`formatspec`."
 
 #: ../../tutorial/inputoutput.rst:167
-#, fuzzy
 msgid "The string format() method"
-msgstr "Die String-Methode format()"
+msgstr "Die Methode format() von Zeichenketten"
 
 #: ../../tutorial/inputoutput.rst:169
 msgid "Basic usage of the :meth:`str.format` method looks like this::"
@@ -543,9 +538,8 @@ msgstr ""
 "`str.format` findest du unter :ref:`formatstrings`."
 
 #: ../../tutorial/inputoutput.rst:244
-#, fuzzy
 msgid "Manual string formatting"
-msgstr "Manuelle Formatierung von Zeichenfolgen"
+msgstr "Manuelle Formatierung von Zeichenketten"
 
 #: ../../tutorial/inputoutput.rst:246
 msgid "Here's the same table of squares and cubes, formatted manually::"
@@ -677,24 +671,20 @@ msgstr ""
 "Weitere Informationen findest du im Abschnitt  :ref:`old-string-formatting`."
 
 #: ../../tutorial/inputoutput.rst:307
-#, fuzzy
 msgid "Reading and writing files"
 msgstr "Dateien lesen und schreiben"
 
 #: ../../tutorial/inputoutput.rst:313
-#, fuzzy
 msgid ""
 ":func:`open` returns a :term:`file object`, and is most commonly used with "
 "two positional arguments: ``open(filename, mode)``"
 msgstr ""
 ":func:`open` gibt ein :term:`Dateiobjekt <file object>` zurück und wird "
-"meist mit zwei Positionsargumenten und einem Schlüsselwortargument "
-"verwendet: ``open(filename, mode, encoding=None)``"
+"meist mit zwei Positionsargumenten verwendet: ``open(filename, mode)``"
 
 #: ../../tutorial/inputoutput.rst:318
-#, fuzzy
 msgid ">>> f = open('workfile', 'w')"
-msgstr ">>> f = open('workfile', 'w', encoding=\"utf-8\")"
+msgstr ">>> f = open('workfile', 'w')"
 
 #: ../../tutorial/inputoutput.rst:325
 msgid ""
@@ -718,7 +708,6 @@ msgstr ""
 "weggelassen, wird ``'r'`` angenommen."
 
 #: ../../tutorial/inputoutput.rst:334
-#, fuzzy
 msgid ""
 "Normally, files are opened in :dfn:`text mode`, that means, you read and "
 "write strings from and to the file, which are encoded in a specific "
@@ -729,14 +718,12 @@ msgid ""
 msgstr ""
 "Normalerweise werden Dateien im :dfn:`Textmodus` geöffnet, das heißt, du "
 "liest Zeichenketten aus der Datei aus und schreibst Zeichenketten in die "
-"Datei, die in einer bestimmten *Kodierung* kodiert sind. Wenn keine "
-"*Kodierung* angegeben ist, ist die Standardeinstellung plattformabhängig "
-"(siehe :func:`open`). Da UTF-8 der moderne De-facto-Standard ist, wird "
-"``encoding=\"utf-8\"`` empfohlen, es sei denn, du weisst, dass du eine "
-"andere Kodierung verwenden musst. Durch Hinzufügen eines ``'b'`` zum Modus "
-"wird die Datei im :dfn:`Binärmodus` geöffnet. Daten im Binärmodus werden "
-"als :class:`bytes` -Objekte gelesen und geschrieben. Beim Öffnen einer Datei "
-"im Binärmodus kannst du keine *Kodierung* angeben."
+"Datei, die in einer bestimmten *encoding* kodiert sind. Wenn *encoding* "
+"nicht angegeben ist, ist UTF-8 die Standardeinstellung (siehe "
+":func:`open`). Durch Hinzufügen eines ``'b'`` zum Modus wird die Datei im "
+":dfn:`Binärmodus` geöffnet. Daten im Binärmodus werden als "
+":class:`bytes`-Objekte gelesen und geschrieben. Beim Öffnen einer Datei im "
+"Binärmodus kannst du *encoding* nicht angeben."
 
 #: ../../tutorial/inputoutput.rst:341
 msgid ""
@@ -773,7 +760,6 @@ msgstr ""
 "keyword:`try`\\ -\\ :keyword:`finally`-Blöcke::"
 
 #: ../../tutorial/inputoutput.rst:355
-#, fuzzy
 msgid ""
 ">>> with open('workfile') as f:\n"
 "...     read_data = f.read()\n"
@@ -782,7 +768,7 @@ msgid ""
 ">>> f.closed\n"
 "True"
 msgstr ""
-">>> with open('workfile', encoding=\"utf-8\") as f:\n"
+">>> with open('workfile') as f:\n"
 "...     read_data = f.read()\n"
 "\n"
 ">>> # Wir können überprüfen, ob die Datei automatisch geschlossen wurde.\n"
@@ -835,7 +821,6 @@ msgstr ""
 "ValueError: E/A-Vorgang an einer geschlossenen Datei."
 
 #: ../../tutorial/inputoutput.rst:389
-#, fuzzy
 msgid "Methods of file objects"
 msgstr "Methoden von Datei-Objekten"
 
@@ -845,7 +830,7 @@ msgid ""
 "called ``f`` has already been created."
 msgstr ""
 "In den übrigen Beispielen dieses Abschnitts wird davon ausgegangen, dass "
-"bereits ein Dateiobjekt namens  ``f`` angelegt wurde."
+"bereits ein Dateiobjekt namens ``f`` angelegt wurde."
 
 #: ../../tutorial/inputoutput.rst:394
 msgid ""
@@ -1165,14 +1150,12 @@ msgid "x = json.load(f)"
 msgstr "x = json.load(f)"
 
 #: ../../tutorial/inputoutput.rst:531
-#, fuzzy
 msgid ""
 "JSON files must be encoded in UTF-8, the default encoding for :term:`text "
 "files <text file>`."
 msgstr ""
-"JSON-Dateien müssen in UTF-8 kodiert sein. Verwende die Option "
-"``encoding=\"utf-8\"``, wenn du eine JSON-Datei als :term:`Textdatei <text "
-"file>` öffnest, sowohl beim Lesen als auch beim Schreiben."
+"JSON-Dateien müssen in UTF-8 kodiert sein, der Standardkodierung für "
+":term:`Textdateien <text file>`."
 
 #: ../../tutorial/inputoutput.rst:534
 msgid ""

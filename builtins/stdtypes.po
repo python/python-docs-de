@@ -1,11 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# python-doc bot, 2025
-# sba72, 2026
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -13,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-23 06:17+0000\n"
 "PO-Revision-Date: 2025-09-16 00:01+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -769,9 +767,8 @@ msgstr ""
 "außerdem die folgenden Operationen:"
 
 #: ../../builtins/stdtypes.rst:384
-#, fuzzy
 msgid ":func:`math.trunc( x) <math.trunc>`"
-msgstr ":func:`math.trunc(\\ x) <math.trunc>`"
+msgstr ":func:`math.trunc( x) <math.trunc>`"
 
 #: ../../builtins/stdtypes.rst:384
 msgid "*x* truncated to :class:`~numbers.Integral`"
@@ -791,9 +788,8 @@ msgstr ""
 "Standardwert 0."
 
 #: ../../builtins/stdtypes.rst:391
-#, fuzzy
 msgid ":func:`math.floor( x) <math.floor>`"
-msgstr ":func:`math.floor(\\ x) <math.floor>`"
+msgstr ":func:`math.floor( x) <math.floor>`"
 
 #: ../../builtins/stdtypes.rst:391
 msgid "the greatest :class:`~numbers.Integral` <= *x*"
@@ -1896,6 +1892,8 @@ msgstr ""
 msgid ""
 "See :ref:`time-complexity` for the costs of the various sequence operations."
 msgstr ""
+"Die Kosten der verschiedenen Sequenzoperationen findest du unter "
+":ref:`time-complexity`."
 
 #: ../../builtins/stdtypes.rst:1020
 msgid "``x in s``"
@@ -4886,7 +4884,6 @@ msgid "See also :meth:`partition`."
 msgstr "Siehe auch :meth:`partition`."
 
 #: ../../builtins/stdtypes.rst:2595
-#, fuzzy
 msgid ""
 "Return a list of the words in the string, using *sep* as the delimiter "
 "string. If *maxsplit* is given, at most *maxsplit* splits are done, the "
@@ -4895,13 +4892,13 @@ msgid ""
 "the right, :meth:`rsplit` behaves like :meth:`split` which is described in "
 "detail below."
 msgstr ""
-"Gibt eine Liste der Wörter im String zurück, wobei *sep* als Trenn-String "
-"verwendet wird. Wenn *maxsplit* angegeben ist, werden höchstens *maxsplit* "
-"Trennungen durchgeführt, und zwar die *am weitesten rechts liegenden*. Wenn "
-"*sep* nicht angegeben oder ``None`` ist, fungiert jede Folge von Whitespace-"
-"Zeichen als Trennzeichen. Abgesehen vom Trennen von rechts verhält sich :"
-"meth:`rsplit` wie :meth:`split`, was weiter unten ausführlich beschrieben "
-"ist."
+"Gibt eine Liste der Wörter in der Zeichenkette zurück, wobei *sep* als "
+"Trennzeichenkette verwendet wird. Wenn *maxsplit* angegeben ist, werden "
+"höchstens *maxsplit* Trennungen durchgeführt, und zwar die am weitesten "
+"rechts liegenden. Wenn *sep* nicht angegeben oder ``None`` ist, fungiert "
+"jede Zeichenkette aus :meth:`Whitespace <str.isspace>` als Trennzeichen. "
+"Abgesehen vom Trennen von rechts verhält sich :meth:`rsplit` wie "
+":meth:`split`, was weiter unten ausführlich beschrieben ist."
 
 #: ../../builtins/stdtypes.rst:2605
 msgid ""
@@ -5006,7 +5003,6 @@ msgstr ""
 "['1', '2', '3<4']"
 
 #: ../../builtins/stdtypes.rst:2657
-#, fuzzy
 msgid ""
 "If *sep* is not specified or is ``None``, a different splitting algorithm is "
 "applied: runs of consecutive :meth:`whitespace <str.isspace>` are regarded "
@@ -5016,12 +5012,13 @@ msgid ""
 "whitespace with a ``None`` separator returns ``[]``."
 msgstr ""
 "Wenn *sep* nicht angegeben oder ``None`` ist, wird ein anderer "
-"Trennalgorithmus angewendet: Folgen aufeinanderfolgender Whitespaces werden "
-"als ein einziges Trennzeichen betrachtet, und das Ergebnis enthält am Anfang "
-"oder Ende keine leeren Strings, wenn der String führende oder nachfolgende "
-"Whitespaces aufweist. Folglich gibt das Trennen eines leeren Strings oder "
-"eines Strings, der nur aus Whitespaces besteht, mit einem ``None``-"
-"Trennzeichen ``[]`` zurück."
+"Trennalgorithmus angewendet: Folgen aufeinanderfolgender "
+":meth:`Whitespace-Zeichen <str.isspace>` werden als ein einziges "
+"Trennzeichen betrachtet, und das Ergebnis enthält am Anfang oder Ende keine "
+"leeren Zeichenketten, wenn die Zeichenkette führende oder nachfolgende "
+"Whitespace-Zeichen aufweist. Folglich gibt das Trennen einer leeren "
+"Zeichenkette oder einer Zeichenkette, die nur aus Whitespace besteht, mit "
+"``None`` als Trennzeichen ``[]`` zurück."
 
 #: ../../builtins/stdtypes.rst:2667
 msgid ""
@@ -7275,7 +7272,6 @@ msgstr ""
 "Sequenz zurückgegeben, wenn *width* kleiner oder gleich ``len(s)`` ist."
 
 #: ../../builtins/stdtypes.rst:3922
-#, fuzzy
 msgid ""
 "Return a copy of the sequence with specified leading bytes removed.  The "
 "*bytes* argument is a binary sequence specifying the set of byte values to "
@@ -7286,9 +7282,9 @@ msgstr ""
 "Gibt eine Kopie der Sequenz zurück, bei der die angegebenen führenden Bytes "
 "entfernt wurden. Das Argument *bytes* ist eine binäre Sequenz, die die Menge "
 "der zu entfernenden Bytewerte angibt. Wenn es weggelassen wird oder ``None`` "
-"ist, entfernt das Argument *bytes* standardmäßig ASCII-Whitespaces. Das "
-"Argument *bytes* ist kein Präfix; vielmehr werden alle Kombinationen seiner "
-"Werte abgeschnitten::"
+"ist, entfernt das Argument *bytes* standardmäßig "
+":meth:`ASCII-Whitespace <bytes.isspace>`. Das Argument *bytes* ist kein "
+"Präfix; vielmehr werden alle Kombinationen seiner Werte abgeschnitten::"
 
 #: ../../builtins/stdtypes.rst:3929
 msgid ""
@@ -7338,7 +7334,6 @@ msgstr ""
 "Sequenz zurückgegeben, wenn *width* kleiner oder gleich ``len(s)`` ist."
 
 #: ../../builtins/stdtypes.rst:3967
-#, fuzzy
 msgid ""
 "Split the binary sequence into subsequences of the same type, using *sep* as "
 "the delimiter string. If *maxsplit* is given, at most *maxsplit* splits are "
@@ -7347,16 +7342,16 @@ msgid ""
 "a separator. Except for splitting from the right, :meth:`rsplit` behaves "
 "like :meth:`split` which is described in detail below."
 msgstr ""
-"Teilt die binäre Sequenz in Teilsequenzen desselben Typs unter Verwendung "
-"von *sep* als Trenn-String. Wenn *maxsplit* angegeben ist, werden höchstens "
-"*maxsplit* Trennungen vorgenommen, und zwar die *am weitesten rechts "
-"liegenden*. Wenn *sep* nicht angegeben oder ``None`` ist, fungiert jede "
-"Teilsequenz, die ausschließlich aus ASCII-Whitespaces besteht, als "
-"Trennzeichen. Abgesehen vom Trennen von rechts verhält sich :meth:`rsplit` "
-"wie :meth:`split`, was weiter unten ausführlich beschrieben ist."
+"Teilt die binäre Sequenz in Teilsequenzen desselben Typs, wobei *sep* als "
+"Trennzeichenkette verwendet wird. Wenn *maxsplit* angegeben ist, werden "
+"höchstens *maxsplit* Trennungen vorgenommen, und zwar die am weitesten "
+"rechts liegenden. Wenn *sep* nicht angegeben oder ``None`` ist, fungiert "
+"jede Teilsequenz, die ausschließlich aus "
+":meth:`ASCII-Whitespace <bytes.isspace>` besteht, als Trennzeichen. "
+"Abgesehen vom Trennen von rechts verhält sich :meth:`rsplit` wie "
+":meth:`split`, was weiter unten ausführlich beschrieben ist."
 
 #: ../../builtins/stdtypes.rst:3979
-#, fuzzy
 msgid ""
 "Return a copy of the sequence with specified trailing bytes removed.  The "
 "*bytes* argument is a binary sequence specifying the set of byte values to "
@@ -7367,9 +7362,9 @@ msgstr ""
 "Gibt eine Kopie der Sequenz zurück, bei der die angegebenen nachgestellten "
 "Bytes entfernt wurden. Das Argument *bytes* ist eine binäre Sequenz, die die "
 "Menge der zu entfernenden Bytewerte angibt. Wenn es weggelassen wird oder "
-"``None`` ist, entfernt das Argument *bytes* standardmäßig ASCII-Whitespaces. "
-"Das Argument *bytes* ist kein Suffix; vielmehr werden alle Kombinationen "
-"seiner Werte abgeschnitten::"
+"``None`` ist, entfernt das Argument *bytes* standardmäßig "
+":meth:`ASCII-Whitespace <bytes.isspace>`. Das Argument *bytes* ist kein "
+"Suffix; vielmehr werden alle Kombinationen seiner Werte abgeschnitten::"
 
 #: ../../builtins/stdtypes.rst:3986
 msgid ""
@@ -7461,7 +7456,6 @@ msgstr ""
 "[b'1', b'2', b'3<4']"
 
 #: ../../builtins/stdtypes.rst:4035
-#, fuzzy
 msgid ""
 "If *sep* is not specified or is ``None``, a different splitting algorithm is "
 "applied: runs of consecutive :meth:`ASCII whitespace <bytes.isspace>` are "
@@ -7471,12 +7465,13 @@ msgid ""
 "ASCII whitespace without a specified separator returns ``[]``."
 msgstr ""
 "Wenn *sep* nicht angegeben oder ``None`` ist, wird ein anderer "
-"Trennalgorithmus angewendet: Folgen aufeinanderfolgender ASCII-Whitespaces "
-"werden als ein einziges Trennzeichen betrachtet, und das Ergebnis enthält am "
-"Anfang oder Ende keine leeren Strings, wenn die Sequenz führende oder "
-"nachgestellte Whitespaces aufweist. Folglich gibt das Teilen einer leeren "
-"Sequenz oder einer Sequenz, die nur aus ASCII-Whitespaces besteht, ohne "
-"angegebenes Trennzeichen ``[]`` zurück."
+"Trennalgorithmus angewendet: Folgen aufeinanderfolgender "
+":meth:`ASCII-Whitespace-Zeichen <bytes.isspace>` werden als ein einziges "
+"Trennzeichen betrachtet, und das Ergebnis enthält am Anfang oder Ende keine "
+"leeren Zeichenketten, wenn die Sequenz führende oder nachgestellte "
+"Whitespace-Zeichen aufweist. Folglich gibt das Teilen einer leeren Sequenz "
+"oder einer Sequenz, die nur aus ASCII-Whitespace besteht, ohne angegebenes "
+"Trennzeichen ``[]`` zurück."
 
 #: ../../builtins/stdtypes.rst:4046
 msgid ""
@@ -7495,7 +7490,6 @@ msgstr ""
 "[b'1', b'2', b'3']"
 
 #: ../../builtins/stdtypes.rst:4057
-#, fuzzy
 msgid ""
 "Return a copy of the sequence with specified leading and trailing bytes "
 "removed. The *bytes* argument is a binary sequence specifying the set of "
@@ -7508,9 +7502,9 @@ msgstr ""
 "nachgestellten Bytes entfernt wurden. Das Argument *bytes* ist eine binäre "
 "Sequenz, die die Menge der zu entfernenden Bytewerte angibt. Wenn es "
 "weggelassen wird oder ``None`` ist, entfernt das Argument *bytes* "
-"standardmäßig ASCII-Whitespaces. Das Argument *bytes* ist weder ein Präfix "
-"noch ein Suffix, vielmehr werden alle Kombinationen seiner Werte "
-"abgeschnitten::"
+"standardmäßig :meth:`ASCII-Whitespace <bytes.isspace>`. Das Argument "
+"*bytes* ist weder ein Präfix noch ein Suffix; vielmehr werden alle "
+"Kombinationen seiner Werte abgeschnitten::"
 
 #: ../../builtins/stdtypes.rst:4065
 msgid ""
@@ -9073,7 +9067,6 @@ msgid "Set Types --- :class:`set`, :class:`frozenset`"
 msgstr "Mengen-Typen – :class:`set`, :class:`frozenset`"
 
 #: ../../builtins/stdtypes.rst:5125
-#, fuzzy
 msgid ""
 "A :dfn:`set` object is an unordered collection of distinct :term:`hashable` "
 "objects. Common uses include membership testing, removing duplicates from a "
@@ -9083,13 +9076,14 @@ msgid ""
 "`collections` module.) See :ref:`time-complexity` for the costs of the "
 "various set operations."
 msgstr ""
-"Ein :dfn:`set`-Objekt (Menge) ist eine ungeordnete Sammlung eindeutiger :"
-"term:`hashbarer <hashable>` Objekte. Typische Verwendungszwecke sind "
-"Mitgliedschaftstests, das Entfernen von Duplikaten aus einer Sequenz und das "
-"Berechnen mathematischer Mengenoperationen wie Schnittmenge, Vereinigung, "
-"Differenz und symmetrische Differenz. (Für andere Container siehe die "
-"eingebauten Klassen :class:`dict`, :class:`list` und :class:`tuple` sowie "
-"das Modul :mod:`collections`.)"
+"Ein :dfn:`set`-Objekt (Menge) ist eine ungeordnete Sammlung eindeutiger "
+":term:`hashbarer <hashable>` Objekte. Typische Verwendungszwecke sind "
+"Mitgliedschaftstests, das Entfernen von Duplikaten aus einer Sequenz und "
+"das Berechnen mathematischer Mengenoperationen wie Schnittmenge, "
+"Vereinigung, Differenz und symmetrische Differenz. (Für andere Container "
+"siehe die integrierten Klassen :class:`dict`, :class:`list` und "
+":class:`tuple` sowie das Modul :mod:`collections`.) Die Kosten der "
+"verschiedenen Mengenoperationen findest du unter :ref:`time-complexity`."
 
 #: ../../builtins/stdtypes.rst:5133
 msgid ""
@@ -9448,7 +9442,6 @@ msgid "Mapping types --- :class:`!dict`, :class:`!frozendict`"
 msgstr "Mapping-Typen – :class:`!dict`, :class:`!frozendict`"
 
 #: ../../builtins/stdtypes.rst:5350
-#, fuzzy
 msgid ""
 "A :term:`mapping` object maps :term:`hashable` values to arbitrary objects. "
 "There are currently two standard mapping types, the :dfn:`dictionary` and :"
@@ -9460,8 +9453,9 @@ msgstr ""
 "Ein :term:`Mapping <mapping>`-Objekt bildet :term:`hashbare <hashable>` "
 "Werte auf beliebige Objekte ab. Derzeit gibt es zwei Standard-Mapping-Typen, "
 "das :dfn:`Dictionary` und :class:`frozendict`. (Für andere Container siehe "
-"die eingebauten Klassen :class:`list`, :class:`set` und :class:`tuple` sowie "
-"das Modul :mod:`collections`.)"
+"die integrierten Klassen :class:`list`, :class:`set` und :class:`tuple` "
+"sowie das Modul :mod:`collections`.) Die Kosten der verschiedenen "
+"Dictionary-Operationen findest du unter :ref:`time-complexity`."
 
 #: ../../builtins/stdtypes.rst:5359
 msgid ""
