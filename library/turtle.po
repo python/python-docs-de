@@ -2,9 +2,8 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 #
-# Translators:
-# python-doc bot, 2025
-# sba72, 2026
+## Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -3949,8 +3948,6 @@ msgstr "Viel Spaß!"
 
 # ~ msgid "Changes since Python 2.6"
 # ~ msgstr "Änderungen seit Python 2.6"
-msgid ""
-msgstr ""
 
 # ~ msgid ""
 # ~ "The methods :func:`Turtle.tracer <tracer>`, :func:`Turtle.window_width "
@@ -3968,8 +3965,6 @@ msgstr ""
 # ~ "abgeleiteten Funktionen bleiben verfügbar. (Tatsächlich waren diese "
 # ~ "Methoden bereits in Python 2.6 lediglich Duplikate der entsprechenden :"
 # ~ "class:`TurtleScreen`/:class:`Screen`-Methoden.)"
-msgid ""
-msgstr ""
 
 # ~ msgid ""
 # ~ "The method :func:`!Turtle.fill` has been eliminated. The behaviour of :"
@@ -3980,8 +3975,6 @@ msgstr ""
 # ~ "`begin_fill` und :func:`end_fill` hat sich leicht geändert: Jetzt muss "
 # ~ "jeder Füllvorgang mit einem Aufruf von ``end_fill()`` abgeschlossen "
 # ~ "werden."
-msgid ""
-msgstr ""
 
 # ~ msgid ""
 # ~ "A method :func:`Turtle.filling <filling>` has been added. It returns a "
@@ -3993,13 +3986,9 @@ msgstr ""
 # ~ "einen booleschen Wert zurück: ``True``, wenn ein Füllvorgang im Gange "
 # ~ "ist, andernfalls ``False``. Dieses Verhalten entspricht einem Aufruf von "
 # ~ "``fill()`` ohne Argumente in Python 2.6."
-msgid ""
-msgstr ""
 
 # ~ msgid "Changes since Python 3.0"
 # ~ msgstr "Änderungen seit Python 3.0"
-msgid ""
-msgstr ""
 
 # ~ msgid ""
 # ~ "The :class:`Turtle` methods :func:`shearfactor`, :func:`shapetransform` "
@@ -4013,8 +4002,6 @@ msgstr ""
 # ~ "Bereich regulärer linearer Transformationen zur Transformation von Turtle-"
 # ~ "Formen zur Verfügung. :func:`tiltangle` wurde funktional erweitert: Es "
 # ~ "kann jetzt verwendet werden, um den Kippwinkel abzurufen oder zu setzen."
-msgid ""
-msgstr ""
 
 # ~ msgid ""
 # ~ "The :class:`Screen` method :func:`onkeypress` has been added as a "
@@ -4025,8 +4012,6 @@ msgstr ""
 # ~ "func:`onkey` hinzugefügt. Da Letzteres Aktionen an das Loslassen-Ereignis "
 # ~ "der Taste bindet, wurde dafür auch ein Alias hinzugefügt: :func:"
 # ~ "`onkeyrelease`."
-msgid ""
-msgstr ""
 
 # ~ msgid ""
 # ~ "The method :func:`Screen.mainloop <mainloop>` has been added, so there is "
@@ -4037,8 +4022,6 @@ msgstr ""
 # ~ "es nicht mehr nötig ist, die eigenständige Funktion :func:`mainloop` zu "
 # ~ "verwenden, wenn mit :class:`Screen`- und :class:`Turtle`-Objekten "
 # ~ "gearbeitet wird."
-msgid ""
-msgstr ""
 
 # ~ msgid ""
 # ~ "Two input methods have been added: :func:`Screen.textinput <textinput>` "
