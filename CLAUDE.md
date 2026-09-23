@@ -11,6 +11,9 @@ als Gettext-Dateien (`.po`). Übersetzt wird ausschließlich der `msgstr`.
 - „iterable" → „iterierbares Objekt"
 - Funktionsbeschreibungen in der 3. Person: „Gibt … zurück"
 - Deutsche Anführungszeichen „…“, nie um Rollen oder Code herum
+- „unraisable exception" → „nicht weiterleitbare Ausnahme
+  (unraisable exception)" beim ersten Vorkommen, danach kurz
+- „free-threaded build" → „Build mit freien Threads" (laut Glossar)
 
 ## reST- und PO-Syntax
 - `msgid` NIEMALS ändern, auch nicht bei Tippfehlern im Original
