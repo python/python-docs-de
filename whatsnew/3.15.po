@@ -684,28 +684,34 @@ msgid ""
 ":mod:`profiling.sampling`: a new statistical sampling profiler (named "
 "Tachyon)."
 msgstr ""
+":mod:`profiling.sampling`: ein neuer statistischer Sampling-Profiler (namens "
+"Tachyon)."
 
 #: ../../whatsnew/3.15.rst:337
 msgid ""
 "The ``cProfile`` module remains as an alias for backwards compatibility. "
 "The :mod:`profile` module is deprecated and will be removed in Python 3.17."
 msgstr ""
+"Das Modul ``cProfile`` bleibt aus Gründen der Abwärtskompatibilität als "
+"Alias erhalten. Das Modul :mod:`profile` ist veraltet und wird in Python "
+"3.17 entfernt."
 
 #: ../../whatsnew/3.15.rst:340
 msgid "(Contributed by Pablo Galindo and László Kiss Kollár in :gh:`138122`.)"
 msgstr ""
+"(Beigetragen von Pablo Galindo und László Kiss Kollár in :gh:`138122`.)"
 
 #: ../../whatsnew/3.15.rst:342
 msgid ":pep:`799` for further details."
-msgstr ""
+msgstr ":pep:`799` enthält weitere Details."
 
 #: ../../whatsnew/3.15.rst:348
 msgid "Tachyon: High-frequency statistical sampling profiler"
-msgstr ""
+msgstr "Tachyon: Hochfrequenter statistischer Sampling-Profiler"
 
 #: ../../whatsnew/3.15.rst:350
 msgid "Tachyon profiler logo"
-msgstr ""
+msgstr "Logo des Tachyon-Profilers"
 
 #: ../../whatsnew/3.15.rst:356
 msgid ""
@@ -714,6 +720,10 @@ msgid ""
 "analysis of running Python processes without requiring code modification or "
 "process restart."
 msgstr ""
+"Ein neuer statistischer Sampling-Profiler (Tachyon) wurde "
+"als :mod:`profiling.sampling` hinzugefügt. Dieser Profiler ermöglicht eine "
+"Performance-Analyse laufender Python-Prozesse mit geringem Overhead, ohne "
+"dass Code geändert oder der Prozess neu gestartet werden muss."
 
 #: ../../whatsnew/3.15.rst:360
 msgid ""
@@ -727,10 +737,20 @@ msgid ""
 "performance issues in production systems where traditional profiling "
 "approaches would be too intrusive."
 msgstr ""
+"Im Gegensatz zu deterministischen Profilern (wie :mod:`profiling.tracing`), "
+"die jeden Funktionsaufruf instrumentieren, erfasst der Sampling-Profiler in "
+"regelmäßigen Abständen Stacktraces laufender Prozesse. Dieser Ansatz "
+"verursacht praktisch keinen Overhead und erreicht dabei Abtastraten von "
+"**bis zu 1.000.000 Hz**. Damit ist er der schnellste verfügbare Sampling-"
+"Profiler für Python (zum Zeitpunkt seiner Einführung) und ideal, um "
+"Performance-Probleme in Produktionsumgebungen zu debuggen. Diese Fähigkeit "
+"ist besonders wertvoll für die Fehlersuche bei Performance-Problemen in "
+"Produktivsystemen, in denen herkömmliche Profiling-Ansätze zu stark "
+"eingreifen würden."
 
 #: ../../whatsnew/3.15.rst:369
 msgid "Key features include:"
-msgstr ""
+msgstr "Zu den wichtigsten Features gehören:"
 
 #: ../../whatsnew/3.15.rst:371
 msgid ""
@@ -738,6 +758,10 @@ msgid ""
 "affecting its performance. Ideal for production debugging where you can't "
 "afford to restart or slow down your application."
 msgstr ""
+"**Profiling ohne Overhead**: Hänge dich an jeden laufenden Python-Prozess "
+"an, ohne seine Performance zu beeinträchtigen. Ideal für das Debugging in "
+"Produktion, wenn du es dir nicht leisten kannst, deine Anwendung neu zu "
+"starten oder zu verlangsamen."
 
 #: ../../whatsnew/3.15.rst:375
 msgid ""
@@ -745,28 +769,37 @@ msgid ""
 "restart. Simply point the profiler at a running process by PID and start "
 "collecting data."
 msgstr ""
+"**Keine Codeänderungen nötig**: Untersuche bestehende Anwendungen ohne "
+"Neustart. Richte den Profiler einfach über die PID auf einen laufenden "
+"Prozess und beginne mit dem Sammeln von Daten."
 
 #: ../../whatsnew/3.15.rst:378
 msgid "**Flexible target modes**:"
-msgstr ""
+msgstr "**Flexible Zielmodi**:"
 
 #: ../../whatsnew/3.15.rst:380
 msgid ""
 "Profile running processes by PID (``attach``) - attach to already-running "
 "applications"
 msgstr ""
+"Laufende Prozesse über die PID profilen (``attach``) - an bereits laufende "
+"Anwendungen anhängen"
 
 #: ../../whatsnew/3.15.rst:381
 msgid ""
 "Run and profile scripts directly (``run``) - profile from the very start of "
 "execution"
 msgstr ""
+"Skripte direkt ausführen und profilen (``run``) - Profiling ab dem "
+"allerersten Moment der Ausführung"
 
 #: ../../whatsnew/3.15.rst:382
 msgid ""
 "Execute and profile modules (``run -m``) - profile packages run as ``python "
 "-m module``"
 msgstr ""
+"Module ausführen und profilen (``run -m``) - Pakete profilen, die als "
+"``python -m module`` ausgeführt werden"
 
 #: ../../whatsnew/3.15.rst:383
 msgid ""
@@ -774,12 +807,18 @@ msgid ""
 "traceback-style stack of every thread (or all asyncio tasks with ``--async-"
 "aware``). Useful for investigating hung processes."
 msgstr ""
+"Einen einmaligen Schnappschuss eines laufenden Prozesses erfassen (``dump``) "
+"- gibt für jeden Thread einen Stack im Traceback-Stil aus (oder für alle "
+"asyncio-Tasks mit ``--async-aware``). Nützlich, um hängende Prozesse zu "
+"untersuchen."
 
 #: ../../whatsnew/3.15.rst:387
 msgid ""
 "**Multiple profiling modes**: Choose what to measure based on your "
 "performance investigation:"
 msgstr ""
+"**Mehrere Profiling-Modi**: Wähle je nach Performance-Untersuchung aus, was "
+"gemessen werden soll:"
 
 #: ../../whatsnew/3.15.rst:389
 msgid ""
@@ -788,6 +827,10 @@ msgid ""
 "understand where your program spends calendar time, including when waiting "
 "for external resources."
 msgstr ""
+"**Wall-Clock-Zeit** (``--mode wall``, Standard): Misst die tatsächlich "
+"verstrichene Zeit einschließlich I/O, Wartezeiten im Netzwerk und "
+"blockierender Operationen. Verwende diesen Modus, um zu verstehen, wo dein "
+"Programm reale Zeit verbringt, auch beim Warten auf externe Ressourcen."
 
 #: ../../whatsnew/3.15.rst:392
 msgid ""
@@ -795,6 +838,9 @@ msgid ""
 "excluding I/O waits and blocking. Use this to identify CPU-bound bottlenecks "
 "and optimize computational work."
 msgstr ""
+"**CPU-Zeit** (``--mode cpu``): Misst nur die aktive CPU-Ausführungszeit, "
+"ohne I/O-Wartezeiten und Blockierungen. Verwende diesen Modus, um CPU-"
+"gebundene Engpässe zu finden und Rechenarbeit zu optimieren."
 
 #: ../../whatsnew/3.15.rst:394
 msgid ""
@@ -802,6 +848,9 @@ msgid ""
 "Global Interpreter Lock. Use this to identify which threads dominate GIL "
 "usage in multi-threaded applications."
 msgstr ""
+"**GIL-Haltezeit** (``--mode gil``): Misst die Zeit, in der Pythons Global "
+"Interpreter Lock gehalten wird. Verwende diesen Modus, um herauszufinden, "
+"welche Threads die GIL-Nutzung in Multithread-Anwendungen dominieren."
 
 #: ../../whatsnew/3.15.rst:396
 msgid ""
@@ -809,6 +858,9 @@ msgid ""
 "from threads with an active exception. Use this to analyze exception "
 "handling overhead."
 msgstr ""
+"**Zeit für Ausnahmebehandlung** (``--mode exception``): Erfasst Samples nur "
+"von Threads mit einer aktiven Ausnahme. Verwende diesen Modus, um den "
+"Overhead der Ausnahmebehandlung zu analysieren."
 
 #: ../../whatsnew/3.15.rst:399
 msgid ""
@@ -816,12 +868,17 @@ msgid ""
 "the main thread, essential for understanding multi-threaded application "
 "behavior."
 msgstr ""
+"**Thread-bewusstes Profiling**: Option, alle Threads (``-a``) oder nur den "
+"Haupt-Thread zu profilen – unverzichtbar, um das Verhalten von Multithread-"
+"Anwendungen zu verstehen."
 
 #: ../../whatsnew/3.15.rst:402
 msgid ""
 "**Multiple output formats**: Choose the visualization that best fits your "
 "workflow:"
 msgstr ""
+"**Mehrere Ausgabeformate**: Wähle die Visualisierung, die am besten zu "
+"deinem Workflow passt:"
 
 #: ../../whatsnew/3.15.rst:404
 msgid ""
@@ -829,6 +886,10 @@ msgid ""
 "Shows function-level timing with direct and cumulative samples. Best for "
 "detailed analysis and integration with existing Python profiling tools."
 msgstr ""
+"``--pstats``: Detaillierte tabellarische Statistiken, kompatibel "
+"mit :mod:`pstats`. Zeigt Zeitangaben auf Funktionsebene mit direkten und "
+"kumulativen Samples. Am besten geeignet für detaillierte Analysen und die "
+"Integration mit bestehenden Python-Profiling-Werkzeugen."
 
 #: ../../whatsnew/3.15.rst:407
 msgid ""
@@ -836,6 +897,10 @@ msgid ""
 "format is specifically designed for creating flame graphs with external "
 "tools like Brendan Gregg's FlameGraph scripts or speedscope."
 msgstr ""
+"``--collapsed``: Erzeugt zusammengefasste Stacktraces (eine Zeile pro "
+"Stack). Dieses Format ist speziell dafür gedacht, Flame Graphs mit externen "
+"Werkzeugen wie den FlameGraph-Skripten von Brendan Gregg oder speedscope zu "
+"erstellen."
 
 #: ../../whatsnew/3.15.rst:410
 msgid ""
@@ -844,6 +909,11 @@ msgid ""
 "Flame graphs show the call hierarchy where width represents time spent, "
 "making it easy to spot bottlenecks at a glance."
 msgstr ""
+"``--flamegraph``: Erzeugt einen eigenständigen, interaktiven HTML-Flame-"
+"Graph mit D3.js. Er öffnet sich direkt in deinem Browser für eine sofortige "
+"visuelle Analyse. Flame Graphs zeigen die Aufrufhierarchie, wobei die Breite "
+"die verbrauchte Zeit darstellt; so lassen sich Engpässe auf einen Blick "
+"erkennen."
 
 #: ../../whatsnew/3.15.rst:413
 msgid ""
@@ -852,6 +922,10 @@ msgid ""
 "Profiler for advanced timeline-based analysis with features like stack "
 "charts, markers, and network activity."
 msgstr ""
+"``--gecko``: Erzeugt das Gecko-Profiler-Format, kompatibel mit dem `Firefox "
+"Profiler <https://profiler.firefox.com>`__. Lade die Ausgabe in den Firefox "
+"Profiler hoch, um erweiterte zeitleistenbasierte Analysen mit Features wie "
+"Stack-Charts, Markern und Netzwerkaktivität durchzuführen."
 
 #: ../../whatsnew/3.15.rst:416
 msgid ""
@@ -859,6 +933,9 @@ msgid ""
 "level sample counts. Creates a directory with per-file heatmaps showing "
 "exactly where time is spent at the source code level."
 msgstr ""
+"``--heatmap``: Erzeugt eine interaktive HTML-Heatmap mit Sample-Zahlen pro "
+"Zeile. Legt ein Verzeichnis mit Heatmaps pro Datei an, die genau zeigen, wo "
+"auf Quellcodeebene Zeit verbraucht wird."
 
 #: ../../whatsnew/3.15.rst:420
 msgid ""
@@ -866,6 +943,9 @@ msgid ""
 "(``--live``). Monitor performance as your application runs with interactive "
 "sorting and filtering."
 msgstr ""
+"**Interaktiver Live-Modus**: Echtzeit-TUI-Profiler mit einer Oberfläche "
+"ähnlich wie top (``--live``). Beobachte die Performance, während deine "
+"Anwendung läuft, mit interaktivem Sortieren und Filtern."
 
 #: ../../whatsnew/3.15.rst:423
 msgid ""
@@ -873,6 +953,10 @@ msgid ""
 "reconstruction (``--async-aware``). See which coroutines are consuming time, "
 "with options to show only running tasks or all tasks including those waiting."
 msgstr ""
+"**Async-bewusstes Profiling**: Profiling von async/await-Code mit "
+"taskbasierter Rekonstruktion des Stacks (``--async-aware``). Sieh, welche "
+"Koroutinen Zeit verbrauchen, mit Optionen, nur laufende Tasks oder alle "
+"Tasks einschließlich wartender anzuzeigen."
 
 #: ../../whatsnew/3.15.rst:427
 msgid ""
@@ -881,22 +965,31 @@ msgid ""
 "instructions are executing, including specializations from the adaptive "
 "interpreter."
 msgstr ""
+"**Profiling auf Opcode-Ebene**: Sammle Informationen zu Bytecode-Opcodes für "
+"Profiling auf Instruktionsebene (``--opcodes``). Zeigt, welche Bytecode-"
+"Instruktionen ausgeführt werden, einschließlich der Spezialisierungen des "
+"adaptiven Interpreters."
 
 #: ../../whatsnew/3.15.rst:431
 msgid ""
 "See :mod:`profiling.sampling` for the complete documentation, including all "
 "available output formats, profiling modes, and configuration options."
 msgstr ""
+"Die vollständige Dokumentation mit allen verfügbaren Ausgabeformaten, "
+"Profiling-Modi und Konfigurationsoptionen findest du "
+"unter :mod:`profiling.sampling`."
 
 #: ../../whatsnew/3.15.rst:434
 msgid ""
 "(Contributed by Pablo Galindo and László Kiss Kollár in :gh:`135953` "
 "and :gh:`138122`.)"
 msgstr ""
+"(Beigetragen von Pablo Galindo und László Kiss Kollár in :gh:`135953` "
+"und :gh:`138122`.)"
 
 #: ../../whatsnew/3.15.rst:440
 msgid ":pep:`831`: Frame pointers enabled by default"
-msgstr ""
+msgstr ":pep:`831`: Frame-Pointer standardmäßig aktiviert"
 
 #: ../../whatsnew/3.15.rst:442
 msgid ""
@@ -906,6 +999,11 @@ msgid ""
 "more reliable for system profilers, debuggers, crash analysis tools, and "
 "eBPF-based observability tools."
 msgstr ""
+"CPython wird jetzt auf Plattformen, die dies unterstützen, standardmäßig mit "
+"Frame-Pointern gebaut. Dabei werden die Compiler-Flags ``-fno-omit-frame-"
+"pointer`` und ``-mno-omit-leaf-frame-pointer`` verwendet, wodurch das native "
+"Stack-Unwinding für System-Profiler, Debugger, Werkzeuge zur Absturzanalyse "
+"und eBPF-basierte Observability-Werkzeuge schneller und zuverlässiger wird."
 
 #: ../../whatsnew/3.15.rst:448
 msgid ""
@@ -915,6 +1013,12 @@ msgid ""
 "needs an unbroken frame-pointer chain through the interpreter, extension "
 "modules, embedding applications, and native libraries."
 msgstr ""
+"Die Flags werden über :mod:`sysconfig` bereitgestellt, sodass "
+"Erweiterungsmodule, die von Werkzeugen gebaut werden, welche die Build-"
+"Konfiguration von Python übernehmen, standardmäßig Frame-Pointer erben. "
+"Diese Weitergabe ist beabsichtigt: Gemischtes Python/natives Profiling "
+"benötigt eine lückenlose Kette von Frame-Pointern durch den Interpreter, "
+"Erweiterungsmodule, einbettende Anwendungen und native Bibliotheken."
 
 #: ../../whatsnew/3.15.rst:456
 msgid ""
@@ -925,6 +1029,13 @@ msgid ""
 "single native component built without frame pointers can break stack "
 "unwinding for the whole Python process."
 msgstr ""
+"Build-Backends von Drittanbietern und native Build-Systeme sollten diese "
+"Flags beibehalten, wenn sie die Werte aus Pythons :mod:`sysconfig` "
+"übernehmen. Build-Systeme, die C, C++, Rust oder anderen nativen Code "
+"kompilieren, ohne die Compiler-Flags von Python zu erben, sollten selbst "
+"gleichwertige Frame-Pointer-Flags aktivieren. Eine einzige native "
+"Komponente, die ohne Frame-Pointer gebaut wurde, kann das Stack-Unwinding "
+"für den gesamten Python-Prozess unterbrechen."
 
 #: ../../whatsnew/3.15.rst:463
 msgid ""
@@ -932,14 +1043,17 @@ msgid ""
 "in :gh:`149201`; PEP 831 written by Pablo Galindo Salgado, Ken Jin, Savannah "
 "Ostrowski, and Diego Russo.)"
 msgstr ""
+"(Beigetragen von Pablo Galindo Salgado und Savannah Ostrowski "
+"in :gh:`149201`; PEP 831 verfasst von Pablo Galindo Salgado, Ken Jin, "
+"Savannah Ostrowski und Diego Russo.)"
 
 #: ../../whatsnew/3.15.rst:467
 msgid ":pep:`831` for further details."
-msgstr ""
+msgstr ":pep:`831` enthält weitere Details."
 
 #: ../../whatsnew/3.15.rst:473
 msgid ":pep:`798`: Unpacking in comprehensions"
-msgstr ""
+msgstr ":pep:`798`: Entpacken in Comprehensions"
 
 #: ../../whatsnew/3.15.rst:475
 msgid ""
@@ -951,6 +1065,14 @@ msgid ""
 "comprehensions, :func:`itertools.chain`, "
 "and :meth:`itertools.chain.from_iterable`.  For example::"
 msgstr ""
+"List-, Set- und Dictionary-Comprehensions sowie Generator-Ausdrücke "
+"unterstützen jetzt das Entpacken mit ``*`` und ``**``. Damit wird die "
+"Entpack-Syntax aus :pep:`448` auf Comprehensions erweitert; sie bietet eine "
+"neue Syntax, um eine beliebige Anzahl iterierbarer Objekte oder Dictionaries "
+"zu einer einzigen flachen Struktur zusammenzuführen. Diese neue Syntax ist "
+"eine direkte Alternative zu verschachtelten "
+"Comprehensions, :func:`itertools.chain` "
+"und :meth:`itertools.chain.from_iterable`. Zum Beispiel::"
 
 #: ../../whatsnew/3.15.rst:483
 msgid ""
@@ -967,12 +1089,26 @@ msgid ""
 "d.items()}\n"
 "{'a': 3, 'b': 2}"
 msgstr ""
+">>> lists = [[1, 2], [3, 4], [5]]\n"
+">>> [*L for L in lists]  # equivalent to [x for L in lists for x in L]\n"
+"[1, 2, 3, 4, 5]\n"
+"\n"
+">>> sets = [{1, 2}, {2, 3}, {3, 4}]\n"
+">>> {*s for s in sets}  # equivalent to {x for s in sets for x in s}\n"
+"{1, 2, 3, 4}\n"
+"\n"
+">>> dicts = [{'a': 1}, {'b': 2}, {'a': 3}]\n"
+">>> {**d for d in dicts}  # equivalent to {k: v for d in dicts for k,v in "
+"d.items()}\n"
+"{'a': 3, 'b': 2}"
 
 #: ../../whatsnew/3.15.rst:495
 msgid ""
 "Generator expressions can similarly use unpacking to yield values from "
 "multiple iterables::"
 msgstr ""
+"Generator-Ausdrücke können das Entpacken auf ähnliche Weise nutzen, um Werte "
+"aus mehreren iterierbaren Objekten zu liefern::"
 
 #: ../../whatsnew/3.15.rst:498
 msgid ""
@@ -981,6 +1117,10 @@ msgid ""
 ">>> list(gen)\n"
 "[1, 2, 3, 4, 5]"
 msgstr ""
+">>> gen = (*L for L in lists)  # equivalent to (x for L in lists for x in "
+"L)\n"
+">>> list(gen)\n"
+"[1, 2, 3, 4, 5]"
 
 #: ../../whatsnew/3.15.rst:502
 msgid ""
@@ -988,18 +1128,21 @@ msgid ""
 "for example, ``(*a async for a in agen())`` is equivalent to ``(x async for "
 "a in agen() for x in a)``."
 msgstr ""
+"Diese Änderung gilt auch für asynchrone Generator-Ausdrücke; so ist zum "
+"Beispiel ``(*a async for a in agen())`` gleichwertig zu ``(x async for a in "
+"agen() for x in a)``."
 
 #: ../../whatsnew/3.15.rst:506
 msgid "(Contributed by Adam Hartz in :gh:`143055`.)"
-msgstr ""
+msgstr "(Beigetragen von Adam Hartz in :gh:`143055`.)"
 
 #: ../../whatsnew/3.15.rst:508
 msgid ":pep:`798` for further details."
-msgstr ""
+msgstr ":pep:`798` enthält weitere Details."
 
 #: ../../whatsnew/3.15.rst:514
 msgid ":pep:`829`: Package startup configuration files"
-msgstr ""
+msgstr ":pep:`829`: Startkonfigurationsdateien für Pakete"
 
 #: ../../whatsnew/3.15.rst:516
 msgid ""
@@ -1009,6 +1152,12 @@ msgid ""
 "space or tab).  The latter functionality can be problematic, since it is "
 "difficult to know exactly what gets executed when Python starts up."
 msgstr ""
+"Die vom Modul :mod:`site` geladenen :ref:`.pth-Dateien <site-pth-files>` "
+"(sofern ``-S`` nicht angegeben ist) können Zeilen enthalten, "
+"die :data:`sys.path` erweitern, aber auch beliebigen Code ausführen, wenn "
+"die Zeile mit ``import`` beginnt (gefolgt von einem Leerzeichen oder "
+"Tabulator). Letztere Funktionalität kann problematisch sein, da schwer "
+"nachzuvollziehen ist, was genau beim Start von Python ausgeführt wird."
 
 #: ../../whatsnew/3.15.rst:522
 msgid ""
@@ -1018,6 +1167,12 @@ msgid ""
 "``pkg.mod`` is the import path to the given callable.  When Python starts "
 "up, the callable is located and called with no arguments."
 msgstr ""
+"Als Schritt hin zu einer besseren Überprüfbarkeit von Code, der vor dem "
+"Start ausgeführt wird, führt Python 3.15 :ref:`.start-Dateien <site-start-"
+"files>` ein. Sie enthalten Einstiegspunkt-Angaben der Form "
+"``pkg.mod:callable``, wobei ``pkg.mod`` der Importpfad zum jeweiligen "
+"aufrufbaren Objekt ist. Beim Start von Python wird das aufrufbare Objekt "
+"gesucht und ohne Argumente aufgerufen."
 
 #: ../../whatsnew/3.15.rst:528
 msgid ""
@@ -1026,6 +1181,11 @@ msgid ""
 "files are ignored.  There is no change to :data:`sys.path` extension lines "
 "in :file:`.pth` files."
 msgstr ""
+"Zeilen mit ``import`` in Dateien vom Typ :file:`.pth` sind stillschweigend "
+"veraltet. Wird eine passende Datei vom Typ :file:`.start` gefunden, werden "
+"Zeilen mit ``import`` in Dateien vom Typ :file:`.pth` ignoriert. Für Zeilen, "
+"die :data:`sys.path` erweitern, ändert sich in Dateien vom Typ :file:`.pth` "
+"nichts."
 
 #: ../../whatsnew/3.15.rst:533
 msgid ""
@@ -1040,14 +1200,25 @@ msgid ""
 "and :meth:`~site.StartupState.addsitepackages`, then "
 "call :meth:`~site.StartupState.process` once at the end of the batch."
 msgstr ""
+"Das Modul :mod:`site` stellt außerdem :class:`site.StartupState` bereit, um "
+"die Startverarbeitung für mehrere Site-Verzeichnisse zu bündeln. Dadurch "
+"wird sichergestellt, dass alle statischen Pfaderweiterungen angewendet "
+"werden, bevor Startcode ausgeführt wird. :func:`site.main` verwendet "
+"implizit eine Instanz dieser Klasse, um beim normalen Start des Interpreters "
+"alle Startkonfigurationsdateien gebündelt zu verarbeiten. Wenn du dasselbe "
+"Bündelungsverhalten benötigst, kannst du direkt "
+"ein :class:`~site.StartupState` erzeugen, es "
+"mit :meth:`~site.StartupState.addsitedir`, :meth:`~site.StartupState.addusersitepackages` "
+"und :meth:`~site.StartupState.addsitepackages` steuern und am Ende "
+"einmal :meth:`~site.StartupState.process` aufrufen."
 
 #: ../../whatsnew/3.15.rst:544
 msgid "(Contributed by Barry Warsaw in :gh:`148641` and :gh:`150228`.)"
-msgstr ""
+msgstr "(Beigetragen von Barry Warsaw in :gh:`148641` und :gh:`150228`.)"
 
 #: ../../whatsnew/3.15.rst:550
 msgid ":pep:`803`: Stable ABI for free-threaded builds"
-msgstr ""
+msgstr ":pep:`803`: Stabile ABI für Builds mit freien Threads"
 
 #: ../../whatsnew/3.15.rst:552
 msgid ""
@@ -1057,6 +1228,12 @@ msgid ""
 "<free-threaded build>` of CPython. This usually requires some non-trivial "
 "changes to the source code; specifically:"
 msgstr ""
+"C-Erweiterungen, die auf die :ref:`stabile ABI <stable-abi>` abzielen, "
+"können jetzt für die neue *stabile ABI für Builds mit freien Threads* (auch "
+"bekannt als ``abi3t``) kompiliert werden, wodurch sie mit :term:`Builds mit "
+"freien Threads <free-threaded build>` von CPython kompatibel werden. Dies "
+"erfordert in der Regel einige nicht triviale Änderungen am Quellcode, und "
+"zwar:"
 
 #: ../../whatsnew/3.15.rst:559
 msgid ""
@@ -1065,6 +1242,10 @@ msgid ""
 "and :c:func:`PyObject_GetTypeData`, rather than making :c:type:`PyObject` "
 "part of the instance struct; and"
 msgstr ""
+"Umstieg auf die mit :pep:`697` (Python 3.12) eingeführte API, etwa ein "
+"negatives :c:member:`~PyType_Spec.basicsize` "
+"und :c:func:`PyObject_GetTypeData`, statt :c:type:`PyObject` zum Teil der "
+"Instanz-Struktur zu machen; und"
 
 #: ../../whatsnew/3.15.rst:563
 msgid ""
@@ -1073,6 +1254,10 @@ msgid ""
 "purpose in :pep:`793`, with a new :c:type:`PySlot` structure introduced "
 "in :pep:`820`."
 msgstr ""
+"Umstieg von einer Funktion ``PyInit_`` auf einen neuen Export-"
+"Hook, :c:func:`PyModExport_* <PyModExport_modulename>`, der zu diesem Zweck "
+"in :pep:`793` eingeführt wurde, mit einer neuen Struktur :c:type:`PySlot`, "
+"die in :pep:`820` eingeführt wurde."
 
 #: ../../whatsnew/3.15.rst:568
 msgid ""
@@ -1081,6 +1266,10 @@ msgid ""
 "build for the existing Stable ABI (``abi3``) and the version-specific ABI "
 "for free-threading (``cp315t``) separately."
 msgstr ""
+"Beachte, dass die stabile ABI nicht die gesamte Funktionalität bietet, die "
+"CPython zu bieten hat. Erweiterungen, die nicht auf ``abi3t`` umsteigen "
+"können, sollten weiterhin getrennt für die bestehende stabile ABI (``abi3``) "
+"und die versionsspezifische ABI für freie Threads (``cp315t``) gebaut werden."
 
 #: ../../whatsnew/3.15.rst:574
 msgid ""
@@ -1092,20 +1281,30 @@ msgid ""
 "``abi3t`` by setting the macro :c:macro:`!Py_TARGET_ABI3T` as discussed "
 "in :ref:`abi3-compiling`."
 msgstr ""
+"Die stabile ABI für Builds mit freien Threads sollte normalerweise in einem "
+"Build-Werkzeug ausgewählt werden (zum Beispiel Setuptools, meson-python, "
+"scikit-build-core oder Maturin). Zum Zeitpunkt der Erstellung dieses Textes "
+"unterstützen diese Werkzeuge ``abi3t`` **nicht**. Wenn das für dein Werkzeug "
+"zutrifft, kompiliere separat für ``cp315t``. Wenn du kein Build-Werkzeug "
+"verwendest -- oder selbst ein solches Werkzeug schreibst --, kannst du "
+"``abi3t`` auswählen, indem du das Makro :c:macro:`!Py_TARGET_ABI3T` setzt, "
+"wie in :ref:`abi3-compiling` beschrieben."
 
 #: ../../whatsnew/3.15.rst:583
 msgid ""
 "A practical :ref:`migration guide <abi3t-migration-howto>` for switching to "
 "``abi3t`` is available."
 msgstr ""
+"Ein praktischer :ref:`Migrationsleitfaden <abi3t-migration-howto>` für den "
+"Umstieg auf ``abi3t`` ist verfügbar."
 
 #: ../../whatsnew/3.15.rst:586
 msgid ":pep:`803` for further details."
-msgstr ""
+msgstr ":pep:`803` enthält weitere Details."
 
 #: ../../whatsnew/3.15.rst:592
 msgid ":pep:`788`: Protecting the C API from interpreter finalization"
-msgstr ""
+msgstr ":pep:`788`: Schutz der C-API vor der Finalisierung des Interpreters"
 
 #: ../../whatsnew/3.15.rst:594
 msgid ""
@@ -1117,28 +1316,44 @@ msgid ""
 "leading to crashes when a thread concurrently deletes an interpreter while "
 "another thread is trying to attach to it."
 msgstr ""
+"In der C-API kann das :term:`Beenden des Interpreters <interpreter "
+"shutdown>` für viele Erweiterungen problematisch sein, weil "
+"das :term:`Anhängen <attached thread state>` eines Thread-Zustands den "
+"Thread dauerhaft blockiert, was zu Deadlocks und anderen sporadischen "
+"Problemen führt. Außerdem war es bisher nicht möglich, sicher zu prüfen, ob "
+"ein Interpreter noch existiert, bevor man ihn verwendet. Das führte zu "
+"Abstürzen, wenn ein Thread einen Interpreter löscht, während ein anderer "
+"Thread gleichzeitig versucht, sich an ihn anzuhängen."
 
 #: ../../whatsnew/3.15.rst:602
 msgid "There are now several new suites of APIs to circumvent these problems:"
-msgstr ""
+msgstr "Es gibt jetzt mehrere neue API-Gruppen, um diese Probleme zu umgehen:"
 
 #: ../../whatsnew/3.15.rst:604
 msgid ""
 ":ref:`Interpreter guards <interpreter-guards>`, which prevent an interpreter "
 "from finalizing."
 msgstr ""
+":ref:`Interpreter-Guards <interpreter-guards>`, die verhindern, dass ein "
+"Interpreter finalisiert wird."
 
 #: ../../whatsnew/3.15.rst:606
 msgid ""
 ":ref:`Interpreter views <interpreter-views>`, which allow thread-safe access "
 "to an interpreter that may be concurrently finalizing or deleted."
 msgstr ""
+":ref:`Interpreter-Views <interpreter-views>`, die einen threadsicheren "
+"Zugriff auf einen Interpreter ermöglichen, der möglicherweise gleichzeitig "
+"finalisiert oder gelöscht wird."
 
 #: ../../whatsnew/3.15.rst:608
 msgid ""
 ":ref:`New APIs <c-api-attach-detach>` to automatically attach and detach "
 "thread states that come with built-in protection against finalization."
 msgstr ""
+":ref:`Neue APIs <c-api-attach-detach>` zum automatischen An- und Abhängen "
+"von Thread-Zuständen, die einen integrierten Schutz vor der Finalisierung "
+"mitbringen."
 
 #: ../../whatsnew/3.15.rst:611
 msgid ""
@@ -1148,18 +1363,24 @@ msgid ""
 "existing code will continue to work, but there will be no new ``PyGILState`` "
 "APIs in future versions of Python."
 msgstr ""
+"Außerdem wurden die APIs der Familie ``PyGILState`` "
+"(insbesondere :c:func:`PyGILState_Ensure` und :c:func:`PyGILState_Release`) "
+"als :term:`weich veraltet <soft deprecated>` markiert. Es ist **nicht** "
+"geplant, sie zu entfernen, und bestehender Code funktioniert weiterhin, aber "
+"in künftigen Python-Versionen wird es keine neuen APIs der Familie "
+"``PyGILState`` mehr geben."
 
 #: ../../whatsnew/3.15.rst:617
 msgid "(Contributed by Peter Bierma in :gh:`149101`.)"
-msgstr ""
+msgstr "(Beigetragen von Peter Bierma in :gh:`149101`.)"
 
 #: ../../whatsnew/3.15.rst:619
 msgid ":pep:`788` for further details."
-msgstr ""
+msgstr ":pep:`788` enthält weitere Details."
 
 #: ../../whatsnew/3.15.rst:625
 msgid "Improved error messages"
-msgstr ""
+msgstr "Verbesserte Fehlermeldungen"
 
 #: ../../whatsnew/3.15.rst:627
 msgid ""
@@ -1168,6 +1389,10 @@ msgid ""
 "that does not exist, but a similar attribute is available through one of its "
 "members."
 msgstr ""
+"Der Interpreter liefert jetzt hilfreichere Vorschläge in Ausnahmen vom "
+"Typ :exc:`AttributeError`, wenn auf ein nicht existierendes Attribut eines "
+"Objekts zugegriffen wird, ein ähnliches Attribut aber über eines seiner "
+"Member verfügbar ist."
 
 #: ../../whatsnew/3.15.rst:631
 msgid ""
@@ -1175,6 +1400,9 @@ msgid ""
 "requested name, the error message will suggest accessing it via that inner "
 "attribute:"
 msgstr ""
+"Wenn das Objekt zum Beispiel ein Attribut hat, das selbst den angeforderten "
+"Namen bereitstellt, schlägt die Fehlermeldung vor, über dieses innere "
+"Attribut darauf zuzugreifen:"
 
 #: ../../whatsnew/3.15.rst:634
 msgid ""
@@ -1197,10 +1425,29 @@ msgid ""
 "container = Container(circle)\n"
 "print(container.area)"
 msgstr ""
+"from dataclasses import dataclass\n"
+"from math import pi\n"
+"\n"
+"@dataclass\n"
+"class Circle:\n"
+"   radius: float\n"
+"\n"
+"   @property\n"
+"   def area(self) -> float:\n"
+"      return pi * self.radius**2\n"
+"\n"
+"class Container:\n"
+"   def __init__(self, inner: Circle) -> None:\n"
+"      self.inner = inner\n"
+"\n"
+"circle = Circle(radius=4.0)\n"
+"container = Container(circle)\n"
+"print(container.area)"
 
 #: ../../whatsnew/3.15.rst:655
 msgid "Running this code now produces a clearer suggestion:"
 msgstr ""
+"Wenn du diesen Code ausführst, erhältst du jetzt einen klareren Vorschlag:"
 
 #: ../../whatsnew/3.15.rst:657
 msgid ""
@@ -1211,6 +1458,12 @@ msgid ""
 "AttributeError: 'Container' object has no attribute 'area'. Did you mean "
 "'.inner.area' instead of '.area'?"
 msgstr ""
+"Traceback (most recent call last):\n"
+"  File \"example.py\", line 18, in <module>\n"
+"    print(container.area)\n"
+"          ^^^^^^^^^^^^^^\n"
+"AttributeError: 'Container' object has no attribute 'area'. Did you mean "
+"'.inner.area' instead of '.area'?"
 
 #: ../../whatsnew/3.15.rst:665
 msgid ""
@@ -1219,6 +1472,10 @@ msgid ""
 "method names from other languages (JavaScript, Java, Ruby, C#) and suggests "
 "the Python equivalent:"
 msgstr ""
+"Wenn es bei einem :exc:`AttributeError` für einen integrierten Typ keinen "
+"ähnlichen Treffer über die Levenshtein-Distanz gibt, prüft die Fehlermeldung "
+"jetzt eine statische Tabelle gängiger Methodennamen aus anderen Sprachen "
+"(JavaScript, Java, Ruby, C#) und schlägt die Python-Entsprechung vor:"
 
 #: ../../whatsnew/3.15.rst:670
 msgid ""
@@ -1234,12 +1491,25 @@ msgid ""
 "AttributeError: 'str' object has no attribute 'toUpperCase'. Did you mean "
 "'.upper'?"
 msgstr ""
+">>> [1, 2, 3].push(4)\n"
+"Traceback (most recent call last):\n"
+"...\n"
+"AttributeError: 'list' object has no attribute 'push'. Did you mean "
+"'.append'?\n"
+"\n"
+">>> 'hello'.toUpperCase()\n"
+"Traceback (most recent call last):\n"
+"...\n"
+"AttributeError: 'str' object has no attribute 'toUpperCase'. Did you mean "
+"'.upper'?"
 
 #: ../../whatsnew/3.15.rst:682
 msgid ""
 "When the Python equivalent is a language construct rather than a method, the "
 "hint describes the construct directly:"
 msgstr ""
+"Wenn die Python-Entsprechung ein Sprachkonstrukt statt einer Methode ist, "
+"beschreibt der Hinweis das Konstrukt direkt:"
 
 #: ../../whatsnew/3.15.rst:685
 msgid ""
@@ -1248,12 +1518,18 @@ msgid ""
 "...\n"
 "AttributeError: 'dict' object has no attribute 'put'. Use d[k] = v."
 msgstr ""
+">>> {}.put(\"a\", 1)\n"
+"Traceback (most recent call last):\n"
+"...\n"
+"AttributeError: 'dict' object has no attribute 'put'. Use d[k] = v."
 
 #: ../../whatsnew/3.15.rst:692
 msgid ""
 "When a mutable method is called on an immutable type, the hint suggests the "
 "mutable counterpart:"
 msgstr ""
+"Wenn auf einem unveränderlichen Typ eine verändernde Methode aufgerufen "
+"wird, schlägt der Hinweis das veränderliche Gegenstück vor:"
 
 #: ../../whatsnew/3.15.rst:695
 msgid ""
@@ -1263,14 +1539,19 @@ msgid ""
 "AttributeError: 'tuple' object has no attribute 'append'. Did you mean to "
 "use a 'list' object?"
 msgstr ""
+">>> (1, 2, 3).append(4)\n"
+"Traceback (most recent call last):\n"
+"...\n"
+"AttributeError: 'tuple' object has no attribute 'append'. Did you mean to "
+"use a 'list' object?"
 
 #: ../../whatsnew/3.15.rst:702
 msgid "These hints also work for subclasses of builtin types."
-msgstr ""
+msgstr "Diese Hinweise funktionieren auch für Unterklassen integrierter Typen."
 
 #: ../../whatsnew/3.15.rst:704
 msgid "(Contributed by Matt Van Horn in :gh:`146406`.)"
-msgstr ""
+msgstr "(Beigetragen von Matt Van Horn in :gh:`146406`.)"
 
 #: ../../whatsnew/3.15.rst:706
 msgid ""
@@ -1279,6 +1560,11 @@ msgid ""
 "existing attribute is used, the interpreter will suggest the correct "
 "attribute name in the error message. For example:"
 msgstr ""
+"Der Interpreter versucht jetzt, einen Vorschlag zu machen, "
+"wenn :func:`delattr` wegen eines fehlenden Attributs fehlschlägt. Wird ein "
+"Attributname verwendet, der einem vorhandenen Attribut sehr ähnlich ist, "
+"schlägt der Interpreter in der Fehlermeldung den korrekten Attributnamen "
+"vor. Zum Beispiel:"
 
 #: ../../whatsnew/3.15.rst:712
 msgid ""
@@ -1291,20 +1577,31 @@ msgid ""
 "...\n"
 "AttributeError: 'A' object has no attribute 'abcdf'. Did you mean: 'abcde'?"
 msgstr ""
+">>> class A:\n"
+"...     pass\n"
+">>> a = A()\n"
+">>> a.abcde = 1\n"
+">>> del a.abcdf\n"
+"Traceback (most recent call last):\n"
+"...\n"
+"AttributeError: 'A' object has no attribute 'abcdf'. Did you mean: 'abcde'?"
 
 #: ../../whatsnew/3.15.rst:723
 msgid "(Contributed by Nikita Sobolev and Pranjal Prajapati in :gh:`136588`.)"
 msgstr ""
+"(Beigetragen von Nikita Sobolev und Pranjal Prajapati in :gh:`136588`.)"
 
 #: ../../whatsnew/3.15.rst:725
 msgid ""
 "Several error messages incorrectly using the term \"argument\" have been "
 "corrected. (Contributed by Stan Ulbrych in :gh:`133382`.)"
 msgstr ""
+"Mehrere Fehlermeldungen, die den Begriff „argument“ falsch verwendeten, "
+"wurden korrigiert. (Beigetragen von Stan Ulbrych in :gh:`133382`.)"
 
 #: ../../whatsnew/3.15.rst:730
 msgid "Other language changes"
-msgstr ""
+msgstr "Weitere Sprachänderungen"
 
 #: ../../whatsnew/3.15.rst:734
 msgid ""
@@ -1315,6 +1612,13 @@ msgid ""
 "standard for representing text, including nearly every webpage on the "
 "internet, many common file formats, programming languages, and more."
 msgstr ""
+"Python verwendet jetzt UTF-8_ als Standardkodierung, unabhängig von der "
+"Systemumgebung. Das bedeutet, dass I/O-Operationen ohne explizite Kodierung, "
+"zum Beispiel ``open('flying-circus.txt')``, UTF-8 verwenden. UTF-8 ist eine "
+"weit verbreitete Zeichenkodierung für Unicode_, die sich *de facto* als "
+"Standard für die Darstellung von Text durchgesetzt hat, unter anderem auf "
+"nahezu jeder Webseite im Internet, in vielen gängigen Dateiformaten, "
+"Programmiersprachen und mehr."
 
 #: ../../whatsnew/3.15.rst:741
 msgid ""
@@ -1325,6 +1629,13 @@ msgid ""
 "this change. The special ``encoding='locale'`` argument uses the current "
 "locale encoding, and has been supported since Python 3.10."
 msgstr ""
+"Dies gilt nur, wenn kein Argument ``encoding`` angegeben ist. Für die beste "
+"Kompatibilität zwischen Python-Versionen solltest du immer explizit ein "
+"Argument ``encoding`` angeben. Mit der :ref:`optionalen Kodierungswarnung "
+"<io-encoding-warning>` lässt sich Code finden, der von dieser Änderung "
+"betroffen sein könnte. Das spezielle Argument ``encoding='locale'`` "
+"verwendet die Kodierung des aktuellen Gebietsschemas und wird seit Python "
+"3.10 unterstützt."
 
 #: ../../whatsnew/3.15.rst:748
 msgid ""
@@ -1332,15 +1643,20 @@ msgid ""
 "the :envvar:`PYTHONUTF8=0 <PYTHONUTF8>` environment variable or "
 "the :option:`-X utf8=0 <-X>` command-line option."
 msgstr ""
+"Um das bisherige Verhalten beizubehalten, kann der UTF-8-Modus von Python "
+"mit der Umgebungsvariable :envvar:`PYTHONUTF8=0 <PYTHONUTF8>` oder der "
+"Kommandozeilenoption :option:`-X utf8=0 <-X>` deaktiviert werden."
 
 #: ../../whatsnew/3.15.rst:752
 msgid ""
 "(Contributed by Adam Turner in :gh:`133711`; PEP 686 written by Inada Naoki.)"
 msgstr ""
+"(Beigetragen von Adam Turner in :gh:`133711`; PEP 686 verfasst von Inada "
+"Naoki.)"
 
 #: ../../whatsnew/3.15.rst:754
 msgid ":pep:`686` for further details."
-msgstr ""
+msgstr ":pep:`686` enthält weitere Details."
 
 #: ../../whatsnew/3.15.rst:761
 msgid ""
@@ -1348,6 +1664,9 @@ msgid ""
 "be controlled by :ref:`environment variables <using-on-controlling-color>`. "
 "(Contributed by Hugo van Kemenade in :gh:`148766`.)"
 msgstr ""
+"Die Hilfe des Interpreters (etwa ``python --help``) ist jetzt farbig. Dies "
+"lässt sich über :ref:`Umgebungsvariablen <using-on-controlling-color>` "
+"steuern. (Beigetragen von Hugo van Kemenade in :gh:`148766`.)"
 
 #: ../../whatsnew/3.15.rst:768
 msgid ""
@@ -1355,6 +1674,10 @@ msgid ""
 "controlled by :ref:`environment variables <using-on-controlling-color>`. "
 "(Contributed by Peter Bierma in :gh:`134170`.)"
 msgstr ""
+"Nicht auslösbare Ausnahmen (unraisable exceptions) werden jetzt "
+"standardmäßig farbig hervorgehoben. Dies lässt sich "
+"über :ref:`Umgebungsvariablen <using-on-controlling-color>` steuern. "
+"(Beigetragen von Peter Bierma in :gh:`134170`.)"
 
 #: ../../whatsnew/3.15.rst:774
 msgid ""
@@ -1371,6 +1694,19 @@ msgid ""
 "profiling.sampling, random, regrtest, sqlite3, timeit, tokenize, trace, "
 "unittest, uuid, zipapp, zipfile) CLI help."
 msgstr ""
+"Mehr Farbe in :ref:`argparse <whatsnew315-color-argparse>`, :ref:`ast "
+"<whatsnew315-color-ast>`, :ref:`calendar <whatsnew315-color-"
+"calendar>`, :ref:`difflib <whatsnew315-color-difflib>`, :ref:`http.server "
+"<whatsnew315-color-http.server>`, :ref:`pickletools <whatsnew315-color-"
+"pickletools>`, :ref:`PyREPL-Tab-Vervollständigung <whatsnew315-pyrepl-"
+"completion>`, :ref:`python --help <whatsnew315-color-interpreter-"
+"help>`, :ref:`sqlite3 <whatsnew315-color-sqlite3>`, :ref:`timeit "
+"<whatsnew315-color-timeit>`, :ref:`tokenize <whatsnew315-color-"
+"tokenize>`, :ref:`nicht auslösbaren Ausnahmen <whatsnew315-color-"
+"exceptions>` und in der Kommandozeilenhilfe der :term:`stdlib` (ast, "
+"compileall, doctest, gzip, inspect, json.tool, pdb, profiling.sampling, "
+"random, regrtest, sqlite3, timeit, tokenize, trace, unittest, uuid, zipapp, "
+"zipfile)."
 
 #: ../../whatsnew/3.15.rst:791
 msgid ""
@@ -1380,6 +1716,11 @@ msgid ""
 "at construction time. (Contributed by Serhiy Storchaka, Oleg Iarygin, and "
 "Yoav Nir in :gh:`74185`.)"
 msgstr ""
+"Die Darstellung durch :meth:`~object.__repr__` von :class:`ImportError` "
+"und :class:`ModuleNotFoundError` zeigt „name“ und „path“ jetzt als "
+"``name=<name>`` und ``path=<path>`` an, wenn sie bei der Erzeugung als "
+"Schlüsselwortargumente übergeben wurden. (Beigetragen von Serhiy Storchaka, "
+"Oleg Iarygin und Yoav Nir in :gh:`74185`.)"
 
 #: ../../whatsnew/3.15.rst:796
 msgid ""
@@ -1388,6 +1729,11 @@ msgid ""
 "need them. This speeds up class creation, and helps avoid reference cycles. "
 "(Contributed by Petr Viktorin in :gh:`135228`.)"
 msgstr ""
+"Die Deskriptoren :attr:`~object.__dict__` und :attr:`!__weakref__` verwenden "
+"jetzt eine einzige Deskriptor-Instanz pro Interpreter, die von allen Typen "
+"gemeinsam genutzt wird, die sie benötigen. Das beschleunigt die Erzeugung "
+"von Klassen und hilft, Referenzzyklen zu vermeiden. (Beigetragen von Petr "
+"Viktorin in :gh:`135228`.)"
 
 #: ../../whatsnew/3.15.rst:802
 msgid ""
@@ -1397,6 +1743,11 @@ msgid ""
 "starts and ends with a forward slash (``/``). (Contributed by Serhiy "
 "Storchaka in :gh:`134716`.)"
 msgstr ""
+"Die Option :option:`-W` und die Umgebungsvariable :envvar:`PYTHONWARNINGS` "
+"können jetzt reguläre Ausdrücke statt literaler Zeichenketten angeben, um "
+"die Warnmeldung und den Modulnamen abzugleichen, sofern das entsprechende "
+"Feld mit einem Schrägstrich (``/``) beginnt und endet. (Beigetragen von "
+"Serhiy Storchaka in :gh:`134716`.)"
 
 #: ../../whatsnew/3.15.rst:808
 msgid ""
