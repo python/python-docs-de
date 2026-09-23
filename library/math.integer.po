@@ -70,7 +70,7 @@ msgstr ""
 
 #: ../../library/math.integer.rst:32 ../../library/math.integer.rst:85
 msgid "Raises :exc:`ValueError` if either of the arguments are negative."
-msgstr ""Löst :exc:`ValueError` aus, wenn eines der Argumente negativ ist.""
+msgstr "Löst :exc:`ValueError` aus, wenn eines der Argumente negativ ist."
 
 #: ../../library/math.integer.rst:37
 msgid "Return factorial of the nonnegative integer *n*."
