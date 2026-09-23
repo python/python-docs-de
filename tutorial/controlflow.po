@@ -1,10 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR Swen Bachmann <142266608+sba72@users.noreply.github.com>, 2026.
 #
-# Translators: @sba72
-# python-doc bot, 2025
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -12,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-15 09:12+0000\n"
 "PO-Revision-Date: 2026-07-31 21:01+0000\n"
-"Last-Translator: @sa72nLanguage-Team: German (https://app.transifex.com/"
-"python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -319,12 +318,12 @@ msgid ""
 "the :keyword:`for` statement is such a construct, while an example of a "
 "function that takes an iterable is :func:`sum`::"
 msgstr ""
-"Wir nennen ein solches Objekt :term:`iterable <iterable>` (iterierbar), das "
-"heißt, es eignet sich als Ziel für Funktionen und Konstrukte, die etwas "
-"erwarten, woraus sie aufeinanderfolgende Elemente beziehen können, bis der "
-"Vorrat erschöpft ist. Wir haben gesehen, dass die :keyword:`for`-Anweisung "
-"ein solches Konstrukt ist, während ein Beispiel für eine Funktion, die ein "
-"Iterable entgegennimmt, :func:`sum` ist::"
+"Wir nennen ein solches Objekt :term:`iterierbar <iterable>`, das heißt, es "
+"eignet sich als Ziel für Funktionen und Konstrukte, die etwas erwarten, "
+"woraus sie aufeinanderfolgende Elemente beziehen können, bis der Vorrat "
+":term:`erschöpft <exhausted>` ist. Wir haben gesehen, dass die "
+":keyword:`for`-Anweisung ein solches Konstrukt ist, während ein Beispiel für "
+"eine Funktion, die ein iterierbares Objekt entgegennimmt, :func:`sum` ist::"
 
 #: ../../tutorial/controlflow.rst:154
 msgid ""
