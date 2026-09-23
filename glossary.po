@@ -3759,7 +3759,7 @@ msgstr ""
 
 #: ../../glossary.rst:1483
 msgid "soft deprecated"
-msgstr "weich veraltet"
+msgstr "sanft abgekündigt"
 
 #: ../../glossary.rst:1485
 msgid ""
