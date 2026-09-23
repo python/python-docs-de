@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-22 12:07+0200\n"
+"POT-Creation-Date: 2026-09-23 06:17+0000\n"
 "PO-Revision-Date: 2026-08-30 00:02+0000\n"
 "Last-Translator: Swen Bachmann <142266608+sba72@users.noreply.github.com>\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
@@ -22,7 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../tutorial/inputoutput.rst:5
-msgid "Input and Output"
+#, fuzzy
+msgid "Input and output"
 msgstr "Eingabe und Ausgabe"
 
 #: ../../tutorial/inputoutput.rst:7
@@ -37,7 +38,8 @@ msgstr ""
 "Kapitel werden einige dieser Möglichkeiten behandelt."
 
 #: ../../tutorial/inputoutput.rst:15
-msgid "Fancier Output Formatting"
+#, fuzzy
+msgid "Fancier output formatting"
 msgstr "Erweiterte Formatierungsmöglichkeiten für die Ausgabe"
 
 #: ../../tutorial/inputoutput.rst:17
@@ -242,8 +244,9 @@ msgstr ""
 "deutlich weniger Kontrolle über die Formatierung."
 
 #: ../../tutorial/inputoutput.rst:115
-msgid "Formatted String Literals"
-msgstr "Formatierte Zeichenfolgenliterale"
+#, fuzzy
+msgid "Formatted string literals"
+msgstr "formatiertes String-Literal"
 
 #: ../../tutorial/inputoutput.rst:117
 msgid ""
@@ -349,7 +352,8 @@ msgstr ""
 "diese Formatvorgaben findest du im Referenzhandbuch unter :ref:`formatspec`."
 
 #: ../../tutorial/inputoutput.rst:167
-msgid "The String format() Method"
+#, fuzzy
+msgid "The string format() method"
 msgstr "Die String-Methode format()"
 
 #: ../../tutorial/inputoutput.rst:169
@@ -539,7 +543,8 @@ msgstr ""
 "`str.format` findest du unter :ref:`formatstrings`."
 
 #: ../../tutorial/inputoutput.rst:244
-msgid "Manual String Formatting"
+#, fuzzy
+msgid "Manual string formatting"
 msgstr "Manuelle Formatierung von Zeichenfolgen"
 
 #: ../../tutorial/inputoutput.rst:246
@@ -672,24 +677,26 @@ msgstr ""
 "Weitere Informationen findest du im Abschnitt  :ref:`old-string-formatting`."
 
 #: ../../tutorial/inputoutput.rst:307
-msgid "Reading and Writing Files"
+#, fuzzy
+msgid "Reading and writing files"
 msgstr "Dateien lesen und schreiben"
 
 #: ../../tutorial/inputoutput.rst:313
+#, fuzzy
 msgid ""
 ":func:`open` returns a :term:`file object`, and is most commonly used with "
-"two positional arguments and one keyword argument: ``open(filename, mode, "
-"encoding=None)``"
+"two positional arguments: ``open(filename, mode)``"
 msgstr ""
 ":func:`open` gibt ein :term:`Dateiobjekt <file object>` zurück und wird "
 "meist mit zwei Positionsargumenten und einem Schlüsselwortargument "
 "verwendet: ``open(filename, mode, encoding=None)``"
 
-#: ../../tutorial/inputoutput.rst:319
-msgid ">>> f = open('workfile', 'w', encoding=\"utf-8\")"
+#: ../../tutorial/inputoutput.rst:318
+#, fuzzy
+msgid ">>> f = open('workfile', 'w')"
 msgstr ">>> f = open('workfile', 'w', encoding=\"utf-8\")"
 
-#: ../../tutorial/inputoutput.rst:326
+#: ../../tutorial/inputoutput.rst:325
 msgid ""
 "The first argument is a string containing the filename.  The second argument "
 "is another string containing a few characters describing the way in which "
@@ -710,16 +717,15 @@ msgstr ""
 "Lesen als auch zum Schreiben. Das Argument *mode* ist optional; wird es "
 "weggelassen, wird ``'r'`` angenommen."
 
-#: ../../tutorial/inputoutput.rst:335
+#: ../../tutorial/inputoutput.rst:334
+#, fuzzy
 msgid ""
 "Normally, files are opened in :dfn:`text mode`, that means, you read and "
 "write strings from and to the file, which are encoded in a specific "
-"*encoding*. If *encoding* is not specified, the default is platform "
-"dependent (see :func:`open`). Because UTF-8 is the modern de-facto standard, "
-"``encoding=\"utf-8\"`` is recommended unless you know that you need to use a "
-"different encoding. Appending a ``'b'`` to the mode opens the file in :dfn:"
-"`binary mode`. Binary mode data is read and written as :class:`bytes` "
-"objects. You can not specify *encoding* when opening file in binary mode."
+"*encoding*. If *encoding* is not specified, the default is UTF-8 (see :func:"
+"`open`). Appending a ``'b'`` to the mode opens the file in :dfn:`binary "
+"mode`. Binary mode data is read and written as :class:`bytes` objects. You "
+"can not specify *encoding* when opening file in binary mode."
 msgstr ""
 "Normalerweise werden Dateien im :dfn:`Textmodus` geöffnet, das heißt, du "
 "liest Zeichenketten aus der Datei aus und schreibst Zeichenketten in die "
@@ -732,7 +738,7 @@ msgstr ""
 "als :class:`bytes` -Objekte gelesen und geschrieben. Beim Öffnen einer Datei "
 "im Binärmodus kannst du keine *Kodierung* angeben."
 
-#: ../../tutorial/inputoutput.rst:345
+#: ../../tutorial/inputoutput.rst:341
 msgid ""
 "In text mode, the default when reading is to convert platform-specific line "
 "endings (``\\n`` on Unix, ``\\r\\n`` on Windows) to just ``\\n``.  When "
@@ -751,7 +757,7 @@ msgstr ""
 "`EXE` zu Datenverlusten.  Achte daher unbedingt darauf, beim Lesen und "
 "Schreiben solcher Dateien den Binärmodus zu verwenden."
 
-#: ../../tutorial/inputoutput.rst:353
+#: ../../tutorial/inputoutput.rst:349
 msgid ""
 "It is good practice to use the :keyword:`with` keyword when dealing with "
 "file objects.  The advantage is that the file is properly closed after its "
@@ -766,9 +772,10 @@ msgstr ""
 "`!with` ist zudem wesentlich kürzer als das Schreiben der entsprechenden :"
 "keyword:`try`\\ -\\ :keyword:`finally`-Blöcke::"
 
-#: ../../tutorial/inputoutput.rst:359
+#: ../../tutorial/inputoutput.rst:355
+#, fuzzy
 msgid ""
-">>> with open('workfile', encoding=\"utf-8\") as f:\n"
+">>> with open('workfile') as f:\n"
 "...     read_data = f.read()\n"
 "\n"
 ">>> # We can check that the file has been automatically closed.\n"
@@ -782,7 +789,7 @@ msgstr ""
 ">>> f.closed\n"
 "True"
 
-#: ../../tutorial/inputoutput.rst:366
+#: ../../tutorial/inputoutput.rst:362
 msgid ""
 "If you're not using the :keyword:`with` keyword, then you should call ``f."
 "close()`` to close the file and immediately free up any system resources "
@@ -792,7 +799,7 @@ msgstr ""
 "Funktion ``f.close()`` aufrufen, um die Datei zu schließen und die von ihr "
 "belegten Systemressourcen sofort freizugeben."
 
-#: ../../tutorial/inputoutput.rst:371
+#: ../../tutorial/inputoutput.rst:367
 msgid ""
 "Calling ``f.write()`` without using the :keyword:`!with` keyword or calling "
 "``f.close()`` **might** result in the arguments of ``f.write()`` not being "
@@ -803,7 +810,7 @@ msgstr ""
 "``f.write()`` nicht vollständig auf die Festplatte geschrieben werden, "
 "selbst wenn das Programm erfolgreich beendet wird."
 
-#: ../../tutorial/inputoutput.rst:379
+#: ../../tutorial/inputoutput.rst:375
 msgid ""
 "After a file object is closed, either by a :keyword:`with` statement or by "
 "calling ``f.close()``, attempts to use the file object will automatically "
@@ -813,7 +820,7 @@ msgstr ""
 "`with`-Anweisung oder durch den Aufruf von ``f.close()``– schlagen alle "
 "Versuche, das Dateiobjekt zu verwenden, automatisch fehl. ::"
 
-#: ../../tutorial/inputoutput.rst:383
+#: ../../tutorial/inputoutput.rst:379
 msgid ""
 ">>> f.close()\n"
 ">>> f.read()\n"
@@ -827,11 +834,12 @@ msgstr ""
 "  Datei \"<stdin>\", Zeile 1, in <module>\n"
 "ValueError: E/A-Vorgang an einer geschlossenen Datei."
 
-#: ../../tutorial/inputoutput.rst:393
-msgid "Methods of File Objects"
+#: ../../tutorial/inputoutput.rst:389
+#, fuzzy
+msgid "Methods of file objects"
 msgstr "Methoden von Datei-Objekten"
 
-#: ../../tutorial/inputoutput.rst:395
+#: ../../tutorial/inputoutput.rst:391
 msgid ""
 "The rest of the examples in this section will assume that a file object "
 "called ``f`` has already been created."
@@ -839,7 +847,7 @@ msgstr ""
 "In den übrigen Beispielen dieses Abschnitts wird davon ausgegangen, dass "
 "bereits ein Dateiobjekt namens  ``f`` angelegt wurde."
 
-#: ../../tutorial/inputoutput.rst:398
+#: ../../tutorial/inputoutput.rst:394
 msgid ""
 "To read a file's contents, call ``f.read(size)``, which reads some quantity "
 "of data and returns it as a string (in text mode) or bytes object (in binary "
@@ -861,7 +869,7 @@ msgstr ""
 "Datei erreicht wurde, gibt ``f.read()`` eine leere Zeichenkette zurück "
 "(``''``).  ::"
 
-#: ../../tutorial/inputoutput.rst:407
+#: ../../tutorial/inputoutput.rst:403
 msgid ""
 ">>> f.read()\n"
 "'This is the entire file.\\n'\n"
@@ -873,7 +881,7 @@ msgstr ""
 ">>> f.read()\n"
 "''"
 
-#: ../../tutorial/inputoutput.rst:412
+#: ../../tutorial/inputoutput.rst:408
 msgid ""
 "``f.readline()`` reads a single line from the file; a newline character "
 "(``\\n``) is left at the end of the string, and is only omitted on the last "
@@ -890,7 +898,7 @@ msgstr ""
 "erreicht, während eine Leerzeile durch  ``'\\n'`` dargestellt wird, eine "
 "Zeichenkette, die nur ein einziges Zeilenendezeichen enthält.  ::"
 
-#: ../../tutorial/inputoutput.rst:419
+#: ../../tutorial/inputoutput.rst:415
 msgid ""
 ">>> f.readline()\n"
 "'This is the first line of the file.\\n'\n"
@@ -906,7 +914,7 @@ msgstr ""
 ">>> f.readline()\n"
 "''"
 
-#: ../../tutorial/inputoutput.rst:426
+#: ../../tutorial/inputoutput.rst:422
 msgid ""
 "For reading lines from a file, you can loop over the file object. This is "
 "memory efficient, fast, and leads to simple code::"
@@ -915,7 +923,7 @@ msgstr ""
 "Schleife durchlaufen. Dies ist speichereffizient, schnell und führt zu "
 "einfachem Code::"
 
-#: ../../tutorial/inputoutput.rst:429
+#: ../../tutorial/inputoutput.rst:425
 msgid ""
 ">>> for line in f:\n"
 "...     print(line, end='')\n"
@@ -929,7 +937,7 @@ msgstr ""
 "Dies ist die erste Zeile der Datei.\n"
 "Zweite Zeile der Datei"
 
-#: ../../tutorial/inputoutput.rst:435
+#: ../../tutorial/inputoutput.rst:431
 msgid ""
 "If you want to read all the lines of a file in a list you can also use "
 "``list(f)`` or ``f.readlines()``."
@@ -937,7 +945,7 @@ msgstr ""
 "Wenn du alle Zeilen einer Datei in eine Liste einlesen möchtest, kannst du "
 "auch ``list(f)`` oder ``f.readlines()`` verwenden."
 
-#: ../../tutorial/inputoutput.rst:438
+#: ../../tutorial/inputoutput.rst:434
 msgid ""
 "``f.write(string)`` writes the contents of *string* to the file, returning "
 "the number of characters written. ::"
@@ -945,7 +953,7 @@ msgstr ""
 "``f.write(string)`` Schreibt den Inhalt von *string* in die Datei und gibt "
 "die Anzahl der geschriebenen Zeichen zurück. ::"
 
-#: ../../tutorial/inputoutput.rst:441
+#: ../../tutorial/inputoutput.rst:437
 msgid ""
 ">>> f.write('This is a test\\n')\n"
 "15"
@@ -953,7 +961,7 @@ msgstr ""
 ">>> f.write('Das ist ein Test\\n')\n"
 "15"
 
-#: ../../tutorial/inputoutput.rst:444
+#: ../../tutorial/inputoutput.rst:440
 msgid ""
 "Other types of objects need to be converted -- either to a string (in text "
 "mode) or a bytes object (in binary mode) -- before writing them::"
@@ -961,7 +969,7 @@ msgstr ""
 "Andere Objekttypen müssen vor dem Schreiben konvertiert werden – entweder in "
 "eine Zeichenkette (im Textmodus) oder in ein Byte-Objekt (im Binärmodus):"
 
-#: ../../tutorial/inputoutput.rst:447
+#: ../../tutorial/inputoutput.rst:443
 msgid ""
 ">>> value = ('the answer', 42)\n"
 ">>> s = str(value)  # convert the tuple to string\n"
@@ -973,7 +981,7 @@ msgstr ""
 ">>> f.write(s)\n"
 "18"
 
-#: ../../tutorial/inputoutput.rst:452
+#: ../../tutorial/inputoutput.rst:448
 msgid ""
 "``f.tell()`` returns an integer giving the file object's current position in "
 "the file represented as number of bytes from the beginning of the file when "
@@ -983,7 +991,7 @@ msgstr ""
 "Dateiobjekts in der Datei angibt – im Binärmodus als Anzahl der Bytes ab dem "
 "Dateianfang und im Textmodus als undurchsichtige Zahl."
 
-#: ../../tutorial/inputoutput.rst:456
+#: ../../tutorial/inputoutput.rst:452
 msgid ""
 "To change the file object's position, use ``f.seek(offset, whence)``.  The "
 "position is computed from adding *offset* to a reference point; the "
@@ -1002,7 +1010,7 @@ msgstr ""
 "standardmäßig auf 0 gesetzt, wobei der Anfang der Datei als Bezugspunkt "
 "verwendet wird. ::"
 
-#: ../../tutorial/inputoutput.rst:463
+#: ../../tutorial/inputoutput.rst:459
 msgid ""
 ">>> f = open('workfile', 'rb+')\n"
 ">>> f.write(b'0123456789abcdef')\n"
@@ -1028,7 +1036,7 @@ msgstr ""
 ">>> f.read(1)\n"
 "b'd'"
 
-#: ../../tutorial/inputoutput.rst:475
+#: ../../tutorial/inputoutput.rst:471
 msgid ""
 "In text files (those opened without a ``b`` in the mode string), only seeks "
 "relative to the beginning of the file are allowed (the exception being "
@@ -1042,7 +1050,7 @@ msgstr ""
 "sind diejenigen, die von ``f.tell()`` zurückgegeben werden, oder Null. Jeder "
 "andere *offset*-Wert führt zu undefiniertem Verhalten."
 
-#: ../../tutorial/inputoutput.rst:481
+#: ../../tutorial/inputoutput.rst:477
 msgid ""
 "File objects have some additional methods, such as :meth:`~io.IOBase.isatty` "
 "and :meth:`~io.IOBase.truncate` which are less frequently used; consult the "
@@ -1053,11 +1061,11 @@ msgstr ""
 "seltener verwendet werden; eine vollständige Anleitung zu Dateiobjekten "
 "findest du in der Bibliotheksreferenz."
 
-#: ../../tutorial/inputoutput.rst:489
+#: ../../tutorial/inputoutput.rst:485
 msgid "Saving structured data with :mod:`json`"
 msgstr "Strukturierte Daten speichern mit :mod:`json`"
 
-#: ../../tutorial/inputoutput.rst:493
+#: ../../tutorial/inputoutput.rst:489
 msgid ""
 "Strings can easily be written to and read from a file.  Numbers take a bit "
 "more effort, since the :meth:`~io.TextIOBase.read` method only returns "
@@ -1074,7 +1082,7 @@ msgstr ""
 "Datentypen wie verschachtelte Listen und Wörterbücher speichern möchtest, "
 "wird das manuelle Parsen und Serialisieren kompliziert."
 
-#: ../../tutorial/inputoutput.rst:500
+#: ../../tutorial/inputoutput.rst:496
 msgid ""
 "Rather than having users constantly writing and debugging code to save "
 "complicated data types to files, Python allows you to use the popular data "
@@ -1098,7 +1106,7 @@ msgstr ""
 "Datei oder einem Datenspeicher abgelegt oder über eine Netzwerkverbindung an "
 "einen entfernten Rechner gesendet worden sein."
 
-#: ../../tutorial/inputoutput.rst:511
+#: ../../tutorial/inputoutput.rst:507
 msgid ""
 "The JSON format is commonly used by modern applications to allow for data "
 "exchange.  Many programmers are already familiar with it, which makes it a "
@@ -1108,7 +1116,7 @@ msgstr ""
 "verwendet. Viele Programmierer sind bereits damit vertraut, was es zu einer "
 "guten Wahl für die Interoperabilität macht."
 
-#: ../../tutorial/inputoutput.rst:515
+#: ../../tutorial/inputoutput.rst:511
 msgid ""
 "If you have an object ``x``, you can view its JSON string representation "
 "with a simple line of code::"
@@ -1116,7 +1124,7 @@ msgstr ""
 "Wenn du ein Objekt vom Typ  ``x`` hast, kannst du dessen JSON-"
 "Zeichenkettendarstellung mit einer einzigen Codezeile anzeigen::"
 
-#: ../../tutorial/inputoutput.rst:518
+#: ../../tutorial/inputoutput.rst:514
 msgid ""
 ">>> import json\n"
 ">>> x = [1, 'simple', 'list']\n"
@@ -1128,7 +1136,7 @@ msgstr ""
 ">>> json.dumps(x)\n"
 "'[1, \"simple\", \"list\"]'"
 
-#: ../../tutorial/inputoutput.rst:523
+#: ../../tutorial/inputoutput.rst:519
 msgid ""
 "Another variant of the :func:`~json.dumps` function, called :func:`~json."
 "dump`, simply serializes the object to a :term:`text file`.  So if ``f`` is "
@@ -1139,11 +1147,11 @@ msgstr ""
 "<text file>`. Wenn also ``f`` ein zum Schreiben geöffnetes :term:`Textdatei "
 "<text file>`-Objekt ist, können wir Folgendes tun::"
 
-#: ../../tutorial/inputoutput.rst:527
+#: ../../tutorial/inputoutput.rst:523
 msgid "json.dump(x, f)"
 msgstr "json.dump(x, f)"
 
-#: ../../tutorial/inputoutput.rst:529
+#: ../../tutorial/inputoutput.rst:525
 msgid ""
 "To decode the object again, if ``f`` is a :term:`binary file` or :term:`text "
 "file` object which has been opened for reading::"
@@ -1152,20 +1160,21 @@ msgstr ""
 "file>`- oder :term:`Textdatei <text file>`-Objekt ist, das zum Lesen "
 "geöffnet wurde::"
 
-#: ../../tutorial/inputoutput.rst:532
+#: ../../tutorial/inputoutput.rst:528
 msgid "x = json.load(f)"
 msgstr "x = json.load(f)"
 
-#: ../../tutorial/inputoutput.rst:535
+#: ../../tutorial/inputoutput.rst:531
+#, fuzzy
 msgid ""
-"JSON files must be encoded in UTF-8. Use ``encoding=\"utf-8\"`` when opening "
-"JSON file as a :term:`text file` for both of reading and writing."
+"JSON files must be encoded in UTF-8, the default encoding for :term:`text "
+"files <text file>`."
 msgstr ""
 "JSON-Dateien müssen in UTF-8 kodiert sein. Verwende die Option "
 "``encoding=\"utf-8\"``, wenn du eine JSON-Datei als :term:`Textdatei <text "
 "file>` öffnest, sowohl beim Lesen als auch beim Schreiben."
 
-#: ../../tutorial/inputoutput.rst:538
+#: ../../tutorial/inputoutput.rst:534
 msgid ""
 "This simple serialization technique can handle lists and dictionaries, but "
 "serializing arbitrary class instances in JSON requires a bit of extra "
@@ -1177,11 +1186,11 @@ msgstr ""
 "erfordert etwas mehr Aufwand. Die Dokumentation zum Modul  :mod:`json` "
 "enthält eine Erläuterung dazu."
 
-#: ../../tutorial/inputoutput.rst:544
+#: ../../tutorial/inputoutput.rst:540
 msgid ":mod:`pickle` - the pickle module"
 msgstr ":mod:`pickle` - das Pickle-Modul"
 
-#: ../../tutorial/inputoutput.rst:546
+#: ../../tutorial/inputoutput.rst:542
 msgid ""
 "Contrary to :ref:`JSON <tut-json>`, *pickle* is a protocol which allows the "
 "serialization of arbitrarily complex Python objects.  As such, it is "
@@ -1242,10 +1251,13 @@ msgstr "object"
 msgid "file"
 msgstr "file"
 
-#: ../../tutorial/inputoutput.rst:491
+#: ../../tutorial/inputoutput.rst:487
 msgid "module"
 msgstr "module"
 
-#: ../../tutorial/inputoutput.rst:491
+#: ../../tutorial/inputoutput.rst:487
 msgid "json"
 msgstr "json"
+
+#~ msgid "Formatted String Literals"
+#~ msgstr "Formatierte Zeichenfolgenliterale"

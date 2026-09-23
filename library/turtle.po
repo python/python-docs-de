@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-14 17:22+0000\n"
+"POT-Creation-Date: 2026-09-23 06:17+0000\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
@@ -724,7 +724,7 @@ msgstr ":func:`setheading` | :func:`seth`"
 msgid ":func:`home`"
 msgstr ":func:`home`"
 
-#: ../../library/turtle.rst:351 ../../library/turtle.rst:2880
+#: ../../library/turtle.rst:351 ../../library/turtle.rst:2899
 msgid ":func:`circle`"
 msgstr ":func:`circle`"
 
@@ -732,7 +732,7 @@ msgstr ":func:`circle`"
 msgid ":func:`dot`"
 msgstr ":func:`dot`"
 
-#: ../../library/turtle.rst:353 ../../library/turtle.rst:2858
+#: ../../library/turtle.rst:353 ../../library/turtle.rst:2877
 msgid ":func:`stamp`"
 msgstr ":func:`stamp`"
 
@@ -928,7 +928,7 @@ msgstr ":func:`get_shapepoly`"
 msgid "Using events"
 msgstr "Ereignisse verwenden"
 
-#: ../../library/turtle.rst:412 ../../library/turtle.rst:2852
+#: ../../library/turtle.rst:412 ../../library/turtle.rst:2871
 msgid ":func:`onclick`"
 msgstr ":func:`onclick`"
 
@@ -936,7 +936,7 @@ msgstr ":func:`onclick`"
 msgid ":func:`onrelease`"
 msgstr ":func:`onrelease`"
 
-#: ../../library/turtle.rst:414 ../../library/turtle.rst:2835
+#: ../../library/turtle.rst:414 ../../library/turtle.rst:2854
 msgid ":func:`ondrag`"
 msgstr ":func:`ondrag`"
 
@@ -960,7 +960,7 @@ msgstr ":func:`end_poly`"
 msgid ":func:`get_poly`"
 msgstr ":func:`get_poly`"
 
-#: ../../library/turtle.rst:421 ../../library/turtle.rst:2874
+#: ../../library/turtle.rst:421 ../../library/turtle.rst:2893
 msgid ":func:`clone`"
 msgstr ":func:`clone`"
 
@@ -4358,11 +4358,34 @@ msgstr "``abs(a)`` Absolutwert von a"
 msgid "``a.rotate(angle)`` rotation"
 msgstr "``a.rotate(angle)`` Rotation"
 
+#: ../../library/turtle.rst:2575
+#, fuzzy
+msgid "Exceptions"
+msgstr "Erklärung"
+
 #: ../../library/turtle.rst:2577
+msgid "The :mod:`!turtle` module defines the following exception:"
+msgstr ""
+
+#: ../../library/turtle.rst:2581
+msgid ""
+"Raised for invalid arguments or operations. For example, a malformed color "
+"string:"
+msgstr ""
+
+#: ../../library/turtle.rst:2584
+msgid ""
+">>> turtle.color(\"blau\")\n"
+"Traceback (most recent call last):\n"
+"    ...\n"
+"turtle.TurtleGraphicsError: bad color string: blau"
+msgstr ""
+
+#: ../../library/turtle.rst:2596
 msgid "Explanation"
 msgstr "Erklärung"
 
-#: ../../library/turtle.rst:2579
+#: ../../library/turtle.rst:2598
 msgid ""
 "A turtle object draws on a screen object, and there a number of key classes "
 "in the turtle object-oriented interface that can be used to create them and "
@@ -4372,7 +4395,7 @@ msgstr ""
 "zentraler Klassen in der objektorientierten Turtle-Schnittstelle, mit denen "
 "man diese erstellen und miteinander in Beziehung setzen kann."
 
-#: ../../library/turtle.rst:2583
+#: ../../library/turtle.rst:2602
 msgid ""
 "A :class:`Turtle` instance will automatically create a :class:`Screen` "
 "instance if one is not already present."
@@ -4380,7 +4403,7 @@ msgstr ""
 "Eine :class:`Turtle`-Instanz erstellt automatisch eine :class:`Screen`-"
 "Instanz, falls noch keine vorhanden ist."
 
-#: ../../library/turtle.rst:2586
+#: ../../library/turtle.rst:2605
 msgid ""
 "``Turtle`` is a subclass of :class:`RawTurtle`, which *doesn't* "
 "automatically create a drawing surface - a *canvas* will need to be provided "
@@ -4392,7 +4415,7 @@ msgstr ""
 "oder erstellt werden. Die *canvas* kann ein :class:`!tkinter.Canvas`, :class:"
 "`ScrolledCanvas` oder :class:`TurtleScreen` sein."
 
-#: ../../library/turtle.rst:2592
+#: ../../library/turtle.rst:2611
 msgid ""
 ":class:`TurtleScreen` is the basic drawing surface for a turtle. :class:"
 "`Screen` is a subclass of ``TurtleScreen``, and includes :ref:`some "
@@ -4407,7 +4430,7 @@ msgstr ""
 "Konstruktor von ``TurtleScreen`` benötigt ein :class:`!tkinter.Canvas` oder "
 "ein :class:`ScrolledCanvas` als Argument."
 
-#: ../../library/turtle.rst:2599
+#: ../../library/turtle.rst:2618
 msgid ""
 "The functional interface for turtle graphics uses the various methods of "
 "``Turtle`` and ``TurtleScreen``/``Screen``. Behind the scenes, a screen "
@@ -4422,7 +4445,7 @@ msgstr ""
 "Turtle-Objekt erstellt, sobald eine der von einer Turtle-Methode "
 "abgeleiteten Funktionen aufgerufen wird."
 
-#: ../../library/turtle.rst:2605
+#: ../../library/turtle.rst:2624
 msgid ""
 "To use multiple turtles on a screen, the object-oriented interface must be "
 "used."
@@ -4430,15 +4453,15 @@ msgstr ""
 "Um mehrere Turtles auf einem Screen zu verwenden, muss die objektorientierte "
 "Schnittstelle genutzt werden."
 
-#: ../../library/turtle.rst:2610
+#: ../../library/turtle.rst:2629
 msgid "Help and configuration"
 msgstr "Hilfe und Konfiguration"
 
-#: ../../library/turtle.rst:2613
+#: ../../library/turtle.rst:2632
 msgid "How to use help"
 msgstr "Wie man die Hilfe verwendet"
 
-#: ../../library/turtle.rst:2615
+#: ../../library/turtle.rst:2634
 msgid ""
 "The public methods of the Screen and Turtle classes are documented "
 "extensively via docstrings.  So these can be used as online-help via the "
@@ -4448,7 +4471,7 @@ msgstr ""
 "über Docstrings dokumentiert. Diese können daher über die Python-"
 "Hilfefunktionen als Online-Hilfe verwendet werden:"
 
-#: ../../library/turtle.rst:2619
+#: ../../library/turtle.rst:2638
 msgid ""
 "When using IDLE, tooltips show the signatures and first lines of the "
 "docstrings of typed in function-/method calls."
@@ -4456,13 +4479,13 @@ msgstr ""
 "Bei Verwendung von IDLE zeigen Tooltips die Signaturen und die ersten Zeilen "
 "der Docstrings eingetippter Funktions-/Methodenaufrufe."
 
-#: ../../library/turtle.rst:2622
+#: ../../library/turtle.rst:2641
 msgid "Calling :func:`help` on methods or functions displays the docstrings::"
 msgstr ""
 "Der Aufruf von :func:`help` für Methoden oder Funktionen zeigt die "
 "Docstrings an::"
 
-#: ../../library/turtle.rst:2624
+#: ../../library/turtle.rst:2643
 msgid ""
 ">>> help(Screen.bgcolor)\n"
 "Help on method bgcolor in module turtle:\n"
@@ -4522,7 +4545,7 @@ msgstr ""
 "\n"
 "    >>> turtle.penup()"
 
-#: ../../library/turtle.rst:2653
+#: ../../library/turtle.rst:2672
 msgid ""
 "The docstrings of the functions which are derived from methods have a "
 "modified form::"
@@ -4530,7 +4553,7 @@ msgstr ""
 "Die Docstrings der Funktionen, die von Methoden abgeleitet sind, haben eine "
 "abgewandelte Form::"
 
-#: ../../library/turtle.rst:2656
+#: ../../library/turtle.rst:2675
 msgid ""
 ">>> help(bgcolor)\n"
 "Help on function bgcolor in module turtle:\n"
@@ -4594,7 +4617,7 @@ msgstr ""
 "    Example:\n"
 "    >>> penup()"
 
-#: ../../library/turtle.rst:2687
+#: ../../library/turtle.rst:2706
 msgid ""
 "These modified docstrings are created automatically together with the "
 "function definitions that are derived from the methods at import time."
@@ -4603,11 +4626,11 @@ msgstr ""
 "Funktionsdefinitionen erstellt, die zur Importzeit von den Methoden "
 "abgeleitet werden."
 
-#: ../../library/turtle.rst:2692
+#: ../../library/turtle.rst:2711
 msgid "Translation of docstrings into different languages"
 msgstr "Übersetzung von Docstrings in verschiedene Sprachen"
 
-#: ../../library/turtle.rst:2694
+#: ../../library/turtle.rst:2713
 msgid ""
 "There is a utility to create a dictionary the keys of which are the method "
 "names and the values of which are the docstrings of the public methods of "
@@ -4617,11 +4640,11 @@ msgstr ""
 "die Methodennamen und dessen Werte die Docstrings der öffentlichen Methoden "
 "der Klassen Screen und Turtle sind."
 
-#: ../../library/turtle.rst:2700
+#: ../../library/turtle.rst:2719
 msgid "a string, used as filename"
 msgstr "eine Zeichenkette, verwendet als Dateiname"
 
-#: ../../library/turtle.rst:2702
+#: ../../library/turtle.rst:2721
 msgid ""
 "Create and write docstring-dictionary to a Python script with the given "
 "filename.  This function has to be called explicitly (it is not used by the "
@@ -4636,7 +4659,7 @@ msgstr ""
 "ist als Vorlage für die Übersetzung der Docstrings in verschiedene Sprachen "
 "gedacht."
 
-#: ../../library/turtle.rst:2708
+#: ../../library/turtle.rst:2727
 msgid ""
 "If you (or your students) want to use :mod:`!turtle` with online help in "
 "your native language, you have to translate the docstrings and save the "
@@ -4646,7 +4669,7 @@ msgstr ""
 "Muttersprache verwenden möchtest, musst du die Docstrings übersetzen und die "
 "entstehende Datei z. B. als :file:`turtle_docstringdict_german.py` speichern."
 
-#: ../../library/turtle.rst:2712
+#: ../../library/turtle.rst:2731
 msgid ""
 "If you have an appropriate entry in your :file:`turtle.cfg` file this "
 "dictionary will be read in at import time and will replace the original "
@@ -4656,7 +4679,7 @@ msgstr ""
 "hast, wird dieses Dictionary zur Importzeit eingelesen und ersetzt die "
 "ursprünglichen englischen Docstrings."
 
-#: ../../library/turtle.rst:2715
+#: ../../library/turtle.rst:2734
 msgid ""
 "At the time of this writing there are docstring dictionaries in German and "
 "in Italian.  (Requests please to glingl@aon.at.)"
@@ -4664,11 +4687,11 @@ msgstr ""
 "Zum Zeitpunkt der Erstellung dieses Textes gibt es Docstring-Dictionaries "
 "auf Deutsch und auf Italienisch. (Anfragen bitte an glingl@aon.at.)"
 
-#: ../../library/turtle.rst:2721
+#: ../../library/turtle.rst:2740
 msgid "How to configure Screen and Turtles"
 msgstr "Wie man Screen und Turtles konfiguriert"
 
-#: ../../library/turtle.rst:2723
+#: ../../library/turtle.rst:2742
 msgid ""
 "The built-in default configuration mimics the appearance and behaviour of "
 "the old turtle module in order to retain best possible compatibility with it."
@@ -4677,7 +4700,7 @@ msgstr ""
 "des alten turtle-Moduls nach, um eine möglichst gute Kompatibilität damit zu "
 "bewahren."
 
-#: ../../library/turtle.rst:2726
+#: ../../library/turtle.rst:2745
 msgid ""
 "If you want to use a different configuration which better reflects the "
 "features of this module or which better fits to your needs, e.g. for use in "
@@ -4691,13 +4714,13 @@ msgstr ""
 "``turtle.cfg`` vorbereiten, die zur Importzeit eingelesen wird und die "
 "Konfiguration entsprechend ihrer Einstellungen ändert."
 
-#: ../../library/turtle.rst:2731
+#: ../../library/turtle.rst:2750
 msgid ""
 "The built in configuration would correspond to the following ``turtle.cfg``:"
 msgstr ""
 "Die eingebaute Konfiguration würde der folgenden ``turtle.cfg`` entsprechen:"
 
-#: ../../library/turtle.rst:2733
+#: ../../library/turtle.rst:2752
 msgid ""
 "width = 0.5\n"
 "height = 0.75\n"
@@ -4741,11 +4764,11 @@ msgstr ""
 "title = Python Turtle Graphics\n"
 "using_IDLE = False"
 
-#: ../../library/turtle.rst:2756
+#: ../../library/turtle.rst:2775
 msgid "Short explanation of selected entries:"
 msgstr "Kurze Erklärung ausgewählter Einträge:"
 
-#: ../../library/turtle.rst:2758
+#: ../../library/turtle.rst:2777
 msgid ""
 "The first four lines correspond to the arguments of the :func:`Screen.setup "
 "<setup>` method."
@@ -4753,7 +4776,7 @@ msgstr ""
 "Die ersten vier Zeilen entsprechen den Argumenten der Methode :func:`Screen."
 "setup <setup>`."
 
-#: ../../library/turtle.rst:2760
+#: ../../library/turtle.rst:2779
 msgid ""
 "Line 5 and 6 correspond to the arguments of the method :func:`Screen."
 "screensize <screensize>`."
@@ -4761,7 +4784,7 @@ msgstr ""
 "Zeile 5 und 6 entsprechen den Argumenten der Methode :func:`Screen."
 "screensize <screensize>`."
 
-#: ../../library/turtle.rst:2762
+#: ../../library/turtle.rst:2781
 msgid ""
 "*shape* can be any of the built-in shapes, e.g: arrow, turtle, etc.  For "
 "more info try ``help(shape)``."
@@ -4769,7 +4792,7 @@ msgstr ""
 "*shape* kann eine der eingebauten Formen sein, z. B.: arrow, turtle usw. Für "
 "weitere Informationen versuche ``help(shape)``."
 
-#: ../../library/turtle.rst:2764
+#: ../../library/turtle.rst:2783
 msgid ""
 "If you want to use no fill color (i.e. make the turtle transparent), you "
 "have to write ``fillcolor = \"\"`` (but all nonempty strings must not have "
@@ -4780,7 +4803,7 @@ msgstr ""
 "nichtleeren Zeichenketten dürfen in der cfg-Datei keine Anführungszeichen "
 "haben)."
 
-#: ../../library/turtle.rst:2767
+#: ../../library/turtle.rst:2786
 msgid ""
 "If you want to reflect the turtle its state, you have to use ``resizemode = "
 "auto``."
@@ -4788,7 +4811,7 @@ msgstr ""
 "Wenn die Turtle ihren Zustand widerspiegeln soll, musst du ``resizemode = "
 "auto`` verwenden."
 
-#: ../../library/turtle.rst:2769
+#: ../../library/turtle.rst:2788
 msgid ""
 "If you set e.g. ``language = italian`` the docstringdict :file:"
 "`turtle_docstringdict_italian.py` will be loaded at import time (if present "
@@ -4798,7 +4821,7 @@ msgstr ""
 "`turtle_docstringdict_italian.py` zur Importzeit geladen (sofern es im "
 "Importpfad vorhanden ist, z. B. im selben Verzeichnis wie :mod:`!turtle`)."
 
-#: ../../library/turtle.rst:2772
+#: ../../library/turtle.rst:2791
 msgid ""
 "The entries *exampleturtle* and *examplescreen* define the names of these "
 "objects as they occur in the docstrings.  The transformation of method-"
@@ -4810,7 +4833,7 @@ msgstr ""
 "Methoden-Docstrings in Funktions-Docstrings werden diese Namen aus den "
 "Docstrings entfernt."
 
-#: ../../library/turtle.rst:2776
+#: ../../library/turtle.rst:2795
 msgid ""
 "*using_IDLE*: Set this to ``True`` if you regularly work with IDLE and its "
 "``-n`` switch (\"no subprocess\").  This will prevent :func:`exitonclick` to "
@@ -4820,7 +4843,7 @@ msgstr ""
 "dessen Schalter ``-n`` (\"no subprocess\") arbeitest. Dies verhindert, dass :"
 "func:`exitonclick` die mainloop aufruft."
 
-#: ../../library/turtle.rst:2780
+#: ../../library/turtle.rst:2799
 msgid ""
 "There can be a :file:`turtle.cfg` file in the directory where :mod:`!turtle` "
 "is stored and an additional one in the current working directory.  The "
@@ -4830,7 +4853,7 @@ msgstr ""
 "turtle` gespeichert ist, sowie eine zusätzliche im aktuellen "
 "Arbeitsverzeichnis. Letztere überschreibt die Einstellungen der ersten."
 
-#: ../../library/turtle.rst:2784
+#: ../../library/turtle.rst:2803
 msgid ""
 "The :file:`Lib/turtledemo` directory contains a :file:`turtle.cfg` file.  "
 "You can study it as an example and see its effects when running the demos "
@@ -4840,11 +4863,11 @@ msgstr ""
 "Datei. Du kannst sie als Beispiel studieren und ihre Auswirkungen beim "
 "Ausführen der Demos sehen (vorzugsweise nicht innerhalb des Demo-Viewers)."
 
-#: ../../library/turtle.rst:2790
+#: ../../library/turtle.rst:2809
 msgid ":mod:`!turtledemo` --- Demo scripts"
 msgstr ":mod:`!turtledemo` --- Demo-Skripte"
 
-#: ../../library/turtle.rst:2795
+#: ../../library/turtle.rst:2814
 msgid ""
 "The :mod:`!turtledemo` package includes a set of demo scripts.  These "
 "scripts can be run and viewed using the supplied demo viewer as follows::"
@@ -4853,26 +4876,26 @@ msgstr ""
 "Skripte können mit dem mitgelieferten Demo-Viewer wie folgt ausgeführt und "
 "betrachtet werden::"
 
-#: ../../library/turtle.rst:2798
+#: ../../library/turtle.rst:2817
 msgid "python -m turtledemo"
 msgstr "python -m turtledemo"
 
-#: ../../library/turtle.rst:2800
+#: ../../library/turtle.rst:2819
 msgid ""
 "Alternatively, you can run the demo scripts individually.  For example, ::"
 msgstr ""
 "Alternativ kannst du die Demo-Skripte auch einzeln ausführen. Zum "
 "Beispiel: ::"
 
-#: ../../library/turtle.rst:2802
+#: ../../library/turtle.rst:2821
 msgid "python -m turtledemo.bytedesign"
 msgstr "python -m turtledemo.bytedesign"
 
-#: ../../library/turtle.rst:2804
+#: ../../library/turtle.rst:2823
 msgid "The :mod:`!turtledemo` package directory contains:"
 msgstr "Das Paketverzeichnis :mod:`!turtledemo` enthält:"
 
-#: ../../library/turtle.rst:2806
+#: ../../library/turtle.rst:2825
 msgid ""
 "A demo viewer :file:`__main__.py` which can be used to view the sourcecode "
 "of the scripts and run them at the same time."
@@ -4880,7 +4903,7 @@ msgstr ""
 "Einen Demo-Viewer :file:`__main__.py`, mit dem der Quellcode der Skripte "
 "betrachtet und gleichzeitig ausgeführt werden kann."
 
-#: ../../library/turtle.rst:2808
+#: ../../library/turtle.rst:2827
 msgid ""
 "Multiple scripts demonstrating different features of the :mod:`!turtle` "
 "module.  Examples can be accessed via the Examples menu.  They can also be "
@@ -4890,7 +4913,7 @@ msgstr ""
 "demonstrieren. Auf die Beispiele kann über das Menü Examples zugegriffen "
 "werden. Sie können auch eigenständig ausgeführt werden."
 
-#: ../../library/turtle.rst:2811
+#: ../../library/turtle.rst:2830
 msgid ""
 "A :file:`turtle.cfg` file which serves as an example of how to write and use "
 "such files."
@@ -4898,39 +4921,39 @@ msgstr ""
 "Eine :file:`turtle.cfg`-Datei, die als Beispiel dient, wie solche Dateien "
 "geschrieben und verwendet werden."
 
-#: ../../library/turtle.rst:2814
+#: ../../library/turtle.rst:2833
 msgid "The demo scripts are:"
 msgstr "Die Demo-Skripte sind:"
 
-#: ../../library/turtle.rst:2821
+#: ../../library/turtle.rst:2840
 msgid "Name"
 msgstr "Name"
 
-#: ../../library/turtle.rst:2821
+#: ../../library/turtle.rst:2840
 msgid "Description"
 msgstr "Beschreibung"
 
-#: ../../library/turtle.rst:2821
+#: ../../library/turtle.rst:2840
 msgid "Features"
 msgstr "Feature"
 
-#: ../../library/turtle.rst:2823
+#: ../../library/turtle.rst:2842
 msgid "``bytedesign``"
 msgstr "``bytedesign``"
 
-#: ../../library/turtle.rst:2823
+#: ../../library/turtle.rst:2842
 msgid "complex classical turtle graphics pattern"
 msgstr "komplexes klassisches Turtle-Grafik-Muster"
 
-#: ../../library/turtle.rst:2823
+#: ../../library/turtle.rst:2842
 msgid ":func:`tracer`, :func:`delay`, :func:`update`"
 msgstr ":func:`tracer`, :func:`delay`, :func:`update`"
 
-#: ../../library/turtle.rst:2826
+#: ../../library/turtle.rst:2845
 msgid "``chaos``"
 msgstr "``chaos``"
 
-#: ../../library/turtle.rst:2826
+#: ../../library/turtle.rst:2845
 msgid ""
 "graphs Verhulst dynamics, shows that computer's computations can generate "
 "results sometimes against the common sense expectations"
@@ -4939,156 +4962,156 @@ msgstr ""
 "Computerberechnungen manchmal Ergebnisse liefern können, die dem gesunden "
 "Menschenverstand widersprechen"
 
-#: ../../library/turtle.rst:2826
+#: ../../library/turtle.rst:2845
 msgid "world coordinates"
 msgstr "Welt Koordinaten"
 
-#: ../../library/turtle.rst:2832
+#: ../../library/turtle.rst:2851
 msgid "``clock``"
 msgstr "``clock``"
 
-#: ../../library/turtle.rst:2832
+#: ../../library/turtle.rst:2851
 msgid "analog clock showing time of your computer"
 msgstr "analoge Uhr, die die Zeit deines Computers anzeigt"
 
-#: ../../library/turtle.rst:2832
+#: ../../library/turtle.rst:2851
 msgid "turtles as clock's hands, :func:`ontimer`"
 msgstr "Turtles als Uhrzeiger, :func:`ontimer`"
 
-#: ../../library/turtle.rst:2835
+#: ../../library/turtle.rst:2854
 msgid "``colormixer``"
 msgstr "``colormixer``"
 
-#: ../../library/turtle.rst:2835
+#: ../../library/turtle.rst:2854
 msgid "experiment with r, g, b"
 msgstr "Experiment mit r, g, b"
 
-#: ../../library/turtle.rst:2837
+#: ../../library/turtle.rst:2856
 msgid "``forest``"
 msgstr "``forest``"
 
-#: ../../library/turtle.rst:2837
+#: ../../library/turtle.rst:2856
 msgid "3 breadth-first trees"
 msgstr "3 Breitensuche-Bäume"
 
-#: ../../library/turtle.rst:2837
+#: ../../library/turtle.rst:2856
 msgid "randomization"
 msgstr "Zufallsgenerierung"
 
-#: ../../library/turtle.rst:2839
+#: ../../library/turtle.rst:2858
 msgid "``fractalcurves``"
 msgstr "``fractalcurves``"
 
-#: ../../library/turtle.rst:2839
+#: ../../library/turtle.rst:2858
 msgid "Hilbert & Koch curves"
 msgstr "Hilbert & Koch Kurven"
 
-#: ../../library/turtle.rst:2839
+#: ../../library/turtle.rst:2858
 msgid "recursion"
 msgstr "Rekursion"
 
-#: ../../library/turtle.rst:2841
+#: ../../library/turtle.rst:2860
 msgid "``lindenmayer``"
 msgstr "``lindenmayer``"
 
-#: ../../library/turtle.rst:2841
+#: ../../library/turtle.rst:2860
 msgid "ethnomathematics (indian kolams)"
 msgstr "Ethnomathematik (indische Kolams)"
 
-#: ../../library/turtle.rst:2841
+#: ../../library/turtle.rst:2860
 msgid "L-System"
 msgstr "L-System"
 
-#: ../../library/turtle.rst:2844
+#: ../../library/turtle.rst:2863
 msgid "``minimal_hanoi``"
 msgstr "``minimal_hanoi``"
 
-#: ../../library/turtle.rst:2844
+#: ../../library/turtle.rst:2863
 msgid "Towers of Hanoi"
 msgstr "Türme von Hannoi"
 
-#: ../../library/turtle.rst:2844
+#: ../../library/turtle.rst:2863
 msgid "Rectangular Turtles as Hanoi discs (:func:`shape`, :func:`shapesize`)"
 msgstr ""
 "Rechteckige Turtles als Hanoi-Scheiben (:func:`shape`, :func:`shapesize`)"
 
-#: ../../library/turtle.rst:2848
+#: ../../library/turtle.rst:2867
 msgid "``nim``"
 msgstr "``nim``"
 
-#: ../../library/turtle.rst:2848
+#: ../../library/turtle.rst:2867
 msgid ""
 "play the classical nim game with three heaps of sticks against the computer."
 msgstr ""
 "spiele das klassische Nim-Spiel mit drei Stapeln aus Stäbchen gegen den "
 "Computer."
 
-#: ../../library/turtle.rst:2848
+#: ../../library/turtle.rst:2867
 msgid "turtles as nimsticks, event driven (mouse, keyboard)"
 msgstr "Turtles als Nim-Stäbchen, ereignisgesteuert (Maus, Tastatur)"
 
-#: ../../library/turtle.rst:2852
+#: ../../library/turtle.rst:2871
 msgid "``paint``"
 msgstr "``paint``"
 
-#: ../../library/turtle.rst:2852
+#: ../../library/turtle.rst:2871
 msgid "super minimalistic drawing program"
 msgstr "super minimalistisches Zeichenprogramm"
 
-#: ../../library/turtle.rst:2855
+#: ../../library/turtle.rst:2874
 msgid "``peace``"
 msgstr "``peace``"
 
-#: ../../library/turtle.rst:2855
+#: ../../library/turtle.rst:2874
 msgid "elementary"
 msgstr "Elementar"
 
-#: ../../library/turtle.rst:2855
+#: ../../library/turtle.rst:2874
 msgid "turtle: appearance and animation"
 msgstr "Turtle: Erscheinungsbild und Animation"
 
-#: ../../library/turtle.rst:2858
+#: ../../library/turtle.rst:2877
 msgid "``penrose``"
 msgstr "``penrose``"
 
-#: ../../library/turtle.rst:2858
+#: ../../library/turtle.rst:2877
 msgid "aperiodic tiling with kites and darts"
 msgstr "aperiodische Kachelung mit Drachen und Pfeilen"
 
-#: ../../library/turtle.rst:2861
+#: ../../library/turtle.rst:2880
 msgid "``planet_and_moon``"
 msgstr "``planet_and_moon``"
 
-#: ../../library/turtle.rst:2861
+#: ../../library/turtle.rst:2880
 msgid "simulation of gravitational system"
 msgstr "Simulation eines Gravitationssystems"
 
-#: ../../library/turtle.rst:2861
+#: ../../library/turtle.rst:2880
 msgid "compound shapes, :class:`Vec2D`"
 msgstr "zusammengesetzte Formen, :class:`Vec2D`"
 
-#: ../../library/turtle.rst:2864
+#: ../../library/turtle.rst:2883
 msgid "``rosette``"
 msgstr "``rosette``"
 
-#: ../../library/turtle.rst:2864
+#: ../../library/turtle.rst:2883
 msgid "a pattern from the wikipedia article on turtle graphics"
 msgstr "ein Muster aus dem Wikipedia-Artikel über Turtle-Grafik"
 
-#: ../../library/turtle.rst:2864
+#: ../../library/turtle.rst:2883
 msgid ":func:`clone`, :func:`undo`"
 msgstr ":func:`clone`, :func:`undo`"
 
-#: ../../library/turtle.rst:2867
+#: ../../library/turtle.rst:2886
 msgid "``round_dance``"
 msgstr "``round_dance``"
 
-#: ../../library/turtle.rst:2867
+#: ../../library/turtle.rst:2886
 msgid "dancing turtles rotating pairwise in opposite direction"
 msgstr ""
 "tanzende Turtles, die sich paarweise in entgegengesetzter Richtung drehen"
 
-#: ../../library/turtle.rst:2867
+#: ../../library/turtle.rst:2886
 msgid ""
 "compound shapes, :func:`clone` :func:`shapesize`, :func:`tilt`, :func:"
 "`get_shapepoly`, :func:`update`"
@@ -5096,139 +5119,132 @@ msgstr ""
 "zusammengesetzte Formen, :func:`clone` :func:`shapesize`, :func:`tilt`, :"
 "func:`get_shapepoly`, :func:`update`"
 
-#: ../../library/turtle.rst:2871
+#: ../../library/turtle.rst:2890
 msgid "``sorting_animate``"
 msgstr "``sorting_animate``"
 
-#: ../../library/turtle.rst:2871
+#: ../../library/turtle.rst:2890
 msgid "visual demonstration of different sorting methods"
 msgstr "visuelle Demonstration verschiedener Sortiermethoden"
 
-#: ../../library/turtle.rst:2871
+#: ../../library/turtle.rst:2890
 msgid "simple alignment, randomization"
 msgstr "einfache Ausrichtung, Zufallsgenerierung"
 
-#: ../../library/turtle.rst:2874
+#: ../../library/turtle.rst:2893
 msgid "``tree``"
 msgstr "``tree``"
 
-#: ../../library/turtle.rst:2874
+#: ../../library/turtle.rst:2893
 msgid "a (graphical) breadth first tree (using generators)"
 msgstr "ein (grafischer) Breitensuche-Baum (unter Verwendung von Generatoren)"
 
-#: ../../library/turtle.rst:2877
+#: ../../library/turtle.rst:2896
 msgid "``two_canvases``"
 msgstr "``two_canvases``"
 
-#: ../../library/turtle.rst:2877
+#: ../../library/turtle.rst:2896
 msgid "simple design"
 msgstr "einfaches Design"
 
-#: ../../library/turtle.rst:2877
+#: ../../library/turtle.rst:2896
 msgid "turtles on two canvases"
 msgstr "Turtles auf zwei Canvas"
 
-#: ../../library/turtle.rst:2880
+#: ../../library/turtle.rst:2899
 msgid "``yinyang``"
 msgstr "``yinyang``"
 
-#: ../../library/turtle.rst:2880
+#: ../../library/turtle.rst:2899
 msgid "another elementary example"
 msgstr "ein weiteres elementares Beispiel"
 
-#: ../../library/turtle.rst:2883
+#: ../../library/turtle.rst:2902
 msgid "Have fun!"
 msgstr "Viel Spaß!"
 
-#: ../../library/turtle.rst:2887
-msgid "Changes since Python 2.6"
-msgstr "Änderungen seit Python 2.6"
+#~ msgid "Changes since Python 2.6"
+#~ msgstr "Änderungen seit Python 2.6"
 
-#: ../../library/turtle.rst:2889
-msgid ""
-"The methods :func:`Turtle.tracer <tracer>`, :func:`Turtle.window_width "
-"<window_width>` and :func:`Turtle.window_height <window_height>` have been "
-"eliminated. Methods with these names and functionality are now available "
-"only as methods of :class:`Screen`. The functions derived from these remain "
-"available. (In fact already in Python 2.6 these methods were merely "
-"duplications of the corresponding :class:`TurtleScreen`/:class:`Screen` "
-"methods.)"
-msgstr ""
-"Die Methoden :func:`Turtle.tracer <tracer>`, :func:`Turtle.window_width "
-"<window_width>` und :func:`Turtle.window_height <window_height>` wurden "
-"entfernt. Methoden mit diesen Namen und dieser Funktionalität sind jetzt nur "
-"noch als Methoden von :class:`Screen` verfügbar. Die davon abgeleiteten "
-"Funktionen bleiben verfügbar. (Tatsächlich waren diese Methoden bereits in "
-"Python 2.6 lediglich Duplikate der entsprechenden :class:`TurtleScreen`/:"
-"class:`Screen`-Methoden.)"
+#~ msgid ""
+#~ "The methods :func:`Turtle.tracer <tracer>`, :func:`Turtle.window_width "
+#~ "<window_width>` and :func:`Turtle.window_height <window_height>` have "
+#~ "been eliminated. Methods with these names and functionality are now "
+#~ "available only as methods of :class:`Screen`. The functions derived from "
+#~ "these remain available. (In fact already in Python 2.6 these methods were "
+#~ "merely duplications of the corresponding :class:`TurtleScreen`/:class:"
+#~ "`Screen` methods.)"
+#~ msgstr ""
+#~ "Die Methoden :func:`Turtle.tracer <tracer>`, :func:`Turtle.window_width "
+#~ "<window_width>` und :func:`Turtle.window_height <window_height>` wurden "
+#~ "entfernt. Methoden mit diesen Namen und dieser Funktionalität sind jetzt "
+#~ "nur noch als Methoden von :class:`Screen` verfügbar. Die davon "
+#~ "abgeleiteten Funktionen bleiben verfügbar. (Tatsächlich waren diese "
+#~ "Methoden bereits in Python 2.6 lediglich Duplikate der entsprechenden :"
+#~ "class:`TurtleScreen`/:class:`Screen`-Methoden.)"
 
-#: ../../library/turtle.rst:2897
-msgid ""
-"The method :func:`!Turtle.fill` has been eliminated. The behaviour of :func:"
-"`begin_fill` and :func:`end_fill` have changed slightly: now every filling "
-"process must be completed with an ``end_fill()`` call."
-msgstr ""
-"Die Methode :func:`!Turtle.fill` wurde entfernt. Das Verhalten von :func:"
-"`begin_fill` und :func:`end_fill` hat sich leicht geändert: Jetzt muss jeder "
-"Füllvorgang mit einem Aufruf von ``end_fill()`` abgeschlossen werden."
+#~ msgid ""
+#~ "The method :func:`!Turtle.fill` has been eliminated. The behaviour of :"
+#~ "func:`begin_fill` and :func:`end_fill` have changed slightly: now every "
+#~ "filling process must be completed with an ``end_fill()`` call."
+#~ msgstr ""
+#~ "Die Methode :func:`!Turtle.fill` wurde entfernt. Das Verhalten von :func:"
+#~ "`begin_fill` und :func:`end_fill` hat sich leicht geändert: Jetzt muss "
+#~ "jeder Füllvorgang mit einem Aufruf von ``end_fill()`` abgeschlossen "
+#~ "werden."
 
-#: ../../library/turtle.rst:2902
-msgid ""
-"A method :func:`Turtle.filling <filling>` has been added. It returns a "
-"boolean value: ``True`` if a filling process is under way, ``False`` "
-"otherwise. This behaviour corresponds to a ``fill()`` call without arguments "
-"in Python 2.6."
-msgstr ""
-"Eine Methode :func:`Turtle.filling <filling>` wurde hinzugefügt. Sie gibt "
-"einen booleschen Wert zurück: ``True``, wenn ein Füllvorgang im Gange ist, "
-"andernfalls ``False``. Dieses Verhalten entspricht einem Aufruf von "
-"``fill()`` ohne Argumente in Python 2.6."
+#~ msgid ""
+#~ "A method :func:`Turtle.filling <filling>` has been added. It returns a "
+#~ "boolean value: ``True`` if a filling process is under way, ``False`` "
+#~ "otherwise. This behaviour corresponds to a ``fill()`` call without "
+#~ "arguments in Python 2.6."
+#~ msgstr ""
+#~ "Eine Methode :func:`Turtle.filling <filling>` wurde hinzugefügt. Sie gibt "
+#~ "einen booleschen Wert zurück: ``True``, wenn ein Füllvorgang im Gange "
+#~ "ist, andernfalls ``False``. Dieses Verhalten entspricht einem Aufruf von "
+#~ "``fill()`` ohne Argumente in Python 2.6."
 
-#: ../../library/turtle.rst:2908
-msgid "Changes since Python 3.0"
-msgstr "Änderungen seit Python 3.0"
+#~ msgid "Changes since Python 3.0"
+#~ msgstr "Änderungen seit Python 3.0"
 
-#: ../../library/turtle.rst:2910
-msgid ""
-"The :class:`Turtle` methods :func:`shearfactor`, :func:`shapetransform` and :"
-"func:`get_shapepoly` have been added. Thus the full range of regular linear "
-"transforms is now available for transforming turtle shapes. :func:"
-"`tiltangle` has been enhanced in functionality: it now can be used to get or "
-"set the tilt angle."
-msgstr ""
-"Die :class:`Turtle`-Methoden :func:`shearfactor`, :func:`shapetransform` "
-"und :func:`get_shapepoly` wurden hinzugefügt. Damit steht nun der gesamte "
-"Bereich regulärer linearer Transformationen zur Transformation von Turtle-"
-"Formen zur Verfügung. :func:`tiltangle` wurde funktional erweitert: Es kann "
-"jetzt verwendet werden, um den Kippwinkel abzurufen oder zu setzen."
+#~ msgid ""
+#~ "The :class:`Turtle` methods :func:`shearfactor`, :func:`shapetransform` "
+#~ "and :func:`get_shapepoly` have been added. Thus the full range of regular "
+#~ "linear transforms is now available for transforming turtle shapes. :func:"
+#~ "`tiltangle` has been enhanced in functionality: it now can be used to get "
+#~ "or set the tilt angle."
+#~ msgstr ""
+#~ "Die :class:`Turtle`-Methoden :func:`shearfactor`, :func:`shapetransform` "
+#~ "und :func:`get_shapepoly` wurden hinzugefügt. Damit steht nun der gesamte "
+#~ "Bereich regulärer linearer Transformationen zur Transformation von Turtle-"
+#~ "Formen zur Verfügung. :func:`tiltangle` wurde funktional erweitert: Es "
+#~ "kann jetzt verwendet werden, um den Kippwinkel abzurufen oder zu setzen."
 
-#: ../../library/turtle.rst:2916
-msgid ""
-"The :class:`Screen` method :func:`onkeypress` has been added as a complement "
-"to :func:`onkey`. As the latter binds actions to the key release event, an "
-"alias: :func:`onkeyrelease` was also added for it."
-msgstr ""
-"Die :class:`Screen`-Methode :func:`onkeypress` wurde als Ergänzung zu :func:"
-"`onkey` hinzugefügt. Da Letzteres Aktionen an das Loslassen-Ereignis der "
-"Taste bindet, wurde dafür auch ein Alias hinzugefügt: :func:`onkeyrelease`."
+#~ msgid ""
+#~ "The :class:`Screen` method :func:`onkeypress` has been added as a "
+#~ "complement to :func:`onkey`. As the latter binds actions to the key "
+#~ "release event, an alias: :func:`onkeyrelease` was also added for it."
+#~ msgstr ""
+#~ "Die :class:`Screen`-Methode :func:`onkeypress` wurde als Ergänzung zu :"
+#~ "func:`onkey` hinzugefügt. Da Letzteres Aktionen an das Loslassen-Ereignis "
+#~ "der Taste bindet, wurde dafür auch ein Alias hinzugefügt: :func:"
+#~ "`onkeyrelease`."
 
-#: ../../library/turtle.rst:2920
-msgid ""
-"The method :func:`Screen.mainloop <mainloop>` has been added, so there is no "
-"longer a need to use the standalone :func:`mainloop` function when working "
-"with :class:`Screen` and :class:`Turtle` objects."
-msgstr ""
-"Die Methode :func:`Screen.mainloop <mainloop>` wurde hinzugefügt, sodass es "
-"nicht mehr nötig ist, die eigenständige Funktion :func:`mainloop` zu "
-"verwenden, wenn mit :class:`Screen`- und :class:`Turtle`-Objekten gearbeitet "
-"wird."
+#~ msgid ""
+#~ "The method :func:`Screen.mainloop <mainloop>` has been added, so there is "
+#~ "no longer a need to use the standalone :func:`mainloop` function when "
+#~ "working with :class:`Screen` and :class:`Turtle` objects."
+#~ msgstr ""
+#~ "Die Methode :func:`Screen.mainloop <mainloop>` wurde hinzugefügt, sodass "
+#~ "es nicht mehr nötig ist, die eigenständige Funktion :func:`mainloop` zu "
+#~ "verwenden, wenn mit :class:`Screen`- und :class:`Turtle`-Objekten "
+#~ "gearbeitet wird."
 
-#: ../../library/turtle.rst:2924
-msgid ""
-"Two input methods have been added: :func:`Screen.textinput <textinput>` and :"
-"func:`Screen.numinput <numinput>`. These pop up input dialogs and return "
-"strings and numbers respectively."
-msgstr ""
-"Zwei Eingabemethoden wurden hinzugefügt: :func:`Screen.textinput "
-"<textinput>` und :func:`Screen.numinput <numinput>`. Diese öffnen "
-"Eingabedialoge und geben jeweils Zeichenketten bzw. Zahlen zurück."
+#~ msgid ""
+#~ "Two input methods have been added: :func:`Screen.textinput <textinput>` "
+#~ "and :func:`Screen.numinput <numinput>`. These pop up input dialogs and "
+#~ "return strings and numbers respectively."
+#~ msgstr ""
+#~ "Zwei Eingabemethoden wurden hinzugefügt: :func:`Screen.textinput "
+#~ "<textinput>` und :func:`Screen.numinput <numinput>`. Diese öffnen "
+#~ "Eingabedialoge und geben jeweils Zeichenketten bzw. Zahlen zurück."
