@@ -1,16 +1,17 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Translators:
+# Swen Bachmann, 2026
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
 "PO-Revision-Date: 2025-09-16 00:00+0000\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,10 +20,12 @@ msgstr ""
 
 #: ../../howto/clinic.rst:8
 msgid "Argument Clinic How-To"
-msgstr ""
+msgstr "Argument-Clinic-Anleitung"
 
 #: ../../howto/clinic.rst:13
 msgid ""
 "The Argument Clinic How-TO has been moved to the `Python Developer's Guide "
 "<https://devguide.python.org/development-tools/clinic/>`__."
 msgstr ""
+"Die Argument-Clinic-Anleitung wurde in den `Python Developer's Guide "
+"<https://devguide.python.org/development-tools/clinic/>`__ verschoben."

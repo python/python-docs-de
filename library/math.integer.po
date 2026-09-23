@@ -1,7 +1,9 @@
-# German translations for Python package.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# Automatically generated, 2026.
+#
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -9,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-23 06:17+0000\n"
 "PO-Revision-Date: 2026-09-22 21:21+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,6 +22,7 @@ msgstr ""
 #: ../../library/math.integer.rst:2
 msgid ":mod:`!math.integer` --- integer-specific mathematics functions"
 msgstr ""
+":mod:`!math.integer` --- mathematische Funktionen speziell für ganze Zahlen"
 
 #: ../../library/math.integer.rst:11
 msgid ""
@@ -28,38 +31,50 @@ msgid ""
 "implement the :meth:`~object.__index__` method which is used to convert the "
 "object to an integer number."
 msgstr ""
+"Dieses Modul bietet Zugriff auf die mathematischen Funktionen, die für "
+"ganzzahlige Argumente definiert sind. Diese Funktionen akzeptieren ganze "
+"Zahlen sowie Objekte, die die Methode :meth:`~object.__index__` "
+"implementieren, mit der das Objekt in eine ganze Zahl umgewandelt wird."
 
 #: ../../library/math.integer.rst:16
 msgid ""
 "The following functions are provided by this module.  All return values are "
 "computed exactly and are integers."
 msgstr ""
+"Dieses Modul stellt die folgenden Funktionen bereit. Alle Rückgabewerte "
+"werden exakt berechnet und sind ganze Zahlen."
 
 #: ../../library/math.integer.rst:22
 msgid ""
 "Return the number of ways to choose *k* items from *n* items without "
 "repetition and without order."
 msgstr ""
+"Gibt die Anzahl der Möglichkeiten zurück, *k* Elemente aus *n* Elementen "
+"ohne Wiederholung und ohne Beachtung der Reihenfolge auszuwählen."
 
 #: ../../library/math.integer.rst:25
 msgid ""
 "Evaluates to ``n! / (k! * (n - k)!)`` when ``k <= n`` and evaluates to zero "
 "when ``k > n``."
 msgstr ""
+"Ergibt ``n! / (k! * (n - k)!)``, wenn ``k <= n`` gilt, und null, wenn "
+"``k > n`` gilt."
 
 #: ../../library/math.integer.rst:28
 msgid ""
 "Also called the binomial coefficient because it is equivalent to the "
 "coefficient of k-th term in polynomial expansion of ``(1 + x)ⁿ``."
 msgstr ""
+"Wird auch Binomialkoeffizient genannt, da der Wert dem Koeffizienten des "
+"k-ten Glieds in der Polynomentwicklung von ``(1 + x)ⁿ`` entspricht."
 
 #: ../../library/math.integer.rst:32 ../../library/math.integer.rst:85
 msgid "Raises :exc:`ValueError` if either of the arguments are negative."
-msgstr ""
+msgstr ""Löst :exc:`ValueError` aus, wenn eines der Argumente negativ ist.""
 
 #: ../../library/math.integer.rst:37
 msgid "Return factorial of the nonnegative integer *n*."
-msgstr ""
+msgstr "Gibt die Fakultät der nichtnegativen ganzen Zahl *n* zurück."
 
 #: ../../library/math.integer.rst:42
 msgid ""
@@ -69,6 +84,11 @@ msgid ""
 "zero, then the returned value is ``0``.  ``gcd()`` without arguments returns "
 "``0``."
 msgstr ""
+"Gibt den größten gemeinsamen Teiler der angegebenen ganzzahligen Argumente "
+"zurück. Ist eines der Argumente ungleich null, so ist der Rückgabewert die "
+"größte positive ganze Zahl, die alle Argumente teilt. Sind alle Argumente "
+"null, ist der Rückgabewert ``0``. ``gcd()`` ohne Argumente gibt ``0`` "
+"zurück."
 
 #: ../../library/math.integer.rst:51
 msgid ""
@@ -76,6 +96,10 @@ msgid ""
 "floor of the exact square root of *n*, or equivalently the greatest integer "
 "*a* such that *a*\\ ² |nbsp| ≤ |nbsp| *n*."
 msgstr ""
+"Gibt die ganzzahlige Quadratwurzel der nichtnegativen ganzen Zahl *n* "
+"zurück. Das ist die abgerundete exakte Quadratwurzel von *n*, "
+"gleichbedeutend mit der größten ganzen Zahl *a*, für die "
+"*a*\\ ² |nbsp| ≤ |nbsp| *n* gilt."
 
 #: ../../library/math.integer.rst:55
 msgid ""
@@ -84,6 +108,10 @@ msgid ""
 "the exact square root of *n*. For positive *n*, this can be computed using "
 "``a = 1 + isqrt(n - 1)``."
 msgstr ""
+"Für manche Anwendungen ist die kleinste ganze Zahl *a* praktischer, für die "
+"*n* |nbsp| ≤ |nbsp| *a*\\ ² gilt, mit anderen Worten die aufgerundete exakte "
+"Quadratwurzel von *n*. Für positives *n* lässt sie sich mit "
+"``a = 1 + isqrt(n - 1)`` berechnen."
 
 #: ../../library/math.integer.rst:67
 msgid ""
@@ -93,21 +121,32 @@ msgid ""
 "zero, then the returned value is ``0``.  ``lcm()`` without arguments returns "
 "``1``."
 msgstr ""
+"Gibt das kleinste gemeinsame Vielfache der angegebenen ganzzahligen "
+"Argumente zurück. Sind alle Argumente ungleich null, so ist der "
+"Rückgabewert die kleinste positive ganze Zahl, die ein Vielfaches aller "
+"Argumente ist. Ist eines der Argumente null, ist der Rückgabewert ``0``. "
+"``lcm()`` ohne Argumente gibt ``1`` zurück."
 
 #: ../../library/math.integer.rst:76
 msgid ""
 "Return the number of ways to choose *k* items from *n* items without "
 "repetition and with order."
 msgstr ""
+"Gibt die Anzahl der Möglichkeiten zurück, *k* Elemente aus *n* Elementen "
+"ohne Wiederholung, aber mit Beachtung der Reihenfolge auszuwählen."
 
 #: ../../library/math.integer.rst:79
 msgid ""
 "Evaluates to ``n! / (n - k)!`` when ``k <= n`` and evaluates to zero when "
 "``k > n``."
 msgstr ""
+"Ergibt ``n! / (n - k)!``, wenn ``k <= n`` gilt, und null, wenn ``k > n`` "
+"gilt."
 
 #: ../../library/math.integer.rst:82
 msgid ""
 "If *k* is not specified or is ``None``, then *k* defaults to *n* and the "
 "function returns ``n!``."
 msgstr ""
+"Wird *k* nicht angegeben oder ist ``None``, so wird *k* auf *n* gesetzt und "
+"die Funktion gibt ``n!`` zurück."
