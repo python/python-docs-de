@@ -1757,6 +1757,11 @@ msgid ""
 "this does not improve precision. (Contributed by Serhiy Storchaka "
 "in :gh:`67795`.)"
 msgstr ""
+"Funktionen, die Zeitstempel- oder Timeout-Argumente entgegennehmen, "
+"akzeptieren jetzt beliebige reelle Zahlen (etwa :class:`~decimal.Decimal` "
+"und :class:`~fractions.Fraction`), nicht nur Ganzzahlen oder "
+"Gleitkommazahlen, wobei sich die Genauigkeit dadurch nicht verbessert. "
+"(Beigetragen von Serhiy Storchaka in :gh:`67795`.)"
 
 #: ../../whatsnew/3.15.rst:815
 msgid ""
@@ -1767,26 +1772,35 @@ msgid ""
 "and compression. Common code patterns which can be optimized "
 "with :func:`~bytearray.take_bytes` are listed below."
 msgstr ""
+":meth:`bytearray.take_bytes(n=None, /) <bytearray.take_bytes>` wurde "
+"hinzugefügt, um Bytes ohne Kopieren aus einem :class:`bytearray` zu "
+"entnehmen. Damit lässt sich Code optimieren, der :class:`bytes` zurückgeben "
+"muss, nachdem er mit einem veränderlichen Byte-Puffer gearbeitet hat, etwa "
+"beim Puffern von Daten, beim Parsen von Netzwerkprotokollen, beim Kodieren, "
+"Dekodieren und Komprimieren. Gängige Codemuster, die sich "
+"mit :func:`~bytearray.take_bytes` optimieren lassen, sind unten aufgeführt."
 
 #: ../../whatsnew/3.15.rst:822
 msgid "Suggested optimizing refactors"
-msgstr ""
+msgstr "Vorgeschlagene Refactorings zur Optimierung"
 
 #: ../../whatsnew/3.15.rst:825
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: ../../whatsnew/3.15.rst:826
 msgid "Old"
-msgstr ""
+msgstr "Alt"
 
 #: ../../whatsnew/3.15.rst:827
 msgid "New"
-msgstr ""
+msgstr "Neu"
 
 #: ../../whatsnew/3.15.rst:829
 msgid "Return :class:`bytes` after working with :class:`bytearray`"
 msgstr ""
+":class:`bytes` zurückgeben, nachdem mit einem :class:`bytearray` gearbeitet "
+"wurde"
 
 #: ../../whatsnew/3.15.rst:830
 msgid ""
@@ -1795,6 +1809,10 @@ msgid ""
 "    ...\n"
 "    return bytes(buffer)"
 msgstr ""
+"def read() -> bytes:\n"
+"    buffer = bytearray(1024)\n"
+"    ...\n"
+"    return bytes(buffer)"
 
 #: ../../whatsnew/3.15.rst:837
 msgid ""
@@ -1803,10 +1821,14 @@ msgid ""
 "    ...\n"
 "    return buffer.take_bytes()"
 msgstr ""
+"def read() -> bytes:\n"
+"    buffer = bytearray(1024)\n"
+"    ...\n"
+"    return buffer.take_bytes()"
 
 #: ../../whatsnew/3.15.rst:844
 msgid "Empty a buffer getting the bytes"
-msgstr ""
+msgstr "Einen Puffer leeren und dabei die Bytes erhalten"
 
 #: ../../whatsnew/3.15.rst:845
 msgid ""
@@ -1815,6 +1837,10 @@ msgid ""
 "data = bytes(buffer)\n"
 "buffer.clear()"
 msgstr ""
+"buffer = bytearray(1024)\n"
+"...\n"
+"data = bytes(buffer)\n"
+"buffer.clear()"
 
 #: ../../whatsnew/3.15.rst:852
 msgid ""
@@ -1822,10 +1848,13 @@ msgid ""
 "...\n"
 "data = buffer.take_bytes()"
 msgstr ""
+"buffer = bytearray(1024)\n"
+"...\n"
+"data = buffer.take_bytes()"
 
 #: ../../whatsnew/3.15.rst:858
 msgid "Split a buffer at a specific separator"
-msgstr ""
+msgstr "Einen Puffer an einem bestimmten Trennzeichen aufteilen"
 
 #: ../../whatsnew/3.15.rst:859
 msgid ""
@@ -1836,6 +1865,12 @@ msgid ""
 "assert data == b'abc\\n'\n"
 "assert buffer == bytearray(b'def')"
 msgstr ""
+"buffer = bytearray(b'abc\\ndef')\n"
+"n = buffer.find(b'\\n')\n"
+"data = bytes(buffer[:n + 1])\n"
+"del buffer[:n + 1]\n"
+"assert data == b'abc\\n'\n"
+"assert buffer == bytearray(b'def')"
 
 #: ../../whatsnew/3.15.rst:868
 msgid ""
@@ -1843,10 +1878,15 @@ msgid ""
 "n = buffer.find(b'\\n')\n"
 "data = buffer.take_bytes(n + 1)"
 msgstr ""
+"buffer = bytearray(b'abc\\ndef')\n"
+"n = buffer.find(b'\\n')\n"
+"data = buffer.take_bytes(n + 1)"
 
 #: ../../whatsnew/3.15.rst:874
 msgid "Split a buffer at a specific separator; discard after the separator"
 msgstr ""
+"Einen Puffer an einem bestimmten Trennzeichen aufteilen; den Rest nach dem "
+"Trennzeichen verwerfen"
 
 #: ../../whatsnew/3.15.rst:875
 msgid ""
@@ -1857,6 +1897,12 @@ msgid ""
 "assert data == b'abc'\n"
 "assert len(buffer) == 0"
 msgstr ""
+"buffer = bytearray(b'abc\\ndef')\n"
+"n = buffer.find(b'\\n')\n"
+"data = bytes(buffer[:n])\n"
+"buffer.clear()\n"
+"assert data == b'abc'\n"
+"assert len(buffer) == 0"
 
 #: ../../whatsnew/3.15.rst:884
 msgid ""
@@ -1865,10 +1911,14 @@ msgid ""
 "buffer.resize(n)\n"
 "data = buffer.take_bytes()"
 msgstr ""
+"buffer = bytearray(b'abc\\ndef')\n"
+"n = buffer.find(b'\\n')\n"
+"buffer.resize(n)\n"
+"data = buffer.take_bytes()"
 
 #: ../../whatsnew/3.15.rst:891
 msgid "(Contributed by Cody Maloney in :gh:`139871`.)"
-msgstr ""
+msgstr "(Beigetragen von Cody Maloney in :gh:`139871`.)"
 
 #: ../../whatsnew/3.15.rst:893
 msgid ""
@@ -1879,12 +1929,21 @@ msgid ""
 "filter>` syntax warnings by module name. (Contributed by Serhiy Storchaka "
 "in :gh:`135801`.)"
 msgstr ""
+"Viele Funktionen zum Kompilieren oder Parsen von Python-Code, "
+"etwa :func:`compile`, :func:`ast.parse`, :func:`symtable.symtable` "
+"und :func:`importlib.abc.InspectLoader.source_to_code`, erlauben jetzt die "
+"Übergabe des Modulnamens. Er wird benötigt, um Syntaxwarnungen eindeutig "
+"nach Modulnamen zu :ref:`filtern <warning-filter>`. (Beigetragen von Serhiy "
+"Storchaka in :gh:`135801`.)"
 
 #: ../../whatsnew/3.15.rst:900
 msgid ""
 "Allowed defining the *__dict__* and *__weakref__* :ref:`__slots__ <slots>` "
 "for any class. (Contributed by Serhiy Storchaka in :gh:`41779`.)"
 msgstr ""
+"Für jede Klasse dürfen jetzt *__dict__* und *__weakref__* "
+"als :ref:`__slots__ <slots>` definiert werden. (Beigetragen von Serhiy "
+"Storchaka in :gh:`41779`.)"
 
 #: ../../whatsnew/3.15.rst:904
 msgid ""
@@ -1893,12 +1952,19 @@ msgid ""
 "by :func:`collections.namedtuple`). (Contributed by Serhiy Storchaka "
 "in :gh:`41779`.)"
 msgstr ""
+"Für Klassen, die von :class:`tuple` abgeleitet sind (einschließlich der "
+"mit :func:`collections.namedtuple` erzeugten Klassen), dürfen jetzt "
+"beliebige :ref:`__slots__ <slots>` definiert werden. (Beigetragen von Serhiy "
+"Storchaka in :gh:`41779`.)"
 
 #: ../../whatsnew/3.15.rst:908
 msgid ""
 "The :class:`slice` type now supports subscription, making it "
 "a :term:`generic type`. (Contributed by James Hilton-Balfe in :gh:`128335`.)"
 msgstr ""
+"Der Typ :class:`slice` unterstützt jetzt Subskription und ist damit "
+"ein :term:`generischer Typ <generic type>`. (Beigetragen von James Hilton-"
+"Balfe in :gh:`128335`.)"
 
 #: ../../whatsnew/3.15.rst:912
 msgid ""
@@ -1907,12 +1973,19 @@ msgid ""
 "``'Zd'`` respectively. (Contributed by Victor Stinner in :gh:`146151` "
 "and :gh:`148675`.)"
 msgstr ""
+"Die Klasse :class:`memoryview` unterstützt jetzt die C-Typen :c:expr:`float "
+"complex` und :c:expr:`double complex` mit den Formatzeichen ``'Zf'`` "
+"beziehungsweise ``'Zd'``. (Beigetragen von Victor Stinner in :gh:`146151` "
+"und :gh:`148675`.)"
 
 #: ../../whatsnew/3.15.rst:917
 msgid ""
 "Allow the *count* argument of :meth:`bytes.replace` to be a keyword. "
 "(Contributed by Stan Ulbrych in :gh:`147856`.)"
 msgstr ""
+"Das Argument *count* von :meth:`bytes.replace` darf jetzt als "
+"Schlüsselwortargument übergeben werden. (Beigetragen von Stan Ulbrych "
+"in :gh:`147856`.)"
 
 #: ../../whatsnew/3.15.rst:920
 msgid ""
@@ -1920,6 +1993,9 @@ msgid ""
 "the existing support for unary minus. (Contributed by Bartosz Sławecki "
 "in :gh:`145239`.)"
 msgstr ""
+"Ein unäres Plus ist jetzt in Literal-Mustern von :keyword:`match` erlaubt, "
+"analog zur bestehenden Unterstützung für das unäre Minus. (Beigetragen von "
+"Bartosz Sławecki in :gh:`145239`.)"
 
 #: ../../whatsnew/3.15.rst:924
 msgid ""
@@ -1929,6 +2005,13 @@ msgid ""
 "``pkg.sub.mod`` could each block the other when ``pkg/sub/__init__.py`` "
 "imports ``pkg.sub.mod``. (Contributed by Gregory P. Smith in :gh:`83065`.)"
 msgstr ""
+"Das Importsystem erwirbt Sperren pro Modul jetzt in hierarchischer "
+"Reihenfolge (übergeordnete Pakete vor ihren Untermodulen). Damit wird ein "
+"seit Langem bestehender Deadlock behoben, bei dem sich ein Thread, der "
+"``pkg.sub`` importiert, und ein anderer, der ``pkg.sub.mod`` importiert, "
+"gegenseitig blockieren konnten, wenn ``pkg/sub/__init__.py`` das Modul "
+"``pkg.sub.mod`` importiert. (Beigetragen von Gregory P. Smith "
+"in :gh:`83065`.)"
 
 #: ../../whatsnew/3.15.rst:931
 msgid ""
@@ -1939,6 +2022,13 @@ msgid ""
 "regular dynamic extensions do. (Contributed by Stefano Rivera "
 "in :gh:`122931`.)"
 msgstr ""
+"Dateinamen von Erweiterungen für die stabile ABI, die die Endung ``.so`` "
+"verwenden, dürfen jetzt ein Multiarch-Tupel enthalten, zum Beispiel "
+"``foo.abi3-x86-64-linux-gnu.so``. Dadurch können Erweiterungen für die "
+"stabile ABI für mehrere Architekturen im selben Verzeichnis installiert "
+"werden, ohne miteinander zu kollidieren, so wie es bei regulären dynamischen "
+"Erweiterungen bereits möglich ist. (Beigetragen von Stefano Rivera "
+"in :gh:`122931`.)"
 
 #: ../../whatsnew/3.15.rst:938
 msgid ""
@@ -1948,16 +2038,24 @@ msgid ""
 "<importlib.machinery.ModuleSpec.cached>` instead. (Contributed by Brett "
 "Cannon in :gh:`97879`.)"
 msgstr ""
+"Das Attribut ``__cached__`` von Modulen, das seit Version 3.13 veraltet ist, "
+"wird vom Importsystem und der Standardbibliothek weder gesetzt noch "
+"berücksichtigt. Verwende stattdessen :attr:`__spec__.cached "
+"<importlib.machinery.ModuleSpec.cached>`. (Beigetragen von Brett Cannon "
+"in :gh:`97879`.)"
 
 #: ../../whatsnew/3.15.rst:944
 msgid ""
 "Note that the :attr:`~module.__loader__` and :attr:`~module.__package__` "
 "attributes are also deprecated and scheduled for removal."
 msgstr ""
+"Beachte, dass die Attribute :attr:`~module.__loader__` "
+"und :attr:`~module.__package__` ebenfalls veraltet sind und entfernt werden "
+"sollen."
 
 #: ../../whatsnew/3.15.rst:949
 msgid "Default interactive shell"
-msgstr ""
+msgstr "Interaktive Standard-Shell"
 
 #: ../../whatsnew/3.15.rst:953
 msgid ""
@@ -1967,6 +2065,12 @@ msgid ""
 "variables <using-on-controlling-color>`. (Contributed by Antonio Cuni and "
 "Pablo Galindo in :gh:`130472`.)"
 msgstr ""
+"Tab-Vervollständigungen werden jetzt nach Art des Objekts eingefärbt, "
+"basierend auf :pypi:`fancycompleter`. "
+"Setze :envvar:`PYTHON_BASIC_COMPLETER`, um auf :mod:`rlcompleter` "
+"zurückzugreifen. Die Farbe lässt sich auch über :ref:`Umgebungsvariablen "
+"<using-on-controlling-color>` steuern. (Beigetragen von Antonio Cuni und "
+"Pablo Galindo in :gh:`130472`.)"
 
 #: ../../whatsnew/3.15.rst:960
 msgid ""
@@ -1976,28 +2080,37 @@ msgid ""
 "modules the completer offers to import them when :kbd:`Tab` is pressed a "
 "second time. (Contributed by Loïc Simon and Pablo Galindo in :gh:`140870`.)"
 msgstr ""
+"Die Tab-Vervollständigung schlägt jetzt Modulattribute in Anweisungen der "
+"Form ``from ... import`` vor. Attribute können erst vorgeschlagen werden, "
+"wenn das Modul importiert ist; daher werden Module der :term:`stdlib` "
+"automatisch importiert, während die Vervollständigung bei anderen Modulen "
+"anbietet, sie zu importieren, wenn :kbd:`Tab` ein zweites Mal gedrückt wird. "
+"(Beigetragen von Loïc Simon und Pablo Galindo in :gh:`140870`.)"
 
 #: ../../whatsnew/3.15.rst:969
 msgid "New modules"
-msgstr ""
+msgstr "Neue Module"
 
 #: ../../whatsnew/3.15.rst:972
 msgid "math.integer"
-msgstr ""
+msgstr "math.integer"
 
 #: ../../whatsnew/3.15.rst:974
 msgid ""
 "This module provides access to the mathematical functions for integer "
 "arguments (:pep:`791`). (Contributed by Serhiy Storchaka in :gh:`81313`.)"
 msgstr ""
+"Dieses Modul bietet Zugriff auf die mathematischen Funktionen für "
+"ganzzahlige Argumente (:pep:`791`). (Beigetragen von Serhiy Storchaka "
+"in :gh:`81313`.)"
 
 #: ../../whatsnew/3.15.rst:980
 msgid "Improved modules"
-msgstr ""
+msgstr "Verbesserte Module"
 
 #: ../../whatsnew/3.15.rst:983
 msgid "argparse"
-msgstr ""
+msgstr "argparse"
 
 #: ../../whatsnew/3.15.rst:985
 msgid ""
@@ -2005,6 +2118,9 @@ msgid ""
 "long options and alternate prefix characters. (Contributed by Serhiy "
 "Storchaka in :gh:`138525`.)"
 msgstr ""
+"Die Aktion :class:`~argparse.BooleanOptionalAction` unterstützt jetzt lange "
+"Optionen mit einfachem Bindestrich und alternative Präfixzeichen. "
+"(Beigetragen von Serhiy Storchaka in :gh:`138525`.)"
 
 #: ../../whatsnew/3.15.rst:989
 msgid ""
@@ -2012,6 +2128,10 @@ msgid ""
 "to default to ``True``. This enables suggestions for mistyped arguments by "
 "default. (Contributed by Jakob Schluse in :gh:`140450`.)"
 msgstr ""
+"Der Standardwert des Parameters *suggest_on_error* "
+"von :class:`argparse.ArgumentParser` ist jetzt ``True``. Dadurch werden "
+"standardmäßig Vorschläge für falsch geschriebene Argumente angezeigt. "
+"(Beigetragen von Jakob Schluse in :gh:`140450`.)"
 
 #: ../../whatsnew/3.15.rst:995
 msgid ""
@@ -2019,6 +2139,10 @@ msgid ""
 "description and epilog text to highlight inline code when color output is "
 "enabled. (Contributed by Savannah Ostrowski in :gh:`142390`.)"
 msgstr ""
+"Unterstützung für Backtick-Markup in Beschreibung und Epilog "
+"von :class:`~argparse.ArgumentParser` hinzugefügt, um Inline-Code "
+"hervorzuheben, wenn die farbige Ausgabe aktiviert ist. (Beigetragen von "
+"Savannah Ostrowski in :gh:`142390`.)"
 
 #: ../../whatsnew/3.15.rst:999
 msgid ""
@@ -2026,10 +2150,13 @@ msgid ""
 "double backticks (RST inline-literal style). (Contributed by Hugo van "
 "Kemenade in :gh:`149375`.)"
 msgstr ""
+"Das Backtick-Markup wurde auf den Hilfetext (``help``) von Argumenten "
+"erweitert, und doppelte Backticks (im Stil von RST-Inline-Literalen) werden "
+"jetzt unterstützt. (Beigetragen von Hugo van Kemenade in :gh:`149375`.)"
 
 #: ../../whatsnew/3.15.rst:1005
 msgid "array"
-msgstr ""
+msgstr "array"
 
 #: ../../whatsnew/3.15.rst:1007
 msgid ""
@@ -2037,12 +2164,18 @@ msgid ""
 "formatting characters ``'Zf'`` and ``'Zd'`` respectively. (Contributed by "
 "Victor Stinner in :gh:`146151` and :gh:`148675`.)"
 msgstr ""
+"Unterstützung für die C-Typen :c:expr:`float complex` und :c:expr:`double "
+"complex` mit den Formatzeichen ``'Zf'`` beziehungsweise ``'Zd'``. "
+"(Beigetragen von Victor Stinner in :gh:`146151` und :gh:`148675`.)"
 
 #: ../../whatsnew/3.15.rst:1011
 msgid ""
 "Support half-floats (16-bit IEEE 754 binary interchange format): formatting "
 "character ``'e'``. (Contributed by Sergey B Kirpichev in :gh:`146238`.)"
 msgstr ""
+"Unterstützung für Gleitkommazahlen halber Genauigkeit (16-Bit-"
+"Austauschformat nach IEEE 754) mit dem Formatzeichen ``'e'``. (Beigetragen "
+"von Sergey B Kirpichev in :gh:`146238`.)"
 
 #: ../../whatsnew/3.15.rst:1015
 msgid ""
@@ -2050,10 +2183,13 @@ msgid ""
 "to support type codes longer than 1 character (``Zf`` and ``Zd``). "
 "(Contributed by Victor Stinner in :gh:`148675`.)"
 msgstr ""
+"Der Typ von :data:`array.typecodes` wurde von :class:`str` zu :class:`tuple` "
+"geändert, um Typcodes zu unterstützen, die länger als ein Zeichen sind "
+"(``Zf`` und ``Zd``). (Beigetragen von Victor Stinner in :gh:`148675`.)"
 
 #: ../../whatsnew/3.15.rst:1021 ../../whatsnew/3.15.rst:2131
 msgid "ast"
-msgstr ""
+msgstr "ast"
 
 #: ../../whatsnew/3.15.rst:1025
 msgid ""
@@ -2062,6 +2198,10 @@ msgid ""
 "default), colored output is always disabled. (Contributed by Stan Ulbrych "
 "in :gh:`148981`.)"
 msgstr ""
+"Parameter *color* zu :func:`~ast.dump` hinzugefügt. Bei ``True`` wird die "
+"zurückgegebene Zeichenkette mit ANSI-Escape-Sequenzen syntaktisch "
+"hervorgehoben. Bei ``False`` (Standard) ist die farbige Ausgabe immer "
+"deaktiviert. (Beigetragen von Stan Ulbrych in :gh:`148981`.)"
 
 #: ../../whatsnew/3.15.rst:1031
 msgid ""
@@ -2069,10 +2209,14 @@ msgid ""
 "default. This can be :ref:`controlled using environment variables <using-on-"
 "controlling-color>`. (Contributed by Stan Ulbrych in :gh:`148981`.)"
 msgstr ""
+"Die Ausgabe auf der :ref:`Kommandozeile <ast-cli>` wird jetzt standardmäßig "
+"syntaktisch hervorgehoben. Dies lässt sich :ref:`über Umgebungsvariablen "
+"steuern <using-on-controlling-color>`. (Beigetragen von Stan Ulbrych "
+"in :gh:`148981`.)"
 
 #: ../../whatsnew/3.15.rst:1037
 msgid "asyncio"
-msgstr ""
+msgstr "asyncio"
 
 #: ../../whatsnew/3.15.rst:1039
 msgid ""
@@ -2083,16 +2227,24 @@ msgid ""
 "exception which is then suppressed as it exits the task group. (Contributed "
 "by John Belmonte in :gh:`127214`.)"
 msgstr ""
+":meth:`TaskGroup.cancel <asyncio.TaskGroup.cancel>` wurde hinzugefügt, um "
+"eine Task-Gruppe vorzeitig zu beenden, zum Beispiel wenn das Ziel der Tasks "
+"erreicht ist oder ihre Dienste nicht mehr benötigt werden. Bisher erforderte "
+"das unintuitiven Boilerplate-Code, etwa einen zusätzlichen Task, der eine "
+"eigene Ausnahme auslöst, die dann beim Verlassen der Task-Gruppe unterdrückt "
+"wird. (Beigetragen von John Belmonte in :gh:`127214`.)"
 
 #: ../../whatsnew/3.15.rst:1048
 msgid "base64"
-msgstr ""
+msgstr "base64"
 
 #: ../../whatsnew/3.15.rst:1050
 msgid ""
 "Added the *pad* parameter in :func:`~base64.z85encode`. (Contributed by "
 "Hauke Dämpfling in :gh:`143103`.)"
 msgstr ""
+"Parameter *pad* in :func:`~base64.z85encode` hinzugefügt. (Beigetragen von "
+"Hauke Dämpfling in :gh:`143103`.)"
 
 #: ../../whatsnew/3.15.rst:1053
 msgid ""
@@ -2101,6 +2253,10 @@ msgid ""
 "and :func:`~base64.urlsafe_b64decode`. (Contributed by Serhiy Storchaka "
 "in :gh:`73613`.)"
 msgstr ""
+"Parameter *padded* "
+"in :func:`~base64.b32encode`, :func:`~base64.b32decode`, :func:`~base64.b32hexencode`, :func:`~base64.b32hexdecode`, :func:`~base64.b64encode`, :func:`~base64.b64decode`, :func:`~base64.urlsafe_b64encode` "
+"und :func:`~base64.urlsafe_b64decode` hinzugefügt. (Beigetragen von Serhiy "
+"Storchaka in :gh:`73613`.)"
 
 #: ../../whatsnew/3.15.rst:1060
 msgid ""
@@ -2109,6 +2265,10 @@ msgid ""
 "and :func:`~base64.z85encode`. (Contributed by Serhiy Storchaka "
 "in :gh:`143214` and :gh:`146431`.)"
 msgstr ""
+"Parameter *wrapcol* "
+"in :func:`~base64.b16encode`, :func:`~base64.b32encode`, :func:`~base64.b32hexencode`, :func:`~base64.b64encode`, :func:`~base64.b85encode` "
+"und :func:`~base64.z85encode` hinzugefügt. (Beigetragen von Serhiy Storchaka "
+"in :gh:`143214` und :gh:`146431`.)"
 
 #: ../../whatsnew/3.15.rst:1066
 msgid ""
@@ -2117,6 +2277,10 @@ msgid ""
 "and :func:`~base64.z85decode`. (Contributed by Serhiy Storchaka "
 "in :gh:`144001` and :gh:`146431`.)"
 msgstr ""
+"Parameter *ignorechars* "
+"in :func:`~base64.b16decode`, :func:`~base64.b32decode`, :func:`~base64.b32hexdecode`, :func:`~base64.b64decode`, :func:`~base64.b85decode` "
+"und :func:`~base64.z85decode` hinzugefügt. (Beigetragen von Serhiy Storchaka "
+"in :gh:`144001` und :gh:`146431`.)"
 
 #: ../../whatsnew/3.15.rst:1072
 msgid ""
@@ -2126,38 +2290,43 @@ msgid ""
 "bits or other non-canonical forms. (Contributed by Gregory P. Smith "
 "in :gh:`146311`.)"
 msgstr ""
+"Parameter *canonical* "
+"in :func:`~base64.b32decode`, :func:`~base64.b32hexdecode`, :func:`~base64.b64decode`, :func:`~base64.a85decode`, :func:`~base64.b85decode` "
+"und :func:`~base64.z85decode` hinzugefügt, um Kodierungen mit von null "
+"verschiedenen Füllbits oder anderen nicht kanonischen Formen abzulehnen. "
+"(Beigetragen von Gregory P. Smith in :gh:`146311`.)"
 
 #: ../../whatsnew/3.15.rst:1083
 msgid "binascii"
-msgstr ""
+msgstr "binascii"
 
 #: ../../whatsnew/3.15.rst:1085
 msgid "Added functions for Base32 encoding:"
-msgstr ""
+msgstr "Funktionen für die Base32-Kodierung hinzugefügt:"
 
 #: ../../whatsnew/3.15.rst:1087
 msgid ":func:`~binascii.b2a_base32` and :func:`~binascii.a2b_base32`"
-msgstr ""
+msgstr ":func:`~binascii.b2a_base32` und :func:`~binascii.a2b_base32`"
 
 #: ../../whatsnew/3.15.rst:1089
 msgid "(Contributed by James Seo in :gh:`146192`.)"
-msgstr ""
+msgstr "(Beigetragen von James Seo in :gh:`146192`.)"
 
 #: ../../whatsnew/3.15.rst:1091
 msgid "Added functions for Ascii85, Base85, and Z85 encoding:"
-msgstr ""
+msgstr "Funktionen für die Kodierungen Ascii85, Base85 und Z85 hinzugefügt:"
 
 #: ../../whatsnew/3.15.rst:1093
 msgid ":func:`~binascii.b2a_ascii85` and :func:`~binascii.a2b_ascii85`"
-msgstr ""
+msgstr ":func:`~binascii.b2a_ascii85` und :func:`~binascii.a2b_ascii85`"
 
 #: ../../whatsnew/3.15.rst:1094
 msgid ":func:`~binascii.b2a_base85` and :func:`~binascii.a2b_base85`"
-msgstr ""
+msgstr ":func:`~binascii.b2a_base85` und :func:`~binascii.a2b_base85`"
 
 #: ../../whatsnew/3.15.rst:1096
 msgid "(Contributed by James Seo and Serhiy Storchaka in :gh:`101178`.)"
-msgstr ""
+msgstr "(Beigetragen von James Seo und Serhiy Storchaka in :gh:`101178`.)"
 
 #: ../../whatsnew/3.15.rst:1098
 msgid ""
@@ -2166,12 +2335,18 @@ msgid ""
 "and :func:`~binascii.a2b_base64`. (Contributed by Serhiy Storchaka "
 "in :gh:`73613`.)"
 msgstr ""
+"Parameter *padded* "
+"in :func:`~binascii.b2a_base32`, :func:`~binascii.a2b_base32`, :func:`~binascii.b2a_base64` "
+"und :func:`~binascii.a2b_base64` hinzugefügt. (Beigetragen von Serhiy "
+"Storchaka in :gh:`73613`.)"
 
 #: ../../whatsnew/3.15.rst:1103
 msgid ""
 "Added the *wrapcol* parameter in :func:`~binascii.b2a_base64`. (Contributed "
 "by Serhiy Storchaka in :gh:`143214`.)"
 msgstr ""
+"Parameter *wrapcol* in :func:`~binascii.b2a_base64` hinzugefügt. "
+"(Beigetragen von Serhiy Storchaka in :gh:`143214`.)"
 
 #: ../../whatsnew/3.15.rst:1106
 msgid ""
@@ -2179,6 +2354,9 @@ msgid ""
 "and :func:`~binascii.a2b_base64`. (Contributed by Serhiy Storchaka "
 "in :gh:`145980`.)"
 msgstr ""
+"Parameter *alphabet* in :func:`~binascii.b2a_base64` "
+"und :func:`~binascii.a2b_base64` hinzugefügt. (Beigetragen von Serhiy "
+"Storchaka in :gh:`145980`.)"
 
 #: ../../whatsnew/3.15.rst:1110
 msgid ""
@@ -2187,6 +2365,10 @@ msgid ""
 "and :func:`~binascii.a2b_base64`. (Contributed by Serhiy Storchaka "
 "in :gh:`144001` and :gh:`146431`.)"
 msgstr ""
+"Parameter *ignorechars* "
+"in :func:`~binascii.a2b_hex`, :func:`~binascii.unhexlify` "
+"und :func:`~binascii.a2b_base64` hinzugefügt. (Beigetragen von Serhiy "
+"Storchaka in :gh:`144001` und :gh:`146431`.)"
 
 #: ../../whatsnew/3.15.rst:1114
 msgid ""
@@ -2194,10 +2376,13 @@ msgid ""
 "encodings with non-zero padding bits. (Contributed by Gregory P. Smith "
 "in :gh:`146311`.)"
 msgstr ""
+"Parameter *canonical* in :func:`~binascii.a2b_base64` hinzugefügt, um "
+"Kodierungen mit von null verschiedenen Füllbits abzulehnen. (Beigetragen von "
+"Gregory P. Smith in :gh:`146311`.)"
 
 #: ../../whatsnew/3.15.rst:1120
 msgid "calendar"
-msgstr ""
+msgstr "calendar"
 
 #: ../../whatsnew/3.15.rst:1124
 msgid ""
@@ -2205,6 +2390,10 @@ msgid ""
 "color. This can be controlled with :ref:`environment variables <using-on-"
 "controlling-color>`. (Contributed by Hugo van Kemenade in :gh:`148352`.)"
 msgstr ""
+"Die Textausgabe von :mod:`calendar` auf der :ref:`Kommandozeile <calendar-"
+"cli>` ist jetzt farbiger. Dies lässt sich über :ref:`Umgebungsvariablen "
+"<using-on-controlling-color>` steuern. (Beigetragen von Hugo van Kemenade "
+"in :gh:`148352`.)"
 
 #: ../../whatsnew/3.15.rst:1129
 msgid ""
@@ -2212,6 +2401,9 @@ msgid ""
 "accepts the year-month option: ``python -m calendar -t html 2009 06``. "
 "(Contributed by Pål Grønås Drange in :gh:`140212`.)"
 msgstr ""
+"Die HTML-Ausgabe von :mod:`calendar` auf der :ref:`Kommandozeile <calendar-"
+"cli>` akzeptiert jetzt die Angabe von Jahr und Monat: ``python -m calendar "
+"-t html 2009 06``. (Beigetragen von Pål Grønås Drange in :gh:`140212`.)"
 
 #: ../../whatsnew/3.15.rst:1133
 msgid ""
@@ -2220,10 +2412,14 @@ msgid ""
 "accessibility. (Contributed by Jiahao Li and Hugo van Kemenade "
 "in :gh:`137634`.)"
 msgstr ""
+"Von der Klasse :class:`calendar.HTMLCalendar` erzeugte Kalenderseiten "
+"unterstützen jetzt einen Dark Mode und wurden für eine bessere "
+"Barrierefreiheit auf den HTML5-Standard umgestellt. (Beigetragen von Jiahao "
+"Li und Hugo van Kemenade in :gh:`137634`.)"
 
 #: ../../whatsnew/3.15.rst:1139
 msgid "collections"
-msgstr ""
+msgstr "collections"
 
 #: ../../whatsnew/3.15.rst:1141
 msgid ""
@@ -2232,10 +2428,14 @@ msgid ""
 "between :class:`~collections.Counter` objects. (Contributed by Raymond "
 "Hettinger in :gh:`138682`.)"
 msgstr ""
+":meth:`!collections.Counter.__xor__` und :meth:`!"
+"collections.Counter.__ixor__` wurden hinzugefügt, um die symmetrische "
+"Differenz zwischen Objekten vom Typ :class:`~collections.Counter` zu "
+"berechnen. (Beigetragen von Raymond Hettinger in :gh:`138682`.)"
 
 #: ../../whatsnew/3.15.rst:1148
 msgid "concurrent.futures"
-msgstr ""
+msgstr "concurrent.futures"
 
 #: ../../whatsnew/3.15.rst:1150
 msgid ""
@@ -2244,10 +2444,14 @@ msgid ""
 "resulting traceback will now tell you the PID and exit code of the "
 "terminated process. (Contributed by Jonathan Berg in :gh:`139486`.)"
 msgstr ""
+"Die Fehlerberichterstattung wurde verbessert, wenn ein Kindprozess in "
+"einem :class:`concurrent.futures.ProcessPoolExecutor` abrupt beendet wird. "
+"Der resultierende Traceback nennt jetzt die PID und den Exit-Code des "
+"beendeten Prozesses. (Beigetragen von Jonathan Berg in :gh:`139486`.)"
 
 #: ../../whatsnew/3.15.rst:1158
 msgid "contextlib"
-msgstr ""
+msgstr "contextlib"
 
 #: ../../whatsnew/3.15.rst:1160
 msgid ""
@@ -2257,6 +2461,12 @@ msgid ""
 "for consistency with the :keyword:`with` and :keyword:`async with` "
 "statements. (Contributed by Serhiy Storchaka in :gh:`144386`.)"
 msgstr ""
+"Unterstützung für beliebige Deskriptoren :meth:`!__enter__`, :meth:`!"
+"__exit__`, :meth:`!__aenter__` und :meth:`!__aexit__` "
+"in :class:`~contextlib.ExitStack` und :class:`contextlib.AsyncExitStack` "
+"hinzugefügt, für Konsistenz mit den Anweisungen :keyword:`with` "
+"und :keyword:`async with`. (Beigetragen von Serhiy Storchaka "
+"in :gh:`144386`.)"
 
 #: ../../whatsnew/3.15.rst:1166
 msgid ""
@@ -2270,10 +2480,19 @@ msgid ""
 "object was created. (Contributed by Alex Grönholm & Gregory P. Smith "
 "in :gh:`125862`.)"
 msgstr ""
+":class:`~contextlib.ContextDecorator` "
+"und :class:`~contextlib.AsyncContextDecorator` (und damit "
+"auch :func:`~contextlib.contextmanager` "
+"und :func:`~contextlib.asynccontextmanager`, wenn sie als Dekoratoren "
+"verwendet werden) erkennen jetzt Generatorfunktionen, Koroutinenfunktionen "
+"und asynchrone Generatorfunktionen und halten den Kontextmanager während der "
+"Iteration bzw. über ``await`` hinweg offen. Bisher wurde der Kontextmanager "
+"verlassen, sobald das Generator- oder Koroutinenobjekt erzeugt wurde. "
+"(Beigetragen von Alex Grönholm und Gregory P. Smith in :gh:`125862`.)"
 
 #: ../../whatsnew/3.15.rst:1177 ../../whatsnew/3.15.rst:2150
 msgid "ctypes"
-msgstr ""
+msgstr "ctypes"
 
 #: ../../whatsnew/3.15.rst:1179
 msgid ""
@@ -2283,20 +2502,27 @@ msgid ""
 "``Zf``, ``Zd`` and ``Zg`` for compatibility with NumPy. (Contributed by "
 "Victor Stinner in :gh:`148675`.)"
 msgstr ""
+"Das :py:attr:`~ctypes._SimpleCData._type_` "
+"von :class:`~ctypes.c_float_complex`, :class:`~ctypes.c_double_complex` "
+"und :class:`~ctypes.c_longdouble_complex` wurde für die Kompatibilität mit "
+"NumPy von ``F``, ``D`` und ``G`` zu ``Zf``, ``Zd`` und ``Zg`` geändert. "
+"(Beigetragen von Victor Stinner in :gh:`148675`.)"
 
 #: ../../whatsnew/3.15.rst:1187
 msgid "dataclasses"
-msgstr ""
+msgstr "dataclasses"
 
 #: ../../whatsnew/3.15.rst:1189
 msgid ""
 "Annotations for generated ``__init__`` methods no longer include internal "
 "type names. (Contributed by David Ellis in :gh:`137530`.)"
 msgstr ""
+"Annotationen für generierte Methoden ``__init__`` enthalten keine internen "
+"Typnamen mehr. (Beigetragen von David Ellis in :gh:`137530`.)"
 
 #: ../../whatsnew/3.15.rst:1195
 msgid "dbm"
-msgstr ""
+msgstr "dbm"
 
 #: ../../whatsnew/3.15.rst:1197
 msgid ""
@@ -2304,10 +2530,14 @@ msgid ""
 "and :mod:`dbm.sqlite3` to recover unused free space previously occupied by "
 "deleted entries. (Contributed by Andrea Oliveri in :gh:`134004`.)"
 msgstr ""
+"Neue Methoden :meth:`!reorganize` in :mod:`dbm.dumb` und :mod:`dbm.sqlite3` "
+"hinzugefügt, um ungenutzten freien Speicherplatz zurückzugewinnen, der zuvor "
+"von gelöschten Einträgen belegt war. (Beigetragen von Andrea Oliveri "
+"in :gh:`134004`.)"
 
 #: ../../whatsnew/3.15.rst:1203
 msgid "difflib"
-msgstr ""
+msgstr "difflib"
 
 #: ../../whatsnew/3.15.rst:1207
 msgid ""
@@ -2316,6 +2546,10 @@ msgid ""
 "by :ref:`environment variables <using-on-controlling-color>`. (Contributed "
 "by Douglas Thor in :gh:`133725`.)"
 msgstr ""
+"Optionalen Parameter *color* für :func:`difflib.unified_diff` eingeführt, "
+"der eine farbige Ausgabe ähnlich wie bei :program:`git diff` ermöglicht. "
+"Dies lässt sich über :ref:`Umgebungsvariablen <using-on-controlling-color>` "
+"steuern. (Beigetragen von Douglas Thor in :gh:`133725`.)"
 
 #: ../../whatsnew/3.15.rst:1213
 msgid ""
@@ -2323,10 +2557,13 @@ msgid ""
 "the :class:`difflib.HtmlDiff` class, and migrated the output to the HTML5 "
 "standard. (Contributed by Jiahao Li in :gh:`134580`.)"
 msgstr ""
+"Das Styling der von der Klasse :class:`difflib.HtmlDiff` erzeugten HTML-Diff-"
+"Seiten wurde verbessert und die Ausgabe auf den HTML5-Standard umgestellt. "
+"(Beigetragen von Jiahao Li in :gh:`134580`.)"
 
 #: ../../whatsnew/3.15.rst:1219
 msgid "email"
-msgstr ""
+msgstr "email"
 
 #: ../../whatsnew/3.15.rst:1221
 msgid ""
@@ -2336,10 +2573,17 @@ msgid ""
 "(EAI) are discussed in :attr:`.EmailPolicy.utf8`. (Contributed by R David "
 "Murray and Mike Edmunds in :gh:`122540`.)"
 msgstr ""
+"E-Mail-Generatoren lösen jetzt einen Fehler aus, wenn "
+"eine :class:`.EmailMessage` wegen einer Nicht-ASCII-E-Mail-Adresse (Mailbox) "
+"in einem Adress-Header nicht korrekt serialisiert (flattened) werden kann. "
+"Möglichkeiten zur Unterstützung internationalisierter E-Mail-Adressen (Email "
+"Address Internationalization, EAI) werden unter :attr:`.EmailPolicy.utf8` "
+"beschrieben. (Beigetragen von R David Murray und Mike Edmunds "
+"in :gh:`122540`.)"
 
 #: ../../whatsnew/3.15.rst:1229
 msgid "faulthandler"
-msgstr ""
+msgstr "faulthandler"
 
 #: ../../whatsnew/3.15.rst:1231
 msgid ""
@@ -2348,16 +2592,23 @@ msgid ""
 "and :func:`faulthandler.register`. (Contributed by Eric Froemling "
 "in :gh:`149085`.)"
 msgstr ""
+"Parameter *max_threads* "
+"in :func:`faulthandler.enable`, :func:`faulthandler.dump_traceback`, :func:`faulthandler.dump_traceback_later` "
+"und :func:`faulthandler.register` hinzugefügt. (Beigetragen von Eric "
+"Froemling in :gh:`149085`.)"
 
 #: ../../whatsnew/3.15.rst:1238
 msgid "functools"
-msgstr ""
+msgstr "functools"
 
 #: ../../whatsnew/3.15.rst:1240
 msgid ""
 ":func:`~functools.singledispatchmethod` now supports non-:term:`descriptor` "
 "callables. (Contributed by Serhiy Storchaka in :gh:`140873`.)"
 msgstr ""
+":func:`~functools.singledispatchmethod` unterstützt jetzt aufrufbare "
+"Objekte, die keine :term:`Deskriptoren <descriptor>` sind. (Beigetragen von "
+"Serhiy Storchaka in :gh:`140873`.)"
 
 #: ../../whatsnew/3.15.rst:1244
 msgid ""
@@ -2365,10 +2616,14 @@ msgid ""
 "argument if it wraps a regular method and is called as a class attribute. "
 "(Contributed by Bartosz Sławecki in :gh:`143535`.)"
 msgstr ""
+":func:`~functools.singledispatchmethod` wählt die Implementierung jetzt "
+"anhand des zweiten Arguments aus, wenn es eine reguläre Methode umhüllt und "
+"als Klassenattribut aufgerufen wird. (Beigetragen von Bartosz Sławecki "
+"in :gh:`143535`.)"
 
 #: ../../whatsnew/3.15.rst:1250
 msgid "gc"
-msgstr ""
+msgstr "gc"
 
 #: ../../whatsnew/3.15.rst:1252
 msgid ""
@@ -2379,10 +2634,17 @@ msgid ""
 "now used in Python 3.14.5 and later and Python 3.15. (Contributed by Sergey "
 "Miryanov in :gh:`148726`.)"
 msgstr ""
+"Python 3.14.0 bis 3.14.4 wurde mit einem neuen inkrementellen Garbage "
+"Collector ausgeliefert. Nach einer Reihe von `Berichten <https://github.com/"
+"python/cpython/issues/142516>`__ über erheblichen Speicherdruck in "
+"Produktionsumgebungen wurde er jedoch wieder auf den generationenbasierten "
+"GC aus 3.13 zurückgesetzt. Dieser GC wird jetzt in Python 3.14.5 und neuer "
+"sowie in Python 3.15 verwendet. (Beigetragen von Sergey Miryanov "
+"in :gh:`148726`.)"
 
 #: ../../whatsnew/3.15.rst:1262
 msgid "hashlib"
-msgstr ""
+msgstr "hashlib"
 
 #: ../../whatsnew/3.15.rst:1264
 msgid ""
