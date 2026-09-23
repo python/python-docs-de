@@ -1,10 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -12,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-15 09:12+0000\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -215,13 +214,14 @@ msgid ""
 "terminates."
 msgstr ""
 "Der Ausdruck :token:`~python-grammar:starred_expression_list` wird einmal "
-"ausgewertet; er sollte ein :term:`iterable`-Objekt zurückgeben. Für dieses "
-"iterable-Objekt wird ein :term:`iterator` erstellt. Das erste vom Iterator "
-"gelieferte Element wird dann gemäß den Standardregeln für Zuweisungen "
-"(siehe :ref:`assignment`) der Zielliste zugewiesen, und die Suite wird "
-"ausgeführt. Dies wiederholt sich für jedes vom Iterator gelieferte Element. "
-"Wenn der Iterator erschöpft ist, wird die Suite in der Klausel :keyword:`!"
-"else` (sofern vorhanden) ausgeführt, und die Schleife wird beendet."
+"ausgewertet; er sollte ein :term:`iterierbares <iterable>` Objekt liefern. "
+"Für dieses iterierbare Objekt wird ein :term:`Iterator <iterator>` erzeugt. "
+"Das erste vom Iterator gelieferte Element wird dann nach den üblichen Regeln "
+"für Zuweisungen (siehe :ref:`assignment`) der Zielliste zugewiesen, und die "
+"Suite wird ausgeführt. Das wiederholt sich für jedes Element, das der "
+"Iterator liefert. Ist der Iterator :term:`erschöpft <exhausted>`, wird die "
+"Suite der :keyword:`!else`-Klausel ausgeführt, sofern vorhanden, und die "
+"Schleife endet."
 
 #: ../../reference/compound_stmts.rst:173
 msgid ""
