@@ -2811,8 +2811,8 @@ msgstr ""
 "fügen zudem einige zusätzliche Methoden hinzu, die in manuell geschriebenen "
 "oder integrierten benannten Tupeln möglicherweise nicht vorhanden sind."
 
-#: ../../glossary.rst:1101
-msgid "namespace" # Stop
+#: ../../glossary.rst:1101 # Stop
+msgid "namespace"
 msgstr "Namensraum"
 
 #: ../../glossary.rst:1103
