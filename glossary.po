@@ -107,16 +107,16 @@ msgid ""
 "attribute of functions, classes, and modules. Annotate functions are a "
 "subset of :term:`evaluate functions <evaluate function>`."
 msgstr ""
-"Eine Callable-Funktion, die aufgerufen werden kann, um die :term:"
-"`Annotationen <annotation>` eines Objekts abzurufen. Annotate-Funktionen "
-"sind in der Regel :term:`Funktionen <function>`, die automatisch als "
-"Attribut  :attr:`~object.__annotate__`  von Funktionen, Klassen und Modulen "
-"generiert werden. Annotate-Funktionen sind eine Teilmenge der :term:"
-"`Evaluate-Funktionen <evaluate function>`."
+"Ein aufrufbares Objekt, das aufgerufen werden kann, um die "
+":term:`Annotationen <annotation>` eines Objekts abzurufen. "
+"Annotate-Funktionen sind normalerweise :term:`Funktionen <function>`, die "
+"automatisch als Attribut :attr:`~object.__annotate__` von Funktionen, "
+"Klassen und Modulen erzeugt werden. Annotate-Funktionen sind eine Teilmenge "
+"der :term:`Evaluate-Funktionen <evaluate function>`."
 
 #: ../../glossary.rst:47
 msgid "annotation"
-msgstr "Anmerkung"
+msgstr "Annotation"
 
 #: ../../glossary.rst:49
 msgid ""
@@ -170,11 +170,11 @@ msgid ""
 "by ``**``.  For example, ``3`` and ``5`` are both keyword arguments in the "
 "following calls to :func:`complex`::"
 msgstr ""
-":dfn:`Schlüsselwortargument <keyword argument>`: Ein Argument, dem in einem "
-"Funktionsaufruf ein Bezeichner vorangestellt ist (z. B. ``name=``) oder das "
-"in einem Wörterbuch als Wert übergeben wird, dem ``**`` vorangestellt ist. "
-"Beispielsweise sind sowohl ``3`` als auch ``5`` Schlüsselwortargumente in "
-"den folgenden Aufrufen von  :func:`complex` ::"
+":dfn:`Schlüsselwortargument`: Ein Argument, dem in einem Funktionsaufruf ein "
+"Bezeichner vorangestellt ist (z. B. ``name=``) oder das in einem Dictionary "
+"als Wert übergeben wird, dem ``**`` vorangestellt ist. Beispielsweise sind "
+"sowohl ``3`` als auch ``5`` Schlüsselwortargumente in den folgenden Aufrufen "
+"von :func:`complex`::"
 
 #: ../../glossary.rst:72
 msgid ""
@@ -327,7 +327,7 @@ msgstr ""
 
 #: ../../glossary.rst:128
 msgid "asynchronous iterable"
-msgstr "asynchrones Iterabel"
+msgstr "asynchrones iterierbares Objekt"
 
 #: ../../glossary.rst:130
 msgid ""
@@ -681,7 +681,7 @@ msgid ""
 "level (i.e., not in an instance of the class)."
 msgstr ""
 "Eine Variable, die in einer Klasse definiert ist und nur auf Klassenebene "
-"(d. h. nicht in einer Instanz der Klasse) geändert werden soll."
+"(d.h. nicht in einer Instanz der Klasse) geändert werden soll."
 
 #: ../../glossary.rst:269
 msgid "closure variable"
@@ -921,7 +921,7 @@ msgstr ""
 
 #: ../../glossary.rst:359
 msgid "coroutine"
-msgstr "Koroutine"
+msgstr "Coroutine"
 
 #: ../../glossary.rst:361
 msgid ""
@@ -1130,17 +1130,17 @@ msgid ""
 "basis for many features including functions, methods, properties, class "
 "methods, static methods, and reference to super classes."
 msgstr ""
-"Jedes Objekt, das die Methoden  :meth:`~object.__get__` ,  :meth:`~object."
-"__set__`  oder  :meth:`~object.__delete__`  definiert. Wenn ein "
+"Jedes Objekt, das die Methoden :meth:`~object.__get__`, "
+":meth:`~object.__set__` oder :meth:`~object.__delete__` definiert. Wenn ein "
 "Klassenattribut ein Deskriptor ist, wird sein spezielles Bindungsverhalten "
-"bei der Attributsuche ausgelöst.  Normalerweise wird bei der Verwendung von "
+"bei der Attributsuche ausgelöst. Normalerweise wird bei der Verwendung von "
 "*a.b* zum Abrufen, Setzen oder Löschen eines Attributs das Objekt mit dem "
-"Namen *b* im Klassenwörterbuch von *a* nachgeschlagen; ist *b* jedoch ein "
-"Deskriptor, wird die entsprechende Deskriptormethode aufgerufen.  Das "
+"Namen *b* im Klassen-Dictionary von *a* nachgeschlagen; ist *b* jedoch ein "
+"Deskriptor, wird die entsprechende Deskriptormethode aufgerufen. Das "
 "Verständnis von Deskriptoren ist der Schlüssel zu einem tiefgreifenden "
-"Verständnis von Python, da sie die Grundlage für viele Funktionen bilden, "
-"darunter Funktionen, Methoden, Eigenschaften, Klassenmethoden, statische "
-"Methoden und Verweise auf Oberklassen."
+"Verständnis von Python, da sie die Grundlage für viele Sprachmerkmale "
+"bilden, darunter Funktionen, Methoden, Properties, Klassenmethoden, "
+"statische Methoden und Verweise auf Oberklassen."
 
 #: ../../glossary.rst:448
 msgid ""
@@ -1152,7 +1152,7 @@ msgstr ""
 
 #: ../../glossary.rst:450
 msgid "dictionary"
-msgstr "Wörterbuch"
+msgstr "Dictionary"
 
 #: ../../glossary.rst:452
 msgid ""
@@ -1167,7 +1167,7 @@ msgstr ""
 
 #: ../../glossary.rst:456
 msgid "dictionary comprehension"
-msgstr "Wörterbuchverständnis"
+msgstr "Dictionary Comprehension"
 
 #: ../../glossary.rst:458
 msgid ""
@@ -1177,14 +1177,14 @@ msgid ""
 "** 2``. See :ref:`comprehensions`."
 msgstr ""
 "Eine kompakte Möglichkeit, alle oder einen Teil der Elemente eines "
-"iterierbaren Objekts zu verarbeiten und ein Wörterbuch mit den Ergebnissen "
-"zurückzugeben.  ``results = {n: n ** 2 for n in range(10)}``  generiert ein "
-"Wörterbuch, das Schlüssel- ``n`` enthält, die den Wert- ``n ** 2`` "
-"zugeordnet sind. Siehe :ref:`comprehensions`."
+"iterierbaren Objekts zu verarbeiten und ein Dictionary mit den Ergebnissen "
+"zurückzugeben. ``results = {n: n ** 2 for n in range(10)}`` erzeugt ein "
+"Dictionary, in dem der Schlüssel ``n`` auf den Wert ``n ** 2`` abgebildet "
+"wird. Siehe :ref:`comprehensions`."
 
 #: ../../glossary.rst:462
 msgid "dictionary view"
-msgstr "Wörterbuchansicht"
+msgstr "Dictionary-View"
 
 #: ../../glossary.rst:464
 msgid ""
@@ -1204,7 +1204,7 @@ msgstr ""
 
 #: ../../glossary.rst:470
 msgid "docstring"
-msgstr "docstring"
+msgstr "Docstring"
 
 #: ../../glossary.rst:472
 msgid ""
@@ -1251,7 +1251,7 @@ msgstr ""
 
 #: ../../glossary.rst:489
 msgid "dunder"
-msgstr "dunder"
+msgstr "Dunder"
 
 #: ../../glossary.rst:491
 msgid ""
@@ -1494,7 +1494,7 @@ msgstr ""
 
 #: ../../glossary.rst:581
 msgid "floor division"
-msgstr "Etagenaufteilung"
+msgstr "Ganzzahldivision"
 
 #: ../../glossary.rst:583
 msgid ""
@@ -1513,7 +1513,7 @@ msgstr ""
 
 #: ../../glossary.rst:588
 msgid "free threading"
-msgstr "freies Einfädeln"
+msgstr "freies Threading"
 
 #: ../../glossary.rst:590
 msgid ""
@@ -1584,7 +1584,7 @@ msgstr ""
 
 #: ../../glossary.rst:614
 msgid "function annotation"
-msgstr "Funktionsanmerkung"
+msgstr "Funktionsannotation"
 
 #: ../../glossary.rst:616
 msgid "An :term:`annotation` of a function parameter or return value."
@@ -1947,7 +1947,7 @@ msgid ""
 "Hashability makes an object usable as a dictionary key and a set member, "
 "because these data structures use the hash value internally."
 msgstr ""
-"Dank der Hashbarkeit kann ein Objekt als Schlüssel in einem Wörterbuch und "
+"Dank der Hashbarkeit kann ein Objekt als Schlüssel in einem Dictionary und "
 "als Element in einer Menge verwendet werden, da diese Datenstrukturen intern "
 "den Hashwert nutzen."
 
@@ -1961,15 +1961,15 @@ msgid ""
 "value is derived from their :func:`id`."
 msgstr ""
 "Die meisten unveränderlichen, in Python integrierten Objekte sind hashbar; "
-"veränderbare Container (wie Listen oder Wörterbücher) sind es nicht; "
-"unveränderliche Container (wie Tupel und FrozenSets) sind nur dann hashbar, "
-"wenn ihre Elemente hashbar sind.  Objekte, die Instanzen benutzerdefinierter "
+"veränderbare Container (wie Listen oder Dictionarys) sind es nicht; "
+"unveränderliche Container (wie Tupel und Frozensets) sind nur dann hashbar, "
+"wenn ihre Elemente hashbar sind. Objekte, die Instanzen benutzerdefinierter "
 "Klassen sind, sind standardmäßig hashbar. Sie sind alle ungleich (außer mit "
-"sich selbst), und ihr Hash-Wert wird aus ihrem  :func:`id`  abgeleitet."
+"sich selbst), und ihr Hashwert wird aus ihrer :func:`id` abgeleitet."
 
 #: ../../glossary.rst:770
 msgid "IDLE"
-msgstr "LEERLAUF"
+msgstr "IDLE"
 
 #: ../../glossary.rst:772
 msgid ""
@@ -2030,11 +2030,12 @@ msgstr ""
 "Zahlen, Zeichenketten und Tupel. Ein solches Objekt kann nicht verändert "
 "werden. Wenn ein anderer Wert gespeichert werden soll, muss ein neues Objekt "
 "erstellt werden. Sie spielen eine wichtige Rolle in Fällen, in denen ein "
-"konstanter Hash-Wert benötigt wird, beispielsweise als Schlüssel in einem "
-"Wörterbuch.  Unveränderliche Objekte sind von Natur aus :term:`thread-safe`, "
-"da ihr Zustand nach der Erstellung nicht mehr geändert werden kann, wodurch "
-"Bedenken hinsichtlich unsachgemäß synchronisierter :term:`gleichzeitiger "
-"Änderungen <concurrent modification>` entfallen."
+"konstanter Hashwert benötigt wird, beispielsweise als Schlüssel in einem "
+"Dictionary. Unveränderliche Objekte sind von Natur aus "
+":term:`thread-sicher <thread-safe>`, da ihr Zustand nach der Erstellung "
+"nicht mehr geändert werden kann, wodurch Bedenken hinsichtlich unsachgemäß "
+"synchronisierter :term:`gleichzeitiger Änderungen <concurrent modification>` "
+"entfallen."
 
 #: ../../glossary.rst:795
 msgid "import path"
@@ -2079,7 +2080,7 @@ msgstr ""
 
 #: ../../glossary.rst:810
 msgid "index"
-msgstr "Inhaltsverzeichnis"
+msgstr "Index"
 
 #: ../../glossary.rst:812
 msgid ""
@@ -2432,7 +2433,7 @@ msgstr ""
 
 #: ../../glossary.rst:954
 msgid "list comprehension"
-msgstr "Listenkomprimierung"
+msgstr "List Comprehension"
 
 #: ../../glossary.rst:956
 msgid ""
@@ -2451,7 +2452,7 @@ msgstr ""
 
 #: ../../glossary.rst:962
 msgid "lock"
-msgstr "Schloss"
+msgstr "Sperre"
 
 #: ../../glossary.rst:964
 msgid ""
@@ -2582,7 +2583,7 @@ msgstr ""
 
 #: ../../glossary.rst:1013
 msgid "mapping"
-msgstr "Kartierung"
+msgstr "Mapping"
 
 #: ../../glossary.rst:1015
 msgid ""
@@ -2640,16 +2641,16 @@ msgid ""
 "singletons, and many other tasks."
 msgstr ""
 "Die Klasse einer Klasse. Klassendefinitionen legen einen Klassennamen, ein "
-"Klassenwörterbuch und eine Liste von Basisklassen fest. Die Metaklasse ist "
+"Klassen-Dictionary und eine Liste von Basisklassen fest. Die Metaklasse ist "
 "dafür zuständig, diese drei Argumente zu übernehmen und die Klasse zu "
 "erstellen. Die meisten objektorientierten Programmiersprachen bieten eine "
 "Standardimplementierung. Das Besondere an Python ist, dass es möglich ist, "
-"benutzerdefinierte Metaklassen zu erstellen.  Die meisten Nutzer benötigen "
+"benutzerdefinierte Metaklassen zu erstellen. Die meisten Nutzer benötigen "
 "dieses Werkzeug nie, doch wenn der Bedarf entsteht, können Metaklassen "
-"leistungsstarke und elegante Lösungen bieten.  Sie wurden bereits zur "
-"Protokollierung des Zugriffs auf Attribute, zur Gewährleistung der Thread-"
-"Sicherheit, zur Verfolgung der Objekterstellung, zur Implementierung von "
-"Singletons und für viele andere Aufgaben eingesetzt."
+"leistungsstarke und elegante Lösungen bieten. Sie wurden bereits zur "
+"Protokollierung des Zugriffs auf Attribute, zur Gewährleistung der "
+"Thread-Sicherheit, zur Verfolgung der Objekterstellung, zur Implementierung "
+"von Singletons und für viele andere Aufgaben eingesetzt."
 
 #: ../../glossary.rst:1041
 msgid "More information can be found in :ref:`metaclasses`."
@@ -2811,7 +2812,7 @@ msgstr ""
 "oder integrierten benannten Tupeln möglicherweise nicht vorhanden sind."
 
 #: ../../glossary.rst:1101
-msgid "namespace"
+msgid "namespace" # Stop
 msgstr "Namensraum"
 
 #: ../../glossary.rst:1103
@@ -2827,14 +2828,14 @@ msgid ""
 "by the :mod:`random` and :mod:`itertools` modules, respectively."
 msgstr ""
 "Der Ort, an dem eine Variable gespeichert wird. Namensräume werden als "
-"Wörterbücher implementiert. Es gibt lokale, globale und integrierte "
+"Dictionarys implementiert. Es gibt lokale, globale und integrierte "
 "Namensräume sowie verschachtelte Namensräume in Objekten (in Methoden). "
 "Namensräume unterstützen die Modularität, indem sie Namenskonflikte "
-"verhindern.  Beispielsweise unterscheiden sich die Funktionen :func:"
-"`builtins.open <.open>` und :func:`os.open` durch ihre Namensräume.  "
+"verhindern. Beispielsweise unterscheiden sich die Funktionen "
+":func:`builtins.open <.open>` und :func:`os.open` durch ihre Namensräume. "
 "Namensräume tragen zudem zur Lesbarkeit und Wartbarkeit bei, indem sie "
-"deutlich machen, welches Modul eine Funktion implementiert.  Wenn man "
-"beispielsweise :func:`random.seed` oder :func:`itertools.islice` schreibt, "
+"deutlich machen, welches Modul eine Funktion implementiert. Wenn du "
+"beispielsweise :func:`random.seed` oder :func:`itertools.islice` schreibst, "
 "wird deutlich, dass diese Funktionen jeweils von den Modulen :mod:`random` "
 "und :mod:`itertools` implementiert werden."
 
