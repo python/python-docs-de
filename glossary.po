@@ -2401,12 +2401,12 @@ msgid ""
 "term:`EAFP` approach.  See also :term:`thread-safe`."
 msgstr ""
 "In einer Multithread-Umgebung besteht bei dem LBYL-Ansatz die Gefahr, dass "
-"eine :term:`Race Condition <race condition>` zwischen dem \"Nachschlagen\" "
+"eine :term:`Race-Condition <race condition>` zwischen dem \"Nachschlagen\" "
 "und dem \"Springen\" entsteht. Beispielsweise kann der Code ``if key in "
 "mapping: return mapping[key]`` fehlschlagen, wenn ein anderer Thread *key* "
 "nach dem Test, aber vor der Suche aus *mapping* entfernt. Dieses Problem "
-"lässt sich mit :term:`Locks <lock>` oder durch Verwendung des :term:`EAFP`-"
-"Ansatzes lösen. Siehe auch :term:`thread-sicher`."
+"lässt sich mit :term:`Sperren <lock>` oder durch Verwendung des "
+":term:`EAFP`-Ansatzes lösen. Siehe auch :term:`thread-sicher <thread-safe>`."
 
 #: ../../glossary.rst:945
 msgid "lexical analyzer"
@@ -3266,7 +3266,7 @@ msgstr ""
 
 #: ../../glossary.rst:1282
 msgid "path-like object"
-msgstr "pfadbasierter Finder"
+msgstr "pfadähnliches Objekt"
 
 #: ../../glossary.rst:1284
 msgid ""
@@ -3426,7 +3426,7 @@ msgstr ""
 "Verwendung von Konzepten zu implementieren, die in anderen Sprachen üblich "
 "sind. Ein gängiges Beispiel in Python ist beispielsweise die "
 "Durchlaufschleife über alle Elemente eines iterierbaren Objekts mithilfe "
-"einer :keyword:`for`Anweisung. Viele andere Sprachen verfügen nicht über "
+"einer :keyword:`for` Anweisung. Viele andere Sprachen verfügen nicht über "
 "eine solche Konstruktion, sodass Personen, die mit Python nicht vertraut "
 "sind, manchmal stattdessen einen numerischen Zähler verwenden::"
 
@@ -3925,7 +3925,7 @@ msgstr "Siehe auch: :term:`entlehnte Referenz <borrowed reference>`."
 
 #: ../../glossary.rst:1547
 msgid "subscript"
-msgstr "Index"
+msgstr "Indexzugriff"
 
 #: ../../glossary.rst:1549
 msgid ""
