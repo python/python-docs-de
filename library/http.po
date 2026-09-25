@@ -2,19 +2,23 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Swen Bachmann, 2026
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-05 16:53+0200\n"
-"PO-Revision-Date: 2025-09-16 00:01+0000\n"
+"POT-Creation-Date: 2026-09-23 19:04+0000\n"
+"PO-Revision-Date: 2026-05-08 17:18+0000\n"
+"Last-Translator: Swen Bachmann, 2026\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../library/http.rst:2
@@ -27,8 +31,8 @@ msgstr ""
 
 #: ../../library/http.rst:15
 msgid ""
-":mod:`!http` is a package that collects several modules for working with the "
-"HyperText Transfer Protocol:"
+":mod:`!http` is a package that collects several modules for working with the"
+" HyperText Transfer Protocol:"
 msgstr ""
 
 #: ../../library/http.rst:18
@@ -39,8 +43,8 @@ msgstr ""
 
 #: ../../library/http.rst:20
 msgid ""
-":mod:`http.server` contains basic HTTP server classes based on :mod:"
-"`socketserver`"
+":mod:`http.server` contains basic HTTP server classes based on "
+":mod:`socketserver`"
 msgstr ""
 
 #: ../../library/http.rst:21
@@ -61,8 +65,8 @@ msgstr ""
 
 #: ../../library/http.rst:31
 msgid ""
-"A subclass of :class:`enum.IntEnum` that defines a set of HTTP status codes, "
-"reason phrases and long descriptions written in English."
+"A subclass of :class:`enum.IntEnum` that defines a set of HTTP status codes,"
+" reason phrases and long descriptions written in English."
 msgstr ""
 
 #: ../../library/http.rst:34 ../../library/http.rst:162
@@ -93,9 +97,9 @@ msgstr ""
 
 #: ../../library/http.rst:55
 msgid ""
-"Supported, `IANA-registered status codes <https://www.iana.org/assignments/"
-"http-status-codes/http-status-codes.xhtml>`_ available in :class:`http."
-"HTTPStatus` are:"
+"Supported, `IANA-registered status codes "
+"<https://www.iana.org/assignments/http-status-codes/http-status-"
+"codes.xhtml>`_ available in :class:`http.HTTPStatus` are:"
 msgstr ""
 
 #: ../../library/http.rst:60
@@ -854,8 +858,8 @@ msgstr ""
 msgid ""
 "In order to preserve backwards compatibility, enum values are also present "
 "in the :mod:`http.client` module in the form of constants. The enum name is "
-"equal to the constant name (i.e. ``http.HTTPStatus.OK`` is also available as "
-"``http.client.OK``)."
+"equal to the constant name (i.e. ``http.HTTPStatus.OK`` is also available as"
+" ``http.client.OK``)."
 msgstr ""
 
 #: ../../library/http.rst:131
@@ -886,7 +890,8 @@ msgstr ""
 
 #: ../../library/http.rst:150
 msgid ""
-"The enum values have several properties to indicate the HTTP status category:"
+"The enum values have several properties to indicate the HTTP status "
+"category:"
 msgstr ""
 
 #: ../../library/http.rst:153
@@ -1074,7 +1079,7 @@ msgstr ""
 
 #: ../../library/http.rst:9
 msgid "protocol"
-msgstr ""
+msgstr "Protokoll"
 
 #: ../../library/http.rst:9
 msgid "http (standard module)"

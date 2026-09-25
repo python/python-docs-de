@@ -2,19 +2,24 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Jyst Breisgau, 2026
+# Swen Bachmann, 2026
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-05 16:53+0200\n"
-"PO-Revision-Date: 2025-09-16 00:01+0000\n"
+"POT-Creation-Date: 2026-09-23 19:04+0000\n"
+"PO-Revision-Date: 2026-05-08 17:17+0000\n"
+"Last-Translator: Swen Bachmann, 2026\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../library/fnmatch.rst:2
@@ -27,8 +32,8 @@ msgstr ""
 
 #: ../../library/fnmatch.rst:15
 msgid ""
-"This module provides support for Unix shell-style wildcards, which are *not* "
-"the same as regular expressions (which are documented in the :mod:`re` "
+"This module provides support for Unix shell-style wildcards, which are *not*"
+" the same as regular expressions (which are documented in the :mod:`re` "
 "module).  The special characters used in shell-style wildcards are:"
 msgstr ""
 
@@ -38,7 +43,7 @@ msgstr ""
 
 #: ../../library/fnmatch.rst:27
 msgid "Meaning"
-msgstr ""
+msgstr "Bedeutung"
 
 #: ../../library/fnmatch.rst:29
 msgid "``*``"
@@ -81,8 +86,8 @@ msgstr ""
 #: ../../library/fnmatch.rst:43
 msgid ""
 "Note that the filename separator (``'/'`` on Unix) is *not* special to this "
-"module.  See module :mod:`glob` for pathname expansion (:mod:`glob` uses :"
-"func:`.filter` to match pathname segments).  Similarly, filenames starting "
+"module.  See module :mod:`glob` for pathname expansion (:mod:`glob` uses "
+":func:`.filter` to match pathname segments).  Similarly, filenames starting "
 "with a period are not special for this module, and are matched by the ``*`` "
 "and ``?`` patterns."
 msgstr ""
@@ -90,8 +95,8 @@ msgstr ""
 #: ../../library/fnmatch.rst:49
 msgid ""
 "Unless stated otherwise, \"filename string\" and \"pattern string\" either "
-"refer to :class:`str` or ``ISO-8859-1`` encoded :class:`bytes` objects. Note "
-"that the functions documented below do not allow to mix a :class:`!bytes` "
+"refer to :class:`str` or ``ISO-8859-1`` encoded :class:`bytes` objects. Note"
+" that the functions documented below do not allow to mix a :class:`!bytes` "
 "pattern with a :class:`!str` filename, and vice-versa."
 msgstr ""
 
@@ -99,15 +104,15 @@ msgstr ""
 msgid ""
 "Finally, note that :deco:`functools.lru_cache` with a *maxsize* of 32768 is "
 "used to cache the (typed) compiled regex patterns in the following "
-"functions: :func:`fnmatch`, :func:`fnmatchcase`, :func:`.filter`, :func:`."
-"filterfalse`."
+"functions: :func:`fnmatch`, :func:`fnmatchcase`, :func:`.filter`, "
+":func:`.filterfalse`."
 msgstr ""
 
 #: ../../library/fnmatch.rst:61
 msgid ""
 "Test whether the filename string *name* matches the pattern string *pat*, "
-"returning ``True`` or ``False``.  Both parameters are case-normalized using :"
-"func:`os.path.normcase`. :func:`fnmatchcase` can be used to perform a case-"
+"returning ``True`` or ``False``.  Both parameters are case-normalized using "
+":func:`os.path.normcase`. :func:`fnmatchcase` can be used to perform a case-"
 "sensitive comparison, regardless of whether that's standard for the "
 "operating system."
 msgstr ""
@@ -158,7 +163,7 @@ msgstr ""
 
 #: ../../library/fnmatch.rst:108
 msgid "Example:"
-msgstr ""
+msgstr "Beispiel:"
 
 #: ../../library/fnmatch.rst:122
 msgid "Module :mod:`glob`"
@@ -178,15 +183,15 @@ msgstr ""
 
 #: ../../library/fnmatch.rst:11 ../../library/fnmatch.rst:41
 msgid "module"
-msgstr ""
+msgstr "Modul"
 
 #: ../../library/fnmatch.rst:11
 msgid "re"
-msgstr ""
+msgstr "re"
 
 #: ../../library/fnmatch.rst:19
 msgid "* (asterisk)"
-msgstr ""
+msgstr "* (Sternchen)"
 
 #: ../../library/fnmatch.rst:19
 msgid "in glob-style wildcards"
@@ -198,15 +203,15 @@ msgstr ""
 
 #: ../../library/fnmatch.rst:19
 msgid "[] (square brackets)"
-msgstr ""
+msgstr "[] (eckige Klammern)"
 
 #: ../../library/fnmatch.rst:19
 msgid "! (exclamation)"
-msgstr ""
+msgstr "! (Ausrufezeichen)"
 
 #: ../../library/fnmatch.rst:19
 msgid "- (minus)"
-msgstr ""
+msgstr "- (Minus)"
 
 #: ../../library/fnmatch.rst:41
 msgid "glob"

@@ -2,19 +2,19 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-15 09:12+0000\n"
-"PO-Revision-Date: 2025-09-16 00:00+0000\n"
+"POT-Creation-Date: 2026-09-23 19:04+0000\n"
+"PO-Revision-Date: 2026-05-08 17:17+0000\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../library/asyncio.rst:107
@@ -37,7 +37,7 @@ msgstr ""
 msgid ":mod:`!asyncio` --- Asynchronous I/O"
 msgstr ""
 
-#: ../../library/asyncio.rst:9
+#: ../../library/asyncio.rst-1
 msgid "Hello World!"
 msgstr ""
 
@@ -130,8 +130,8 @@ msgstr ""
 #: ../../library/asyncio.rst:60
 msgid ""
 "create and manage :ref:`event loops <asyncio-event-loop>`, which provide "
-"asynchronous APIs for :ref:`networking <loop_create_server>`, running :ref:"
-"`subprocesses <loop_subprocess_exec>`, handling :ref:`OS signals "
+"asynchronous APIs for :ref:`networking <loop_create_server>`, running "
+":ref:`subprocesses <loop_subprocess_exec>`, handling :ref:`OS signals "
 "<loop_add_signal_handler>`, etc;"
 msgstr ""
 
@@ -143,8 +143,8 @@ msgstr ""
 
 #: ../../library/asyncio.rst:68
 msgid ""
-":ref:`bridge <asyncio-futures>` callback-based libraries and code with async/"
-"await syntax."
+":ref:`bridge <asyncio-futures>` callback-based libraries and code with "
+"async/await syntax."
 msgstr ""
 
 #: ../../includes/wasm-notavail.rst:3
@@ -153,8 +153,8 @@ msgstr ""
 
 #: ../../includes/wasm-notavail.rst:5
 msgid ""
-"This module does not work or is not available on WebAssembly. See :ref:`wasm-"
-"availability` for more information."
+"This module does not work or is not available on WebAssembly. See "
+":ref:`wasm-availability` for more information."
 msgstr ""
 
 #: ../../library/asyncio.rst:76
@@ -163,8 +163,8 @@ msgstr ""
 
 #: ../../library/asyncio.rst:77
 msgid ""
-"You can experiment with an ``asyncio`` concurrent context in the :term:"
-"`REPL`:"
+"You can experiment with an ``asyncio`` concurrent context in the "
+":term:`REPL`:"
 msgstr ""
 
 #: ../../library/asyncio.rst:79
@@ -172,8 +172,7 @@ msgid ""
 "$ python -m asyncio\n"
 "asyncio REPL ...\n"
 "Use \"await\" directly instead of \"asyncio.run()\".\n"
-"Type \"help\", \"copyright\", \"credits\" or \"license\" for more "
-"information.\n"
+"Type \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n"
 ">>> import asyncio\n"
 ">>> await asyncio.sleep(10, result='hello')\n"
 "'hello'"

@@ -2,19 +2,23 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Jyst Breisgau, 2026
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-05 16:53+0200\n"
-"PO-Revision-Date: 2025-09-16 00:00+0000\n"
+"POT-Creation-Date: 2026-09-23 19:04+0000\n"
+"PO-Revision-Date: 2026-05-08 17:17+0000\n"
+"Last-Translator: Jyst Breisgau, 2026\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../library/asyncio-llapi-index.rst:6
@@ -42,7 +46,8 @@ msgid ":func:`asyncio.get_event_loop`"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:22
-msgid "Get an event loop instance (running or current via the current policy)."
+msgid ""
+"Get an event loop instance (running or current via the current policy)."
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:24
@@ -64,7 +69,7 @@ msgstr ""
 #: ../../library/asyncio-llapi-index.rst:32
 #: ../../library/asyncio-llapi-index.rst:269
 msgid "Examples"
-msgstr ""
+msgstr "Beispiele"
 
 #: ../../library/asyncio-llapi-index.rst:33
 msgid ":ref:`Using asyncio.get_running_loop() <asyncio_example_future>`."
@@ -579,7 +584,8 @@ msgid ":ref:`Using loop.add_signal_handler() <asyncio_example_unix_signals>`."
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:286
-msgid ":ref:`Using loop.subprocess_exec() <asyncio_example_subprocess_proto>`."
+msgid ""
+":ref:`Using loop.subprocess_exec() <asyncio_example_subprocess_proto>`."
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:290
@@ -633,8 +639,8 @@ msgstr ""
 #: ../../library/asyncio-llapi-index.rst:314
 msgid ""
 "Transports that can receive data (TCP and Unix connections, pipes, etc).  "
-"Returned from methods like :meth:`loop.create_connection`, :meth:`loop."
-"create_unix_connection`, :meth:`loop.connect_read_pipe`, etc:"
+"Returned from methods like :meth:`loop.create_connection`, "
+":meth:`loop.create_unix_connection`, :meth:`loop.connect_read_pipe`, etc:"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:319
@@ -668,8 +674,8 @@ msgstr ""
 #: ../../library/asyncio-llapi-index.rst:334
 msgid ""
 "Transports that can Send data (TCP and Unix connections, pipes, etc).  "
-"Returned from methods like :meth:`loop.create_connection`, :meth:`loop."
-"create_unix_connection`, :meth:`loop.connect_write_pipe`, etc:"
+"Returned from methods like :meth:`loop.create_connection`, "
+":meth:`loop.create_unix_connection`, :meth:`loop.connect_write_pipe`, etc:"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:339
@@ -719,8 +725,8 @@ msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:359
 msgid ""
-":meth:`transport.get_write_buffer_size() <WriteTransport."
-"get_write_buffer_size>`"
+":meth:`transport.get_write_buffer_size() "
+"<WriteTransport.get_write_buffer_size>`"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:361
@@ -729,8 +735,8 @@ msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:363
 msgid ""
-":meth:`transport.get_write_buffer_limits() <WriteTransport."
-"get_write_buffer_limits>`"
+":meth:`transport.get_write_buffer_limits() "
+"<WriteTransport.get_write_buffer_limits>`"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:365
@@ -739,8 +745,8 @@ msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:367
 msgid ""
-":meth:`transport.set_write_buffer_limits() <WriteTransport."
-"set_write_buffer_limits>`"
+":meth:`transport.set_write_buffer_limits() "
+"<WriteTransport.set_write_buffer_limits>`"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:369
@@ -769,8 +775,8 @@ msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:386
 msgid ""
-"Low-level transport abstraction over subprocesses. Returned by :meth:`loop."
-"subprocess_exec` and :meth:`loop.subprocess_shell`:"
+"Low-level transport abstraction over subprocesses. Returned by "
+":meth:`loop.subprocess_exec` and :meth:`loop.subprocess_shell`:"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:390
@@ -787,8 +793,8 @@ msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:398
 msgid ""
-":meth:`transport.get_pipe_transport() <SubprocessTransport."
-"get_pipe_transport>`"
+":meth:`transport.get_pipe_transport() "
+"<SubprocessTransport.get_pipe_transport>`"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:400
@@ -798,7 +804,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:403
-msgid ":meth:`transport.get_returncode() <SubprocessTransport.get_returncode>`"
+msgid ""
+":meth:`transport.get_returncode() <SubprocessTransport.get_returncode>`"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:404
@@ -911,7 +918,8 @@ msgid "Called to allocate a new receive buffer."
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:461
-msgid "``callback`` :meth:`buffer_updated() <BufferedProtocol.buffer_updated>`"
+msgid ""
+"``callback`` :meth:`buffer_updated() <BufferedProtocol.buffer_updated>`"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:462
@@ -928,7 +936,8 @@ msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:473
 msgid ""
-"``callback`` :meth:`datagram_received() <DatagramProtocol.datagram_received>`"
+"``callback`` :meth:`datagram_received() "
+"<DatagramProtocol.datagram_received>`"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:475
@@ -936,7 +945,8 @@ msgid "Called when a datagram is received."
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:477
-msgid "``callback`` :meth:`error_received() <DatagramProtocol.error_received>`"
+msgid ""
+"``callback`` :meth:`error_received() <DatagramProtocol.error_received>`"
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:478
@@ -954,7 +964,8 @@ msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:488
 msgid ""
-"Called when the child process writes data into its *stdout* or *stderr* pipe."
+"Called when the child process writes data into its *stdout* or *stderr* "
+"pipe."
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:491
@@ -973,9 +984,9 @@ msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:497
 msgid ""
-"Called when the child process has exited. It can be called before :meth:"
-"`~SubprocessProtocol.pipe_data_received` and :meth:`~SubprocessProtocol."
-"pipe_connection_lost` methods."
+"Called when the child process has exited. It can be called before "
+":meth:`~SubprocessProtocol.pipe_data_received` and "
+":meth:`~SubprocessProtocol.pipe_connection_lost` methods."
 msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:503
@@ -984,8 +995,8 @@ msgstr ""
 
 #: ../../library/asyncio-llapi-index.rst:505
 msgid ""
-"Policies is a low-level mechanism to alter the behavior of functions like :"
-"func:`asyncio.get_event_loop`.  See also the main :ref:`policies section "
+"Policies is a low-level mechanism to alter the behavior of functions like "
+":func:`asyncio.get_event_loop`.  See also the main :ref:`policies section "
 "<asyncio-policies>` for more details."
 msgstr ""
 

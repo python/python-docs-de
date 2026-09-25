@@ -2,19 +2,19 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-15 09:12+0000\n"
-"PO-Revision-Date: 2025-09-16 00:01+0000\n"
+"POT-Creation-Date: 2026-09-23 19:04+0000\n"
+"PO-Revision-Date: 2026-05-08 17:18+0000\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../library/sys.monitoring.rst:2
@@ -24,9 +24,9 @@ msgstr ""
 #: ../../library/sys.monitoring.rst:13
 msgid ""
 ":mod:`!sys.monitoring` is a namespace within the :mod:`sys` module, not an "
-"independent module, and ``import sys.monitoring`` would fail with a :exc:"
-"`ModuleNotFoundError`. Instead, simply ``import sys`` and then use ``sys."
-"monitoring``."
+"independent module, and ``import sys.monitoring`` would fail with a "
+":exc:`ModuleNotFoundError`. Instead, simply ``import sys`` and then use "
+"``sys.monitoring``."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:19
@@ -73,8 +73,8 @@ msgstr ""
 
 #: ../../library/sys.monitoring.rst:41
 msgid ""
-"Before registering or activating events, a tool should choose an identifier. "
-"Identifiers are integers in the range 0 to 5 inclusive."
+"Before registering or activating events, a tool should choose an identifier."
+" Identifiers are integers in the range 0 to 5 inclusive."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:45
@@ -88,13 +88,14 @@ msgid ""
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:55
-msgid "Unregister all events and callback functions associated with *tool_id*."
+msgid ""
+"Unregister all events and callback functions associated with *tool_id*."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:61
 msgid ""
-"Should be called once a tool no longer requires *tool_id*. Will call :func:"
-"`clear_tool_id` before releasing *tool_id*."
+"Should be called once a tool no longer requires *tool_id*. Will call "
+":func:`clear_tool_id` before releasing *tool_id*."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:64
@@ -140,7 +141,8 @@ msgstr ""
 msgid ""
 "It is up to the tool to determine how to present \"left\" and \"right\" "
 "branches. There is no guarantee which branch is \"left\" and which is "
-"\"right\", except that it will be consistent for the duration of the program."
+"\"right\", except that it will be consistent for the duration of the "
+"program."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:99
@@ -177,8 +179,8 @@ msgstr ""
 
 #: ../../library/sys.monitoring.rst:127
 msgid ""
-"An instruction is about to be executed that has a different line number from "
-"the preceding instruction."
+"An instruction is about to be executed that has a different line number from"
+" the preceding instruction."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:131
@@ -218,8 +220,8 @@ msgstr ""
 
 #: ../../library/sys.monitoring.rst:156
 msgid ""
-"An exception is raised, except those that cause a :monitoring-event:"
-"`STOP_ITERATION` event."
+"An exception is raised, except those that cause a :monitoring-"
+"event:`STOP_ITERATION` event."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:160
@@ -242,9 +244,9 @@ msgstr ""
 msgid ""
 "These events are attributes of the :mod:`!sys.monitoring.events` namespace. "
 "Each event is represented as a power-of-2 integer constant. To define a set "
-"of events, simply bitwise OR the individual events together. For example, to "
-"specify both :monitoring-event:`PY_RETURN` and :monitoring-event:`PY_START` "
-"events, use the expression ``PY_RETURN | PY_START``."
+"of events, simply bitwise OR the individual events together. For example, to"
+" specify both :monitoring-event:`PY_RETURN` and :monitoring-event:`PY_START`"
+" events, use the expression ``PY_RETURN | PY_START``."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:177
@@ -326,9 +328,9 @@ msgstr ""
 
 #: ../../library/sys.monitoring.rst:210
 msgid ""
-"The ``BRANCH`` event is deprecated in 3.14. Using :monitoring-event:"
-"`BRANCH_LEFT` and :monitoring-event:`BRANCH_RIGHT` events will give much "
-"better performance as they can be disabled independently."
+"The ``BRANCH`` event is deprecated in 3.14. Using :monitoring-"
+"event:`BRANCH_LEFT` and :monitoring-event:`BRANCH_RIGHT` events will give "
+"much better performance as they can be disabled independently."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:216
@@ -352,9 +354,9 @@ msgstr ""
 #: ../../library/sys.monitoring.rst:224
 msgid ""
 "The :monitoring-event:`C_RETURN` and :monitoring-event:`C_RAISE` events are "
-"controlled by the :monitoring-event:`CALL` event. :monitoring-event:"
-"`C_RETURN` and :monitoring-event:`C_RAISE` events will only be seen if the "
-"corresponding :monitoring-event:`CALL` event is being monitored."
+"controlled by the :monitoring-event:`CALL` event. :monitoring-"
+"event:`C_RETURN` and :monitoring-event:`C_RAISE` events will only be seen if"
+" the corresponding :monitoring-event:`CALL` event is being monitored."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:233
@@ -393,8 +395,8 @@ msgstr ""
 
 #: ../../library/sys.monitoring.rst:249
 msgid ""
-":pep:`PEP 380 <380#use-of-stopiteration-to-return-values>` specifies that a :"
-"exc:`StopIteration` exception is raised when returning a value from a "
+":pep:`PEP 380 <380#use-of-stopiteration-to-return-values>` specifies that a "
+":exc:`StopIteration` exception is raised when returning a value from a "
 "generator or coroutine. However, this is a very inefficient way to return a "
 "value, so some Python implementations, notably CPython 3.12+, do not raise "
 "an exception unless it would be visible to other code."
@@ -404,16 +406,16 @@ msgstr ""
 msgid ""
 "To allow tools to monitor for real exceptions without slowing down "
 "generators and coroutines, the :monitoring-event:`STOP_ITERATION` event is "
-"provided. :monitoring-event:`STOP_ITERATION` can be locally disabled, "
-"unlike :monitoring-event:`RAISE`."
+"provided. :monitoring-event:`STOP_ITERATION` can be locally disabled, unlike"
+" :monitoring-event:`RAISE`."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:260
 msgid ""
 "Note that the :monitoring-event:`STOP_ITERATION` event and the :monitoring-"
-"event:`RAISE` event for a :exc:`StopIteration` exception are equivalent, and "
-"are treated as interchangeable when generating events. Implementations will "
-"favor :monitoring-event:`STOP_ITERATION` for performance reasons, but may "
+"event:`RAISE` event for a :exc:`StopIteration` exception are equivalent, and"
+" are treated as interchangeable when generating events. Implementations will"
+" favor :monitoring-event:`STOP_ITERATION` for performance reasons, but may "
 "generate a :monitoring-event:`RAISE` event with a :exc:`StopIteration`."
 msgstr ""
 
@@ -445,8 +447,8 @@ msgstr ""
 
 #: ../../library/sys.monitoring.rst:287
 msgid ""
-"Activates all events which are set in *event_set*. Raises a :exc:"
-"`ValueError` if *tool_id* is not in use."
+"Activates all events which are set in *event_set*. Raises a "
+":exc:`ValueError` if *tool_id* is not in use."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:290
@@ -466,14 +468,15 @@ msgid ""
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:302
-msgid "Returns all the :ref:`local events <monitoring-event-local>` for *code*"
+msgid ""
+"Returns all the :ref:`local events <monitoring-event-local>` for *code*"
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:306
 msgid ""
 "Activates all the :ref:`local events <monitoring-event-local>` for *code* "
-"which are set in *event_set*. Raises a :exc:`ValueError` if *tool_id* is not "
-"in use."
+"which are set in *event_set*. Raises a :exc:`ValueError` if *tool_id* is not"
+" in use."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:312
@@ -533,14 +536,14 @@ msgstr ""
 
 #: ../../library/sys.monitoring.rst:353
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``sys.monitoring."
-"register_callback`` with argument ``func``."
+"Raises an :ref:`auditing event <auditing>` "
+"``sys.monitoring.register_callback`` with argument ``func``."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:355
 msgid ""
-"Functions can be unregistered by calling ``sys.monitoring."
-"register_callback(tool_id, event, None)``."
+"Functions can be unregistered by calling "
+"``sys.monitoring.register_callback(tool_id, event, None)``."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:358
@@ -561,8 +564,8 @@ msgstr ""
 
 #: ../../library/sys.monitoring.rst:371
 msgid ""
-"A special value that is passed to a callback function to indicate that there "
-"are no arguments to the call."
+"A special value that is passed to a callback function to indicate that there"
+" are no arguments to the call."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:374
@@ -586,13 +589,14 @@ msgid ":monitoring-event:`PY_RETURN` and :monitoring-event:`PY_YIELD`::"
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:384
-msgid "func(code: CodeType, instruction_offset: int, retval: object) -> object"
+msgid ""
+"func(code: CodeType, instruction_offset: int, retval: object) -> object"
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:386
 msgid ""
-":monitoring-event:`CALL`, :monitoring-event:`C_RAISE` and :monitoring-event:"
-"`C_RETURN` (*arg0* can be :data:`MISSING` specifically)::"
+":monitoring-event:`CALL`, :monitoring-event:`C_RAISE` and :monitoring-"
+"event:`C_RETURN` (*arg0* can be :data:`MISSING` specifically)::"
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:389
@@ -605,22 +609,22 @@ msgstr ""
 msgid ""
 "*code* represents the code object where the call is being made, while "
 "*callable* is the object that is about to be called (and thus triggered the "
-"event). If there are no arguments, *arg0* is set to :data:`sys.monitoring."
-"MISSING`."
+"event). If there are no arguments, *arg0* is set to "
+":data:`sys.monitoring.MISSING`."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:396
 msgid ""
-"For instance methods, *callable* will be the function object as found on the "
-"class with *arg0* set to the instance (i.e. the ``self`` argument to the "
+"For instance methods, *callable* will be the function object as found on the"
+" class with *arg0* set to the instance (i.e. the ``self`` argument to the "
 "method)."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:400
 msgid ""
-":monitoring-event:`RAISE`, :monitoring-event:`RERAISE`, :monitoring-event:"
-"`EXCEPTION_HANDLED`, :monitoring-event:`PY_UNWIND`, :monitoring-event:"
-"`PY_THROW` and :monitoring-event:`STOP_ITERATION`::"
+":monitoring-event:`RAISE`, :monitoring-event:`RERAISE`, :monitoring-"
+"event:`EXCEPTION_HANDLED`, :monitoring-event:`PY_UNWIND`, :monitoring-"
+"event:`PY_THROW` and :monitoring-event:`STOP_ITERATION`::"
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:403
@@ -639,8 +643,8 @@ msgstr ""
 
 #: ../../library/sys.monitoring.rst:409
 msgid ""
-":monitoring-event:`BRANCH_LEFT`, :monitoring-event:`BRANCH_RIGHT` and :"
-"monitoring-event:`JUMP`::"
+":monitoring-event:`BRANCH_LEFT`, :monitoring-event:`BRANCH_RIGHT` and "
+":monitoring-event:`JUMP`::"
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:411
@@ -650,7 +654,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:413
-msgid "Note that the *destination_offset* is where the code will next execute."
+msgid ""
+"Note that the *destination_offset* is where the code will next execute."
 msgstr ""
 
 #: ../../library/sys.monitoring.rst:415
