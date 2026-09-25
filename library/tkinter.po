@@ -1,10 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -12,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
 "PO-Revision-Date: 2025-09-16 00:01+0000\n"
-"Last-Translator: @sba72\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,11 +21,11 @@ msgstr ""
 
 #: ../../library/tkinter.rst:2
 msgid ":mod:`!tkinter` --- Python interface to Tcl/Tk"
-msgstr ""
+msgstr ":mod:`!tkinter` --- Python-Schnittstelle zu Tcl/Tk"
 
 #: ../../library/tkinter.rst:7
 msgid "**Source code:** :source:`Lib/tkinter/__init__.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/tkinter/__init__.py`"
 
 #: ../../library/tkinter.rst:11
 msgid ""
@@ -35,6 +34,10 @@ msgid ""
 "available on most Unix platforms, including macOS, as well as on Windows "
 "systems."
 msgstr ""
+"Das Paket :mod:`!tkinter` („Tk interface“) ist die Standardschnittstelle von "
+"Python zum GUI-Werkzeugkasten Tcl/Tk. Sowohl Tk als auch :mod:`!tkinter` "
+"sind auf den meisten Unix-Plattformen einschließlich macOS sowie auf "
+"Windows-Systemen verfügbar."
 
 #: ../../library/tkinter.rst:15
 msgid ""
@@ -44,6 +47,11 @@ msgid ""
 "Tk is installed, so you can read the Tcl/Tk documentation specific to that "
 "version."
 msgstr ""
+"Wenn du ``python -m tkinter`` auf der Kommandozeile ausführst, sollte sich "
+"ein Fenster öffnen, das eine einfache Tk-Oberfläche zeigt. Damit weißt du, "
+"dass :mod:`!tkinter` korrekt auf deinem System installiert ist. Außerdem "
+"siehst du, welche Version von Tcl/Tk installiert ist, sodass du die "
+"passende Tcl/Tk-Dokumentation zu dieser Version lesen kannst."
 
 #: ../../library/tkinter.rst:20
 msgid ""
@@ -52,10 +60,15 @@ msgid ""
 "Python binary release bundles Tcl/Tk 9.0. See the source code for the :mod:"
 "`_tkinter` module for more information about supported versions."
 msgstr ""
+"Tkinter unterstützt eine Reihe von Tcl/Tk-Versionen, wahlweise mit oder ohne "
+"Thread-Unterstützung. Tcl/Tk 8.5.12 ist die niedrigste unterstützte Version. "
+"Die offizielle Binärversion von Python bringt Tcl/Tk 9.0 mit. Weitere "
+"Informationen zu den unterstützten Versionen findest du im Quellcode des "
+"Moduls :mod:`_tkinter`."
 
 #: ../../library/tkinter.rst:27
 msgid "Support for Tcl/Tk versions older than 8.5.12 was removed."
-msgstr ""
+msgstr "Die Unterstützung für Tcl/Tk-Versionen vor 8.5.12 wurde entfernt."
 
 #: ../../library/tkinter.rst:30
 msgid ""
@@ -64,6 +77,10 @@ msgid ""
 "these additions and changes, and refer to the official Tcl/Tk documentation "
 "for details that are unchanged."
 msgstr ""
+"Tkinter ist kein dünner Wrapper, sondern ergänzt eine ganze Menge eigener "
+"Logik, damit sich die Nutzung pythonischer anfühlt. Diese Dokumentation "
+"konzentriert sich auf diese Ergänzungen und Änderungen und verweist für "
+"unveränderte Einzelheiten auf die offizielle Tcl/Tk-Dokumentation."
 
 #: ../../library/tkinter.rst:37
 msgid ""
@@ -72,6 +89,11 @@ msgid ""
 "old and new APIs are still available. Most documentation you will find "
 "online still uses the old API and can be woefully outdated."
 msgstr ""
+"Mit Tcl/Tk 8.5 (2007) kam ein moderner Satz von Oberflächenelementen mit "
+"Themes hinzu, zusammen mit einer neuen API, um sie zu verwenden (siehe "
+":mod:`tkinter.ttk`). Sowohl die alte als auch die neue API sind weiterhin "
+"verfügbar. Die meiste Dokumentation, die du online findest, verwendet noch "
+"die alte API und kann bedauerlich veraltet sein."
 
 #: ../../includes/optional-module.rst:1
 msgid ""
@@ -80,96 +102,114 @@ msgid ""
 "provided Python to you). If you are the distributor, see :ref:`optional-"
 "module-requirements`."
 msgstr ""
+"Dies ist ein :term:`optionales Modul <optional module>`. Wenn es in deiner "
+"CPython-Installation fehlt, sieh in der Dokumentation deines Distributors "
+"nach (also desjenigen, von dem du Python bezogen hast). Wenn du selbst der "
+"Distributor bist, siehe :ref:`optional-module-requirements`."
 
 #: ../../library/tkinter.rst:47
 msgid "`TkDocs <https://tkdocs.com/>`_"
-msgstr ""
+msgstr "`TkDocs <https://tkdocs.com/>`_"
 
 #: ../../library/tkinter.rst:48
 msgid ""
 "Extensive tutorial on creating user interfaces with Tkinter.  Explains key "
 "concepts, and illustrates recommended approaches using the modern API."
 msgstr ""
+"Ausführliches Tutorial zum Erstellen von Benutzeroberflächen mit Tkinter. "
+"Erklärt die zentralen Konzepte und zeigt empfohlene Vorgehensweisen anhand "
+"der modernen API."
 
 #: ../../library/tkinter.rst:51
 msgid ""
 "`Tkinter 8.5 reference: a GUI for Python <https://www.tkdocs.com/shipman/>`_"
 msgstr ""
+"`Tkinter 8.5 reference: a GUI for Python <https://www.tkdocs.com/shipman/>`_"
 
 #: ../../library/tkinter.rst:52
 msgid ""
 "Reference documentation for Tkinter 8.5 detailing available classes, "
 "methods, and options."
 msgstr ""
+"Referenzdokumentation zu Tkinter 8.5 mit einer ausführlichen Darstellung der "
+"verfügbaren Klassen, Methoden und Optionen."
 
 #: ../../library/tkinter.rst:54
 msgid "Tcl/Tk Resources:"
-msgstr ""
+msgstr "Tcl/Tk-Ressourcen:"
 
 #: ../../library/tkinter.rst:56
 msgid "`Tk commands <https://www.tcl-lang.org/man/tcl9.0/TkCmd/index.html>`_"
-msgstr ""
+msgstr "`Tk commands <https://www.tcl-lang.org/man/tcl9.0/TkCmd/index.html>`_"
 
 #: ../../library/tkinter.rst:57
 msgid ""
 "Comprehensive reference to each of the underlying Tcl/Tk commands used by "
 "Tkinter."
 msgstr ""
+"Umfassende Referenz zu jedem der zugrunde liegenden Tcl/Tk-Befehle, die "
+"Tkinter verwendet."
 
 #: ../../library/tkinter.rst:59
 msgid "`Tcl/Tk Home Page <https://www.tcl.tk>`_"
-msgstr ""
+msgstr "`Tcl/Tk Home Page <https://www.tcl.tk>`_"
 
 #: ../../library/tkinter.rst:60
 msgid "Additional documentation, and links to Tcl/Tk core development."
-msgstr ""
+msgstr "Weitere Dokumentation sowie Links zur Kernentwicklung von Tcl/Tk."
 
 #: ../../library/tkinter.rst:62
 msgid "Books:"
-msgstr ""
+msgstr "Bücher:"
 
 #: ../../library/tkinter.rst:64
 msgid ""
 "`Modern Tkinter for Busy Python Developers <https://tkdocs.com/book.html>`_"
-msgstr ""
+msgstr "`Modern Tkinter for Busy Python Developers <https://tkdocs.com/book.html>`_"
 
 #: ../../library/tkinter.rst:65
 msgid "By Mark Roseman. (ISBN 978-1999149567)"
-msgstr ""
+msgstr "Von Mark Roseman. (ISBN 978-1999149567)"
 
 #: ../../library/tkinter.rst:67
 msgid ""
 "`Python GUI programming with Tkinter <https://www.packtpub.com/en-us/product/"
 "python-gui-programming-with-tkinter-9781788835886>`_"
 msgstr ""
+"`Python GUI programming with Tkinter <https://www.packtpub.com/en-us/product/"
+"python-gui-programming-with-tkinter-9781788835886>`_"
 
 #: ../../library/tkinter.rst:68
 msgid "By Alan D. Moore. (ISBN 978-1788835886)"
-msgstr ""
+msgstr "Von Alan D. Moore. (ISBN 978-1788835886)"
 
 #: ../../library/tkinter.rst:70
 msgid "`Programming Python <https://learning-python.com/about-pp4e.html>`_"
-msgstr ""
+msgstr "`Programming Python <https://learning-python.com/about-pp4e.html>`_"
 
 #: ../../library/tkinter.rst:71
 msgid "By Mark Lutz; has excellent coverage of Tkinter. (ISBN 978-0596158101)"
-msgstr ""
+msgstr "Von Mark Lutz; behandelt Tkinter ausgezeichnet. (ISBN 978-0596158101)"
 
 #: ../../library/tkinter.rst:73
 msgid ""
 "`Tcl and the Tk Toolkit (2nd edition)  <https://www.amazon.com/exec/obidos/"
 "ASIN/032133633X>`_"
 msgstr ""
+"`Tcl and the Tk Toolkit (2nd edition)  <https://www.amazon.com/exec/obidos/"
+"ASIN/032133633X>`_"
 
 #: ../../library/tkinter.rst:74
 msgid ""
 "By John Ousterhout, inventor of Tcl/Tk, and Ken Jones; does not cover "
 "Tkinter. (ISBN 978-0321336330)"
 msgstr ""
+"Von John Ousterhout, dem Erfinder von Tcl/Tk, und Ken Jones; behandelt "
+"Tkinter nicht. (ISBN 978-0321336330)"
 
 #: ../../library/tkinter.rst:78
 msgid "Architecture"
-msgstr ""
+msgstr "Architektur"
 
 #: ../../library/tkinter.rst:80
 msgid ""
@@ -178,10 +218,14 @@ msgid ""
 "documentation. Python's binary releases also ship an add-on module together "
 "with it."
 msgstr ""
+"Tcl/Tk ist keine einzelne Bibliothek, sondern besteht aus mehreren "
+"eigenständigen Modulen mit jeweils eigener Funktionalität und eigener "
+"offizieller Dokumentation. Die Binärversionen von Python liefern zusätzlich "
+"ein Erweiterungsmodul mit."
 
 #: ../../library/tkinter.rst:85
 msgid "Tcl"
-msgstr ""
+msgstr "Tcl"
 
 #: ../../library/tkinter.rst:86
 msgid ""
@@ -196,10 +240,22 @@ msgid ""
 "designed around cooperative multitasking, and Tkinter bridges this "
 "difference (see `Threading model`_ for details)."
 msgstr ""
+"Tcl ist eine dynamische, interpretierte Programmiersprache, genau wie "
+"Python. Zwar lässt sie sich eigenständig als Allzwecksprache verwenden, am "
+"häufigsten wird sie jedoch als Skript-Engine oder als Schnittstelle zum "
+"Tk-Werkzeugkasten in C-Anwendungen eingebettet. Die Tcl-Bibliothek bietet "
+"eine C-Schnittstelle, um eine oder mehrere Instanzen eines Tcl-Interpreters "
+"zu erzeugen und zu verwalten, darin Tcl-Befehle und -Skripte auszuführen und "
+"eigene Befehle hinzuzufügen, die entweder in Tcl oder in C umgesetzt sind. "
+"Jeder Interpreter hat eine Ereigniswarteschlange, und es gibt Mittel, um "
+"Ereignisse dorthin zu senden und zu verarbeiten. Anders als bei Python ist "
+"das Ausführungsmodell von Tcl auf kooperatives Multitasking ausgelegt, und "
+"Tkinter überbrückt diesen Unterschied (Einzelheiten unter `Threading "
+"model`_)."
 
 #: ../../library/tkinter.rst:98 ../../library/tkinter.rst:898
 msgid "Tk"
-msgstr ""
+msgstr "Tk"
 
 #: ../../library/tkinter.rst:99
 msgid ""
@@ -209,10 +265,17 @@ msgid ""
 "Tk's widgets are very customizable, though at the cost of a dated "
 "appearance. Tk uses Tcl's event queue to generate and process GUI events."
 msgstr ""
+"Tk ist ein in C umgesetztes `Tcl package <https://wiki.tcl-lang.org/37432>`_, "
+"das eigene Befehle zum Erzeugen und Bearbeiten von GUI-Widgets hinzufügt. "
+"Jedes :class:`Tk`-Objekt bettet eine eigene Instanz des Tcl-Interpreters "
+"ein, in die Tk geladen ist. Die Widgets von Tk lassen sich weitgehend "
+"anpassen, allerdings um den Preis eines altmodischen Erscheinungsbilds. Tk "
+"nutzt die Ereigniswarteschlange von Tcl, um GUI-Ereignisse zu erzeugen und "
+"zu verarbeiten."
 
 #: ../../library/tkinter.rst:105
 msgid "Ttk"
-msgstr ""
+msgstr "Ttk"
 
 #: ../../library/tkinter.rst:106
 msgid ""
@@ -221,12 +284,20 @@ msgid ""
 "is distributed as part of Tk, starting with Tk version 8.5. Python bindings "
 "are provided in a separate module, :mod:`tkinter.ttk`."
 msgstr ""
+"Themed Tk (Ttk) ist eine neuere Familie von Tk-Widgets, die auf den "
+"verschiedenen Plattformen deutlich besser aussehen als viele der klassischen "
+"Tk-Widgets. Ttk wird ab Tk-Version 8.5 als Teil von Tk ausgeliefert. Die "
+"Python-Anbindung steht in einem eigenen Modul zur Verfügung, "
+":mod:`tkinter.ttk`."
 
 #: ../../library/tkinter.rst:111
 msgid ""
 "Internally, Tk and Ttk use facilities of the underlying operating system, "
 "that is, Xlib on Unix/X11, Cocoa on macOS, GDI on Windows."
 msgstr ""
+"Intern nutzen Tk und Ttk Einrichtungen des zugrunde liegenden "
+"Betriebssystems, also Xlib unter Unix/X11, Cocoa unter macOS und GDI unter "
+"Windows."
 
 #: ../../library/tkinter.rst:114
 msgid ""
@@ -237,10 +308,16 @@ msgid ""
 "interpreter will then call into the Tk and/or Ttk packages, which will in "
 "turn make calls to Xlib, Cocoa, or GDI."
 msgstr ""
+"Wenn deine Python-Anwendung eine Klasse aus Tkinter verwendet, etwa um ein "
+"Widget zu erzeugen, setzt das Modul :mod:`!tkinter` zunächst eine "
+"Tcl/Tk-Befehlszeichenkette zusammen. Diese übergibt es an das interne "
+"Binärmodul :mod:`_tkinter`, das daraufhin den Tcl-Interpreter aufruft, um "
+"sie auszuwerten. Der Tcl-Interpreter ruft dann die Pakete Tk beziehungsweise "
+"Ttk auf, die ihrerseits Aufrufe an Xlib, Cocoa oder GDI richten."
 
 #: ../../library/tkinter.rst:122
 msgid "Tkinter modules"
-msgstr ""
+msgstr "Tkinter-Module"
 
 #: ../../library/tkinter.rst:124
 msgid ""
@@ -248,98 +325,110 @@ msgid ""
 "need the main :mod:`!tkinter` module, as well as the :mod:`tkinter.ttk` "
 "module, which provides the modern themed widget set and API::"
 msgstr ""
+"Die Unterstützung für Tkinter verteilt sich auf mehrere Module. Die meisten "
+"Anwendungen benötigen das Hauptmodul :mod:`!tkinter` sowie das Modul "
+":mod:`tkinter.ttk`, das den modernen Satz an Themed Widgets samt API "
+"bereitstellt::"
 
 #: ../../library/tkinter.rst:129
 msgid ""
 "from tkinter import *\n"
 "from tkinter import ttk"
 msgstr ""
+"from tkinter import *\n"
+"from tkinter import ttk"
 
 #: ../../library/tkinter.rst:133
 msgid "The modules that provide Tk support include:"
-msgstr ""
+msgstr "Zu den Modulen mit Tk-Unterstützung gehören:"
 
 #: ../../library/tkinter.rst:135
 msgid ":mod:`!tkinter`"
-msgstr ""
+msgstr ":mod:`!tkinter`"
 
 #: ../../library/tkinter.rst:136
 msgid "Main Tkinter module."
-msgstr ""
+msgstr "Das Hauptmodul von Tkinter."
 
 #: ../../library/tkinter.rst:138
 msgid ":mod:`tkinter.colorchooser`"
-msgstr ""
+msgstr ":mod:`tkinter.colorchooser`"
 
 #: ../../library/tkinter.rst:139
 msgid "Dialog to let the user choose a color."
-msgstr ""
+msgstr "Dialog zur Farbauswahl durch den Benutzer."
 
 #: ../../library/tkinter.rst:141
 msgid ":mod:`tkinter.commondialog`"
-msgstr ""
+msgstr ":mod:`tkinter.commondialog`"
 
 #: ../../library/tkinter.rst:142
 msgid "Base class for the dialogs defined in the other modules listed here."
 msgstr ""
+"Basisklasse für die Dialoge, die in den anderen hier aufgeführten Modulen "
+"definiert sind."
 
 #: ../../library/tkinter.rst:144
 msgid ":mod:`tkinter.filedialog`"
-msgstr ""
+msgstr ":mod:`tkinter.filedialog`"
 
 #: ../../library/tkinter.rst:145
 msgid "Common dialogs to allow the user to specify a file to open or save."
 msgstr ""
+"Standarddialoge, mit denen der Benutzer eine Datei zum Öffnen oder Speichern "
+"auswählen kann."
 
 #: ../../library/tkinter.rst:147
 msgid ":mod:`tkinter.font`"
-msgstr ""
+msgstr ":mod:`tkinter.font`"
 
 #: ../../library/tkinter.rst:148
 msgid "Utilities to help work with fonts."
-msgstr ""
+msgstr "Hilfsmittel für die Arbeit mit Schriftarten."
 
 #: ../../library/tkinter.rst:150
 msgid ":mod:`tkinter.messagebox`"
-msgstr ""
+msgstr ":mod:`tkinter.messagebox`"
 
 #: ../../library/tkinter.rst:151
 msgid "Access to standard Tk dialog boxes."
-msgstr ""
+msgstr "Zugriff auf die Standarddialoge von Tk."
 
 #: ../../library/tkinter.rst:153
 msgid ":mod:`tkinter.scrolledtext`"
-msgstr ""
+msgstr ":mod:`tkinter.scrolledtext`"
 
 #: ../../library/tkinter.rst:154
 msgid "Text widget with a vertical scroll bar built in."
-msgstr ""
+msgstr "Text-Widget mit eingebauter senkrechter Bildlaufleiste."
 
 #: ../../library/tkinter.rst:156
 msgid ":mod:`tkinter.simpledialog`"
-msgstr ""
+msgstr ":mod:`tkinter.simpledialog`"
 
 #: ../../library/tkinter.rst:157
 msgid "Basic dialogs and convenience functions."
-msgstr ""
+msgstr "Einfache Dialoge und Hilfsfunktionen."
 
 #: ../../library/tkinter.rst:159
 msgid ":mod:`tkinter.ttk`"
-msgstr ""
+msgstr ":mod:`tkinter.ttk`"
 
 #: ../../library/tkinter.rst:160
 msgid ""
 "Themed widget set introduced in Tk 8.5, providing modern alternatives for "
 "many of the classic widgets in the main :mod:`!tkinter` module."
 msgstr ""
+"Der mit Tk 8.5 eingeführte Satz an Themed Widgets, der moderne Alternativen "
+"zu vielen der klassischen Widgets im Hauptmodul :mod:`!tkinter` bietet."
 
 #: ../../library/tkinter.rst:163
 msgid "Additional modules:"
-msgstr ""
+msgstr "Weitere Module:"
 
 #: ../../library/tkinter.rst:168
 msgid ":mod:`_tkinter`"
-msgstr ""
+msgstr ":mod:`_tkinter`"
 
 #: ../../library/tkinter.rst:169
 msgid ""
@@ -349,20 +438,27 @@ msgid ""
 "(or DLL), but might in some cases be statically linked with the Python "
 "interpreter."
 msgstr ""
+"Ein Binärmodul, das die hardwarenahe Schnittstelle zu Tcl/Tk enthält. Es "
+"wird automatisch vom Hauptmodul :mod:`!tkinter` importiert und sollte von "
+"Anwendungsprogrammierern niemals direkt verwendet werden. Meist handelt es "
+"sich um eine dynamische Bibliothek (oder DLL), in manchen Fällen kann es "
+"aber auch statisch mit dem Python-Interpreter verbunden sein."
 
 #: ../../library/tkinter.rst:175
 msgid ":mod:`idlelib`"
-msgstr ""
+msgstr ":mod:`idlelib`"
 
 #: ../../library/tkinter.rst:176
 msgid ""
 "Python's Integrated Development and Learning Environment (IDLE). Based on :"
 "mod:`!tkinter`."
 msgstr ""
+"Die integrierte Entwicklungs- und Lernumgebung von Python (IDLE). Basiert "
+"auf :mod:`!tkinter`."
 
 #: ../../library/tkinter.rst:179
 msgid ":mod:`!tkinter.constants`"
-msgstr ""
+msgstr ":mod:`!tkinter.constants`"
 
 #: ../../library/tkinter.rst:180
 msgid ""
