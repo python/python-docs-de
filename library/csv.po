@@ -2,12 +2,12 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2026
 # Jyst Breisgau, 2026
 # Swen Bachmann, 2026
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -292,12 +292,12 @@ msgid ""
 "results.  Regardless of how the fieldnames are determined, the dictionary "
 "preserves their original ordering."
 msgstr ""
-"Der Parameter *fieldnames* ist eine :term:`Sequenz`.  Wird *fieldnames* "
-"weggelassen, werden die Werte in der ersten Zeile der Datei *f* als "
-"Feldnamen verwendet und in den Ergebnissen nicht aufgeführt. Wird "
-"*fieldnames* angegeben, werden diese verwendet und die erste Zeile in die "
-"Ergebnisse aufgenommen.  Unabhängig davon, wie die Feldnamen ermittelt "
-"werden, behält das Dictionary ihre ursprüngliche Reihenfolge bei."
+"Der Parameter *fieldnames* ist eine :term:`Sequenz <sequence>`. Wird "
+"*fieldnames* weggelassen, werden die Werte in der ersten Zeile der Datei *f* "
+"als Feldnamen verwendet und nicht in die Ergebnisse aufgenommen. Wird "
+"*fieldnames* angegeben, werden diese verwendet und die erste Zeile erscheint "
+"mit in den Ergebnissen. Unabhängig davon, wie die Feldnamen bestimmt werden, "
+"bewahrt das Dictionary deren ursprüngliche Reihenfolge."
 
 #: ../../library/csv.rst:179
 msgid ""
@@ -856,9 +856,10 @@ msgid ""
 "constants>` and defaults to :const:`QUOTE_MINIMAL` if *quotechar* is not "
 "``None``, and :const:`QUOTE_NONE` otherwise."
 msgstr ""
-"Steuert, wann der Writer Anführungszeichen erzeugen und der Reader sie erkennen soll. Mögliche Werte sind alle :ref:`QUOTE_\\*-Konstanten <csv-constants>`. Der Standardwert ist :const:`QUOTE_MINIMAL`, wenn *quotechar* nicht ``None`` ist, andernfalls :const:`QUOTE_NONE`.\n"
-"\n"
-" Steuert, wann der Writer Anführungszeichen erzeugen und der Reader sie erkennen soll. Mögliche Werte sind alle :ref:`QUOTE_\\*-Konstanten <csv-constants>`; der Standardwert ist :const:`QUOTE_MINIMAL`, wenn *quotechar* nicht ``None`` ist, andernfalls :const:`QUOTE_NONE`."
+"Steuert, wann der Writer Anführungszeichen erzeugen und der Reader sie "
+"erkennen soll. Mögliche Werte sind alle :ref:`QUOTE_\\*-Konstanten <csv-"
+"constants>`; der Standardwert ist :const:`QUOTE_MINIMAL`, wenn *quotechar* "
+"nicht ``None`` ist, andernfalls :const:`QUOTE_NONE`."
 
 #: ../../library/csv.rst:521
 msgid ""
