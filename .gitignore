@@ -1,7 +1,12 @@
 *.po~
+# Editor und Betriebssystem
 .DS_Store
-/.idea/misc.xml
-/.idea/inspectionProfiles/profiles_settings.xml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/vcs.xml
-/.idea/workspace.xml
+/.idea/
+*.po~
+
+# Claude-Agent
+/.claude/
+
+# Python-Umgebung
+/.venv/
+__pycache__/
