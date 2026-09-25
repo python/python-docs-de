@@ -1971,13 +1971,13 @@ resource_name          = library--configparser
 replace_edited_strings = false
 keep_translations      = false
 
-[o:python-doc:p:python-314:r:library--constants]
-trans.de = library/constants.po
-file_filter            = library/constants.po
-source_file            = gettext/library/constants.pot
+[o:python-doc:p:python-314:r:builtins--constants]
+trans.de = builtins/constants.po
+file_filter            = builtins/constants.po
+source_file            = gettext/builtins/constants.pot
 type                   = PO
 minimum_perc           = 0
-resource_name          = library--constants
+resource_name          = builtins--constants
 replace_edited_strings = false
 keep_translations      = false
 
@@ -2431,13 +2431,13 @@ resource_name          = library--errno
 replace_edited_strings = false
 keep_translations      = false
 
-[o:python-doc:p:python-314:r:library--exceptions]
-trans.de = library/exceptions.po
-file_filter            = library/exceptions.po
-source_file            = gettext/library/exceptions.pot
+[o:python-doc:p:python-314:r:builtins--exceptions]
+trans.de = builtins/exceptions.po
+file_filter            = builtins/exceptions.po
+source_file            = gettext/builtins/exceptions.pot
 type                   = PO
 minimum_perc           = 0
-resource_name          = library--exceptions
+resource_name          = builtins--exceptions
 replace_edited_strings = false
 keep_translations      = false
 
@@ -2551,13 +2551,13 @@ resource_name          = library--functional
 replace_edited_strings = false
 keep_translations      = false
 
-[o:python-doc:p:python-314:r:library--functions]
-trans.de = library/functions.po
-file_filter            = library/functions.po
-source_file            = gettext/library/functions.pot
+[o:python-doc:p:python-314:r:builtins--functions]
+trans.de = builtins/functions.po
+file_filter            = builtins/functions.po
+source_file            = gettext/builtins/functions.pot
 type                   = PO
 minimum_perc           = 0
-resource_name          = library--functions
+resource_name          = builtins--functions
 replace_edited_strings = false
 keep_translations      = false
 
@@ -3771,13 +3771,13 @@ resource_name          = library--statistics
 replace_edited_strings = false
 keep_translations      = false
 
-[o:python-doc:p:python-314:r:library--stdtypes]
-trans.de = library/stdtypes.po
-file_filter            = library/stdtypes.po
-source_file            = gettext/library/stdtypes.pot
+[o:python-doc:p:python-314:r:builtins--stdtypes]
+trans.de = builtins/stdtypes.po
+file_filter            = builtins/stdtypes.po
+source_file            = gettext/builtins/stdtypes.pot
 type                   = PO
 minimum_perc           = 0
-resource_name          = library--stdtypes
+resource_name          = builtins--stdtypes
 replace_edited_strings = false
 keep_translations      = false
 
@@ -5231,3 +5231,29 @@ resource_name          = whatsnew--index
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-314:r:builtins--index]
+trans.de = builtins/index.po
+file_filter            = builtins/index.po
+source_file            = gettext/builtins/index.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = builtins--index
+replace_edited_strings = false
+
+[o:python-doc:p:python-314:r:builtins--threadsafety]
+trans.de = builtins/threadsafety.po
+file_filter            = builtins/threadsafety.po
+source_file            = gettext/builtins/threadsafety.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = builtins--threadsafety
+replace_edited_strings = false
+
+[o:python-doc:p:python-314:r:builtins--time-complexity]
+trans.de = builtins/time-complexity.po
+file_filter            = builtins/time-complexity.po
+source_file            = gettext/builtins/time-complexity.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = builtins--time-complexity
+replace_edited_strings = false
