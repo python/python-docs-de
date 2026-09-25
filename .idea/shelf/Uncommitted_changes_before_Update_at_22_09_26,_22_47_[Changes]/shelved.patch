@@ -1,0 +1,18 @@
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>*.po~\n.DS_Store\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	(revision a204136fda51073ba9ae619f91ac8007a61b58ae)
++++ b/.gitignore	(date 1790107753393)
+@@ -1,2 +1,7 @@
+ *.po~
+ .DS_Store
++/.idea/misc.xml
++/.idea/inspectionProfiles/profiles_settings.xml
++/.idea/inspectionProfiles/Project_Default.xml
++/.idea/vcs.xml
++/.idea/workspace.xml
