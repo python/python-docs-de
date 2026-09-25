@@ -2811,7 +2811,7 @@ msgstr ""
 "fügen zudem einige zusätzliche Methoden hinzu, die in manuell geschriebenen "
 "oder integrierten benannten Tupeln möglicherweise nicht vorhanden sind."
 
-#: ../../glossary.rst:1101 # Stop
+#: ../../glossary.rst:1101
 msgid "namespace"
 msgstr "Namensraum"
 
@@ -2918,7 +2918,7 @@ msgstr ""
 
 #: ../../glossary.rst:1142
 msgid "new-style class"
-msgstr "Klasse im neuen Stil"
+msgstr "New-Style-Klasse"
 
 #: ../../glossary.rst:1144
 msgid ""
@@ -3180,7 +3180,7 @@ msgstr ""
 
 #: ../../glossary.rst:1251
 msgid "per-object lock"
-msgstr "Objektspezifische Sperre"
+msgstr "objektspezifische Sperre"
 
 #: ../../glossary.rst:1253
 msgid ""
@@ -3266,7 +3266,7 @@ msgstr ""
 
 #: ../../glossary.rst:1282
 msgid "path-like object"
-msgstr "pfadähnliches Objekt"
+msgstr "pfadbasierter Finder"
 
 #: ../../glossary.rst:1284
 msgid ""
@@ -3410,7 +3410,7 @@ msgstr ""
 
 #: ../../glossary.rst:1340
 msgid "Pythonic"
-msgstr "Pythonesk"
+msgstr "pythonisch"
 
 #: ../../glossary.rst:1342
 msgid ""
@@ -3730,7 +3730,7 @@ msgstr ""
 
 #: ../../glossary.rst:1472
 msgid "single dispatch"
-msgstr "Einzelversand"
+msgstr "Single Dispatch"
 
 #: ../../glossary.rst:1474
 msgid ""
@@ -3743,7 +3743,7 @@ msgstr ""
 
 #: ../../glossary.rst:1476
 msgid "slice"
-msgstr "Scheibe"
+msgstr "Slice"
 
 #: ../../glossary.rst:1478
 msgid ""
@@ -3944,7 +3944,7 @@ msgstr ""
 
 #: ../../glossary.rst:1555
 msgid "synchronization primitive"
-msgstr "Synchronisationsprimitive"
+msgstr "Synchronisationsprimitiv"
 
 #: ../../glossary.rst:1557
 msgid ""
@@ -4108,7 +4108,7 @@ msgstr ""
 
 #: ../../glossary.rst:1619
 msgid "thread-safe"
-msgstr "thread-safe"
+msgstr "tthread-sicher"
 
 #: ../../glossary.rst:1621
 msgid ""
