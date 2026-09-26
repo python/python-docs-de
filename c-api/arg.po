@@ -1547,8 +1547,7 @@ msgstr ""
 #: ../../c-api/arg.rst:651
 msgid "Convert a C :c:expr:`long int` to a Python integer object."
 msgstr ""
-"Konvertiert ein C-Objekt vom Typ `long int` C :c:expr::`long int` in ein "
-"Python-Integer-Objekt."
+"Wandelt ein C-:c:expr:`long int` in ein Python-Integer-Objekt um."
 
 #: ../../c-api/arg.rst:654
 msgid "Convert a C :c:expr:`unsigned char` to a Python integer object."
@@ -1577,14 +1576,12 @@ msgstr ""
 #: ../../c-api/arg.rst:666
 msgid "Convert a C :c:expr:`long long` to a Python integer object."
 msgstr ""
-"Konvertiert ein C-Ausdruck vom Typ `long long` (c:c:expr:) in ein Python-"
-"Ganzzahlobjekt."
+"Wandelt ein C-:c:expr:`long long` in ein Python-Integer-Objekt um."
 
 #: ../../c-api/arg.rst:671
 msgid "Convert a C :c:expr:`unsigned long long` to a Python integer object."
 msgstr ""
-"Konvertiert einen C-Ausdruck vom Typ `unsigned long long` in ein Python-"
-"Integer-Objekt."
+"Wandelt ein C-:c:expr:`unsigned long long` in ein Python-Integer-Objekt um."
 
 #: ../../c-api/arg.rst:674
 msgid "Convert a C :c:type:`Py_ssize_t` to a Python integer."
