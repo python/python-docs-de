@@ -1075,7 +1075,7 @@ msgid ""
 msgstr ""
 "Bei Erfolg wird ``view->obj`` auf einen neuen Verweis auf `*exporter*` "
 "gesetzt und 0 zurückgegeben. Andernfalls wird ein :exc:`BufferError` "
-"ausgelöst, ``view->obj`` auf ``NULL`` gesetzt und ``-1``"
+"ausgelöst, ``view->obj`` auf ``NULL`` gesetzt und ``-1`` "
 "zurückgegeben;"
 
 #: ../../c-api/buffer.rst:554

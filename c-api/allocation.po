@@ -68,8 +68,7 @@ msgid ""
 msgstr ""
 "Diese Funktion bietet denselben Funktionsumfang wie :c:func:`PyObject_Init` "
 "und initialisiert darüber hinaus die Längenangaben für ein Objekt mit "
-"variabler Größe.\n"
-" "
+"variabler Größe."
 
 #: ../../c-api/allocation.rst:42
 msgid ""

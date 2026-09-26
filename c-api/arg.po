@@ -1,4 +1,4 @@
-German translation of the Python documentation.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -181,7 +181,7 @@ msgstr ""
 
 #: ../../c-api/arg.rst:80
 msgid "``s`` (:class:`str`) [const char \\*]"
-msgstr "``s`` (:class:`str`) [const char *]"
+msgstr "``s`` (:class:`str`) [const char \\*]"
 
 #: ../../c-api/arg.rst:81
 msgid ""
