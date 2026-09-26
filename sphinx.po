@@ -331,7 +331,7 @@ msgstr "Syntax und Sprachelemente"
 
 #: ../../tools/templates/indexcontent.html:65
 msgid "Python setup and usage"
-msgstr "Einrichtung und Verwendung von Python"
+msgstr "Python einrichten und nutzen"
 
 #: ../../tools/templates/indexcontent.html:66
 msgid "How to install, configure, and use Python"
