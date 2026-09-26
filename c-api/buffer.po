@@ -1,12 +1,11 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # Jyst Breisgau, 2026
+# Swen Bachmann, 2026
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -136,9 +135,8 @@ msgid ""
 "call :c:func:`PyArg_ParseTuple` (or one of its siblings) with one of the "
 "``y*``, ``w*`` or ``s*`` :ref:`format codes <arg-parsing>`."
 msgstr ""
-"Rufe „ :c:func:`PyArg_ParseTuple` “ (oder eine der entsprechenden Varianten) "
-"mit einem der Formatcodes „ ``y*`` “, „ ``w*`` “ oder „ ``s*`` “ auf:ref:` "
-"<arg-parsing>`."
+"rufe :c:func:`PyArg_ParseTuple` (oder eine der verwandten Funktionen) mit "
+"einem der :ref:`Formatcodes <arg-parsing>` ``y*``, ``w*`` oder ``s*`` auf."
 
 #: ../../c-api/buffer.rst:63
 msgid ""
@@ -236,9 +234,9 @@ msgid ""
 "of the return value of any standard C-API function."
 msgstr ""
 "Eine neue Referenz auf das exportierende Objekt. Die Referenz befindet sich "
-"im Besitz des Verbrauchers und wird automatisch freigegeben (d. h., die "
-"Referenzzählung wird verringert) und von ` :c:func:`PyBuffer_Release`` auf ` "
-"``NULL`` ` gesetzt. Das Feld entspricht dem Rückgabewert einer beliebigen "
+"im Besitz des Verbrauchers und wird automatisch freigegeben (d.h., die "
+"Referenzzählung wird verringert) und von :c:func:`PyBuffer_Release` auf ` "
+"``NULL`` gesetzt. Das Feld entspricht dem Rückgabewert einer beliebigen "
 "Standard-C-API-Funktion."
 
 #: ../../c-api/buffer.rst:117
@@ -271,11 +269,11 @@ msgid ""
 "most cases such a request will be :c:macro:`PyBUF_SIMPLE` "
 "or :c:macro:`PyBUF_WRITABLE`."
 msgstr ""
-"Der Zugriff auf ` ``((char *)buf)[0] up to ((char *)buf)[len-1]`` ` ist nur "
+"Der Zugriff auf ``((char *)buf)[0] up to ((char *)buf)[len-1]`` ist nur "
 "zulässig, wenn der Puffer durch eine Anfrage abgerufen wurde, die "
 "zusammenhängende Daten garantiert. In den meisten Fällen handelt es sich bei "
-"einer solchen Anfrage um ` :c:macro:`PyBUF_SIMPLE` ` oder "
-"` :c:macro:`PyBUF_WRITABLE``."
+"einer solchen Anfrage um :c:macro:`PyBUF_SIMPLE` oder "
+":c:macro:`PyBUF_WRITABLE`."
 
 #: ../../c-api/buffer.rst:135
 msgid ""
@@ -491,7 +489,7 @@ msgid ""
 "argument to specify the exact buffer type it can handle."
 msgstr ""
 "Puffer werden in der Regel dadurch abgerufen, dass eine Pufferanforderung "
-"über ` :c:func:`PyObject_GetBuffer`` an ein exportierendes Objekt gesendet "
+"über :c:func:`PyObject_GetBuffer` an ein exportierendes Objekt gesendet "
 "wird. Da die Komplexität der logischen Struktur des Speichers stark "
 "variieren kann, gibt der Verbraucher über das Argument *flags* den genauen "
 "Puffertyp an, den er verarbeiten kann."
@@ -643,9 +641,9 @@ msgid ""
 "with and without stride information. Without stride information, the buffer "
 "must be C-contiguous."
 msgstr ""
-"C oder Fortran:term:`contiguity <contiguous>` kann explizit angefordert "
-"werden, mit oder ohne Stride-Angabe. Ohne Stride-Angabe muss der Puffer C-"
-"kontigu sein."
+"Ein :term:`Zusammenhang <contiguous>` nach C- oder Fortran-Ordnung kann "
+"ausdrücklich angefordert werden, mit oder ohne Stride-Angabe. Ohne Stride-"
+"Angabe muss der Puffer C-zusammenhängend sein."
 
 #: ../../c-api/buffer.rst:319 ../../c-api/buffer.rst:344
 msgid "contig"
@@ -849,12 +847,12 @@ msgid ""
 msgstr ""
 "Zusätzlich zu den regulären Elementen können Arrays im PIL-Stil Zeiger "
 "enthalten, denen man folgen muss, um zum nächsten Element einer Dimension zu "
-"gelangen. Beispielsweise lässt sich das reguläre dreidimensionale C-Array ` "
-"``char v[2][2][3]`` ` auch als Array aus 2 Zeigern auf 2 zweidimensionale "
-"Arrays betrachten: ` ``char (*v[2])[2][3]```. In der Suboffset-Darstellung "
-"können diese beiden Zeiger am Anfang von ` :c:member:`~Py_buffer.buf`` "
-"eingebettet werden und auf zwei Arrays vom Typ ` ``char x[2][3]`` ` "
-"verweisen, die sich an beliebiger Stelle im Speicher befinden können."
+"gelangen. Beispielsweise lässt sich das reguläre dreidimensionale C-Array "
+"``char v[2][2][3]`` auch als Array aus 2 Zeigern auf 2 zweidimensionale "
+"Arrays betrachten: ``char (*v[2])[2][3]``. In der Suboffset-Darstellung "
+"können diese beiden Zeiger am Anfang von :c:member:`~Py_buffer.buf` "
+"eingebettet werden und auf zwei Arrays vom Typ ``char x[2][3]`` verweisen, "
+"die sich an beliebiger Stelle im Speicher befinden können."
 
 #: ../../c-api/buffer.rst:432
 msgid ""
@@ -1075,9 +1073,9 @@ msgid ""
 "Otherwise, raise :exc:`BufferError`, set ``view->obj`` to ``NULL`` and "
 "return ``-1``;"
 msgstr ""
-"Bei Erfolg wird ` ``view->obj`` ` auf einen neuen Verweis auf `*exporter*` "
-"gesetzt und 0 zurückgegeben. Andernfalls wird ein ` :exc:`BufferError`` "
-"ausgelöst, ` ``view->obj`` ` auf ` ``NULL`` ` gesetzt und ` ``-1``` "
+"Bei Erfolg wird ``view->obj`` auf einen neuen Verweis auf `*exporter*` "
+"gesetzt und 0 zurückgegeben. Andernfalls wird ein :exc:`BufferError` "
+"ausgelöst, ``view->obj`` auf ``NULL`` gesetzt und ``-1``"
 "zurückgegeben;"
 
 #: ../../c-api/buffer.rst:554
