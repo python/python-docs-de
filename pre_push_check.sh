@@ -22,7 +22,7 @@ set -uo pipefail
 REPO_ROOT="${REPO_ROOT:-$(pwd)}"
 CPYTHON_ROOT="${CPYTHON_ROOT:-/Volumes/Dev_SSD/GitHub}"
 CHECK_ROLES_PY="${CHECK_ROLES_PY:-$REPO_ROOT/check_roles.py}"
-EXCLUDE_DIRS=("c-api" ".venv" ".git")
+EXCLUDE_DIRS=(".venv" ".git")
 
 BRANCH="$(git -C "$REPO_ROOT" branch --show-current 2>/dev/null)"
 if [[ -z "$BRANCH" ]]; then
