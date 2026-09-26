@@ -2,10 +2,10 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Jyst Breisgau, 2026
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -33,10 +33,10 @@ msgid ""
 "following macros are available, however."
 msgstr ""
 "Boolesche Werte werden in Python als Unterklasse der Ganzzahlen "
-"implementiert. Es gibt nur zwei boolesche Werte:  :c:data:`Py_False`  und  "
-":c:data:`Py_True`. Daher gelten die üblichen Funktionen zum Erstellen und "
-"Löschen nicht für boolesche Werte. Es stehen jedoch die folgenden Makros zur"
-" Verfügung."
+"implementiert. Es gibt nur zwei boolesche Werte:  :c:data:`Py_False`  "
+"und  :c:data:`Py_True`. Daher gelten die üblichen Funktionen zum Erstellen "
+"und Löschen nicht für boolesche Werte. Es stehen jedoch die folgenden Makros "
+"zur Verfügung."
 
 #: ../../c-api/bool.rst:16
 msgid ""
@@ -57,27 +57,27 @@ msgstr ""
 
 #: ../../c-api/bool.rst:28
 msgid ""
-"The Python ``False`` object.  This object has no methods and is "
-":term:`immortal`."
+"The Python ``False`` object.  This object has no methods and "
+"is :term:`immortal`."
 msgstr ""
-"Das Python- ``False`` -Objekt. Dieses Objekt verfügt über keine Methoden und"
-" ist :term:`unsterblich`."
+"Das Python- ``False`` -Objekt. Dieses Objekt verfügt über keine Methoden und "
+"ist :term:`unsterblich <immortal>`."
 
 #: ../../c-api/bool.rst:31
 msgid ":c:data:`Py_False` is :term:`immortal`."
-msgstr ":c:data:`Py_False` ist :term:`unsterblich`."
+msgstr ":c:data:`Py_False` ist :term:`unsterblich <immortal>`."
 
 #: ../../c-api/bool.rst:37
 msgid ""
-"The Python ``True`` object.  This object has no methods and is "
-":term:`immortal`."
+"The Python ``True`` object.  This object has no methods and "
+"is :term:`immortal`."
 msgstr ""
 "Das Python- ``True`` -Objekt. Dieses Objekt verfügt über keine Methoden und "
-"ist :term:`unsterblich`."
+"ist :term:`unsterblich <immortal>`."
 
 #: ../../c-api/bool.rst:40
 msgid ":c:data:`Py_True` is :term:`immortal`."
-msgstr ":c:data:`Py_True` ist :term:`unsterblich`."
+msgstr ":c:data:`Py_True` ist :term:`unsterblich <immortal>`."
 
 #: ../../c-api/bool.rst:46
 msgid "Return :c:data:`Py_False` from a function."
@@ -89,8 +89,8 @@ msgstr ":c:data:`Py_True` s aus einer Funktion zurückgeben."
 
 #: ../../c-api/bool.rst:56
 msgid ""
-"Return :c:data:`Py_True` or :c:data:`Py_False`, depending on the truth value"
-" of *v*."
+"Return :c:data:`Py_True` or :c:data:`Py_False`, depending on the truth value "
+"of *v*."
 msgstr ""
-"Gibt je nach Wahrheitswert von *v* entweder  :c:data:`Py_True`  oder  "
-":c:data:`Py_False`  zurück."
+"Gibt je nach Wahrheitswert von *v* entweder  :c:data:`Py_True`  "
+"oder  :c:data:`Py_False`  zurück."
