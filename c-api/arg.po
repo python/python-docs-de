@@ -246,7 +246,7 @@ msgid ""
 "\\*, :c:type:`Py_ssize_t`]"
 msgstr ""
 "``s#`` (:class:`str`, schreibgeschützt: :term:`bytes-ähnliches Objekt <bytes-"
-"like object>`) [const char *, :c:type:`Py_ssize_t`]"
+"like object>`) [const char \\*, :c:type:`Py_ssize_t`]"
 
 #: ../../c-api/arg.rst:107
 msgid ""
@@ -265,7 +265,7 @@ msgstr ""
 
 #: ../../c-api/arg.rst:113 ../../c-api/arg.rst:619
 msgid "``z`` (:class:`str` or ``None``) [const char \\*]"
-msgstr "``z`` (:class:`str` oder ``None``) [const char *]"
+msgstr "``z`` (:class:`str` oder ``None``) [const char \\*]"
 
 #: ../../c-api/arg.rst:114
 msgid ""
@@ -297,7 +297,7 @@ msgid ""
 "[const char \\*, :c:type:`Py_ssize_t`]"
 msgstr ""
 "``z#`` (:class:`str`, schreibgeschützt: :term:`bytes-ähnliches Objekt <bytes-"
-"like object>` oder ``None``) [const char *, :c:type:`Py_ssize_t`]"
+"like object>` oder ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
 
 #: ../../c-api/arg.rst:122
 msgid ""
@@ -353,7 +353,7 @@ msgid ""
 "\\*, :c:type:`Py_ssize_t`]"
 msgstr ""
 "``y#`` (schreibgeschützt: :term:`bytes-ähnliches Objekt <bytes-like "
-"object>`) [const char *, :c:type:`Py_ssize_t`]"
+"object>`) [const char \\*, :c:type:`Py_ssize_t`]"
 
 #: ../../c-api/arg.rst:142
 msgid ""
@@ -430,7 +430,7 @@ msgstr ""
 
 #: ../../c-api/arg.rst:166
 msgid "``es`` (:class:`str`) [const char \\*encoding, char \\*\\*buffer]"
-msgstr "``es`` (:class:`str`) [const char *encoding, char **buffer]"
+msgstr "``es`` (:class:`str`) [const char \\*encoding, char \\*\\**buffer]"
 
 #: ../../c-api/arg.rst:167
 msgid ""
@@ -479,7 +479,7 @@ msgid ""
 "\\*encoding, char \\*\\*buffer]"
 msgstr ""
 "``et`` (:class:`str`, :class:`bytes` oder :class:`bytearray`) [const char "
-"*encoding, char **buffer]"
+"\\*encoding, char \\*\\*buffer]"
 
 #: ../../c-api/arg.rst:184
 msgid ""
@@ -497,8 +497,8 @@ msgid ""
 "``es#`` (:class:`str`) [const char \\*encoding, char "
 "\\*\\*buffer, :c:type:`Py_ssize_t` \\*buffer_length]"
 msgstr ""
-"``es#`` (:class:`str`) [const char *encoding, char "
-"**buffer, :c:type:`Py_ssize_t` *buffer_length]"
+"``es#`` (:class:`str`) [const char \\*encoding, char "
+"\\*\\*buffer, :c:type:`Py_ssize_t` \\*buffer_length]"
 
 #: ../../c-api/arg.rst:189
 msgid ""
@@ -581,8 +581,8 @@ msgid ""
 "``et#`` (:class:`str`, :class:`bytes` or :class:`bytearray`) [const char "
 "\\*encoding, char \\*\\*buffer, :c:type:`Py_ssize_t` \\*buffer_length]"
 msgstr ""
-"``et#`` (:class:`str`, :class:`bytes` oder :class:`bytearray`) [const char "
-"*encoding, char **buffer, :c:type:`Py_ssize_t` *buffer_length]"
+"``et#`` (:class:`str`, :class:`bytes` or :class:`bytearray`) [const char "
+"\\*encoding, char \\*\\*buffer, :c:type:`Py_ssize_t` \\*buffer_length]"
 
 #: ../../c-api/arg.rst:220
 msgid ""
@@ -818,7 +818,7 @@ msgstr "Sonstige Objekte"
 
 #: ../../c-api/arg.rst:312 ../../c-api/arg.rst:704
 msgid "``O`` (object) [PyObject \\*]"
-msgstr "``O`` (Objekt) [PyObject *]"
+msgstr "``O`` (Objekt) [PyObject \\*]"
 
 #: ../../c-api/arg.rst:313
 msgid ""
@@ -830,7 +830,7 @@ msgstr ""
 "Speichert ein Python-Objekt (ohne jegliche Konvertierung) in einem C-"
 "Objektzeiger. Das C-Programm erhält somit das tatsächlich übergebene Objekt. "
 "Es wird keine neue :term:`starke Referenz <strong reference>` auf das Objekt "
-"erstellt (d. h., dessen Referenzzähler wird nicht erhöht). Der gespeicherte "
+"erstellt (d.h., dessen Referenzzähler wird nicht erhöht). Der gespeicherte "
 "Zeiger ist kein ``NULL``."
 
 #: ../../c-api/arg.rst:319
@@ -1072,7 +1072,7 @@ msgid ""
 msgstr ""
 "Beachten Sie, dass es sich bei allen Python-Objektreferenzen, die dem "
 "Aufrufer übergeben werden, um *ausgeliehene* Referenzen handelt; geben Sie "
-"diese nicht frei (d. h., verringern Sie nicht deren Referenzanzahl)!"
+"diese nicht frei (d.h., verringern Sie nicht deren Referenzanzahl)!"
 
 #: ../../c-api/arg.rst:424
 msgid ""
@@ -1303,7 +1303,7 @@ msgstr ""
 "    PyObject *callback = NULL;\n"
 "    PyObject *result = NULL;\n"
 "\n"
-"    if (PyArg_UnpackTuple(args, „ref“, 1, 2, &object, &callback)) {\n"
+"    if (PyArg_UnpackTuple(args, \"ref\", 1, 2, &object, &callback)) {\n"
 "        result = PyWeakref_NewRef(object, callback);\n"
 "    }\n"
 "    return result;\n"
@@ -1319,7 +1319,7 @@ msgstr ""
 
 #: ../../c-api/arg.rst:553
 msgid "PyArg_ParseTuple(args, \"O|O:ref\", &object, &callback)"
-msgstr "PyArg_ParseTuple(args, „O|O:ref“, &object, &callback)"
+msgstr "PyArg_ParseTuple(args, \"O|O:ref\", &object, &callback)"
 
 #: ../../c-api/arg.rst:557
 msgid ""
@@ -1413,7 +1413,7 @@ msgstr ""
 
 #: ../../c-api/arg.rst:602
 msgid "``s`` (:class:`str` or ``None``) [const char \\*]"
-msgstr "``s`` (:class:`str` oder ``None``) [const char *]"
+msgstr "``s`` (:class:`str` oder ``None``) [const char \\*]"
 
 #: ../../c-api/arg.rst:603
 msgid ""
@@ -1428,7 +1428,7 @@ msgstr ""
 msgid ""
 "``s#`` (:class:`str` or ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
 msgstr ""
-"``s#`` (:class:`str` oder ``None``) [const char *, :c:type:`Py_ssize_t`]"
+"``s#`` (:class:`str` oder ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
 
 #: ../../c-api/arg.rst:607
 msgid ""
@@ -1443,7 +1443,7 @@ msgstr ""
 
 #: ../../c-api/arg.rst:611
 msgid "``y`` (:class:`bytes`) [const char \\*]"
-msgstr "``y`` (:class:`bytes`) [const char *]"
+msgstr "``y`` (:class:`bytes`) [const char \\*]"
 
 #: ../../c-api/arg.rst:612
 msgid ""
@@ -1456,7 +1456,7 @@ msgstr ""
 
 #: ../../c-api/arg.rst:615
 msgid "``y#`` (:class:`bytes`) [const char \\*, :c:type:`Py_ssize_t`]"
-msgstr "``y#`` (:class:`bytes`) [const char *, :c:type:`Py_ssize_t`]"
+msgstr "``y#`` (:class:`bytes`) [const char \\*, :c:type:`Py_ssize_t`]"
 
 #: ../../c-api/arg.rst:616
 msgid ""
@@ -1475,7 +1475,7 @@ msgstr "Genau wie unter ``s``."
 msgid ""
 "``z#`` (:class:`str` or ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
 msgstr ""
-"``z#`` (:class:`str` oder ``None``) [const char *, :c:type:`Py_ssize_t`]"
+"``z#`` (:class:`str` oder ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
 
 #: ../../c-api/arg.rst:623 ../../c-api/arg.rst:639
 msgid "Same as ``s#``."
@@ -1483,7 +1483,7 @@ msgstr "Genau wie unter ``s#``."
 
 #: ../../c-api/arg.rst:625
 msgid "``u`` (:class:`str`) [const wchar_t \\*]"
-msgstr "``u`` (:class:`str`) [const wchar_t *]"
+msgstr "``u`` (:class:`str`) [const wchar_t \\*]"
 
 #: ../../c-api/arg.rst:626
 msgid ""
@@ -1498,7 +1498,7 @@ msgstr ""
 
 #: ../../c-api/arg.rst:630
 msgid "``u#`` (:class:`str`) [const wchar_t \\*, :c:type:`Py_ssize_t`]"
-msgstr "``u#`` (:class:`str`) [const wchar_t *, :c:type:`Py_ssize_t`]"
+msgstr "``u#`` (:class:`str`) [const wchar_t \\*, :c:type:`Py_ssize_t`]"
 
 #: ../../c-api/arg.rst:631
 msgid ""
@@ -1512,13 +1512,13 @@ msgstr ""
 
 #: ../../c-api/arg.rst:635
 msgid "``U`` (:class:`str` or ``None``) [const char \\*]"
-msgstr "``U`` (:class:`str` oder ``None``) [const char *]"
+msgstr "``U`` (:class:`str` oder ``None``) [const char \\*]"
 
 #: ../../c-api/arg.rst:638
 msgid ""
 "``U#`` (:class:`str` or ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
 msgstr ""
-"``U#`` (:class:`str` oder ``None``) [const char *, :c:type:`Py_ssize_t`]"
+"``U#`` (:class:`str` oder ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
 
 #: ../../c-api/arg.rst:642
 msgid "Convert a plain C :c:expr:`int` to a Python integer object."
@@ -1654,7 +1654,7 @@ msgid ""
 "exception.  If no exception has been raised yet, :exc:`SystemError` is set."
 msgstr ""
 "Ein Python-Objekt unverändert übergeben, aber eine neue :term:`starke "
-"Referenz <strong reference>` darauf erstellen (d. h., seine Referenzanzahl "
+"Referenz <strong reference>` darauf erstellen (d.h., seine Referenzanzahl "
 "wird um eins erhöht). Handelt es sich bei dem übergebenen Objekt um einen "
 "Zeiger vom Typ „ ``NULL`` “, wird davon ausgegangen, dass dies darauf "
 "zurückzuführen ist, dass der Aufruf, der das Argument erzeugt hat, einen "
@@ -1665,7 +1665,7 @@ msgstr ""
 
 #: ../../c-api/arg.rst:714
 msgid "``S`` (object) [PyObject \\*]"
-msgstr "``S`` (Objekt) [PyObject *]"
+msgstr "``S`` (Objekt) [PyObject \\*]"
 
 #: ../../c-api/arg.rst:715
 msgid "Same as ``O``."
@@ -1673,7 +1673,7 @@ msgstr "Genau wie unter ``O``."
 
 #: ../../c-api/arg.rst:717
 msgid "``N`` (object) [PyObject \\*]"
-msgstr "``N`` (Objekt) [PyObject *]"
+msgstr "``N`` (Objekt) [PyObject \\*]"
 
 #: ../../c-api/arg.rst:718
 msgid ""
