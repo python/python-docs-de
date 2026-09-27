@@ -9,6 +9,7 @@ Sphinxs 'i18n.inconsistent_references', plus zusätzliche Muster
 import re
 import sys
 from pathlib import Path
+from collections import Counter
 
 ROLE_RE = re.compile(r":([a-zA-Z][\w-]*):`([^`]+)`")
 
@@ -87,15 +88,23 @@ def check_file(path: Path) -> list[str]:
             continue
         orig_roles = extract_roles(msgid)
         trans_roles = extract_roles(msgstr)
-        if orig_roles != trans_roles:
-            missing = [r for r in orig_roles if r not in trans_roles]
-            extra = [r for r in trans_roles if r not in orig_roles]
+        anzahl_quelle = Counter(orig_roles)
+        anzahl_ziel = Counter(trans_roles)
+        if anzahl_quelle != anzahl_ziel:
             parts = []
-            if missing:
-                parts.append(f"fehlt: {missing}")
-            if extra:
-                parts.append(f"zusätzlich/falsch: {extra}")
-            findings.append(f"  Zeile ~{lineno}: {', '.join(parts)}")
+            for rolle in anzahl_quelle:
+                if anzahl_quelle[rolle] > anzahl_ziel[rolle]:
+                    parts.append(
+                        f"fehlt: {rolle} "
+                        f"({anzahl_quelle[rolle]}x im msgid, {anzahl_ziel[rolle]}x im msgstr)"
+                    )
+            for rolle in anzahl_ziel:
+                if anzahl_ziel[rolle] > anzahl_quelle[rolle]:
+                    parts.append(
+                        f"zusätzlich/falsch: {rolle} "
+                        f"({anzahl_ziel[rolle]}x im msgstr, {anzahl_quelle[rolle]}x im msgid)"
+                    )
+            findings.append(f"  Zeile ~{lineno}: " + "; ".join(parts))
     return findings
 
 
