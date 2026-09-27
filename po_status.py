@@ -77,7 +77,7 @@ def human_size(num_bytes: int) -> str:
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("path", nargs="?", default=".", help="Wurzelverzeichnis (Standard: .)")
-    parser.add_argument("--exclude", default="c-api,.venv,.git",
+    parser.add_argument("--exclude", default=".venv,.git",
                          help="Kommagetrennte Ordnernamen, die übersprungen werden")
     parser.add_argument("--sort", choices=["path", "percent", "size"], default="percent")
     parser.add_argument("--max-percent", type=float, default=100.1,
