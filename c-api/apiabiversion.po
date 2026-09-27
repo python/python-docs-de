@@ -2,11 +2,11 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2026
 # Jyst Breisgau, 2026
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -66,8 +66,8 @@ msgid ""
 "``0xC`` for release candidate or ``0xF`` for final."
 msgstr ""
 "Die  ``a``  unter ``3.4.1a2``. Dies kann ``0xA`` für die Alpha-Version, "
-"``0xB`` für die Beta-Version, ``0xC`` für den Release Candidate oder ``0xF``"
-" für die finale Version sein."
+"``0xB`` für die Beta-Version, ``0xC`` für den Release Candidate oder ``0xF`` "
+"für die finale Version sein."
 
 #: ../../c-api/apiabiversion.rst:39
 msgid "The ``2`` in ``3.4.1a2``. Zero for final releases."
@@ -76,19 +76,18 @@ msgstr ""
 
 #: ../../c-api/apiabiversion.rst:43
 msgid ""
-"The Python version number encoded in a single integer. See "
-":c:func:`Py_PACK_FULL_VERSION` for the encoding details."
+"The Python version number encoded in a single integer. See :c:func:"
+"`Py_PACK_FULL_VERSION` for the encoding details."
 msgstr ""
 "Die Python-Versionsnummer, kodiert als einzelne Ganzzahl. Einzelheiten zur "
 "Kodierung findest du unter :c:func:`Py_PACK_FULL_VERSION`."
 
 #: ../../c-api/apiabiversion.rst:46
 msgid ""
-"Use this for numeric comparisons, for example, ``#if PY_VERSION_HEX >= "
-"...``."
+"Use this for numeric comparisons, for example, ``#if PY_VERSION_HEX >= ...``."
 msgstr ""
-"Verwenden dies für numerische Vergleiche, zum Beispiel: ``#if PY_VERSION_HEX"
-" >= ...``."
+"Verwenden dies für numerische Vergleiche, zum Beispiel: ``#if PY_VERSION_HEX "
+">= ...``."
 
 #: ../../c-api/apiabiversion.rst:49
 msgid "These macros are defined in :source:`Include/patchlevel.h`."
@@ -100,21 +99,21 @@ msgstr "Laufzeitversion"
 
 #: ../../c-api/apiabiversion.rst:57
 msgid ""
-"The Python runtime version number encoded in a single constant integer. See "
-":c:func:`Py_PACK_FULL_VERSION` for the encoding details. This contains the "
+"The Python runtime version number encoded in a single constant integer. See :"
+"c:func:`Py_PACK_FULL_VERSION` for the encoding details. This contains the "
 "Python version used at run time."
 msgstr ""
 "Die Versionsnummer der Python-Laufzeitumgebung, kodiert als einzelne "
-"konstante Ganzzahl. Einzelheiten zur Kodierung findest du unter "
-":c:func:`Py_PACK_FULL_VERSION`. Diese enthält die zur Laufzeit verwendete "
-"Python-Version."
+"konstante Ganzzahl. Einzelheiten zur Kodierung findest du unter :c:func:"
+"`Py_PACK_FULL_VERSION`. Diese enthält die zur Laufzeit verwendete Python-"
+"Version."
 
 #: ../../c-api/apiabiversion.rst:61
 msgid ""
 "Use this for numeric comparisons, for example, ``if (Py_Version >= ...)``."
 msgstr ""
-"Verwende dies für numerische Vergleiche, zum Beispiel: ``if (Py_Version >= "
-"...)``."
+"Verwende dies für numerische Vergleiche, zum Beispiel: ``if (Py_Version "
+">= ...)``."
 
 #: ../../c-api/apiabiversion.rst:67
 msgid "Bit-packing macros"
@@ -125,8 +124,8 @@ msgid ""
 "Return the given version, encoded as a single 32-bit integer with the "
 "following structure:"
 msgstr ""
-"Gibt die angegebene Version zurück, kodiert als einzelne 32-Bit-Ganzzahl mit"
-" folgender Struktur:"
+"Gibt die angegebene Version zurück, kodiert als einzelne 32-Bit-Ganzzahl mit "
+"folgender Struktur:"
 
 #: ../../c-api/apiabiversion.rst:77
 msgid "Argument"
@@ -290,8 +289,8 @@ msgid ""
 "Out-of range bits in the arguments are ignored. That is, the macro can be "
 "defined as:"
 msgstr ""
-"Bits in den Argumenten, die außerhalb des zulässigen Bereichs liegen, werden"
-" ignoriert. Das heißt, das Makro kann wie folgt definiert werden:"
+"Bits in den Argumenten, die außerhalb des zulässigen Bereichs liegen, werden "
+"ignoriert. Das heißt, das Makro kann wie folgt definiert werden:"
 
 #: ../../c-api/apiabiversion.rst:103
 msgid ""

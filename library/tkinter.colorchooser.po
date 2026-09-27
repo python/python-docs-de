@@ -2,7 +2,7 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -29,22 +29,22 @@ msgstr ""
 msgid ""
 "The :mod:`!tkinter.colorchooser` module provides the :class:`Chooser` class "
 "as an interface to the native color picker dialog. ``Chooser`` implements a "
-"modal color choosing dialog window. The ``Chooser`` class inherits from the "
-":class:`~tkinter.commondialog.Dialog` class."
+"modal color choosing dialog window. The ``Chooser`` class inherits from the :"
+"class:`~tkinter.commondialog.Dialog` class."
 msgstr ""
 
 #: ../../library/tkinter.colorchooser.rst:18
 msgid ""
 "The class implementing the modal color-choosing dialog. Most applications "
-"use the :func:`askcolor` convenience function rather than instantiating this"
-" class directly."
+"use the :func:`askcolor` convenience function rather than instantiating this "
+"class directly."
 msgstr ""
 
 #: ../../library/tkinter.colorchooser.rst:24
 msgid ""
 "Show a modal color-choosing dialog and return the chosen color. *color* is "
-"the color selected when the dialog opens. The return value is a tuple ``((r,"
-" g, b), hexstr)``, where ``r``, ``g`` and ``b`` are the red, green and blue "
+"the color selected when the dialog opens. The return value is a tuple ``((r, "
+"g, b), hexstr)``, where ``r``, ``g`` and ``b`` are the red, green and blue "
 "components as integers in the range 0–255 and *hexstr* is the equivalent Tk "
 "color string, such as ``'#ff8000'``. If the user cancels the dialog, "
 "``(None, None)`` is returned."

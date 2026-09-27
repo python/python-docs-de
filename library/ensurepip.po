@@ -2,10 +2,10 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Swen Bachmann, 2026
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -31,9 +31,9 @@ msgstr ""
 
 #: ../../library/ensurepip.rst:14
 msgid ""
-"The :mod:`!ensurepip` package provides support for bootstrapping the ``pip``"
-" installer into an existing Python installation or virtual environment. This"
-" bootstrapping approach reflects the fact that ``pip`` is an independent "
+"The :mod:`!ensurepip` package provides support for bootstrapping the ``pip`` "
+"installer into an existing Python installation or virtual environment. This "
+"bootstrapping approach reflects the fact that ``pip`` is an independent "
 "project with its own release cycle, and the latest available stable version "
 "is bundled with maintenance and feature releases of the CPython reference "
 "interpreter."
@@ -112,8 +112,8 @@ msgstr ""
 msgid ""
 "This invocation will install ``pip`` if it is not already installed, but "
 "otherwise does nothing. To ensure the installed version of ``pip`` is at "
-"least as recent as the one available in ``ensurepip``, pass the "
-"``--upgrade`` option::"
+"least as recent as the one available in ``ensurepip``, pass the ``--"
+"upgrade`` option::"
 msgstr ""
 
 #: ../../library/ensurepip.rst:63
@@ -131,8 +131,8 @@ msgstr ""
 #: ../../library/ensurepip.rst:72
 msgid ""
 "Installs ``pip`` relative to the given root directory rather than the root "
-"of the currently active virtual environment (if any) or the default root for"
-" the current Python installation."
+"of the currently active virtual environment (if any) or the default root for "
+"the current Python installation."
 msgstr ""
 
 #: ../../library/ensurepip.rst:78
@@ -144,15 +144,15 @@ msgstr ""
 
 #: ../../library/ensurepip.rst:82
 msgid ""
-"By default, the scripts ``pipX`` and ``pipX.Y`` will be installed (where X.Y"
-" stands for the version of Python used to invoke ``ensurepip``). The scripts"
-" installed can be controlled through two additional command line options:"
+"By default, the scripts ``pipX`` and ``pipX.Y`` will be installed (where X.Y "
+"stands for the version of Python used to invoke ``ensurepip``). The scripts "
+"installed can be controlled through two additional command line options:"
 msgstr ""
 
 #: ../../library/ensurepip.rst:89
 msgid ""
-"If an alternate installation is requested, the ``pipX`` script will *not* be"
-" installed."
+"If an alternate installation is requested, the ``pipX`` script will *not* be "
+"installed."
 msgstr ""
 
 #: ../../library/ensurepip.rst:94
@@ -193,8 +193,8 @@ msgstr ""
 
 #: ../../library/ensurepip.rst:119
 msgid ""
-"*upgrade* indicates whether or not to upgrade an existing installation of an"
-" earlier version of ``pip`` to the available version."
+"*upgrade* indicates whether or not to upgrade an existing installation of an "
+"earlier version of ``pip`` to the available version."
 msgstr ""
 
 #: ../../library/ensurepip.rst:122
@@ -205,8 +205,8 @@ msgstr ""
 
 #: ../../library/ensurepip.rst:125
 msgid ""
-"By default, the scripts ``pipX`` and ``pipX.Y`` will be installed (where X.Y"
-" stands for the current version of Python)."
+"By default, the scripts ``pipX`` and ``pipX.Y`` will be installed (where X.Y "
+"stands for the current version of Python)."
 msgstr ""
 
 #: ../../library/ensurepip.rst:128
@@ -238,15 +238,15 @@ msgstr ""
 
 #: ../../library/ensurepip.rst:143
 msgid ""
-"The bootstrapping process has side effects on both ``sys.path`` and "
-"``os.environ``. Invoking the command line interface in a subprocess instead "
+"The bootstrapping process has side effects on both ``sys.path`` and ``os."
+"environ``. Invoking the command line interface in a subprocess instead "
 "allows these side effects to be avoided."
 msgstr ""
 
 #: ../../library/ensurepip.rst:149
 msgid ""
 "The bootstrapping process may install additional modules required by "
-"``pip``, but other software should not assume those dependencies will always"
-" be present by default (as the dependencies may be removed in a future "
+"``pip``, but other software should not assume those dependencies will always "
+"be present by default (as the dependencies may be removed in a future "
 "version of ``pip``)."
 msgstr ""

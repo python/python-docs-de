@@ -2,7 +2,7 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -39,8 +39,8 @@ msgstr ""
 msgid ""
 "The :class:`Font` class represents a named font. *Font* instances are given "
 "unique names and can be specified by their family, size, and style "
-"configuration. Named fonts are Tk's method of creating and identifying fonts"
-" as a single object, rather than specifying a font by its attributes with "
+"configuration. Named fonts are Tk's method of creating and identifying fonts "
+"as a single object, rather than specifying a font by its attributes with "
 "each occurrence."
 msgstr ""
 
@@ -140,14 +140,14 @@ msgstr ""
 #: ../../library/tkinter.font.rst:84
 msgid ""
 "Return amount of space the text would occupy on the specified display when "
-"formatted in the current font, as an integer number of pixels. If no display"
-" is specified then the main application window is assumed."
+"formatted in the current font, as an integer number of pixels. If no display "
+"is specified then the main application window is assumed."
 msgstr ""
 
 #: ../../library/tkinter.font.rst:90
 msgid ""
-"Return font-specific data. With no options, return a dictionary mapping each"
-" metric name to its integer value; if one option name is given, return that "
+"Return font-specific data. With no options, return a dictionary mapping each "
+"metric name to its integer value; if one option name is given, return that "
 "metric's value as an integer. Options include:"
 msgstr ""
 

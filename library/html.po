@@ -2,7 +2,7 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -33,8 +33,8 @@ msgstr ""
 msgid ""
 "Convert the characters ``&``, ``<`` and ``>`` in string *s* to HTML-safe "
 "sequences.  Use this if you need to display text that might contain such "
-"characters in HTML.  If the optional flag *quote* is true (the default), the"
-" characters (``\"``) and (``'``) are also translated; this helps for "
+"characters in HTML.  If the optional flag *quote* is true (the default), the "
+"characters (``\"``) and (``'``) are also translated; this helps for "
 "inclusion in an HTML attribute value delimited by quotes, as in ``<a "
 "href=\"...\">``. If *quote* is set to false, the characters (``\"``) and "
 "(``'``) are not translated."
@@ -42,11 +42,11 @@ msgstr ""
 
 #: ../../library/html.rst:29
 msgid ""
-"Convert all named and numeric character references (e.g. ``&gt;``, "
-"``&#62;``, ``&#x3e;``) in the string *s* to the corresponding Unicode "
-"characters.  This function uses the rules defined by the HTML 5 standard for"
-" both valid and invalid character references, and the :data:`list of HTML 5 "
-"named character references <html.entities.html5>`."
+"Convert all named and numeric character references (e.g. ``&gt;``, ``&#62;"
+"``, ``&#x3e;``) in the string *s* to the corresponding Unicode characters.  "
+"This function uses the rules defined by the HTML 5 standard for both valid "
+"and invalid character references, and the :data:`list of HTML 5 named "
+"character references <html.entities.html5>`."
 msgstr ""
 
 #: ../../library/html.rst:39

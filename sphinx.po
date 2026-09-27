@@ -87,34 +87,34 @@ msgid "HTML"
 msgstr "HTML"
 
 #: ../../tools/templates/download.html:44
-msgid "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Download</a>"
+msgid ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
-"html.zip\">Herunterladen</a>"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Herunterladen</a>"
 
 #: ../../tools/templates/download.html:45
 msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.tar.bz2\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
-"html.tar.bz2\">Herunterladen</a>"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.tar."
+"bz2\">Herunterladen</a>"
 
 #: ../../tools/templates/download.html:48
 msgid "Plain text"
 msgstr "Reiner Text"
 
 #: ../../tools/templates/download.html:49
-msgid "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Download</a>"
+msgid ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
-"text.zip\">Herunterladen</a>"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Herunterladen</a>"
 
 #: ../../tools/templates/download.html:50
 msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.tar.bz2\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
-"text.tar.bz2\">Herunterladen</a>"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.tar."
+"bz2\">Herunterladen</a>"
 
 #: ../../tools/templates/download.html:53
 msgid "Texinfo"
@@ -124,16 +124,16 @@ msgstr "Texinfo"
 msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.zip\">Download</a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
-"texinfo.zip\">Herunterladen</a>"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo."
+"zip\">Herunterladen</a>"
 
 #: ../../tools/templates/download.html:55
 msgid ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
-"texinfo.tar.bz2\">Download</a>"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.tar.bz2\">Download</"
+"a>"
 msgstr ""
-"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
-"texinfo.tar.bz2\">Herunterladen</a>"
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-texinfo.tar."
+"bz2\">Herunterladen</a>"
 
 #: ../../tools/templates/download.html:58
 msgid "EPUB"
@@ -141,30 +141,37 @@ msgstr "EPUB"
 
 #: ../../tools/templates/download.html:59
 msgid "<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Download</a>"
-msgstr "<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Herunterladen</a>"
+msgstr ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Herunterladen</a>"
 
 #: ../../tools/templates/download.html:64
 msgid ""
 "\n"
 "We no longer provide pre-built PDFs of the documentation.\n"
 "To build a PDF archive, follow the instructions in the\n"
-"<a href=\"https://devguide.python.org/documentation/start-documenting/#building-the-documentation\">Developer's Guide</a>\n"
-"and run <code>make dist-pdf</code> in the <code>Doc/</code> directory of a copy of the CPython repository.\n"
+"<a href=\"https://devguide.python.org/documentation/start-documenting/"
+"#building-the-documentation\">Developer's Guide</a>\n"
+"and run <code>make dist-pdf</code> in the <code>Doc/</code> directory of a "
+"copy of the CPython repository.\n"
 msgstr ""
 "\n"
 "Wir stellen keine vorgefertigten PDFs der Dokumentation mehr bereit.\n"
 "Um ein PDF-Archiv zu erzeugen, folge der Anleitung im\n"
-"<a href=\"https://devguide.python.org/documentation/start-documenting/#building-the-documentation\">Developer's Guide</a>\n"
-"und führe <code>make dist-pdf</code> im Verzeichnis <code>Doc/</code> einer Kopie des CPython-Repositorys aus.\n"
+"<a href=\"https://devguide.python.org/documentation/start-documenting/"
+"#building-the-documentation\">Developer's Guide</a>\n"
+"und führe <code>make dist-pdf</code> im Verzeichnis <code>Doc/</code> einer "
+"Kopie des CPython-Repositorys aus.\n"
 
 #: ../../tools/templates/download.html:71
 msgid ""
 "\n"
-"See the <a href=\"https://docs.python.org/%(version)s/archives/\">directory listing</a>\n"
+"See the <a href=\"https://docs.python.org/%(version)s/archives/\">directory "
+"listing</a>\n"
 "for file sizes."
 msgstr ""
 "\n"
-"Die <a href=\"https://docs.python.org/%(version)s/archives/\">Verzeichnisübersicht</a>\n"
+"Die <a href=\"https://docs.python.org/%(version)s/archives/"
+"\">Verzeichnisübersicht</a>\n"
 "zeigt die Dateigrößen."
 
 #: ../../tools/templates/download.html:75
@@ -510,7 +517,8 @@ msgid ""
 "This document is for an old version of Python that is no longer supported.\n"
 "    You should upgrade, and read the"
 msgstr ""
-"Dieses Dokument gehört zu einer alten Python-Version, die nicht mehr unterstützt wird.\n"
+"Dieses Dokument gehört zu einer alten Python-Version, die nicht mehr "
+"unterstützt wird.\n"
 "    Du solltest aktualisieren und Folgendes lesen:"
 
 #: ../../tools/templates/layout.html:8
@@ -519,10 +527,12 @@ msgstr "Python-Dokumentation für die aktuelle stabile Version"
 
 #: ../../tools/templates/layout.html:14
 msgid ""
-"This is a deploy preview created from a <a href=\"%(repository_url)s/pull/%(pr_id)s\">pull request</a>.\n"
+"This is a deploy preview created from a <a href=\"%(repository_url)s/pull/"
+"%(pr_id)s\">pull request</a>.\n"
 "  For authoritative documentation, see"
 msgstr ""
-"Dies ist eine Deploy-Vorschau, erzeugt aus einem <a href=\"%(repository_url)s/pull/%(pr_id)s\">Pull Request</a>.\n"
+"Dies ist eine Deploy-Vorschau, erzeugt aus einem <a "
+"href=\"%(repository_url)s/pull/%(pr_id)s\">Pull Request</a>.\n"
 "  Die maßgebliche Dokumentation findest du unter"
 
 #: ../../tools/templates/layout.html:16

@@ -2,10 +2,10 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Swen Bachmann, 2026
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -41,8 +41,7 @@ msgid "The module :mod:`!curses.panel` defines the following exception:"
 msgstr ""
 
 #: ../../library/curses.panel.rst:26
-msgid ""
-"Exception raised when a curses panel library function returns an error."
+msgid "Exception raised when a curses panel library function returns an error."
 msgstr ""
 
 #: ../../library/curses.panel.rst:29
@@ -106,8 +105,8 @@ msgstr ""
 
 #: ../../library/curses.panel.rst:109
 msgid ""
-"Hide the panel. This does not delete the object, it just makes the window on"
-" screen invisible."
+"Hide the panel. This does not delete the object, it just makes the window on "
+"screen invisible."
 msgstr ""
 
 #: ../../library/curses.panel.rst:115

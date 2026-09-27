@@ -2,10 +2,10 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Swen Bachmann, 2026
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -28,8 +28,8 @@ msgstr "Python/C-API-Referenzhandbuch"
 #: ../../c-api/index.rst:7
 msgid ""
 "This manual documents the API used by C and C++ programmers who want to "
-"write extension modules or embed Python.  It is a companion to "
-":ref:`extending-index`, which describes the general principles of extension "
+"write extension modules or embed Python.  It is a companion to :ref:"
+"`extending-index`, which describes the general principles of extension "
 "writing but does not document the API functions in detail."
 msgstr ""
 "Dieses Handbuch dokumentiert die API, die von C- und C++-Programmierern "

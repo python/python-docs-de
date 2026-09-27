@@ -2,7 +2,7 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -23,8 +23,8 @@ msgstr ""
 
 #: ../../library/frameworks.rst:9
 msgid ""
-"This chapter is no longer maintained, and the modules it contained have been"
-" moved to their respective topical documentation."
+"This chapter is no longer maintained, and the modules it contained have been "
+"moved to their respective topical documentation."
 msgstr ""
 
 #: ../../library/frameworks.rst:11

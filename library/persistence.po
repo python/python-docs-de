@@ -2,7 +2,7 @@
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -26,8 +26,8 @@ msgid ""
 "The modules described in this chapter support storing Python data in a "
 "persistent form on disk.  The :mod:`pickle` and :mod:`marshal` modules can "
 "turn many Python data types into a stream of bytes and then recreate the "
-"objects from the bytes.  The various DBM-related modules support a family of"
-" hash-based file formats that store a mapping of strings to other strings."
+"objects from the bytes.  The various DBM-related modules support a family of "
+"hash-based file formats that store a mapping of strings to other strings."
 msgstr ""
 
 #: ../../library/persistence.rst:13
