@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-21 19:56+0000\n"
+"POT-Creation-Date: 2026-09-28 03:11+0000\n"
 "PO-Revision-Date: 2026-05-08 17:17+0000\n"
 "Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -31,7 +31,7 @@ msgstr ""
 msgid "A.M. Kuchling <amk@amk.ca>"
 msgstr ""
 
-#: ../../howto/regex.rst-1
+#: ../../howto/regex.rst:16
 msgid "Abstract"
 msgstr ""
 

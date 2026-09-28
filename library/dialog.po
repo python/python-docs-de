@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-23 19:04+0000\n"
+"POT-Creation-Date: 2026-09-28 03:11+0000\n"
 "PO-Revision-Date: 2026-05-08 17:17+0000\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../library/dialog.rst:2
@@ -139,32 +139,32 @@ msgid ""
 "listed below:"
 msgstr ""
 
-#: ../../library/dialog.rst:0
+#: ../../library/dialog.rst:114
 msgid "*parent* - the window to place the dialog on top of"
 msgstr ""
 
-#: ../../library/dialog.rst:0
+#: ../../library/dialog.rst:116
 msgid "*title* - the title of the window"
 msgstr ""
 
-#: ../../library/dialog.rst:0
+#: ../../library/dialog.rst:118
 msgid "*initialdir* - the directory that the dialog starts in"
 msgstr ""
 
-#: ../../library/dialog.rst:0
+#: ../../library/dialog.rst:120
 msgid "*initialfile* - the file selected upon opening of the dialog"
 msgstr ""
 
-#: ../../library/dialog.rst:0
+#: ../../library/dialog.rst:122
 msgid ""
 "*filetypes* - a sequence of (label, pattern) tuples, '*' wildcard is allowed"
 msgstr ""
 
-#: ../../library/dialog.rst:0
+#: ../../library/dialog.rst:124
 msgid "*defaultextension* - default extension to append to file (save dialogs)"
 msgstr ""
 
-#: ../../library/dialog.rst:0
+#: ../../library/dialog.rst:126
 msgid "*multiple* - when true, selection of multiple items is allowed"
 msgstr ""
 
