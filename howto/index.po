@@ -77,7 +77,7 @@ msgstr ":ref:`logging-cookbook`"
 
 #: ../../howto/index.rst:53
 msgid ":ref:`regex-howto`"
-msgstr ""
+msgstr ":ref:`regex-howto`"
 
 #: ../../howto/index.rst:54
 msgid ":ref:`sortinghowto`"
