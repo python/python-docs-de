@@ -62,24 +62,36 @@ msgid ""
 "a convenient way to produce simple graphical output without bringing in "
 "external libraries."
 msgstr ""
+"Turtle-Grafik ist eine Umsetzung `der Zeichenwerkzeuge, die 1967 in Logo "
+"eingeführt wurden <https://en.wikipedia.org/wiki/Turtle_(robot)>`_. Sie "
+"entstand als Lehrmittel, und ihre unmittelbare, sichtbare Rückmeldung macht "
+"sie zu einem wirksamen Mittel, damit Lernende mit Programmierkonzepten in "
+"Berührung kommen. Außerdem ist sie eine bequeme Möglichkeit, einfache "
+"grafische Ausgaben zu erzeugen, ohne externe Bibliotheken einzubinden."
 
 #: ../../library/turtle.rst:47
 msgid "This document includes four main sections:"
-msgstr ""
+msgstr "Dieses Dokument umfasst vier Hauptabschnitte:"
 
 #: ../../library/turtle.rst:49
 msgid ":ref:`turtle-tutorial` teaches the basics of turtle drawing."
 msgstr ""
+":ref:`turtle-tutorial` vermittelt die Grundlagen des Zeichnens mit der "
+"Turtle."
 
 #: ../../library/turtle.rst:50
 msgid ""
 ":ref:`turtle-reference` describes the functions, methods and classes this "
 "module defines."
 msgstr ""
+":ref:`turtle-reference` beschreibt die Funktionen, Methoden und Klassen, die "
+"dieses Modul definiert."
 
 #: ../../library/turtle.rst:52
 msgid ":ref:`turtle-howtos` details how to handle specific tasks."
 msgstr ""
+":ref:`turtle-howtos` beschreibt im Detail, wie bestimmte Aufgaben zu lösen "
+"sind."
 
 #: ../../library/turtle.rst:53
 msgid ""
@@ -98,6 +110,13 @@ msgid ""
 "from your distributor (that is, whoever provided Python to you). Check this "
 "in advance if you're planning to use turtle graphics with a learner."
 msgstr ""
+"Turtle-Grafik benötigt das :term:`optionale Modul <optional module>` "
+":mod:`tkinter`. Die Installationsprogramme von python.org für Windows und "
+"macOS enthalten es, manche Linux-Distributionen und andere Plattformen "
+"packen es jedoch gesondert. Wenn ``import turtle`` mit einem Fehler "
+"scheitert, in dem ``_tkinter`` vorkommt, suche nach der Dokumentation "
+"deines Distributors (also dessen, der dir Python bereitgestellt hat). Prüfe "
+"das vorab, wenn du Turtle-Grafik mit Lernenden einsetzen willst."
 
 #: ../../library/turtle.rst:71
 msgid "Tutorial"
@@ -361,7 +380,7 @@ msgstr ""
 
 #: ../../library/turtle.rst:197
 msgid "How-to guides"
-msgstr ""
+msgstr "How-to-Anleitungen"
 
 #: ../../library/turtle.rst:199
 msgid "This section covers some typical turtle use-cases and approaches."
@@ -594,7 +613,7 @@ msgstr ""
 
 #: ../../library/turtle.rst:309
 msgid "Reference"
-msgstr ""
+msgstr "Referenz"
 
 #: ../../library/turtle.rst:313
 msgid ""
