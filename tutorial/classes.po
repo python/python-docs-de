@@ -87,9 +87,9 @@ msgstr ""
 "übergeben wird. Wie in Smalltalk sind Klassen selbst Objekte. Dies bietet "
 "eine Semantik zum Importieren und Umbenennen. Anders als in C++ und Modula-3 "
 "können integrierte Typen als Basisklassen für Erweiterungen durch den "
-"Benutzer verwendet werden. Zudem können, wie in C++, die meisten integrierten "
-"Operatoren mit spezieller Syntax (arithmetische Operatoren, Indizierung "
-"usw.) für Klasseninstanzen neu definiert werden."
+"Benutzer verwendet werden. Zudem können, wie in C++, die meisten "
+"integrierten Operatoren mit spezieller Syntax (arithmetische Operatoren, "
+"Indizierung usw.) für Klasseninstanzen neu definiert werden."
 
 #: ../../tutorial/classes.rst:34
 msgid ""

@@ -4635,9 +4635,9 @@ msgid ""
 "The built-in default configuration mimics the appearance and behaviour of "
 "the old turtle module in order to retain best possible compatibility with it."
 msgstr ""
-"Die integrierte Standardkonfiguration ahmt das Erscheinungsbild und Verhalten "
-"des alten turtle-Moduls nach, um eine möglichst gute Kompatibilität damit zu "
-"bewahren."
+"Die integrierte Standardkonfiguration ahmt das Erscheinungsbild und "
+"Verhalten des alten turtle-Moduls nach, um eine möglichst gute "
+"Kompatibilität damit zu bewahren."
 
 #: ../../library/turtle.rst:2727
 msgid ""
@@ -4728,8 +4728,8 @@ msgid ""
 "*shape* can be any of the built-in shapes, e.g: arrow, turtle, etc.  For "
 "more info try ``help(shape)``."
 msgstr ""
-"*shape* kann eine der integrierten Formen sein, z. B.: arrow, turtle usw. Für "
-"weitere Informationen versuche ``help(shape)``."
+"*shape* kann eine der integrierten Formen sein, z. B.: arrow, turtle usw. "
+"Für weitere Informationen versuche ``help(shape)``."
 
 #: ../../library/turtle.rst:2765
 msgid ""
