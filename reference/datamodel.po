@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -833,7 +832,7 @@ msgstr ""
 
 #: ../../reference/datamodel.rst:499
 msgid "There are two intrinsic mapping types:"
-msgstr ""
+msgstr "Es gibt zwei intrinsische Zuordnungstypen:"
 
 #: ../../reference/datamodel.rst:503
 msgid "Dictionaries"
@@ -904,7 +903,7 @@ msgstr ""
 
 #: ../../reference/datamodel.rst:539
 msgid "Frozen dictionaries"
-msgstr ""
+msgstr "Gefrorene Wörterbücher"
 
 #: ../../reference/datamodel.rst:543
 msgid ""
@@ -914,6 +913,12 @@ msgid ""
 "of a set, or as a key in another mapping.  :class:`!frozendict` is not a "
 "subclass of :class:`dict`; it inherits directly from :class:`object`."
 msgstr ""
+"Diese stellen ein unveränderliches Wörterbuch dar. Sie werden durch den "
+"integrierten Konstruktor :func:`frozendict` erstellt. Ein „frozendict“ ist :"
+"term:`hashable`, wenn alle seine Schlüssel und Werte hashbar sind. In diesem "
+"Fall kann es als Element einer Menge oder als Schlüssel in einer anderen "
+"Zuordnung verwendet werden. :class:`!frozendict` ist keine Unterklasse von :"
+"class:`dict`, sondern erbt direkt von :class:`object`."
 
 #: ../../reference/datamodel.rst:553
 msgid "Callable types"
@@ -1295,6 +1300,15 @@ msgid ""
 "`StopIteration` exception is raised and the iterator will have reached the "
 "end of the set of values to be returned."
 msgstr ""
+"Eine Funktion oder Methode, die einen :keyword:`yield`-Ausdruck enthält "
+"(siehe Abschnitt :ref:`yieldexpr`), heißt :dfn:`Generatorfunktion`. Beim "
+"Aufruf liefert eine solche Funktion stets ein :term:`iterator`-Objekt, mit "
+"dem sich der Rumpf der Funktion ausführen lässt: Der Aufruf der Methode :"
+"meth:`iterator.__next__` des Iterators führt die Funktion so weit aus, bis "
+"sie über den :keyword:`!yield`-Ausdruck einen Wert liefert. Führt die "
+"Funktion eine :keyword:`return`-Anweisung aus oder läuft sie bis zum Ende "
+"durch, wird eine :exc:`StopIteration`-Ausnahme ausgelöst und der Iterator "
+"hat das Ende der zurückzugebenden Werte erreicht."
 
 #: ../../reference/datamodel.rst:813
 msgid "Coroutine functions"
@@ -1327,6 +1341,11 @@ msgid ""
 "`asynchronous iterator` object which can be used in an :keyword:`async for` "
 "statement to execute the body of the function."
 msgstr ""
+"Eine Funktion oder Methode, die mit :keyword:`async def` definiert ist und "
+"einen :keyword:`yield`-Ausdruck enthält, heißt :dfn:`asynchrone "
+"Generatorfunktion`. Beim Aufruf liefert eine solche Funktion ein :term:"
+"`asynchronous iterator`-Objekt, das sich in einer :keyword:`async for`-"
+"Anweisung verwenden lässt, um den Rumpf der Funktion auszuführen."
 
 #: ../../reference/datamodel.rst:838
 msgid ""
@@ -1770,6 +1789,9 @@ msgid ""
 ":attr:`!__file__` is an optional attribute that may or may not be set. Both "
 "attributes should be a :class:`str` when they are available."
 msgstr ""
+":attr:`!__file__` ist ein optionales Attribut, das gesetzt sein kann, aber "
+"nicht muss. Beide Attribute sollten vom Typ :class:`str` sein, sofern sie "
+"vorhanden sind."
 
 #: ../../reference/datamodel.rst:1094
 msgid ""
@@ -1781,12 +1803,23 @@ msgid ""
 "`import system <importsystem>` may opt to leave it unset if it has no "
 "semantic meaning (for example, a module loaded from a database)."
 msgstr ""
+":attr:`!__file__` ist ein optionales Attribut und gibt den Pfadnamen der "
+"Datei an, aus der das Modul geladen wurde (sofern es aus einer Datei "
+"stammt), beziehungsweise den Pfadnamen der Bibliotheksdatei bei "
+"Erweiterungsmodulen, die dynamisch aus einer Shared Library geladen werden. "
+"Bei bestimmten Modularten kann es fehlen, etwa bei C-Modulen, die statisch "
+"in den Interpreter eingebunden sind, und das :ref:`Importsystem "
+"<importsystem>` kann darauf verzichten, es zu setzen, wenn es keine "
+"inhaltliche Bedeutung hat (zum Beispiel bei einem Modul, das aus einer "
+"Datenbank geladen wurde)."
 
 #: ../../reference/datamodel.rst:1102
 msgid ""
 "The ``__cached__`` attribute is no longer set on modules or taken into "
 "consideration by the import system or standard library."
 msgstr ""
+"Das Attribut ``__cached__`` wird an Modulen nicht mehr gesetzt und weder vom "
+"Importsystem noch von der Standardbibliothek berücksichtigt."
 
 #: ../../reference/datamodel.rst:1107
 msgid "Other writable attributes on module objects"
@@ -1838,10 +1871,19 @@ msgid ""
 "bodies, or :keyword:`try`/:keyword:`except`/:keyword:`finally` blocks are "
 "unaffected."
 msgstr ""
+"Ein Container (ein Objekt, das :meth:`~object.__contains__` implementiert) "
+"mit vollständig qualifizierten Modulnamen als Zeichenketten. Ist er auf "
+"Modulebene definiert, wird jede gewöhnliche :keyword:`import`-Anweisung in "
+"diesem Modul, deren Zielmodulname in diesem Container vorkommt, als :ref:"
+"`verzögerter Import <lazy-imports>` behandelt, so als wäre das "
+"Schlüsselwort :keyword:`lazy` verwendet worden. Importe innerhalb von "
+"Funktionen, Klassenrümpfen oder :keyword:`try`/:keyword:`except`/:keyword:"
+"`finally`-Blöcken sind davon nicht betroffen."
 
 #: ../../reference/datamodel.rst:1144
 msgid "See :ref:`lazy-modules-compat` for details and examples."
 msgstr ""
+"Einzelheiten und Beispiele findest du unter :ref:`lazy-modules-compat`."
 
 #: ../../reference/datamodel.rst:1149
 msgid "Module dictionaries"
@@ -2957,6 +2999,9 @@ msgid ""
 "example, ``slice[float]`` may be used in type annotations to indicate a "
 "slice containing :type:`float` objects."
 msgstr ""
+"Der Typ :func:`slice` unterstützt nun :ref:`Indizierung <subscriptions>`. So "
+"lässt sich zum Beispiel ``slice[float]`` in Typannotationen verwenden, um "
+"ein Slice zu bezeichnen, das :type:`float`-Objekte enthält."
 
 #: ../../reference/datamodel.rst:1892
 msgid ""
@@ -3578,6 +3623,14 @@ msgid ""
 "components of the object that also play a part in comparison of objects by "
 "packing them into a tuple and hashing the tuple. Example::"
 msgstr ""
+"Wird von der integrierten Funktion :func:`hash` aufgerufen sowie bei "
+"Operationen auf Elementen gehashter Sammlungen wie :class:`set`, :class:"
+"`frozenset`, :class:`dict` und :class:`frozendict`. Die Methode "
+"``__hash__()`` sollte eine Ganzzahl zurückgeben. Einzige zwingende "
+"Eigenschaft ist, dass Objekte, die als gleich gelten, denselben Hashwert "
+"haben. Es empfiehlt sich, die Hashwerte derjenigen Bestandteile des Objekts "
+"zu vermischen, die auch beim Vergleich von Objekten eine Rolle spielen, "
+"indem man sie in ein Tupel packt und dieses Tupel hasht. Beispiel::"
 
 #: ../../reference/datamodel.rst:2235
 msgid ""
@@ -4410,6 +4463,11 @@ msgid ""
 "length\" built-in type <PyTypeObject.tp_itemsize>` such as :class:`int`, :"
 "class:`bytes`, and :class:`type`, except :class:`tuple`."
 msgstr ""
+":exc:`TypeError` wird ausgelöst, wenn für eine Klasse, die von einem :c:"
+"member:`integrierten Typ „variabler Länge“ <PyTypeObject.tp_itemsize>` wie :"
+"class:`int`, :class:`bytes` oder :class:`type` abgeleitet ist, andere "
+"*__slots__* als *__dict__* und *__weakref__* definiert werden – ausgenommen :"
+"class:`tuple`."
 
 #: ../../reference/datamodel.rst:2687
 msgid "Any non-string :term:`iterable` may be assigned to *__slots__*."
@@ -4445,6 +4503,10 @@ msgid ""
 "attributes created by slots (the other bases must have empty slot layouts) - "
 "violations raise :exc:`TypeError`."
 msgstr ""
+":ref:`Mehrfachvererbung <multiple-inheritance>` mit mehreren Elternklassen, "
+"die Slots verwenden, ist möglich, aber nur eine Elternklasse darf Attribute "
+"besitzen, die durch Slots angelegt wurden (die übrigen Basisklassen müssen "
+"leere Slot-Layouts haben). Verstöße lösen :exc:`TypeError` aus."
 
 #: ../../reference/datamodel.rst:2703
 msgid ""
@@ -4461,6 +4523,9 @@ msgid ""
 "Allowed defining the *__dict__* and *__weakref__* *__slots__* for any class. "
 "Allowed defining any *__slots__* for a class derived from :class:`tuple`."
 msgstr ""
+"Es ist nun erlaubt, für jede Klasse die *__slots__* *__dict__* und "
+"*__weakref__* zu definieren. Für eine von :class:`tuple` abgeleitete Klasse "
+"ist es erlaubt, beliebige *__slots__* zu definieren."
 
 #: ../../reference/datamodel.rst:2716
 msgid "Customizing class creation"
@@ -7198,7 +7263,7 @@ msgstr "dbm.gnu"
 
 #: ../../reference/datamodel.rst:541
 msgid "frozendict"
-msgstr ""
+msgstr "frozendict"
 
 #: ../../reference/datamodel.rst:555
 msgid "callable"
@@ -7389,7 +7454,7 @@ msgstr "__annotate__ (Modulattribut)"
 
 #: ../../reference/datamodel.rst:933
 msgid "__lazy_modules__ (module attribute)"
-msgstr ""
+msgstr "__lazy_modules__ (Modulattribut)"
 
 #: ../../reference/datamodel.rst:1153
 msgid "__dict__ (module attribute)"

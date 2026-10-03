@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -94,6 +93,10 @@ msgid ""
 "ref:`literals <atom-literals>`. More complex atoms are enclosed in paired "
 "delimiters:"
 msgstr ""
+"Atoms sind die elementarsten Bestandteile von Ausdrücken. Die einfachsten "
+"Atoms sind :ref:`integrierte Konstanten <atom-singletons>`, :ref:`Namen "
+"<identifiers>` und :ref:`Literale <atom-literals>`. Komplexere Atoms stehen "
+"zwischen paarigen Begrenzern:"
 
 #: ../../reference/expressions.rst:55
 msgid ""
@@ -101,16 +104,21 @@ msgid ""
 "<tuple-display>`, :ref:`yield atoms <yieldexpr>`, and :ref:`generator "
 "expressions <genexpr>`;"
 msgstr ""
+"``()`` (runde Klammern): :ref:`Gruppen <parenthesized>`, :ref:`Tupel-"
+"Displays <tuple-display>`, :ref:`yield-Atoms <yieldexpr>` und :ref:"
+"`Generatorausdrücke <genexpr>`;"
 
 #: ../../reference/expressions.rst:59
 msgid "``[]`` (square brackets): :ref:`list displays <lists>`;"
-msgstr ""
+msgstr "``[]`` (eckige Klammern): :ref:`Listen-Displays <lists>`;"
 
 #: ../../reference/expressions.rst:60
 msgid ""
 "``{}`` (curly braces): :ref:`dictionary <dict>` and :ref:`set <set>` "
 "displays."
 msgstr ""
+"``{}`` (geschweifte Klammern): :ref:`Wörterbuch-Displays <dict>` und :ref:"
+"`Mengen-Displays <set>`."
 
 #: ../../reference/expressions.rst:62
 msgid "Formally, the syntax for atoms is:"
@@ -153,14 +161,14 @@ msgid ""
 "SyntaxError: cannot assign to False"
 msgstr ""
 ">>> False = 123\n"
-"  Datei „<input> “, Zeile 1\n"
+"  File \"<input>\", line 1\n"
 "   False = 123\n"
 "   ^^^^^\n"
-"SyntaxError: Zuweisung an „False“ nicht zulässig"
+"SyntaxError: cannot assign to False"
 
 #: ../../reference/expressions.rst:113
 msgid "Formally, the syntax for built-in constants is:"
-msgstr ""
+msgstr "Formal lautet die Syntax für integrierte Konstanten wie folgt:"
 
 #: ../../reference/expressions.rst:123
 msgid "Identifiers (Names)"
@@ -431,9 +439,8 @@ msgid ""
 "True"
 msgstr ""
 ">>> x = 7\n"
-">>> x ist 7\n"
-"<input>:1: SyntaxWarnung: \"is“ mit einem \"int“-Literal. Meintest du "
-"vielleicht \"==“?\n"
+">>> x is 7\n"
+"<input>:1: SyntaxWarning: \"is\" with 'int' literal. Did you mean \"==\"?\n"
 "True"
 
 #: ../../reference/expressions.rst:266
@@ -480,8 +487,8 @@ msgid ""
 ">>> \"hello\" 'world'\n"
 "\"helloworld\""
 msgstr ""
-">>> \"hello“ 'world'\n"
-"\"helloworld“"
+">>> \"hello\" 'world'\n"
+"\"helloworld\""
 
 #: ../../reference/expressions.rst:291
 msgid ""
@@ -501,11 +508,11 @@ msgid ""
 ">>> print(greeting + space + name)   # not: print(greeting space name)\n"
 "Hello Blaise"
 msgstr ""
-">>> greeting = \"Hallo\"\n"
+">>> greeting = \"Hello\"\n"
 ">>> space = \" \"\n"
 ">>> name = \"Blaise\"\n"
 ">>> print(greeting + space + name)   # nicht: print(greeting space name)\n"
-"Hallo Blaise"
+"Hello Blaise"
 
 #: ../../reference/expressions.rst:300
 msgid ""
@@ -521,8 +528,8 @@ msgid ""
 ">>> \"Hello\" r', ' f\"{name}!\"\n"
 "\"Hello, Blaise!\""
 msgstr ""
-">>> \"Hallo“ r', ' f“{name}!“\n"
-"\"Hallo, Blaise!“"
+">>> \"Hello\" r', ' f\"{name}!\"\n"
+"\"Hello, Blaise!\""
 
 #: ../../reference/expressions.rst:307
 msgid ""
@@ -561,8 +568,8 @@ msgid ""
 ">>> t\"Hello\" t\"{name}!\"\n"
 "Template(strings=('Hello', '!'), interpolations=(...))"
 msgstr ""
-">>> t\"Hallo\" t\"{name}!\"\n"
-"Template(strings=('Hallo', '!'), interpolations=(...))"
+">>> t\"Hello\" t\"{name}!\"\n"
+"Template(strings=('Hello', '!'), interpolations=(...))"
 
 #: ../../reference/expressions.rst:323
 msgid "Formally:"
@@ -570,19 +577,25 @@ msgstr "Formal:"
 
 #: ../../reference/expressions.rst:339
 msgid "Parenthesized groups"
-msgstr ""
+msgstr "Geklammerte Gruppen"
 
 #: ../../reference/expressions.rst:341
 msgid ""
 "A :dfn:`parenthesized group` is an expression enclosed in parentheses. The "
 "group evaluates to the same value as the expression inside."
 msgstr ""
+"Eine :dfn:`geklammerte Gruppe` ist ein Ausdruck, der in runde Klammern "
+"eingeschlossen ist. Die Gruppe wird zum selben Wert ausgewertet wie der "
+"Ausdruck darin."
 
 #: ../../reference/expressions.rst:344
 msgid ""
 "Groups are used to override or clarify :ref:`operator precedence <operator-"
 "precedence>`, in the same way as in math notation. For example::"
 msgstr ""
+"Gruppen dienen dazu, die :ref:`Reihenfolge der Rechenoperatoren <operator-"
+"precedence>` aufzuheben oder zu verdeutlichen, genau wie in der "
+"mathematischen Schreibweise. Zum Beispiel::"
 
 #: ../../reference/expressions.rst:349
 msgid ""
@@ -593,6 +606,12 @@ msgid ""
 ">>> (3 << 2) | 4   # Same as without parentheses (but more clear)\n"
 "12"
 msgstr ""
+">>> 3 << 2 | 4\n"
+"12\n"
+">>> 3 << (2 | 4)   # Vorrang des | (bitweises ODER) aufheben\n"
+"192\n"
+">>> (3 << 2) | 4   # wie ohne Klammern (aber deutlicher)\n"
+"12"
 
 #: ../../reference/expressions.rst:356
 msgid ""
@@ -601,14 +620,18 @@ msgid ""
 "a comma. See :ref:`tuple displays <tuple-display>` and :ref:`generator "
 "expressions <genexpr>` for other parenthesized forms."
 msgstr ""
+"Beachte, dass nicht alles in Klammern eine *Gruppe* ist. Eine geklammerte "
+"Gruppe muss genau einen Ausdruck enthalten und darf nicht mit einem Komma "
+"enden. Weitere geklammerte Formen findest du unter :ref:`Tupel-Displays "
+"<tuple-display>` und :ref:`Generatorausdrücke <genexpr>`."
 
 #: ../../reference/expressions.rst:362
 msgid "Formally, the syntax for groups is:"
-msgstr ""
+msgstr "Formal lautet die Syntax für Gruppen wie folgt:"
 
 #: ../../reference/expressions.rst:373
 msgid "Container displays"
-msgstr ""
+msgstr "Container-Displays"
 
 #: ../../reference/expressions.rst:377
 msgid ""
@@ -618,12 +641,20 @@ msgid ""
 "sections. All displays, however, consist of comma-separated items enclosed "
 "in paired delimiters."
 msgstr ""
+"Zum Erzeugen integrierter Container (Listen, Mengen, Tupel oder "
+"Wörterbücher) stellt Python eine besondere Schreibweise bereit, die :dfn:"
+"`Displays` heißt. Zwischen den vier Arten von Displays gibt es feine "
+"Unterschiede, die in den folgenden Abschnitten beschrieben werden. Alle "
+"Displays bestehen jedoch aus kommagetrennten Elementen, die zwischen "
+"paarigen Begrenzern stehen."
 
 #: ../../reference/expressions.rst:384
 msgid ""
 "For example, a *list display* is a series of expressions enclosed in square "
 "brackets::"
 msgstr ""
+"Ein *Listen-Display* ist zum Beispiel eine Folge von Ausdrücken in eckigen "
+"Klammern::"
 
 #: ../../reference/expressions.rst:387
 msgid ""
@@ -632,12 +663,18 @@ msgid ""
 ">>> [1 + 2, 2 + 3]\n"
 "[3, 5]"
 msgstr ""
+">>> [\"one\", \"two\", \"three\"]\n"
+"['one', 'two', 'three']\n"
+">>> [1 + 2, 2 + 3]\n"
+"[3, 5]"
 
 #: ../../reference/expressions.rst:392
 msgid ""
 "In list, tuple and dictionary (but not set) displays, the series may be "
 "empty::"
 msgstr ""
+"Bei Listen-, Tupel- und Wörterbuch-Displays (nicht aber bei Mengen-Displays) "
+"darf die Folge leer sein::"
 
 #: ../../reference/expressions.rst:394
 msgid ""
@@ -648,18 +685,28 @@ msgid ""
 ">>> {}  # empty dictionary\n"
 "{}"
 msgstr ""
+">>> []  # leere Liste\n"
+"[]\n"
+">>> ()  # leeres Tupel\n"
+"()\n"
+">>> {}  # leeres Wörterbuch\n"
+"{}"
 
 #: ../../reference/expressions.rst:403
 msgid ""
 "If the series is not empty, the items may be followed by an additional "
 "comma, which has no effect::"
 msgstr ""
+"Ist die Folge nicht leer, darf auf die Elemente ein zusätzliches Komma "
+"folgen, das keine Wirkung hat::"
 
 #: ../../reference/expressions.rst:406
 msgid ""
 ">>> [\"one\", \"two\", \"three\",]  # note comma after \"three\"\n"
 "['one', 'two', 'three']"
 msgstr ""
+">>> [\"one\", \"two\", \"three\",]  # beachte das Komma nach \"three\"\n"
+"['one', 'two', 'three']"
 
 #: ../../reference/expressions.rst:411
 msgid ""
@@ -668,6 +715,10 @@ msgid ""
 "programmer adds a new entry at the end, they do not need to modify an "
 "existing line::"
 msgstr ""
+"Das abschließende Komma wird oft bei Displays verwendet, die sich über "
+"mehrere Zeilen erstrecken (mittels :ref:`impliziter Zeilenverbindung "
+"<implicit-joining>`). Wer später einen neuen Eintrag am Ende ergänzt, muss "
+"dann keine bestehende Zeile ändern::"
 
 #: ../../reference/expressions.rst:416
 msgid ""
@@ -678,12 +729,21 @@ msgid ""
 "... ]\n"
 "['one', 'two', 'three']"
 msgstr ""
+">>> [\n"
+"...     'one',\n"
+"...     'two',\n"
+"...     'three',\n"
+"... ]\n"
+"['one', 'two', 'three']"
 
 #: ../../reference/expressions.rst:423
 msgid ""
 "At runtime, when a display is evaluated, the listed items are evaluated from "
 "left to right and placed into a new container of the appropriate type."
 msgstr ""
+"Zur Laufzeit werden bei der Auswertung eines Displays die aufgeführten "
+"Elemente von links nach rechts ausgewertet und in einen neuen Container des "
+"passenden Typs eingefügt."
 
 #: ../../reference/expressions.rst:430
 msgid ""
@@ -693,6 +753,12 @@ msgid ""
 "evaluate to an iterable, whose contents are inserted into the container at "
 "the location of the unpacking. For example::"
 msgstr ""
+"Bei Tupel-, Listen- und Mengen-Displays (nicht aber bei Wörterbuch-Displays) "
+"darf jedem Element ein Sternchen (``*``) vorangestellt werden. Das "
+"bezeichnet das :ref:`Entpacken von Iterables <iterable-unpacking>`. Zur "
+"Laufzeit muss der mit Sternchen versehene Ausdruck zu einem Iterable "
+"ausgewertet werden, dessen Inhalt an der Stelle des Entpackens in den "
+"Container eingefügt wird. Zum Beispiel::"
 
 #: ../../reference/expressions.rst:437
 msgid ""
@@ -700,12 +766,18 @@ msgid ""
 ">>> [*numbers, 'word', *numbers]\n"
 "[1, 2, 'word', 1, 2]"
 msgstr ""
+">>> numbers = (1, 2)\n"
+">>> [*numbers, 'word', *numbers]\n"
+"[1, 2, 'word', 1, 2]"
 
 #: ../../reference/expressions.rst:441
 msgid ""
 "Dictionary displays use a similar mechanism called *dictionary unpacking*, "
 "denoted with a double asterisk (``**``). See :ref:`dict` for details."
 msgstr ""
+"Wörterbuch-Displays nutzen einen ähnlichen Mechanismus namens *Wörterbuch-"
+"Entpacken*, der mit einem doppelten Sternchen (``**``) geschrieben wird. "
+"Einzelheiten findest du unter :ref:`dict`."
 
 #: ../../reference/expressions.rst:446
 msgid ""
@@ -713,22 +785,29 @@ msgid ""
 "computed via a set of looping and filtering instructions. See the :ref:"
 "`comprehensions` section for details."
 msgstr ""
+"Eine weiterführende Form von Displays sind :dfn:`Comprehensions`, bei denen "
+"die Elemente über Schleifen- und Filteranweisungen berechnet werden. "
+"Einzelheiten findest du im Abschnitt :ref:`comprehensions`."
 
 #: ../../reference/expressions.rst:450
 msgid ""
 "Iterable and dictionary unpacking in displays, originally proposed by :pep:"
 "`448`."
 msgstr ""
+"Das Entpacken von Iterables und Wörterbüchern in Displays, ursprünglich "
+"vorgeschlagen von :pep:`448`."
 
 #: ../../reference/expressions.rst:458
 msgid "List displays"
-msgstr "Listenanzeigen"
+msgstr "Listen-Displays"
 
 #: ../../reference/expressions.rst:468
 msgid ""
 "A :dfn:`list display` is a possibly empty series of expressions enclosed in "
 "square brackets. For example::"
 msgstr ""
+"Ein :dfn:`Listen-Display` ist eine möglicherweise leere Folge von Ausdrücken "
+"in eckigen Klammern. Zum Beispiel::"
 
 #: ../../reference/expressions.rst:471
 msgid ""
@@ -739,25 +818,33 @@ msgid ""
 ">>> []       # empty list\n"
 "[]"
 msgstr ""
+">>> [\"one\", \"two\", \"three\"]\n"
+"['one', 'two', 'three']\n"
+">>> [\"one\"]  # einelementige Liste\n"
+"['one']\n"
+">>> []       # leere Liste\n"
+"[]"
 
 #: ../../reference/expressions.rst:478 ../../reference/expressions.rst:508
 #: ../../reference/expressions.rst:543
 msgid "See :ref:`displays` for general information on displays."
-msgstr ""
+msgstr "Allgemeine Hinweise zu Displays findest du unter :ref:`displays`."
 
 #: ../../reference/expressions.rst:480
 msgid "The formal grammar for list displays is:"
-msgstr ""
+msgstr "Die formale Grammatik für Listen-Displays lautet:"
 
 #: ../../reference/expressions.rst:491
 msgid "Set displays"
-msgstr "Anzeigen einstellen"
+msgstr "Mengen-Displays"
 
 #: ../../reference/expressions.rst:500
 msgid ""
 "A :dfn:`set display` is a *non-empty* series of expressions enclosed in "
 "curly braces. For example::"
 msgstr ""
+"Ein :dfn:`Mengen-Display` ist eine *nicht leere* Folge von Ausdrücken in "
+"geschweiften Klammern. Zum Beispiel::"
 
 #: ../../reference/expressions.rst:503
 msgid ""
@@ -766,6 +853,10 @@ msgid ""
 ">>> {\"one\"}  # One-element set\n"
 "{'one'}"
 msgstr ""
+">>> {\"one\", \"two\", \"three\"}\n"
+"{'one', 'three', 'two'}\n"
+">>> {\"one\"}  # einelementige Menge\n"
+"{'one'}"
 
 #: ../../reference/expressions.rst:510
 msgid ""
@@ -773,20 +864,26 @@ msgid ""
 "`dictionary display <dict>` that constructs an empty dictionary. Call :class:"
 "`set() <set>` with no arguments to get an empty set."
 msgstr ""
+"Für die leere Menge gibt es keine eigene Schreibweise. Das Literal ``{}`` "
+"ist ein :ref:`Wörterbuch-Display <dict>`, das ein leeres Wörterbuch erzeugt. "
+"Rufe :class:`set() <set>` ohne Argumente auf, um eine leere Menge zu "
+"erhalten."
 
 #: ../../reference/expressions.rst:515
 msgid "The formal grammar for set displays is:"
-msgstr ""
+msgstr "Die formale Grammatik für Mengen-Displays lautet:"
 
 #: ../../reference/expressions.rst:533
 msgid "Tuple displays"
-msgstr ""
+msgstr "Tupel-Displays"
 
 #: ../../reference/expressions.rst:535
 msgid ""
 "A :dfn:`tuple display` is a series of expressions enclosed in parentheses. "
 "For example::"
 msgstr ""
+"Ein :dfn:`Tupel-Display` ist eine Folge von Ausdrücken in runden Klammern. "
+"Zum Beispiel::"
 
 #: ../../reference/expressions.rst:538
 msgid ""
@@ -795,6 +892,10 @@ msgid ""
 ">>> ()  # an empty tuple\n"
 "()"
 msgstr ""
+">>> (1, 2)\n"
+"(1, 2)\n"
+">>> ()  # ein leeres Tupel\n"
+"()"
 
 #: ../../reference/expressions.rst:545
 msgid ""
@@ -802,6 +903,9 @@ msgid ""
 "a trailing comma. Without it, you get a :ref:`parenthesized group "
 "<parenthesized>`::"
 msgstr ""
+"Um Mehrdeutigkeiten zu vermeiden, braucht ein Tupel-Display mit genau einem "
+"Element ein abschließendes Komma. Ohne dieses erhältst du eine :ref:"
+"`geklammerte Gruppe <parenthesized>`::"
 
 #: ../../reference/expressions.rst:549
 msgid ""
@@ -810,19 +914,24 @@ msgid ""
 ">>> ('single')   # no comma: single string\n"
 "'single'"
 msgstr ""
+">>> ('single',)  # einelementiges Tupel\n"
+"('single',)\n"
+">>> ('single')   # kein Komma: eine einzelne Zeichenkette\n"
+"'single'"
 
 #: ../../reference/expressions.rst:554
 msgid ""
 "To put it in other words, a tuple display is a parenthesized list of either:"
 msgstr ""
+"Anders gesagt ist ein Tupel-Display eine geklammerte Liste aus entweder:"
 
 #: ../../reference/expressions.rst:556
 msgid "two or more comma-separated expressions, or"
-msgstr ""
+msgstr "zwei oder mehr kommagetrennten Ausdrücken oder"
 
 #: ../../reference/expressions.rst:557
 msgid "zero or more expressions, each followed by a comma."
-msgstr ""
+msgstr "null oder mehr Ausdrücken, auf die jeweils ein Komma folgt."
 
 #: ../../reference/expressions.rst:559
 msgid ""
@@ -830,6 +939,10 @@ msgid ""
 "<literals-identity>` also apply to tuples: at runtime, two occurrences of "
 "tuples with the same values may or may not yield the same object."
 msgstr ""
+"Da Tupel unveränderlich sind, gelten die :ref:`Regeln zur Objektidentität "
+"von Literalen <literals-identity>` auch für Tupel: Zur Laufzeit können zwei "
+"Vorkommen von Tupeln mit denselben Werten dasselbe Objekt ergeben, müssen es "
+"aber nicht."
 
 #: ../../reference/expressions.rst:565
 msgid ""
@@ -837,20 +950,25 @@ msgid ""
 "comma-separated list of expressions is *not* enclosed in parentheses but "
 "evaluates to tuple."
 msgstr ""
+"Die Syntax von Python kennt außerdem :ref:`Ausdruckslisten <exprlists>`, bei "
+"denen eine kommagetrennte Liste von Ausdrücken *nicht* in Klammern steht, "
+"aber zu einem Tupel ausgewertet wird."
 
 #: ../../reference/expressions.rst:569
 msgid ""
 "In other words, when it comes to tuple syntax, the comma is more important "
 "that the use of parentheses. Only the empty tuple is spelled without a comma."
 msgstr ""
+"Anders gesagt ist bei der Tupel-Syntax das Komma wichtiger als die Klammern. "
+"Nur das leere Tupel wird ohne Komma geschrieben."
 
 #: ../../reference/expressions.rst:574
 msgid "The formal grammar for tuple displays is:"
-msgstr ""
+msgstr "Die formale Grammatik für Tupel-Displays lautet:"
 
 #: ../../reference/expressions.rst:587
 msgid "Dictionary displays"
-msgstr "Wörterbuchanzeigen"
+msgstr "Wörterbuch-Displays"
 
 #: ../../reference/expressions.rst:598
 msgid ""
@@ -858,12 +976,18 @@ msgid ""
 "enclosed in curly braces. Each dict item is a colon-separated pair of "
 "expressions: the :dfn:`key` and its associated :dfn:`value`. For example::"
 msgstr ""
+"Ein :dfn:`Wörterbuch-Display` ist eine möglicherweise leere Folge von :dfn:"
+"`Wörterbucheinträgen` in geschweiften Klammern. Jeder Wörterbucheintrag ist "
+"ein durch Doppelpunkt getrenntes Ausdruckspaar: der :dfn:`Schlüssel` und der "
+"zugehörige :dfn:`Wert`. Zum Beispiel::"
 
 #: ../../reference/expressions.rst:604
 msgid ""
 ">>> {1: 'one', 2: 'two'}\n"
 "{1: 'one', 2: 'two'}"
 msgstr ""
+">>> {1: 'one', 2: 'two'}\n"
+"{1: 'one', 2: 'two'}"
 
 #: ../../reference/expressions.rst:607
 msgid ""
@@ -873,6 +997,11 @@ msgid ""
 "the same key multiple times in the comprehension, and the final dictionary's "
 "value for a given key will be the last one given. For example::"
 msgstr ""
+"Zur Laufzeit werden bei der Auswertung einer Wörterbuch-Comprehension die "
+"Ausdrücke von links nach rechts ausgewertet. Jedes Schlüsselobjekt dient als "
+"Schlüssel im Wörterbuch, unter dem der zugehörige Wert abgelegt wird. Damit "
+"lässt sich derselbe Schlüssel in der Comprehension mehrfach angeben. Der "
+"Wert im fertigen Wörterbuch ist dann der zuletzt angegebene. Zum Beispiel::"
 
 #: ../../reference/expressions.rst:616
 msgid ""
@@ -884,6 +1013,13 @@ msgid ""
 "... }\n"
 "{1: 'one', 2: 'two'}"
 msgstr ""
+">>> {\n"
+"...     1: 'this will be overridden',\n"
+"...     2: 'two',\n"
+"...     1: 'also overridden',\n"
+"...     1: 'one',\n"
+"... }\n"
+"{1: 'one', 2: 'two'}"
 
 #: ../../reference/expressions.rst:630
 msgid ""
@@ -894,6 +1030,14 @@ msgid ""
 "values replace values already set by earlier items and unpackings. This may "
 "be used to override a set of defaults::"
 msgstr ""
+"Statt eines Schlüssel-Wert-Paares kann ein Wörterbucheintrag auch ein "
+"Ausdruck sein, dem ein doppeltes Sternchen ``**`` vorangestellt ist. Das "
+"bezeichnet das :dfn:`Wörterbuch-Entpacken`. Zur Laufzeit muss der Ausdruck "
+"zu einem :term:`mapping` ausgewertet werden. Jeder Eintrag dieser Zuordnung "
+"wird dem neuen Wörterbuch hinzugefügt. Wie bei Schlüssel-Wert-Paaren "
+"ersetzen spätere Werte die Werte, die frühere Einträge und Entpackungen "
+"bereits gesetzt haben. So lässt sich eine Reihe von Vorgabewerten "
+"überschreiben::"
 
 #: ../../reference/expressions.rst:638
 msgid ""
@@ -902,20 +1046,24 @@ msgid ""
 ">>> {**defaults, **overrides}\n"
 "{'color': 'yellow', 'count': 8}"
 msgstr ""
+">>> defaults = {'color': 'blue', 'count': 8}\n"
+">>> overrides = {'color': 'yellow'}\n"
+">>> {**defaults, **overrides}\n"
+"{'color': 'yellow', 'count': 8}"
 
 #: ../../reference/expressions.rst:643
 msgid "Unpacking into dictionary displays, originally proposed by :pep:`448`."
 msgstr ""
-"Das Auspacken in Wörterbuchansichten, ursprünglich vorgeschlagen von :pep:"
+"Das Entpacken in Wörterbuch-Displays, ursprünglich vorgeschlagen von :pep:"
 "`448`."
 
 #: ../../reference/expressions.rst:646
 msgid "The formal grammar for dict displays is:"
-msgstr ""
+msgstr "Die formale Grammatik für Wörterbuch-Displays lautet:"
 
 #: ../../reference/expressions.rst:664
 msgid "Comprehensions"
-msgstr ""
+msgstr "Comprehensions"
 
 #: ../../reference/expressions.rst:666
 msgid ""
@@ -923,6 +1071,9 @@ msgid ""
 "displays <displays>` where items are computed via a set of looping and "
 "filtering instructions rather than listed explicitly."
 msgstr ""
+"Listen-, Mengen- und Wörterbuch-:dfn:`Comprehensions` sind eine Form von :"
+"ref:`Container-Displays <displays>`, bei der die Elemente über Schleifen- "
+"und Filteranweisungen berechnet statt einzeln aufgeführt werden."
 
 #: ../../reference/expressions.rst:670
 msgid ""
@@ -931,16 +1082,22 @@ msgid ""
 "same syntax as the header of a :ref:`for statement <for>`, without a "
 "trailing colon."
 msgstr ""
+"In ihrer einfachsten Form besteht eine Comprehension aus einem einzelnen "
+"Ausdruck, auf den eine :keyword:`!for`-Klausel folgt. Die :keyword:`!for`-"
+"Klausel hat dieselbe Syntax wie der Kopf einer :ref:`for-Anweisung <for>`, "
+"allerdings ohne abschließenden Doppelpunkt."
 
 #: ../../reference/expressions.rst:675
 msgid "For example, a list of the first ten squares is::"
-msgstr ""
+msgstr "Eine Liste der ersten zehn Quadratzahlen sieht zum Beispiel so aus::"
 
 #: ../../reference/expressions.rst:677
 msgid ""
 ">>> [x**2 for x in range(10)]\n"
 "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
 msgstr ""
+">>> [x**2 for x in range(10)]\n"
+"[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
 
 #: ../../reference/expressions.rst:680
 msgid ""
@@ -952,6 +1109,14 @@ msgid ""
 "Thus, the example above is roughly equivalent to defining and calling the "
 "following function::"
 msgstr ""
+"Zur Laufzeit erzeugt eine Listen-Comprehension eine neue Liste. Der Ausdruck "
+"nach :keyword:`!in` muss zu einem :term:`iterable` ausgewertet werden. Für "
+"jedes Element dieses Iterables wird das Element wie in einer :keyword:`!for`-"
+"Anweisung an das Ziel der :keyword:`!for`-Klausel gebunden. Anschließend "
+"wird der Ausdruck vor :keyword:`!for` mit dem Ziel im Gültigkeitsbereich "
+"ausgewertet und das Ergebnis der neuen Liste hinzugefügt. Das obige Beispiel "
+"entspricht damit ungefähr der Definition und dem Aufruf der folgenden "
+"Funktion::"
 
 #: ../../reference/expressions.rst:689
 msgid ""
@@ -963,22 +1128,33 @@ msgid ""
 "\n"
 "make_list_of_squares(range(10))"
 msgstr ""
+"def make_list_of_squares(iterable):\n"
+"    result = []\n"
+"    for x in iterable:\n"
+"        result.append(x**2)\n"
+"    return result\n"
+"\n"
+"make_list_of_squares(range(10))"
 
 #: ../../reference/expressions.rst:697
 msgid ""
 "Set comprehensions work similarly. For example, here is a set of lowercase "
 "letters::"
 msgstr ""
+"Mengen-Comprehensions funktionieren ähnlich. Hier zum Beispiel eine Menge "
+"von Kleinbuchstaben::"
 
 #: ../../reference/expressions.rst:700
 msgid ""
 ">>> {x.lower() for x in ['a', 'A', 'b', 'C']}\n"
 "{'c', 'a', 'b'}"
 msgstr ""
+">>> {x.lower() for x in ['a', 'A', 'b', 'C']}\n"
+"{'c', 'a', 'b'}"
 
 #: ../../reference/expressions.rst:703
 msgid "At run time, this corresponds roughly to calling this function::"
-msgstr ""
+msgstr "Zur Laufzeit entspricht das ungefähr dem Aufruf dieser Funktion::"
 
 #: ../../reference/expressions.rst:705
 msgid ""
@@ -990,12 +1166,21 @@ msgid ""
 "\n"
 "make_lowercase_set(['a', 'A', 'b', 'C'])"
 msgstr ""
+"def make_lowercase_set(iterable):\n"
+"    result = set(iterable)\n"
+"    for x in iterable:\n"
+"        result.append(x.lower())\n"
+"    return result\n"
+"\n"
+"make_lowercase_set(['a', 'A', 'b', 'C'])"
 
 #: ../../reference/expressions.rst:713
 msgid ""
 "Dictionary comprehensions start with a colon-separated key-value pair "
 "instead of an expression. For example::"
 msgstr ""
+"Wörterbuch-Comprehensions beginnen statt mit einem Ausdruck mit einem durch "
+"Doppelpunkt getrennten Schlüssel-Wert-Paar. Zum Beispiel::"
 
 #: ../../reference/expressions.rst:716
 msgid ""
@@ -1004,10 +1189,14 @@ msgid ""
 " 'hex': <built-in function hex>,\n"
 " 'any': <built-in function any>}"
 msgstr ""
+">>> {func.__name__: func for func in [print, hex, any]}\n"
+"{'print': <built-in function print>,\n"
+" 'hex': <built-in function hex>,\n"
+" 'any': <built-in function any>}"
 
 #: ../../reference/expressions.rst:721
 msgid "At run time, this corresponds roughly to::"
-msgstr ""
+msgstr "Zur Laufzeit entspricht das ungefähr Folgendem::"
 
 #: ../../reference/expressions.rst:723
 msgid ""
@@ -1019,6 +1208,13 @@ msgid ""
 "\n"
 "iterable([print, hex, any])"
 msgstr ""
+"def make_dict_mapping_names_to_functions(iterable):\n"
+"    result = {}\n"
+"    for func in iterable:\n"
+"        result[func.__name__] = func\n"
+"    return result\n"
+"\n"
+"iterable([print, hex, any])"
 
 #: ../../reference/expressions.rst:731
 msgid ""
@@ -1026,6 +1222,9 @@ msgid ""
 "multiple times. Earlier values are overwritten by ones that are evaluated "
 "later."
 msgstr ""
+"Wie bei den anderen Arten von Wörterbuch-Displays darf derselbe Schlüssel "
+"mehrfach angegeben werden. Frühere Werte werden von später ausgewerteten "
+"überschrieben."
 
 #: ../../reference/expressions.rst:735
 msgid ""
@@ -1033,12 +1232,17 @@ msgid ""
 "ref:`generator expressions <genexpr>`, from which you can construct a tuple "
 "like this::"
 msgstr ""
+"*Tupel-Comprehensions* gibt es nicht. Die entsprechende Schreibweise ist "
+"stattdessen den :ref:`Generatorausdrücken <genexpr>` vorbehalten, aus denen "
+"sich ein Tupel so erzeugen lässt::"
 
 #: ../../reference/expressions.rst:739
 msgid ""
 ">>> tuple(x**2 for x in range(10))\n"
 "(0, 1, 4, 9, 16, 25, 36, 49, 64, 81)"
 msgstr ""
+">>> tuple(x**2 for x in range(10))\n"
+"(0, 1, 4, 9, 16, 25, 36, 49, 64, 81)"
 
 #: ../../reference/expressions.rst:742
 msgid ""
@@ -1054,25 +1258,31 @@ msgstr ""
 
 #: ../../reference/expressions.rst:752
 msgid "Filtering in comprehensions"
-msgstr ""
+msgstr "Filtern in Comprehensions"
 
 #: ../../reference/expressions.rst:754
 msgid ""
 "The :keyword:`!for` clause may be followed by an :keyword:`!if` clause with "
 "an expression."
 msgstr ""
+"Auf die :keyword:`!for`-Klausel darf eine :keyword:`!if`-Klausel mit einem "
+"Ausdruck folgen."
 
 #: ../../reference/expressions.rst:757
 msgid ""
 "For example, a list of names from the :mod:`math` module that start with "
 "``f`` is::"
 msgstr ""
+"Eine Liste der Namen aus dem Modul :mod:`math`, die mit ``f`` beginnen, "
+"sieht zum Beispiel so aus::"
 
 #: ../../reference/expressions.rst:760
 msgid ""
 ">>> [name for name in vars(math) if name.startswith('f')]\n"
 "['fabs', 'factorial', 'floor', 'fma', 'fmod', 'frexp', 'fsum']"
 msgstr ""
+">>> [name for name in vars(math) if name.startswith('f')]\n"
+"['fabs', 'factorial', 'floor', 'fma', 'fmod', 'frexp', 'fsum']"
 
 #: ../../reference/expressions.rst:763
 msgid ""
@@ -1081,6 +1291,10 @@ msgid ""
 "is skipped. Thus, the above example roughly corresponds to defining and "
 "calling the following function::"
 msgstr ""
+"Zur Laufzeit wird der Ausdruck nach :keyword:`!if` ausgewertet, bevor ein "
+"Element in den entstehenden Container aufgenommen wird. Ist er falsch, wird "
+"das Element übersprungen. Das obige Beispiel entspricht damit ungefähr der "
+"Definition und dem Aufruf der folgenden Funktion::"
 
 #: ../../reference/expressions.rst:769
 msgid ""
@@ -1093,16 +1307,26 @@ msgid ""
 "\n"
 "get_math_f_names(vars(math))"
 msgstr ""
+"def get_math_f_names(iterable):\n"
+"    result = []\n"
+"    for name in iterable:\n"
+"        if name.startswith('f'):\n"
+"           result.append(name)\n"
+"    return result\n"
+"\n"
+"get_math_f_names(vars(math))"
 
 #: ../../reference/expressions.rst:778
 msgid ""
 "Filtering is a special case of more complex comprehensions. See the next "
 "section for a more formal description."
 msgstr ""
+"Das Filtern ist ein Sonderfall komplexerer Comprehensions. Eine formalere "
+"Beschreibung findest du im nächsten Abschnitt."
 
 #: ../../reference/expressions.rst:785
 msgid "Complex comprehensions"
-msgstr ""
+msgstr "Komplexe Comprehensions"
 
 #: ../../reference/expressions.rst:787
 msgid ""
@@ -1111,6 +1335,10 @@ msgid ""
 "example, here is a list of names exposed by two Python modules, filtered to "
 "only include names that start with ``a``::"
 msgstr ""
+"Allgemein darf auf die erste :keyword:`!for`-Klausel einer Comprehension "
+"eine beliebige Zahl weiterer :keyword:`!for`- oder :keyword:`!if`-Klauseln "
+"folgen. Hier zum Beispiel eine Liste der Namen, die zwei Python-Module "
+"bereitstellen, gefiltert auf diejenigen, die mit ``a`` beginnen::"
 
 #: ../../reference/expressions.rst:792
 msgid ""
@@ -1124,10 +1352,20 @@ msgid ""
 "... ]\n"
 "['array', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh']"
 msgstr ""
+">>> import array\n"
+">>> import math\n"
+">>> [\n"
+"...     name\n"
+"...     for module in [array, math]\n"
+"...     for name in vars(module)\n"
+"...     if name.startswith('a')\n"
+"... ]\n"
+"['array', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh']"
 
 #: ../../reference/expressions.rst:802
 msgid "At run time, this roughly corresponds to defining and calling::"
 msgstr ""
+"Zur Laufzeit entspricht das ungefähr der Definition und dem Aufruf von::"
 
 #: ../../reference/expressions.rst:804
 msgid ""
@@ -1141,6 +1379,15 @@ msgid ""
 "\n"
 "get_a_names([array, math])"
 msgstr ""
+"def get_a_names(iterable):\n"
+"    result = []\n"
+"    for module in iterable:\n"
+"        for name in vars(module):\n"
+"            if name.startswith('a'):\n"
+"                result.append(name)\n"
+"    return result\n"
+"\n"
+"get_a_names([array, math])"
 
 #: ../../reference/expressions.rst:814
 msgid ""
@@ -1149,6 +1396,11 @@ msgid ""
 "nesting from left to right, and evaluating the expression to produce an "
 "element (or dictionary entry) each time the innermost block is reached."
 msgstr ""
+"Die Elemente des neuen Containers sind diejenigen, die entstehen, wenn man "
+"jede :keyword:`!for`- oder :keyword:`!if`-Klausel als Block auffasst, diese "
+"von links nach rechts ineinander schachtelt und jedes Mal, wenn der innerste "
+"Block erreicht wird, den Ausdruck auswertet, um ein Element (oder einen "
+"Wörterbucheintrag) zu erzeugen."
 
 #: ../../reference/expressions.rst:819
 msgid ""
@@ -1157,6 +1409,11 @@ msgid ""
 "ensures that names assigned to in the target list don't \"leak\" into the "
 "enclosing scope. For example::"
 msgstr ""
+"Abgesehen vom Iterable-Ausdruck in der äußersten linken :keyword:`!for`-"
+"Klausel wird die Comprehension in einem eigenen, implizit verschachtelten "
+"Gültigkeitsbereich ausgeführt. So ist sichergestellt, dass Namen, denen in "
+"der Zielliste etwas zugewiesen wird, nicht in den umgebenden "
+"Gültigkeitsbereich „durchsickern“. Zum Beispiel::"
 
 #: ../../reference/expressions.rst:825
 msgid ""
@@ -1165,6 +1422,10 @@ msgid ""
 ">>> x\n"
 "'old value'"
 msgstr ""
+">>> x = 'old value'\n"
+">>> [x**2 for x in range(10)]  # dieses `x` ist lokal zur Comprehension\n"
+">>> x\n"
+"'old value'"
 
 #: ../../reference/expressions.rst:830
 msgid ""
@@ -1172,6 +1433,9 @@ msgid ""
 "directly in the enclosing scope and then passed as an argument to the "
 "implicitly nested scope."
 msgstr ""
+"Der Iterable-Ausdruck in der äußersten linken :keyword:`!for`-Klausel wird "
+"unmittelbar im umgebenden Gültigkeitsbereich ausgewertet und dann als "
+"Argument an den implizit verschachtelten Gültigkeitsbereich übergeben."
 
 #: ../../reference/expressions.rst:834
 msgid ""
@@ -1179,6 +1443,10 @@ msgid ""
 "keyword:`!for` clause cannot be evaluated in the enclosing scope as they may "
 "depend on the values obtained from the leftmost iterable."
 msgstr ""
+"Nachfolgende :keyword:`!for`-Klauseln sowie eine etwaige Filterbedingung in "
+"der äußersten linken :keyword:`!for`-Klausel lassen sich nicht im umgebenden "
+"Gültigkeitsbereich auswerten, da sie von den Werten abhängen können, die das "
+"äußerste linke Iterable liefert."
 
 #: ../../reference/expressions.rst:838
 msgid ""
@@ -1197,6 +1465,10 @@ msgid ""
 "the :keyword:`!in` keyword), nor anywhere within comprehensions that appear "
 "directly in a class definition."
 msgstr ""
+":ref:`Zuweisungsausdrücke <assignment-expressions>` sind weder innerhalb der "
+"Iterable-Ausdrücke einer Comprehension erlaubt (also der Ausdrücke nach dem "
+"Schlüsselwort :keyword:`!in`) noch irgendwo innerhalb von Comprehensions, "
+"die unmittelbar in einer Klassendefinition stehen."
 
 #: ../../reference/expressions.rst:847 ../../reference/expressions.rst:1064
 msgid "``yield`` and ``yield from`` prohibited in the implicitly nested scope."
@@ -1206,17 +1478,20 @@ msgstr ""
 
 #: ../../reference/expressions.rst:854
 msgid "Unpacking in comprehensions"
-msgstr ""
+msgstr "Entpacken in Comprehensions"
 
 #: ../../reference/expressions.rst:856
 msgid ""
 "If the expression of a list or set comprehension is starred, the result will "
 "be :ref:`unpacked <iterable-unpacking>` to produce zero or more elements."
 msgstr ""
+"Ist der Ausdruck einer Listen- oder Mengen-Comprehension mit einem Sternchen "
+"versehen, wird das Ergebnis :ref:`entpackt <iterable-unpacking>` und liefert "
+"null oder mehr Elemente."
 
 #: ../../reference/expressions.rst:860
 msgid "This is often used for \"flattening\" lists, for example::"
-msgstr ""
+msgstr "Das wird oft zum „Verflachen“ von Listen genutzt, zum Beispiel::"
 
 #: ../../reference/expressions.rst:862
 msgid ""
@@ -1226,10 +1501,15 @@ msgid ""
 ">>> [*people for people in lists_of_people]\n"
 "['Petr', 'Blaise', 'Jarka', 'Salim', 'Bartosz']"
 msgstr ""
+">>> students = ['Petr', 'Blaise', 'Jarka']\n"
+">>> teachers = ['Salim', 'Bartosz']\n"
+">>> lists_of_people = [students, teachers]\n"
+">>> [*people for people in lists_of_people]\n"
+"['Petr', 'Blaise', 'Jarka', 'Salim', 'Bartosz']"
 
 #: ../../reference/expressions.rst:868
 msgid "At run time, this comprehension roughly corresponds to::"
-msgstr ""
+msgstr "Zur Laufzeit entspricht diese Comprehension ungefähr Folgendem::"
 
 #: ../../reference/expressions.rst:870
 msgid ""
@@ -1239,6 +1519,11 @@ msgid ""
 "        result.extend(people)\n"
 "    return result"
 msgstr ""
+"def flatten_names(lists_of_people):\n"
+"    result = []\n"
+"    for people in lists_of_people:\n"
+"        result.extend(people)\n"
+"    return result"
 
 #: ../../reference/expressions.rst:876
 msgid ""
@@ -1248,10 +1533,16 @@ msgid ""
 "dictionary displays, if the same key is specified multiple times, the "
 "associated value in the resulting dictionary will be the last one specified."
 msgstr ""
+"In Wörterbuch-Comprehensions wird ein Ausdruck mit doppeltem Sternchen "
+"ausgewertet und anschließend per :ref:`Wörterbuch-Entpacken <dict-"
+"unpacking>` aufgelöst, wodurch null oder mehr Schlüssel-Wert-Paare in das "
+"neue Wörterbuch eingefügt werden. Wie bei den anderen Arten von Wörterbuch-"
+"Displays gilt: Wird derselbe Schlüssel mehrfach angegeben, steht im Ergebnis "
+"der zuletzt angegebene Wert."
 
 #: ../../reference/expressions.rst:883
 msgid "For example::"
-msgstr ""
+msgstr "Zum Beispiel::"
 
 #: ../../reference/expressions.rst:885
 msgid ""
@@ -1264,16 +1555,26 @@ msgid ""
 ">>> {**d for d in configuration_sets}\n"
 "{'color': 'yellow', 'count': 5}"
 msgstr ""
+">>> system_defaults = {'color': 'blue', 'count': 8}\n"
+">>> user_defaults = {'color': 'yellow'}\n"
+">>> overrides = {'count': 5}\n"
+"\n"
+">>> configuration_sets = [system_defaults, user_defaults, overrides]\n"
+"\n"
+">>> {**d for d in configuration_sets}\n"
+"{'color': 'yellow', 'count': 5}"
 
 #: ../../reference/expressions.rst:896
 msgid ""
 "Unpacking in comprehensions using the ``*`` and ``**`` operators was "
 "introduced in :pep:`798`."
 msgstr ""
+"Das Entpacken in Comprehensions mit den Operatoren ``*`` und ``**`` wurde "
+"mit :pep:`798` eingeführt."
 
 #: ../../reference/expressions.rst:905
 msgid "Asynchronous comprehensions"
-msgstr ""
+msgstr "Asynchrone Comprehensions"
 
 #: ../../reference/expressions.rst:907
 msgid ""
@@ -1284,6 +1585,13 @@ msgid ""
 "additional :keyword:`!for` or :keyword:`!async for` clauses, and may also "
 "use :keyword:`await` expressions."
 msgstr ""
+"In einer :keyword:`async def`-Funktion darf eine :keyword:`!async for`-"
+"Klausel verwendet werden, um über einen :term:`asynchronous iterator` zu "
+"iterieren. Eine Comprehension in einer :keyword:`!async def`-Funktion kann "
+"hinter dem einleitenden Ausdruck entweder eine :keyword:`!for`- oder eine :"
+"keyword:`!async for`-Klausel enthalten, darf weitere :keyword:`!for`- oder :"
+"keyword:`!async for`-Klauseln besitzen und auch :keyword:`await`-Ausdrücke "
+"verwenden."
 
 #: ../../reference/expressions.rst:914
 msgid ""
@@ -1294,10 +1602,16 @@ msgid ""
 "comprehension may suspend the execution of the coroutine function in which "
 "it appears."
 msgstr ""
+"Enthält eine Comprehension :keyword:`!async for`-Klauseln, oder enthält sie :"
+"keyword:`!await`-Ausdrücke beziehungsweise weitere asynchrone Comprehensions "
+"an einer anderen Stelle als dem Iterable-Ausdruck der äußersten linken :"
+"keyword:`!for`-Klausel, so heißt sie :dfn:`asynchrone Comprehension`. Eine "
+"asynchrone Comprehension kann die Ausführung der Coroutine-Funktion, in der "
+"sie steht, anhalten."
 
 #: ../../reference/expressions.rst:922
 msgid "Asynchronous comprehensions were introduced in :pep:`530`."
-msgstr ""
+msgstr "Asynchrone Comprehensions wurden mit :pep:`530` eingeführt."
 
 #: ../../reference/expressions.rst:924
 msgid ""
@@ -1310,11 +1624,11 @@ msgstr ""
 
 #: ../../reference/expressions.rst:932
 msgid "Formal grammar for comprehensions"
-msgstr ""
+msgstr "Formale Grammatik für Comprehensions"
 
 #: ../../reference/expressions.rst:934
 msgid "The formal grammar for comprehensions is:"
-msgstr ""
+msgstr "Die formale Grammatik für Comprehensions lautet:"
 
 #: ../../reference/expressions.rst:954
 msgid "Generator expressions"
@@ -1327,7 +1641,7 @@ msgid ""
 "parentheses instead of brackets. For example::"
 msgstr ""
 "Die Syntax für :dfn:`Generatorausdrücke` entspricht der für Listen-:ref:"
-"`Kompressionen <comprehensions>`, mit dem Unterschied, dass sie in runde "
+"`Comprehensions <comprehensions>`, mit dem Unterschied, dass sie in runde "
 "Klammern statt in eckige Klammern gesetzt werden. Zum Beispiel::"
 
 #: ../../reference/expressions.rst:966
@@ -1338,7 +1652,7 @@ msgid ""
 msgstr ""
 ">>> iterator = (x ** 2 for x in range(10))\n"
 ">>> iterator\n"
-"<Generatorobjekt <genexpr> bei ...>"
+"<generator object <genexpr> at ...>"
 
 #: ../../reference/expressions.rst:970
 msgid ""
@@ -1430,9 +1744,9 @@ msgid ""
 "NameError: name 'nonexistent_iterable' is not defined"
 msgstr ""
 ">>> (x ** 2 for x in nonexistent_iterable)\n"
-"Traceback (letzter Aufruf zuletzt):\n"
+"Traceback (most recent call last):\n"
 "  ...\n"
-"NameError: Der Name „nonexistent_iterable“ ist nicht definiert"
+"NameError: name 'nonexistent_iterable' is not defined"
 
 #: ../../reference/expressions.rst:1009
 msgid ""
@@ -1453,9 +1767,9 @@ msgid ""
 "TypeError: 'NoneType' object is not iterable"
 msgstr ""
 ">>> (x ** 2 for x in None)\n"
-"Traceback (letzter Aufruf zuletzt):\n"
+"Traceback (most recent call last):\n"
 "  ...\n"
-"TypeError: Das Objekt vom Typ „NoneType“ ist nicht iterierbar"
+"TypeError: 'NoneType' object is not iterable"
 
 #: ../../reference/expressions.rst:1018
 msgid ""
@@ -1478,11 +1792,11 @@ msgid ""
 msgstr ""
 ">>> iterator = (nonexistent_value for x in range(10))\n"
 ">>> iterator\n"
-"<Generatorobjekt <genexpr> at ...>\n"
+"<generator object <genexpr> at ...>\n"
 ">>> list(iterator)\n"
-"Traceback (letzter Aufruf zuletzt):\n"
+"Traceback (most recent call last):\n"
 "  ...\n"
-"NameError: Der Name \"nonexistent_value“ ist nicht definiert"
+"NameError: name 'nonexistent_value' is not defined"
 
 #: ../../reference/expressions.rst:1031
 msgid ""
@@ -1496,11 +1810,11 @@ msgid ""
 msgstr ""
 ">>> iterator = (x * y for x in range(10) for y in nonexistent_iterable)\n"
 ">>> iterator\n"
-"<Generatorobjekt <genexpr> bei ...>\n"
+"<generator object <genexpr> at ...>\n"
 ">>> list(iterator)\n"
-"Traceback (letzter Aufruf zuletzt):\n"
+"Traceback (most recent call last):\n"
 "  ...\n"
-"NameError: Der Name \"nonexistent_iterable“ ist nicht definiert"
+"NameError: name 'nonexistent_iterable' is not defined"
 
 #: ../../reference/expressions.rst:1039
 msgid ""
@@ -1975,8 +2289,8 @@ msgid ""
 "Don't forget to clean up when 'close()' is called."
 msgstr ""
 ">>> def echo(value=None):\n"
-"...     print(\"Die Ausführung beginnt, wenn 'next()' zum ersten Mal "
-"aufgerufen wird.\")\n"
+"...     print(\"Execution starts when 'next()' is called for the first time."
+"\")\n"
 "...     try:\n"
 "...         while True:\n"
 "...             try:\n"
@@ -1984,12 +2298,11 @@ msgstr ""
 "...             except Exception as e:\n"
 "...                 value = e\n"
 "...     finally:\n"
-"...         print(\"Vergiss nicht, beim Aufruf von 'close()' aufzuräumen."
-"\")\n"
+"...         print(\"Don't forget to clean up when 'close()' is called.\")\n"
 "...\n"
 ">>> generator = echo(1)\n"
 ">>> print(next(generator))\n"
-"Die Ausführung beginnt, wenn „next()“ zum ersten Mal aufgerufen wird.\n"
+"Execution starts when 'next()' is called for the first time.\n"
 "1\n"
 ">>> print(next(generator))\n"
 "None\n"
@@ -1998,7 +2311,7 @@ msgstr ""
 ">>> generator.throw(TypeError, \"spam\")\n"
 "TypeError('spam',)\n"
 ">>> generator.close()\n"
-"Vergiss nicht, die Ressourcen freizugeben, wenn 'close()' aufgerufen wird."
+"Don't forget to clean up when 'close()' is called."
 
 #: ../../reference/expressions.rst:1303
 msgid ""
@@ -2357,7 +2670,7 @@ msgid ""
 "2"
 msgstr ""
 ">>> digits_by_name = {'one': 1, 'two': 2}\n"
-">>> digits_by_name['two'] # Zugriff auf ein Wörterbuch über den Schlüssel "
+">>> digits_by_name['two']  # Zugriff auf ein Wörterbuch über den Schlüssel "
 "'two'\n"
 "2"
 
@@ -2393,10 +2706,10 @@ msgid ""
 "list[str]"
 msgstr ""
 ">>> colors = ['red', 'blue', 'green', 'black']\n"
-">>> colors[3]  # Aufruf einer Liste mit dem Index 3\n"
+">>> colors[3]  # Zugriff auf eine Liste über den Index 3\n"
 "'black'\n"
 "\n"
-">>> list[str]  # Festlegen des Listentyps mithilfe des Arguments „str“\n"
+">>> list[str]  # Typ list mit dem Typargument str parametrisieren\n"
 "list[str]"
 
 #: ../../reference/expressions.rst:1545
@@ -2437,7 +2750,7 @@ msgid ""
 msgstr ""
 ">>> class SubscriptionDemo:\n"
 "...     def __getitem__(self, key):\n"
-"...         print(f'mit {key!r} indiziert')\n"
+"...         print(f'subscripted with: {key!r}')\n"
 "...\n"
 ">>> demo = SubscriptionDemo()\n"
 ">>> demo[1]\n"
@@ -2477,13 +2790,13 @@ msgid ""
 ">>> colors\n"
 "['red', 'blue', 'green']"
 msgstr ""
-">>> colors = ['rot', 'blau', 'grün', 'schwarz']\n"
-">>> colors[3] = 'weiß' # Element am Index setzen\n"
+">>> colors = ['red', 'blue', 'green', 'black']\n"
+">>> colors[3] = 'white'  # Element am Index setzen\n"
 ">>> colors\n"
-"['rot', 'blau', 'grün', 'weiß']\n"
+"['red', 'blue', 'green', 'white']\n"
 ">>> del colors[3]  # Element an Index 3 löschen\n"
 ">>> colors\n"
-"['rot', 'blau', 'grün']"
+"['red', 'blue', 'green']"
 
 #: ../../reference/expressions.rst:1585
 msgid ""
@@ -2540,12 +2853,12 @@ msgstr ""
 ">>> number_names[:]\n"
 "['zero', 'one', 'two', 'three', 'four', 'five']\n"
 ">>> number_names[::2]\n"
-"['Null', 'zwei', 'vier']\n"
+"['zero', 'two', 'four']\n"
 ">>> number_names[:-3]\n"
-"['Null', 'eins', 'zwei']\n"
+"['zero', 'one', 'two']\n"
 ">>> del number_names[4:]\n"
 ">>> number_names\n"
-"['Null', 'eins', 'zwei', 'drei']"
+"['zero', 'one', 'two', 'three']"
 
 #: ../../reference/expressions.rst:1630
 msgid ""
@@ -2633,7 +2946,7 @@ msgid ""
 "subscripted with: ('spam',)"
 msgstr ""
 ">>> demo['spam',]\n"
-"mit dem Index: ('spam',)"
+"subscripted with: ('spam',)"
 
 #: ../../reference/expressions.rst:1671
 msgid "\"Starred\" subscriptions"
@@ -2680,7 +2993,7 @@ msgid ""
 "subscripted with: ('a', 'b', 0, 1, 2, 'c')"
 msgstr ""
 ">>> demo['a', 'b', *range(3), 'c']\n"
-"Indizierung: ('a', 'b', 0, 1, 2, 'c')"
+"subscripted with: ('a', 'b', 0, 1, 2, 'c')"
 
 #: ../../reference/expressions.rst:1692
 msgid "Formal subscription grammar"
@@ -2870,9 +3183,9 @@ msgstr ""
 ">>> f(b=1, *(2,))\n"
 "2 1\n"
 ">>> f(a=1, *(2,))\n"
-"Traceback (letzter Aufruf zuletzt):\n"
-" Datei „<stdin> “, Zeile 1, in <module>\n"
-"TypeError: f() hat mehrere Werte für das Schlüsselwortargument 'a' erhalten\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: f() got multiple values for keyword argument 'a'\n"
 ">>> f(1, *(2,))\n"
 "1 2"
 
@@ -2948,6 +3261,9 @@ msgid ""
 "exception.  How this value is computed depends on the type of the callable "
 "object."
 msgstr ""
+"Ein Aufruf liefert immer einen Wert zurück, gegebenenfalls ``None``, sofern "
+"er keine Ausnahme auslöst. Wie dieser Wert berechnet wird, hängt vom Typ des "
+"aufrufbaren Objekts ab."
 
 #: ../../reference/expressions.rst:1852
 msgid "If it is---"
@@ -3140,6 +3456,11 @@ msgid ""
 "It only applies to integral numbers or to custom objects that override the :"
 "meth:`~object.__invert__` special method."
 msgstr ""
+"Der unäre Operator ``~`` (Invertierung) liefert die bitweise Invertierung "
+"seines ganzzahligen Arguments. Die bitweise Invertierung von ``x`` ist als "
+"``-(x+1)`` definiert. Sie ist nur auf ganze Zahlen anwendbar oder auf eigene "
+"Objekte, welche die spezielle Methode :meth:`~object.__invert__` "
+"überschreiben."
 
 #: ../../reference/expressions.rst:2004
 msgid ""
@@ -3174,6 +3495,12 @@ msgid ""
 "then multiplied together.  In the latter case, sequence repetition is "
 "performed; a negative repetition factor yields an empty sequence."
 msgstr ""
+"Der Operator ``*`` (Multiplikation) liefert das Produkt seiner Argumente. "
+"Entweder müssen beide Argumente Zahlen sein, oder ein Argument ist eine "
+"Ganzzahl und das andere eine Sequenz. Im ersten Fall werden die Zahlen :ref:"
+"`in einen gemeinsamen reellen Typ umgewandelt <stdtypes-mixed-arithmetic>` "
+"und dann multipliziert. Im zweiten Fall wird die Sequenz wiederholt. Ein "
+"negativer Wiederholungsfaktor ergibt eine leere Sequenz."
 
 #: ../../reference/expressions.rst:2037
 msgid ""
@@ -3197,6 +3524,8 @@ msgid ""
 "The ``@`` (at) operator is intended to be used for matrix multiplication.  "
 "No builtin Python types implement this operator."
 msgstr ""
+"Der Operator ``@`` (at) ist für die Matrixmultiplikation vorgesehen. Keiner "
+"der integrierten Python-Typen implementiert ihn."
 
 #: ../../reference/expressions.rst:2051
 msgid ""
@@ -3216,6 +3545,13 @@ msgid ""
 "function applied to the result.  Division by zero raises the :exc:"
 "`ZeroDivisionError` exception."
 msgstr ""
+"Die Operatoren ``/`` (Division) und ``//`` (Abrundungsdivision) liefern den "
+"Quotienten ihrer Argumente. Die numerischen Argumente werden zunächst :ref:"
+"`in einen gemeinsamen Typ umgewandelt <stdtypes-mixed-arithmetic>`. Die "
+"Division von Ganzzahlen ergibt eine Gleitkommazahl, die Abrundungsdivision "
+"von Ganzzahlen dagegen eine Ganzzahl. Das Ergebnis ist das der "
+"mathematischen Division, auf das die Funktion „floor“ angewendet wurde. Die "
+"Division durch null löst die Ausnahme :exc:`ZeroDivisionError` aus."
 
 #: ../../reference/expressions.rst:2070
 msgid ""
@@ -3374,6 +3710,9 @@ msgid ""
 "A right shift by *n* bits is defined as floor division by ``pow(2,n)``.  A "
 "left shift by *n* bits is defined as multiplication with ``pow(2,n)``."
 msgstr ""
+"Eine Rechtsverschiebung um *n* Bit ist als Abrundungsdivision durch ``pow(2,"
+"n)`` definiert. Eine Linksverschiebung um *n* Bit ist als Multiplikation mit "
+"``pow(2,n)`` definiert."
 
 #: ../../reference/expressions.rst:2174
 msgid "Binary bitwise operations"
@@ -3427,6 +3766,10 @@ msgid ""
 "unlike C, expressions like ``a < b < c`` have the interpretation that is "
 "conventional in mathematics:"
 msgstr ""
+"Anders als in C haben in Python alle Vergleichsoperationen denselben "
+"Vorrang, der niedriger ist als der jeder arithmetischen, verschiebenden oder "
+"bitweisen Operation. Ebenfalls anders als in C werden Ausdrücke wie ``a < b "
+"< c`` so gelesen, wie es in der Mathematik üblich ist:"
 
 #: ../../reference/expressions.rst:2237
 msgid ""
@@ -3620,6 +3963,9 @@ msgid ""
 "compared within and across their types.  They compare lexicographically "
 "using the numeric values of their elements."
 msgstr ""
+"Binäre Sequenzen (Instanzen von :class:`bytes` oder :class:`bytearray`) "
+"lassen sich innerhalb ihres Typs und typübergreifend vergleichen. Verglichen "
+"wird lexikografisch anhand der Zahlenwerte ihrer Elemente."
 
 #: ../../reference/expressions.rst:2321
 msgid ""
@@ -4133,6 +4479,10 @@ msgid ""
 "a function object.  The unnamed object behaves like a function object "
 "defined with:"
 msgstr ""
+"Lambda-Ausdrücke (manchmal auch Lambda-Formen genannt) dienen dazu, anonyme "
+"Funktionen zu erzeugen. Der Ausdruck ``lambda parameters: expression`` "
+"liefert ein Funktionsobjekt. Das namenlose Objekt verhält sich wie ein "
+"Funktionsobjekt, das so definiert wurde:"
 
 #: ../../reference/expressions.rst:2622
 msgid ""
@@ -4183,13 +4533,16 @@ msgstr ""
 
 #: ../../reference/expressions.rst:2677
 msgid "Iterable unpacking"
-msgstr ""
+msgstr "Entpacken von Iterables"
 
 #: ../../reference/expressions.rst:2679
 msgid ""
 "In an expression list or tuple, list or set display, any expression may be "
 "prefixed with an asterisk (``*``). This denotes :dfn:`iterable unpacking`."
 msgstr ""
+"In einer Ausdrucksliste oder in einem Tupel-, Listen- oder Mengen-Display "
+"darf jedem Ausdruck ein Sternchen (``*``) vorangestellt werden. Das "
+"bezeichnet das :dfn:`Entpacken von Iterables`."
 
 #: ../../reference/expressions.rst:2683
 msgid ""
@@ -4197,6 +4550,10 @@ msgid ""
 "`iterable`. The iterable is expanded into a sequence of items, which are "
 "included in the new tuple, list, or set, at the site of the unpacking."
 msgstr ""
+"Zur Laufzeit muss der mit Sternchen versehene Ausdruck zu einem :term:"
+"`iterable` ausgewertet werden. Das Iterable wird zu einer Folge von "
+"Elementen ausgebreitet, die an der Stelle des Entpackens in das neue Tupel, "
+"die neue Liste oder die neue Menge aufgenommen werden."
 
 #: ../../reference/expressions.rst:2689
 msgid ""
@@ -4301,8 +4658,8 @@ msgid ""
 "Binding or parenthesized expression, list display, dictionary display, set "
 "display"
 msgstr ""
-"Gebundener oder in Klammern gesetzter Ausdruck, Listenanzeige, "
-"Wörterbuchanzeige, Mengenanzeige"
+"Gebundener oder in Klammern gesetzter Ausdruck, Listen-Display, Wörterbuch-"
+"Display, Mengen-Display"
 
 #: ../../reference/expressions.rst:2746
 msgid "``x[index]``, ``x[index:index]`` ``x(arguments...)``, ``x.attribute``"
@@ -4694,7 +5051,7 @@ msgstr "Liste"
 #: ../../reference/expressions.rst:460 ../../reference/expressions.rst:493
 #: ../../reference/expressions.rst:589
 msgid "display"
-msgstr "Anzeige"
+msgstr "Display"
 
 #: ../../reference/expressions.rst:460 ../../reference/expressions.rst:530
 msgid "empty"
@@ -4734,7 +5091,7 @@ msgstr "Ausdruck festlegen"
 
 #: ../../reference/expressions.rst:523
 msgid "tuple display"
-msgstr "Tupel-Anzeige"
+msgstr "Tupel-Display"
 
 #: ../../reference/expressions.rst:530 ../../reference/expressions.rst:1511
 #: ../../reference/expressions.rst:1595 ../../reference/expressions.rst:2653
@@ -4773,7 +5130,7 @@ msgstr "in Wörterbuchausdrücken"
 
 #: ../../reference/expressions.rst:589 ../../reference/expressions.rst:624
 msgid "in dictionary displays"
-msgstr "in Wörterbuchanzeigen"
+msgstr "in Wörterbuch-Displays"
 
 #: ../../reference/expressions.rst:624 ../../reference/expressions.rst:1820
 #: ../../reference/expressions.rst:1928
@@ -4981,7 +5338,7 @@ msgstr "Klasseninstanz"
 
 #: ../../reference/expressions.rst:1890 ../../reference/expressions.rst:1900
 msgid "instance"
-msgstr "Beispiel"
+msgstr "Instanz"
 
 #: ../../reference/expressions.rst:1900
 msgid "__call__() (object method)"

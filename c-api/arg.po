@@ -7,7 +7,6 @@
 # python-doc bot, 2025
 # Dennis Betz, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -630,6 +629,13 @@ msgid ""
 "the value is larger than the maximal value for the C type or less than the "
 "minimal value for the corresponding signed integer type of the same size."
 msgstr ""
+"Bei Formaten für vorzeichenbehaftete Ganzzahlen wird :exc:`OverflowError` "
+"ausgelöst, wenn der Wert außerhalb des Wertebereichs des C-Typs liegt. Bei "
+"Formaten für vorzeichenlose Ganzzahlen werden die höchstwertigen Bits "
+"stillschweigend abgeschnitten, wenn das aufnehmende Feld zu klein für den "
+"Wert ist, und es wird :exc:`DeprecationWarning` ausgegeben, wenn der Wert "
+"größer als der Maximalwert des C-Typs oder kleiner als der Minimalwert des "
+"entsprechenden vorzeichenbehafteten Ganzzahltyps gleicher Größe ist."
 
 #: ../../c-api/arg.rst:246
 msgid "``b`` (:class:`int`) [unsigned char]"
@@ -653,6 +659,9 @@ msgid ""
 "in a C :c:expr:`unsigned char`. Convert a Python integer to a C :c:expr:"
 "`unsigned char`."
 msgstr ""
+"Konvertiere eine Python-Ganzzahl ohne Überlaufprüfung in eine sehr kleine "
+"Ganzzahl, die in einem C :c:expr:`unsigned char` abgelegt wird. Konvertiere "
+"eine Python-Ganzzahl in einen C :c:expr:`unsigned char`."
 
 #: ../../c-api/arg.rst:255 ../../c-api/arg.rst:676
 msgid "``h`` (:class:`int`) [short int]"
@@ -669,6 +678,7 @@ msgstr "``H`` (:class:`int`) [unsigned short int]"
 #: ../../c-api/arg.rst:259
 msgid "Convert a Python integer to a C :c:expr:`unsigned short int`."
 msgstr ""
+"Konvertiere eine Python-Ganzzahl in einen C :c:expr:`unsigned short int`."
 
 #: ../../c-api/arg.rst:261 ../../c-api/arg.rst:670
 msgid "``i`` (:class:`int`) [int]"
@@ -685,7 +695,7 @@ msgstr "``I`` (:class:`int`) [unsigned int]"
 
 #: ../../c-api/arg.rst:265
 msgid "Convert a Python integer to a C :c:expr:`unsigned int`."
-msgstr ""
+msgstr "Konvertiere eine Python-Ganzzahl in einen C :c:expr:`unsigned int`."
 
 #: ../../c-api/arg.rst:267 ../../c-api/arg.rst:679
 msgid "``l`` (:class:`int`) [long int]"
@@ -701,7 +711,7 @@ msgstr "``k`` (:class:`int`) [unsigned long]"
 
 #: ../../c-api/arg.rst:271
 msgid "Convert a Python integer to a C :c:expr:`unsigned long`."
-msgstr ""
+msgstr "Konvertiere eine Python-Ganzzahl in einen C :c:expr:`unsigned long`."
 
 #: ../../c-api/arg.rst:273 ../../c-api/arg.rst:282
 msgid "Use :meth:`~object.__index__` if available."
@@ -722,6 +732,7 @@ msgstr "``K`` (:class:`int`) [unsigned long long]"
 #: ../../c-api/arg.rst:280
 msgid "Convert a Python integer to a C :c:expr:`unsigned long long`."
 msgstr ""
+"Konvertiere eine Python-Ganzzahl in einen C :c:expr:`unsigned long long`."
 
 #: ../../c-api/arg.rst:285 ../../c-api/arg.rst:702
 msgid "``n`` (:class:`int`) [:c:type:`Py_ssize_t`]"
@@ -796,6 +807,10 @@ msgid ""
 "value for the C type or less than the minimal value for the corresponding "
 "signed integer type of the same size."
 msgstr ""
+"Bei den Formaten für vorzeichenlose Ganzzahlen ``B``, ``H``, ``I``, ``k`` "
+"und ``K`` wird :exc:`DeprecationWarning` ausgegeben, wenn der Wert größer "
+"als der Maximalwert des C-Typs oder kleiner als der Minimalwert des "
+"entsprechenden vorzeichenbehafteten Ganzzahltyps gleicher Größe ist."
 
 #: ../../c-api/arg.rst:317
 msgid "Other objects"
@@ -1231,6 +1246,11 @@ msgid ""
 "calling convention). Returns true on success; on failure, it returns false "
 "and raises the appropriate exception."
 msgstr ""
+"Die Parameter einer Funktion, die ausschließlich Array-Parameter akzeptiert, "
+"werden in lokale Variablen umgewandelt (also einer Funktion, die die "
+"Aufrufkonvention :c:macro:`METH_FASTCALL` verwendet). Bei Erfolg wird „true“ "
+"zurückgegeben. Bei einem Fehler wird „false“ zurückgegeben und die "
+"entsprechende Ausnahme ausgelöst."
 
 #: ../../c-api/arg.rst:537
 msgid ""
@@ -1240,6 +1260,12 @@ msgid ""
 "true on success; on failure, it returns false and raises the appropriate "
 "exception."
 msgstr ""
+"Die Parameter einer Funktion, die sowohl Array- als auch "
+"Schlüsselwortparameter akzeptiert, werden in lokale Variablen umgewandelt "
+"(also einer Funktion, die die Aufrufkonvention :c:macro:`METH_FASTCALL` ``|"
+"`` :c:macro:`METH_KEYWORDS` verwendet). Bei Erfolg wird „true“ "
+"zurückgegeben. Bei einem Fehler wird „false“ zurückgegeben und die "
+"entsprechende Ausnahme ausgelöst."
 
 #: ../../c-api/arg.rst:548
 msgid ""
