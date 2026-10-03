@@ -468,7 +468,7 @@ msgstr ""
 msgid ""
 "This is the async variant of the :func:`next` builtin, and behaves similarly."
 msgstr ""
-"Dies ist die asynchrone Variante der eingebauten Funktion :func:`next` und "
+"Dies ist die asynchrone Variante der integrierten Funktion :func:`next` und "
 "verhält sich ähnlich."
 
 #: ../../builtins/functions.rst:97
@@ -1209,7 +1209,7 @@ msgid ""
 "class:`set`, and :class:`tuple` classes, as well as the :mod:`collections` "
 "module."
 msgstr ""
-"Für andere Container siehe die eingebauten Klassen :class:`frozendict`, :"
+"Für andere Container siehe die integrierten Klassen :class:`frozendict`, :"
 "class:`list`, :class:`set` und :class:`tuple` sowie das Modul :mod:"
 "`collections`."
 
@@ -1426,7 +1426,7 @@ msgstr ""
 "*globals* und *locals* als globaler bzw. lokaler Namensraum verwendet "
 "werden. Ist das Dictionary *globals* vorhanden und enthält keinen Wert für "
 "den Schlüssel ``__builtins__``, wird vor dem Parsen von *source* ein Verweis "
-"auf das Dictionary des eingebauten Moduls :mod:`builtins` unter diesem "
+"auf das Dictionary des integrierten Moduls :mod:`builtins` unter diesem "
 "Schlüssel eingefügt. Das Überschreiben von ``__builtins__`` kann verwendet "
 "werden, um die verfügbaren Namen einzuschränken oder zu ändern, dies ist "
 "jedoch **kein** Sicherheitsmechanismus: Der ausgeführte Code kann weiterhin "
@@ -1506,7 +1506,7 @@ msgid ""
 "described for the :func:`locals` builtin."
 msgstr ""
 "Die Semantik des Standard-Namensraums für lokale Variablen (*locals*) wurde "
-"wie für die eingebaute Funktion :func:`locals` beschrieben angepasst."
+"wie für die integrierte Funktion :func:`locals` beschrieben angepasst."
 
 #: ../../builtins/functions.rst:672 ../../builtins/functions.rst:754
 msgid "*globals* can now be a :class:`frozendict`."
@@ -1580,7 +1580,7 @@ msgid ""
 "security mechanism: the executed code can still access all builtins."
 msgstr ""
 "Enthält das Dictionary *globals* keinen Wert für den Schlüssel "
-"``__builtins__``, wird ein Verweis auf das Dictionary des eingebauten "
+"``__builtins__``, wird ein Verweis auf das Dictionary des integrierten "
 "Moduls :mod:`builtins` unter diesem Schlüssel eingefügt. Das Überschreiben "
 "von ``__builtins__`` kann verwendet werden, um die verfügbaren Namen "
 "einzuschränken oder zu ändern, dies ist jedoch **kein** "
@@ -1606,7 +1606,7 @@ msgid ""
 "global and local namespace, respectively, which may be useful to pass around "
 "for use as the second and third argument to :func:`exec`."
 msgstr ""
-"Die eingebauten Funktionen :func:`globals` und :func:`locals` geben den "
+"Die integrierten Funktionen :func:`globals` und :func:`locals` geben den "
 "aktuellen globalen beziehungsweise lokalen Namensraum zurück; dies kann "
 "nützlich sein, um sie als zweites und drittes Argument an :func:`exec` zu "
 "übergeben."
@@ -1774,7 +1774,7 @@ msgstr ""
 "Wandelt einen *Wert* in eine „formatierte“ Darstellung um, wie durch "
 "*format_spec* festgelegt. Die Interpretation von *format_spec* hängt vom Typ "
 "des Arguments *Wert* ab; es gibt jedoch eine Standard-Formatierungssyntax, "
-"die von den meisten eingebauten Typen verwendet wird: :ref:`formatspec`."
+"die von den meisten integrierten Typen verwendet wird: :ref:`formatspec`."
 
 #: ../../builtins/functions.rst:858
 msgid ""
@@ -1814,7 +1814,7 @@ msgid ""
 "in class. See also :ref:`typesmapping` for documentation about this class."
 msgstr ""
 "Erstellt ein neues unveränderliches Dictionary. Das Objekt :class:"
-"`frozendict` ist eine eingebaute Klasse. Siehe auch :ref:`typesmapping` für "
+"`frozendict` ist eine integrierte Klasse. Siehe auch :ref:`typesmapping` für "
 "die Dokumentation zu dieser Klasse."
 
 #: ../../builtins/functions.rst:882
@@ -1822,7 +1822,7 @@ msgid ""
 "For other containers see the built-in :class:`dict`, :class:`list`, :class:"
 "`set`, and :class:`tuple` classes, as well as the :mod:`collections` module."
 msgstr ""
-"Für andere Container siehe die eingebauten Klassen :class:`dict`, :class:"
+"Für andere Container siehe die integrierten Klassen :class:`dict`, :class:"
 "`list`, :class:`set` und :class:`tuple` sowie das Modul :mod:`collections`."
 
 #: ../../builtins/functions.rst:892
@@ -1832,7 +1832,7 @@ msgid ""
 "set` for documentation about this class."
 msgstr ""
 "Gibt ein neues Objekt :class:`frozenset` zurück, optional mit Elementen aus "
-"*iterable*. :class:`frozenset` ist eine eingebaute Klasse. Siehe auch :ref:"
+"*iterable*. :class:`frozenset` ist eine integrierte Klasse. Siehe auch :ref:"
 "`types-set` für die Dokumentation zu dieser Klasse."
 
 #: ../../builtins/functions.rst:896
@@ -1840,7 +1840,7 @@ msgid ""
 "For other containers see the built-in :class:`set`, :class:`list`, :class:"
 "`tuple`, and :class:`dict` classes, as well as the :mod:`collections` module."
 msgstr ""
-"Für weitere Container siehe die eingebauten Klassen :class:`set`, :class:"
+"Für weitere Container siehe die integrierten Klassen :class:`set`, :class:"
 "`list`, :class:`tuple` und :class:`dict` sowie das Modul :mod:`collections`."
 
 #: ../../builtins/functions.rst:904
@@ -1953,7 +1953,7 @@ msgstr ""
 msgid ""
 "This function is added to the built-in namespace by the :mod:`site` module."
 msgstr ""
-"Diese Funktion wird vom Modul :mod:`site` dem eingebauten Namensraum "
+"Diese Funktion wird vom Modul :mod:`site` dem integrierten Namensraum "
 "hinzugefügt."
 
 #: ../../builtins/functions.rst:964
@@ -3545,7 +3545,7 @@ msgid ""
 "negative).  The return value is an integer if *ndigits* is omitted or "
 "``None``. Otherwise, the return value has the same type as *number*."
 msgstr ""
-"Bei den eingebauten Typen, die :func:`round` unterstützen, werden Werte auf "
+"Bei den integrierten Typen, die :func:`round` unterstützen, werden Werte auf "
 "das nächste Vielfache von 10 hoch minus *ndigits* gerundet; liegen zwei "
 "Vielfache gleich nah, wird zur geraden Zahl hin gerundet (so ergeben "
 "beispielsweise sowohl ``round(0.5)`` als auch ``round(-0.5)`` den Wert "
@@ -3583,7 +3583,7 @@ msgid ""
 "for documentation about this class."
 msgstr ""
 "Gibt ein neues Objekt :class:`set` zurück, optional mit Elementen aus "
-"*iterable*. :class:`set` ist eine eingebaute Klasse. Siehe auch :ref:`types-"
+"*iterable*. :class:`set` ist eine integrierte Klasse. Siehe auch :ref:`types-"
 "set` für die Dokumentation zu dieser Klasse."
 
 #: ../../builtins/functions.rst:1831
@@ -3592,7 +3592,7 @@ msgid ""
 "class:`tuple`, and :class:`dict` classes, as well as the :mod:`collections` "
 "module."
 msgstr ""
-"Für weitere Container siehe die eingebauten Klassen :class:`frozenset`, :"
+"Für weitere Container siehe die integrierten Klassen :class:`frozenset`, :"
 "class:`list`, :class:`tuple` und :class:`dict` sowie das Modul :mod:"
 "`collections`."
 
@@ -4277,7 +4277,7 @@ msgid ""
 "The :func:`isinstance` built-in function is recommended for testing the type "
 "of an object, because it takes subclasses into account."
 msgstr ""
-"Die eingebaute Funktion :func:`isinstance` wird empfohlen, um den Typ eines "
+"Die integrierte Funktion :func:`isinstance` wird empfohlen, um den Typ eines "
 "Objekts zu überprüfen, da sie Unterklassen berücksichtigt."
 
 #: ../../builtins/functions.rst:2164
@@ -4401,7 +4401,7 @@ msgid ""
 "described for the :func:`locals` builtin."
 msgstr ""
 "Das Ergebnis des Aufrufs dieser Funktion ohne Argument wurde wie für die "
-"eingebaute Funktion :func:`locals` beschrieben aktualisiert."
+"integrierte Funktion :func:`locals` beschrieben aktualisiert."
 
 #: ../../builtins/functions.rst:2229
 msgid ""
@@ -4778,7 +4778,7 @@ msgstr "Typ"
 
 #: ../../builtins/functions.rst:674
 msgid "built-in function"
-msgstr "Eingebaute Funktion"
+msgstr "Integrierte Funktion"
 
 #: ../../builtins/functions.rst:674
 msgid "exec"
@@ -4802,7 +4802,7 @@ msgstr "Zeichenkette"
 
 #: ../../builtins/functions.rst:847
 msgid "format() (built-in function)"
-msgstr "format() (Eingebaute Funktion)"
+msgstr "format() (Integrierte Funktion)"
 
 #: ../../builtins/functions.rst:1376
 msgid "file object"
@@ -4810,7 +4810,7 @@ msgstr "Datei Objekt"
 
 #: ../../builtins/functions.rst:1376 ../../builtins/functions.rst:1472
 msgid "open() built-in function"
-msgstr "open() Eingebaute Funktion"
+msgstr "open() Integrierte Funktion"
 
 #: ../../builtins/functions.rst:1405
 msgid "file"
@@ -4858,7 +4858,7 @@ msgstr "sys"
 
 #: ../../builtins/functions.rst:2023
 msgid "str() (built-in function)"
-msgstr "str() (Eingebaute Funktion)"
+msgstr "str() (Integrierte Funktion)"
 
 #: ../../builtins/functions.rst:2155
 msgid "object"
@@ -4874,7 +4874,7 @@ msgstr "Import"
 
 #: ../../builtins/functions.rst:2325
 msgid "builtins"
-msgstr "Eingebaute Funktionen"
+msgstr "Integrierte Funktionen"
 
 #~ msgid ""
 #~ "``'strict'`` to raise a :exc:`ValueError` exception if there is an "

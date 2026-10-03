@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../builtins/stdtypes.rst:8
 msgid "Built-in Types"
-msgstr "Eingebaute Typen"
+msgstr "Integrierte Typen"
 
 #: ../../builtins/stdtypes.rst:10
 msgid ""
@@ -29,14 +29,14 @@ msgid ""
 "interpreter."
 msgstr ""
 "Die folgenden Abschnitte beschreiben die Standardtypen, die in den "
-"Interpreter eingebaut sind."
+"Interpreter integriert sind."
 
 #: ../../builtins/stdtypes.rst:15
 msgid ""
 "The principal built-in types are numerics, sequences, mappings, classes, "
 "instances and exceptions."
 msgstr ""
-"Die wichtigsten eingebauten Typen sind numerische Typen, Sequenzen, "
+"Die wichtigsten integrierten Typen sind numerische Typen, Sequenzen, "
 "Mappings, Klassen, Instanzen und Exceptions."
 
 #: ../../builtins/stdtypes.rst:18
@@ -92,7 +92,7 @@ msgstr ""
 "eine Methode :meth:`~object.__len__`, die bei Aufruf mit dem Objekt null "
 "zurückgibt. [1]_ Löst eine der Methoden beim Aufruf eine Ausnahme aus, wird "
 "die Ausnahme weitergegeben, und das Objekt hat keinen Wahrheitswert (zum "
-"Beispiel :data:`NotImplemented`). Hier sind die meisten der eingebauten "
+"Beispiel :data:`NotImplemented`). Hier sind die meisten der integrierten "
 "Objekte aufgeführt, die als falsch gelten:"
 
 #: ../../builtins/stdtypes.rst:58
@@ -122,7 +122,7 @@ msgid ""
 "otherwise stated. (Important exception: the Boolean operations ``or`` and "
 "``and`` always return one of their operands.)"
 msgstr ""
-"Operationen und eingebaute Funktionen, die ein boolesches Ergebnis haben, "
+"Operationen und integrierte Funktionen, die ein boolesches Ergebnis haben, "
 "geben immer ``0`` oder ``False`` für falsch und ``1`` oder ``True`` für wahr "
 "zurück, sofern nicht anders angegeben. (Wichtige Ausnahme: Die booleschen "
 "Operationen ``or`` und ``and`` geben immer einen ihrer Operanden zurück.)"
@@ -430,7 +430,7 @@ msgid ""
 "with a zero real part) which you can add to an integer or float to get a "
 "complex number with real and imaginary parts."
 msgstr ""
-"Zahlen werden durch numerische Literale oder als Ergebnis von eingebauten "
+"Zahlen werden durch numerische Literale oder als Ergebnis von integrierten "
 "Funktionen und Operatoren erzeugt. Reine Ganzzahlliterale (einschließlich "
 "Hexadezimal-, Oktal- und Binärzahlen) ergeben Ganzzahlen. Numerische "
 "Literale, die einen Dezimalpunkt oder ein Exponenten-Zeichen enthalten, "
@@ -454,7 +454,7 @@ msgid ""
 "\"narrower\" type is widened to that of the other:"
 msgstr ""
 "Python unterstützt gemischte Arithmetik vollständig: Wenn ein binärer "
-"arithmetischer Operator Operanden unterschiedlicher eingebauter numerischer "
+"arithmetischer Operator Operanden unterschiedlicher integrierter numerischer "
 "Typen hat, wird der Operand mit dem „schmaleren\" Typ auf den Typ des "
 "anderen erweitert:"
 
@@ -1546,7 +1546,7 @@ msgid ""
 "`float`, or :class:`complex`::"
 msgstr ""
 "Zur Verdeutlichung der obigen Regeln folgt hier ein Beispiel-Python-Code, "
-"der dem eingebauten Hash entspricht, zur Berechnung des Hash-Werts einer "
+"der dem integrierten Hash entspricht, zur Berechnung des Hash-Werts einer "
 "rationalen Zahl, eines :class:`float` oder :class:`complex`::"
 
 #: ../../builtins/stdtypes.rst:813
@@ -1666,7 +1666,7 @@ msgid ""
 "The built-in function :func:`bool`  converts any value to a boolean, if the "
 "value can be interpreted as a truth value (see section :ref:`truth` above)."
 msgstr ""
-"Die eingebaute Funktion :func:`bool` konvertiert jeden Wert in einen "
+"Die integrierte Funktion :func:`bool` konvertiert jeden Wert in einen "
 "booleschen Wert, sofern der Wert als Wahrheitswert interpretiert werden kann "
 "(siehe Abschnitt :ref:`truth` oben)."
 
@@ -2287,7 +2287,7 @@ msgid ""
 msgstr ""
 "Die einzige Operation, die unveränderliche Sequenztypen im Allgemeinen "
 "implementieren und die von veränderlichen Sequenztypen nicht implementiert "
-"wird, ist die Unterstützung für die eingebaute Funktion :func:`hash`."
+"wird, ist die Unterstützung für die integrierte Funktion :func:`hash`."
 
 #: ../../builtins/stdtypes.rst:1206
 msgid ""
@@ -2574,7 +2574,7 @@ msgid ""
 "in."
 msgstr ""
 "Viele weitere Operationen erzeugen ebenfalls Listen, einschließlich der "
-"eingebauten Funktion :func:`sorted`."
+"integrierten Funktion :func:`sorted`."
 
 #: ../../builtins/stdtypes.rst:1411
 msgid "Lists are :ref:`generic <generics>` over the types of their items."
@@ -2712,7 +2712,7 @@ msgid ""
 msgstr ""
 "Tupel sind unveränderliche Sequenzen, die typischerweise zum Speichern von "
 "Sammlungen heterogener Daten verwendet werden (wie etwa die 2-Tupel, die von "
-"der eingebauten Funktion :func:`enumerate` erzeugt werden). Tupel werden "
+"der integrierten Funktion :func:`enumerate` erzeugt werden). Tupel werden "
 "auch in Fällen verwendet, in denen eine unveränderliche Sequenz homogener "
 "Daten benötigt wird (wie etwa zur Ermöglichung der Speicherung in einer :"
 "class:`set`- oder :class:`dict`-Instanz)."
@@ -2738,7 +2738,7 @@ msgstr "Trennen von Elementen durch Kommas: ``a, b, c`` oder ``(a, b, c)``"
 #: ../../builtins/stdtypes.rst:1485
 msgid "Using the :func:`tuple` built-in: ``tuple()`` or ``tuple(iterable)``"
 msgstr ""
-"Verwendung der eingebauten Funktion :func:`tuple`: ``tuple()`` oder "
+"Verwendung der integrierten Funktion :func:`tuple`: ``tuple()`` oder "
 "``tuple(iterable)``"
 
 #: ../../builtins/stdtypes.rst:1487
@@ -2825,7 +2825,7 @@ msgid ""
 "zero, :exc:`ValueError` is raised."
 msgstr ""
 "Die Argumente für den Range-Konstruktor müssen Ganzzahlen sein (entweder das "
-"eingebaute :class:`int` oder jedes Objekt, das die spezielle Methode :meth:"
+"integrierte :class:`int` oder jedes Objekt, das die spezielle Methode :meth:"
 "`~object.__index__` implementiert). Wenn das Argument *step* weggelassen "
 "wird, ist der Standardwert ``1``. Wenn das Argument *start* weggelassen "
 "wird, ist der Standardwert ``0``. Wenn *step* null ist, wird ein :exc:"
@@ -4358,7 +4358,7 @@ msgid ""
 msgstr ""
 "Hier bedeutet \"druckbar\", dass das Zeichen für :func:`repr` zur Verwendung "
 "in seiner Ausgabe geeignet ist; \"nicht druckbar\" bedeutet, dass :func:"
-"`repr` bei eingebauten Typen das Zeichen hexadezimal maskiert. Dies hat "
+"`repr` bei integrierten Typen das Zeichen hexadezimal maskiert. Dies hat "
 "keinen Einfluss auf die Behandlung von Strings, die in :data:`sys.stdout` "
 "oder :data:`sys.stderr` geschrieben werden."
 
@@ -5910,7 +5910,7 @@ msgid ""
 "elements of *values*. The effect is similar to using the :c:func:`sprintf` "
 "function in the C language. For example:"
 msgstr ""
-"String-Objekte besitzen eine einzigartige eingebaute Operation: den Operator "
+"String-Objekte besitzen eine einzigartige integrierte Operation: den Operator "
 "``%`` (Modulo). Dieser wird auch als String-*Formatierungs*- oder "
 "*Interpolations*-Operator bezeichnet. Bei ``format % values`` (wobei "
 "*format* ein String ist) werden ``%``-Konvertierungsspezifikationen in "
@@ -6248,7 +6248,7 @@ msgid ""
 msgstr ""
 "Bei Gleitkommaformaten sollte das Ergebnis korrekt auf eine angegebene "
 "Präzision ``p`` von Nachkommastellen gerundet werden. Der Rundungsmodus "
-"entspricht dem des eingebauten :func:`round`."
+"entspricht dem des integrierten :func:`round`."
 
 #: ../../builtins/stdtypes.rst:3266 ../../builtins/stdtypes.rst:4568
 msgid ""
@@ -6341,7 +6341,7 @@ msgid ""
 "ref:`buffer protocol <bufferobjects>` to access the memory of other binary "
 "objects without needing to make a copy."
 msgstr ""
-"Die grundlegenden eingebauten Typen zur Manipulation binärer Daten sind :"
+"Die grundlegenden integrierten Typen zur Manipulation binärer Daten sind :"
 "class:`bytes` und :class:`bytearray`. Sie werden durch :class:`memoryview` "
 "unterstützt, das das :ref:`Pufferprotokoll <bufferobjects>` nutzt, um auf "
 "den Speicher anderer binärer Objekte zuzugreifen, ohne eine Kopie anfertigen "
@@ -6465,7 +6465,7 @@ msgstr ""
 
 #: ../../builtins/stdtypes.rst:3372
 msgid "Also see the :ref:`bytes <func-bytes>` built-in."
-msgstr "Siehe auch die eingebaute Funktion :ref:`bytes <func-bytes>`."
+msgstr "Siehe auch die integrierte Funktion :ref:`bytes <func-bytes>`."
 
 #: ../../builtins/stdtypes.rst:3374
 msgid ""
@@ -6622,7 +6622,7 @@ msgstr ""
 
 #: ../../builtins/stdtypes.rst:3463
 msgid "Also see the :ref:`bytearray <func-bytearray>` built-in."
-msgstr "Siehe auch die eingebaute Funktion :ref:`bytearray <func-bytearray>`."
+msgstr "Siehe auch die integrierte Funktion :ref:`bytearray <func-bytearray>`."
 
 #: ../../builtins/stdtypes.rst:3465
 msgid ""
@@ -7993,7 +7993,7 @@ msgid ""
 "func:`sprintf` function in the C language."
 msgstr ""
 "Bytes-Objekte (``bytes``/``bytearray``) besitzen eine einzigartige "
-"eingebaute Operation: den Operator ``%`` (Modulo). Dieser wird auch als "
+"integrierte Operation: den Operator ``%`` (Modulo). Dieser wird auch als "
 "Bytes-*Formatierungs*- oder *Interpolations*-Operator bezeichnet. Bei "
 "``format % values`` (wobei *format* ein Bytes-Objekt ist) werden ``%``-"
 "Konvertierungsspezifikationen in *format* durch null oder mehr Elemente aus "
@@ -8108,7 +8108,7 @@ msgid ""
 "protocol include :class:`bytes` and :class:`bytearray`."
 msgstr ""
 "Erstellt eine :class:`memoryview`, die *object* referenziert. *object* muss "
-"das Pufferprotokoll unterstützen. Zu den eingebauten Objekten, die das "
+"das Pufferprotokoll unterstützen. Zu den integrierten Objekten, die das "
 "Pufferprotokoll unterstützen, gehören :class:`bytes` und :class:`bytearray`."
 
 #: ../../builtins/stdtypes.rst:4627
@@ -9108,7 +9108,7 @@ msgid ""
 "it is created; it can therefore be used as a dictionary key or as an element "
 "of another set."
 msgstr ""
-"Derzeit gibt es zwei eingebaute Mengentypen: :class:`set` und :class:"
+"Derzeit gibt es zwei integrierte Mengentypen: :class:`set` und :class:"
 "`frozenset`. Der Typ :class:`set` ist veränderlich – der Inhalt kann über "
 "Methoden wie :meth:`~set.add` und :meth:`~set.remove` geändert werden. Da er "
 "veränderlich ist, besitzt er keinen Hashwert und kann weder als Dictionary-"
@@ -10448,7 +10448,7 @@ msgid ""
 "The core built-in types for :term:`type annotations <annotation>` are :ref:"
 "`Generic Alias <types-genericalias>` and :ref:`Union <types-union>`."
 msgstr ""
-"Die zentralen eingebauten Typen für :term:`Typ-Annotationen <annotation>` "
+"Die zentralen integrierten Typen für :term:`Typ-Annotationen <annotation>` "
 "sind :ref:`Generic Alias <types-genericalias>` und :ref:`Union <types-"
 "union>`."
 
@@ -10603,7 +10603,7 @@ msgid ""
 "The builtin functions :func:`isinstance` and :func:`issubclass` do not "
 "accept ``GenericAlias`` types for their second argument::"
 msgstr ""
-"Die eingebauten Funktionen :func:`isinstance` und :func:`issubclass` "
+"Die integrierten Funktionen :func:`isinstance` und :func:`issubclass` "
 "akzeptieren keine ``GenericAlias``-Typen als zweites Argument::"
 
 #: ../../builtins/stdtypes.rst:5951
@@ -11343,7 +11343,7 @@ msgstr ""
 
 #: ../../builtins/stdtypes.rst:6265
 msgid "Other Built-in Types"
-msgstr "Andere eingebaute Typen"
+msgstr "Andere integrierte Typen"
 
 #: ../../builtins/stdtypes.rst:6267
 msgid ""
@@ -11431,7 +11431,7 @@ msgid ""
 "function), but the implementation is different, hence the different object "
 "types."
 msgstr ""
-"Es gibt im Wesentlichen zwei Arten von Funktionsobjekten: eingebaute "
+"Es gibt im Wesentlichen zwei Arten von Funktionsobjekten: integrierte "
 "Funktionen und benutzerdefinierte Funktionen. Beide unterstützen dieselbe "
 "Operation (den Funktionsaufruf), die Implementierung ist jedoch "
 "unterschiedlich, daher die verschiedenen Objekttypen."
@@ -11452,9 +11452,9 @@ msgid ""
 "methods>`. Built-in methods are described with the types that support them."
 msgstr ""
 "Methoden sind Funktionen, die mittels Attributnotation aufgerufen werden. Es "
-"gibt zwei Arten: :ref:`eingebaute Methoden <builtin-methods>` (wie :meth:"
+"gibt zwei Arten: :ref:`integrierte Methoden <builtin-methods>` (wie :meth:"
 "`~list.append` bei Listen) und :ref:`Klasseninstanzmethoden <instance-"
-"methods>`. Eingebaute Methoden werden bei den Typen beschrieben, die sie "
+"methods>`. Integrierte Methoden werden bei den Typen beschrieben, die sie "
 "unterstützen."
 
 #: ../../builtins/stdtypes.rst:6332
@@ -11548,7 +11548,7 @@ msgstr ""
 "kompilierten\" ausführbaren Python-Code wie beispielsweise einen "
 "Funktionskörper darzustellen. Sie unterscheiden sich von Funktionsobjekten "
 "dadurch, dass sie keine Referenz auf ihre globale Ausführungsumgebung "
-"enthalten. Code-Objekte werden von der eingebauten Funktion :func:`compile` "
+"enthalten. Code-Objekte werden von der integrierten Funktion :func:`compile` "
 "zurückgegeben und können über ihr Attribut :attr:`~function.__code__` aus "
 "Funktionsobjekten extrahiert werden. Siehe auch das Modul :mod:`code`."
 
@@ -11568,7 +11568,7 @@ msgid ""
 "source string) to the :func:`exec` or :func:`eval`  built-in functions."
 msgstr ""
 "Ein Code-Objekt kann ausgeführt oder ausgewertet werden, indem es (anstelle "
-"eines Quell-Strings) an die eingebauten Funktionen :func:`exec` oder :func:"
+"eines Quell-Strings) an die integrierten Funktionen :func:`exec` oder :func:"
 "`eval` übergeben wird."
 
 #: ../../builtins/stdtypes.rst:6397
@@ -11587,9 +11587,9 @@ msgid ""
 "standard built-in types."
 msgstr ""
 "Typ-Objekte stellen die verschiedenen Objekttypen dar. Auf den Typ eines "
-"Objekts wird über die eingebaute Funktion :func:`type` zugegriffen. Es gibt "
+"Objekts wird über die integrierte Funktion :func:`type` zugegriffen. Es gibt "
 "keine speziellen Operationen auf Typen. Das Standardmodul :mod:`types` "
-"definiert Namen für alle standardmäßigen eingebauten Typen."
+"definiert Namen für alle standardmäßigen integrierten Typen."
 
 #: ../../builtins/stdtypes.rst:6414
 msgid "Types are written like this: ``<class 'int'>``."
@@ -11607,7 +11607,7 @@ msgid ""
 msgstr ""
 "Dieses Objekt wird von Funktionen zurückgegeben, die nicht explizit einen "
 "Wert zurückgeben. Es unterstützt keine speziellen Operationen. Es gibt genau "
-"ein Null-Objekt namens ``None`` (ein eingebauter Name). ``type(None)()`` "
+"ein Null-Objekt namens ``None`` (ein integrierter Name). ``type(None)()`` "
 "erzeugt dasselbe Singleton."
 
 #: ../../builtins/stdtypes.rst:6426
@@ -11627,7 +11627,7 @@ msgid ""
 msgstr ""
 "Dieses Objekt wird üblicherweise verwendet, um anzuzeigen, dass etwas "
 "ausgelassen wurde. Es unterstützt keine speziellen Operationen. Es gibt "
-"genau ein Ellipsis-Objekt namens :const:`Ellipsis` (ein eingebauter Name). "
+"genau ein Ellipsis-Objekt namens :const:`Ellipsis` (ein integrierter Name). "
 "``type(Ellipsis)()`` erzeugt das Singleton :const:`Ellipsis`."
 
 #: ../../builtins/stdtypes.rst:6440
@@ -11746,7 +11746,7 @@ msgid ""
 msgstr ""
 "Die Implementierung fügt einigen Objekttypen einige spezielle "
 "schreibgeschützte Attribute hinzu, wo sie relevant sind. Einige davon werden "
-"von der eingebauten Funktion :func:`dir` nicht gemeldet."
+"von der integrierten Funktion :func:`dir` nicht gemeldet."
 
 #: ../../builtins/stdtypes.rst:6499
 msgid ""
@@ -12202,7 +12202,7 @@ msgstr ""
 
 #: ../../builtins/stdtypes.rst:13
 msgid "built-in"
-msgstr "eingebaut"
+msgstr "integriert"
 
 #: ../../builtins/stdtypes.rst:13 ../../builtins/stdtypes.rst:332
 #: ../../builtins/stdtypes.rst:409 ../../builtins/stdtypes.rst:1005
@@ -12253,11 +12253,11 @@ msgstr "Wahr"
 
 #: ../../builtins/stdtypes.rst:54
 msgid "None (Built-in object)"
-msgstr "None (Eingebautes Objekt)"
+msgstr "None (Integriertes Objekt)"
 
 #: ../../builtins/stdtypes.rst:54
 msgid "False (Built-in object)"
-msgstr "False (Eingebautes Objekt)"
+msgstr "False (Integriertes Objekt)"
 
 #: ../../builtins/stdtypes.rst:66 ../../builtins/stdtypes.rst:100
 #: ../../builtins/stdtypes.rst:125 ../../builtins/stdtypes.rst:197
@@ -12435,7 +12435,7 @@ msgstr "Arithmetik"
 #: ../../builtins/stdtypes.rst:6376 ../../builtins/stdtypes.rst:6390
 #: ../../builtins/stdtypes.rst:6405
 msgid "built-in function"
-msgstr "eingebaute Funktion"
+msgstr "integrierte Funktion"
 
 #: ../../builtins/stdtypes.rst:251
 msgid "int"
@@ -12699,7 +12699,7 @@ msgstr "Textsequenztyp"
 #: ../../builtins/stdtypes.rst:1639 ../../builtins/stdtypes.rst:1786
 #: ../../builtins/stdtypes.rst:1806
 msgid "str (built-in class)"
-msgstr "str (eingebaute Klasse)"
+msgstr "str (integrierte Klasse)"
 
 #: ../../builtins/stdtypes.rst:1639
 msgid "(see also string)"

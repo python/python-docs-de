@@ -39,7 +39,7 @@ msgid ""
 "`builtins-index`. Standard library modules are described in :ref:`library-"
 "index`."
 msgstr ""
-"An anderer Stelle werden die eingebauten Objekttypen und Funktionen in :ref:"
+"An anderer Stelle werden die integrierten Objekttypen und Funktionen in :ref:"
 "`builtins-index` beschrieben. Standardbibliotheksmodule werden in :ref:"
 "`library-index` beschrieben."
 

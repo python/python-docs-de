@@ -88,9 +88,9 @@ msgid ""
 "modules are mentioned when they interact in a significant way with the "
 "language definition."
 msgstr ""
-"Jede Python-Implementierung bringt eine Reihe von eingebauten und Standard-"
+"Jede Python-Implementierung bringt eine Reihe von integrierten und Standard-"
 "Modulen mit. Diese sind in :ref:`library-index` dokumentiert. Einige wenige "
-"eingebaute Module werden erwähnt, wenn sie in wesentlicher Weise mit der "
+"integrierte Module werden erwähnt, wenn sie in wesentlicher Weise mit der "
 "Sprachdefinition interagieren."
 
 #: ../../reference/introduction.rst:41

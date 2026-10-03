@@ -1121,7 +1121,7 @@ msgid ""
 "functions>` may be supported in the future."
 msgstr ""
 "Die aktuelle Implementierung von CPython unterstützt Funktionsattribute nur "
-"für benutzerdefinierte Funktionen. Funktionsattribute für :ref:`eingebaute "
+"für benutzerdefinierte Funktionen. Funktionsattribute für :ref:`integrierte "
 "Funktionen <builtin-functions>` werden möglicherweise in Zukunft unterstützt."
 
 #: ../../reference/datamodel.rst:705
