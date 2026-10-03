@@ -19,6 +19,69 @@ resource_name          = bugs
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-newest:r:builtins--constants]
+file_filter            = builtins/constants.po
+source_file            = gettext/builtins/constants.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = builtins--constants
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:builtins--exceptions]
+file_filter            = builtins/exceptions.po
+source_file            = gettext/builtins/exceptions.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = builtins--exceptions
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:builtins--functions]
+file_filter            = builtins/functions.po
+source_file            = gettext/builtins/functions.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = builtins--functions
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:builtins--index]
+file_filter            = builtins/index.po
+source_file            = gettext/builtins/index.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = builtins--index
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:builtins--stdtypes]
+file_filter            = builtins/stdtypes.po
+source_file            = gettext/builtins/stdtypes.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = builtins--stdtypes
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:builtins--threadsafety]
+file_filter            = builtins/threadsafety.po
+source_file            = gettext/builtins/threadsafety.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = builtins--threadsafety
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:builtins--time-complexity]
+file_filter            = builtins/time-complexity.po
+source_file            = gettext/builtins/time-complexity.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = builtins--time-complexity
+replace_edited_strings = false
+keep_translations      = false
+
 [o:python-doc:p:python-newest:r:c-api--abstract]
 file_filter            = c-api/abstract.po
 source_file            = gettext/c-api/abstract.pot
@@ -181,6 +244,15 @@ resource_name          = c-api--coro
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-newest:r:c-api--curses]
+file_filter            = c-api/curses.po
+source_file            = gettext/c-api/curses.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = c-api--curses
+replace_edited_strings = false
+keep_translations      = false
+
 [o:python-doc:p:python-newest:r:c-api--datetime]
 file_filter            = c-api/datetime.po
 source_file            = gettext/c-api/datetime.pot
@@ -322,6 +394,15 @@ source_file            = gettext/c-api/init_config.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = c-api--init_config
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:c-api--interp-lifecycle]
+file_filter            = c-api/interp-lifecycle.po
+source_file            = gettext/c-api/interp-lifecycle.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = c-api--interp-lifecycle
 replace_edited_strings = false
 keep_translations      = false
 
@@ -487,6 +568,24 @@ resource_name          = c-api--perfmaps
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-newest:r:c-api--picklebuffer]
+file_filter            = c-api/picklebuffer.po
+source_file            = gettext/c-api/picklebuffer.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = c-api--picklebuffer
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:c-api--profiling]
+file_filter            = c-api/profiling.po
+source_file            = gettext/c-api/profiling.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = c-api--profiling
+replace_edited_strings = false
+keep_translations      = false
+
 [o:python-doc:p:python-newest:r:c-api--refcounting]
 file_filter            = c-api/refcounting.po
 source_file            = gettext/c-api/refcounting.pot
@@ -502,6 +601,15 @@ source_file            = gettext/c-api/reflection.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = c-api--reflection
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:c-api--sentinel]
+file_filter            = c-api/sentinel.po
+source_file            = gettext/c-api/sentinel.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = c-api--sentinel
 replace_edited_strings = false
 keep_translations      = false
 
@@ -532,6 +640,15 @@ resource_name          = c-api--slice
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-newest:r:c-api--slots]
+file_filter            = c-api/slots.po
+source_file            = gettext/c-api/slots.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = c-api--slots
+replace_edited_strings = false
+keep_translations      = false
+
 [o:python-doc:p:python-newest:r:c-api--stable]
 file_filter            = c-api/stable.po
 source_file            = gettext/c-api/stable.pot
@@ -550,6 +667,24 @@ resource_name          = c-api--structures
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-newest:r:c-api--subinterpreters]
+file_filter            = c-api/subinterpreters.po
+source_file            = gettext/c-api/subinterpreters.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = c-api--subinterpreters
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:c-api--synchronization]
+file_filter            = c-api/synchronization.po
+source_file            = gettext/c-api/synchronization.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = c-api--synchronization
+replace_edited_strings = false
+keep_translations      = false
+
 [o:python-doc:p:python-newest:r:c-api--sys]
 file_filter            = c-api/sys.po
 source_file            = gettext/c-api/sys.pot
@@ -559,12 +694,30 @@ resource_name          = c-api--sys
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-newest:r:c-api--threads]
+file_filter            = c-api/threads.po
+source_file            = gettext/c-api/threads.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = c-api--threads
+replace_edited_strings = false
+keep_translations      = false
+
 [o:python-doc:p:python-newest:r:c-api--time]
 file_filter            = c-api/time.po
 source_file            = gettext/c-api/time.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = c-api--time
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:c-api--tls]
+file_filter            = c-api/tls.po
+source_file            = gettext/c-api/tls.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = c-api--tls
 replace_edited_strings = false
 keep_translations      = false
 
@@ -694,6 +847,24 @@ resource_name          = deprecations--c-api-pending-removal-in-3_18
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-newest:r:deprecations--c-api-pending-removal-in-3_19]
+file_filter            = deprecations/c-api-pending-removal-in-3.19.po
+source_file            = gettext/deprecations/c-api-pending-removal-in-3.19.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = deprecations--c-api-pending-removal-in-3_19
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:deprecations--c-api-pending-removal-in-3_20]
+file_filter            = deprecations/c-api-pending-removal-in-3.20.po
+source_file            = gettext/deprecations/c-api-pending-removal-in-3.20.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = deprecations--c-api-pending-removal-in-3_20
+replace_edited_strings = false
+keep_translations      = false
+
 [o:python-doc:p:python-newest:r:deprecations--c-api-pending-removal-in-future]
 file_filter            = deprecations/c-api-pending-removal-in-future.po
 source_file            = gettext/deprecations/c-api-pending-removal-in-future.pot
@@ -757,6 +928,15 @@ resource_name          = deprecations--pending-removal-in-3_17
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-newest:r:deprecations--pending-removal-in-3_18]
+file_filter            = deprecations/pending-removal-in-3.18.po
+source_file            = gettext/deprecations/pending-removal-in-3.18.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = deprecations--pending-removal-in-3_18
+replace_edited_strings = false
+keep_translations      = false
+
 [o:python-doc:p:python-newest:r:deprecations--pending-removal-in-3_19]
 file_filter            = deprecations/pending-removal-in-3.19.po
 source_file            = gettext/deprecations/pending-removal-in-3.19.pot
@@ -766,12 +946,30 @@ resource_name          = deprecations--pending-removal-in-3_19
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-newest:r:deprecations--pending-removal-in-3_20]
+file_filter            = deprecations/pending-removal-in-3.20.po
+source_file            = gettext/deprecations/pending-removal-in-3.20.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = deprecations--pending-removal-in-3_20
+replace_edited_strings = false
+keep_translations      = false
+
 [o:python-doc:p:python-newest:r:deprecations--pending-removal-in-future]
 file_filter            = deprecations/pending-removal-in-future.po
 source_file            = gettext/deprecations/pending-removal-in-future.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = deprecations--pending-removal-in-future
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:deprecations--soft-deprecations]
+file_filter            = deprecations/soft-deprecations.po
+source_file            = gettext/deprecations/soft-deprecations.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = deprecations--soft-deprecations
 replace_edited_strings = false
 keep_translations      = false
 
@@ -808,6 +1006,15 @@ source_file            = gettext/extending/extending.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = extending--extending
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:extending--first-extension-module]
+file_filter            = extending/first-extension-module.po
+source_file            = gettext/extending/first-extension-module.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = extending--first-extension-module
 replace_edited_strings = false
 keep_translations      = false
 
@@ -943,6 +1150,15 @@ source_file            = gettext/howto/a-conceptual-overview-of-asyncio.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = howto--a-conceptual-overview-of-asyncio
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:howto--abi3t-migration]
+file_filter            = howto/abi3t-migration.po
+source_file            = gettext/howto/abi3t-migration.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = howto--abi3t-migration
 replace_edited_strings = false
 keep_translations      = false
 
@@ -1195,6 +1411,24 @@ source_file            = gettext/howto/urllib2.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = howto--urllib2
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:improve-page]
+file_filter            = improve-page.po
+source_file            = gettext/improve-page.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = improve-page
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:improve-page-nojs]
+file_filter            = improve-page-nojs.po
+source_file            = gettext/improve-page-nojs.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = improve-page-nojs
 replace_edited_strings = false
 keep_translations      = false
 
@@ -1474,6 +1708,24 @@ source_file            = gettext/library/asyncio-task.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = library--asyncio-task
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:library--asyncio-threading]
+file_filter            = library/asyncio-threading.po
+source_file            = gettext/library/asyncio-threading.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = library--asyncio-threading
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:library--asyncio-tools]
+file_filter            = library/asyncio-tools.po
+source_file            = gettext/library/asyncio-tools.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = library--asyncio-tools
 replace_edited_strings = false
 keep_translations      = false
 
@@ -1771,15 +2023,6 @@ source_file            = gettext/library/configparser.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = library--configparser
-replace_edited_strings = false
-keep_translations      = false
-
-[o:python-doc:p:python-newest:r:library--constants]
-file_filter            = library/constants.po
-source_file            = gettext/library/constants.pot
-type                   = PO
-minimum_perc           = 0
-resource_name          = library--constants
 replace_edited_strings = false
 keep_translations      = false
 
@@ -2188,15 +2431,6 @@ resource_name          = library--errno
 replace_edited_strings = false
 keep_translations      = false
 
-[o:python-doc:p:python-newest:r:library--exceptions]
-file_filter            = library/exceptions.po
-source_file            = gettext/library/exceptions.pot
-type                   = PO
-minimum_perc           = 0
-resource_name          = library--exceptions
-replace_edited_strings = false
-keep_translations      = false
-
 [o:python-doc:p:python-newest:r:library--faulthandler]
 file_filter            = library/faulthandler.po
 source_file            = gettext/library/faulthandler.pot
@@ -2293,15 +2527,6 @@ source_file            = gettext/library/functional.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = library--functional
-replace_edited_strings = false
-keep_translations      = false
-
-[o:python-doc:p:python-newest:r:library--functions]
-file_filter            = library/functions.po
-source_file            = gettext/library/functions.pot
-type                   = PO
-minimum_perc           = 0
-resource_name          = library--functions
 replace_edited_strings = false
 keep_translations      = false
 
@@ -2764,6 +2989,15 @@ resource_name          = library--math
 replace_edited_strings = false
 keep_translations      = false
 
+[o:python-doc:p:python-newest:r:library--math_integer]
+file_filter            = library/math.integer.po
+source_file            = gettext/library/math.integer.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = library--math_integer
+replace_edited_strings = false
+keep_translations      = false
+
 [o:python-doc:p:python-newest:r:library--mimetypes]
 file_filter            = library/mimetypes.po
 source_file            = gettext/library/mimetypes.pot
@@ -3058,6 +3292,42 @@ source_file            = gettext/library/profile.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = library--profile
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:library--profiling]
+file_filter            = library/profiling.po
+source_file            = gettext/library/profiling.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = library--profiling
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:library--profiling_sampling]
+file_filter            = library/profiling.sampling.po
+source_file            = gettext/library/profiling.sampling.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = library--profiling_sampling
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:library--profiling_tracing]
+file_filter            = library/profiling.tracing.po
+source_file            = gettext/library/profiling.tracing.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = library--profiling_tracing
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:library--pstats]
+file_filter            = library/pstats.po
+source_file            = gettext/library/pstats.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = library--pstats
 replace_edited_strings = false
 keep_translations      = false
 
@@ -3391,15 +3661,6 @@ source_file            = gettext/library/statistics.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = library--statistics
-replace_edited_strings = false
-keep_translations      = false
-
-[o:python-doc:p:python-newest:r:library--stdtypes]
-file_filter            = library/stdtypes.po
-source_file            = gettext/library/stdtypes.pot
-type                   = PO
-minimum_perc           = 0
-resource_name          = library--stdtypes
 replace_edited_strings = false
 keep_translations      = false
 
@@ -4615,6 +4876,15 @@ source_file            = gettext/whatsnew/3.14.pot
 type                   = PO
 minimum_perc           = 0
 resource_name          = whatsnew--3_14
+replace_edited_strings = false
+keep_translations      = false
+
+[o:python-doc:p:python-newest:r:whatsnew--3_15]
+file_filter            = whatsnew/3.15.po
+source_file            = gettext/whatsnew/3.15.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = whatsnew--3_15
 replace_edited_strings = false
 keep_translations      = false
 
