@@ -1849,17 +1849,16 @@ msgstr ""
 "Multiprozessor-Rechner bieten."
 
 #: ../../glossary.rst:724
-#, fuzzy
 msgid ""
 "However, some extension modules, either standard or third-party, are "
 "designed so as to release the GIL when doing computationally intensive tasks "
 "such as compression or hashing.  Also, the GIL is always released when doing "
 "I/O."
 msgstr ""
-"Einige Erweiterungsmodule – sei es Standardmodule oder Module von "
-"Drittanbietern – sind jedoch so konzipiert, dass sie das GIL bei "
-"rechenintensiven Aufgaben wie Komprimierung oder Hashing freigeben. Außerdem "
-"wird das GIL bei E/A-Vorgängen stets freigegeben."
+"Manche Erweiterungsmodule – aus der Standardbibliothek oder von Dritten – "
+"sind allerdings so angelegt, dass sie das GIL freigeben, während sie "
+"rechenintensive Aufgaben wie Komprimierung oder Hashing ausführen. Außerdem "
+"wird das GIL bei I/O-Operationen immer freigegeben."
 
 #: ../../glossary.rst:729
 msgid ""
@@ -2112,7 +2111,6 @@ msgid "interactive"
 msgstr "interaktiv"
 
 #: ../../glossary.rst:825
-#, fuzzy
 msgid ""
 "Python has an interactive interpreter which means you can enter statements "
 "and expressions at the interpreter prompt, immediately execute them and see "
@@ -2121,13 +2119,13 @@ msgid ""
 "test out new ideas or inspect modules and packages (remember ``help(x)``). "
 "For more on interactive mode, see :ref:`tut-interac`."
 msgstr ""
-"Python verfügt über einen interaktiven Interpreter, d.h., du kannst "
-"Anweisungen und Ausdrücke an der Interpreter-Eingabeaufforderung eingeben, "
-"diese sofort ausführen und die Ergebnisse anzeigen lassen. Starte einfach "
-"``python`` ohne Argumente (z.B. über das Hauptmenü deines Computers). Dies "
-"ist eine sehr leistungsstarke Methode, um neue Ideen auszuprobieren oder "
-"Module und Pakete zu untersuchen (siehe auch ``help(x)``). Weitere "
-"Informationen zum interaktiven Modus findest du unter :ref:`tut-interac`."
+"Python hat einen interaktiven Interpreter, das heißt, du kannst Anweisungen "
+"und Ausdrücke an der Eingabeaufforderung des Interpreters eingeben, sie "
+"sofort ausführen und ihre Ergebnisse sehen. Starte dazu einfach ``python`` "
+"ohne Argumente (eventuell über das Hauptmenü deines Rechners). Das ist eine "
+"sehr wirkungsvolle Möglichkeit, neue Ideen auszuprobieren oder Module und "
+"Pakete zu untersuchen (denk an ``help(x)``). Mehr zum interaktiven Modus "
+"findest du unter :ref:`tut-interac`."
 
 #: ../../glossary.rst:832
 msgid "interpreted"
@@ -2376,18 +2374,16 @@ msgid "LBYL"
 msgstr "LBYL"
 
 #: ../../glossary.rst:934
-#, fuzzy
 msgid ""
 "Look before you leap.  This coding style explicitly tests for pre-conditions "
 "before making calls or lookups.  This style contrasts with the :term:`EAFP` "
 "approach and is characterized by the presence of many :keyword:`if` "
 "statements."
 msgstr ""
-"Erst schauen, dann springen. Bei diesem Programmierstil werden "
-"Vorbedingungen explizit geprüft, bevor Funktionen aufgerufen oder Abfragen "
-"durchgeführt werden. Dieser Stil steht im Gegensatz zum :term:`EAFP`-Ansatz "
-"und zeichnet sich durch das häufige Vorkommen von :keyword:`if`-Anweisungen "
-"aus."
+"Look before you leap (schau hin, bevor du springst). Dieser Programmierstil "
+"prüft Vorbedingungen ausdrücklich, bevor Aufrufe oder Zugriffe erfolgen. Er "
+"bildet den Gegensatz zum Ansatz :term:`EAFP` und ist durch viele "
+":keyword:`if`-Anweisungen gekennzeichnet."
 
 #: ../../glossary.rst:939
 msgid ""
@@ -2936,7 +2932,6 @@ msgid "non-deterministic"
 msgstr "nicht deterministisch"
 
 #: ../../glossary.rst:1151
-#, fuzzy
 msgid ""
 "Behavior where the outcome of a program can vary between executions with the "
 "same inputs.  In multi-threaded programs, non-deterministic behavior often "
@@ -2945,13 +2940,13 @@ msgid ""
 "using :term:`locks <lock>` and other :term:`synchronization primitives "
 "<synchronization primitive>` helps ensure deterministic behavior."
 msgstr ""
-"Verhalten, bei dem das Ergebnis eines Programms bei gleichen Eingaben von "
-"Ausführung zu Ausführung variieren kann. In Multithread-Programmen "
-"resultiert nichtdeterministisches Verhalten häufig aus :term:`Race-"
-"Conditions <race condition>`, bei denen der relative zeitliche Ablauf oder "
-"die Verflechtung von Threads das Ergebnis beeinflusst. Eine ordnungsgemäße "
-"Synchronisation mithilfe von :term:`Locks <lock>` und anderen :term:"
-"`Synchronisationsprimitiven <synchronization primitive>` trägt dazu bei, ein "
+"Verhalten, bei dem das Ergebnis eines Programms zwischen einzelnen "
+"Ausführungen schwanken kann, obwohl die Eingaben dieselben sind. In "
+"Programmen mit mehreren Threads entsteht nichtdeterministisches Verhalten "
+"häufig durch :term:`Wettlaufsituationen <race condition>`, bei denen die "
+"zeitliche Abfolge oder Verschränkung der Threads das Ergebnis beeinflusst. "
+"Eine saubere Synchronisation mit :term:`Locks <lock>` und anderen "
+":term:`Synchronisationsprimitiven <synchronization primitive>` hilft, "
 "deterministisches Verhalten sicherzustellen."
 
 #: ../../glossary.rst:1158
@@ -3074,16 +3069,15 @@ msgstr ""
 "kann. Es gibt fünf Arten von Parametern:"
 
 #: ../../glossary.rst:1204
-#, fuzzy
 msgid ""
 ":dfn:`positional-or-keyword`: specifies an argument that can be passed "
 "either :term:`positionally <argument>` or as a :term:`keyword argument "
 "<argument>`.  This is the default kind of parameter, for example *foo* and "
 "*bar* in the following::"
 msgstr ""
-":dfn:`positional-or-keyword`: Gibt ein Argument an, das entweder :term:"
-"`positionsbezogen <argument>` oder als :term:`Schlüsselwortargument "
-"<argument>` übergeben werden kann. Dies ist die Standardart von Parametern, "
+":dfn:`positional-or-keyword`: bezeichnet ein Argument, das entweder "
+":term:`über die Position <argument>` oder als :term:`Schlüsselwortargument "
+"<argument>` übergeben werden kann. Das ist die Standardart von Parametern, "
 "zum Beispiel *foo* und *bar* im Folgenden::"
 
 #: ../../glossary.rst:1209
@@ -3108,7 +3102,6 @@ msgid "def func(posonly1, posonly2, /, positional_or_keyword): ..."
 msgstr "def func(posonly1, posonly2, /, positional_or_keyword): ..."
 
 #: ../../glossary.rst:1222
-#, fuzzy
 msgid ""
 ":dfn:`keyword-only`: specifies an argument that can be supplied only by "
 "keyword.  Keyword-only parameters can be defined by including a single var-"
@@ -3116,12 +3109,11 @@ msgid ""
 "definition before them, for example *kw_only1* and *kw_only2* in the "
 "following::"
 msgstr ""
-":dfn:`keyword-only`: Gibt ein Argument an, das nur als Schlüsselwort "
-"übergeben werden kann. Schlüsselwort-Parameter können definiert werden, "
-"indem ein einzelner variabler Positionsparameter oder ein reines Schlüssel "
-"``*`` us in die Parameterliste der vorangehenden Funktionsdefinition "
-"aufgenommen wird, zum Beispiel *kw_only1* und *kw_only2* im folgenden "
-"Beispiel::"
+":dfn:`keyword-only`: bezeichnet ein Argument, das nur über ein Schlüsselwort "
+"übergeben werden kann. Keyword-only-Parameter lassen sich festlegen, indem "
+"in der Parameterliste der Funktionsdefinition vor ihnen ein einzelner "
+"var-positional-Parameter oder ein bloßes ``*`` steht, zum Beispiel "
+"*kw_only1* und *kw_only2* im Folgenden::"
 
 #: ../../glossary.rst:1228
 msgid "def func(arg, *, kw_only1, kw_only2): ..."
@@ -3366,15 +3358,14 @@ msgstr ""
 "vor der Aufnahme der API übersehen wurden."
 
 #: ../../glossary.rst:1325
-#, fuzzy
 msgid ""
 "Even for provisional APIs, backwards incompatible changes are seen as a "
 "\"solution of last resort\" - every attempt will still be made to find a "
 "backwards compatible resolution to any identified problems."
 msgstr ""
-"Selbst bei vorläufigen APIs gelten rückwärtsinkompatible Änderungen als "
-"\"letzter Ausweg\" – es wird weiterhin alles versucht, um für alle "
-"festgestellten Probleme eine rückwärtskompatible Lösung zu finden."
+"Auch bei vorläufigen APIs gelten nicht rückwärtskompatible Änderungen als "
+"„letztes Mittel\" – es wird weiterhin jeder Versuch unternommen, für "
+"erkannte Probleme eine rückwärtskompatible Lösung zu finden."
 
 #: ../../glossary.rst:1329
 msgid ""
@@ -3620,18 +3611,17 @@ msgstr ""
 "Programm reentrant aufgerufen werden."
 
 #: ../../glossary.rst:1427
-#, fuzzy
 msgid ""
 "For locks, Python's :class:`threading.RLock` (reentrant lock) is reentrant, "
 "meaning a thread that already holds the lock can acquire it again without "
 "blocking.  In contrast, :class:`threading.Lock` is not reentrant - "
 "attempting to acquire it twice from the same thread will cause a deadlock."
 msgstr ""
-"Was Sperren betrifft, ist die Python-Sperre :class:`threading.RLock` "
-"(Reentrant-Sperre) reentrant, was bedeutet, dass ein Thread, der die Sperre "
-"bereits hält, sie erneut erwerben kann, ohne zu blockieren. Im Gegensatz "
-"dazu ist :class:`threading.Lock` nicht reentrant – der Versuch, sie zweimal "
-"vom selben Thread aus zu erwerben, führt zu einem Deadlock."
+"Bei Locks ist Pythons :class:`threading.RLock` (wiedereintrittsfähiges Lock) "
+"reentrant, das heißt, ein Thread, der das Lock bereits hält, kann es erneut "
+"erwerben, ohne zu blockieren. Im Gegensatz dazu ist :class:`threading.Lock` "
+"nicht reentrant – der Versuch, es zweimal aus demselben Thread zu erwerben, "
+"führt zu einem Deadlock."
 
 #: ../../glossary.rst:1433
 msgid "See also :term:`lock` and :term:`deadlock`."
@@ -4066,15 +4056,15 @@ msgstr ""
 "Bytecode-Interpreters."
 
 #: ../../glossary.rst:1603
-#, fuzzy
 msgid ""
 "Each thread state is bound to a single OS thread, but threads may have many "
 "thread states available.  At most, one of them may be :term:`attached "
 "<attached thread state>` at once."
 msgstr ""
-"Jeder Thread-Zustand ist an einen einzelnen Betriebssystem-Thread gebunden, "
-"aber Threads können über mehrere Thread-Zustände verfügen. Höchstens einer "
-"davon darf gleichzeitig :term:`attached <attached thread state>` sein."
+"Jeder Thread-Zustand ist an genau einen Betriebssystem-Thread gebunden, "
+"einem Thread können aber mehrere Thread-Zustände zur Verfügung stehen. "
+"Höchstens einer von ihnen darf zugleich :term:`angehängt <attached thread "
+"state>` sein."
 
 #: ../../glossary.rst:1607
 msgid ""
