@@ -39,7 +39,6 @@ msgstr ""
 "einfache Bewegungen wiederholen."
 
 #: ../../library/turtle.rst:35
-#, fuzzy
 msgid ""
 "Imagine a robotic turtle starting at (0, 0) in the x-y plane. After an "
 "``import turtle``, give it the command ``turtle.forward(15)``, and it moves "
@@ -47,12 +46,12 @@ msgid ""
 "moves. Give it the command ``turtle.right(25)``, and it rotates in-place 25 "
 "degrees clockwise."
 msgstr ""
-"Stell dir eine robotische Schildkröte vor, die bei (0, 0) in der x-y-Ebene "
-"startet. Nach einem ``import turtle`` gib ihr den Befehl ``turtle."
-"forward(15)``, und sie bewegt sich (auf dem Bildschirm!) 15 Pixel in die "
-"Richtung, in die sie blickt, wobei sie beim Bewegen eine Linie zeichnet. Gib "
-"ihr den Befehl ``turtle.right(25)``, und sie dreht sich an Ort und Stelle um "
-"25 Grad im Uhrzeigersinn."
+"Stell dir eine Roboter-Turtle vor, die in der x-y-Ebene bei (0, 0) startet. "
+"Gib ihr nach einem ``import turtle`` den Befehl ``turtle.forward(15)``, und "
+"sie bewegt sich (auf dem Bildschirm!) 15 Pixel in die Richtung, in die sie "
+"schaut, und zeichnet dabei eine Linie. Gib ihr den Befehl "
+"``turtle.right(25)``, und sie dreht sich auf der Stelle um 25 Grad im "
+"Uhrzeigersinn."
 
 #: ../../library/turtle.rst:41
 msgid ""
@@ -83,12 +82,12 @@ msgid ":ref:`turtle-howtos` details how to handle specific tasks."
 msgstr ""
 
 #: ../../library/turtle.rst:53
-#, fuzzy
 msgid ""
 ":ref:`turtle-explanation` provides background on the object-oriented "
 "interface."
 msgstr ""
-":ref:`Erklärung der objektorientierten Schnittstelle <turtle-explanation>`"
+":ref:`turtle-explanation` liefert Hintergrundinformationen zur "
+"objektorientierten Schnittstelle."
 
 #: ../../library/turtle.rst:58
 msgid ""
@@ -184,13 +183,14 @@ msgstr ""
 "Richtungen zeigt, während du sie steuerst."
 
 #: ../../library/turtle.rst:110
-#, fuzzy
 msgid ""
 "Experiment with those commands, and also with ``backward()`` and "
 "``right()``. Many commands also have terser aliases, such as ``fd()`` for :"
 "func:`forward`."
 msgstr ""
-"Experimentiere mit diesen Befehlen sowie mit ``backward()`` und ``right()``."
+"Experimentiere mit diesen Befehlen und auch mit ``backward()`` und "
+"``right()``. Viele Befehle haben außerdem knappere Aliasnamen, etwa ``fd()`` "
+"für :func:`forward`."
 
 #: ../../library/turtle.rst:116 ../../library/turtle.rst:353
 #: ../../library/turtle.rst:1053
