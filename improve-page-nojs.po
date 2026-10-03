@@ -19,13 +19,15 @@ msgstr ""
 
 #: ../../improve-page-nojs.rst:5
 msgid "Improve a documentation page"
-msgstr ""
+msgstr "Eine Dokumentationsseite verbessern"
 
 #: ../../improve-page-nojs.rst:13
 msgid ""
 "We are always interested to hear ideas about improvements to the "
 "documentation."
 msgstr ""
+"Wir freuen uns jederzeit über Ideen, wie sich die Dokumentation verbessern "
+"lässt."
 
 #: ../../improve-page-nojs.rst:17
 msgid ""
@@ -33,10 +35,13 @@ msgid ""
 "documentation, open an issue or edit the page in `translation's repository "
 "<TRANSLATION_REPO_>`_ instead."
 msgstr ""
+"Wenn der Fehler oder der Verbesserungsvorschlag die Übersetzung dieser "
+"Dokumentation betrifft, öffne stattdessen ein Issue im `Repository der "
+"Übersetzung <TRANSLATION_REPO_>`_ oder bearbeite die Seite dort."
 
 #: ../../improve-page-nojs.rst:21
 msgid "You have a few ways to ask questions or suggest changes:"
-msgstr ""
+msgstr "Es gibt mehrere Wege, Fragen zu stellen oder Änderungen vorzuschlagen:"
 
 #: ../../improve-page-nojs.rst:23
 msgid ""
@@ -45,6 +50,10 @@ msgid ""
 "Documentation topic <https://discuss.python.org/new-topic?"
 "category=documentation>`_."
 msgstr ""
+"Du kannst im Python-Diskussionsforum eine Diskussion über die Seite "
+"beginnen. Dieser Link startet ein Thema in der Kategorie „Documentation“: "
+"`Neues Thema zur Dokumentation <https://discuss.python.org/new-topic?"
+"category=documentation>`_."
 
 #: ../../improve-page-nojs.rst:27
 msgid ""
@@ -52,3 +61,6 @@ msgid ""
 "create a new issue with the \"docs\" label: `New docs issue <https://github."
 "com/python/cpython/issues/new?template=documentation.yml>`_."
 msgstr ""
+"Du kannst im GitHub-Issue-Tracker von Python ein Issue eröffnen. Dieser Link "
+"legt ein neues Issue mit dem Label „docs“ an: `Neues Docs-Issue <https://"
+"github.com/python/cpython/issues/new?template=documentation.yml>`_."
