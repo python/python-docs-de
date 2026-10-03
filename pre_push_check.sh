@@ -4,7 +4,9 @@
 #   Stufe 1 (immer, ca. 1 Minute): msgfmt-Syntaxcheck + sphinx-lint + eigener
 #            Rollen-Konsistenz-Check (findet die meisten "echten" Bugs wie
 #            falsche/fehlende/ueberzaehlige :ref:/:term:/:class:/... -Rollen,
-#            OHNE dass ein kompletter Sphinx-Build noetig ist)
+#            OHNE dass ein kompletter Sphinx-Build noetig ist) + Auszeichnungs-
+#            pruefung (ueberfluessige Backtick-Klammern, uebersetzte Code-
+#            bloecke, abweichende ``Literale``)
 #   Stufe 2 (optional, ca. 10-20 Min. auf einem M1 Mac): echter Sphinx-Build
 #            wie in test-build.yml, fuer die letzte Sicherheit vor dem Push
 #
@@ -22,6 +24,7 @@ set -uo pipefail
 REPO_ROOT="${REPO_ROOT:-$(pwd)}"
 CPYTHON_ROOT="${CPYTHON_ROOT:-/Volumes/Dev_SSD/GitHub}"
 CHECK_ROLES_PY="${CHECK_ROLES_PY:-$REPO_ROOT/check_roles.py}"
+CHECK_MARKUP_PY="${CHECK_MARKUP_PY:-$REPO_ROOT/tools/check_markup.py}"
 EXCLUDE_DIRS=("c-api" ".venv" ".git")
 
 BRANCH="$(git -C "$REPO_ROOT" branch --show-current 2>/dev/null)"
@@ -75,7 +78,7 @@ if ! $NONINTERACTIVE; then
 fi
 
 if $RUN_QUICK; then
-    log_section "1a/3  msgfmt --check (Syntax)"
+    log_section "1a/4  msgfmt --check (Syntax)"
     msgfmt_errors=0
     while IFS= read -r -d '' po; do
         rel="${po#"$REPO_ROOT"/}"
@@ -94,7 +97,7 @@ if $RUN_QUICK; then
         fail=$((fail + 1))
     fi
 
-    log_section "1b/3  sphinx-lint (Backtick-/Rollen-Syntax)"
+    log_section "1b/4  sphinx-lint (Backtick-/Rollen-Syntax)"
     if ! command -v sphinx-lint &>/dev/null; then
         echo "sphinx-lint nicht gefunden -- installiere mit: pip install sphinx-lint"
         fail=$((fail + 1))
@@ -115,11 +118,23 @@ if $RUN_QUICK; then
         fi
     fi
 
-    log_section "1c/3  Rollen-Konsistenz (eigener Check, kein Build noetig)"
+    log_section "1c/4  Rollen-Konsistenz (eigener Check, kein Build noetig)"
     if [[ ! -f "$CHECK_ROLES_PY" ]]; then
         echo "check_roles.py nicht gefunden unter $CHECK_ROLES_PY -- Schritt uebersprungen."
     else
         if python3 "$CHECK_ROLES_PY" "$REPO_ROOT" --exclude "$(IFS=,; echo "${EXCLUDE_DIRS[*]}")"; then
+            pass=$((pass + 1))
+        else
+            fail=$((fail + 1))
+        fi
+    fi
+
+    log_section "1d/4  Auszeichnung (ueberfluessige Backticks, Codebloecke, Literale)"
+    if [[ ! -f "$CHECK_MARKUP_PY" ]]; then
+        echo "check_markup.py nicht gefunden unter $CHECK_MARKUP_PY -- Schritt uebersprungen."
+    else
+        if python3 "$CHECK_MARKUP_PY" "$REPO_ROOT" \
+               --exclude "$(IFS=,; echo "${EXCLUDE_DIRS[*]}")" --max 10; then
             pass=$((pass + 1))
         else
             fail=$((fail + 1))
