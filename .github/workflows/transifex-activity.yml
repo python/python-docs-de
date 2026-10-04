@@ -1,0 +1,79 @@
+# Wöchentlicher Bericht: wer hat in Transifex was bearbeitet?
+#
+# Fragt die Transifex-API ab und listet pro Datei auf, welcher Benutzer dort
+# Übersetzungen geändert hat. --ohne-upload blendet die eigenen tx-push-Läufe
+# aus, sodass nur echte Bearbeitungen übrig bleiben. Das ist die Grundlage
+# dafür, Nutzeränderungen gezielt ins Repo zu holen, statt blind zu pushen.
+#
+# Der Lauf ändert nichts -- weder im Repo noch in Transifex.
+
+name: Transifex-Aktivität
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'      # montags 8 Uhr
+  workflow_dispatch:
+    inputs:
+      tage:
+        description: 'Zeitraum in Tagen'
+        required: false
+        default: '7'
+
+permissions:
+  contents: read
+
+jobs:
+  aktivitaet:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ['3.14', '3.15']
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ matrix.version }}
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: certifi installieren (Wurzelzertifikate)
+        run: pip install certifi
+
+      - name: Aktivität abfragen
+        env:
+          TX_TOKEN: ${{ secrets.TX_TOKEN }}
+          TAGE: ${{ github.event.inputs.tage || '7' }}
+        shell: bash
+        run: |
+          if [ -z "${TX_TOKEN:-}" ]; then
+            {
+              echo "## Transifex ${{ matrix.version }}"
+              echo
+              echo "Kein \`TX_TOKEN\`-Secret gesetzt -- Schritt übersprungen."
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          python tools/tx_activity.py --tage "$TAGE" --ohne-upload \
+            > bericht.md 2> fehler.txt || true
+          {
+            echo "## Transifex ${{ matrix.version }} -- letzte $TAGE Tage"
+            echo
+            if [ -s bericht.md ]; then
+              cat bericht.md
+            else
+              echo "Keine Ausgabe. Meldungen des Laufs:"
+              echo '```'
+              tail -20 fehler.txt 2>/dev/null
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Bericht als Artefakt ablegen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: transifex-aktivitaet-${{ matrix.version }}
+          path: bericht.md
+          if-no-files-found: ignore

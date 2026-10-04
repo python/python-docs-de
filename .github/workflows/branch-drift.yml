@@ -1,0 +1,75 @@
+# Meldet, wenn 3.14 und 3.15 inhaltlich auseinanderlaufen.
+#
+# Gearbeitet wird in 3.15, von dort wird nach 3.14 gespiegelt. Solange das so
+# bleibt, kann es keine Konflikte geben: ein Konflikt entsteht nur, wenn sich
+# BEIDE Seiten seit ihrem gemeinsamen Vorfahren bewegt haben. Dieser Lauf ist
+# das Frühwarnsystem dafür -- und dafür, dass msgmerge in 3.14 Übersetzungen
+# entfernt hat, die in 3.15 noch stehen.
+#
+# Der Zeitplan liegt bewusst nach "Sync Check with Upstream" (montags 3 Uhr),
+# denn genau dessen msgmerge-Lauf erzeugt die Abweichungen.
+
+name: Branch-Abgleich 3.15 nach 3.14
+
+on:
+  push:
+    branches: ['3.14', '3.15']
+    paths: ['**.po']
+  schedule:
+    - cron: '0 9 * * 1'      # montags 9 Uhr, sechs Stunden nach dem Upstream-Sync
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  abgleich:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 3.14 auschecken (Zielbranch), mit voller Historie
+        uses: actions/checkout@v5
+        with:
+          ref: '3.14'
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: polib installieren
+        run: pip install polib
+
+      - name: Trockenlauf 3.14 <- 3.15
+        id: trockenlauf
+        shell: bash
+        run: |
+          python tools/sync_branches.py \
+            --von origin/3.15 --leere-ziele --streng \
+            -o konflikte.md 2>/dev/null | tee ergebnis.txt
+
+      - name: Bericht in die Zusammenfassung schreiben
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## Abgleich 3.14 <- 3.15"
+            echo
+            echo '```'
+            cat ergebnis.txt 2>/dev/null || echo "(kein Ergebnis)"
+            echo '```'
+            if [ -s konflikte.md ]; then
+              echo
+              echo "Beide Branches haben dieselben Einträge geändert."
+              echo "Diese Stellen wurden NICHT angefasst:"
+              echo
+              head -c 60000 konflikte.md
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Konfliktbericht als Artefakt ablegen
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: konflikte
+          path: konflikte.md
+          if-no-files-found: ignore
