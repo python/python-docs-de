@@ -1,2 +1,16 @@
+# Editor- und Systemdateien
 *.po~
 .DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Kompilierte Kataloge (werden beim Build erzeugt)
+*.mo
+
+# Lokale Berichte unserer Werkzeuge
+markup_bericht.md
+branch_diff.md
+branch_diff.csv
