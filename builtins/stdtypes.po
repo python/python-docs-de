@@ -2700,7 +2700,7 @@ msgstr ""
 
 #: ../../builtins/stdtypes.rst:1468
 msgid "Tuples"
-msgstr "Tupels"
+msgstr "Tupel"
 
 #: ../../builtins/stdtypes.rst:1472
 msgid ""

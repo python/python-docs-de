@@ -30,10 +30,10 @@ msgid ""
 "effort to foster documentation that's more detailed than the Python Library "
 "Reference."
 msgstr ""
-"Python-HOWTOs sind Dokumente, die ein bestimmtes Thema ausführlich "
-"behandeln. Nach dem Vorbild der HOWTO-Sammlung des Linux Documentation "
-"Project soll diese Sammlung eine Dokumentation fördern, die ausführlicher "
-"ist als die Referenz der Python-Standardbibliothek."
+"Python-HOWTOs sind Dokumente, die ein bestimmtes Thema ausführlich behandeln."
+" Nach dem Vorbild der HOWTO-Sammlung des Linux Documentation Project soll "
+"diese Sammlung eine Dokumentation fördern, die ausführlicher ist als die "
+"Referenz der Python-Standardbibliothek."
 
 #: ../../howto/index.rst:43
 msgid "General:"
@@ -93,7 +93,7 @@ msgstr ":ref:`urllib-howto`"
 
 #: ../../howto/index.rst:59
 msgid "Advanced development:"
-msgstr "Advanced development:"
+msgstr "Fortgeschrittene Entwicklung:"
 
 #: ../../howto/index.rst:61
 msgid ":ref:`curses-howto`"

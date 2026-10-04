@@ -48,8 +48,8 @@ msgid ""
 "``~`` (\"cut\"): commit to the current alternative; fail the rule if the "
 "alternative fails to parse"
 msgstr ""
-"``~`` (\"cut\"): auf die aktuelle Alternative festlegen; die Regel schlägt "
-"fehl, wenn sich die Alternative nicht parsen lässt"
+"``~`` (\"cut\"): legt sich auf die aktuelle Alternative fest. Die Regel "
+"schlägt fehl, wenn sich die Alternative nicht parsen lässt"
 
 #: ../../reference/grammar.rst:18
 msgid ""
