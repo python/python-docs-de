@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-po_status.py — Listet alle .po-Dateien in einem Verzeichnisbaum mit
+po_status.py — listet alles .po-Dateien in einem Verzeichnisbaum mit
 Übersetzungsstand (x/y), Prozent, Dateigröße und Pfad und Status Gesamtübersetzung.
+Gleicht Strings mit englischen Original-Dateien ab.
 """
 import argparse
 import re
@@ -14,6 +15,9 @@ STATS_RE = re.compile(
     r"(?:, (\d+) fuzzy translations?)?"
     r"(?:, (\d+) untranslated messages?)?"
 )
+CORE_FILES = {"bugs.po", "builtins/functions.po"}
+CORE_DIRS = ("tutorial/",)
+FUZZY_FLAG_RE = re.compile(r"^#,.*\bfuzzy\b", re.MULTILINE)
 
 
 def get_stats(po_file: Path):
@@ -38,6 +42,30 @@ def get_stats(po_file: Path):
     return {"translated": translated, "fuzzy": fuzzy, "untranslated": untranslated}
 
 
+def count_fuzzy_flags(po_file: Path) -> int:
+    """Zählt alle fuzzy-Markierungen direkt im Dateitext."""
+    text = po_file.read_text(encoding="utf-8", errors="replace")
+    return len(FUZZY_FLAG_RE.findall(text))
+
+
+def is_core(rel_path: Path) -> bool:
+    """Prüft, ob die Datei zu den Pflichtartikeln gehört."""
+    rel = rel_path.as_posix()
+    return rel in CORE_FILES or rel.startswith(CORE_DIRS)
+
+
+def find_missing(pot_dir: Path, root: Path, excludes: set) -> list:
+    """Liefert .po-Pfade, zu denen es eine Vorlage, aber keine Übersetzung gibt."""
+    missing = []
+    for pot in sorted(pot_dir.rglob("*.pot")):
+        rel = pot.relative_to(pot_dir).with_suffix(".po")
+        if excludes.intersection(rel.parts):
+            continue
+        if not (root / rel).exists():
+            missing.append(rel)
+    return missing
+
+
 def human_size(num_bytes: int) -> str:
     for unit in ("B", "KB", "MB"):
         if num_bytes < 1024:
@@ -54,6 +82,9 @@ def main():
     parser.add_argument("--sort", choices=["path", "percent", "size"], default="percent")
     parser.add_argument("--max-percent", type=float, default=100.1,
                          help="Nur Dateien mit weniger als diesem Prozentwert anzeigen")
+    parser.add_argument("--pot-dir",
+                        help="Ordner mit .pot-Vorlagen; listet Seiten ohne .po-Datei")
+
     args = parser.parse_args()
 
     root = Path(args.path).resolve()
@@ -73,15 +104,17 @@ def main():
         stats = get_stats(po_file)
         rel_path = po_file.relative_to(root)
         size = po_file.stat().st_size
+        marker = "* " if is_core(rel_path) else "  "
         if stats is None:
-            rows.append((str(rel_path), "FEHLER (Syntax)", -1.0, size))
+            rows.append((marker + str(rel_path), "FEHLER (Syntax)", -1.0, size))
             continue
         total = stats["translated"] + stats["fuzzy"] + stats["untranslated"]
         pct = (stats["translated"] / total * 100) if total else 100.0
         label = f"{stats['translated']}/{total}"
-        if stats["fuzzy"]:
-            label += f" ({stats['fuzzy']} fuzzy)"
-        rows.append((str(rel_path), label, pct, size))
+        fuzzy_count = count_fuzzy_flags(po_file)
+        if fuzzy_count:
+            label += f" ({fuzzy_count} fuzzy)"
+        rows.append((marker + str(rel_path), label, pct, size))
 
     # Gesamtstatistik wird VOR dem --max-percent-Filter berechnet (über alle Dateien)
     complete_count = sum(1 for r in rows if r[2] >= 100.0)
@@ -105,7 +138,7 @@ def main():
     path_w = max(len(r[0]) for r in rows) + 2
     label_w = max(len(r[1]) for r in rows) + 2
 
-    print(f"{'Pfad':<{path_w}}{'Übersetzt':<{label_w}}{'%':>7}   {'Größe':>8}")
+    print(f"{'  Pfad':<{path_w}}{'Übersetzt':<{label_w}}{'%':>7}   {'Größe':>8}")
     print("-" * (path_w + label_w + 20))
     for rel_path, label, pct, size in rows:
         pct_str = "  n/a" if pct < 0 else f"{pct:6.1f}%"
@@ -120,6 +153,19 @@ def main():
         print(f"Dateien mit Syntaxfehler:      {error_count}")
     print(f"Gesamtstand über alle Dateien:  {total_translated}/{total_strings} Strings "
           f"({overall_pct:.2f}%)")
+    print()
+    print("* Pflichtdatei für den Sprachumschalter")
+
+    if args.pot_dir:
+        missing = find_missing(Path(args.pot_dir).resolve(), root, excludes)
+        print()
+        if missing:
+            print(f"Fehlende Übersetzungsdateien ({len(missing)}):")
+            for rel in missing:
+                marker = "* " if is_core(rel) else "  "
+                print(f"{marker}{rel}")
+        else:
+            print("Keine fehlenden Übersetzungsdateien.")
 
 
 if __name__ == "__main__":

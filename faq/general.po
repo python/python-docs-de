@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -27,7 +26,7 @@ msgstr ""
 
 #: ../../faq/general.rst:8
 msgid "Contents"
-msgstr ""
+msgstr "Inhalt"
 
 #: ../../faq/general.rst:13
 msgid "General Information"
@@ -39,22 +38,22 @@ msgstr ""
 
 #: ../../faq/general.rst:18
 msgid ""
-"Python is an interpreted, interactive, object-oriented programming "
-"language.  It incorporates modules, exceptions, dynamic typing, very high "
-"level dynamic data types, and classes.  It supports multiple programming "
-"paradigms beyond object-oriented programming, such as procedural and "
-"functional programming. Python combines remarkable power with very clear "
-"syntax. It has interfaces to many system calls and libraries, as well as to "
-"various window systems, and is extensible in C or C++.  It is also usable as "
-"an extension language for applications that need a programmable interface. "
-"Finally, Python is portable: it runs on many Unix variants including Linux "
-"and macOS, and on Windows."
+"Python is an interpreted, interactive, object-oriented programming language."
+"  It incorporates modules, exceptions, dynamic typing, very high level "
+"dynamic data types, and classes.  It supports multiple programming paradigms "
+"beyond object-oriented programming, such as procedural and functional "
+"programming. Python combines remarkable power with very clear syntax. It has "
+"interfaces to many system calls and libraries, as well as to various window "
+"systems, and is extensible in C or C++.  It is also usable as an extension "
+"language for applications that need a programmable interface. Finally, Python"
+" is portable: it runs on many Unix variants including Linux and macOS, and on"
+" Windows."
 msgstr ""
 
 #: ../../faq/general.rst:28
 msgid ""
-"To find out more, start with :ref:`tutorial-index`.  The `Beginner's Guide "
-"to Python <https://wiki.python.org/moin/BeginnersGuide>`_ links to other "
+"To find out more, start with :ref:`tutorial-index`.  The `Beginner's Guide to"
+" Python <https://wiki.python.org/moin/BeginnersGuide>`_ links to other "
 "introductory tutorials and resources for learning Python."
 msgstr ""
 
@@ -64,18 +63,18 @@ msgstr ""
 
 #: ../../faq/general.rst:36
 msgid ""
-"The Python Software Foundation is an independent non-profit organization "
-"that holds the copyright on Python versions 2.1 and newer.  The PSF's "
-"mission is to advance open source technology related to the Python "
-"programming language and to publicize the use of Python.  The PSF's home "
-"page is at https://www.python.org/psf/."
+"The Python Software Foundation is an independent non-profit organization that"
+" holds the copyright on Python versions 2.1 and newer.  The PSF's mission is "
+"to advance open source technology related to the Python programming language "
+"and to publicize the use of Python.  The PSF's home page is at "
+"https://www.python.org/psf/."
 msgstr ""
 
 #: ../../faq/general.rst:42
 msgid ""
-"Donations to the PSF are tax-exempt in the US.  If you use Python and find "
-"it helpful, please contribute via `the PSF donation page <https://www.python."
-"org/psf/donations/>`_."
+"Donations to the PSF are tax-exempt in the US.  If you use Python and find it"
+" helpful, please contribute via `the PSF donation page "
+"<https://www.python.org/psf/donations/>`_."
 msgstr ""
 
 #: ../../faq/general.rst:48
@@ -88,9 +87,9 @@ msgid ""
 "copyrights in and display those copyrights in any documentation about Python "
 "that you produce.  If you honor the copyright rules, it's OK to use Python "
 "for commercial use, to sell copies of Python in source or binary form "
-"(modified or unmodified), or to sell products that incorporate Python in "
-"some form.  We would still like to know about all commercial use of Python, "
-"of course."
+"(modified or unmodified), or to sell products that incorporate Python in some"
+" form.  We would still like to know about all commercial use of Python, of "
+"course."
 msgstr ""
 
 #: ../../faq/general.rst:57
@@ -102,8 +101,8 @@ msgstr ""
 #: ../../faq/general.rst:60
 msgid ""
 "The Python logo is trademarked, and in certain cases permission is required "
-"to use it.  Consult `the Trademark Usage Policy <https://www.python.org/psf/"
-"trademarks/>`__ for more information."
+"to use it.  Consult `the Trademark Usage Policy "
+"<https://www.python.org/psf/trademarks/>`__ for more information."
 msgstr ""
 
 #: ../../faq/general.rst:66
@@ -165,8 +164,8 @@ msgstr ""
 
 #: ../../faq/general.rst:104
 msgid ""
-"In February 1991, after just over a year of development, I decided to post "
-"to USENET.  The rest is in the ``Misc/HISTORY`` file."
+"In February 1991, after just over a year of development, I decided to post to"
+" USENET.  The rest is in the ``Misc/HISTORY`` file."
 msgstr ""
 
 #: ../../faq/general.rst:109
@@ -184,10 +183,10 @@ msgid ""
 "The language comes with a large standard library that covers areas such as "
 "string processing (regular expressions, Unicode, calculating differences "
 "between files), internet protocols (HTTP, FTP, SMTP, XML-RPC, POP, IMAP), "
-"software engineering (unit testing, logging, profiling, parsing Python "
-"code), and operating system interfaces (system calls, filesystems, TCP/IP "
-"sockets).  Look at the table of contents for :ref:`library-index` to get an "
-"idea of what's available.  A wide variety of third-party extensions are also "
+"software engineering (unit testing, logging, profiling, parsing Python code),"
+" and operating system interfaces (system calls, filesystems, TCP/IP sockets)."
+"  Look at the table of contents for :ref:`library-index` to get an idea of "
+"what's available.  A wide variety of third-party extensions are also "
 "available.  Consult `the Python Package Index <https://pypi.org>`_ to find "
 "packages of interest to you."
 msgstr ""
@@ -256,18 +255,18 @@ msgstr ""
 msgid ""
 "You may also find version numbers with a \"+\" suffix, e.g. \"2.2+\".  These "
 "are unreleased versions, built directly from the CPython development "
-"repository.  In practice, after a final minor release is made, the version "
-"is incremented to the next minor version, which becomes the \"a0\" version, "
+"repository.  In practice, after a final minor release is made, the version is"
+" incremented to the next minor version, which becomes the \"a0\" version, "
 "e.g. \"2.4a0\"."
 msgstr ""
 
 #: ../../faq/general.rst:160
 msgid ""
-"See the `Developer's Guide <https://devguide.python.org/developer-workflow/"
-"development-cycle/>`__ for more information about the development cycle, "
-"and :pep:`387` to learn more about Python's backward compatibility policy.  "
-"See also the documentation for :data:`sys.version`, :data:`sys.hexversion`, "
-"and :data:`sys.version_info`."
+"See the `Developer's Guide <https://devguide.python.org/developer-"
+"workflow/development-cycle/>`__ for more information about the development "
+"cycle, and :pep:`387` to learn more about Python's backward compatibility "
+"policy.  See also the documentation for :data:`sys.version`, "
+":data:`sys.hexversion`, and :data:`sys.version_info`."
 msgstr ""
 
 #: ../../faq/general.rst:169
@@ -276,8 +275,8 @@ msgstr ""
 
 #: ../../faq/general.rst:171
 msgid ""
-"The latest Python source distribution is always available from python.org, "
-"at https://www.python.org/downloads/.  The latest development sources can be "
+"The latest Python source distribution is always available from python.org, at"
+" https://www.python.org/downloads/.  The latest development sources can be "
 "obtained at https://github.com/python/cpython/."
 msgstr ""
 
@@ -309,10 +308,9 @@ msgstr ""
 
 #: ../../faq/general.rst:192
 msgid ""
-"The documentation is written in reStructuredText and processed by `the "
-"Sphinx documentation tool <https://www.sphinx-doc.org/>`__.  The "
-"reStructuredText source for the documentation is part of the Python source "
-"distribution."
+"The documentation is written in reStructuredText and processed by `the Sphinx"
+" documentation tool <https://www.sphinx-doc.org/>`__.  The reStructuredText "
+"source for the documentation is part of the Python source distribution."
 msgstr ""
 
 #: ../../faq/general.rst:198
@@ -321,15 +319,15 @@ msgstr ""
 
 #: ../../faq/general.rst:200
 msgid ""
-"There are numerous tutorials and books available.  The standard "
-"documentation includes :ref:`tutorial-index`."
+"There are numerous tutorials and books available.  The standard documentation"
+" includes :ref:`tutorial-index`."
 msgstr ""
 
 #: ../../faq/general.rst:203
 msgid ""
-"Consult `the Beginner's Guide <https://wiki.python.org/moin/"
-"BeginnersGuide>`_ to find information for beginning Python programmers, "
-"including lists of tutorials."
+"Consult `the Beginner's Guide <https://wiki.python.org/moin/BeginnersGuide>`_"
+" to find information for beginning Python programmers, including lists of "
+"tutorials."
 msgstr ""
 
 #: ../../faq/general.rst:208
@@ -341,23 +339,23 @@ msgid ""
 "There is a newsgroup, :newsgroup:`comp.lang.python`, and a mailing list, "
 "`python-list <https://mail.python.org/mailman/listinfo/python-list>`_.  The "
 "newsgroup and mailing list are gatewayed into each other -- if you can read "
-"news it's unnecessary to subscribe to the mailing list. :newsgroup:`comp."
-"lang.python` is high-traffic, receiving hundreds of postings every day, and "
-"Usenet readers are often more able to cope with this volume."
+"news it's unnecessary to subscribe to the mailing list. "
+":newsgroup:`comp.lang.python` is high-traffic, receiving hundreds of postings"
+" every day, and Usenet readers are often more able to cope with this volume."
 msgstr ""
 
 #: ../../faq/general.rst:217
 msgid ""
-"Announcements of new software releases and events can be found in comp.lang."
-"python.announce, a low-traffic moderated list that receives about five "
-"postings per day.  It's available as `the python-announce mailing list "
+"Announcements of new software releases and events can be found in "
+"comp.lang.python.announce, a low-traffic moderated list that receives about "
+"five postings per day.  It's available as `the python-announce mailing list "
 "<https://mail.python.org/mailman3/lists/python-announce-list.python.org/>`_."
 msgstr ""
 
 #: ../../faq/general.rst:222
 msgid ""
-"More info about other mailing lists and newsgroups can be found at https://"
-"www.python.org/community/lists/."
+"More info about other mailing lists and newsgroups can be found at "
+"https://www.python.org/community/lists/."
 msgstr ""
 
 #: ../../faq/general.rst:227
@@ -366,10 +364,10 @@ msgstr ""
 
 #: ../../faq/general.rst:229
 msgid ""
-"Alpha and beta releases are available from https://www.python.org/"
-"downloads/.  All releases are announced on the comp.lang.python and comp."
-"lang.python.announce newsgroups and on the Python home page at https://www."
-"python.org/; an RSS feed of news is available."
+"Alpha and beta releases are available from https://www.python.org/downloads/."
+"  All releases are announced on the comp.lang.python and "
+"comp.lang.python.announce newsgroups and on the Python home page at "
+"https://www.python.org/; an RSS feed of news is available."
 msgstr ""
 
 #: ../../faq/general.rst:234
@@ -384,8 +382,8 @@ msgstr ""
 
 #: ../../faq/general.rst:241
 msgid ""
-"To report a bug or submit a patch, use the issue tracker at https://github."
-"com/python/cpython/issues."
+"To report a bug or submit a patch, use the issue tracker at "
+"https://github.com/python/cpython/issues."
 msgstr ""
 
 #: ../../faq/general.rst:244
@@ -427,8 +425,8 @@ msgstr ""
 
 #: ../../faq/general.rst:267
 msgid ""
-"You can also search online bookstores for \"Python\" and filter out the "
-"Monty Python references; or perhaps search for \"Python\" and \"language\"."
+"You can also search online bookstores for \"Python\" and filter out the Monty"
+" Python references; or perhaps search for \"Python\" and \"language\"."
 msgstr ""
 
 #: ../../faq/general.rst:272
@@ -438,8 +436,8 @@ msgstr ""
 #: ../../faq/general.rst:274
 msgid ""
 "The Python project's infrastructure is located all over the world and is "
-"managed by the Python Infrastructure Team. Details `here <https://infra.psf."
-"io>`__."
+"managed by the Python Infrastructure Team. Details `here "
+"<https://infra.psf.io>`__."
 msgstr ""
 
 #: ../../faq/general.rst:279
@@ -449,10 +447,10 @@ msgstr ""
 #: ../../faq/general.rst:281
 msgid ""
 "When he began implementing Python, Guido van Rossum was also reading the "
-"published scripts from `\"Monty Python's Flying Circus\" <https://en."
-"wikipedia.org/wiki/Monty_Python>`__, a BBC comedy series from the 1970s.  "
-"Van Rossum thought he needed a name that was short, unique, and slightly "
-"mysterious, so he decided to call the language Python."
+"published scripts from `\"Monty Python's Flying Circus\" "
+"<https://en.wikipedia.org/wiki/Monty_Python>`__, a BBC comedy series from the"
+" 1970s.  Van Rossum thought he needed a name that was short, unique, and "
+"slightly mysterious, so he decided to call the language Python."
 msgstr ""
 
 #: ../../faq/general.rst:289
@@ -473,8 +471,8 @@ msgstr ""
 
 #: ../../faq/general.rst:300
 msgid ""
-"Very stable.  New, stable releases have been coming out roughly every 6 to "
-"18 months since 1991, and this seems likely to continue.  As of version 3.9, "
+"Very stable.  New, stable releases have been coming out roughly every 6 to 18"
+" months since 1991, and this seems likely to continue.  As of version 3.9, "
 "Python will have a new feature release every 12 months (:pep:`602`)."
 msgstr ""
 
@@ -526,19 +524,19 @@ msgstr ""
 #: ../../faq/general.rst:333
 msgid ""
 "See https://www.python.org/about/success for a list of projects that use "
-"Python. Consulting the proceedings for `past Python conferences <https://www."
-"python.org/community/workshops/>`_ will reveal contributions from many "
-"different companies and organizations."
+"Python. Consulting the proceedings for `past Python conferences "
+"<https://www.python.org/community/workshops/>`_ will reveal contributions "
+"from many different companies and organizations."
 msgstr ""
 
 #: ../../faq/general.rst:338
 msgid ""
 "High-profile Python projects include `the Mailman mailing list manager "
-"<https://www.list.org>`_ and `the Zope application server <https://www.zope."
-"dev>`_.  Several Linux distributions, most notably `Red Hat <https://www."
-"redhat.com>`_, have written part or all of their installer and system "
-"administration software in Python.  Companies that use Python internally "
-"include Google, Yahoo, and Lucasfilm Ltd."
+"<https://www.list.org>`_ and `the Zope application server "
+"<https://www.zope.dev>`_.  Several Linux distributions, most notably `Red Hat"
+" <https://www.redhat.com>`_, have written part or all of their installer and "
+"system administration software in Python.  Companies that use Python "
+"internally include Google, Yahoo, and Lucasfilm Ltd."
 msgstr ""
 
 #: ../../faq/general.rst:347
@@ -556,8 +554,8 @@ msgstr ""
 
 #: ../../faq/general.rst:355
 msgid ""
-"New development is discussed on `the python-dev mailing list <https://mail."
-"python.org/mailman3/lists/python-dev.python.org/>`_."
+"New development is discussed on `the python-dev mailing list "
+"<https://mail.python.org/mailman3/lists/python-dev.python.org/>`_."
 msgstr ""
 
 #: ../../faq/general.rst:360
@@ -576,8 +574,8 @@ msgstr ""
 
 #: ../../faq/general.rst:369
 msgid ""
-"Providing a gradual upgrade path is necessary if a feature has to be "
-"changed. :pep:`5` describes the procedure followed for introducing backward-"
+"Providing a gradual upgrade path is necessary if a feature has to be changed."
+" :pep:`5` describes the procedure followed for introducing backward-"
 "incompatible changes while minimizing disruption for users."
 msgstr ""
 
@@ -596,22 +594,21 @@ msgid ""
 "better served by learning Python as their first language.  Python has a very "
 "simple and consistent syntax and a large standard library and, most "
 "importantly, using Python in a beginning programming course lets students "
-"concentrate on important programming skills such as problem decomposition "
-"and data type design.  With Python, students can be quickly introduced to "
-"basic concepts such as loops and procedures.  They can probably even work "
-"with user-defined objects in their very first course."
+"concentrate on important programming skills such as problem decomposition and"
+" data type design.  With Python, students can be quickly introduced to basic "
+"concepts such as loops and procedures.  They can probably even work with "
+"user-defined objects in their very first course."
 msgstr ""
 
 #: ../../faq/general.rst:389
 msgid ""
 "For a student who has never programmed before, using a statically typed "
-"language seems unnatural.  It presents additional complexity that the "
-"student must master and slows the pace of the course.  The students are "
-"trying to learn to think like a computer, decompose problems, design "
-"consistent interfaces, and encapsulate data.  While learning to use a "
-"statically typed language is important in the long term, it is not "
-"necessarily the best topic to address in the students' first programming "
-"course."
+"language seems unnatural.  It presents additional complexity that the student"
+" must master and slows the pace of the course.  The students are trying to "
+"learn to think like a computer, decompose problems, design consistent "
+"interfaces, and encapsulate data.  While learning to use a statically typed "
+"language is important in the long term, it is not necessarily the best topic "
+"to address in the students' first programming course."
 msgstr ""
 
 #: ../../faq/general.rst:397
@@ -622,9 +619,9 @@ msgid ""
 "Assignments aren't restricted to the standard four-function calculator and "
 "check balancing programs.  By using the standard library, students can gain "
 "the satisfaction of working on realistic applications as they learn the "
-"fundamentals of programming. Using the standard library also teaches "
-"students about code reuse.  Third-party modules such as PyGame are also "
-"helpful in extending the students' reach."
+"fundamentals of programming. Using the standard library also teaches students"
+" about code reuse.  Third-party modules such as PyGame are also helpful in "
+"extending the students' reach."
 msgstr ""
 
 #: ../../faq/general.rst:406
@@ -649,8 +646,7 @@ msgid ""
 "'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove',\n"
 "'reverse', 'sort']\n"
 ">>> [d for d in dir(L) if '__' not in d]\n"
-"['append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', "
-"'remove', 'reverse', 'sort']\n"
+"['append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']\n"
 "\n"
 ">>> help(L.append)\n"
 "Help on built-in function append:\n"
@@ -665,24 +661,24 @@ msgstr ""
 
 #: ../../faq/general.rst:435
 msgid ""
-"With the interpreter, documentation is never far from the student as they "
-"are programming."
+"With the interpreter, documentation is never far from the student as they are"
+" programming."
 msgstr ""
 
 #: ../../faq/general.rst:438
 msgid ""
-"There are also good IDEs for Python.  IDLE is a cross-platform IDE for "
-"Python that is written in Python using Tkinter. Emacs users will be happy to "
-"know that there is a very good Python mode for Emacs.  All of these "
-"programming environments provide syntax highlighting, auto-indenting, and "
-"access to the interactive interpreter while coding.  Consult `the Python "
-"wiki <https://wiki.python.org/moin/PythonEditors>`_ for a full list of "
-"Python editing environments."
+"There are also good IDEs for Python.  IDLE is a cross-platform IDE for Python"
+" that is written in Python using Tkinter. Emacs users will be happy to know "
+"that there is a very good Python mode for Emacs.  All of these programming "
+"environments provide syntax highlighting, auto-indenting, and access to the "
+"interactive interpreter while coding.  Consult `the Python wiki "
+"<https://wiki.python.org/moin/PythonEditors>`_ for a full list of Python "
+"editing environments."
 msgstr ""
 
 #: ../../faq/general.rst:446
 msgid ""
 "If you want to discuss Python's use in education, you may be interested in "
-"joining `the edu-sig mailing list <https://www.python.org/community/sigs/"
-"current/edu-sig>`_."
+"joining `the edu-sig mailing list "
+"<https://www.python.org/community/sigs/current/edu-sig>`_."
 msgstr ""

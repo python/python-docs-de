@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -611,7 +610,7 @@ msgstr ""
 #: ../../using/windows.rst:1624 ../../using/windows.rst:1644
 #: ../../using/windows.rst:2234
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: ../../using/windows.rst:423
 msgid "``default_tag``"
@@ -2061,7 +2060,7 @@ msgstr ""
 
 #: ../../using/windows.rst:1367
 msgid "Finding modules"
-msgstr ""
+msgstr "Module finden"
 
 #: ../../using/windows.rst:1369
 msgid ""
@@ -2367,10 +2366,12 @@ msgstr ""
 #: ../../using/windows.rst:1557
 msgid "After starting the installer, one of two options may be selected:"
 msgstr ""
+"Nach dem Starten den Installers kann eine der beiden Optionen ausgewählt "
+"werden:"
 
 #: ../../using/windows.rst:1561
 msgid "If you select \"Install Now\":"
-msgstr ""
+msgstr "Wenn du „Jetzt installieren“ wählst:"
 
 #: ../../using/windows.rst:1563
 msgid ""
@@ -2481,7 +2482,7 @@ msgstr ""
 #: ../../using/windows.rst:1624 ../../using/windows.rst:1644
 #: ../../using/windows.rst:2234
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: ../../using/windows.rst:1626
 msgid "/passive"
@@ -2540,7 +2541,7 @@ msgstr ""
 
 #: ../../using/windows.rst:1644
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: ../../using/windows.rst:1646
 msgid "InstallAllUsers"
@@ -2563,7 +2564,7 @@ msgstr ""
 
 #: ../../using/windows.rst:1648
 msgid "The installation directory"
-msgstr ""
+msgstr "Das Installations-Verzeichnis"
 
 #: ../../using/windows.rst:1648
 msgid "Selected based on InstallAllUsers"
@@ -2608,7 +2609,7 @@ msgstr ""
 
 #: ../../using/windows.rst:1666 ../../using/windows.rst:1723
 msgid "(empty)"
-msgstr ""
+msgstr "(leer)"
 
 #: ../../using/windows.rst:1669
 msgid "AssociateFiles"
@@ -2982,7 +2983,7 @@ msgstr ""
 
 #: ../../using/windows.rst:1861
 msgid "Getting started"
-msgstr ""
+msgstr "Los geht's"
 
 #: ../../using/windows.rst:1864
 msgid "From the command-line"
@@ -3387,7 +3388,7 @@ msgstr ""
 
 #: ../../using/windows.rst:2146
 msgid "Examples:"
-msgstr ""
+msgstr "Beispiele:"
 
 #: ../../using/windows.rst:2148
 msgid ""
@@ -3434,7 +3435,7 @@ msgstr ""
 
 #: ../../using/windows.rst:2173
 msgid "For example:"
-msgstr ""
+msgstr "Zum Beispiel:"
 
 #: ../../using/windows.rst:2175
 msgid "Setting ``PY_PYTHON=3.7`` is equivalent to the INI file containing:"

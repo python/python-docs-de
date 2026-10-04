@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -35,8 +34,8 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:49
 msgid ""
-"This article explains the new features in Python 3.1, compared to 3.0. "
-"Python 3.1 was released on June 27, 2009."
+"This article explains the new features in Python 3.1, compared to 3.0. Python"
+" 3.1 was released on June 27, 2009."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:54
@@ -47,9 +46,9 @@ msgstr ""
 msgid ""
 "Regular Python dictionaries iterate over key/value pairs in arbitrary order. "
 "Over the years, a number of authors have written alternative implementations "
-"that remember the order that the keys were originally inserted.  Based on "
-"the experiences from those implementations, a new :class:`collections."
-"OrderedDict` class has been introduced."
+"that remember the order that the keys were originally inserted.  Based on the"
+" experiences from those implementations, a new "
+":class:`collections.OrderedDict` class has been introduced."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:62
@@ -67,10 +66,10 @@ msgid ""
 "modules.  The :mod:`configparser` module uses them by default.  This lets "
 "configuration files be read, modified, and then written back in their "
 "original order.  The *_asdict()* method for :func:`collections.namedtuple` "
-"now returns an ordered dictionary with the values appearing in the same "
-"order as the underlying tuple indices.  The :mod:`json` module is being "
-"built-out with an *object_pairs_hook* to allow OrderedDicts to be built by "
-"the decoder. Support was also added for third-party tools like `PyYAML "
+"now returns an ordered dictionary with the values appearing in the same order"
+" as the underlying tuple indices.  The :mod:`json` module is being built-out "
+"with an *object_pairs_hook* to allow OrderedDicts to be built by the decoder."
+" Support was also added for third-party tools like `PyYAML "
 "<https://pyyaml.org/>`_."
 msgstr ""
 
@@ -141,8 +140,8 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:123
 msgid ""
-"The supported types are :class:`int`, :class:`float`, :class:`complex` and :"
-"class:`decimal.Decimal`."
+"The supported types are :class:`int`, :class:`float`, :class:`complex` and "
+":class:`decimal.Decimal`."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:126
@@ -165,7 +164,7 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:139
 msgid "Other Language Changes"
-msgstr ""
+msgstr "Andere sprachliche Änderungen"
 
 #: ../../whatsnew/3.1.rst:141
 msgid "Some smaller changes made to the core Python language are:"
@@ -173,9 +172,9 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:143
 msgid ""
-"Directories and zip archives containing a :file:`__main__.py` file can now "
-"be executed directly by passing their name to the interpreter. The directory/"
-"zipfile is automatically inserted as the first entry in sys.path.  "
+"Directories and zip archives containing a :file:`__main__.py` file can now be"
+" executed directly by passing their name to the interpreter. The "
+"directory/zipfile is automatically inserted as the first entry in sys.path.  "
 "(Suggestion and initial patch by Andy Chu; revised patch by Phillip J. Eby "
 "and Nick Coghlan; :issue:`1739468`.)"
 msgstr ""
@@ -230,11 +229,11 @@ msgstr ""
 #: ../../whatsnew/3.1.rst:177
 msgid ""
 "The :func:`!string.maketrans` function is deprecated and is replaced by new "
-"static methods, :meth:`bytes.maketrans` and :meth:`bytearray.maketrans`. "
-"This change solves the confusion around which types were supported by the :"
-"mod:`string` module. Now, :class:`str`, :class:`bytes`, and :class:"
-"`bytearray` each have their own **maketrans** and **translate** methods with "
-"intermediate translation tables of the appropriate type."
+"static methods, :meth:`bytes.maketrans` and :meth:`bytearray.maketrans`. This"
+" change solves the confusion around which types were supported by the "
+":mod:`string` module. Now, :class:`str`, :class:`bytes`, and "
+":class:`bytearray` each have their own **maketrans** and **translate** "
+"methods with intermediate translation tables of the appropriate type."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:184
@@ -285,9 +284,9 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:208
 msgid ""
-"Python now uses David Gay's algorithm for finding the shortest floating-"
-"point representation that doesn't change its value.  This should help "
-"mitigate some of the confusion surrounding binary floating-point numbers."
+"Python now uses David Gay's algorithm for finding the shortest floating-point"
+" representation that doesn't change its value.  This should help mitigate "
+"some of the confusion surrounding binary floating-point numbers."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:213
@@ -303,10 +302,10 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:221
 msgid ""
-"What is new is how the number gets displayed.  Formerly, Python used a "
-"simple approach.  The value of ``repr(1.1)`` was computed as ``format(1.1, "
-"'.17g')`` which evaluated to ``'1.1000000000000001'``. The advantage of "
-"using 17 digits was that it relied on IEEE-754 guarantees to assure that "
+"What is new is how the number gets displayed.  Formerly, Python used a simple"
+" approach.  The value of ``repr(1.1)`` was computed as ``format(1.1, "
+"'.17g')`` which evaluated to ``'1.1000000000000001'``. The advantage of using"
+" 17 digits was that it relied on IEEE-754 guarantees to assure that "
 "``eval(repr(1.1))`` would round-trip exactly to its original value.  The "
 "disadvantage is that many people found the output to be confusing (mistaking "
 "intrinsic limitations of binary floating-point representation as being a "
@@ -316,16 +315,16 @@ msgstr ""
 #: ../../whatsnew/3.1.rst:230
 msgid ""
 "The new algorithm for ``repr(1.1)`` is smarter and returns ``'1.1'``. "
-"Effectively, it searches all equivalent string representations (ones that "
-"get stored with the same underlying float value) and returns the shortest "
+"Effectively, it searches all equivalent string representations (ones that get"
+" stored with the same underlying float value) and returns the shortest "
 "representation."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:235
 msgid ""
-"The new algorithm tends to emit cleaner representations when possible, but "
-"it does not change the underlying values.  So, it is still the case that "
-"``1.1 + 2.2 != 3.3`` even though the representations may suggest otherwise."
+"The new algorithm tends to emit cleaner representations when possible, but it"
+" does not change the underlying values.  So, it is still the case that ``1.1 "
+"+ 2.2 != 3.3`` even though the representations may suggest otherwise."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:239
@@ -414,13 +413,13 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:285
 msgid ""
-"The :mod:`itertools` module grew two new functions.  The :func:`itertools."
-"combinations_with_replacement` function is one of four for generating "
-"combinatorics including permutations and Cartesian products.  The :func:"
-"`itertools.compress` function mimics its namesake from APL.  Also, the "
-"existing :func:`itertools.count` function now has an optional *step* "
-"argument and can accept any type of counting sequence including :class:"
-"`fractions.Fraction` and :class:`decimal.Decimal`::"
+"The :mod:`itertools` module grew two new functions.  The "
+":func:`itertools.combinations_with_replacement` function is one of four for "
+"generating combinatorics including permutations and Cartesian products.  The "
+":func:`itertools.compress` function mimics its namesake from APL.  Also, the "
+"existing :func:`itertools.count` function now has an optional *step* argument"
+" and can accept any type of counting sequence including "
+":class:`fractions.Fraction` and :class:`decimal.Decimal`::"
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:294
@@ -442,11 +441,10 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:306
 msgid ""
-":func:`collections.namedtuple` now supports a keyword argument *rename* "
-"which lets invalid fieldnames be automatically converted to positional names "
-"in the form _0, _1, etc.  This is useful when the field names are being "
-"created by an external source such as a CSV header, SQL field list, or user "
-"input::"
+":func:`collections.namedtuple` now supports a keyword argument *rename* which"
+" lets invalid fieldnames be automatically converted to positional names in "
+"the form _0, _1, etc.  This is useful when the field names are being created "
+"by an external source such as a CSV header, SQL field list, or user input::"
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:312
@@ -469,8 +467,8 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:325
 msgid ""
-"The :func:`re.sub`, :func:`re.subn` and :func:`re.split` functions now "
-"accept a flags parameter."
+"The :func:`re.sub`, :func:`re.subn` and :func:`re.split` functions now accept"
+" a flags parameter."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:328
@@ -479,10 +477,11 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:330
 msgid ""
-"The :mod:`logging` module now implements a simple :class:`logging."
-"NullHandler` class for applications that are not using logging but are "
-"calling library code that does.  Setting-up a null handler will suppress "
-"spurious warnings such as \"No handlers could be found for logger foo\"::"
+"The :mod:`logging` module now implements a simple "
+":class:`logging.NullHandler` class for applications that are not using "
+"logging but are calling library code that does.  Setting-up a null handler "
+"will suppress spurious warnings such as \"No handlers could be found for "
+"logger foo\"::"
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:335
@@ -508,8 +507,8 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:346
 msgid ""
-"The :mod:`pdb` module can now access and display source code loaded via :mod:"
-"`zipimport` (or any other conformant :pep:`302` loader)."
+"The :mod:`pdb` module can now access and display source code loaded via "
+":mod:`zipimport` (or any other conformant :pep:`302` loader)."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:349
@@ -548,8 +547,7 @@ msgstr ""
 msgid ""
 "class TestGizmo(unittest.TestCase):\n"
 "\n"
-"    @unittest.skipUnless(sys.platform.startswith(\"win\"), \"requires "
-"Windows\")\n"
+"    @unittest.skipUnless(sys.platform.startswith(\"win\"), \"requires Windows\")\n"
 "    def test_gizmo_on_windows(self):\n"
 "        ...\n"
 "\n"
@@ -573,13 +571,16 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:383
 msgid ""
-"In addition, several new assertion methods were added including :meth:"
-"`~unittest.TestCase.assertSetEqual`, :meth:`~unittest.TestCase."
-"assertDictEqual`, :meth:`!assertDictContainsSubset`, :meth:`~unittest."
-"TestCase.assertListEqual`, :meth:`~unittest.TestCase.assertTupleEqual`, :"
-"meth:`~unittest.TestCase.assertSequenceEqual`, :meth:`assertRaisesRegexp() "
-"<unittest.TestCase.assertRaisesRegex>`, :meth:`~unittest.TestCase."
-"assertIsNone`, and :meth:`~unittest.TestCase.assertIsNotNone`."
+"In addition, several new assertion methods were added including "
+":meth:`~unittest.TestCase.assertSetEqual`, "
+":meth:`~unittest.TestCase.assertDictEqual`, "
+":meth:`!assertDictContainsSubset`, "
+":meth:`~unittest.TestCase.assertListEqual`, "
+":meth:`~unittest.TestCase.assertTupleEqual`, "
+":meth:`~unittest.TestCase.assertSequenceEqual`, :meth:`assertRaisesRegexp() "
+"<unittest.TestCase.assertRaisesRegex>`, "
+":meth:`~unittest.TestCase.assertIsNone`, and "
+":meth:`~unittest.TestCase.assertIsNotNone`."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:394
@@ -618,13 +619,13 @@ msgstr ""
 msgid ""
 "The :mod:`pickle` module has been adapted for better interoperability with "
 "Python 2.x when used with protocol 2 or lower.  The reorganization of the "
-"standard library changed the formal reference for many objects.  For "
-"example, ``__builtin__.set`` in Python 2 is called ``builtins.set`` in "
-"Python 3. This change confounded efforts to share data between different "
-"versions of Python.  But now when protocol 2 or lower is selected, the "
-"pickler will automatically use the old Python 2 names for both loading and "
-"dumping. This remapping is turned-on by default but can be disabled with the "
-"*fix_imports* option::"
+"standard library changed the formal reference for many objects.  For example,"
+" ``__builtin__.set`` in Python 2 is called ``builtins.set`` in Python 3. This"
+" change confounded efforts to share data between different versions of "
+"Python.  But now when protocol 2 or lower is selected, the pickler will "
+"automatically use the old Python 2 names for both loading and dumping. This "
+"remapping is turned-on by default but can be disabled with the *fix_imports* "
+"option::"
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:420
@@ -665,7 +666,7 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:443
 msgid "Optimizations"
-msgstr ""
+msgstr "Optimierungen"
 
 #: ../../whatsnew/3.1.rst:445
 msgid "Major performance enhancements have been added:"
@@ -687,8 +688,8 @@ msgstr ""
 #: ../../whatsnew/3.1.rst:456
 msgid ""
 "Added a heuristic so that tuples and dicts containing only untrackable "
-"objects are not tracked by the garbage collector. This can reduce the size "
-"of collections and therefore the garbage collection overhead on long-running "
+"objects are not tracked by the garbage collector. This can reduce the size of"
+" collections and therefore the garbage collection overhead on long-running "
 "programs, depending on their particular use of datatypes."
 msgstr ""
 
@@ -698,16 +699,16 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:463
 msgid ""
-"Enabling a configure option named ``--with-computed-gotos`` on compilers "
-"that support it (notably: gcc, SunPro, icc), the bytecode evaluation loop is "
+"Enabling a configure option named ``--with-computed-gotos`` on compilers that"
+" support it (notably: gcc, SunPro, icc), the bytecode evaluation loop is "
 "compiled with a new dispatch mechanism which gives speedups of up to 20%, "
 "depending on the system, the compiler, and the benchmark."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:469
 msgid ""
-"(Contributed by Antoine Pitrou along with a number of other participants, :"
-"issue:`4753`)."
+"(Contributed by Antoine Pitrou along with a number of other participants, "
+":issue:`4753`)."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:472
@@ -723,10 +724,10 @@ msgstr ""
 #: ../../whatsnew/3.1.rst:477
 msgid ""
 "The :mod:`json` module now has a C extension to substantially improve its "
-"performance.  In addition, the API was modified so that json works only "
-"with :class:`str`, not with :class:`bytes`.  That change makes the module "
-"closely match the `JSON specification <https://json.org/>`_ which is defined "
-"in terms of Unicode."
+"performance.  In addition, the API was modified so that json works only with "
+":class:`str`, not with :class:`bytes`.  That change makes the module closely "
+"match the `JSON specification <https://json.org/>`_ which is defined in terms"
+" of Unicode."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:483
@@ -751,8 +752,8 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:494
 msgid ""
-"IDLE's format menu now provides an option to strip trailing whitespace from "
-"a source file."
+"IDLE's format menu now provides an option to strip trailing whitespace from a"
+" source file."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:497
@@ -773,8 +774,8 @@ msgid ""
 "``2**30``, the base being determined at build time.  Previously, they were "
 "always stored in base ``2**15``.  Using base ``2**30`` gives significant "
 "performance improvements on 64-bit machines, but benchmark results on 32-bit "
-"machines have been mixed.  Therefore, the default is to use base ``2**30`` "
-"on 64-bit machines and base ``2**15`` on 32-bit machines; on Unix, there's a "
+"machines have been mixed.  Therefore, the default is to use base ``2**30`` on"
+" 64-bit machines and base ``2**15`` on 32-bit machines; on Unix, there's a "
 "new configure option ``--enable-big-digits`` that can be used to override "
 "this default."
 msgstr ""
@@ -783,9 +784,9 @@ msgstr ""
 msgid ""
 "Apart from the performance improvements this change should be invisible to "
 "end users, with one exception: for testing and debugging purposes there's a "
-"new :data:`sys.int_info` that provides information about the internal "
-"format, giving the number of bits per digit and the size in bytes of the C "
-"type used to store each digit::"
+"new :data:`sys.int_info` that provides information about the internal format,"
+" giving the number of bits per digit and the size in bytes of the C type used"
+" to store each digit::"
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:519
@@ -821,8 +822,8 @@ msgstr ""
 #: ../../whatsnew/3.1.rst:534
 msgid ""
 "Added a new :c:func:`PyOS_string_to_double` function to replace the "
-"deprecated functions :c:func:`!PyOS_ascii_strtod` and :c:func:`!"
-"PyOS_ascii_atof`."
+"deprecated functions :c:func:`!PyOS_ascii_strtod` and "
+":c:func:`!PyOS_ascii_atof`."
 msgstr ""
 
 #: ../../whatsnew/3.1.rst:537
@@ -883,8 +884,8 @@ msgstr ""
 
 #: ../../whatsnew/3.1.rst:576
 msgid ""
-"The automatic name remapping in the pickle module for protocol 2 or lower "
-"can make Python 3.1 pickles unreadable in Python 3.0.  One solution is to "
-"use protocol 3.  Another solution is to set the *fix_imports* option to "
+"The automatic name remapping in the pickle module for protocol 2 or lower can"
+" make Python 3.1 pickles unreadable in Python 3.0.  One solution is to use "
+"protocol 3.  Another solution is to set the *fix_imports* option to "
 "``False``. See the discussion above for more details."
 msgstr ""

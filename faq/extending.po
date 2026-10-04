@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -27,7 +26,7 @@ msgstr ""
 
 #: ../../faq/extending.rst:6
 msgid "Contents"
-msgstr ""
+msgstr "Inhalt"
 
 #: ../../faq/extending.rst:16
 msgid "Can I create my own functions in C?"
@@ -36,8 +35,8 @@ msgstr ""
 #: ../../faq/extending.rst:18
 msgid ""
 "Yes, you can create built-in modules containing functions, variables, "
-"exceptions and even new types in C.  This is explained in the document :ref:"
-"`extending-index`."
+"exceptions and even new types in C.  This is explained in the document "
+":ref:`extending-index`."
 msgstr ""
 
 #: ../../faq/extending.rst:22
@@ -50,10 +49,10 @@ msgstr ""
 
 #: ../../faq/extending.rst:28
 msgid ""
-"Yes, using the C compatibility features found in C++.  Place ``extern "
-"\"C\" { ... }`` around the Python include files and put ``extern \"C\"`` "
-"before each function that is going to be called by the Python interpreter.  "
-"Global or static C++ objects with constructors are probably not a good idea."
+"Yes, using the C compatibility features found in C++.  Place ``extern \"C\" {"
+" ... }`` around the Python include files and put ``extern \"C\"`` before each"
+" function that is going to be called by the Python interpreter.  Global or "
+"static C++ objects with constructors are probably not a good idea."
 msgstr ""
 
 #: ../../faq/extending.rst:37
@@ -77,8 +76,8 @@ msgid ""
 "The highest-level function to do this is :c:func:`PyRun_SimpleString` which "
 "takes a single string argument to be executed in the context of the module "
 "``__main__`` and returns ``0`` for success and ``-1`` when an exception "
-"occurred (including :exc:`SyntaxError`).  If you want more control, use :c:"
-"func:`PyRun_String`; see the source for :c:func:`PyRun_SimpleString` in "
+"occurred (including :exc:`SyntaxError`).  If you want more control, use "
+":c:func:`PyRun_String`; see the source for :c:func:`PyRun_SimpleString` in "
 "``Python/pythonrun.c``."
 msgstr ""
 
@@ -101,23 +100,23 @@ msgstr ""
 msgid ""
 "That depends on the object's type.  If it's a tuple, :c:func:`PyTuple_Size` "
 "returns its length and :c:func:`PyTuple_GetItem` returns the item at a "
-"specified index.  Lists have similar functions, :c:func:`PyList_Size` and :c:"
-"func:`PyList_GetItem`."
+"specified index.  Lists have similar functions, :c:func:`PyList_Size` and "
+":c:func:`PyList_GetItem`."
 msgstr ""
 
 #: ../../faq/extending.rst:72
 msgid ""
-"For bytes, :c:func:`PyBytes_Size` returns its length and :c:func:"
-"`PyBytes_AsStringAndSize` provides a pointer to its value and its length.  "
-"Note that Python bytes objects may contain null bytes so C's :c:func:`!"
-"strlen` should not be used."
+"For bytes, :c:func:`PyBytes_Size` returns its length and "
+":c:func:`PyBytes_AsStringAndSize` provides a pointer to its value and its "
+"length.  Note that Python bytes objects may contain null bytes so C's "
+":c:func:`!strlen` should not be used."
 msgstr ""
 
 #: ../../faq/extending.rst:77
 msgid ""
 "To test the type of an object, first make sure it isn't ``NULL``, and then "
-"use :c:func:`PyBytes_Check`, :c:func:`PyTuple_Check`, :c:func:"
-"`PyList_Check`, etc."
+"use :c:func:`PyBytes_Check`, :c:func:`PyTuple_Check`, :c:func:`PyList_Check`,"
+" etc."
 msgstr ""
 
 #: ../../faq/extending.rst:80
@@ -146,8 +145,8 @@ msgstr ""
 msgid ""
 "The :c:func:`PyObject_CallMethod` function can be used to call an arbitrary "
 "method of an object.  The parameters are the object, the name of the method "
-"to call, a format string like that used with :c:func:`Py_BuildValue`, and "
-"the argument values::"
+"to call, a format string like that used with :c:func:`Py_BuildValue`, and the"
+" argument values::"
 msgstr ""
 
 #: ../../faq/extending.rst:102
@@ -166,8 +165,8 @@ msgstr ""
 
 #: ../../faq/extending.rst:109
 msgid ""
-"To call, e.g., a file object's \"seek\" method with arguments 10, 0 "
-"(assuming the file object pointer is \"f\")::"
+"To call, e.g., a file object's \"seek\" method with arguments 10, 0 (assuming"
+" the file object pointer is \"f\")::"
 msgstr ""
 
 #: ../../faq/extending.rst:112
@@ -254,11 +253,11 @@ msgstr ""
 
 #: ../../faq/extending.rst:173
 msgid ""
-"If the module hasn't been imported yet (i.e. it is not yet present in :data:"
-"`sys.modules`), this initializes the module; otherwise it simply returns the "
-"value of ``sys.modules[\"<modulename>\"]``.  Note that it doesn't enter the "
-"module into any namespace -- it only ensures it has been initialized and is "
-"stored in :data:`sys.modules`."
+"If the module hasn't been imported yet (i.e. it is not yet present in "
+":data:`sys.modules`), this initializes the module; otherwise it simply "
+"returns the value of ``sys.modules[\"<modulename>\"]``.  Note that it doesn't"
+" enter the module into any namespace -- it only ensures it has been "
+"initialized and is stored in :data:`sys.modules`."
 msgstr ""
 
 #: ../../faq/extending.rst:179
@@ -273,8 +272,8 @@ msgstr ""
 
 #: ../../faq/extending.rst:184
 msgid ""
-"Calling :c:func:`PyObject_SetAttrString` to assign to variables in the "
-"module also works."
+"Calling :c:func:`PyObject_SetAttrString` to assign to variables in the module"
+" also works."
 msgstr ""
 
 #: ../../faq/extending.rst:189
@@ -285,10 +284,10 @@ msgstr ""
 msgid ""
 "Depending on your requirements, there are many approaches.  To do this "
 "manually, begin by reading :ref:`the \"Extending and Embedding\" document "
-"<extending-index>`.  Realize that for the Python run-time system, there "
-"isn't a whole lot of difference between C and C++ -- so the strategy of "
-"building a new Python type around a C structure (pointer) type will also "
-"work for C++ objects."
+"<extending-index>`.  Realize that for the Python run-time system, there isn't"
+" a whole lot of difference between C and C++ -- so the strategy of building a"
+" new Python type around a C structure (pointer) type will also work for C++ "
+"objects."
 msgstr ""
 
 #: ../../faq/extending.rst:197
@@ -302,8 +301,8 @@ msgstr ""
 #: ../../faq/extending.rst:203
 msgid ""
 "Setup must end in a newline, if there is no newline there, the build process "
-"fails.  (Fixing this requires some ugly shell script hackery, and this bug "
-"is so minor that it doesn't seem worth the effort.)"
+"fails.  (Fixing this requires some ugly shell script hackery, and this bug is"
+" so minor that it doesn't seem worth the effort.)"
 msgstr ""
 
 #: ../../faq/extending.rst:209
@@ -312,8 +311,8 @@ msgstr ""
 
 #: ../../faq/extending.rst:211
 msgid ""
-"When using GDB with dynamically loaded extensions, you can't set a "
-"breakpoint in your extension until your extension is loaded."
+"When using GDB with dynamically loaded extensions, you can't set a breakpoint"
+" in your extension until your extension is loaded."
 msgstr ""
 
 #: ../../faq/extending.rst:214
@@ -367,8 +366,8 @@ msgid ""
 "Sometimes you want to emulate the Python interactive interpreter's behavior, "
 "where it gives you a continuation prompt when the input is incomplete (e.g. "
 "you typed the start of an \"if\" statement or you didn't close your "
-"parentheses or triple string quotes), but it gives you a syntax error "
-"message immediately when the input is invalid."
+"parentheses or triple string quotes), but it gives you a syntax error message"
+" immediately when the input is invalid."
 msgstr ""
 
 #: ../../faq/extending.rst:250
@@ -381,8 +380,8 @@ msgstr ""
 msgid ""
 "The easiest way to do it in C is to call :c:func:`PyRun_InteractiveLoop` "
 "(perhaps in a separate thread) and let the Python interpreter handle the "
-"input for you. You can also set the :c:func:`PyOS_ReadlineFunctionPointer` "
-"to point at your custom input function. See ``Modules/readline.c`` and "
+"input for you. You can also set the :c:func:`PyOS_ReadlineFunctionPointer` to"
+" point at your custom input function. See ``Modules/readline.c`` and "
 "``Parser/myreadline.c`` for more hints."
 msgstr ""
 
@@ -399,19 +398,20 @@ msgstr ""
 
 #: ../../faq/extending.rst:268
 msgid ""
-"Can I create an object class with some methods implemented in C and others "
-"in Python (e.g. through inheritance)?"
+"Can I create an object class with some methods implemented in C and others in"
+" Python (e.g. through inheritance)?"
 msgstr ""
 
 #: ../../faq/extending.rst:270
 msgid ""
-"Yes, you can inherit from built-in classes such as :class:`int`, :class:"
-"`list`, :class:`dict`, etc."
+"Yes, you can inherit from built-in classes such as :class:`int`, "
+":class:`list`, :class:`dict`, etc."
 msgstr ""
 
 #: ../../faq/extending.rst:273
 msgid ""
-"The Boost Python Library (BPL, https://www.boost.org/libs/python/doc/index."
-"html) provides a way of doing this from C++ (i.e. you can inherit from an "
-"extension class written in C++ using the BPL)."
+"The Boost Python Library (BPL, "
+"https://www.boost.org/libs/python/doc/index.html) provides a way of doing "
+"this from C++ (i.e. you can inherit from an extension class written in C++ "
+"using the BPL)."
 msgstr ""

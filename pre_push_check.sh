@@ -4,7 +4,9 @@
 #   Stufe 1 (immer, ca. 1 Minute): msgfmt-Syntaxcheck + sphinx-lint + eigener
 #            Rollen-Konsistenz-Check (findet die meisten "echten" Bugs wie
 #            falsche/fehlende/ueberzaehlige :ref:/:term:/:class:/... -Rollen,
-#            OHNE dass ein kompletter Sphinx-Build noetig ist)
+#            OHNE dass ein kompletter Sphinx-Build noetig ist) + Auszeichnungs-
+#            pruefung (ueberfluessige Backtick-Klammern, uebersetzte Code-
+#            bloecke, abweichende ``Literale``)
 #   Stufe 2 (optional, ca. 10-20 Min. auf einem M1 Mac): echter Sphinx-Build
 #            wie in test-build.yml, fuer die letzte Sicherheit vor dem Push
 #
@@ -22,7 +24,8 @@ set -uo pipefail
 REPO_ROOT="${REPO_ROOT:-$(pwd)}"
 CPYTHON_ROOT="${CPYTHON_ROOT:-/Volumes/Dev_SSD/GitHub}"
 CHECK_ROLES_PY="${CHECK_ROLES_PY:-$REPO_ROOT/check_roles.py}"
-EXCLUDE_DIRS=(".venv" ".git")
+CHECK_MARKUP_PY="${CHECK_MARKUP_PY:-$REPO_ROOT/tools/check_markup.py}"
+EXCLUDE_DIRS=(".venv" ".git" "cpython-src")
 
 BRANCH="$(git -C "$REPO_ROOT" branch --show-current 2>/dev/null)"
 if [[ -z "$BRANCH" ]]; then
@@ -55,6 +58,7 @@ fi
 
 pass=0
 fail=0
+skip=0
 
 log_section() { echo; echo "=== $1 ==="; }
 is_excluded() {
@@ -75,9 +79,35 @@ if ! $NONINTERACTIVE; then
 fi
 
 if $RUN_QUICK; then
-    log_section "1a/3  msgfmt --check (Syntax)"
-    msgfmt_errors=0
+    log_section "1a/5  powrap (Zeilenumbruch auf 80 Zeichen)"
+    if ! command -v powrap &>/dev/null; then
+        echo "powrap nicht gefunden -- installiere mit: pip install powrap"
+        skip=$((skip + 1))
+    else
+        # Die CI formatiert nach jedem Push automatisch mit powrap und
+        # committet das Ergebnis. Wer lokal nicht formatiert, bekommt beim
+        # naechsten Rebase Konflikte in genau diesen Zeilen. Deshalb hier.
+        vorher=$(git -C "$REPO_ROOT" diff --name-only -- '*.po' | wc -l | tr -d ' ')
+        powrap -m 2>/dev/null
+        nachher=$(git -C "$REPO_ROOT" diff --name-only -- '*.po' | wc -l | tr -d ' ')
+        if [[ "$vorher" != "$nachher" ]]; then
+            echo "powrap hat weitere Dateien umbrochen -- bitte mit committen."
+        else
+            echo "OK -- Umbruch war bereits sauber."
+        fi
+        pass=$((pass + 1))
+    fi
+
+    log_section "1b/5  msgfmt --check (Syntax)"
+    if ! command -v msgfmt &>/dev/null; then
+        echo "msgfmt nicht gefunden -- gehoert zu gettext (brew install gettext)."
+        echo "Schritt uebersprungen."
+        skip=$((skip + 1))
+        msgfmt_errors=-1
+    fi
+    msgfmt_errors=${msgfmt_errors:-0}
     while IFS= read -r -d '' po; do
+        [[ $msgfmt_errors -lt 0 ]] && break
         rel="${po#"$REPO_ROOT"/}"
         is_excluded "$rel" && continue
         if ! out=$(msgfmt --check --check-format -o /dev/null "$po" 2>&1); then
@@ -86,7 +116,9 @@ if $RUN_QUICK; then
             msgfmt_errors=$((msgfmt_errors + 1))
         fi
     done < <(find "$REPO_ROOT" -name "*.po" -print0)
-    if [[ $msgfmt_errors -eq 0 ]]; then
+    if [[ $msgfmt_errors -lt 0 ]]; then
+        :
+    elif [[ $msgfmt_errors -eq 0 ]]; then
         echo "OK -- keine Syntaxfehler."
         pass=$((pass + 1))
     else
@@ -94,10 +126,10 @@ if $RUN_QUICK; then
         fail=$((fail + 1))
     fi
 
-    log_section "1b/3  sphinx-lint (Backtick-/Rollen-Syntax)"
+    log_section "1c/5  sphinx-lint (Backtick-/Rollen-Syntax)"
     if ! command -v sphinx-lint &>/dev/null; then
         echo "sphinx-lint nicht gefunden -- installiere mit: pip install sphinx-lint"
-        fail=$((fail + 1))
+        skip=$((skip + 1))
     else
         lint_targets=()
         while IFS= read -r -d '' po; do
@@ -115,11 +147,25 @@ if $RUN_QUICK; then
         fi
     fi
 
-    log_section "1c/3  Rollen-Konsistenz (eigener Check, kein Build noetig)"
+    log_section "1d/5  Rollen-Konsistenz (eigener Check, kein Build noetig)"
     if [[ ! -f "$CHECK_ROLES_PY" ]]; then
         echo "check_roles.py nicht gefunden unter $CHECK_ROLES_PY -- Schritt uebersprungen."
+        skip=$((skip + 1))
     else
         if python3 "$CHECK_ROLES_PY" "$REPO_ROOT" --exclude "$(IFS=,; echo "${EXCLUDE_DIRS[*]}")"; then
+            pass=$((pass + 1))
+        else
+            fail=$((fail + 1))
+        fi
+    fi
+
+    log_section "1e/5  Auszeichnung (ueberfluessige Backticks, Codebloecke, Literale)"
+    if [[ ! -f "$CHECK_MARKUP_PY" ]]; then
+        echo "check_markup.py nicht gefunden unter $CHECK_MARKUP_PY -- Schritt uebersprungen."
+        skip=$((skip + 1))
+    else
+        if python3 "$CHECK_MARKUP_PY" "$REPO_ROOT" \
+               --exclude "$(IFS=,; echo "${EXCLUDE_DIRS[*]}")" --max 10; then
             pass=$((pass + 1))
         else
             fail=$((fail + 1))
@@ -178,13 +224,13 @@ if $RUN_FULL; then
     echo "Starte 'make html' mit -W --keep-going (wie CI) ..."
     BUILD_LOG=$(mktemp)
     (cd "$CPYTHON_SRC/Doc" && \
-        make -e SPHINXOPTS="--color -D language='de' -D suppress_warnings=i18n.inconsistent_references -W --keep-going" html \
+        make -e SPHINXOPTS="--color -D language='de' -W --keep-going" html \
         > "$BUILD_LOG" 2>&1)
     build_status=$?
 
     echo
-    echo "--- Warnungen/Fehler (ohne den bekannten Sphinx-Bug i18n.inconsistent_references) ---"
-    relevant=$(grep -E "WARNING|ERROR" "$BUILD_LOG" | grep -v "i18n.inconsistent_references" || true)
+    echo "--- Warnungen/Fehler ---"
+    relevant=$(grep -E "WARNING|ERROR" "$BUILD_LOG" || true)
     if [[ -z "$relevant" ]]; then
         echo "Keine weiteren Warnungen gefunden."
     else
@@ -207,7 +253,10 @@ if [[ $pass -eq 0 && $fail -eq 0 ]]; then
     echo "Keine Pruefungen durchgefuehrt."
     exit 0
 fi
-echo "Bestanden: $pass   Fehlgeschlagen: $fail"
+echo "Bestanden: $pass   Fehlgeschlagen: $fail   Uebersprungen: $skip"
+if [[ $skip -gt 0 ]]; then
+    echo "Achtung: $skip Pruefung(en) konnten mangels Werkzeug nicht laufen."
+fi
 if [[ $fail -eq 0 ]]; then
     echo "Alles sauber -- bereit zum Push."
     exit 0

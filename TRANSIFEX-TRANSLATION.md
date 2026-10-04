@@ -101,3 +101,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 ```
 
+Die Zeilen `msgid ""` und `msgstr ""` gehören zwingend dazu – fehlen sie,
+bricht `msgcat` mit einem Syntaxfehler ab. Und es darf genau **einen** solchen
+Kopfblock pro Datei geben; das PyCharm-Gettext-Plugin hat schon mehrfach
+weitere ans Dateiende angehängt.

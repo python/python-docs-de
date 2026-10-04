@@ -1,50 +1,43 @@
-# Übersetzungsregeln python-docs-de 
+# Übersetzungsregeln für python-docs-de
 
-## Sprache
-- Konsequent "Du"-Form
-- msgid (Englisch) NIE verändern, nur msgstr bearbeiten
+Dieses Repository enthält die deutsche Übersetzung der Python-Dokumentation
+als Gettext-Dateien (`.po`). Übersetzt wird ausschließlich der `msgstr`.
 
-## Sphinx/reST-Syntax
-- `:ref:`Anzeigetext <ziel>`` → nur Anzeigetext übersetzen, Ziel bleibt Englisch
-- `:class:`/:func:`/:meth:`/:attr:`/:mod:`/:exc:`/:const:`/:keyword:`/:program:`/:pep:`/:kbd:`X`` ohne <...> → X bleibt unverändert
-- `~`-Präfix (z.B. `:meth:`~object.__lt__``) → kompletter Ausdruck inkl. ~ unverändert
-- `!`-Präfix (z.B. `:mod:`!string``) → nur Verlinkung unterdrückt, Bezeichner unverändert
-- Backticks sauber schließen, kein Leerzeichen davor
-- `::` am Satzende (leitet Codeblock ein) bleibt stehen
-- Zitierte Originaltitel aus externen Standards (z.B. Unicode Standard "Default Case Folding") bleiben unübersetzt in Anführungszeichen
-- Platzhalter/Makros (%s, {0}, <TRANSLATION_REPO_>) unverändert
+## Sprache und Terminologie
+- Durchgehend „Du"-Form, niemals „Sie"
+- „Built-in" → „integriert"
+- „dictionary" → „Dictionary" (nicht „Wörterbuch")
+- „string" → „Zeichenkette" (nicht „String" oder „Zeichenfolge")
+- „iterable" → „iterierbares Objekt"
+- Funktionsbeschreibungen in der 3. Person: „Gibt … zurück"
+- Deutsche Anführungszeichen „…“, nie um Rollen oder Code herum
+- „unraisable exception" → „nicht weiterleitbare Ausnahme
+  (unraisable exception)" beim ersten Vorkommen, danach kurz
+- „free-threaded build" → „Build mit freien Threads" (laut Glossar)
+- Bei Fachbegriffen ist `glossary.po` maßgeblich. Im Zweifel dort
+  nachschlagen, bevor ein Begriff neu übersetzt wird.
 
-## Code-/REPL-Beispiele
-- Reiner Code, Ausgaben, Tracebacks: unverändert
-- NUR `#`-Kommentare darin übersetzen
-- msgstr immer identisch zu msgid befüllen, NIE leer lassen (auch bei reinem Code)
+## reST- und PO-Syntax
+- `msgid` NIEMALS ändern, auch nicht bei Tippfehlern im Original
+- Rollen (`:func:`, `:class:`, `:ref:`, `:term:`, `:meth:`, `:exc:`)
+  exakt übernehmen; Anzahl und Reihenfolge müssen msgid und msgstr
+  entsprechen
+- Bei `:term:` und `:ref:` mit deutschem Anzeigetext immer das Ziel
+  angeben: `:term:`Sequenz <sequence>``
+- Parameternamen zwischen Sternchen bleiben englisch: *maxsplit*
+- Nach `` ` `` oder `*` nie direkt ein Buchstabe oder Bindestrich
+  (kein `*m*s`, kein `:class:`X`-Instanz`)
+- Vor einer Rolle immer ein Leerzeichen
+- Code-Literale, Programmausgaben und `::` am Zeilenende unverändert
+- `#, fuzzy` nach dem Übersetzen entfernen
 
-## Fuzzy-Flags
-- Nach Prüfung/Übersetzung entfernen
-- Datei-Header-fuzzy (über leerem msgid "") ist reine Altlast, ohne Prüfung löschbar
+## Prüfungen nach jedem Abschnitt
+    powrap <datei>
+    msgfmt --check -o /dev/null <datei>
+    sphinx-lint <datei>
+    python3 check_roles.py <datei>
 
-## Terminologie (unübersetzt lassen)
-Dictionary, Tuple, List Comprehension, Sentinel, Lazy Import, Property,
-Slice, Type Hints, f-string/f-String, t-string/T-String, Whitespace (Singular),
-Subclassing, API, Repository, Wheel
-
-## Terminologie (feste Übersetzung)
-- frozen... → unveränderlich (NICHT "eingefroren")
-- picklable → picklebar
-- I/O (NICHT E/A)
-- locale → Ländereinstellung
-- presentation type → Darstellungstyp
-- String (als Datentyp) → Zeichenkette
-- Debug/Conversion/Format specifier → Debug-/Konvertierungs-/Formatbezeichner
-- rich comparisons → erweiterte Vergleichsoperationen
-- generic over → "Typparameter" bei mehreren festen Parametern (z.B. dict: zwei),
-  "hinsichtlich des Typs" bei genau einem Parameter (list/set/frozenset/memoryview),
-  Plural "Typen" bei variabler Anzahl (tuple)
-
-## PO-Datei-Struktur
-- Genau ein leerer msgid ""-Header mit charset=UTF-8 pro Datei
-- Zeilenlänge ~80 Zeichen (powrap via CI erledigt das automatisch bei Push)
-- Vor Push immer lokal prüfen: find . -name "*.po" -not -path "./c-api/*" -exec msgfmt --check {} -o /dev/null \;
-
-## Core-Dateien (Pflicht für Sprachschalter-Aufnahme)
-Nur: bugs.po, library/functions.po, tutorial/*.po
+Gemeldete Fehler beheben und die Prüfungen erneut ausführen –
+höchstens drei Versuche. Bleiben danach Fehler bestehen: nicht
+committen, sondern die betroffenen Einträge und die Fehlermeldungen
+auflisten und auf Rückmeldung warten.
