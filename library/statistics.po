@@ -45,13 +45,13 @@ msgstr ""
 
 #: ../../library/statistics.rst:28
 msgid ""
-"Unless explicitly noted, these functions support :class:`int`, "
-":class:`float`, :class:`~decimal.Decimal` and :class:`~fractions.Fraction`. "
-"Behaviour with other types (whether in the numeric tower or not) is currently"
-" unsupported.  Collections with a mix of types are also undefined and "
-"implementation-dependent.  If your input data consists of mixed types, you "
-"may be able to use :func:`map` to ensure a consistent result, for example: "
-"``map(float, input_data)``."
+"Unless explicitly noted, these functions support :class:`int`, :class:"
+"`float`, :class:`~decimal.Decimal` and :class:`~fractions.Fraction`. "
+"Behaviour with other types (whether in the numeric tower or not) is "
+"currently unsupported.  Collections with a mix of types are also undefined "
+"and implementation-dependent.  If your input data consists of mixed types, "
+"you may be able to use :func:`map` to ensure a consistent result, for "
+"example: ``map(float, input_data)``."
 msgstr ""
 
 #: ../../library/statistics.rst:36
@@ -327,10 +327,9 @@ msgstr ""
 
 #: ../../library/statistics.rst:148
 msgid ""
-"The mean is strongly affected by `outliers "
-"<https://en.wikipedia.org/wiki/Outlier>`_ and is not necessarily a typical "
-"example of the data points. For a more robust, although less efficient, "
-"measure of `central tendency "
+"The mean is strongly affected by `outliers <https://en.wikipedia.org/wiki/"
+"Outlier>`_ and is not necessarily a typical example of the data points. For "
+"a more robust, although less efficient, measure of `central tendency "
 "<https://en.wikipedia.org/wiki/Central_tendency>`_, see :func:`median`."
 msgstr ""
 
@@ -339,8 +338,8 @@ msgid ""
 "The sample mean gives an unbiased estimate of the true population mean, so "
 "that when taken on average over all the possible samples, ``mean(sample)`` "
 "converges on the true mean of the entire population.  If *data* represents "
-"the entire population rather than a sample, then ``mean(data)`` is equivalent"
-" to calculating the true population mean μ."
+"the entire population rather than a sample, then ``mean(data)`` is "
+"equivalent to calculating the true population mean μ."
 msgstr ""
 
 #: ../../library/statistics.rst:163
@@ -349,8 +348,8 @@ msgstr ""
 
 #: ../../library/statistics.rst:165
 msgid ""
-"This runs faster than the :func:`mean` function and it always returns a "
-":class:`float`.  The *data* may be a sequence or iterable.  If the input "
+"This runs faster than the :func:`mean` function and it always returns a :"
+"class:`float`.  The *data* may be a sequence or iterable.  If the input "
 "dataset is empty, raises a :exc:`StatisticsError`."
 msgstr ""
 
@@ -377,8 +376,8 @@ msgstr ""
 
 #: ../../library/statistics.rst:185
 msgid ""
-"If *weights* is supplied, it must be the same length as the *data* or a "
-":exc:`ValueError` will be raised."
+"If *weights* is supplied, it must be the same length as the *data* or a :exc:"
+"`ValueError` will be raised."
 msgstr ""
 
 #: ../../library/statistics.rst:190 ../../library/statistics.rst:258
@@ -398,9 +397,9 @@ msgstr ""
 
 #: ../../library/statistics.rst:202
 msgid ""
-"Raises a :exc:`StatisticsError` if the input dataset is empty, if it contains"
-" a zero, or if it contains a negative value. The *data* may be a sequence or "
-"iterable."
+"Raises a :exc:`StatisticsError` if the input dataset is empty, if it "
+"contains a zero, or if it contains a negative value. The *data* may be a "
+"sequence or iterable."
 msgstr ""
 
 #: ../../library/statistics.rst:206
@@ -439,8 +438,8 @@ msgstr ""
 
 #: ../../library/statistics.rst:232
 msgid ""
-"Suppose a car travels 10 km at 40 km/hr, then another 10 km at 60 km/hr. What"
-" is the average speed?"
+"Suppose a car travels 10 km at 40 km/hr, then another 10 km at 60 km/hr. "
+"What is the average speed?"
 msgstr ""
 
 #: ../../library/statistics.rst:235
@@ -464,8 +463,8 @@ msgstr ""
 
 #: ../../library/statistics.rst:249
 msgid ""
-":exc:`StatisticsError` is raised if *data* is empty, any element is less than"
-" zero, or if the weighted sum isn't positive."
+":exc:`StatisticsError` is raised if *data* is empty, any element is less "
+"than zero, or if the weighted sum isn't positive."
 msgstr ""
 
 #: ../../library/statistics.rst:252
@@ -477,17 +476,17 @@ msgstr ""
 
 #: ../../library/statistics.rst:264
 msgid ""
-"`Kernel Density Estimation (KDE) <https://www.itm-"
-"conferences.org/articles/itmconf/pdf/2018/08/itmconf_sam2018_00037.pdf>`_: "
-"Create a continuous probability density function or cumulative distribution "
-"function from discrete samples."
+"`Kernel Density Estimation (KDE) <https://www.itm-conferences.org/articles/"
+"itmconf/pdf/2018/08/itmconf_sam2018_00037.pdf>`_: Create a continuous "
+"probability density function or cumulative distribution function from "
+"discrete samples."
 msgstr ""
 
 #: ../../library/statistics.rst:269
 msgid ""
-"The basic idea is to smooth the data using `a kernel function "
-"<https://en.wikipedia.org/wiki/Kernel_(statistics)>`_. to help draw "
-"inferences about a population from a sample."
+"The basic idea is to smooth the data using `a kernel function <https://en."
+"wikipedia.org/wiki/Kernel_(statistics)>`_. to help draw inferences about a "
+"population from a sample."
 msgstr ""
 
 #: ../../library/statistics.rst:273
@@ -529,10 +528,10 @@ msgstr ""
 
 #: ../../library/statistics.rst:292
 msgid ""
-"`Wikipedia has an example "
-"<https://en.wikipedia.org/wiki/Kernel_density_estimation#Example>`_ where we "
-"can use :func:`kde` to generate and plot a probability density function "
-"estimated from a small sample:"
+"`Wikipedia has an example <https://en.wikipedia.org/wiki/"
+"Kernel_density_estimation#Example>`_ where we can use :func:`kde` to "
+"generate and plot a probability density function estimated from a small "
+"sample:"
 msgstr ""
 
 #: ../../library/statistics.rst:297
@@ -618,15 +617,15 @@ msgstr ""
 
 #: ../../library/statistics.rst:368
 msgid ""
-"Return the low median of numeric data.  If *data* is empty, "
-":exc:`StatisticsError` is raised.  *data* can be a sequence or iterable."
+"Return the low median of numeric data.  If *data* is empty, :exc:"
+"`StatisticsError` is raised.  *data* can be a sequence or iterable."
 msgstr ""
 
 #: ../../library/statistics.rst:371
 msgid ""
 "The low median is always a member of the data set.  When the number of data "
-"points is odd, the middle value is returned.  When it is even, the smaller of"
-" the two middle values is returned."
+"points is odd, the middle value is returned.  When it is even, the smaller "
+"of the two middle values is returned."
 msgstr ""
 
 #: ../../library/statistics.rst:375
@@ -690,8 +689,8 @@ msgstr ""
 #: ../../library/statistics.rst:417
 msgid ""
 "For example, demographic information may have been summarized into "
-"consecutive ten-year age groups with each group being represented by the "
-"5-year midpoints of the intervals:"
+"consecutive ten-year age groups with each group being represented by the 5-"
+"year midpoints of the intervals:"
 msgstr ""
 
 #: ../../library/statistics.rst:421
@@ -716,9 +715,9 @@ msgstr ""
 #: ../../library/statistics.rst:436
 msgid ""
 "The regular :func:`median` function would assume that everyone in the "
-"tricenarian age group was exactly 35 years old.  A more tenable assumption is"
-" that the 484 members of that age group are evenly distributed between 30 and"
-" 40.  For that, we use :func:`median_grouped`:"
+"tricenarian age group was exactly 35 years old.  A more tenable assumption "
+"is that the 484 members of that age group are evenly distributed between 30 "
+"and 40.  For that, we use :func:`median_grouped`:"
 msgstr ""
 
 #: ../../library/statistics.rst:442
@@ -745,9 +744,9 @@ msgstr ""
 
 #: ../../library/statistics.rst:460
 msgid ""
-"Return the single most common data point from discrete or nominal *data*. The"
-" mode (when it exists) is the most typical value and serves as a measure of "
-"central location."
+"Return the single most common data point from discrete or nominal *data*. "
+"The mode (when it exists) is the most typical value and serves as a measure "
+"of central location."
 msgstr ""
 
 #: ../../library/statistics.rst:464
@@ -772,13 +771,14 @@ msgstr ""
 
 #: ../../library/statistics.rst:477
 msgid ""
-"The mode is unique in that it is the only statistic in this package that also"
-" applies to nominal (non-numeric) data:"
+"The mode is unique in that it is the only statistic in this package that "
+"also applies to nominal (non-numeric) data:"
 msgstr ""
 
 #: ../../library/statistics.rst:480
 msgid ""
-">>> mode([\"red\", \"blue\", \"blue\", \"red\", \"green\", \"red\", \"red\"])\n"
+">>> mode([\"red\", \"blue\", \"blue\", \"red\", \"green\", \"red\", "
+"\"red\"])\n"
 "'red'"
 msgstr ""
 
@@ -826,8 +826,8 @@ msgstr ""
 
 #: ../../library/statistics.rst:526
 msgid ""
-"Return the population variance of *data*, a non-empty sequence or iterable of"
-" real-valued numbers.  Variance, or second moment about the mean, is a "
+"Return the population variance of *data*, a non-empty sequence or iterable "
+"of real-valued numbers.  Variance, or second moment about the mean, is a "
 "measure of the variability (spread or dispersion) of data.  A large variance "
 "indicates that the data is spread out; a small variance indicates it is "
 "clustered closely around the mean."
@@ -844,8 +844,8 @@ msgstr ""
 #: ../../library/statistics.rst:537
 msgid ""
 "Use this function to calculate the variance from the entire population.  To "
-"estimate the variance from a sample, the :func:`variance` function is usually"
-" a better choice."
+"estimate the variance from a sample, the :func:`variance` function is "
+"usually a better choice."
 msgstr ""
 
 #: ../../library/statistics.rst:541
@@ -884,7 +884,8 @@ msgstr ""
 #: ../../library/statistics.rst:562
 msgid ""
 ">>> from decimal import Decimal as D\n"
-">>> pvariance([D(\"27.5\"), D(\"30.25\"), D(\"30.25\"), D(\"34.5\"), D(\"41.75\")])\n"
+">>> pvariance([D(\"27.5\"), D(\"30.25\"), D(\"30.25\"), D(\"34.5\"), "
+"D(\"41.75\")])\n"
 "Decimal('24.815')\n"
 "\n"
 ">>> from fractions import Fraction as F\n"
@@ -922,11 +923,11 @@ msgstr ""
 
 #: ../../library/statistics.rst:598
 msgid ""
-"Return the sample variance of *data*, an iterable of at least two real-valued"
-" numbers.  Variance, or second moment about the mean, is a measure of the "
-"variability (spread or dispersion) of data.  A large variance indicates that "
-"the data is spread out; a small variance indicates it is clustered closely "
-"around the mean."
+"Return the sample variance of *data*, an iterable of at least two real-"
+"valued numbers.  Variance, or second moment about the mean, is a measure of "
+"the variability (spread or dispersion) of data.  A large variance indicates "
+"that the data is spread out; a small variance indicates it is clustered "
+"closely around the mean."
 msgstr ""
 
 #: ../../library/statistics.rst:604
@@ -968,8 +969,8 @@ msgstr ""
 
 #: ../../library/statistics.rst:630
 msgid ""
-"This function does not attempt to verify that you have passed the actual mean"
-" as *xbar*.  Using arbitrary values for *xbar* can lead to invalid or "
+"This function does not attempt to verify that you have passed the actual "
+"mean as *xbar*.  Using arbitrary values for *xbar* can lead to invalid or "
 "impossible results."
 msgstr ""
 
@@ -980,7 +981,8 @@ msgstr ""
 #: ../../library/statistics.rst:636
 msgid ""
 ">>> from decimal import Decimal as D\n"
-">>> variance([D(\"27.5\"), D(\"30.25\"), D(\"30.25\"), D(\"34.5\"), D(\"41.75\")])\n"
+">>> variance([D(\"27.5\"), D(\"30.25\"), D(\"30.25\"), D(\"34.5\"), "
+"D(\"41.75\")])\n"
 "Decimal('31.01875')\n"
 "\n"
 ">>> from fractions import Fraction as F\n"
@@ -998,15 +1000,15 @@ msgstr ""
 
 #: ../../library/statistics.rst:653
 msgid ""
-"If you somehow know the actual population mean μ you should pass it to the "
-":func:`pvariance` function as the *mu* parameter to get the variance of a "
+"If you somehow know the actual population mean μ you should pass it to the :"
+"func:`pvariance` function as the *mu* parameter to get the variance of a "
 "sample."
 msgstr ""
 
 #: ../../library/statistics.rst:659
 msgid ""
-"Divide *data* into *n* continuous intervals with equal probability. Returns a"
-" list of ``n - 1`` cut points separating the intervals."
+"Divide *data* into *n* continuous intervals with equal probability. Returns "
+"a list of ``n - 1`` cut points separating the intervals."
 msgstr ""
 
 #: ../../library/statistics.rst:662
@@ -1052,8 +1054,8 @@ msgstr ""
 msgid ""
 "Setting the *method* to \"inclusive\" is used for describing population data "
 "or for samples that are known to include the most extreme values from the "
-"population.  The minimum value in *data* is treated as the 0th percentile and"
-" the maximum value is treated as the 100th percentile. The portion of the "
+"population.  The minimum value in *data* is treated as the 0th percentile "
+"and the maximum value is treated as the 100th percentile. The portion of the "
 "population falling below the *i-th* of *m* sorted data points is computed as "
 "``(i - 1) / (m - 1)``.  Given 11 sample values, the method sorts them and "
 "assigns the following percentiles: 0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, "
@@ -1087,8 +1089,8 @@ msgstr ""
 
 #: ../../library/statistics.rst:719
 msgid ""
-"Both inputs must be of the same length (no less than two), otherwise "
-":exc:`StatisticsError` is raised."
+"Both inputs must be of the same length (no less than two), otherwise :exc:"
+"`StatisticsError` is raised."
 msgstr ""
 
 #: ../../library/statistics.rst:724
@@ -1106,10 +1108,10 @@ msgstr ""
 
 #: ../../library/statistics.rst:740
 msgid ""
-"Return the `Pearson's correlation coefficient "
-"<https://en.wikipedia.org/wiki/Pearson_correlation_coefficient>`_ for two "
-"sequence inputs. Pearson's correlation coefficient *r* takes values between "
-"-1 and +1. It measures the strength and direction of a linear relationship."
+"Return the `Pearson's correlation coefficient <https://en.wikipedia.org/wiki/"
+"Pearson_correlation_coefficient>`_ for two sequence inputs. Pearson's "
+"correlation coefficient *r* takes values between -1 and +1. It measures the "
+"strength and direction of a linear relationship."
 msgstr ""
 
 #: ../../library/statistics.rst:746
@@ -1130,21 +1132,23 @@ msgstr ""
 
 #: ../../library/statistics.rst:756
 msgid ""
-"Both inputs must be of the same length (no less than two), and need not to be"
-" constant, otherwise :exc:`StatisticsError` is raised."
+"Both inputs must be of the same length (no less than two), and need not to "
+"be constant, otherwise :exc:`StatisticsError` is raised."
 msgstr ""
 
 #: ../../library/statistics.rst:759
 msgid ""
-"Example with `Kepler's laws of planetary motion "
-"<https://en.wikipedia.org/wiki/Kepler's_laws_of_planetary_motion>`_:"
+"Example with `Kepler's laws of planetary motion <https://en.wikipedia.org/"
+"wiki/Kepler's_laws_of_planetary_motion>`_:"
 msgstr ""
 
 #: ../../library/statistics.rst:762
 msgid ""
 ">>> # Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and  Neptune\n"
-">>> orbital_period = [88, 225, 365, 687, 4331, 10_756, 30_687, 60_190]    # days\n"
-">>> dist_from_sun = [58, 108, 150, 228, 778, 1_400, 2_900, 4_500] # million km\n"
+">>> orbital_period = [88, 225, 365, 687, 4331, 10_756, 30_687, 60_190]    # "
+"days\n"
+">>> dist_from_sun = [58, 108, 150, 228, 778, 1_400, 2_900, 4_500] # million "
+"km\n"
 "\n"
 ">>> # Show that a perfect monotonic relationship exists\n"
 ">>> correlation(orbital_period, dist_from_sun, method='ranked')\n"
@@ -1169,11 +1173,11 @@ msgstr ""
 
 #: ../../library/statistics.rst:791
 msgid ""
-"Return the slope and intercept of `simple linear regression "
-"<https://en.wikipedia.org/wiki/Simple_linear_regression>`_ parameters "
-"estimated using ordinary least squares. Simple linear regression describes "
-"the relationship between an independent variable *x* and a dependent variable"
-" *y* in terms of this linear function:"
+"Return the slope and intercept of `simple linear regression <https://en."
+"wikipedia.org/wiki/Simple_linear_regression>`_ parameters estimated using "
+"ordinary least squares. Simple linear regression describes the relationship "
+"between an independent variable *x* and a dependent variable *y* in terms of "
+"this linear function:"
 msgstr ""
 
 #: ../../library/statistics.rst:797
@@ -1191,16 +1195,16 @@ msgstr ""
 #: ../../library/statistics.rst:805
 msgid ""
 "Both inputs must be sequences of the same length (no less than two), and the "
-"independent variable *x* cannot be constant; otherwise a "
-":exc:`StatisticsError` is raised."
+"independent variable *x* cannot be constant; otherwise a :exc:"
+"`StatisticsError` is raised."
 msgstr ""
 
 #: ../../library/statistics.rst:809
 msgid ""
 "For example, we can use the `release dates of the Monty Python films "
 "<https://en.wikipedia.org/wiki/Monty_Python#Films>`_ to predict the "
-"cumulative number of Monty Python films that would have been produced by 2019"
-" assuming that they had kept the pace."
+"cumulative number of Monty Python films that would have been produced by "
+"2019 assuming that they had kept the pace."
 msgstr ""
 
 #: ../../library/statistics.rst:815
@@ -1233,7 +1237,8 @@ msgstr ""
 
 #: ../../library/statistics.rst:835
 msgid ""
-">>> model = linear_regression(period_squared, dist_cubed, proportional=True)\n"
+">>> model = linear_regression(period_squared, dist_cubed, "
+"proportional=True)\n"
 ">>> slope = model.slope\n"
 "\n"
 ">>> # Dwarf planets:   Pluto,  Eris,    Makemake, Haumea, Ceres\n"
@@ -1269,17 +1274,16 @@ msgstr ""
 #: ../../library/statistics.rst:867
 msgid ""
 ":class:`NormalDist` is a tool for creating and manipulating normal "
-"distributions of a `random variable "
-"<http://www.stat.yale.edu/Courses/1997-98/101/ranvar.htm>`_.  It is a class "
-"that treats the mean and standard deviation of data measurements as a single "
-"entity."
+"distributions of a `random variable <http://www.stat.yale.edu/"
+"Courses/1997-98/101/ranvar.htm>`_.  It is a class that treats the mean and "
+"standard deviation of data measurements as a single entity."
 msgstr ""
 
 #: ../../library/statistics.rst:873
 msgid ""
-"Normal distributions arise from the `Central Limit Theorem "
-"<https://en.wikipedia.org/wiki/Central_limit_theorem>`_ and have a wide range"
-" of applications in statistics."
+"Normal distributions arise from the `Central Limit Theorem <https://en."
+"wikipedia.org/wiki/Central_limit_theorem>`_ and have a wide range of "
+"applications in statistics."
 msgstr ""
 
 #: ../../library/statistics.rst:879
@@ -1295,34 +1299,33 @@ msgstr ""
 
 #: ../../library/statistics.rst:888
 msgid ""
-"A read-only property for the `arithmetic mean "
-"<https://en.wikipedia.org/wiki/Arithmetic_mean>`_ of a normal distribution."
+"A read-only property for the `arithmetic mean <https://en.wikipedia.org/wiki/"
+"Arithmetic_mean>`_ of a normal distribution."
 msgstr ""
 
 #: ../../library/statistics.rst:894
 msgid ""
-"A read-only property for the `median <https://en.wikipedia.org/wiki/Median>`_"
-" of a normal distribution."
+"A read-only property for the `median <https://en.wikipedia.org/wiki/"
+"Median>`_ of a normal distribution."
 msgstr ""
 
 #: ../../library/statistics.rst:900
 msgid ""
-"A read-only property for the `mode "
-"<https://en.wikipedia.org/wiki/Mode_(statistics)>`_ of a normal distribution."
+"A read-only property for the `mode <https://en.wikipedia.org/wiki/"
+"Mode_(statistics)>`_ of a normal distribution."
 msgstr ""
 
 #: ../../library/statistics.rst:906
 msgid ""
-"A read-only property for the `standard deviation "
-"<https://en.wikipedia.org/wiki/Standard_deviation>`_ of a normal "
-"distribution."
+"A read-only property for the `standard deviation <https://en.wikipedia.org/"
+"wiki/Standard_deviation>`_ of a normal distribution."
 msgstr ""
 
 #: ../../library/statistics.rst:912
 msgid ""
-"A read-only property for the `variance "
-"<https://en.wikipedia.org/wiki/Variance>`_ of a normal distribution. Equal to"
-" the square of the standard deviation."
+"A read-only property for the `variance <https://en.wikipedia.org/wiki/"
+"Variance>`_ of a normal distribution. Equal to the square of the standard "
+"deviation."
 msgstr ""
 
 #: ../../library/statistics.rst:918
@@ -1334,15 +1337,16 @@ msgstr ""
 #: ../../library/statistics.rst:921
 msgid ""
 "The *data* can be any :term:`iterable` and should consist of values that can "
-"be converted to type :class:`float`.  If *data* does not contain at least two"
-" elements, raises :exc:`StatisticsError` because it takes at least one point "
-"to estimate a central value and at least two points to estimate dispersion."
+"be converted to type :class:`float`.  If *data* does not contain at least "
+"two elements, raises :exc:`StatisticsError` because it takes at least one "
+"point to estimate a central value and at least two points to estimate "
+"dispersion."
 msgstr ""
 
 #: ../../library/statistics.rst:929
 msgid ""
-"Generates *n* random samples for a given mean and standard deviation. Returns"
-" a :class:`list` of :class:`float` values."
+"Generates *n* random samples for a given mean and standard deviation. "
+"Returns a :class:`list` of :class:`float` values."
 msgstr ""
 
 #: ../../library/statistics.rst:932
@@ -1354,17 +1358,16 @@ msgstr ""
 
 #: ../../library/statistics.rst:938
 msgid ""
-"Switched to a faster algorithm.  To reproduce samples from previous versions,"
-" use :func:`random.seed` and :func:`random.gauss`."
+"Switched to a faster algorithm.  To reproduce samples from previous "
+"versions, use :func:`random.seed` and :func:`random.gauss`."
 msgstr ""
 
 #: ../../library/statistics.rst:943
 msgid ""
-"Using a `probability density function (pdf) "
-"<https://en.wikipedia.org/wiki/Probability_density_function>`_, compute the "
-"relative likelihood that a random variable *X* will be near the given value "
-"*x*.  Mathematically, it is the limit of the ratio ``P(x <= X < x+dx) / dx`` "
-"as *dx* approaches zero."
+"Using a `probability density function (pdf) <https://en.wikipedia.org/wiki/"
+"Probability_density_function>`_, compute the relative likelihood that a "
+"random variable *X* will be near the given value *x*.  Mathematically, it is "
+"the limit of the ratio ``P(x <= X < x+dx) / dx`` as *dx* approaches zero."
 msgstr ""
 
 #: ../../library/statistics.rst:949
@@ -1377,20 +1380,19 @@ msgstr ""
 
 #: ../../library/statistics.rst:956
 msgid ""
-"Using a `cumulative distribution function (cdf) "
-"<https://en.wikipedia.org/wiki/Cumulative_distribution_function>`_, compute "
-"the probability that a random variable *X* will be less than or equal to *x*."
-"  Mathematically, it is written ``P(X <= x)``."
+"Using a `cumulative distribution function (cdf) <https://en.wikipedia.org/"
+"wiki/Cumulative_distribution_function>`_, compute the probability that a "
+"random variable *X* will be less than or equal to *x*.  Mathematically, it "
+"is written ``P(X <= x)``."
 msgstr ""
 
 #: ../../library/statistics.rst:963
 msgid ""
 "Compute the inverse cumulative distribution function, also known as the "
-"`quantile function <https://en.wikipedia.org/wiki/Quantile_function>`_ or the"
-" `percent-point "
-"<https://web.archive.org/web/20190203145224/https://www.statisticshowto.datasciencecentral.com/inverse-"
-"distribution-function/>`_ function.  Mathematically, it is written ``x : P(X "
-"<= x) = p``."
+"`quantile function <https://en.wikipedia.org/wiki/Quantile_function>`_ or "
+"the `percent-point <https://web.archive.org/web/20190203145224/https://www."
+"statisticshowto.datasciencecentral.com/inverse-distribution-function/>`_ "
+"function.  Mathematically, it is written ``x : P(X <= x) = p``."
 msgstr ""
 
 #: ../../library/statistics.rst:969
@@ -1415,8 +1417,8 @@ msgstr ""
 
 #: ../../library/statistics.rst:986
 msgid ""
-"Set *n* to 4 for quartiles (the default).  Set *n* to 10 for deciles. Set *n*"
-" to 100 for percentiles which gives the 99 cuts points that separate the "
+"Set *n* to 4 for quartiles (the default).  Set *n* to 10 for deciles. Set "
+"*n* to 100 for percentiles which gives the 99 cuts points that separate the "
 "normal distribution into 100 equal sized groups."
 msgstr ""
 
@@ -1424,8 +1426,8 @@ msgstr ""
 msgid ""
 "Compute the `Standard Score <https://www.statisticshowto.com/probability-and-"
 "statistics/z-score/>`_ describing *x* in terms of the number of standard "
-"deviations above or below the mean of the normal distribution: ``(x - mean) /"
-" stdev``."
+"deviations above or below the mean of the normal distribution: ``(x - "
+"mean) / stdev``."
 msgstr ""
 
 #: ../../library/statistics.rst:1000
@@ -1452,9 +1454,9 @@ msgstr ""
 msgid ""
 "Since normal distributions arise from additive effects of independent "
 "variables, it is possible to `add and subtract two independent normally "
-"distributed random variables "
-"<https://en.wikipedia.org/wiki/Sum_of_normally_distributed_random_variables>`_"
-" represented as instances of :class:`NormalDist`.  For example:"
+"distributed random variables <https://en.wikipedia.org/wiki/"
+"Sum_of_normally_distributed_random_variables>`_ represented as instances of :"
+"class:`NormalDist`.  For example:"
 msgstr ""
 
 #: ../../library/statistics.rst:1019
@@ -1482,11 +1484,11 @@ msgstr ""
 
 #: ../../library/statistics.rst:1041
 msgid ""
-"For example, given `historical data for SAT exams "
-"<https://nces.ed.gov/programs/digest/d17/tables/dt17_226.40.asp>`_ showing "
-"that scores are normally distributed with a mean of 1060 and a standard "
-"deviation of 195, determine the percentage of students with test scores "
-"between 1100 and 1200, after rounding to the nearest whole number:"
+"For example, given `historical data for SAT exams <https://nces.ed.gov/"
+"programs/digest/d17/tables/dt17_226.40.asp>`_ showing that scores are "
+"normally distributed with a mean of 1060 and a standard deviation of 195, "
+"determine the percentage of students with test scores between 1100 and 1200, "
+"after rounding to the nearest whole number:"
 msgstr ""
 
 #: ../../library/statistics.rst:1047
@@ -1548,8 +1550,8 @@ msgstr ""
 
 #: ../../library/statistics.rst:1092
 msgid ""
-"For example, an open source conference has 750 attendees and two rooms with a"
-" 500 person capacity.  There is a talk about Python and another about Ruby. "
+"For example, an open source conference has 750 attendees and two rooms with "
+"a 500 person capacity.  There is a talk about Python and another about Ruby. "
 "In previous conferences, 65% of the attendees preferred to listen to Python "
 "talks.  Assuming the population preferences haven't changed, what is the "
 "probability that the Python room will stay within its capacity limits?"
@@ -1589,17 +1591,17 @@ msgstr ""
 
 #: ../../library/statistics.rst:1127
 msgid ""
-"Wikipedia has a `nice example of a Naive Bayesian Classifier "
-"<https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Person_classification>`_."
-" The challenge is to predict a person's gender from measurements of normally "
+"Wikipedia has a `nice example of a Naive Bayesian Classifier <https://en."
+"wikipedia.org/wiki/Naive_Bayes_classifier#Person_classification>`_. The "
+"challenge is to predict a person's gender from measurements of normally "
 "distributed features including height, weight, and foot size."
 msgstr ""
 
 #: ../../library/statistics.rst:1132
 msgid ""
 "We're given a training dataset with measurements for eight people.  The "
-"measurements are assumed to be normally distributed, so we summarize the data"
-" with :class:`NormalDist`:"
+"measurements are assumed to be normally distributed, so we summarize the "
+"data with :class:`NormalDist`:"
 msgstr ""
 
 #: ../../library/statistics.rst:1136
@@ -1627,10 +1629,10 @@ msgstr ""
 
 #: ../../library/statistics.rst:1154
 msgid ""
-"Starting with a 50% `prior probability "
-"<https://en.wikipedia.org/wiki/Prior_probability>`_ of being male or female, "
-"we compute the posterior as the prior times the product of likelihoods for "
-"the feature measurements given the gender:"
+"Starting with a 50% `prior probability <https://en.wikipedia.org/wiki/"
+"Prior_probability>`_ of being male or female, we compute the posterior as "
+"the prior times the product of likelihoods for the feature measurements "
+"given the gender:"
 msgstr ""
 
 #: ../../library/statistics.rst:1159
@@ -1647,8 +1649,8 @@ msgstr ""
 #: ../../library/statistics.rst:1169
 msgid ""
 "The final prediction goes to the largest posterior. This is known as the "
-"`maximum a posteriori "
-"<https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation>`_ or MAP:"
+"`maximum a posteriori <https://en.wikipedia.org/wiki/"
+"Maximum_a_posteriori_estimation>`_ or MAP:"
 msgstr ""
 
 #: ../../library/statistics.rst:1173

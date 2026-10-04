@@ -64,14 +64,14 @@ msgstr ""
 
 #: ../../library/winreg.rst:46
 msgid ""
-"Establishes a connection to a predefined registry handle on another computer,"
-" and returns a :ref:`handle object <handle-object>`."
+"Establishes a connection to a predefined registry handle on another "
+"computer, and returns a :ref:`handle object <handle-object>`."
 msgstr ""
 
 #: ../../library/winreg.rst:49
 msgid ""
-"*computer_name* is the name of the remote computer, of the form "
-"``r\"\\\\computername\"``.  If ``None``, the local computer is used."
+"*computer_name* is the name of the remote computer, of the form ``r\"\\"
+"\\computername\"``.  If ``None``, the local computer is used."
 msgstr ""
 
 #: ../../library/winreg.rst:52
@@ -81,8 +81,8 @@ msgstr ""
 #: ../../library/winreg.rst:54 ../../library/winreg.rst:78
 #: ../../library/winreg.rst:110
 msgid ""
-"The return value is the handle of the opened key. If the function fails, an "
-":exc:`OSError` exception is raised."
+"The return value is the handle of the opened key. If the function fails, an :"
+"exc:`OSError` exception is raised."
 msgstr ""
 
 #: ../../library/winreg.rst:57
@@ -115,8 +115,8 @@ msgstr ""
 #: ../../library/winreg.rst:510 ../../library/winreg.rst:527
 #: ../../library/winreg.rst:542
 msgid ""
-"*key* is an already open key, or one of the predefined :ref:`HKEY_* constants"
-" <hkey-constants>`."
+"*key* is an already open key, or one of the predefined :ref:`HKEY_* "
+"constants <hkey-constants>`."
 msgstr ""
 
 #: ../../library/winreg.rst:71 ../../library/winreg.rst:97
@@ -154,8 +154,8 @@ msgstr ""
 #: ../../library/winreg.rst:101
 msgid ""
 "*access* is an integer that specifies an access mask that describes the "
-"desired security access for the key.  Default is :const:`KEY_WRITE`.  See "
-":ref:`Access Rights <access-rights>` for other allowed values."
+"desired security access for the key.  Default is :const:`KEY_WRITE`.  See :"
+"ref:`Access Rights <access-rights>` for other allowed values."
 msgstr ""
 
 #: ../../library/winreg.rst:125 ../../library/winreg.rst:146
@@ -195,8 +195,8 @@ msgstr ""
 #: ../../library/winreg.rst:157
 msgid ""
 "*access* is an integer that specifies an access mask that describes the "
-"desired security access for the key.  Default is :const:`KEY_WOW64_64KEY`. On"
-" 32-bit Windows, the WOW64 constants are ignored. See :ref:`Access Rights "
+"desired security access for the key.  Default is :const:`KEY_WOW64_64KEY`. "
+"On 32-bit Windows, the WOW64 constants are ignored. See :ref:`Access Rights "
 "<access-rights>` for other allowed values."
 msgstr ""
 
@@ -307,8 +307,8 @@ msgstr ""
 
 #: ../../library/winreg.rst:246
 msgid ""
-"An object that holds the value data, and whose type depends on the underlying"
-" registry type"
+"An object that holds the value data, and whose type depends on the "
+"underlying registry type"
 msgstr ""
 
 #: ../../library/winreg.rst:250 ../../library/winreg.rst:370
@@ -317,8 +317,8 @@ msgstr ""
 
 #: ../../library/winreg.rst:250
 msgid ""
-"An integer that identifies the type of the value data (see table in docs for "
-":meth:`SetValueEx`)"
+"An integer that identifies the type of the value data (see table in docs "
+"for :meth:`SetValueEx`)"
 msgstr ""
 
 #: ../../library/winreg.rst:255
@@ -329,8 +329,8 @@ msgstr ""
 
 #: ../../library/winreg.rst:266
 msgid ""
-"Expands environment variable placeholders ``%NAME%`` in strings like "
-":const:`REG_EXPAND_SZ`::"
+"Expands environment variable placeholders ``%NAME%`` in strings like :const:"
+"`REG_EXPAND_SZ`::"
 msgstr ""
 
 #: ../../library/winreg.rst:269
@@ -341,8 +341,8 @@ msgstr ""
 
 #: ../../library/winreg.rst:272
 msgid ""
-"Raises an :ref:`auditing event <auditing>` "
-"``winreg.ExpandEnvironmentStrings`` with argument ``str``."
+"Raises an :ref:`auditing event <auditing>` ``winreg."
+"ExpandEnvironmentStrings`` with argument ``str``."
 msgstr ""
 
 #: ../../library/winreg.rst:277
@@ -352,12 +352,12 @@ msgstr ""
 #: ../../library/winreg.rst:282
 msgid ""
 "It is not necessary to call :func:`FlushKey` to change a key. Registry "
-"changes are flushed to disk by the registry using its lazy flusher.  Registry"
-" changes are also flushed to disk at system shutdown.  Unlike "
-":func:`CloseKey`, the :func:`FlushKey` method returns only when all the data "
-"has been written to the registry. An application should only call "
-":func:`FlushKey` if it requires absolute certainty that registry changes are "
-"on disk."
+"changes are flushed to disk by the registry using its lazy flusher.  "
+"Registry changes are also flushed to disk at system shutdown.  Unlike :func:"
+"`CloseKey`, the :func:`FlushKey` method returns only when all the data has "
+"been written to the registry. An application should only call :func:"
+"`FlushKey` if it requires absolute certainty that registry changes are on "
+"disk."
 msgstr ""
 
 #: ../../library/winreg.rst:291
@@ -374,8 +374,8 @@ msgstr ""
 
 #: ../../library/winreg.rst:300
 msgid ""
-"*key* is a handle returned by :func:`ConnectRegistry` or one of the constants"
-" :const:`HKEY_USERS` or :const:`HKEY_LOCAL_MACHINE`."
+"*key* is a handle returned by :func:`ConnectRegistry` or one of the "
+"constants :const:`HKEY_USERS` or :const:`HKEY_LOCAL_MACHINE`."
 msgstr ""
 
 #: ../../library/winreg.rst:303
@@ -391,11 +391,10 @@ msgstr ""
 
 #: ../../library/winreg.rst:309
 msgid ""
-"A call to :func:`LoadKey` fails if the calling process does not have the "
-":c:data:`!SE_RESTORE_PRIVILEGE` privilege.  Note that privileges are "
-"different from permissions -- see the `RegLoadKey documentation "
-"<https://msdn.microsoft.com/en-us/library/ms724889%28v=VS.85%29.aspx>`__ for "
-"more details."
+"A call to :func:`LoadKey` fails if the calling process does not have the :c:"
+"data:`!SE_RESTORE_PRIVILEGE` privilege.  Note that privileges are different "
+"from permissions -- see the `RegLoadKey documentation <https://msdn."
+"microsoft.com/en-us/library/ms724889%28v=VS.85%29.aspx>`__ for more details."
 msgstr ""
 
 #: ../../library/winreg.rst:315
@@ -427,8 +426,8 @@ msgstr ""
 #: ../../library/winreg.rst:333
 msgid ""
 "*access* is an integer that specifies an access mask that describes the "
-"desired security access for the key.  Default is :const:`KEY_READ`.  See "
-":ref:`Access Rights <access-rights>` for other allowed values."
+"desired security access for the key.  Default is :const:`KEY_READ`.  See :"
+"ref:`Access Rights <access-rights>` for other allowed values."
 msgstr ""
 
 #: ../../library/winreg.rst:337
@@ -481,16 +480,16 @@ msgstr ""
 msgid ""
 "*sub_key* is a string that holds the name of the subkey with which the value "
 "is associated.  If this parameter is ``None`` or empty, the function "
-"retrieves the value set by the :func:`SetValue` method for the key identified"
-" by *key*."
+"retrieves the value set by the :func:`SetValue` method for the key "
+"identified by *key*."
 msgstr ""
 
 #: ../../library/winreg.rst:389
 msgid ""
 "Values in the registry have name, type, and data components. This method "
 "retrieves the data for a key's first value that has a ``NULL`` name. But the "
-"underlying API call doesn't return the type, so always use "
-":func:`QueryValueEx` if possible."
+"underlying API call doesn't return the type, so always use :func:"
+"`QueryValueEx` if possible."
 msgstr ""
 
 #: ../../library/winreg.rst:394 ../../library/winreg.rst:419
@@ -519,8 +518,8 @@ msgstr ""
 
 #: ../../library/winreg.rst:414
 msgid ""
-"An integer giving the registry type for this value (see table in docs for "
-":meth:`SetValueEx`)"
+"An integer giving the registry type for this value (see table in docs for :"
+"meth:`SetValueEx`)"
 msgstr ""
 
 #: ../../library/winreg.rst:424
@@ -541,8 +540,8 @@ msgid ""
 "*file_name* is relative to the remote computer. The caller of this method "
 "must possess the **SeBackupPrivilege** security privilege.  Note that "
 "privileges are different than permissions -- see the `Conflicts Between User "
-"Rights and Permissions documentation <https://msdn.microsoft.com/en-"
-"us/library/ms724878%28v=VS.85%29.aspx>`__ for more details."
+"Rights and Permissions documentation <https://msdn.microsoft.com/en-us/"
+"library/ms724878%28v=VS.85%29.aspx>`__ for more details."
 msgstr ""
 
 #: ../../library/winreg.rst:442
@@ -567,9 +566,9 @@ msgstr ""
 
 #: ../../library/winreg.rst:456
 msgid ""
-"*type* is an integer that specifies the type of the data. Currently this must"
-" be :const:`REG_SZ`, meaning only strings are supported.  Use the "
-":func:`SetValueEx` function for support for other data types."
+"*type* is an integer that specifies the type of the data. Currently this "
+"must be :const:`REG_SZ`, meaning only strings are supported.  Use the :func:"
+"`SetValueEx` function for support for other data types."
 msgstr ""
 
 #: ../../library/winreg.rst:460 ../../library/winreg.rst:490
@@ -591,14 +590,14 @@ msgstr ""
 
 #: ../../library/winreg.rst:469
 msgid ""
-"The key identified by the *key* parameter must have been opened with "
-":const:`KEY_SET_VALUE` access."
+"The key identified by the *key* parameter must have been opened with :const:"
+"`KEY_SET_VALUE` access."
 msgstr ""
 
 #: ../../library/winreg.rst:472 ../../library/winreg.rst:502
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``winreg.SetValue`` with arguments"
-" ``key``, ``sub_key``, ``type``, ``value``."
+"Raises an :ref:`auditing event <auditing>` ``winreg.SetValue`` with "
+"arguments ``key``, ``sub_key``, ``type``, ``value``."
 msgstr ""
 
 #: ../../library/winreg.rst:477
@@ -624,8 +623,8 @@ msgstr ""
 #: ../../library/winreg.rst:492
 msgid ""
 "This method can also set additional value and type information for the "
-"specified key.  The key identified by the key parameter must have been opened"
-" with :const:`KEY_SET_VALUE` access."
+"specified key.  The key identified by the key parameter must have been "
+"opened with :const:`KEY_SET_VALUE` access."
 msgstr ""
 
 #: ../../library/winreg.rst:496
@@ -683,8 +682,8 @@ msgstr ""
 
 #: ../../library/winreg.rst:550
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``winreg.QueryReflectionKey`` with"
-" argument ``key``."
+"Raises an :ref:`auditing event <auditing>` ``winreg.QueryReflectionKey`` "
+"with argument ``key``."
 msgstr ""
 
 #: ../../library/winreg.rst:556
@@ -732,14 +731,14 @@ msgstr ""
 #: ../../library/winreg.rst:593
 msgid ""
 "Registry entries subordinate to this key allow you to access performance "
-"data. The data is not actually stored in the registry; the registry functions"
-" cause the system to collect the data from its source."
+"data. The data is not actually stored in the registry; the registry "
+"functions cause the system to collect the data from its source."
 msgstr ""
 
 #: ../../library/winreg.rst:601
 msgid ""
-"Contains information about the current hardware profile of the local computer"
-" system."
+"Contains information about the current hardware profile of the local "
+"computer system."
 msgstr ""
 
 #: ../../library/winreg.rst:606
@@ -752,28 +751,28 @@ msgstr ""
 
 #: ../../library/winreg.rst:614
 msgid ""
-"For more information, see `Registry Key Security and Access "
-"<https://msdn.microsoft.com/en-us/library/ms724878%28v=VS.85%29.aspx>`__."
+"For more information, see `Registry Key Security and Access <https://msdn."
+"microsoft.com/en-us/library/ms724878%28v=VS.85%29.aspx>`__."
 msgstr ""
 
 #: ../../library/winreg.rst:619
 msgid ""
-"Combines the STANDARD_RIGHTS_REQUIRED, :const:`KEY_QUERY_VALUE`, "
-":const:`KEY_SET_VALUE`, :const:`KEY_CREATE_SUB_KEY`, "
-":const:`KEY_ENUMERATE_SUB_KEYS`, :const:`KEY_NOTIFY`, and "
-":const:`KEY_CREATE_LINK` access rights."
+"Combines the STANDARD_RIGHTS_REQUIRED, :const:`KEY_QUERY_VALUE`, :const:"
+"`KEY_SET_VALUE`, :const:`KEY_CREATE_SUB_KEY`, :const:"
+"`KEY_ENUMERATE_SUB_KEYS`, :const:`KEY_NOTIFY`, and :const:`KEY_CREATE_LINK` "
+"access rights."
 msgstr ""
 
 #: ../../library/winreg.rst:626
 msgid ""
-"Combines the STANDARD_RIGHTS_WRITE, :const:`KEY_SET_VALUE`, and "
-":const:`KEY_CREATE_SUB_KEY` access rights."
+"Combines the STANDARD_RIGHTS_WRITE, :const:`KEY_SET_VALUE`, and :const:"
+"`KEY_CREATE_SUB_KEY` access rights."
 msgstr ""
 
 #: ../../library/winreg.rst:631
 msgid ""
-"Combines the STANDARD_RIGHTS_READ, :const:`KEY_QUERY_VALUE`, "
-":const:`KEY_ENUMERATE_SUB_KEYS`, and :const:`KEY_NOTIFY` values."
+"Combines the STANDARD_RIGHTS_READ, :const:`KEY_QUERY_VALUE`, :const:"
+"`KEY_ENUMERATE_SUB_KEYS`, and :const:`KEY_NOTIFY` values."
 msgstr ""
 
 #: ../../library/winreg.rst:636
@@ -798,8 +797,8 @@ msgstr ""
 
 #: ../../library/winreg.rst:656
 msgid ""
-"Required to request change notifications for a registry key or for subkeys of"
-" a registry key."
+"Required to request change notifications for a registry key or for subkeys "
+"of a registry key."
 msgstr ""
 
 #: ../../library/winreg.rst:661
@@ -812,8 +811,8 @@ msgstr ""
 
 #: ../../library/winreg.rst:669
 msgid ""
-"For more information, see `Accessing an Alternate Registry View "
-"<https://msdn.microsoft.com/en-us/library/aa384129(v=VS.85).aspx>`__."
+"For more information, see `Accessing an Alternate Registry View <https://"
+"msdn.microsoft.com/en-us/library/aa384129(v=VS.85).aspx>`__."
 msgstr ""
 
 #: ../../library/winreg.rst:674
@@ -834,8 +833,8 @@ msgstr ""
 
 #: ../../library/winreg.rst:687
 msgid ""
-"For more information, see `Registry Value Types "
-"<https://msdn.microsoft.com/en-us/library/ms724884%28v=VS.85%29.aspx>`__."
+"For more information, see `Registry Value Types <https://msdn.microsoft.com/"
+"en-us/library/ms724884%28v=VS.85%29.aspx>`__."
 msgstr ""
 
 #: ../../library/winreg.rst:692
@@ -907,8 +906,8 @@ msgstr ""
 #: ../../library/winreg.rst:758
 msgid ""
 "This object wraps a Windows HKEY object, automatically closing it when the "
-"object is destroyed.  To guarantee cleanup, you can call either the "
-":meth:`~PyHKEY.Close` method on the object, or the :func:`CloseKey` function."
+"object is destroyed.  To guarantee cleanup, you can call either the :meth:"
+"`~PyHKEY.Close` method on the object, or the :func:`CloseKey` function."
 msgstr ""
 
 #: ../../library/winreg.rst:762
@@ -940,16 +939,16 @@ msgstr ""
 
 #: ../../library/winreg.rst:775
 msgid ""
-"The object also support equality comparison semantics, so handle objects will"
-" compare equal if they both reference the same underlying Windows handle "
+"The object also support equality comparison semantics, so handle objects "
+"will compare equal if they both reference the same underlying Windows handle "
 "value. Closed handle objects (those with a handle value of zero) always "
 "compare equal."
 msgstr ""
 
 #: ../../library/winreg.rst:779
 msgid ""
-"Handle objects can be converted to an integer (e.g., using the built-in "
-":func:`int` function), in which case the underlying Windows handle value is "
+"Handle objects can be converted to an integer (e.g., using the built-in :"
+"func:`int` function), in which case the underlying Windows handle value is "
 "returned.  You can also use the :meth:`~PyHKEY.Detach` method to return the "
 "integer handle, and also disconnect the Windows handle from the handle "
 "object."
@@ -989,9 +988,9 @@ msgstr ""
 
 #: ../../library/winreg.rst:810
 msgid ""
-"The HKEY object implements :meth:`~object.__enter__` and "
-":meth:`~object.__exit__` and thus supports the context protocol for the "
-":keyword:`with` statement::"
+"The HKEY object implements :meth:`~object.__enter__` and :meth:`~object."
+"__exit__` and thus supports the context protocol for the :keyword:`with` "
+"statement::"
 msgstr ""
 
 #: ../../library/winreg.rst:814

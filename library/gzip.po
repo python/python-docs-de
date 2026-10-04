@@ -26,8 +26,8 @@ msgstr ""
 
 #: ../../library/gzip.rst:11
 msgid ""
-"This module provides a simple interface to compress and decompress files just"
-" like the GNU programs :program:`gzip` and :program:`gunzip` would."
+"This module provides a simple interface to compress and decompress files "
+"just like the GNU programs :program:`gzip` and :program:`gunzip` would."
 msgstr ""
 
 #: ../../includes/optional-module.rst:1
@@ -38,9 +38,9 @@ msgid ""
 "module-requirements`."
 msgstr ""
 "Dies ist ein :term:`optionales Modul <optional module>`. Falls es in deiner "
-"Kopie von CPython fehlt, suche in der Dokumentation deines Distributors (also"
-" demjenigen, der dir Python zur Verfügung gestellt hat). Falls du selbst der "
-"Distributor bist, siehe :ref:`optional-module-requirements`."
+"Kopie von CPython fehlt, suche in der Dokumentation deines Distributors "
+"(also demjenigen, der dir Python zur Verfügung gestellt hat). Falls du "
+"selbst der Distributor bist, siehe :ref:`optional-module-requirements`."
 
 #: ../../library/gzip.rst:16
 msgid "The data compression is provided by the :mod:`zlib` module."
@@ -48,18 +48,18 @@ msgstr ""
 
 #: ../../library/gzip.rst:18
 msgid ""
-"The :mod:`!gzip` module provides the :class:`GzipFile` class, as well as the "
-":func:`.open`, :func:`compress` and :func:`decompress` convenience functions."
-" The :class:`GzipFile` class reads and writes :program:`gzip`\\ -format "
-"files, automatically compressing or decompressing the data so that it looks "
-"like an ordinary :term:`file object`."
+"The :mod:`!gzip` module provides the :class:`GzipFile` class, as well as "
+"the :func:`.open`, :func:`compress` and :func:`decompress` convenience "
+"functions. The :class:`GzipFile` class reads and writes :program:`gzip`\\ -"
+"format files, automatically compressing or decompressing the data so that it "
+"looks like an ordinary :term:`file object`."
 msgstr ""
 
 #: ../../library/gzip.rst:24
 msgid ""
-"Note that additional file formats which can be decompressed by the "
-":program:`gzip` and :program:`gunzip` programs, such  as those produced by "
-":program:`compress` and :program:`pack`, are not supported by this module."
+"Note that additional file formats which can be decompressed by the :program:"
+"`gzip` and :program:`gunzip` programs, such  as those produced by :program:"
+"`compress` and :program:`pack`, are not supported by this module."
 msgstr ""
 
 #: ../../library/gzip.rst:28
@@ -74,8 +74,8 @@ msgstr ""
 
 #: ../../library/gzip.rst:36
 msgid ""
-"The *filename* argument can be an actual filename (a :class:`str` or "
-":class:`bytes` object), or an existing file object to read from or write to."
+"The *filename* argument can be an actual filename (a :class:`str` or :class:"
+"`bytes` object), or an existing file object to read from or write to."
 msgstr ""
 
 #: ../../library/gzip.rst:39
@@ -87,8 +87,8 @@ msgstr ""
 
 #: ../../library/gzip.rst:43
 msgid ""
-"The *compresslevel* argument is an integer from 0 to 9, as for the "
-":class:`GzipFile` constructor."
+"The *compresslevel* argument is an integer from 0 to 9, as for the :class:"
+"`GzipFile` constructor."
 msgstr ""
 
 #: ../../library/gzip.rst:46
@@ -100,8 +100,8 @@ msgstr ""
 
 #: ../../library/gzip.rst:50
 msgid ""
-"For text mode, a :class:`GzipFile` object is created, and wrapped in an "
-":class:`io.TextIOWrapper` instance with the specified encoding, error "
+"For text mode, a :class:`GzipFile` object is created, and wrapped in an :"
+"class:`io.TextIOWrapper` instance with the specified encoding, error "
 "handling behavior, and line ending(s)."
 msgstr ""
 
@@ -129,34 +129,34 @@ msgstr ""
 
 #: ../../library/gzip.rst:71
 msgid ""
-"An exception raised for invalid gzip files.  It inherits from :exc:`OSError`."
-" :exc:`EOFError` and :exc:`zlib.error` can also be raised for invalid gzip "
-"files."
+"An exception raised for invalid gzip files.  It inherits from :exc:"
+"`OSError`. :exc:`EOFError` and :exc:`zlib.error` can also be raised for "
+"invalid gzip files."
 msgstr ""
 
 #: ../../library/gzip.rst:79
 msgid ""
 "Constructor for the :class:`GzipFile` class, which simulates most of the "
-"methods of a :term:`file object`, with the exception of the "
-":meth:`~io.IOBase.truncate` method.  At least one of *fileobj* and *filename*"
-" must be given a non-trivial value."
+"methods of a :term:`file object`, with the exception of the :meth:`~io."
+"IOBase.truncate` method.  At least one of *fileobj* and *filename* must be "
+"given a non-trivial value."
 msgstr ""
 
 #: ../../library/gzip.rst:84
 msgid ""
-"The new class instance is based on *fileobj*, which can be a regular file, an"
-" :class:`io.BytesIO` object, or any other object which simulates a file.  It "
-"defaults to ``None``, in which case *filename* is opened to provide a file "
-"object."
+"The new class instance is based on *fileobj*, which can be a regular file, "
+"an :class:`io.BytesIO` object, or any other object which simulates a file.  "
+"It defaults to ``None``, in which case *filename* is opened to provide a "
+"file object."
 msgstr ""
 
 #: ../../library/gzip.rst:89
 msgid ""
 "When *fileobj* is not ``None``, the *filename* argument is only used to be "
 "included in the :program:`gzip` file header, which may include the original "
-"filename of the uncompressed file.  It defaults to the filename of *fileobj*,"
-" if discernible; otherwise, it defaults to the empty string, and in this case"
-" the original filename is not included in the header."
+"filename of the uncompressed file.  It defaults to the filename of "
+"*fileobj*, if discernible; otherwise, it defaults to the empty string, and "
+"in this case the original filename is not included in the header."
 msgstr ""
 
 #: ../../library/gzip.rst:95
@@ -171,23 +171,23 @@ msgstr ""
 
 #: ../../library/gzip.rst:101
 msgid ""
-"Note that the file is always opened in binary mode. To open a compressed file"
-" in text mode, use :func:`.open` (or wrap your :class:`GzipFile` with an "
-":class:`io.TextIOWrapper`)."
+"Note that the file is always opened in binary mode. To open a compressed "
+"file in text mode, use :func:`.open` (or wrap your :class:`GzipFile` with "
+"an :class:`io.TextIOWrapper`)."
 msgstr ""
 
 #: ../../library/gzip.rst:105
 msgid ""
 "The *compresslevel* argument is an integer from ``0`` to ``9`` controlling "
 "the level of compression; ``1`` is fastest and produces the least "
-"compression, and ``9`` is slowest and produces the most compression. ``0`` is"
-" no compression. The default is ``9``."
+"compression, and ``9`` is slowest and produces the most compression. ``0`` "
+"is no compression. The default is ``9``."
 msgstr ""
 
 #: ../../library/gzip.rst:110
 msgid ""
-"The optional *mtime* argument is the timestamp requested by gzip. The time is"
-" in Unix format, i.e., seconds since 00:00:00 UTC, January 1, 1970. Set "
+"The optional *mtime* argument is the timestamp requested by gzip. The time "
+"is in Unix format, i.e., seconds since 00:00:00 UTC, January 1, 1970. Set "
 "*mtime* to ``0`` to generate a compressed stream that does not depend on "
 "creation time. If *mtime* is omitted or ``None``, the current time is used; "
 "however, if the current time is outside the range 00:00:00 UTC, January 1, "
@@ -206,15 +206,15 @@ msgid ""
 "Calling a :class:`GzipFile` object's :meth:`!close` method does not close "
 "*fileobj*, since you might wish to append more material after the compressed "
 "data.  This also allows you to pass an :class:`io.BytesIO` object opened for "
-"writing as *fileobj*, and retrieve the resulting memory buffer using the "
-":class:`io.BytesIO` object's :meth:`~io.BytesIO.getvalue` method."
+"writing as *fileobj*, and retrieve the resulting memory buffer using the :"
+"class:`io.BytesIO` object's :meth:`~io.BytesIO.getvalue` method."
 msgstr ""
 
 #: ../../library/gzip.rst:127
 msgid ""
 ":class:`GzipFile` supports the :class:`io.BufferedIOBase` interface, "
-"including iteration and the :keyword:`with` statement.  Only the "
-":meth:`~io.IOBase.truncate` method isn't implemented."
+"including iteration and the :keyword:`with` statement.  Only the :meth:`~io."
+"IOBase.truncate` method isn't implemented."
 msgstr ""
 
 #: ../../library/gzip.rst:131
@@ -229,9 +229,9 @@ msgstr ""
 
 #: ../../library/gzip.rst:138
 msgid ""
-"While calling :meth:`peek` does not change the file position of the "
-":class:`GzipFile`, it may change the position of the underlying file object "
-"(e.g. if the :class:`GzipFile` was constructed with the *fileobj* parameter)."
+"While calling :meth:`peek` does not change the file position of the :class:"
+"`GzipFile`, it may change the position of the underlying file object (e.g. "
+"if the :class:`GzipFile` was constructed with the *fileobj* parameter)."
 msgstr ""
 
 #: ../../library/gzip.rst:147
@@ -297,8 +297,8 @@ msgstr ""
 #: ../../library/gzip.rst:203
 msgid ""
 "Compress the *data*, returning a :class:`bytes` object containing the "
-"compressed data.  *compresslevel* and *mtime* have the same meaning as in the"
-" :class:`GzipFile` constructor above, but *mtime* defaults to 0 for "
+"compressed data.  *compresslevel* and *mtime* have the same meaning as in "
+"the :class:`GzipFile` constructor above, but *mtime* defaults to 0 for "
 "reproducible output."
 msgstr ""
 
@@ -309,10 +309,10 @@ msgstr ""
 #: ../../library/gzip.rst:211
 msgid ""
 "Speed is improved by compressing all data at once instead of in a streamed "
-"fashion. Calls with *mtime* set to ``0`` are delegated to "
-":func:`zlib.compress` for better speed. In this situation the output may "
-"contain a gzip header \"OS\" byte value other than 255 \"unknown\" as "
-"supplied by the underlying zlib implementation."
+"fashion. Calls with *mtime* set to ``0`` are delegated to :func:`zlib."
+"compress` for better speed. In this situation the output may contain a gzip "
+"header \"OS\" byte value other than 255 \"unknown\" as supplied by the "
+"underlying zlib implementation."
 msgstr ""
 
 #: ../../library/gzip.rst:218

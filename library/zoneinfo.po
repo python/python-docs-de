@@ -27,10 +27,10 @@ msgstr ""
 #: ../../library/zoneinfo.rst:13
 msgid ""
 "The :mod:`!zoneinfo` module provides a concrete time zone implementation to "
-"support the IANA time zone database as originally specified in :pep:`615`. By"
-" default, :mod:`!zoneinfo` uses the system's time zone data if available; if "
-"no system time zone data is available, the library will fall back to using "
-"the first-party :pypi:`tzdata` package available on PyPI."
+"support the IANA time zone database as originally specified in :pep:`615`. "
+"By default, :mod:`!zoneinfo` uses the system's time zone data if available; "
+"if no system time zone data is available, the library will fall back to "
+"using the first-party :pypi:`tzdata` package available on PyPI."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:21
@@ -69,11 +69,11 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:34
 msgid ""
-":class:`ZoneInfo` is a concrete implementation of the "
-":class:`datetime.tzinfo` abstract base class, and is intended to be attached "
-"to ``tzinfo``, either via the constructor, the :meth:`datetime.replace "
-"<datetime.datetime.replace>` method or :meth:`datetime.astimezone "
-"<datetime.datetime.astimezone>`::"
+":class:`ZoneInfo` is a concrete implementation of the :class:`datetime."
+"tzinfo` abstract base class, and is intended to be attached to ``tzinfo``, "
+"either via the constructor, the :meth:`datetime.replace <datetime.datetime."
+"replace>` method or :meth:`datetime.astimezone <datetime.datetime."
+"astimezone>`::"
 msgstr ""
 
 #: ../../library/zoneinfo.rst:39
@@ -81,7 +81,8 @@ msgid ""
 ">>> from zoneinfo import ZoneInfo\n"
 ">>> import datetime as dt\n"
 "\n"
-">>> when = dt.datetime(2020, 10, 31, 12, tzinfo=ZoneInfo(\"America/Los_Angeles\"))\n"
+">>> when = dt.datetime(2020, 10, 31, 12, tzinfo=ZoneInfo(\"America/"
+"Los_Angeles\"))\n"
 ">>> print(when)\n"
 "2020-10-31 12:00:00-07:00\n"
 "\n"
@@ -91,8 +92,8 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:49
 msgid ""
-"Datetimes constructed in this way are compatible with datetime arithmetic and"
-" handle daylight saving time transitions with no further intervention::"
+"Datetimes constructed in this way are compatible with datetime arithmetic "
+"and handle daylight saving time transitions with no further intervention::"
 msgstr ""
 
 #: ../../library/zoneinfo.rst:52
@@ -117,7 +118,8 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:66
 msgid ""
-">>> when = dt.datetime(2020, 11, 1, 1, tzinfo=ZoneInfo(\"America/Los_Angeles\"))\n"
+">>> when = dt.datetime(2020, 11, 1, 1, tzinfo=ZoneInfo(\"America/"
+"Los_Angeles\"))\n"
 ">>> print(when)\n"
 "2020-11-01 01:00:00-07:00\n"
 "\n"
@@ -151,14 +153,14 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:90
 msgid ""
-"The ``zoneinfo`` module does not directly provide time zone data, and instead"
-" pulls time zone information from the system time zone database or the first-"
-"party PyPI package :pypi:`tzdata`, if available. Some systems, including "
-"notably Windows systems, do not have an IANA database available, and so for "
-"projects targeting cross-platform compatibility that require time zone data, "
-"it is recommended to declare a dependency on tzdata. If neither system data "
-"nor tzdata are available, all calls to :class:`ZoneInfo` will raise "
-":exc:`ZoneInfoNotFoundError`."
+"The ``zoneinfo`` module does not directly provide time zone data, and "
+"instead pulls time zone information from the system time zone database or "
+"the first-party PyPI package :pypi:`tzdata`, if available. Some systems, "
+"including notably Windows systems, do not have an IANA database available, "
+"and so for projects targeting cross-platform compatibility that require time "
+"zone data, it is recommended to declare a dependency on tzdata. If neither "
+"system data nor tzdata are available, all calls to :class:`ZoneInfo` will "
+"raise :exc:`ZoneInfoNotFoundError`."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:102
@@ -175,8 +177,8 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:109
 msgid ""
-"The default :data:`TZPATH` when not otherwise specified can be configured at "
-":ref:`compile time <zoneinfo_data_compile_time_config>`."
+"The default :data:`TZPATH` when not otherwise specified can be configured "
+"at :ref:`compile time <zoneinfo_data_compile_time_config>`."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:111
@@ -203,14 +205,14 @@ msgid ""
 "those building Python from source who know where their system time zone data "
 "is deployed may change the default time zone path by specifying the compile-"
 "time option ``TZPATH`` (or, more likely, the :option:`configure flag --with-"
-"tzpath <--with-tzpath>`), which should be a string delimited by "
-":data:`os.pathsep`."
+"tzpath <--with-tzpath>`), which should be a string delimited by :data:`os."
+"pathsep`."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:130
 msgid ""
-"On all platforms, the configured value is available as the ``TZPATH`` key in "
-":func:`sysconfig.get_config_var`."
+"On all platforms, the configured value is available as the ``TZPATH`` key "
+"in :func:`sysconfig.get_config_var`."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:136
@@ -219,9 +221,9 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:138
 msgid ""
-"When initializing :data:`TZPATH` (either at import time or whenever "
-":func:`reset_tzpath` is called with no arguments), the ``zoneinfo`` module "
-"will use the environment variable ``PYTHONTZPATH``, if it exists, to set the "
+"When initializing :data:`TZPATH` (either at import time or whenever :func:"
+"`reset_tzpath` is called with no arguments), the ``zoneinfo`` module will "
+"use the environment variable ``PYTHONTZPATH``, if it exists, to set the "
 "search path."
 msgstr ""
 
@@ -248,10 +250,10 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:161
 msgid ""
-"The TZ search path can also be configured at runtime using the "
-":func:`reset_tzpath` function. This is generally not an advisable operation, "
-"though it is reasonable to use it in test functions that require the use of a"
-" specific time zone path (or require disabling access to the system time "
+"The TZ search path can also be configured at runtime using the :func:"
+"`reset_tzpath` function. This is generally not an advisable operation, "
+"though it is reasonable to use it in test functions that require the use of "
+"a specific time zone path (or require disabling access to the system time "
 "zones)."
 msgstr ""
 
@@ -284,8 +286,8 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:188
 msgid ""
-"If no file matching ``key`` is found, the constructor will raise "
-":exc:`ZoneInfoNotFoundError`."
+"If no file matching ``key`` is found, the constructor will raise :exc:"
+"`ZoneInfoNotFoundError`."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:192
@@ -294,15 +296,15 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:196
 msgid ""
-"Constructs a ``ZoneInfo`` object from a file-like object returning bytes "
-"(e.g. a file opened in binary mode or an :class:`io.BytesIO` object). Unlike "
+"Constructs a ``ZoneInfo`` object from a file-like object returning bytes (e."
+"g. a file opened in binary mode or an :class:`io.BytesIO` object). Unlike "
 "the primary constructor, this always constructs a new object."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:200
 msgid ""
-"The ``key`` parameter sets the name of the zone for the purposes of "
-":py:meth:`~object.__str__` and :py:meth:`~object.__repr__`."
+"The ``key`` parameter sets the name of the zone for the purposes of :py:meth:"
+"`~object.__str__` and :py:meth:`~object.__repr__`."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:203
@@ -358,8 +360,8 @@ msgstr ""
 #: ../../library/zoneinfo.rst:242
 msgid ""
 "Invoking this function may change the semantics of datetimes using "
-"``ZoneInfo`` in surprising ways; this modifies module state and thus may have"
-" wide-ranging effects. Only use it if you know that you need to."
+"``ZoneInfo`` in surprising ways; this modifies module state and thus may "
+"have wide-ranging effects. Only use it if you know that you need to."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:247
@@ -369,8 +371,9 @@ msgstr ""
 #: ../../library/zoneinfo.rst:251
 msgid ""
 "This is a read-only :term:`attribute` that returns the value of ``key`` "
-"passed to the constructor, which should be a lookup key in the IANA time zone"
-" database (e.g. ``America/New_York``, ``Europe/Paris`` or ``Asia/Tokyo``)."
+"passed to the constructor, which should be a lookup key in the IANA time "
+"zone database (e.g. ``America/New_York``, ``Europe/Paris`` or ``Asia/"
+"Tokyo``)."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:256
@@ -381,11 +384,11 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:261
 msgid ""
-"Although it is a somewhat common practice to expose these to end users, these"
-" values are designed to be primary keys for representing the relevant zones "
-"and not necessarily user-facing elements.  Projects like CLDR (the Unicode "
-"Common Locale Data Repository) can be used to get more user-friendly strings "
-"from these keys."
+"Although it is a somewhat common practice to expose these to end users, "
+"these values are designed to be primary keys for representing the relevant "
+"zones and not necessarily user-facing elements.  Projects like CLDR (the "
+"Unicode Common Locale Data Repository) can be used to get more user-friendly "
+"strings from these keys."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:268
@@ -394,9 +397,9 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:270
 msgid ""
-"The string representation returned when calling :py:class:`str` on a "
-":class:`ZoneInfo` object defaults to using the :attr:`ZoneInfo.key` attribute"
-" (see the note on usage in the attribute documentation)::"
+"The string representation returned when calling :py:class:`str` on a :class:"
+"`ZoneInfo` object defaults to using the :attr:`ZoneInfo.key` attribute (see "
+"the note on usage in the attribute documentation)::"
 msgstr ""
 
 #: ../../library/zoneinfo.rst:274
@@ -414,8 +417,8 @@ msgstr ""
 msgid ""
 "For objects constructed from a file without specifying a ``key`` parameter, "
 "``str`` falls back to calling :func:`repr`. ``ZoneInfo``'s ``repr`` is "
-"implementation-defined and not necessarily stable between versions, but it is"
-" guaranteed not to be a valid ``ZoneInfo`` key."
+"implementation-defined and not necessarily stable between versions, but it "
+"is guaranteed not to be a valid ``ZoneInfo`` key."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:290
@@ -437,9 +440,9 @@ msgstr ""
 msgid ""
 "``ZoneInfo(key)``: When constructed with the primary constructor, a "
 "``ZoneInfo`` object is serialized by key, and when deserialized, the "
-"deserializing process uses the primary and thus it is expected that these are"
-" the same object as other references to the same time zone.  For example, if "
-"``europe_berlin_pkl`` is a string containing a pickle constructed from "
+"deserializing process uses the primary and thus it is expected that these "
+"are the same object as other references to the same time zone.  For example, "
+"if ``europe_berlin_pkl`` is a string containing a pickle constructed from "
 "``ZoneInfo(\"Europe/Berlin\")``, one would expect the following behavior:"
 msgstr ""
 
@@ -455,10 +458,10 @@ msgstr ""
 msgid ""
 "``ZoneInfo.no_cache(key)``: When constructed from the cache-bypassing "
 "constructor, the ``ZoneInfo`` object is also serialized by key, but when "
-"deserialized, the deserializing process uses the cache bypassing constructor."
-" If ``europe_berlin_pkl_nc`` is a string containing a pickle constructed from"
-" ``ZoneInfo.no_cache(\"Europe/Berlin\")``, one would expect the following "
-"behavior:"
+"deserialized, the deserializing process uses the cache bypassing "
+"constructor. If ``europe_berlin_pkl_nc`` is a string containing a pickle "
+"constructed from ``ZoneInfo.no_cache(\"Europe/Berlin\")``, one would expect "
+"the following behavior:"
 msgstr ""
 
 #: ../../library/zoneinfo.rst:320
@@ -472,11 +475,11 @@ msgstr ""
 #: ../../library/zoneinfo.rst:327
 msgid ""
 "``ZoneInfo.from_file(file_obj, /, key=None)``: When constructed from a file, "
-"the ``ZoneInfo`` object raises an exception on pickling. If an end user wants"
-" to pickle a ``ZoneInfo`` constructed from a file, it is recommended that "
-"they use a wrapper type or a custom serialization function: either "
-"serializing by key or storing the contents of the file object and serializing"
-" that."
+"the ``ZoneInfo`` object raises an exception on pickling. If an end user "
+"wants to pickle a ``ZoneInfo`` constructed from a file, it is recommended "
+"that they use a wrapper type or a custom serialization function: either "
+"serializing by key or storing the contents of the file object and "
+"serializing that."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:333
@@ -486,8 +489,8 @@ msgid ""
 "similar to the way that references to classes and functions are expected to "
 "exist in both the serializing and deserializing environments. It also means "
 "that no guarantees are made about the consistency of results when unpickling "
-"a ``ZoneInfo`` pickled in an environment with a different version of the time"
-" zone data."
+"a ``ZoneInfo`` pickled in an environment with a different version of the "
+"time zone data."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:341
@@ -531,16 +534,16 @@ msgstr ""
 
 #: ../../library/zoneinfo.rst:371
 msgid ""
-"Calling ``reset_tzpath`` will not invalidate the :class:`ZoneInfo` cache, and"
-" so calls to the primary ``ZoneInfo`` constructor will only use the new "
+"Calling ``reset_tzpath`` will not invalidate the :class:`ZoneInfo` cache, "
+"and so calls to the primary ``ZoneInfo`` constructor will only use the new "
 "``TZPATH`` in the case of a cache miss."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:375
 msgid ""
-"The ``to`` parameter must be a :term:`sequence` of strings or "
-":class:`os.PathLike` and not a string, all of which must be absolute paths. "
-":exc:`ValueError` will be raised if something other than an absolute path is "
+"The ``to`` parameter must be a :term:`sequence` of strings or :class:`os."
+"PathLike` and not a string, all of which must be absolute paths. :exc:"
+"`ValueError` will be raised if something other than an absolute path is "
 "passed."
 msgstr ""
 
@@ -564,15 +567,15 @@ msgstr ""
 #: ../../library/zoneinfo.rst:392
 msgid ""
 "The object that ``zoneinfo.TZPATH`` points to may change in response to a "
-"call to :func:`reset_tzpath`, so it is recommended to use ``zoneinfo.TZPATH``"
-" rather than importing ``TZPATH`` from ``zoneinfo`` or assigning a long-lived"
-" variable to ``zoneinfo.TZPATH``."
+"call to :func:`reset_tzpath`, so it is recommended to use ``zoneinfo."
+"TZPATH`` rather than importing ``TZPATH`` from ``zoneinfo`` or assigning a "
+"long-lived variable to ``zoneinfo.TZPATH``."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:397
 msgid ""
-"For more information on configuring the time zone search path, see "
-":ref:`zoneinfo_data_configuration`."
+"For more information on configuring the time zone search path, see :ref:"
+"`zoneinfo_data_configuration`."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:401
@@ -582,12 +585,12 @@ msgstr ""
 #: ../../library/zoneinfo.rst:405
 msgid ""
 "Raised when construction of a :class:`ZoneInfo` object fails because the "
-"specified key could not be found on the system. This is a subclass of "
-":exc:`KeyError`."
+"specified key could not be found on the system. This is a subclass of :exc:"
+"`KeyError`."
 msgstr ""
 
 #: ../../library/zoneinfo.rst:411
 msgid ""
-"Raised when :envvar:`PYTHONTZPATH` contains an invalid component that will be"
-" filtered out, such as a relative path."
+"Raised when :envvar:`PYTHONTZPATH` contains an invalid component that will "
+"be filtered out, such as a relative path."
 msgstr ""

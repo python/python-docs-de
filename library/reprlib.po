@@ -38,15 +38,15 @@ msgstr ""
 #: ../../library/reprlib.rst:22
 msgid ""
 "Class which provides formatting services useful in implementing functions "
-"similar to the built-in :func:`repr`; size limits for  different object types"
-" are added to avoid the generation of representations which are excessively "
-"long."
+"similar to the built-in :func:`repr`; size limits for  different object "
+"types are added to avoid the generation of representations which are "
+"excessively long."
 msgstr ""
 
 #: ../../library/reprlib.rst:26
 msgid ""
-"The keyword arguments of the constructor can be used as a shortcut to set the"
-" attributes of the :class:`Repr` instance. Which means that the following "
+"The keyword arguments of the constructor can be used as a shortcut to set "
+"the attributes of the :class:`Repr` instance. Which means that the following "
 "initialization::"
 msgstr ""
 
@@ -76,10 +76,9 @@ msgstr ""
 
 #: ../../library/reprlib.rst:46
 msgid ""
-"This is an instance of :class:`Repr` which is used to provide the "
-":func:`.repr` function described below.  Changing the attributes of this "
-"object will affect the size limits used by :func:`.repr` and the Python "
-"debugger."
+"This is an instance of :class:`Repr` which is used to provide the :func:`."
+"repr` function described below.  Changing the attributes of this object will "
+"affect the size limits used by :func:`.repr` and the Python debugger."
 msgstr ""
 
 #: ../../library/reprlib.rst:54
@@ -187,8 +186,8 @@ msgstr ""
 
 #: ../../library/reprlib.rst:160
 msgid ""
-"If :attr:`~Repr.indent` is set to a string, each recursion level is placed on"
-" its own line, indented by that string:"
+"If :attr:`~Repr.indent` is set to a string, each recursion level is placed "
+"on its own line, indented by that string:"
 msgstr ""
 
 #: ../../library/reprlib.rst:163
@@ -212,8 +211,8 @@ msgstr ""
 
 #: ../../library/reprlib.rst:181
 msgid ""
-"Setting :attr:`~Repr.indent` to a positive integer value behaves as if it was"
-" set to a string with that number of spaces:"
+"Setting :attr:`~Repr.indent` to a positive integer value behaves as if it "
+"was set to a string with that number of spaces:"
 msgstr ""
 
 #: ../../library/reprlib.rst:184
@@ -253,10 +252,10 @@ msgstr ""
 #: ../../library/reprlib.rst:222
 msgid ""
 "Formatting methods for specific types are implemented as methods with a name "
-"based on the type name.  In the method name, **TYPE** is replaced by "
-"``'_'.join(type(obj).__name__.split())``. Dispatch to these methods is "
-"handled by :meth:`repr1`. Type-specific methods which need to recursively "
-"format a value should call ``self.repr1(subobj, level - 1)``."
+"based on the type name.  In the method name, **TYPE** is replaced by ``'_'."
+"join(type(obj).__name__.split())``. Dispatch to these methods is handled by :"
+"meth:`repr1`. Type-specific methods which need to recursively format a value "
+"should call ``self.repr1(subobj, level - 1)``."
 msgstr ""
 
 #: ../../library/reprlib.rst:232
@@ -265,8 +264,8 @@ msgstr ""
 
 #: ../../library/reprlib.rst:234
 msgid ""
-"The use of dynamic dispatching by :meth:`Repr.repr1` allows subclasses of "
-":class:`Repr` to add support for additional built-in object types or to "
+"The use of dynamic dispatching by :meth:`Repr.repr1` allows subclasses of :"
+"class:`Repr` to add support for additional built-in object types or to "
 "modify the handling of types already supported. This example shows how "
 "special support for file objects could be added:"
 msgstr ""

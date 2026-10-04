@@ -119,8 +119,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:83
 msgid ""
-"If you run :file:`example.py` directly from the command line, :mod:`!doctest`"
-" works its magic:"
+"If you run :file:`example.py` directly from the command line, :mod:`!"
+"doctest` works its magic:"
 msgstr ""
 
 #: ../../library/doctest.rst:86
@@ -175,10 +175,10 @@ msgstr ""
 
 #: ../../library/doctest.rst:128
 msgid ""
-"That's all you need to know to start making productive use of "
-":mod:`!doctest`! Jump in.  The following sections provide full details.  Note"
-" that there are many examples of doctests in the standard Python test suite "
-"and libraries. Especially useful examples can be found in the standard test "
+"That's all you need to know to start making productive use of :mod:`!"
+"doctest`! Jump in.  The following sections provide full details.  Note that "
+"there are many examples of doctests in the standard Python test suite and "
+"libraries. Especially useful examples can be found in the standard test "
 "file :file:`Lib/test/test_doctest/test_doctest.py`."
 msgstr ""
 
@@ -243,10 +243,10 @@ msgstr ""
 
 #: ../../library/doctest.rst:170
 msgid ""
-"You can force verbose mode by passing ``verbose=True`` to :func:`testmod`, or"
-" prohibit it by passing ``verbose=False``.  In either of those cases, "
-":data:`sys.argv` is not examined by :func:`testmod` (so passing ``-v`` or not"
-" has no effect)."
+"You can force verbose mode by passing ``verbose=True`` to :func:`testmod`, "
+"or prohibit it by passing ``verbose=False``.  In either of those cases, :"
+"data:`sys.argv` is not examined by :func:`testmod` (so passing ``-v`` or not "
+"has no effect)."
 msgstr ""
 
 #: ../../library/doctest.rst:175
@@ -280,9 +280,9 @@ msgstr ""
 #: ../../library/doctest.rst:192
 msgid ""
 "That short script executes and verifies any interactive Python examples "
-"contained in the file :file:`example.txt`.  The file content is treated as if"
-" it were a single giant docstring; the file doesn't need to contain a Python "
-"program!   For example, perhaps :file:`example.txt` contains this:"
+"contained in the file :file:`example.txt`.  The file content is treated as "
+"if it were a single giant docstring; the file doesn't need to contain a "
+"Python program!   For example, perhaps :file:`example.txt` contains this:"
 msgstr ""
 
 #: ../../library/doctest.rst:197
@@ -325,8 +325,8 @@ msgstr ""
 msgid ""
 "As with :func:`testmod`, :func:`testfile` won't display anything unless an "
 "example fails.  If an example does fail, then the failing example(s) and the "
-"cause(s) of the failure(s) are printed to stdout, using the same format as "
-":func:`!testmod`."
+"cause(s) of the failure(s) are printed to stdout, using the same format as :"
+"func:`!testmod`."
 msgstr ""
 
 #: ../../library/doctest.rst:231
@@ -339,8 +339,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:235
 msgid ""
-"Like :func:`testmod`, :func:`testfile`'s verbosity can be set with the ``-v``"
-" command-line switch or with the optional keyword argument *verbose*."
+"Like :func:`testmod`, :func:`testfile`'s verbosity can be set with the ``-"
+"v`` command-line switch or with the optional keyword argument *verbose*."
 msgstr ""
 
 #: ../../library/doctest.rst:239
@@ -380,9 +380,9 @@ msgstr ""
 
 #: ../../library/doctest.rst:265
 msgid ""
-"This will import :file:`example.py` as a standalone module and run "
-":func:`testmod` on it. Note that this may not work correctly if the file is "
-"part of a package and imports other submodules from that package."
+"This will import :file:`example.py` as a standalone module and run :func:"
+"`testmod` on it. Note that this may not work correctly if the file is part "
+"of a package and imports other submodules from that package."
 msgstr ""
 
 #: ../../library/doctest.rst:269
@@ -397,8 +397,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:276
 msgid ""
-"Option flags control various aspects of doctest's behavior, see section "
-":ref:`doctest-options`."
+"Option flags control various aspects of doctest's behavior, see section :ref:"
+"`doctest-options`."
 msgstr ""
 
 #: ../../library/doctest.rst:283
@@ -412,8 +412,8 @@ msgstr ""
 #: ../../library/doctest.rst:293
 msgid ""
 "This section examines in detail how doctest works: which docstrings it looks "
-"at, how it finds interactive examples, what execution context it uses, how it"
-" handles exceptions, and how option flags can be used to control its "
+"at, how it finds interactive examples, what execution context it uses, how "
+"it handles exceptions, and how option flags can be used to control its "
 "behavior. This is the information that you need to know to write doctest "
 "examples; for information about actually running doctest on these examples, "
 "see the following sections."
@@ -435,10 +435,11 @@ msgid ""
 "not part of the help text, which requires that the tests not be included in "
 "the docstring. Doctest looks for a module-level variable called ``__test__`` "
 "and uses it to locate other tests. If ``M.__test__`` exists, it must be a "
-"dict, and each entry maps a (string) name to a function object, class object,"
-" or string. Function and class object docstrings found from ``M.__test__`` "
-"are searched, and strings are treated as if they were docstrings.  In output,"
-" a key ``K`` in ``M.__test__`` appears with name ``M.__test__.K``."
+"dict, and each entry maps a (string) name to a function object, class "
+"object, or string. Function and class object docstrings found from ``M."
+"__test__`` are searched, and strings are treated as if they were "
+"docstrings.  In output, a key ``K`` in ``M.__test__`` appears with name ``M."
+"__test__.K``."
 msgstr ""
 
 #: ../../library/doctest.rst:325
@@ -460,10 +461,10 @@ msgstr ""
 
 #: ../../library/doctest.rst:339
 msgid ""
-"The value of ``example.__test__[\"numbers\"]`` will be treated as a docstring"
-" and all the tests inside it will be run. It is important to note that the "
-"value can be mapped to a function, class object, or module; if so, "
-":mod:`!doctest` searches them recursively for docstrings, which are then "
+"The value of ``example.__test__[\"numbers\"]`` will be treated as a "
+"docstring and all the tests inside it will be run. It is important to note "
+"that the value can be mapped to a function, class object, or module; if so, :"
+"mod:`!doctest` searches them recursively for docstrings, which are then "
 "scanned for tests."
 msgstr ""
 
@@ -518,8 +519,8 @@ msgstr ""
 #: ../../library/doctest.rst:386
 msgid ""
 "Any expected output must immediately follow the final ``'>>> '`` or ``'... "
-"'`` line containing the code, and the expected output (if any) extends to the"
-" next ``'>>> '`` or all-whitespace line."
+"'`` line containing the code, and the expected output (if any) extends to "
+"the next ``'>>> '`` or all-whitespace line."
 msgstr ""
 
 #: ../../library/doctest.rst:390
@@ -539,14 +540,14 @@ msgid ""
 "All hard tab characters are expanded to spaces, using 8-column tab stops. "
 "Tabs in output generated by the tested code are not modified.  Because any "
 "hard tabs in the sample output *are* expanded, this means that if the code "
-"output includes hard tabs, the only way the doctest can pass is if the "
-":const:`NORMALIZE_WHITESPACE` option or :ref:`directive <doctest-directives>`"
-" is in effect. Alternatively, the test can be rewritten to capture the output"
-" and compare it to an expected value as part of the test.  This handling of "
+"output includes hard tabs, the only way the doctest can pass is if the :"
+"const:`NORMALIZE_WHITESPACE` option or :ref:`directive <doctest-directives>` "
+"is in effect. Alternatively, the test can be rewritten to capture the output "
+"and compare it to an expected value as part of the test.  This handling of "
 "tabs in the source was arrived at through trial and error, and has proven to "
 "be the least error prone way of handling them.  It is possible to use a "
-"different algorithm for handling tabs by writing a custom "
-":class:`DocTestParser` class."
+"different algorithm for handling tabs by writing a custom :class:"
+"`DocTestParser` class."
 msgstr ""
 
 #: ../../library/doctest.rst:409
@@ -557,8 +558,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:412
 msgid ""
-"If you continue a line via backslashing in an interactive session, or for any"
-" other reason use a backslash, you should use a raw docstring, which will "
+"If you continue a line via backslashing in an interactive session, or for "
+"any other reason use a backslash, you should use a raw docstring, which will "
 "preserve your backslashes exactly as you type them::"
 msgstr ""
 
@@ -636,8 +637,8 @@ msgid ""
 "No problem, provided that the traceback is the only output produced by the "
 "example:  just paste in the traceback. [#]_ Since tracebacks contain details "
 "that are likely to change rapidly (for example, exact file paths and line "
-"numbers), this is one case where doctest works hard to be flexible in what it"
-" accepts."
+"numbers), this is one case where doctest works hard to be flexible in what "
+"it accepts."
 msgstr ""
 
 #: ../../library/doctest.rst:471
@@ -654,8 +655,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:478
 msgid ""
-"That doctest succeeds if :exc:`ValueError` is raised, with the "
-"``list.remove(x): x not in list`` detail as shown."
+"That doctest succeeds if :exc:`ValueError` is raised, with the ``list."
+"remove(x): x not in list`` detail as shown."
 msgstr ""
 
 #: ../../library/doctest.rst:481
@@ -681,8 +682,8 @@ msgstr ""
 #: ../../library/doctest.rst:492
 msgid ""
 "The traceback stack is followed by the most interesting part: the line(s) "
-"containing the exception type and detail.  This is usually the last line of a"
-" traceback, but can extend across multiple lines if the exception has a "
+"containing the exception type and detail.  This is usually the last line of "
+"a traceback, but can extend across multiple lines if the exception has a "
 "multi-line detail::"
 msgstr ""
 
@@ -722,10 +723,10 @@ msgstr ""
 #: ../../library/doctest.rst:517
 msgid ""
 "Note that tracebacks are treated very specially.  In particular, in the "
-"rewritten example, the use of ``...`` is independent of doctest's "
-":const:`ELLIPSIS` option.  The ellipsis in that example could be left out, or"
-" could just as well be three (or three hundred) commas or digits, or an "
-"indented transcript of a Monty Python skit."
+"rewritten example, the use of ``...`` is independent of doctest's :const:"
+"`ELLIPSIS` option.  The ellipsis in that example could be left out, or could "
+"just as well be three (or three hundred) commas or digits, or an indented "
+"transcript of a Monty Python skit."
 msgstr ""
 
 #: ../../library/doctest.rst:523
@@ -760,8 +761,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:542
 msgid ""
-"The interactive shell omits the traceback header line for some "
-":exc:`SyntaxError`\\ s.  But doctest uses the traceback header line to "
+"The interactive shell omits the traceback header line for some :exc:"
+"`SyntaxError`\\ s.  But doctest uses the traceback header line to "
 "distinguish exceptions from non-exceptions.  So in the rare case where you "
 "need to test a :exc:`!SyntaxError` that omits the traceback header, you will "
 "need to manually add the traceback header line to your test example."
@@ -785,8 +786,8 @@ msgstr ""
 #: ../../library/doctest.rst:559
 msgid ""
 "Since the lines showing the position of the error come before the exception "
-"type and detail, they are not checked by doctest.  For example, the following"
-" test would pass, even though it puts the ``^`` marker in the wrong "
+"type and detail, they are not checked by doctest.  For example, the "
+"following test would pass, even though it puts the ``^`` marker in the wrong "
 "location::"
 msgstr ""
 
@@ -806,10 +807,11 @@ msgstr ""
 #: ../../library/doctest.rst:576
 msgid ""
 "A number of option flags control various aspects of doctest's behavior. "
-"Symbolic names for the flags are supplied as module constants, which can be "
-":ref:`bitwise ORed <bitwise>` together and passed to various functions. The "
-"names can also be used in :ref:`doctest directives <doctest-directives>`, and"
-" may be passed to the doctest command line interface via the ``-o`` option."
+"Symbolic names for the flags are supplied as module constants, which can be :"
+"ref:`bitwise ORed <bitwise>` together and passed to various functions. The "
+"names can also be used in :ref:`doctest directives <doctest-directives>`, "
+"and may be passed to the doctest command line interface via the ``-o`` "
+"option."
 msgstr ""
 
 #: ../../library/doctest.rst:582
@@ -820,60 +822,59 @@ msgstr ""
 
 #: ../../library/doctest.rst:588
 msgid ""
-"By default, if an expected output block contains just ``1``, an actual output"
-" block containing just ``1`` or just ``True`` is considered to be a match, "
-"and similarly for ``0`` versus ``False``.  When "
-":const:`DONT_ACCEPT_TRUE_FOR_1` is specified, neither substitution is "
-"allowed.  The default behavior caters to that Python changed the return type "
-"of many functions from integer to boolean; doctests expecting \"little "
-"integer\" output still work in these cases.  This option will probably go "
-"away, but not for several years."
+"By default, if an expected output block contains just ``1``, an actual "
+"output block containing just ``1`` or just ``True`` is considered to be a "
+"match, and similarly for ``0`` versus ``False``.  When :const:"
+"`DONT_ACCEPT_TRUE_FOR_1` is specified, neither substitution is allowed.  The "
+"default behavior caters to that Python changed the return type of many "
+"functions from integer to boolean; doctests expecting \"little integer\" "
+"output still work in these cases.  This option will probably go away, but "
+"not for several years."
 msgstr ""
 
 #: ../../library/doctest.rst:600
 msgid ""
 "By default, if an expected output block contains a line containing only the "
 "string ``<BLANKLINE>``, then that line will match a blank line in the actual "
-"output.  Because a genuinely blank line delimits the expected output, this is"
-" the only way to communicate that a blank line is expected.  When "
-":const:`DONT_ACCEPT_BLANKLINE` is specified, this substitution is not "
-"allowed."
+"output.  Because a genuinely blank line delimits the expected output, this "
+"is the only way to communicate that a blank line is expected.  When :const:"
+"`DONT_ACCEPT_BLANKLINE` is specified, this substitution is not allowed."
 msgstr ""
 
 #: ../../library/doctest.rst:609
 msgid ""
-"When specified, all sequences of whitespace (blanks and newlines) are treated"
-" as equal.  Any sequence of whitespace within the expected output will match "
-"any sequence of whitespace within the actual output. By default, whitespace "
-"must match exactly. :const:`NORMALIZE_WHITESPACE` is especially useful when a"
-" line of expected output is very long, and you want to wrap it across "
-"multiple lines in your source."
+"When specified, all sequences of whitespace (blanks and newlines) are "
+"treated as equal.  Any sequence of whitespace within the expected output "
+"will match any sequence of whitespace within the actual output. By default, "
+"whitespace must match exactly. :const:`NORMALIZE_WHITESPACE` is especially "
+"useful when a line of expected output is very long, and you want to wrap it "
+"across multiple lines in your source."
 msgstr ""
 
 #: ../../library/doctest.rst:620
 msgid ""
-"When specified, an ellipsis marker (``...``) in the expected output can match"
-" any substring in the actual output.  This includes substrings that span line"
-" boundaries, and empty substrings, so it's best to keep usage of this simple."
-" Complicated uses can lead to the same kinds of \"oops, it matched too "
-"much!\" surprises that ``.*`` is prone to in regular expressions."
+"When specified, an ellipsis marker (``...``) in the expected output can "
+"match any substring in the actual output.  This includes substrings that "
+"span line boundaries, and empty substrings, so it's best to keep usage of "
+"this simple. Complicated uses can lead to the same kinds of \"oops, it "
+"matched too much!\" surprises that ``.*`` is prone to in regular expressions."
 msgstr ""
 
 #: ../../library/doctest.rst:629
 msgid ""
-"When specified, doctests expecting exceptions pass so long as an exception of"
-" the expected type is raised, even if the details (message and fully "
+"When specified, doctests expecting exceptions pass so long as an exception "
+"of the expected type is raised, even if the details (message and fully "
 "qualified exception name) don't match."
 msgstr ""
 
 #: ../../library/doctest.rst:633
 msgid ""
 "For example, an example expecting ``ValueError: 42`` will pass if the actual "
-"exception raised is ``ValueError: 3*14``, but will fail if, say, a "
-":exc:`TypeError` is raised instead. It will also ignore any fully qualified "
-"name included before the exception class, which can vary between "
-"implementations and versions of Python and the code/libraries in use. Hence, "
-"all three of these variations will work with the flag specified:"
+"exception raised is ``ValueError: 3*14``, but will fail if, say, a :exc:"
+"`TypeError` is raised instead. It will also ignore any fully qualified name "
+"included before the exception class, which can vary between implementations "
+"and versions of Python and the code/libraries in use. Hence, all three of "
+"these variations will work with the flag specified:"
 msgstr ""
 
 #: ../../library/doctest.rst:641
@@ -894,14 +895,14 @@ msgstr ""
 #: ../../library/doctest.rst:655
 msgid ""
 "Note that :const:`ELLIPSIS` can also be used to ignore the details of the "
-"exception message, but such a test may still fail based on whether the module"
-" name is present or matches exactly."
+"exception message, but such a test may still fail based on whether the "
+"module name is present or matches exactly."
 msgstr ""
 
 #: ../../library/doctest.rst:659
 msgid ""
-":const:`IGNORE_EXCEPTION_DETAIL` now also ignores any information relating to"
-" the module containing the exception under test."
+":const:`IGNORE_EXCEPTION_DETAIL` now also ignores any information relating "
+"to the module containing the exception under test."
 msgstr ""
 
 #: ../../library/doctest.rst:666
@@ -909,12 +910,13 @@ msgid ""
 "When specified, do not run the example at all.  This can be useful in "
 "contexts where doctest examples serve as both documentation and test cases, "
 "and an example should be included for documentation purposes, but should not "
-"be checked.  E.g., the example's output might be random; or the example might"
-" depend on resources which would be unavailable to the test driver."
+"be checked.  E.g., the example's output might be random; or the example "
+"might depend on resources which would be unavailable to the test driver."
 msgstr ""
 
 #: ../../library/doctest.rst:672
-msgid "The SKIP flag can also be used for temporarily \"commenting out\" examples."
+msgid ""
+"The SKIP flag can also be used for temporarily \"commenting out\" examples."
 msgstr ""
 
 #: ../../library/doctest.rst:677
@@ -953,15 +955,15 @@ msgid ""
 "suppress output for all remaining examples.  This will prevent doctest from "
 "reporting correct examples that break because of earlier failures; but it "
 "might also hide incorrect examples that fail independently of the first "
-"failure.  When :const:`REPORT_ONLY_FIRST_FAILURE` is specified, the remaining"
-" examples are still run, and still count towards the total number of failures"
-" reported; only the output is suppressed."
+"failure.  When :const:`REPORT_ONLY_FIRST_FAILURE` is specified, the "
+"remaining examples are still run, and still count towards the total number "
+"of failures reported; only the output is suppressed."
 msgstr ""
 
 #: ../../library/doctest.rst:716
 msgid ""
-"When specified, exit after the first failing example and don't attempt to run"
-" the remaining examples. Thus, the number of failures reported will be at "
+"When specified, exit after the first failing example and don't attempt to "
+"run the remaining examples. Thus, the number of failures reported will be at "
 "most 1.  This flag may be useful during debugging, since examples after the "
 "first failure won't even produce debugging output."
 msgstr ""
@@ -978,9 +980,9 @@ msgstr ""
 
 #: ../../library/doctest.rst:733
 msgid ""
-"Create a new option flag with a given name, and return the new flag's integer"
-" value.  :func:`register_optionflag` can be used when subclassing "
-":class:`OutputChecker` or :class:`DocTestRunner` to create new options that "
+"Create a new option flag with a given name, and return the new flag's "
+"integer value.  :func:`register_optionflag` can be used when subclassing :"
+"class:`OutputChecker` or :class:`DocTestRunner` to create new options that "
 "are supported by your subclasses.  :func:`register_optionflag` should always "
 "be called using the following idiom::"
 msgstr ""
@@ -1002,8 +1004,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:762
 msgid ""
-"Whitespace is not allowed between the ``+`` or ``-`` and the directive option"
-" name.  The directive option name can be any of the option flag names "
+"Whitespace is not allowed between the ``+`` or ``-`` and the directive "
+"option name.  The directive option name can be any of the option flag names "
 "explained above."
 msgstr ""
 
@@ -1027,9 +1029,9 @@ msgstr ""
 #: ../../library/doctest.rst:778
 msgid ""
 "Without the directive it would fail, both because the actual output doesn't "
-"have two blanks before the single-digit list elements, and because the actual"
-" output is on a single line.  This test also passes, and also requires a "
-"directive to do so:"
+"have two blanks before the single-digit list elements, and because the "
+"actual output is on a single line.  This test also passes, and also requires "
+"a directive to do so:"
 msgstr ""
 
 #: ../../library/doctest.rst:783
@@ -1083,8 +1085,8 @@ msgid ""
 "only to the example they appear in, enabling options (via ``+`` in a "
 "directive) is usually the only meaningful choice.  However, option flags can "
 "also be passed to functions that run doctests, establishing different "
-"defaults.  In such cases, disabling an option via ``-`` in a directive can be"
-" useful."
+"defaults.  In such cases, disabling an option via ``-`` in a directive can "
+"be useful."
 msgstr ""
 
 #: ../../library/doctest.rst:829
@@ -1093,12 +1095,12 @@ msgstr "Warnungen"
 
 #: ../../library/doctest.rst:831
 msgid ""
-":mod:`!doctest` is serious about requiring exact matches in expected output."
-"  If even a single character doesn't match, the test fails.  This will "
-"probably surprise you a few times, as you learn exactly what Python does and "
-"doesn't guarantee about output.  For example, when printing a set, Python "
-"doesn't guarantee that the element is printed in any particular order, so a "
-"test like ::"
+":mod:`!doctest` is serious about requiring exact matches in expected "
+"output.  If even a single character doesn't match, the test fails.  This "
+"will probably surprise you a few times, as you learn exactly what Python "
+"does and doesn't guarantee about output.  For example, when printing a set, "
+"Python doesn't guarantee that the element is printed in any particular "
+"order, so a test like ::"
 msgstr ""
 
 #: ../../library/doctest.rst:837
@@ -1187,8 +1189,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:888
 msgid ""
-"Simple fractions are also easier for people to understand, and that makes for"
-" better documentation."
+"Simple fractions are also easier for people to understand, and that makes "
+"for better documentation."
 msgstr ""
 
 #: ../../library/doctest.rst:895
@@ -1197,10 +1199,10 @@ msgstr ""
 
 #: ../../library/doctest.rst:897
 msgid ""
-"The functions :func:`testmod` and :func:`testfile` provide a simple interface"
-" to doctest that should be sufficient for most basic uses.  For a less formal"
-" introduction to these two functions, see sections :ref:`doctest-simple-"
-"testmod` and :ref:`doctest-simple-testfile`."
+"The functions :func:`testmod` and :func:`testfile` provide a simple "
+"interface to doctest that should be sufficient for most basic uses.  For a "
+"less formal introduction to these two functions, see sections :ref:`doctest-"
+"simple-testmod` and :ref:`doctest-simple-testfile`."
 msgstr ""
 
 #: ../../library/doctest.rst:905
@@ -1234,8 +1236,8 @@ msgstr ""
 #: ../../library/doctest.rst:921
 msgid ""
 "If *module_relative* is ``False``, then *filename* specifies an OS-specific "
-"path.  The path may be absolute or relative; relative paths are resolved with"
-" respect to the current working directory."
+"path.  The path may be absolute or relative; relative paths are resolved "
+"with respect to the current working directory."
 msgstr ""
 
 #: ../../library/doctest.rst:925
@@ -1249,8 +1251,8 @@ msgid ""
 "Optional argument *package* is a Python package or the name of a Python "
 "package whose directory should be used as the base directory for a module-"
 "relative filename.  If no package is specified, then the calling module's "
-"directory is used as the base directory for module-relative filenames.  It is"
-" an error to specify *package* if *module_relative* is ``False``."
+"directory is used as the base directory for module-relative filenames.  It "
+"is an error to specify *package* if *module_relative* is ``False``."
 msgstr ""
 
 #: ../../library/doctest.rst:934
@@ -1266,46 +1268,47 @@ msgid ""
 "Optional argument *extraglobs* gives a dict merged into the globals used to "
 "execute examples.  This works like :meth:`dict.update`:  if *globs* and "
 "*extraglobs* have a common key, the associated value in *extraglobs* appears "
-"in the combined dict.  By default, or if ``None``, no extra globals are used."
-"  This is an advanced feature that allows parameterization of doctests.  For "
-"example, a doctest can be written for a base class, using a generic name for "
-"the class, then reused to test any number of subclasses by passing an "
-"*extraglobs* dict mapping the generic name to the subclass to be tested."
+"in the combined dict.  By default, or if ``None``, no extra globals are "
+"used.  This is an advanced feature that allows parameterization of "
+"doctests.  For example, a doctest can be written for a base class, using a "
+"generic name for the class, then reused to test any number of subclasses by "
+"passing an *extraglobs* dict mapping the generic name to the subclass to be "
+"tested."
 msgstr ""
 
 #: ../../library/doctest.rst:948
 msgid ""
 "Optional argument *verbose* prints lots of stuff if true, and prints only "
-"failures if false; by default, or if ``None``, it's true if and only if "
-"``'-v'`` is in :data:`sys.argv`."
+"failures if false; by default, or if ``None``, it's true if and only if ``'-"
+"v'`` is in :data:`sys.argv`."
 msgstr ""
 
 #: ../../library/doctest.rst:952
 msgid ""
-"Optional argument *report* prints a summary at the end when true, else prints"
-" nothing at the end.  In verbose mode, the summary is detailed, else the "
-"summary is very brief (in fact, empty if all tests passed)."
+"Optional argument *report* prints a summary at the end when true, else "
+"prints nothing at the end.  In verbose mode, the summary is detailed, else "
+"the summary is very brief (in fact, empty if all tests passed)."
 msgstr ""
 
 #: ../../library/doctest.rst:956
 msgid ""
-"Optional argument *optionflags* (default value ``0``) takes the :ref:`bitwise"
-" OR <bitwise>` of option flags. See section :ref:`doctest-options`."
+"Optional argument *optionflags* (default value ``0``) takes the :ref:"
+"`bitwise OR <bitwise>` of option flags. See section :ref:`doctest-options`."
 msgstr ""
 
 #: ../../library/doctest.rst:960
 msgid ""
 "Optional argument *raise_on_error* defaults to false.  If true, an exception "
-"is raised upon the first failure or unexpected exception in an example.  This"
-" allows failures to be post-mortem debugged. Default behavior is to continue "
-"running examples."
+"is raised upon the first failure or unexpected exception in an example.  "
+"This allows failures to be post-mortem debugged. Default behavior is to "
+"continue running examples."
 msgstr ""
 
 #: ../../library/doctest.rst:965 ../../library/doctest.rst:1111
 msgid ""
 "Optional argument *parser* specifies a :class:`DocTestParser` (or subclass) "
-"that should be used to extract tests from the files.  It defaults to a normal"
-" parser (i.e., ``DocTestParser()``)."
+"that should be used to extract tests from the files.  It defaults to a "
+"normal parser (i.e., ``DocTestParser()``)."
 msgstr ""
 
 #: ../../library/doctest.rst:969 ../../library/doctest.rst:1115
@@ -1329,10 +1332,10 @@ msgstr ""
 
 #: ../../library/doctest.rst:982
 msgid ""
-"Also test examples reachable from dict ``m.__test__``, if it exists. "
-"``m.__test__`` maps names (strings) to functions, classes and strings; "
-"function and class docstrings are searched for examples; strings are searched"
-" directly, as if they were docstrings."
+"Also test examples reachable from dict ``m.__test__``, if it exists. ``m."
+"__test__`` maps names (strings) to functions, classes and strings; function "
+"and class docstrings are searched for examples; strings are searched "
+"directly, as if they were docstrings."
 msgstr ""
 
 #: ../../library/doctest.rst:987
@@ -1353,10 +1356,10 @@ msgstr ""
 #: ../../library/doctest.rst:994
 msgid ""
 "Optional argument *exclude_empty* defaults to false.  If true, objects for "
-"which no doctests are found are excluded from consideration. The default is a"
-" backward compatibility hack, so that code still using "
-":meth:`doctest.master.summarize <DocTestRunner.summarize>` in conjunction "
-"with :func:`testmod` continues to get output for objects with no tests. The "
+"which no doctests are found are excluded from consideration. The default is "
+"a backward compatibility hack, so that code still using :meth:`doctest."
+"master.summarize <DocTestRunner.summarize>` in conjunction with :func:"
+"`testmod` continues to get output for objects with no tests. The "
 "*exclude_empty* argument to the newer :class:`DocTestFinder` constructor "
 "defaults to true."
 msgstr ""
@@ -1370,8 +1373,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:1009
 msgid ""
-"Test examples associated with object *f*; for example, *f* may be a string, a"
-" module, a function, or a class object."
+"Test examples associated with object *f*; for example, *f* may be a string, "
+"a module, a function, or a class object."
 msgstr ""
 
 #: ../../library/doctest.rst:1012
@@ -1388,8 +1391,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:1017
 msgid ""
-"If optional argument *verbose* is true, output is generated even if there are"
-" no failures.  By default, output is generated only in case of an example "
+"If optional argument *verbose* is true, output is generated even if there "
+"are no failures.  By default, output is generated only in case of an example "
 "failure."
 msgstr ""
 
@@ -1397,8 +1400,8 @@ msgstr ""
 msgid ""
 "Optional argument *compileflags* gives the set of flags that should be used "
 "by the Python compiler when running the examples.  By default, or if "
-"``None``, flags are deduced corresponding to the set of future features found"
-" in *globs*."
+"``None``, flags are deduced corresponding to the set of future features "
+"found in *globs*."
 msgstr ""
 
 #: ../../library/doctest.rst:1024
@@ -1414,10 +1417,10 @@ msgstr ""
 msgid ""
 "As your collection of doctest'ed modules grows, you'll want a way to run all "
 "their doctests systematically.  :mod:`!doctest` provides two functions that "
-"can be used to create :mod:`unittest` test suites from modules and text files"
-" containing doctests.  To integrate with :mod:`unittest` test discovery, "
-"include a :ref:`load_tests <load_tests-protocol>` function in your test "
-"module::"
+"can be used to create :mod:`unittest` test suites from modules and text "
+"files containing doctests.  To integrate with :mod:`unittest` test "
+"discovery, include a :ref:`load_tests <load_tests-protocol>` function in "
+"your test module::"
 msgstr ""
 
 #: ../../library/doctest.rst:1038
@@ -1439,20 +1442,20 @@ msgstr ""
 
 #: ../../library/doctest.rst:1052
 msgid ""
-"Convert doctest tests from one or more text files to a "
-":class:`unittest.TestSuite`."
+"Convert doctest tests from one or more text files to a :class:`unittest."
+"TestSuite`."
 msgstr ""
 
 #: ../../library/doctest.rst:1055
 msgid ""
 "The returned :class:`unittest.TestSuite` is to be run by the unittest "
-"framework and runs the interactive examples in each file. Each file is run as"
-" a separate unit test, and each example in a file is run as a :ref:`subtest "
-"<subtests>`. If any example in a file fails, then the synthesized unit test "
-"fails. The traceback for failure or error contains the name of the file "
-"containing the test and a (sometimes approximate) line number. If all the "
-"examples in a file are skipped, then the synthesized unit test is also marked"
-" as skipped."
+"framework and runs the interactive examples in each file. Each file is run "
+"as a separate unit test, and each example in a file is run as a :ref:"
+"`subtest <subtests>`. If any example in a file fails, then the synthesized "
+"unit test fails. The traceback for failure or error contains the name of the "
+"file containing the test and a (sometimes approximate) line number. If all "
+"the examples in a file are skipped, then the synthesized unit test is also "
+"marked as skipped."
 msgstr ""
 
 #: ../../library/doctest.rst:1065
@@ -1471,19 +1474,20 @@ msgstr ""
 
 #: ../../library/doctest.rst:1072
 msgid ""
-"If *module_relative* is ``True`` (the default), then each filename in *paths*"
-" specifies an OS-independent module-relative path.  By default, this path is "
-"relative to the calling module's directory; but if the *package* argument is "
-"specified, then it is relative to that package.  To ensure OS-independence, "
-"each filename should use ``/`` characters to separate path segments, and may "
-"not be an absolute path (i.e., it may not begin with ``/``)."
+"If *module_relative* is ``True`` (the default), then each filename in "
+"*paths* specifies an OS-independent module-relative path.  By default, this "
+"path is relative to the calling module's directory; but if the *package* "
+"argument is specified, then it is relative to that package.  To ensure OS-"
+"independence, each filename should use ``/`` characters to separate path "
+"segments, and may not be an absolute path (i.e., it may not begin with ``/"
+"``)."
 msgstr ""
 
 #: ../../library/doctest.rst:1080
 msgid ""
-"If *module_relative* is ``False``, then each filename in *paths* specifies an"
-" OS-specific path.  The path may be absolute or relative; relative paths are "
-"resolved with respect to the current working directory."
+"If *module_relative* is ``False``, then each filename in *paths* specifies "
+"an OS-specific path.  The path may be absolute or relative; relative paths "
+"are resolved with respect to the current working directory."
 msgstr ""
 
 #: ../../library/doctest.rst:1084
@@ -1522,9 +1526,9 @@ msgstr ""
 
 #: ../../library/doctest.rst:1106
 msgid ""
-"Optional argument *optionflags* specifies the default doctest options for the"
-" tests, created by or-ing together individual option flags.  See section "
-":ref:`doctest-options`. See function :func:`set_unittest_reportflags` below "
+"Optional argument *optionflags* specifies the default doctest options for "
+"the tests, created by or-ing together individual option flags.  See section :"
+"ref:`doctest-options`. See function :func:`set_unittest_reportflags` below "
 "for a better way to set reporting options."
 msgstr ""
 
@@ -1546,9 +1550,9 @@ msgstr ""
 msgid ""
 "The returned :class:`unittest.TestSuite` is to be run by the unittest "
 "framework and runs each doctest in the module. Each docstring is run as a "
-"separate unit test, and each example in a docstring is run as a :ref:`subtest"
-" <subtests>`. If any of the doctests fail, then the synthesized unit test "
-"fails. The traceback for failure or error contains the name of the file "
+"separate unit test, and each example in a docstring is run as a :ref:"
+"`subtest <subtests>`. If any of the doctests fail, then the synthesized unit "
+"test fails. The traceback for failure or error contains the name of the file "
 "containing the test and a (sometimes approximate) line number. If all the "
 "examples in a docstring are skipped, then the synthesized unit test is also "
 "marked as skipped."
@@ -1582,8 +1586,9 @@ msgstr ""
 
 #: ../../library/doctest.rst:1153
 msgid ""
-"Optional arguments *setUp*, *tearDown*, and *optionflags* are the same as for"
-" function :func:`DocFileSuite` above, but they are called for each docstring."
+"Optional arguments *setUp*, *tearDown*, and *optionflags* are the same as "
+"for function :func:`DocFileSuite` above, but they are called for each "
+"docstring."
 msgstr ""
 
 #: ../../library/doctest.rst:1156
@@ -1592,8 +1597,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:1158
 msgid ""
-":func:`DocTestSuite` returns an empty :class:`unittest.TestSuite` if *module*"
-" contains no docstrings instead of raising :exc:`ValueError`."
+":func:`DocTestSuite` returns an empty :class:`unittest.TestSuite` if "
+"*module* contains no docstrings instead of raising :exc:`ValueError`."
 msgstr ""
 
 #: ../../library/doctest.rst:1165
@@ -1607,21 +1612,21 @@ msgstr ""
 
 #: ../../library/doctest.rst:1171
 msgid ""
-"Similarly, :func:`DocFileSuite` creates a :class:`unittest.TestSuite` out of "
-":class:`!doctest.DocFileCase` instances, and :class:`!DocFileCase` is a "
+"Similarly, :func:`DocFileSuite` creates a :class:`unittest.TestSuite` out "
+"of :class:`!doctest.DocFileCase` instances, and :class:`!DocFileCase` is a "
 "subclass of :class:`!DocTestCase`."
 msgstr ""
 
 #: ../../library/doctest.rst:1175
 msgid ""
-"So both ways of creating a :class:`unittest.TestSuite` run instances of "
-":class:`!DocTestCase`.  This is important for a subtle reason: when you run "
-":mod:`!doctest` functions yourself, you can control the :mod:`!doctest` "
+"So both ways of creating a :class:`unittest.TestSuite` run instances of :"
+"class:`!DocTestCase`.  This is important for a subtle reason: when you run :"
+"mod:`!doctest` functions yourself, you can control the :mod:`!doctest` "
 "options in use directly, by passing option flags to :mod:`!doctest` "
-"functions.  However, if you're writing a :mod:`unittest` framework, "
-":mod:`!unittest` ultimately controls when and how tests get run.  The "
-"framework author typically wants to control :mod:`!doctest` reporting options"
-" (perhaps, e.g., specified by command line options), but there's no way to "
+"functions.  However, if you're writing a :mod:`unittest` framework, :mod:`!"
+"unittest` ultimately controls when and how tests get run.  The framework "
+"author typically wants to control :mod:`!doctest` reporting options "
+"(perhaps, e.g., specified by command line options), but there's no way to "
 "pass options through :mod:`!unittest` to :mod:`!doctest` test runners."
 msgstr ""
 
@@ -1644,15 +1649,15 @@ msgstr ""
 #: ../../library/doctest.rst:1196
 msgid ""
 "This is a module-global setting, and affects all future doctests run by "
-"module :mod:`unittest`:  the :meth:`!runTest` method of :class:`!DocTestCase`"
-" looks at the option flags specified for the test case when the "
-":class:`!DocTestCase` instance was constructed.  If no reporting flags were "
-"specified (which is the typical and expected case), :mod:`!doctest`'s "
-":mod:`!unittest` reporting flags are :ref:`bitwise ORed <bitwise>` into the "
-"option flags, and the option flags so augmented are passed to the "
-":class:`DocTestRunner` instance created to run the doctest.  If any reporting"
-" flags were specified when the :class:`!DocTestCase` instance was "
-"constructed, :mod:`!doctest`'s :mod:`!unittest` reporting flags are ignored."
+"module :mod:`unittest`:  the :meth:`!runTest` method of :class:`!"
+"DocTestCase` looks at the option flags specified for the test case when the :"
+"class:`!DocTestCase` instance was constructed.  If no reporting flags were "
+"specified (which is the typical and expected case), :mod:`!doctest`'s :mod:`!"
+"unittest` reporting flags are :ref:`bitwise ORed <bitwise>` into the option "
+"flags, and the option flags so augmented are passed to the :class:"
+"`DocTestRunner` instance created to run the doctest.  If any reporting flags "
+"were specified when the :class:`!DocTestCase` instance was constructed, :mod:"
+"`!doctest`'s :mod:`!unittest` reporting flags are ignored."
 msgstr ""
 
 #: ../../library/doctest.rst:1207
@@ -1681,8 +1686,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:1224
 msgid ""
-":class:`Example`: A single Python :term:`statement`, paired with its expected"
-" output."
+":class:`Example`: A single Python :term:`statement`, paired with its "
+"expected output."
 msgstr ""
 
 #: ../../library/doctest.rst:1227
@@ -1699,21 +1704,21 @@ msgstr ""
 
 #: ../../library/doctest.rst:1233
 msgid ""
-":class:`DocTestFinder`: Finds all docstrings in a given module, and uses a "
-":class:`DocTestParser` to create a :class:`DocTest` from every docstring that"
-" contains interactive examples."
+":class:`DocTestFinder`: Finds all docstrings in a given module, and uses a :"
+"class:`DocTestParser` to create a :class:`DocTest` from every docstring that "
+"contains interactive examples."
 msgstr ""
 
 #: ../../library/doctest.rst:1237
 msgid ""
-":class:`DocTestParser`: Creates a :class:`DocTest` object from a string (such"
-" as an object's docstring)."
+":class:`DocTestParser`: Creates a :class:`DocTest` object from a string "
+"(such as an object's docstring)."
 msgstr ""
 
 #: ../../library/doctest.rst:1240
 msgid ""
-":class:`DocTestRunner`: Executes the examples in a :class:`DocTest`, and uses"
-" an :class:`OutputChecker` to verify their output."
+":class:`DocTestRunner`: Executes the examples in a :class:`DocTest`, and "
+"uses an :class:`OutputChecker` to verify their output."
 msgstr ""
 
 #: ../../library/doctest.rst:1243
@@ -1759,16 +1764,16 @@ msgstr ""
 
 #: ../../library/doctest.rst:1277
 msgid ""
-"A list of :class:`Example` objects encoding the individual interactive Python"
-" examples that should be run by this test."
+"A list of :class:`Example` objects encoding the individual interactive "
+"Python examples that should be run by this test."
 msgstr ""
 
 #: ../../library/doctest.rst:1283
 msgid ""
 "The namespace (aka globals) that the examples should be run in. This is a "
-"dictionary mapping names to values.  Any changes to the namespace made by the"
-" examples (such as binding new variables) will be reflected in :attr:`globs` "
-"after the test is run."
+"dictionary mapping names to values.  Any changes to the namespace made by "
+"the examples (such as binding new variables) will be reflected in :attr:"
+"`globs` after the test is run."
 msgstr ""
 
 #: ../../library/doctest.rst:1291
@@ -1831,11 +1836,11 @@ msgstr ""
 
 #: ../../library/doctest.rst:1349
 msgid ""
-"The exception message generated by the example, if the example is expected to"
-" generate an exception; or ``None`` if it is not expected to generate an "
-"exception.  This exception message is compared against the return value of "
-":func:`traceback.format_exception_only`.  :attr:`exc_msg` ends with a newline"
-" unless it's ``None``.  The constructor adds a newline if needed."
+"The exception message generated by the example, if the example is expected "
+"to generate an exception; or ``None`` if it is not expected to generate an "
+"exception.  This exception message is compared against the return value of :"
+"func:`traceback.format_exception_only`.  :attr:`exc_msg` ends with a newline "
+"unless it's ``None``.  The constructor adds a newline if needed."
 msgstr ""
 
 #: ../../library/doctest.rst:1358
@@ -1847,16 +1852,16 @@ msgstr ""
 
 #: ../../library/doctest.rst:1365
 msgid ""
-"The example's indentation in the containing string, i.e., the number of space"
-" characters that precede the example's first prompt."
+"The example's indentation in the containing string, i.e., the number of "
+"space characters that precede the example's first prompt."
 msgstr ""
 
 #: ../../library/doctest.rst:1371
 msgid ""
 "A dictionary mapping from option flags to ``True`` or ``False``, which is "
 "used to override default options for this example.  Any option flags not "
-"contained in this dictionary are left at their default value (as specified by"
-" the :class:`DocTestRunner`'s :ref:`optionflags <doctest-options>`). By "
+"contained in this dictionary are left at their default value (as specified "
+"by the :class:`DocTestRunner`'s :ref:`optionflags <doctest-options>`). By "
 "default, no options are set."
 msgstr ""
 
@@ -1866,10 +1871,10 @@ msgstr ""
 
 #: ../../library/doctest.rst:1386
 msgid ""
-"A processing class used to extract the :class:`DocTest`\\ s that are relevant"
-" to a given object, from its docstring and the docstrings of its contained "
-"objects. :class:`DocTest`\\ s can be extracted from modules, classes, "
-"functions, methods, staticmethods, classmethods, and properties."
+"A processing class used to extract the :class:`DocTest`\\ s that are "
+"relevant to a given object, from its docstring and the docstrings of its "
+"contained objects. :class:`DocTest`\\ s can be extracted from modules, "
+"classes, functions, methods, staticmethods, classmethods, and properties."
 msgstr ""
 
 #: ../../library/doctest.rst:1391
@@ -1892,9 +1897,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:1400
 msgid ""
-"If the optional argument *exclude_empty* is false, then "
-":meth:`DocTestFinder.find` will include tests for objects with empty "
-"docstrings."
+"If the optional argument *exclude_empty* is false, then :meth:`DocTestFinder."
+"find` will include tests for objects with empty docstrings."
 msgstr ""
 
 #: ../../library/doctest.rst:1404
@@ -1916,10 +1920,10 @@ msgstr ""
 
 #: ../../library/doctest.rst:1416
 msgid ""
-"The optional parameter *module* is the module that contains the given object."
-" If the module is not specified or is ``None``, then the test finder will "
-"attempt to automatically determine the correct module.  The object's module "
-"is used:"
+"The optional parameter *module* is the module that contains the given "
+"object. If the module is not specified or is ``None``, then the test finder "
+"will attempt to automatically determine the correct module.  The object's "
+"module is used:"
 msgstr ""
 
 #: ../../library/doctest.rst:1420
@@ -1945,18 +1949,18 @@ msgstr ""
 msgid ""
 "If *module* is ``False``, no attempt to find the module will be made.  This "
 "is obscure, of use mostly in testing doctest itself: if *module* is "
-"``False``, or is ``None`` but cannot be found automatically, then all objects"
-" are considered to belong to the (non-existent) module, so all contained "
-"objects will (recursively) be searched for doctests."
+"``False``, or is ``None`` but cannot be found automatically, then all "
+"objects are considered to belong to the (non-existent) module, so all "
+"contained objects will (recursively) be searched for doctests."
 msgstr ""
 
 #: ../../library/doctest.rst:1436
 msgid ""
 "The globals for each :class:`DocTest` is formed by combining *globs* and "
 "*extraglobs* (bindings in *extraglobs* override bindings in *globs*).  A new "
-"shallow copy of the globals dictionary is created for each :class:`!DocTest`."
-" If *globs* is not specified, then it defaults to the module's "
-":attr:`~module.__dict__`, if specified, or ``{}`` otherwise. If *extraglobs* "
+"shallow copy of the globals dictionary is created for each :class:`!"
+"DocTest`. If *globs* is not specified, then it defaults to the module's :"
+"attr:`~module.__dict__`, if specified, or ``{}`` otherwise. If *extraglobs* "
 "is not specified, then it defaults to ``{}``."
 msgstr ""
 
@@ -1976,23 +1980,23 @@ msgstr ""
 
 #: ../../library/doctest.rst:1461
 msgid ""
-"Extract all doctest examples from the given string, and collect them into a "
-":class:`DocTest` object."
+"Extract all doctest examples from the given string, and collect them into a :"
+"class:`DocTest` object."
 msgstr ""
 
 #: ../../library/doctest.rst:1464
 msgid ""
-"*globs*, *name*, *filename*, and *lineno* are attributes for the new "
-":class:`!DocTest` object.  See the documentation for :class:`DocTest` for "
-"more information."
+"*globs*, *name*, *filename*, and *lineno* are attributes for the new :class:"
+"`!DocTest` object.  See the documentation for :class:`DocTest` for more "
+"information."
 msgstr ""
 
 #: ../../library/doctest.rst:1471
 msgid ""
-"Extract all doctest examples from the given string, and return them as a list"
-" of :class:`Example` objects.  Line numbers are 0-based.  The optional "
-"argument *name* is a name identifying this string, and is only used for error"
-" messages."
+"Extract all doctest examples from the given string, and return them as a "
+"list of :class:`Example` objects.  Line numbers are 0-based.  The optional "
+"argument *name* is a name identifying this string, and is only used for "
+"error messages."
 msgstr ""
 
 #: ../../library/doctest.rst:1478
@@ -2025,28 +2029,29 @@ msgstr ""
 
 #: ../../library/doctest.rst:1513
 msgid ""
-"A processing class used to execute and verify the interactive examples in a "
-":class:`DocTest`."
+"A processing class used to execute and verify the interactive examples in a :"
+"class:`DocTest`."
 msgstr ""
 
 #: ../../library/doctest.rst:1516
 msgid ""
-"The comparison between expected outputs and actual outputs is done by an "
-":class:`OutputChecker`.  This comparison may be customized with a number of "
+"The comparison between expected outputs and actual outputs is done by an :"
+"class:`OutputChecker`.  This comparison may be customized with a number of "
 "option flags; see section :ref:`doctest-options` for more information.  If "
-"the option flags are insufficient, then the comparison may also be customized"
-" by passing a subclass of :class:`!OutputChecker` to the constructor."
+"the option flags are insufficient, then the comparison may also be "
+"customized by passing a subclass of :class:`!OutputChecker` to the "
+"constructor."
 msgstr ""
 
 #: ../../library/doctest.rst:1522
 msgid ""
 "The test runner's display output can be controlled in two ways. First, an "
 "output function can be passed to :meth:`run`; this function will be called "
-"with strings that should be displayed.  It defaults to ``sys.stdout.write``."
-"  If capturing the output is not sufficient, then the display output can be "
-"also customized by subclassing DocTestRunner, and overriding the methods "
-":meth:`report_skip`, :meth:`report_start`, :meth:`report_success`, "
-":meth:`report_unexpected_exception`, and :meth:`report_failure`."
+"with strings that should be displayed.  It defaults to ``sys.stdout."
+"write``.  If capturing the output is not sufficient, then the display output "
+"can be also customized by subclassing DocTestRunner, and overriding the "
+"methods :meth:`report_skip`, :meth:`report_start`, :meth:`report_success`, :"
+"meth:`report_unexpected_exception`, and :meth:`report_failure`."
 msgstr ""
 
 #: ../../library/doctest.rst:1530
@@ -2058,11 +2063,11 @@ msgstr ""
 
 #: ../../library/doctest.rst:1534
 msgid ""
-"The optional keyword argument *verbose* controls the :class:`DocTestRunner`'s"
-" verbosity.  If *verbose* is ``True``, then information is printed about each"
-" example, as it is run.  If *verbose* is ``False``, then only failures are "
-"printed.  If *verbose* is unspecified, or ``None``, then verbose output is "
-"used iff the command-line switch ``-v`` is used."
+"The optional keyword argument *verbose* controls the :class:"
+"`DocTestRunner`'s verbosity.  If *verbose* is ``True``, then information is "
+"printed about each example, as it is run.  If *verbose* is ``False``, then "
+"only failures are printed.  If *verbose* is unspecified, or ``None``, then "
+"verbose output is used iff the command-line switch ``-v`` is used."
 msgstr ""
 
 #: ../../library/doctest.rst:1540
@@ -2075,9 +2080,9 @@ msgstr ""
 #: ../../library/doctest.rst:1544
 msgid ""
 "The test runner accumulates statistics. The aggregated number of attempted, "
-"failed and skipped examples is also available via the :attr:`tries`, "
-":attr:`failures` and :attr:`skips` attributes. The :meth:`run` and "
-":meth:`summarize` methods return a :class:`TestResults` instance."
+"failed and skipped examples is also available via the :attr:`tries`, :attr:"
+"`failures` and :attr:`skips` attributes. The :meth:`run` and :meth:"
+"`summarize` methods return a :class:`TestResults` instance."
 msgstr ""
 
 #: ../../library/doctest.rst:1549
@@ -2087,22 +2092,22 @@ msgstr ""
 #: ../../library/doctest.rst:1554
 msgid ""
 "Report that the given example was skipped.  This method is provided to allow "
-"subclasses of :class:`DocTestRunner` to customize their output; it should not"
-" be called directly."
+"subclasses of :class:`DocTestRunner` to customize their output; it should "
+"not be called directly."
 msgstr ""
 
 #: ../../library/doctest.rst:1558 ../../library/doctest.rst:1571
 msgid ""
 "*example* is the example about to be processed.  *test* is the test "
-"containing *example*.  *out* is the output function that was passed to "
-":meth:`DocTestRunner.run`."
+"containing *example*.  *out* is the output function that was passed to :meth:"
+"`DocTestRunner.run`."
 msgstr ""
 
 #: ../../library/doctest.rst:1567
 msgid ""
 "Report that the test runner is about to process the given example. This "
-"method is provided to allow subclasses of :class:`DocTestRunner` to customize"
-" their output; it should not be called directly."
+"method is provided to allow subclasses of :class:`DocTestRunner` to "
+"customize their output; it should not be called directly."
 msgstr ""
 
 #: ../../library/doctest.rst:1578
@@ -2122,8 +2127,8 @@ msgstr ""
 #: ../../library/doctest.rst:1589
 msgid ""
 "Report that the given example failed.  This method is provided to allow "
-"subclasses of :class:`DocTestRunner` to customize their output; it should not"
-" be called directly."
+"subclasses of :class:`DocTestRunner` to customize their output; it should "
+"not be called directly."
 msgstr ""
 
 #: ../../library/doctest.rst:1600
@@ -2136,9 +2141,9 @@ msgstr ""
 #: ../../library/doctest.rst:1604
 msgid ""
 "*example* is the example about to be processed. *exc_info* is a tuple "
-"containing information about the unexpected exception (as returned by "
-":func:`sys.exc_info`). *test* is the test containing *example*.  *out* is the"
-" output function that was passed to :meth:`DocTestRunner.run`."
+"containing information about the unexpected exception (as returned by :func:"
+"`sys.exc_info`). *test* is the test containing *example*.  *out* is the "
+"output function that was passed to :meth:`DocTestRunner.run`."
 msgstr ""
 
 #: ../../library/doctest.rst:1612
@@ -2166,8 +2171,8 @@ msgstr ""
 #: ../../library/doctest.rst:1625
 msgid ""
 "The output of each example is checked using the :class:`DocTestRunner`'s "
-"output checker, and the results are formatted by the "
-":meth:`!DocTestRunner.report_\\*` methods."
+"output checker, and the results are formatted by the :meth:`!DocTestRunner."
+"report_\\*` methods."
 msgstr ""
 
 #: ../../library/doctest.rst:1632
@@ -2178,9 +2183,9 @@ msgstr ""
 
 #: ../../library/doctest.rst:1635
 msgid ""
-"The optional *verbose* argument controls how detailed the summary is.  If the"
-" verbosity is not specified, then the :class:`DocTestRunner`'s verbosity is "
-"used."
+"The optional *verbose* argument controls how detailed the summary is.  If "
+"the verbosity is not specified, then the :class:`DocTestRunner`'s verbosity "
+"is used."
 msgstr ""
 
 #: ../../library/doctest.rst:1639
@@ -2206,10 +2211,10 @@ msgstr ""
 #: ../../library/doctest.rst:1664
 msgid ""
 "A class used to check the whether the actual output from a doctest example "
-"matches the expected output.  :class:`OutputChecker` defines two methods: "
-":meth:`check_output`, which compares a given pair of outputs, and returns "
-"``True`` if they match; and :meth:`output_difference`, which returns a string"
-" describing the differences between two outputs."
+"matches the expected output.  :class:`OutputChecker` defines two methods: :"
+"meth:`check_output`, which compares a given pair of outputs, and returns "
+"``True`` if they match; and :meth:`output_difference`, which returns a "
+"string describing the differences between two outputs."
 msgstr ""
 
 #: ../../library/doctest.rst:1671
@@ -2221,8 +2226,8 @@ msgid ""
 "Return ``True`` iff the actual output from an example (*got*) matches the "
 "expected output (*want*).  These strings are always considered to match if "
 "they are identical; but depending on what option flags the test runner is "
-"using, several non-exact match types are also possible.  See section "
-":ref:`doctest-options` for more information about option flags."
+"using, several non-exact match types are also possible.  See section :ref:"
+"`doctest-options` for more information about option flags."
 msgstr ""
 
 #: ../../library/doctest.rst:1684
@@ -2256,16 +2261,16 @@ msgstr ""
 
 #: ../../library/doctest.rst:1704
 msgid ""
-"The :mod:`unittest` cases generated by :func:`DocTestSuite` support the "
-":meth:`debug` method defined by :class:`unittest.TestCase`."
+"The :mod:`unittest` cases generated by :func:`DocTestSuite` support the :"
+"meth:`debug` method defined by :class:`unittest.TestCase`."
 msgstr ""
 
 #: ../../library/doctest.rst:1707
 msgid ""
 "You can add a call to :func:`pdb.set_trace` in a doctest example, and you'll "
 "drop into the Python debugger when that line is executed.  Then you can "
-"inspect current values of variables, and so on.  For example, suppose "
-":file:`a.py` contains just this module docstring::"
+"inspect current values of variables, and so on.  For example, suppose :file:"
+"`a.py` contains just this module docstring::"
 msgstr ""
 
 #: ../../library/doctest.rst:1712
@@ -2366,9 +2371,9 @@ msgstr ""
 
 #: ../../library/doctest.rst:1788
 msgid ""
-"This function is used internally by other functions (see below), but can also"
-" be useful when you want to transform an interactive Python session into a "
-"Python script."
+"This function is used internally by other functions (see below), but can "
+"also be useful when you want to transform an interactive Python session into "
+"a Python script."
 msgstr ""
 
 #: ../../library/doctest.rst:1795
@@ -2381,8 +2386,8 @@ msgid ""
 "the object whose doctests are of interest.  Argument *name* is the name "
 "(within the module) of the object with the doctests of interest.  The result "
 "is a string, containing the object's docstring converted to a Python script, "
-"as described for :func:`script_from_examples` above.  For example, if module "
-":file:`a.py` contains a top-level function :func:`!f`, then ::"
+"as described for :func:`script_from_examples` above.  For example, if "
+"module :file:`a.py` contains a top-level function :func:`!f`, then ::"
 msgstr ""
 
 #: ../../library/doctest.rst:1804
@@ -2403,10 +2408,10 @@ msgstr ""
 
 #: ../../library/doctest.rst:1815
 msgid ""
-"The *module* and *name* arguments are the same as for function "
-":func:`testsource` above.  The synthesized Python script for the named "
-"object's docstring is written to a temporary file, and then that file is run "
-"under the control of the Python debugger, :mod:`pdb`."
+"The *module* and *name* arguments are the same as for function :func:"
+"`testsource` above.  The synthesized Python script for the named object's "
+"docstring is written to a temporary file, and then that file is run under "
+"the control of the Python debugger, :mod:`pdb`."
 msgstr ""
 
 #: ../../library/doctest.rst:1820
@@ -2418,13 +2423,13 @@ msgstr ""
 #: ../../library/doctest.rst:1823
 msgid ""
 "Optional argument *pm* controls whether post-mortem debugging is used.  If "
-"*pm* has a true value, the script file is run directly, and the debugger gets"
-" involved only if the script terminates via raising an unhandled exception.  "
-"If it does, then post-mortem debugging is invoked, via "
-":func:`pdb.post_mortem`, passing the traceback object from the unhandled "
+"*pm* has a true value, the script file is run directly, and the debugger "
+"gets involved only if the script terminates via raising an unhandled "
+"exception.  If it does, then post-mortem debugging is invoked, via :func:"
+"`pdb.post_mortem`, passing the traceback object from the unhandled "
 "exception.  If *pm* is not specified, or is false, the script is run under "
-"the debugger from the start, via passing an appropriate :func:`exec` call to "
-":func:`pdb.run`."
+"the debugger from the start, via passing an appropriate :func:`exec` call "
+"to :func:`pdb.run`."
 msgstr ""
 
 #: ../../library/doctest.rst:1834
@@ -2461,11 +2466,11 @@ msgstr ""
 #: ../../library/doctest.rst:1854
 msgid ""
 "A subclass of :class:`DocTestRunner` that raises an exception as soon as a "
-"failure is encountered.  If an unexpected exception occurs, an "
-":exc:`UnexpectedException` exception is raised, containing the test, the "
-"example, and the original exception.  If the output doesn't match, then a "
-":exc:`DocTestFailure` exception is raised, containing the test, the example, "
-"and the actual output."
+"failure is encountered.  If an unexpected exception occurs, an :exc:"
+"`UnexpectedException` exception is raised, containing the test, the example, "
+"and the original exception.  If the output doesn't match, then a :exc:"
+"`DocTestFailure` exception is raised, containing the test, the example, and "
+"the actual output."
 msgstr ""
 
 #: ../../library/doctest.rst:1861
@@ -2517,8 +2522,8 @@ msgstr ""
 
 #: ../../library/doctest.rst:1912
 msgid ""
-"A tuple containing information about the unexpected exception, as returned by"
-" :func:`sys.exc_info`."
+"A tuple containing information about the unexpected exception, as returned "
+"by :func:`sys.exc_info`."
 msgstr ""
 
 #: ../../library/doctest.rst:1919
@@ -2552,13 +2557,14 @@ msgstr ""
 
 #: ../../library/doctest.rst:1934
 msgid ""
-"When writing a docstring, choose docstring examples with care. There's an art"
-" to this that needs to be learned---it may not be natural at first.  Examples"
-" should add genuine value to the documentation.  A good example can often be "
-"worth many words. If done with care, the examples will be invaluable for your"
-" users, and will pay back the time it takes to collect them many times over "
-"as the years go by and things change.  I'm still amazed at how often one of "
-"my :mod:`!doctest` examples stops working after a \"harmless\" change."
+"When writing a docstring, choose docstring examples with care. There's an "
+"art to this that needs to be learned---it may not be natural at first.  "
+"Examples should add genuine value to the documentation.  A good example can "
+"often be worth many words. If done with care, the examples will be "
+"invaluable for your users, and will pay back the time it takes to collect "
+"them many times over as the years go by and things change.  I'm still amazed "
+"at how often one of my :mod:`!doctest` examples stops working after a "
+"\"harmless\" change."
 msgstr ""
 
 #: ../../library/doctest.rst:1942
@@ -2576,16 +2582,16 @@ msgid ""
 "doctest-based test is that you want to explain the fine points of your "
 "software, and illustrate them with examples. This in turn naturally leads to "
 "test files that start with the simplest features, and logically progress to "
-"complications and edge cases.  A coherent narrative is the result, instead of"
-" a collection of isolated functions that test isolated bits of functionality "
-"seemingly at random.  It's a different attitude, and produces different "
-"results, blurring the distinction between testing and explaining."
+"complications and edge cases.  A coherent narrative is the result, instead "
+"of a collection of isolated functions that test isolated bits of "
+"functionality seemingly at random.  It's a different attitude, and produces "
+"different results, blurring the distinction between testing and explaining."
 msgstr ""
 
 #: ../../library/doctest.rst:1960
 msgid ""
-"Regression testing is best confined to dedicated objects or files.  There are"
-" several options for organizing tests:"
+"Regression testing is best confined to dedicated objects or files.  There "
+"are several options for organizing tests:"
 msgstr ""
 
 #: ../../library/doctest.rst:1963
@@ -2598,9 +2604,10 @@ msgstr ""
 
 #: ../../library/doctest.rst:1968
 msgid ""
-"Define functions named ``_regrtest_topic`` that consist of single docstrings,"
-" containing test cases for the named topics.  These functions can be included"
-" in the same file as the module, or separated out into a separate test file."
+"Define functions named ``_regrtest_topic`` that consist of single "
+"docstrings, containing test cases for the named topics.  These functions can "
+"be included in the same file as the module, or separated out into a separate "
+"test file."
 msgstr ""
 
 #: ../../library/doctest.rst:1972

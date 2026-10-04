@@ -25,8 +25,8 @@ msgid ""
 "The modules described in this chapter provide functions and classes that "
 "support a functional programming style, and general operations on callables."
 msgstr ""
-"Die in diesem Kapitel beschriebenen Module bieten Funktionen und Klassen, die"
-" einen funktionalen Programmierstil sowie allgemeine Operationen auf "
+"Die in diesem Kapitel beschriebenen Module bieten Funktionen und Klassen, "
+"die einen funktionalen Programmierstil sowie allgemeine Operationen auf "
 "aufrufbaren Objekten unterstützen."
 
 #: ../../library/functional.rst:8

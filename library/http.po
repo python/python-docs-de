@@ -38,8 +38,8 @@ msgstr ""
 
 #: ../../library/http.rst:20
 msgid ""
-":mod:`http.server` contains basic HTTP server classes based on "
-":mod:`socketserver`"
+":mod:`http.server` contains basic HTTP server classes based on :mod:"
+"`socketserver`"
 msgstr ""
 
 #: ../../library/http.rst:21
@@ -92,9 +92,9 @@ msgstr ""
 
 #: ../../library/http.rst:55
 msgid ""
-"Supported, `IANA-registered status codes "
-"<https://www.iana.org/assignments/http-status-codes/http-status-"
-"codes.xhtml>`_ available in :class:`http.HTTPStatus` are:"
+"Supported, `IANA-registered status codes <https://www.iana.org/assignments/"
+"http-status-codes/http-status-codes.xhtml>`_ available in :class:`http."
+"HTTPStatus` are:"
 msgstr ""
 
 #: ../../library/http.rst:60
@@ -851,8 +851,8 @@ msgstr ""
 
 #: ../../library/http.rst:126
 msgid ""
-"In order to preserve backwards compatibility, enum values are also present in"
-" the :mod:`http.client` module in the form of constants. The enum name is "
+"In order to preserve backwards compatibility, enum values are also present "
+"in the :mod:`http.client` module in the form of constants. The enum name is "
 "equal to the constant name (i.e. ``http.HTTPStatus.OK`` is also available as "
 "``http.client.OK``)."
 msgstr ""

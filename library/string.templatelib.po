@@ -43,9 +43,9 @@ msgstr ""
 #: ../../library/string.templatelib.rst:24
 msgid ""
 "Template strings are a mechanism for custom string processing. They have the "
-"full flexibility of Python's :ref:`f-strings`, but return a :class:`Template`"
-" instance that gives access to the static and interpolated (in curly "
-"brackets) parts of a string *before* they are combined."
+"full flexibility of Python's :ref:`f-strings`, but return a :class:"
+"`Template` instance that gives access to the static and interpolated (in "
+"curly brackets) parts of a string *before* they are combined."
 msgstr ""
 
 #: ../../library/string.templatelib.rst:30
@@ -75,8 +75,8 @@ msgstr ""
 
 #: ../../library/string.templatelib.rst:49
 msgid ""
-"The most common way to create a :class:`!Template` instance is to use the "
-":ref:`template string literal syntax <t-strings>`. This syntax is identical "
+"The most common way to create a :class:`!Template` instance is to use the :"
+"ref:`template string literal syntax <t-strings>`. This syntax is identical "
 "to that of :ref:`f-strings <f-strings>`, except that it uses a ``t`` prefix "
 "in place of an ``f``:"
 msgstr ""
@@ -137,8 +137,8 @@ msgstr ""
 #: ../../library/string.templatelib.rst:139
 msgid ""
 "The ``values`` tuple always has the same length as the ``interpolations`` "
-"tuple. It is always equivalent to ``tuple(i.value for i in "
-"template.interpolations)``."
+"tuple. It is always equivalent to ``tuple(i.value for i in template."
+"interpolations)``."
 msgstr ""
 
 #: ../../library/string.templatelib.rst:144
@@ -163,14 +163,14 @@ msgstr ""
 msgid ""
 "If multiple interpolations are passed consecutively, they will be treated as "
 "separate interpolations and an empty string will be inserted between them. "
-"For example, the following code creates a template with empty placeholders in"
-" the :attr:`~Template.strings` attribute:"
+"For example, the following code creates a template with empty placeholders "
+"in the :attr:`~Template.strings` attribute:"
 msgstr ""
 
 #: ../../library/string.templatelib.rst:182
 msgid ""
-"Iterate over the template, yielding each non-empty string and "
-":class:`Interpolation` in the correct order:"
+"Iterate over the template, yielding each non-empty string and :class:"
+"`Interpolation` in the correct order:"
 msgstr ""
 
 #: ../../library/string.templatelib.rst:191
@@ -188,9 +188,9 @@ msgid ""
 "Concatenating a :class:`!Template` and a ``str`` is **not** supported. This "
 "is because it is unclear whether the string should be treated as a static "
 "string or an interpolation. If you want to concatenate a :class:`!Template` "
-"with a string, you should either wrap the string directly in a "
-":class:`!Template` (to treat it as a static string) or use an "
-":class:`!Interpolation` (to treat it as dynamic):"
+"with a string, you should either wrap the string directly in a :class:`!"
+"Template` (to treat it as a static string) or use an :class:`!Interpolation` "
+"(to treat it as dynamic):"
 msgstr ""
 
 #: ../../library/string.templatelib.rst:232
@@ -304,9 +304,9 @@ msgstr "Hilfsfunktionen"
 
 #: ../../library/string.templatelib.rst:341
 msgid ""
-"Applies formatted string literal :ref:`conversion <formatstrings-conversion>`"
-" semantics to the given object *obj*. This is frequently useful for custom "
-"template string processing logic."
+"Applies formatted string literal :ref:`conversion <formatstrings-"
+"conversion>` semantics to the given object *obj*. This is frequently useful "
+"for custom template string processing logic."
 msgstr ""
 
 #: ../../library/string.templatelib.rst:345

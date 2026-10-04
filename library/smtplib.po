@@ -58,32 +58,31 @@ msgstr ""
 #: ../../library/smtplib.rst:31
 msgid ""
 "If specified, *local_hostname* is used as the FQDN of the local host in the "
-"HELO/EHLO command.  Otherwise, the local hostname is found using "
-":func:`socket.getfqdn`.  If the :meth:`connect` call returns anything other "
-"than a success code, an :exc:`SMTPConnectError` is raised. The optional "
-"*timeout* parameter specifies a timeout in seconds for blocking operations "
-"like the connection attempt (if not specified, the global default timeout "
-"setting will be used).  If the timeout expires, :exc:`TimeoutError` is "
-"raised.  The optional *source_address* parameter allows binding to some "
-"specific source address in a machine with multiple network interfaces, and/or"
-" to some specific source TCP port. It takes a 2-tuple ``(host, port)``, for "
-"the socket to bind to as its source address before connecting. If omitted (or"
-" if *host* or *port* are ``''`` and/or ``0`` respectively) the OS default "
+"HELO/EHLO command.  Otherwise, the local hostname is found using :func:"
+"`socket.getfqdn`.  If the :meth:`connect` call returns anything other than a "
+"success code, an :exc:`SMTPConnectError` is raised. The optional *timeout* "
+"parameter specifies a timeout in seconds for blocking operations like the "
+"connection attempt (if not specified, the global default timeout setting "
+"will be used).  If the timeout expires, :exc:`TimeoutError` is raised.  The "
+"optional *source_address* parameter allows binding to some specific source "
+"address in a machine with multiple network interfaces, and/or to some "
+"specific source TCP port. It takes a 2-tuple ``(host, port)``, for the "
+"socket to bind to as its source address before connecting. If omitted (or if "
+"*host* or *port* are ``''`` and/or ``0`` respectively) the OS default "
 "behavior will be used."
 msgstr ""
 
 #: ../../library/smtplib.rst:45
 msgid ""
-"For normal use, you should only require the initialization/connect, "
-":meth:`sendmail`, and :meth:`SMTP.quit` methods. An example is included "
-"below."
+"For normal use, you should only require the initialization/connect, :meth:"
+"`sendmail`, and :meth:`SMTP.quit` methods. An example is included below."
 msgstr ""
 
 #: ../../library/smtplib.rst:49
 msgid ""
 "The :class:`SMTP` class supports the :keyword:`with` statement.  When used "
-"like this, the SMTP ``QUIT`` command is issued automatically when the "
-":keyword:`!with` statement exits.  E.g.::"
+"like this, the SMTP ``QUIT`` command is issued automatically when the :"
+"keyword:`!with` statement exits.  E.g.::"
 msgstr ""
 
 #: ../../library/smtplib.rst:53
@@ -98,9 +97,9 @@ msgstr ""
 
 #: ../../library/smtplib.rst:60 ../../library/smtplib.rst:62
 msgid ""
-"All commands will raise an :ref:`auditing event <auditing>` "
-"``smtplib.SMTP.send`` with arguments ``self`` and ``data``, where ``data`` is"
-" the bytes about to be sent to the remote host."
+"All commands will raise an :ref:`auditing event <auditing>` ``smtplib.SMTP."
+"send`` with arguments ``self`` and ``data``, where ``data`` is the bytes "
+"about to be sent to the remote host."
 msgstr ""
 
 #: ../../library/smtplib.rst:68
@@ -121,16 +120,16 @@ msgstr ""
 
 #: ../../library/smtplib.rst:79
 msgid ""
-"If the *timeout* parameter is set to be zero, it will raise a "
-":class:`ValueError` to prevent the creation of a non-blocking socket."
+"If the *timeout* parameter is set to be zero, it will raise a :class:"
+"`ValueError` to prevent the creation of a non-blocking socket."
 msgstr ""
 
 #: ../../library/smtplib.rst:86
 msgid ""
-"An :class:`SMTP_SSL` instance behaves exactly the same as instances of "
-":class:`SMTP`. :class:`SMTP_SSL` should be used for situations where SSL is "
-"required from the beginning of the connection and using :meth:`SMTP.starttls`"
-" is not appropriate."
+"An :class:`SMTP_SSL` instance behaves exactly the same as instances of :"
+"class:`SMTP`. :class:`SMTP_SSL` should be used for situations where SSL is "
+"required from the beginning of the connection and using :meth:`SMTP."
+"starttls` is not appropriate."
 msgstr ""
 
 #: ../../library/smtplib.rst:91
@@ -163,15 +162,14 @@ msgstr ""
 
 #: ../../library/smtplib.rst:111
 msgid ""
-"The class now supports hostname check with "
-":attr:`ssl.SSLContext.check_hostname` and *Server Name Indication* (see "
-":const:`ssl.HAS_SNI`)."
+"The class now supports hostname check with :attr:`ssl.SSLContext."
+"check_hostname` and *Server Name Indication* (see :const:`ssl.HAS_SNI`)."
 msgstr ""
 
 #: ../../library/smtplib.rst:116
 msgid ""
-"If the *timeout* parameter is set to be zero, it will raise a "
-":class:`ValueError` to prevent the creation of a non-blocking socket"
+"If the *timeout* parameter is set to be zero, it will raise a :class:"
+"`ValueError` to prevent the creation of a non-blocking socket"
 msgstr ""
 
 #: ../../library/smtplib.rst:120 ../../library/smtplib.rst:428
@@ -181,9 +179,9 @@ msgstr ""
 #: ../../library/smtplib.rst:126
 msgid ""
 "The LMTP protocol, which is very similar to ESMTP, is heavily based on the "
-"standard SMTP client. It's common to use Unix sockets for LMTP, so our "
-":meth:`~SMTP.connect` method must support that as well as a regular host:port"
-" server. The optional arguments *local_hostname* and *source_address* have "
+"standard SMTP client. It's common to use Unix sockets for LMTP, so our :meth:"
+"`~SMTP.connect` method must support that as well as a regular host:port "
+"server. The optional arguments *local_hostname* and *source_address* have "
 "the same meaning as they do in the :class:`SMTP` class. To specify a Unix "
 "socket, you must use an absolute path for *host*, starting with a '/'."
 msgstr ""
@@ -205,8 +203,8 @@ msgstr ""
 
 #: ../../library/smtplib.rst:146
 msgid ""
-"Subclass of :exc:`OSError` that is the base exception class for all the other"
-" exceptions provided by this module."
+"Subclass of :exc:`OSError` that is the base exception class for all the "
+"other exceptions provided by this module."
 msgstr ""
 
 #: ../../library/smtplib.rst:149
@@ -215,9 +213,9 @@ msgstr ""
 
 #: ../../library/smtplib.rst:155
 msgid ""
-"This exception is raised when the server unexpectedly disconnects, or when an"
-" attempt is made to use the :class:`SMTP` instance before connecting it to a "
-"server."
+"This exception is raised when the server unexpectedly disconnects, or when "
+"an attempt is made to use the :class:`SMTP` instance before connecting it to "
+"a server."
 msgstr ""
 
 #: ../../library/smtplib.rst:162
@@ -237,9 +235,9 @@ msgstr ""
 
 #: ../../library/smtplib.rst:176
 msgid ""
-"Sender address refused.  In addition to the attributes set by on all "
-":exc:`SMTPResponseException` exceptions, this sets 'sender' to the string "
-"that the SMTP server refused."
+"Sender address refused.  In addition to the attributes set by on all :exc:"
+"`SMTPResponseException` exceptions, this sets 'sender' to the string that "
+"the SMTP server refused."
 msgstr ""
 
 #: ../../library/smtplib.rst:183
@@ -336,8 +334,8 @@ msgstr ""
 
 #: ../../library/smtplib.rst:261
 msgid ""
-"If the connection to the server is lost while waiting for the reply, "
-":exc:`SMTPServerDisconnected` will be raised."
+"If the connection to the server is lost while waiting for the reply, :exc:"
+"`SMTPServerDisconnected` will be raised."
 msgstr ""
 
 #: ../../library/smtplib.rst:267
@@ -353,14 +351,14 @@ msgstr ""
 
 #: ../../library/smtplib.rst:275
 msgid ""
-"If port is not changed from its default value of 0, the value of the "
-":attr:`default_port` attribute is used."
+"If port is not changed from its default value of 0, the value of the :attr:"
+"`default_port` attribute is used."
 msgstr ""
 
 #: ../../library/smtplib.rst:278
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``smtplib.connect`` with arguments"
-" ``self``, ``host``, ``port``."
+"Raises an :ref:`auditing event <auditing>` ``smtplib.connect`` with "
+"arguments ``self``, ``host``, ``port``."
 msgstr ""
 
 #: ../../library/smtplib.rst:283
@@ -385,16 +383,16 @@ msgid ""
 "response for ESMTP option and store them for use by :meth:`has_extn`. Also "
 "sets several informational attributes: the message returned by the server is "
 "stored as the :attr:`ehlo_resp` attribute, :attr:`does_esmtp` is set to "
-"``True`` or ``False`` depending on whether the server supports ESMTP, and "
-":attr:`esmtp_features` will be a dictionary containing the names of the SMTP "
+"``True`` or ``False`` depending on whether the server supports ESMTP, and :"
+"attr:`esmtp_features` will be a dictionary containing the names of the SMTP "
 "service extensions this server supports, and their parameters (if any)."
 msgstr ""
 
 #: ../../library/smtplib.rst:304
 msgid ""
-"Unless you wish to use :meth:`has_extn` before sending mail, it should not be"
-" necessary to call this method explicitly.  It will be implicitly called by "
-":meth:`sendmail` when necessary."
+"Unless you wish to use :meth:`has_extn` before sending mail, it should not "
+"be necessary to call this method explicitly.  It will be implicitly called "
+"by :meth:`sendmail` when necessary."
 msgstr ""
 
 #: ../../library/smtplib.rst:310
@@ -423,9 +421,9 @@ msgstr ""
 #: ../../library/smtplib.rst:325
 msgid ""
 "Check the validity of an address on this server using SMTP ``VRFY``. Returns "
-"a tuple consisting of code 250 and a full :rfc:`822` address (including human"
-" name) if the user address is valid. Otherwise returns an SMTP error code of "
-"400 or greater and an error string."
+"a tuple consisting of code 250 and a full :rfc:`822` address (including "
+"human name) if the user address is valid. Otherwise returns an SMTP error "
+"code of 400 or greater and an error string."
 msgstr ""
 
 #: ../../library/smtplib.rst:332
@@ -435,10 +433,10 @@ msgstr ""
 #: ../../library/smtplib.rst:337
 msgid ""
 "Log in on an SMTP server that requires authentication. The arguments are the "
-"username and the password to authenticate with. If there has been no previous"
-" ``EHLO`` or ``HELO`` command this session, this method tries ESMTP ``EHLO`` "
-"first. This method will return normally if the authentication was successful,"
-" or may raise the following exceptions:"
+"username and the password to authenticate with. If there has been no "
+"previous ``EHLO`` or ``HELO`` command this session, this method tries ESMTP "
+"``EHLO`` first. This method will return normally if the authentication was "
+"successful, or may raise the following exceptions:"
 msgstr ""
 
 #: ../../library/smtplib.rst:346
@@ -469,9 +467,9 @@ msgstr ""
 #: ../../library/smtplib.rst:355
 msgid ""
 "Each of the authentication methods supported by :mod:`!smtplib` are tried in "
-"turn if they are advertised as supported by the server.  See :meth:`auth` for"
-" a list of supported authentication methods.  *initial_response_ok* is passed"
-" through to :meth:`auth`."
+"turn if they are advertised as supported by the server.  See :meth:`auth` "
+"for a list of supported authentication methods.  *initial_response_ok* is "
+"passed through to :meth:`auth`."
 msgstr ""
 
 #: ../../library/smtplib.rst:360
@@ -533,17 +531,17 @@ msgstr ""
 #: ../../library/smtplib.rst:397
 msgid ""
 "The ``SMTP`` class provides ``authobjects`` for the ``CRAM-MD5``, ``PLAIN``, "
-"and ``LOGIN`` mechanisms; they are named ``SMTP.auth_cram_md5``, "
-"``SMTP.auth_plain``, and ``SMTP.auth_login`` respectively.  They all require "
-"that the ``user`` and ``password`` properties of the ``SMTP`` instance are "
-"set to appropriate values."
+"and ``LOGIN`` mechanisms; they are named ``SMTP.auth_cram_md5``, ``SMTP."
+"auth_plain``, and ``SMTP.auth_login`` respectively.  They all require that "
+"the ``user`` and ``password`` properties of the ``SMTP`` instance are set to "
+"appropriate values."
 msgstr ""
 
 #: ../../library/smtplib.rst:403
 msgid ""
 "User code does not normally need to call ``auth`` directly, but can instead "
-"call the :meth:`login` method, which will try each of the above mechanisms in"
-" turn, in the order listed.  ``auth`` is exposed to facilitate the "
+"call the :meth:`login` method, which will try each of the above mechanisms "
+"in turn, in the order listed.  ``auth`` is exposed to facilitate the "
 "implementation of authentication methods not (or not yet) supported directly "
 "by :mod:`!smtplib`."
 msgstr ""
@@ -557,21 +555,21 @@ msgstr ""
 
 #: ../../library/smtplib.rst:418
 msgid ""
-"If *keyfile* and *certfile* are provided, they are used to create an "
-":class:`ssl.SSLContext`."
+"If *keyfile* and *certfile* are provided, they are used to create an :class:"
+"`ssl.SSLContext`."
 msgstr ""
 
 #: ../../library/smtplib.rst:421
 msgid ""
-"Optional *context* parameter is an :class:`ssl.SSLContext` object; This is an"
-" alternative to using a keyfile and a certfile and if specified both "
+"Optional *context* parameter is an :class:`ssl.SSLContext` object; This is "
+"an alternative to using a keyfile and a certfile and if specified both "
 "*keyfile* and *certfile* should be ``None``."
 msgstr ""
 
 #: ../../library/smtplib.rst:425
 msgid ""
-"If there has been no previous ``EHLO`` or ``HELO`` command this session, this"
-" method tries ESMTP ``EHLO`` first."
+"If there has been no previous ``EHLO`` or ``HELO`` command this session, "
+"this method tries ESMTP ``EHLO`` first."
 msgstr ""
 
 #: ../../library/smtplib.rst:435
@@ -588,16 +586,14 @@ msgstr ""
 
 #: ../../library/smtplib.rst:443
 msgid ""
-"The method now supports hostname check with "
-":attr:`ssl.SSLContext.check_hostname` and *Server Name Indicator* (see "
-":const:`~ssl.HAS_SNI`)."
+"The method now supports hostname check with :attr:`ssl.SSLContext."
+"check_hostname` and *Server Name Indicator* (see :const:`~ssl.HAS_SNI`)."
 msgstr ""
 
 #: ../../library/smtplib.rst:448
 msgid ""
-"The error raised for lack of STARTTLS support is now the "
-":exc:`SMTPNotSupportedError` subclass instead of the base "
-":exc:`SMTPException`."
+"The error raised for lack of STARTTLS support is now the :exc:"
+"`SMTPNotSupportedError` subclass instead of the base :exc:`SMTPException`."
 msgstr ""
 
 #: ../../library/smtplib.rst:456
@@ -605,14 +601,14 @@ msgid ""
 "Send mail.  The required arguments are an :rfc:`822` from-address string, a "
 "list of :rfc:`822` to-address strings (a bare string will be treated as a "
 "list with 1 address), and a message string.  The caller may pass a list of "
-"ESMTP options (such as ``\"8bitmime\"``) to be used in ``MAIL FROM`` commands"
-" as *mail_options*. ESMTP options (such as ``DSN`` commands) that should be "
-"used with all ``RCPT`` commands can be passed as *rcpt_options*. Each option "
-"should be passed as a string containing the full text of the option, "
-"including any potential key (for instance, ``\"NOTIFY=SUCCESS,FAILURE\"``). "
-"(If you need to use different ESMTP options to different recipients you have "
-"to use the low-level methods such as :meth:`!mail`, :meth:`!rcpt` and "
-":meth:`!data` to send the message.)"
+"ESMTP options (such as ``\"8bitmime\"``) to be used in ``MAIL FROM`` "
+"commands as *mail_options*. ESMTP options (such as ``DSN`` commands) that "
+"should be used with all ``RCPT`` commands can be passed as *rcpt_options*. "
+"Each option should be passed as a string containing the full text of the "
+"option, including any potential key (for instance, ``\"NOTIFY=SUCCESS,"
+"FAILURE\"``). (If you need to use different ESMTP options to different "
+"recipients you have to use the low-level methods such as :meth:`!mail`, :"
+"meth:`!rcpt` and :meth:`!data` to send the message.)"
 msgstr ""
 
 #: ../../library/smtplib.rst:469
@@ -625,18 +621,18 @@ msgstr ""
 #: ../../library/smtplib.rst:473
 msgid ""
 "*msg* may be a string containing characters in the ASCII range, or a byte "
-"string.  A string is encoded to bytes using the ascii codec, and lone ``\\r``"
-" and ``\\n`` characters are converted to ``\\r\\n`` characters.  A byte "
-"string is not modified."
+"string.  A string is encoded to bytes using the ascii codec, and lone "
+"``\\r`` and ``\\n`` characters are converted to ``\\r\\n`` characters.  A "
+"byte string is not modified."
 msgstr ""
 
 #: ../../library/smtplib.rst:478
 msgid ""
-"If there has been no previous ``EHLO`` or ``HELO`` command this session, this"
-" method tries ESMTP ``EHLO`` first. If the server does ESMTP, message size "
-"and each of the specified options will be passed to it (if the option is in "
-"the feature set the server advertises).  If ``EHLO`` fails, ``HELO`` will be "
-"tried and ESMTP options suppressed."
+"If there has been no previous ``EHLO`` or ``HELO`` command this session, "
+"this method tries ESMTP ``EHLO`` first. If the server does ESMTP, message "
+"size and each of the specified options will be passed to it (if the option "
+"is in the feature set the server advertises).  If ``EHLO`` fails, ``HELO`` "
+"will be tried and ESMTP options suppressed."
 msgstr ""
 
 #: ../../library/smtplib.rst:484
@@ -645,8 +641,8 @@ msgid ""
 "recipient. Otherwise it will raise an exception.  That is, if this method "
 "does not raise an exception, then someone should get your mail. If this "
 "method does not raise an exception, it returns a dictionary, with one entry "
-"for each recipient that was refused.  Each entry contains a tuple of the SMTP"
-" error code and the accompanying error message sent by the server."
+"for each recipient that was refused.  Each entry contains a tuple of the "
+"SMTP error code and the accompanying error message sent by the server."
 msgstr ""
 
 #: ../../library/smtplib.rst:491
@@ -703,8 +699,8 @@ msgstr ""
 
 #: ../../library/smtplib.rst:519
 msgid ""
-"``SMTPUTF8`` support added, and :exc:`SMTPNotSupportedError` may be raised if"
-" ``SMTPUTF8`` is specified but the server does not support it."
+"``SMTPUTF8`` support added, and :exc:`SMTPNotSupportedError` may be raised "
+"if ``SMTPUTF8`` is specified but the server does not support it."
 msgstr ""
 
 #: ../../library/smtplib.rst:527
@@ -721,28 +717,28 @@ msgid ""
 "those arguments with addresses extracted from the headers of *msg* as "
 "specified in :rfc:`5322`\\: *from_addr* is set to the :mailheader:`Sender` "
 "field if it is present, and otherwise to the :mailheader:`From` field. "
-"*to_addrs* combines the values (if any) of the :mailheader:`To`, "
-":mailheader:`Cc`, and :mailheader:`Bcc` fields from *msg*.  If exactly one "
-"set of :mailheader:`Resent-*` headers appear in the message, the regular "
-"headers are ignored and the :mailheader:`Resent-*` headers are used instead. "
-"If the message contains more than one set of :mailheader:`Resent-*` headers, "
-"a :exc:`ValueError` is raised, since there is no way to unambiguously detect "
-"the most recent set of :mailheader:`Resent-` headers."
+"*to_addrs* combines the values (if any) of the :mailheader:`To`, :mailheader:"
+"`Cc`, and :mailheader:`Bcc` fields from *msg*.  If exactly one set of :"
+"mailheader:`Resent-*` headers appear in the message, the regular headers are "
+"ignored and the :mailheader:`Resent-*` headers are used instead. If the "
+"message contains more than one set of :mailheader:`Resent-*` headers, a :exc:"
+"`ValueError` is raised, since there is no way to unambiguously detect the "
+"most recent set of :mailheader:`Resent-` headers."
 msgstr ""
 
 #: ../../library/smtplib.rst:544
 msgid ""
-"``send_message`` serializes *msg* using "
-":class:`~email.generator.BytesGenerator` with ``\\r\\n`` as the *linesep*, "
-"and calls :meth:`sendmail` to transmit the resulting message.  Regardless of "
-"the values of *from_addr* and *to_addrs*, ``send_message`` does not transmit "
-"any :mailheader:`Bcc` or :mailheader:`Resent-Bcc` headers that may appear in "
-"*msg*.  If any of the addresses in *from_addr* and *to_addrs* contain non-"
-"ASCII characters and the server does not advertise ``SMTPUTF8`` support, an "
-":exc:`SMTPNotSupportedError` is raised.  Otherwise the ``Message`` is "
-"serialized with a clone of its :mod:`~email.policy` with the "
-":attr:`~email.policy.EmailPolicy.utf8` attribute set to ``True``, and "
-"``SMTPUTF8`` and ``BODY=8BITMIME`` are added to *mail_options*."
+"``send_message`` serializes *msg* using :class:`~email.generator."
+"BytesGenerator` with ``\\r\\n`` as the *linesep*, and calls :meth:`sendmail` "
+"to transmit the resulting message.  Regardless of the values of *from_addr* "
+"and *to_addrs*, ``send_message`` does not transmit any :mailheader:`Bcc` or :"
+"mailheader:`Resent-Bcc` headers that may appear in *msg*.  If any of the "
+"addresses in *from_addr* and *to_addrs* contain non-ASCII characters and the "
+"server does not advertise ``SMTPUTF8`` support, an :exc:"
+"`SMTPNotSupportedError` is raised.  Otherwise the ``Message`` is serialized "
+"with a clone of its :mod:`~email.policy` with the :attr:`~email.policy."
+"EmailPolicy.utf8` attribute set to ``True``, and ``SMTPUTF8`` and "
+"``BODY=8BITMIME`` are added to *mail_options*."
 msgstr ""
 
 #: ../../library/smtplib.rst:558
@@ -757,10 +753,10 @@ msgstr ""
 
 #: ../../library/smtplib.rst:568
 msgid ""
-"Low-level methods corresponding to the standard SMTP/ESMTP commands ``HELP``,"
-" ``RSET``, ``NOOP``, ``MAIL``, ``RCPT``, and ``DATA`` are also supported. "
-"Normally these do not need to be called directly, so they are not documented "
-"here.  For details, consult the module code."
+"Low-level methods corresponding to the standard SMTP/ESMTP commands "
+"``HELP``, ``RSET``, ``NOOP``, ``MAIL``, ``RCPT``, and ``DATA`` are also "
+"supported. Normally these do not need to be called directly, so they are not "
+"documented here.  For details, consult the module code."
 msgstr ""
 
 #: ../../library/smtplib.rst:573
@@ -777,14 +773,14 @@ msgstr ""
 
 #: ../../library/smtplib.rst:588
 msgid ""
-"A boolean value indicating whether the server supports ESMTP, see "
-":meth:`ehlo`."
+"A boolean value indicating whether the server supports ESMTP, see :meth:"
+"`ehlo`."
 msgstr ""
 
 #: ../../library/smtplib.rst:594
 msgid ""
-"A dictionary of the names of SMTP service extensions supported by the server,"
-" see :meth:`ehlo`."
+"A dictionary of the names of SMTP service extensions supported by the "
+"server, see :meth:`ehlo`."
 msgstr ""
 
 #: ../../library/smtplib.rst:601
@@ -834,8 +830,8 @@ msgstr ""
 #: ../../library/smtplib.rst:638
 msgid ""
 "In general, you will want to use the :mod:`email` package's features to "
-"construct an email message, which you can then send via "
-":meth:`~smtplib.SMTP.send_message`; see :ref:`email-examples`."
+"construct an email message, which you can then send via :meth:`~smtplib.SMTP."
+"send_message`; see :ref:`email-examples`."
 msgstr ""
 
 #: ../../library/smtplib.rst:9

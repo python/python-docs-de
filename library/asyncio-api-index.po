@@ -34,8 +34,8 @@ msgstr ""
 
 #: ../../library/asyncio-api-index.rst:14
 msgid ""
-"Utilities to run asyncio programs, create Tasks, and await on multiple things"
-" with timeouts."
+"Utilities to run asyncio programs, create Tasks, and await on multiple "
+"things with timeouts."
 msgstr ""
 
 #: ../../library/asyncio-api-index.rst:21

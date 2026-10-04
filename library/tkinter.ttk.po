@@ -47,8 +47,8 @@ msgstr ""
 msgid ""
 "Ttk widgets are used just like the classic :mod:`tkinter` widgets and share "
 "the same machinery: the widget hierarchy, the geometry managers, variable "
-"coupling and event binding. Those foundational concepts are covered in the "
-":mod:`tkinter` documentation and are not repeated here."
+"coupling and event binding. Those foundational concepts are covered in the :"
+"mod:`tkinter` documentation and are not repeated here."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:34
@@ -87,12 +87,11 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:50
 msgid ""
-"That code causes several :mod:`!tkinter.ttk` widgets (:class:`Button`, "
-":class:`Checkbutton`, :class:`Entry`, :class:`Frame`, :class:`Label`, "
-":class:`LabelFrame`, :class:`Menubutton`, :class:`OptionMenu`, "
-":class:`PanedWindow`, :class:`Radiobutton`, :class:`Scale`, "
-":class:`Scrollbar` and :class:`Spinbox`) to automatically replace the Tk "
-"widgets."
+"That code causes several :mod:`!tkinter.ttk` widgets (:class:`Button`, :"
+"class:`Checkbutton`, :class:`Entry`, :class:`Frame`, :class:`Label`, :class:"
+"`LabelFrame`, :class:`Menubutton`, :class:`OptionMenu`, :class:"
+"`PanedWindow`, :class:`Radiobutton`, :class:`Scale`, :class:`Scrollbar` and :"
+"class:`Spinbox`) to automatically replace the Tk widgets."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:59
@@ -119,14 +118,13 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:76
 msgid ""
-"Ttk comes with 18 widgets, twelve of which already existed in tkinter: "
-":class:`Button`, :class:`Checkbutton`, :class:`Entry`, :class:`Frame`, "
-":class:`Label`, :class:`LabelFrame`, :class:`Menubutton`, "
-":class:`PanedWindow`, :class:`Radiobutton`, :class:`Scale`, "
-":class:`Scrollbar`, and :class:`Spinbox`. The other six are new: "
-":class:`Combobox`, :class:`Notebook`, :class:`Progressbar`, "
-":class:`Separator`, :class:`Sizegrip` and :class:`Treeview`. All of them are "
-"subclasses of :class:`Widget`."
+"Ttk comes with 18 widgets, twelve of which already existed in tkinter: :"
+"class:`Button`, :class:`Checkbutton`, :class:`Entry`, :class:`Frame`, :class:"
+"`Label`, :class:`LabelFrame`, :class:`Menubutton`, :class:`PanedWindow`, :"
+"class:`Radiobutton`, :class:`Scale`, :class:`Scrollbar`, and :class:"
+"`Spinbox`. The other six are new: :class:`Combobox`, :class:`Notebook`, :"
+"class:`Progressbar`, :class:`Separator`, :class:`Sizegrip` and :class:"
+"`Treeview`. All of them are subclasses of :class:`Widget`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:84
@@ -232,12 +230,12 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:133
 msgid ""
-"Determines whether the window accepts the focus during keyboard traversal. 0,"
-" 1 or an empty string is returned. If 0 is returned, it means that the window"
-" should be skipped entirely during keyboard traversal. If 1, it means that "
-"the window should receive the input focus as long as it is viewable. And an "
-"empty string means that the traversal scripts make the decision about whether"
-" or not to focus on the window."
+"Determines whether the window accepts the focus during keyboard traversal. "
+"0, 1 or an empty string is returned. If 0 is returned, it means that the "
+"window should be skipped entirely during keyboard traversal. If 1, it means "
+"that the window should receive the input focus as long as it is viewable. "
+"And an empty string means that the traversal scripts make the decision about "
+"whether or not to focus on the window."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:142
@@ -274,9 +272,9 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:162
 msgid ""
-"Usually this option consists of the method :meth:`Scrollbar.set "
-"<tkinter.Scrollbar.set>` of some scrollbar. This will cause the scrollbar to "
-"be updated whenever the view in the window changes."
+"Usually this option consists of the method :meth:`Scrollbar.set <tkinter."
+"Scrollbar.set>` of some scrollbar. This will cause the scrollbar to be "
+"updated whenever the view in the window changes."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:167
@@ -324,8 +322,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:188
 msgid ""
-"If set, specifies the index (0-based) of a character to underline in the text"
-" string. The underline character is used for mnemonic activation."
+"If set, specifies the index (0-based) of a character to underline in the "
+"text string. The underline character is used for mnemonic activation."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:192 ../../library/tkinter.ttk.rst:553
@@ -378,8 +376,8 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:211
 msgid ""
 "If greater than zero, specifies how much space, in character widths, to "
-"allocate for the text label, if less than zero, specifies a minimum width. If"
-" zero or unspecified, the natural width of the text label is used."
+"allocate for the text label, if less than zero, specifies a minimum width. "
+"If zero or unspecified, the natural width of the text label is used."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:219
@@ -449,7 +447,9 @@ msgid "selected"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:251
-msgid "\"On\", \"true\", or \"current\" for things like Checkbuttons and radiobuttons"
+msgid ""
+"\"On\", \"true\", or \"current\" for things like Checkbuttons and "
+"radiobuttons"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:254 ../../library/tkinter.ttk.rst:941
@@ -459,8 +459,8 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:254
 msgid ""
 "Windows and Mac have a notion of an \"active\" or foreground window. The "
-"*background* state is set for widgets in a background window, and cleared for"
-" those in the foreground window"
+"*background* state is set for widgets in a background window, and cleared "
+"for those in the foreground window"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:259
@@ -500,8 +500,8 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:273
 msgid ""
 "Besides the methods described below, the :class:`ttk.Widget <Widget>` "
-"supports the methods :meth:`tkinter.Widget.cget <tkinter.Misc.cget>` and "
-":meth:`tkinter.Widget.configure <tkinter.Misc.configure>`."
+"supports the methods :meth:`tkinter.Widget.cget <tkinter.Misc.cget>` and :"
+"meth:`tkinter.Widget.configure <tkinter.Misc.configure>`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:281
@@ -549,15 +549,14 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:314
 msgid ""
-"Besides the methods inherited from :class:`Widget`: "
-":meth:`~tkinter.Misc.cget`, :meth:`~tkinter.Misc.configure`, "
-":meth:`~Widget.identify`, :meth:`~Widget.instate` and :meth:`~Widget.state`, "
-"and the following inherited from :class:`Entry`: :meth:`~Entry.bbox`, "
-":meth:`~tkinter.Entry.delete`, :meth:`~tkinter.Entry.icursor`, "
-":meth:`~tkinter.Entry.index`, :meth:`~tkinter.Entry.insert`, "
-":meth:`selection* <tkinter.Entry.selection_adjust>`, :meth:`xview* "
-"<tkinter.XView.xview>`, it has some other methods, described at "
-":class:`ttk.Combobox <Combobox>`."
+"Besides the methods inherited from :class:`Widget`: :meth:`~tkinter.Misc."
+"cget`, :meth:`~tkinter.Misc.configure`, :meth:`~Widget.identify`, :meth:"
+"`~Widget.instate` and :meth:`~Widget.state`, and the following inherited "
+"from :class:`Entry`: :meth:`~Entry.bbox`, :meth:`~tkinter.Entry.delete`, :"
+"meth:`~tkinter.Entry.icursor`, :meth:`~tkinter.Entry.index`, :meth:`~tkinter."
+"Entry.insert`, :meth:`selection* <tkinter.Entry.selection_adjust>`, :meth:"
+"`xview* <tkinter.XView.xview>`, it has some other methods, described at :"
+"class:`ttk.Combobox <Combobox>`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:326 ../../library/tkinter.ttk.rst:419
@@ -614,9 +613,9 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:348
 msgid ""
 "One of \"normal\", \"readonly\", or \"disabled\". In the \"readonly\" state, "
-"the value may not be edited directly, and the user can only select one of the"
-" values from the dropdown list. In the \"normal\" state, the text field is "
-"directly editable. In the \"disabled\" state, no interaction is possible."
+"the value may not be edited directly, and the user can only select one of "
+"the values from the dropdown list. In the \"normal\" state, the text field "
+"is directly editable. In the \"disabled\" state, no interaction is possible."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:355
@@ -686,14 +685,13 @@ msgid ""
 "The :class:`ttk.Spinbox <Spinbox>` widget is a :class:`ttk.Entry <Entry>` "
 "enhanced with increment and decrement arrows. It can be used for numbers or "
 "lists of string values. This widget is a subclass of :class:`Entry`. Besides "
-"the methods inherited from :class:`Widget`: :meth:`~tkinter.Misc.cget`, "
-":meth:`~tkinter.Misc.configure`, :meth:`~Widget.identify`, "
-":meth:`~Widget.instate` and :meth:`~Widget.state`, and the following "
-"inherited from :class:`Entry`: :meth:`~Entry.bbox`, "
-":meth:`~tkinter.Entry.delete`, :meth:`~tkinter.Entry.icursor`, "
-":meth:`~tkinter.Entry.index`, :meth:`~tkinter.Entry.insert`, :meth:`xview* "
-"<tkinter.XView.xview>`, it has some other methods, described at "
-":class:`ttk.Spinbox <Spinbox>`."
+"the methods inherited from :class:`Widget`: :meth:`~tkinter.Misc.cget`, :"
+"meth:`~tkinter.Misc.configure`, :meth:`~Widget.identify`, :meth:`~Widget."
+"instate` and :meth:`~Widget.state`, and the following inherited from :class:"
+"`Entry`: :meth:`~Entry.bbox`, :meth:`~tkinter.Entry.delete`, :meth:`~tkinter."
+"Entry.icursor`, :meth:`~tkinter.Entry.index`, :meth:`~tkinter.Entry."
+"insert`, :meth:`xview* <tkinter.XView.xview>`, it has some other methods, "
+"described at :class:`ttk.Spinbox <Spinbox>`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:428
@@ -702,9 +700,9 @@ msgstr "aus"
 
 #: ../../library/tkinter.ttk.rst:428
 msgid ""
-"Float value.  If set, this is the minimum value to which the decrement button"
-" will decrement.  Must be spelled as ``from_`` when used as an argument, "
-"since ``from`` is a Python keyword."
+"Float value.  If set, this is the minimum value to which the decrement "
+"button will decrement.  Must be spelled as ``from_`` when used as an "
+"argument, since ``from`` is a Python keyword."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:433
@@ -713,8 +711,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:433
 msgid ""
-"Float value.  If set, this is the maximum value to which the increment button"
-" will increment."
+"Float value.  If set, this is the maximum value to which the increment "
+"button will increment."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:436
@@ -751,10 +749,9 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:451
 msgid ""
-"String value.  This specifies the format of numbers set by the "
-"increment/decrement buttons.  It must be in the form \"%W.Pf\", where W is "
-"the padded width of the value, P is the precision, and '%' and 'f' are "
-"literal."
+"String value.  This specifies the format of numbers set by the increment/"
+"decrement buttons.  It must be in the form \"%W.Pf\", where W is the padded "
+"width of the value, P is the precision, and '%' and 'f' are literal."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:457
@@ -769,9 +766,9 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:467
 msgid ""
-"The spinbox widget generates an **<<Increment>>** virtual event when the user"
-" presses <Up>, and a **<<Decrement>>** virtual event when the user presses "
-"<Down>."
+"The spinbox widget generates an **<<Increment>>** virtual event when the "
+"user presses <Up>, and a **<<Decrement>>** virtual event when the user "
+"presses <Down>."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:472
@@ -798,9 +795,9 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:495
 msgid ""
-"Ttk Notebook widget manages a collection of windows and displays a single one"
-" at a time. Each child window is associated with a tab, which the user may "
-"select to change the currently displayed window."
+"Ttk Notebook widget manages a collection of windows and displays a single "
+"one at a time. Each child window is associated with a tab, which the user "
+"may select to change the currently displayed window."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:510
@@ -850,8 +847,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:540
 msgid ""
-"Specifies how the child window is positioned within the pane area. Value is a"
-" string containing zero or more of the characters \"n\", \"s\", \"e\" or "
+"Specifies how the child window is positioned within the pane area. Value is "
+"a string containing zero or more of the characters \"n\", \"s\", \"e\" or "
 "\"w\". Each letter refers to a side (north, south, east or west) that the "
 "child window will stick to, as per the :meth:`grid <tkinter.Grid.grid>` "
 "geometry manager."
@@ -869,8 +866,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:553
 msgid ""
-"Specifies an image to display in the tab. See the option image described in "
-":class:`Widget`."
+"Specifies an image to display in the tab. See the option image described in :"
+"class:`Widget`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:556
@@ -881,9 +878,9 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:560
 msgid ""
-"Specifies the index (0-based) of a character to underline in the text string."
-" The underlined character is used for mnemonic activation if "
-":meth:`Notebook.enable_traversal` is called."
+"Specifies the index (0-based) of a character to underline in the text "
+"string. The underlined character is used for mnemonic activation if :meth:"
+"`Notebook.enable_traversal` is called."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:568
@@ -892,8 +889,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:570
 msgid ""
-"The tab_id present in several methods of :class:`ttk.Notebook <Notebook>` may"
-" take any of the following forms:"
+"The tab_id present in several methods of :class:`ttk.Notebook <Notebook>` "
+"may take any of the following forms:"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:573
@@ -905,17 +902,19 @@ msgid "The name of a child window"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:575
-msgid "A positional specification of the form \"@x,y\", which identifies the tab"
+msgid ""
+"A positional specification of the form \"@x,y\", which identifies the tab"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:576
-msgid "The literal string \"current\", which identifies the currently selected tab"
+msgid ""
+"The literal string \"current\", which identifies the currently selected tab"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:577
 msgid ""
-"The literal string \"end\", which returns the number of tabs (only valid for "
-":meth:`Notebook.index`)"
+"The literal string \"end\", which returns the number of tabs (only valid "
+"for :meth:`Notebook.index`)"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:584
@@ -950,10 +949,9 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:608 ../../library/tkinter.ttk.rst:1817
 msgid ""
-"This shadows the inherited geometry-manager :meth:`!forget`; use "
-":meth:`~tkinter.Pack.pack_forget`, :meth:`~tkinter.Grid.grid_forget` or "
-":meth:`~tkinter.Place.place_forget` to remove the widget itself from its "
-"manager."
+"This shadows the inherited geometry-manager :meth:`!forget`; use :meth:"
+"`~tkinter.Pack.pack_forget`, :meth:`~tkinter.Grid.grid_forget` or :meth:"
+"`~tkinter.Place.place_forget` to remove the widget itself from its manager."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:616
@@ -969,8 +967,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:625
 msgid ""
-"Returns the name of the tab element at position *x*, *y*, or the empty string"
-" if none."
+"Returns the name of the tab element at position *x*, *y*, or the empty "
+"string if none."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:631
@@ -986,8 +984,8 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:639
 msgid ""
 "*pos* is either the string \"end\", an integer index, or the name of a "
-"managed child. If *child* is already managed by the notebook, moves it to the"
-" specified position."
+"managed child. If *child* is already managed by the notebook, moves it to "
+"the specified position."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:648
@@ -997,8 +995,8 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:650
 msgid ""
 "The associated child window will be displayed, and the previously selected "
-"window (if different) is unmapped. If *tab_id* is omitted, returns the widget"
-" name of the currently selected pane."
+"window (if different) is unmapped. If *tab_id* is omitted, returns the "
+"widget name of the currently selected pane."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:657
@@ -1023,8 +1021,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:673
 msgid ""
-"This will extend the bindings for the toplevel window containing the notebook"
-" as follows:"
+"This will extend the bindings for the toplevel window containing the "
+"notebook as follows:"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:676
@@ -1058,10 +1056,10 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:690
 msgid ""
 "The :class:`ttk.Progressbar <Progressbar>` widget shows the status of a long-"
-"running operation. It can operate in two modes: 1) the determinate mode which"
-" shows the amount completed relative to the total amount of work to be done "
-"and 2) the indeterminate mode which provides an animated display to let the "
-"user know that work is progressing."
+"running operation. It can operate in two modes: 1) the determinate mode "
+"which shows the amount completed relative to the total amount of work to be "
+"done and 2) the indeterminate mode which provides an animated display to let "
+"the user know that work is progressing."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:708 ../../library/tkinter.ttk.rst:780
@@ -1129,10 +1127,10 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:728
 msgid ""
-"Read-only option. The widget periodically increments the value of this option"
-" whenever its value is greater than 0 and, in determinate mode, less than "
-"maximum. This option may be used by the current theme to provide additional "
-"animation effects."
+"Read-only option. The widget periodically increments the value of this "
+"option whenever its value is greater than 0 and, in determinate mode, less "
+"than maximum. This option may be used by the current theme to provide "
+"additional animation effects."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:736
@@ -1141,9 +1139,9 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:742
 msgid ""
-"Begin autoincrement mode: schedules a recurring timer event that calls "
-":meth:`Progressbar.step` every *interval* milliseconds. If omitted, "
-"*interval* defaults to 50 milliseconds."
+"Begin autoincrement mode: schedules a recurring timer event that calls :meth:"
+"`Progressbar.step` every *interval* milliseconds. If omitted, *interval* "
+"defaults to 50 milliseconds."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:749
@@ -1156,8 +1154,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:756
 msgid ""
-"Stop autoincrement mode: cancels any recurring timer event initiated by "
-":meth:`Progressbar.start` for this progress bar."
+"Stop autoincrement mode: cancels any recurring timer event initiated by :"
+"meth:`Progressbar.start` for this progress bar."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:761
@@ -1192,9 +1190,9 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:788
 msgid ""
-"The :class:`ttk.Sizegrip <Sizegrip>` widget (also known as a grow box) allows"
-" the user to resize the containing toplevel window by pressing and dragging "
-"the grip."
+"The :class:`ttk.Sizegrip <Sizegrip>` widget (also known as a grow box) "
+"allows the user to resize the containing toplevel window by pressing and "
+"dragging the grip."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:792
@@ -1210,8 +1208,8 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:799
 msgid ""
 "On macOS, toplevel windows automatically include a built-in size grip by "
-"default. Adding a :class:`Sizegrip` is harmless, since the built-in grip will"
-" just mask the widget."
+"default. Adding a :class:`Sizegrip` is harmless, since the built-in grip "
+"will just mask the widget."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:805
@@ -1236,17 +1234,17 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:816
 msgid ""
 "The :class:`ttk.Treeview <Treeview>` widget displays a hierarchical "
-"collection of items. Each item has a textual label, an optional image, and an"
-" optional list of data values. The data values are displayed in successive "
+"collection of items. Each item has a textual label, an optional image, and "
+"an optional list of data values. The data values are displayed in successive "
 "columns after the tree label."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:822
 msgid ""
-"The order in which data values are displayed may be controlled by setting the"
-" widget option ``displaycolumns``. The tree widget can also display column "
-"headings. Columns may be accessed by number or symbolic names listed in the "
-"widget option columns. See `Column Identifiers`_."
+"The order in which data values are displayed may be controlled by setting "
+"the widget option ``displaycolumns``. The tree widget can also display "
+"column headings. Columns may be accessed by number or symbolic names listed "
+"in the widget option columns. See `Column Identifiers`_."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:827
@@ -1266,8 +1264,8 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:835
 msgid ""
 "The Treeview widget supports horizontal and vertical scrolling, according to "
-"the options described in `Scrollable Widget Options`_ and the methods "
-":meth:`Treeview.xview` and :meth:`Treeview.yview`."
+"the options described in `Scrollable Widget Options`_ and the methods :meth:"
+"`Treeview.xview` and :meth:`Treeview.yview`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:850
@@ -1299,8 +1297,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:862
 msgid ""
-"Specifies the internal padding for the widget. The padding is a list of up to"
-" four length specifications."
+"Specifies the internal padding for the widget. The padding is a list of up "
+"to four length specifications."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:865
@@ -1317,8 +1315,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:872
 msgid ""
-"Note that the application code and tag bindings can set the selection however"
-" they wish, regardless of the value  of this option."
+"Note that the application code and tag bindings can set the selection "
+"however they wish, regardless of the value  of this option."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:876
@@ -1352,11 +1350,11 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:891
 msgid ""
 "Tk 9.0 added several :class:`Treeview` features. The *selectmode* option "
-"gained the values ``\"single\"`` and ``\"multiple\"``; the new widget options"
-" *selecttype* (``\"item\"`` or ``\"cell\"`` selection), *striped* (zebra-"
-"striped rows), and *titlecolumns* / *titleitems* (columns or rows frozen "
-"against scrolling) were introduced; the column *separator* option was added; "
-"and items gained a *hidden* option. Tk 9.1 added the *rowheight* and "
+"gained the values ``\"single\"`` and ``\"multiple\"``; the new widget "
+"options *selecttype* (``\"item\"`` or ``\"cell\"`` selection), *striped* "
+"(zebra-striped rows), and *titlecolumns* / *titleitems* (columns or rows "
+"frozen against scrolling) were introduced; the column *separator* option was "
+"added; and items gained a *hidden* option. Tk 9.1 added the *rowheight* and "
 "*headingheight* options."
 msgstr ""
 
@@ -1384,9 +1382,10 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:917
 msgid ""
-"Each item should have the same number of values as the widget option columns."
-" If there are fewer values than columns, the remaining values are assumed "
-"empty. If there are more values than columns, the extra values are ignored."
+"Each item should have the same number of values as the widget option "
+"columns. If there are fewer values than columns, the remaining values are "
+"assumed empty. If there are more values than columns, the extra values are "
+"ignored."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:922
@@ -1479,8 +1478,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:967
 msgid ""
-"A data column number is an index into an item's option values list; a display"
-" column number is the column number in the tree where the values are "
+"A data column number is an index into an item's option values list; a "
+"display column number is the column number in the tree where the values are "
 "displayed. Tree labels are displayed in column #0. If option displaycolumns "
 "is not set, then data column n is displayed in column #n+1. Again, **column "
 "#0 always refers to the tree column**."
@@ -1520,8 +1519,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:993
 msgid ""
-"The :meth:`Treeview.focus` and :meth:`Treeview.selection` methods can be used"
-" to determine the affected item or items."
+"The :meth:`Treeview.focus` and :meth:`Treeview.selection` methods can be "
+"used to determine the affected item or items."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:998
@@ -1543,8 +1542,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1011 ../../library/tkinter.ttk.rst:1718
 msgid ""
-"This shadows the inherited :meth:`!Misc.bbox`; use "
-":meth:`~tkinter.Misc.grid_bbox` for the grid bounding box."
+"This shadows the inherited :meth:`!Misc.bbox`; use :meth:`~tkinter.Misc."
+"grid_bbox` for the grid bounding box."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1017
@@ -1561,9 +1560,10 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1026
 msgid ""
-"Children present in *item* that are not present in *newchildren* are detached"
-" from the tree. No items in *newchildren* may be an ancestor of *item*. Note "
-"that not specifying *newchildren* results in detaching *item*'s children."
+"Children present in *item* that are not present in *newchildren* are "
+"detached from the tree. No items in *newchildren* may be an ancestor of "
+"*item*. Note that not specifying *newchildren* results in detaching *item*'s "
+"children."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1034
@@ -1572,9 +1572,9 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1036
 msgid ""
-"If *kw* is not given, returns a dict of the column option values. If *option*"
-" is specified then the value for that *option* is returned. Otherwise, sets "
-"the options to the corresponding values."
+"If *kw* is not given, returns a dict of the column option values. If "
+"*option* is specified then the value for that *option* is returned. "
+"Otherwise, sets the options to the corresponding values."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1040 ../../library/tkinter.ttk.rst:1102
@@ -1673,14 +1673,14 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1087
 msgid ""
-"If *item* is specified, sets the focus item to *item*. Otherwise, returns the"
-" current focus item, or '' if there is none."
+"If *item* is specified, sets the focus item to *item*. Otherwise, returns "
+"the current focus item, or '' if there is none."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1090
 msgid ""
-"This shadows the inherited :meth:`!Misc.focus`; use "
-":meth:`~tkinter.Misc.focus_set` to focus the widget itself."
+"This shadows the inherited :meth:`!Misc.focus`; use :meth:`~tkinter.Misc."
+"focus_set` to focus the widget itself."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1096
@@ -1821,8 +1821,8 @@ msgid ""
 "less than or equal to zero, the new node is inserted at the beginning; if "
 "*index* is greater than or equal to the current number of children, it is "
 "inserted at the end. If *iid* is specified, it is used as the item "
-"identifier; *iid* must not already exist in the tree. Otherwise, a new unique"
-" identifier is generated."
+"identifier; *iid* must not already exist in the tree. Otherwise, a new "
+"unique identifier is generated."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1181
@@ -1835,9 +1835,10 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1188
 msgid ""
-"If no options are given, a dict with options/values for the item is returned."
-" If *option* is specified then the value for that option is returned. "
-"Otherwise, sets the options to the corresponding values as given by *kw*."
+"If no options are given, a dict with options/values for the item is "
+"returned. If *option* is specified then the value for that option is "
+"returned. Otherwise, sets the options to the corresponding values as given "
+"by *kw*."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1199
@@ -1847,9 +1848,9 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:1201
 msgid ""
 "It is illegal to move an item under one of its descendants. If *index* is "
-"less than or equal to zero, *item* is moved to the beginning; if greater than"
-" or equal to the number of children, it is moved to the end. If *item* was "
-"detached it is reattached."
+"less than or equal to zero, *item* is moved to the beginning; if greater "
+"than or equal to the number of children, it is moved to the end. If *item* "
+"was detached it is reattached."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1206
@@ -1920,8 +1921,8 @@ msgstr ""
 msgid ""
 "With one argument, returns a dictionary of column/value pairs for the "
 "specified *item*. With two arguments, returns the current value of the "
-"specified *column*. With three arguments, sets the value of given *column* in"
-" given *item* to the specified *value*."
+"specified *column*. With three arguments, sets the value of given *column* "
+"in given *item* to the specified *value*."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1287
@@ -1937,10 +1938,10 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1296
 msgid ""
-"If *kw* is not given, returns a dict of the option settings for *tagname*. If"
-" *option* is specified, returns the value for that *option* for the specified"
-" *tagname*. Otherwise, sets the options to the corresponding values for the "
-"given *tagname*."
+"If *kw* is not given, returns a dict of the option settings for *tagname*. "
+"If *option* is specified, returns the value for that *option* for the "
+"specified *tagname*. Otherwise, sets the options to the corresponding values "
+"for the given *tagname*."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1304
@@ -1972,15 +1973,15 @@ msgid ""
 "elements making up the widget and how they are arranged, along with dynamic "
 "and default settings for element options. By default the style name is the "
 "same as the widget's class name, but it may be overridden by the widget's "
-"style option. If you don't know the class name of a widget, use the method "
-":meth:`Misc.winfo_class <tkinter.Misc.winfo_class>` "
-"(somewidget.winfo_class())."
+"style option. If you don't know the class name of a widget, use the method :"
+"meth:`Misc.winfo_class <tkinter.Misc.winfo_class>` (somewidget."
+"winfo_class())."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1336
 msgid ""
-"`Introduction to the Tk theme engine <https://www.tcl-"
-"lang.org/man/tcl9.0/TkCmd/ttk_intro.html>`_"
+"`Introduction to the Tk theme engine <https://www.tcl-lang.org/man/tcl9.0/"
+"TkCmd/ttk_intro.html>`_"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1337
@@ -1989,8 +1990,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1339
 msgid ""
-"`The Tile Widget Set <https://tktable.sourceforge.net/tile/tile-"
-"tcl2004.pdf>`_"
+"`The Tile Widget Set <https://tktable.sourceforge.net/tile/tile-tcl2004."
+"pdf>`_"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1340
@@ -2079,8 +2080,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1406
 msgid ""
-"When called to query the map (without specifying values to set), it returns a"
-" dictionary mapping each option to its list of statespecs."
+"When called to query the map (without specifying values to set), it returns "
+"a dictionary mapping each option to its list of statespecs."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1409
@@ -2125,8 +2126,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1438
 msgid ""
-"To understand the format, see the following example (it is not intended to do"
-" anything useful)::"
+"To understand the format, see the following example (it is not intended to "
+"do anything useful)::"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1441
@@ -2142,7 +2143,8 @@ msgid ""
 "   (\"Menubutton.button\", {\"children\":\n"
 "       [(\"Menubutton.focus\", {\"children\":\n"
 "           [(\"Menubutton.padding\", {\"children\":\n"
-"               [(\"Menubutton.label\", {\"side\": \"left\", \"expand\": 1})]\n"
+"               [(\"Menubutton.label\", {\"side\": \"left\", \"expand\": "
+"1})]\n"
 "           })]\n"
 "       })]\n"
 "   }),\n"
@@ -2203,8 +2205,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1486
 msgid ""
-"Specifies how the image is placed within the final parcel. spec contains zero"
-" or more characters \"n\", \"s\", \"w\", or \"e\"."
+"Specifies how the image is placed within the final parcel. spec contains "
+"zero or more characters \"n\", \"s\", \"w\", or \"e\"."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1489 ../../library/tkinter.ttk.rst:1543
@@ -2237,9 +2239,9 @@ msgstr ""
 msgid ""
 "If \"from\" is used as the value of *etype*, :meth:`element_create` will "
 "clone an existing element. *args* is expected to contain a themename, from "
-"which the element will be cloned, and optionally an element to clone from. If"
-" this element to clone from is not specified, an empty element will be used. "
-"*kw* is discarded."
+"which the element will be cloned, and optionally an element to clone from. "
+"If this element to clone from is not specified, an empty element will be "
+"used. *kw* is discarded."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1512
@@ -2255,8 +2257,8 @@ msgid ""
 "using the Microsoft Visual Styles API which is responsible for the themed "
 "styles on Windows XP and Vista. *args* is expected to contain the Visual "
 "Styles class and part as given in the Microsoft documentation followed by an "
-"optional sequence of tuples of ttk states and the corresponding Visual Styles"
-" API state value. *kw* may have the following options:"
+"optional sequence of tuples of ttk states and the corresponding Visual "
+"Styles API state value. *kw* may have the following options:"
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1526
@@ -2264,11 +2266,11 @@ msgid ""
 "Specify the element's interior padding. *padding* is a list of up to four "
 "integers specifying the left, top, right and bottom padding quantities "
 "respectively. If fewer than four elements are specified, bottom defaults to "
-"top, right defaults to left, and top defaults to left. In other words, a list"
-" of three numbers specify the left, vertical, and right padding; a list of "
-"two numbers specify the horizontal and the vertical padding; a single number "
-"specifies the same padding all the way around the widget. This option may not"
-" be mixed with any other options."
+"top, right defaults to left, and top defaults to left. In other words, a "
+"list of three numbers specify the left, vertical, and right padding; a list "
+"of two numbers specify the horizontal and the vertical padding; a single "
+"number specifies the same padding all the way around the widget. This option "
+"may not be mixed with any other options."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1537
@@ -2329,23 +2331,23 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:1587
 msgid ""
 "It is an error if *themename* already exists. If *parent* is specified, the "
-"new theme will inherit styles, elements and layouts from the parent theme. If"
-" *settings* are present they are expected to have the same syntax used for "
-":meth:`theme_settings`."
+"new theme will inherit styles, elements and layouts from the parent theme. "
+"If *settings* are present they are expected to have the same syntax used "
+"for :meth:`theme_settings`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1595
 msgid ""
-"Temporarily sets the current theme to *themename*, apply specified *settings*"
-" and then restore the previous theme."
+"Temporarily sets the current theme to *themename*, apply specified "
+"*settings* and then restore the previous theme."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1598
 msgid ""
 "Each key in *settings* is a style and each value may contain the keys "
 "'configure', 'map', 'layout' and 'element create' and they are expected to "
-"have the same format as specified by the methods :meth:`Style.configure`, "
-":meth:`Style.map`, :meth:`Style.layout` and :meth:`Style.element_create` "
+"have the same format as specified by the methods :meth:`Style.configure`, :"
+"meth:`Style.map`, :meth:`Style.layout` and :meth:`Style.element_create` "
 "respectively."
 msgstr ""
 
@@ -2397,9 +2399,9 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:1645
 msgid ""
 "A layout can be just ``None``, if it takes no options, or a dict of options "
-"specifying how to arrange the element. The layout mechanism uses a simplified"
-" version of the pack geometry manager: given an initial cavity, each element "
-"is allocated a parcel."
+"specifying how to arrange the element. The layout mechanism uses a "
+"simplified version of the pack geometry manager: given an initial cavity, "
+"each element is allocated a parcel."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1652
@@ -2426,9 +2428,9 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1661
 msgid ""
-"If set to 1, causes the element and all of its descendants to be treated as a"
-" single element for the purposes of :meth:`Widget.identify` et al. It's used "
-"for things like scrollbar thumbs with grips."
+"If set to 1, causes the element and all of its descendants to be treated as "
+"a single element for the purposes of :meth:`Widget.identify` et al. It's "
+"used for things like scrollbar thumbs with grips."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1665
@@ -2448,17 +2450,16 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1676
 msgid ""
-"The following themed widgets complete the :mod:`tkinter.ttk` widget set. Each"
-" is the themed counterpart of the like-named classic :mod:`tkinter` widget "
-"and inherits the common methods of :class:`Widget`."
+"The following themed widgets complete the :mod:`tkinter.ttk` widget set. "
+"Each is the themed counterpart of the like-named classic :mod:`tkinter` "
+"widget and inherits the common methods of :class:`Widget`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1682
 msgid ""
 "Ttk :class:`Button` widget, displays a textual label and/or image, and "
-"evaluates a command when pressed. It is the themed counterpart of "
-":class:`tkinter.Button` and inherits the common widget methods from "
-":class:`Widget`."
+"evaluates a command when pressed. It is the themed counterpart of :class:"
+"`tkinter.Button` and inherits the common widget methods from :class:`Widget`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1689
@@ -2468,9 +2469,8 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:1694
 msgid ""
 "Ttk :class:`Checkbutton` widget, used to control a boolean variable that is "
-"toggled on and off. It is the themed counterpart of "
-":class:`tkinter.Checkbutton` and inherits the common widget methods from "
-":class:`Widget`."
+"toggled on and off. It is the themed counterpart of :class:`tkinter."
+"Checkbutton` and inherits the common widget methods from :class:`Widget`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1701
@@ -2522,17 +2522,15 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:1749
 msgid ""
 "Ttk :class:`Labelframe` widget, a container that draws a border and a title "
-"label around its contents. It is the themed counterpart of "
-":class:`tkinter.LabelFrame` and inherits the common widget methods from "
-":class:`Widget`."
+"label around its contents. It is the themed counterpart of :class:`tkinter."
+"LabelFrame` and inherits the common widget methods from :class:`Widget`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1757
 msgid ""
 "Ttk :class:`Menubutton` widget, displays a textual label and/or image, and "
-"pops up a menu when pressed. It is the themed counterpart of "
-":class:`tkinter.Menubutton` and inherits the common widget methods from "
-":class:`Widget`."
+"pops up a menu when pressed. It is the themed counterpart of :class:`tkinter."
+"Menubutton` and inherits the common widget methods from :class:`Widget`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1765
@@ -2540,13 +2538,13 @@ msgid ""
 "Ttk :class:`OptionMenu` widget, a :class:`Menubutton` that pops up a menu of "
 "mutually exclusive choices. *variable* is the variable that tracks the "
 "currently selected value, *default* is the value to set initially, and "
-"*values* are the entries to display in the menu. A *command* keyword argument"
-" may be given to specify a callable that is invoked with the selected value "
-"whenever the selection changes; the *style* keyword argument sets the style "
-"used by the underlying menubutton; the *direction* keyword argument sets "
-"where the menu is posted relative to the menubutton (one of ``'above'``, "
-"``'below'`` (the default), ``'left'``, ``'right'`` or ``'flush'``); and the "
-"*name* keyword argument sets the Tk widget name."
+"*values* are the entries to display in the menu. A *command* keyword "
+"argument may be given to specify a callable that is invoked with the "
+"selected value whenever the selection changes; the *style* keyword argument "
+"sets the style used by the underlying menubutton; the *direction* keyword "
+"argument sets where the menu is posted relative to the menubutton (one of "
+"``'above'``, ``'below'`` (the default), ``'left'``, ``'right'`` or "
+"``'flush'``); and the *name* keyword argument sets the Tk widget name."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1780
@@ -2583,8 +2581,8 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1814
 msgid ""
-"Remove *child*, which may be either an integer index or the name of a managed"
-" subwindow, from the panes."
+"Remove *child*, which may be either an integer index or the name of a "
+"managed subwindow, from the panes."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1824
@@ -2629,16 +2627,15 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1863
 msgid ""
-"Modify or query the widget options, like :meth:`Widget.configure "
-"<tkinter.Misc.configure>`. In addition, this method clips the ``from`` and "
-"``to`` values so that the current value stays within the range defined by "
-"them."
+"Modify or query the widget options, like :meth:`Widget.configure <tkinter."
+"Misc.configure>`. In addition, this method clips the ``from`` and ``to`` "
+"values so that the current value stays within the range defined by them."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1868
 msgid ""
-"Now returns the configuration value, like :meth:`Widget.configure "
-"<tkinter.Misc.configure>`."
+"Now returns the configuration value, like :meth:`Widget.configure <tkinter."
+"Misc.configure>`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1875
@@ -2650,11 +2647,10 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:1882
 msgid ""
 "Ttk :class:`Scrollbar` widget, controls the viewport of an associated "
-"scrollable widget such as a :class:`Treeview`, :class:`Entry` or "
-":class:`tkinter.Text`. It is the themed counterpart of "
-":class:`tkinter.Scrollbar` and inherits the common widget methods from "
-":class:`Widget`, as well as the :meth:`!set` and :meth:`!get` methods from "
-":class:`tkinter.Scrollbar`."
+"scrollable widget such as a :class:`Treeview`, :class:`Entry` or :class:"
+"`tkinter.Text`. It is the themed counterpart of :class:`tkinter.Scrollbar` "
+"and inherits the common widget methods from :class:`Widget`, as well as the :"
+"meth:`!set` and :meth:`!get` methods from :class:`tkinter.Scrollbar`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1892
@@ -2668,16 +2664,16 @@ msgstr ""
 msgid ""
 "Ttk :class:`Sizegrip` widget, displays a grip that allows the user to resize "
 "the containing toplevel window by pressing and dragging the grip, typically "
-"placed in the bottom-right corner. It has no direct counterpart in "
-":mod:`tkinter` and inherits the common widget methods from :class:`Widget`."
+"placed in the bottom-right corner. It has no direct counterpart in :mod:"
+"`tkinter` and inherits the common widget methods from :class:`Widget`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1909
 msgid ""
 "A :class:`Frame` containing a :class:`Scale` and a :class:`Label` that shows "
-"the scale's current value. *variable* is the :class:`~tkinter.IntVar` tracked"
-" by the scale (one is created if it is not given), and *from_* and *to* "
-"define the range of the scale."
+"the scale's current value. *variable* is the :class:`~tkinter.IntVar` "
+"tracked by the scale (one is created if it is not given), and *from_* and "
+"*to* define the range of the scale."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1917
@@ -2688,14 +2684,14 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1923
 msgid ""
-"Alias of :class:`Labelframe`, kept for naming compatibility with "
-":class:`tkinter.LabelFrame`."
+"Alias of :class:`Labelframe`, kept for naming compatibility with :class:"
+"`tkinter.LabelFrame`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1929
 msgid ""
-"Alias of :class:`Panedwindow`, kept for naming compatibility with "
-":class:`tkinter.PanedWindow`."
+"Alias of :class:`Panedwindow`, kept for naming compatibility with :class:"
+"`tkinter.PanedWindow`."
 msgstr ""
 
 #: ../../library/tkinter.ttk.rst:9

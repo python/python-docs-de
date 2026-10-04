@@ -80,8 +80,8 @@ msgstr ""
 msgid ""
 "If *padded* is true, the last group of 4 base 64 alphabet characters must be "
 "padded with the '=' character. If *padded* is false, padding is neither "
-"required nor recognized: the '=' character is not treated as padding but as a"
-" non-alphabet character, which means it is silently discarded when "
+"required nor recognized: the '=' character is not treated as padding but as "
+"a non-alphabet character, which means it is silently discarded when "
 "*strict_mode* is false, or causes an :exc:`~binascii.Error` when "
 "*strict_mode* is true unless b'=' is included in *ignorechars*."
 msgstr ""
@@ -89,8 +89,8 @@ msgstr ""
 #: ../../library/binascii.rst:68
 msgid ""
 "If *ignorechars* is specified, it should be a :term:`bytes-like object` "
-"containing characters to ignore from the input when *strict_mode* is true. If"
-" *ignorechars* contains the pad character ``'='``,  the pad characters "
+"containing characters to ignore from the input when *strict_mode* is true. "
+"If *ignorechars* contains the pad character ``'='``,  the pad characters "
 "presented before the end of the encoded data and the excess pad characters "
 "will be ignored. The default value of *strict_mode* is ``True`` if "
 "*ignorechars* is specified, ``False`` otherwise."
@@ -127,8 +127,8 @@ msgstr ""
 #: ../../library/binascii.rst:86
 msgid ""
 "If *canonical* is true, non-zero padding bits in the last group are rejected "
-"with :exc:`binascii.Error`, enforcing canonical encoding as defined in "
-":rfc:`4648` section 3.5.  This check is independent of *strict_mode*."
+"with :exc:`binascii.Error`, enforcing canonical encoding as defined in :rfc:"
+"`4648` section 3.5.  This check is independent of *strict_mode*."
 msgstr ""
 
 #: ../../library/binascii.rst:90
@@ -148,8 +148,8 @@ msgstr ""
 
 #: ../../library/binascii.rst:102
 msgid ""
-"If *padded* is true (default), pad the encoded data with the '=' character to"
-" a size multiple of 4. If *padded* is false, do not add the pad characters."
+"If *padded* is true (default), pad the encoded data with the '=' character "
+"to a size multiple of 4. If *padded* is false, do not add the pad characters."
 msgstr ""
 
 #: ../../library/binascii.rst:106 ../../library/binascii.rst:166
@@ -180,8 +180,8 @@ msgstr ""
 
 #: ../../library/binascii.rst:124
 msgid ""
-"Valid Ascii85 data contains characters from the Ascii85 alphabet in groups of"
-" five (except for the final group, which may have from two to five "
+"Valid Ascii85 data contains characters from the Ascii85 alphabet in groups "
+"of five (except for the final group, which may have from two to five "
 "characters). Each group encodes 32 bits of binary data in the range from "
 "``0`` to ``2 ** 32 - 1``, inclusive. The special character ``z`` is accepted "
 "as a short form of the group ``!!!!!``, which encodes four consecutive null "
@@ -200,8 +200,8 @@ msgstr ""
 msgid ""
 "*adobe* controls whether the encoded byte sequence is framed with ``<~`` and "
 "``~>``, as in a PostScript base-85 string literal.  If *adobe* is true, a "
-"leading ``<~`` is optionally accepted, while a trailing ``~>`` is *required*,"
-" and :exc:`binascii.Error` is raised if it is not found."
+"leading ``<~`` is optionally accepted, while a trailing ``~>`` is "
+"*required*, and :exc:`binascii.Error` is raised if it is not found."
 msgstr ""
 
 #: ../../library/binascii.rst:142
@@ -212,11 +212,11 @@ msgstr ""
 
 #: ../../library/binascii.rst:146
 msgid ""
-"If *canonical* is true, non-canonical encodings are rejected with "
-":exc:`binascii.Error`.  Here \"canonical\" means the encoding that "
-":func:`b2a_ascii85` would produce: the ``z`` abbreviation must be used for "
-"all-zero groups (rather than ``!!!!!``), and partial final groups must use "
-"the same padding digits as the encoder."
+"If *canonical* is true, non-canonical encodings are rejected with :exc:"
+"`binascii.Error`.  Here \"canonical\" means the encoding that :func:"
+"`b2a_ascii85` would produce: the ``z`` abbreviation must be used for all-"
+"zero groups (rather than ``!!!!!``), and partial final groups must use the "
+"same padding digits as the encoder."
 msgstr ""
 
 #: ../../library/binascii.rst:152
@@ -240,16 +240,16 @@ msgstr ""
 msgid ""
 "If *pad* is true, the zero-padding applied to the end of the input is fully "
 "retained in the output encoding, as done by ``btoa``, producing an exact "
-"multiple of 5 bytes of output. This is not part of the standard encoding used"
-" in PDF, as it does not preserve the length of the data."
+"multiple of 5 bytes of output. This is not part of the standard encoding "
+"used in PDF, as it does not preserve the length of the data."
 msgstr ""
 
 #: ../../library/binascii.rst:176
 msgid ""
 "*adobe* controls whether the encoded byte sequence is framed with ``<~`` and "
 "``~>``, as in a PostScript base-85 string literal.  Note that while "
-"ASCII85Decode streams in PDF documents *must* be terminated with ``~>``, they"
-" *must not* use a leading ``<~``."
+"ASCII85Decode streams in PDF documents *must* be terminated with ``~>``, "
+"they *must not* use a leading ``<~``."
 msgstr ""
 
 #: ../../library/binascii.rst:186
@@ -263,8 +263,8 @@ msgid ""
 "Valid Base85 data contains characters from the Base85 alphabet in groups of "
 "five (except for the final group, which may have from two to five "
 "characters). Each group encodes 32 bits of binary data in the range from "
-"``0`` to ``2 ** 32 - 1``, inclusive. A single-character final group is always"
-" rejected as an encoding violation."
+"``0`` to ``2 ** 32 - 1``, inclusive. A single-character final group is "
+"always rejected as an encoding violation."
 msgstr ""
 
 #: ../../library/binascii.rst:195
@@ -281,10 +281,10 @@ msgstr ""
 
 #: ../../library/binascii.rst:201
 msgid ""
-"If *canonical* is true, non-canonical encodings are rejected with "
-":exc:`binascii.Error`.  Here \"canonical\" means the encoding that "
-":func:`b2a_base85` would produce: partial final groups must use the same "
-"padding digits as the encoder."
+"If *canonical* is true, non-canonical encodings are rejected with :exc:"
+"`binascii.Error`.  Here \"canonical\" means the encoding that :func:"
+"`b2a_base85` would produce: partial final groups must use the same padding "
+"digits as the encoder."
 msgstr ""
 
 #: ../../library/binascii.rst:206
@@ -316,8 +316,8 @@ msgstr ""
 
 #: ../../library/binascii.rst:235
 msgid ""
-"Valid base32 data contains characters from the base32 alphabet specified in "
-":rfc:`4648` in groups of eight (if necessary, the final group is padded to "
+"Valid base32 data contains characters from the base32 alphabet specified in :"
+"rfc:`4648` in groups of eight (if necessary, the final group is padded to "
 "eight characters with ``=``). Each group encodes 40 bits of binary data in "
 "the range from ``0`` to ``2 ** 40 - 1``, inclusive."
 msgstr ""
@@ -354,8 +354,8 @@ msgstr ""
 #: ../../library/binascii.rst:260
 msgid ""
 "If *canonical* is true, non-zero padding bits in the last group are rejected "
-"with :exc:`binascii.Error`, enforcing canonical encoding as defined in "
-":rfc:`4648` section 3.5."
+"with :exc:`binascii.Error`, enforcing canonical encoding as defined in :rfc:"
+"`4648` section 3.5."
 msgstr ""
 
 #: ../../library/binascii.rst:264
@@ -376,15 +376,15 @@ msgstr ""
 
 #: ../../library/binascii.rst:276
 msgid ""
-"If *padded* is true (default), pad the encoded data with the '=' character to"
-" a size multiple of 8. If *padded* is false, do not add the pad characters."
+"If *padded* is true (default), pad the encoded data with the '=' character "
+"to a size multiple of 8. If *padded* is false, do not add the pad characters."
 msgstr ""
 
 #: ../../library/binascii.rst:288
 msgid ""
-"Convert a block of quoted-printable data back to binary and return the binary"
-" data. More than one line may be passed at a time. If the optional argument "
-"*header* is present and true, underscores will be decoded as spaces."
+"Convert a block of quoted-printable data back to binary and return the "
+"binary data. More than one line may be passed at a time. If the optional "
+"argument *header* is present and true, underscores will be decoded as spaces."
 msgstr ""
 
 #: ../../library/binascii.rst:295
@@ -459,8 +459,8 @@ msgstr ""
 msgid ""
 "Return the binary data represented by the hexadecimal string *hexstr*.  This "
 "function is the inverse of :func:`b2a_hex`. *hexstr* must contain an even "
-"number of hexadecimal digits (which can be upper or lower case), otherwise an"
-" :exc:`Error` exception is raised."
+"number of hexadecimal digits (which can be upper or lower case), otherwise "
+"an :exc:`Error` exception is raised."
 msgstr ""
 
 #: ../../library/binascii.rst:370
@@ -488,7 +488,8 @@ msgid "The Base 64 alphabet according to :rfc:`4648`."
 msgstr ""
 
 #: ../../library/binascii.rst:396
-msgid "The \"URL and filename safe\" Base 64 alphabet according to :rfc:`4648`."
+msgid ""
+"The \"URL and filename safe\" Base 64 alphabet according to :rfc:`4648`."
 msgstr ""
 
 #: ../../library/binascii.rst:402

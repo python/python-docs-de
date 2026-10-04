@@ -28,8 +28,8 @@ msgstr ""
 msgid ""
 "The :mod:`!stat` module defines constants and functions for interpreting the "
 "results of :func:`os.stat`, :func:`os.fstat` and :func:`os.lstat` (if they "
-"exist).  For complete details about the :c:func:`stat`, :c:func:`!fstat` and "
-":c:func:`!lstat` calls, consult the documentation for your system."
+"exist).  For complete details about the :c:func:`stat`, :c:func:`!fstat` "
+"and :c:func:`!lstat` calls, consult the documentation for your system."
 msgstr ""
 
 #: ../../library/stat.rst:17
@@ -107,8 +107,8 @@ msgid ""
 "type of a file; the functions here are useful when you are doing multiple "
 "tests of the same file and wish to avoid the overhead of the :c:func:`stat` "
 "system call for each test.  These are also useful when checking for "
-"information about a file that isn't handled by :mod:`os.path`, like the tests"
-" for block and character devices."
+"information about a file that isn't handled by :mod:`os.path`, like the "
+"tests for block and character devices."
 msgstr ""
 
 #: ../../library/stat.rst:99
@@ -205,8 +205,8 @@ msgstr ""
 #: ../../library/stat.rst:192
 msgid ""
 "The \"ctime\" as reported by the operating system.  On some systems (like "
-"Unix) is the time of the last metadata change, and, on others (like Windows),"
-" is the creation time (see platform documentation for details)."
+"Unix) is the time of the last metadata change, and, on others (like "
+"Windows), is the creation time (see platform documentation for details)."
 msgstr ""
 
 #: ../../library/stat.rst:196
@@ -214,12 +214,11 @@ msgid ""
 "The interpretation of \"file size\" changes according to the file type.  For "
 "plain files this is the size of the file in bytes.  For FIFOs and sockets "
 "under most flavors of Unix (including Linux in particular), the \"size\" is "
-"the number of bytes waiting to be read at the time of the call to "
-":func:`os.stat`, :func:`os.fstat`, or :func:`os.lstat`; this can sometimes be"
-" useful, especially for polling one of these special files after a non-"
-"blocking open.  The meaning of the size field for other character and block "
-"devices varies more, depending on the implementation of the underlying system"
-" call."
+"the number of bytes waiting to be read at the time of the call to :func:`os."
+"stat`, :func:`os.fstat`, or :func:`os.lstat`; this can sometimes be useful, "
+"especially for polling one of these special files after a non-blocking "
+"open.  The meaning of the size field for other character and block devices "
+"varies more, depending on the implementation of the underlying system call."
 msgstr ""
 
 #: ../../library/stat.rst:205
@@ -280,8 +279,8 @@ msgstr ""
 
 #: ../../library/stat.rst:260
 msgid ""
-"The following flags can also be used in the *mode* argument of "
-":func:`os.chmod`:"
+"The following flags can also be used in the *mode* argument of :func:`os."
+"chmod`:"
 msgstr ""
 
 #: ../../library/stat.rst:264
@@ -292,18 +291,18 @@ msgstr ""
 msgid ""
 "Set-group-ID bit.  This bit has several special uses.  For a directory it "
 "indicates that BSD semantics is to be used for that directory: files created "
-"there inherit their group ID from the directory, not from the effective group"
-" ID of the creating process, and directories created there will also get the "
-":data:`S_ISGID` bit set.  For a file that does not have the group execution "
-"bit (:data:`S_IXGRP`) set, the set-group-ID bit indicates mandatory "
-"file/record locking (see also :data:`S_ENFMT`)."
+"there inherit their group ID from the directory, not from the effective "
+"group ID of the creating process, and directories created there will also "
+"get the :data:`S_ISGID` bit set.  For a file that does not have the group "
+"execution bit (:data:`S_IXGRP`) set, the set-group-ID bit indicates "
+"mandatory file/record locking (see also :data:`S_ENFMT`)."
 msgstr ""
 
 #: ../../library/stat.rst:279
 msgid ""
-"Sticky bit.  When this bit is set on a directory it means that a file in that"
-" directory can be renamed or deleted only by the owner of the file, by the "
-"owner of the directory, or by a privileged process."
+"Sticky bit.  When this bit is set on a directory it means that a file in "
+"that directory can be renamed or deleted only by the owner of the file, by "
+"the owner of the directory, or by a privileged process."
 msgstr ""
 
 #: ../../library/stat.rst:285
@@ -356,9 +355,9 @@ msgstr ""
 
 #: ../../library/stat.rst:333
 msgid ""
-"System V file locking enforcement.  This flag is shared with :data:`S_ISGID`:"
-" file/record locking is enforced on files that do not have the group "
-"execution bit (:data:`S_IXGRP`) set."
+"System V file locking enforcement.  This flag is shared with :data:"
+"`S_ISGID`: file/record locking is enforced on files that do not have the "
+"group execution bit (:data:`S_IXGRP`) set."
 msgstr ""
 
 #: ../../library/stat.rst:339
@@ -375,8 +374,8 @@ msgstr ""
 
 #: ../../library/stat.rst:349
 msgid ""
-"The following flags can be used in the *flags* argument of "
-":func:`os.chflags`:"
+"The following flags can be used in the *flags* argument of :func:`os."
+"chflags`:"
 msgstr ""
 
 #: ../../library/stat.rst:353
@@ -463,11 +462,11 @@ msgstr ""
 
 #: ../../library/stat.rst:459
 msgid ""
-"On Windows, the following file attribute constants are available for use when"
-" testing bits in the ``st_file_attributes`` member returned by "
-":func:`os.stat`. See the `Windows API documentation "
-"<https://msdn.microsoft.com/en-us/library/windows/desktop/gg258117.aspx>`_ "
-"for more detail on the meaning of these constants."
+"On Windows, the following file attribute constants are available for use "
+"when testing bits in the ``st_file_attributes`` member returned by :func:`os."
+"stat`. See the `Windows API documentation <https://msdn.microsoft.com/en-us/"
+"library/windows/desktop/gg258117.aspx>`_ for more detail on the meaning of "
+"these constants."
 msgstr ""
 
 #: ../../library/stat.rst:485
@@ -480,8 +479,8 @@ msgstr ""
 #: ../../library/stat.rst:495
 msgid ""
 "On Linux, the following file attribute constants are available for use when "
-"testing bits in the :attr:`~os.statx_result.stx_attributes` and "
-":attr:`~os.statx_result.stx_attributes_mask` members returned by "
-":func:`os.statx`.  See the :manpage:`statx(2)` man page for more detail on "
-"the meaning of these constants."
+"testing bits in the :attr:`~os.statx_result.stx_attributes` and :attr:`~os."
+"statx_result.stx_attributes_mask` members returned by :func:`os.statx`.  See "
+"the :manpage:`statx(2)` man page for more detail on the meaning of these "
+"constants."
 msgstr ""

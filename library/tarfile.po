@@ -28,8 +28,8 @@ msgstr ""
 msgid ""
 "The :mod:`!tarfile` module makes it possible to read and write tar archives, "
 "including those using gzip, bz2 and lzma compression. Use the :mod:`zipfile` "
-"module to read or write :file:`.zip` files, or the higher-level functions in "
-":ref:`shutil <archiving-operations>`."
+"module to read or write :file:`.zip` files, or the higher-level functions "
+"in :ref:`shutil <archiving-operations>`."
 msgstr ""
 
 #: ../../library/tarfile.rst:16
@@ -38,16 +38,16 @@ msgstr ""
 
 #: ../../library/tarfile.rst:18
 msgid ""
-"reads and writes :mod:`gzip`, :mod:`bz2`, :mod:`compression.zstd`, and "
-":mod:`lzma` compressed archives if the respective modules are available."
+"reads and writes :mod:`gzip`, :mod:`bz2`, :mod:`compression.zstd`, and :mod:"
+"`lzma` compressed archives if the respective modules are available."
 msgstr ""
 
 #: ../../library/tarfile.rst:24
 msgid ""
 "If any of these :term:`optional modules <optional module>` are missing from "
 "your copy of CPython, look for documentation from your distributor (that is, "
-"whoever provided Python to you). If you are the distributor, see "
-":ref:`optional-module-requirements`."
+"whoever provided Python to you). If you are the distributor, see :ref:"
+"`optional-module-requirements`."
 msgstr ""
 
 #: ../../library/tarfile.rst:29
@@ -56,9 +56,9 @@ msgstr ""
 
 #: ../../library/tarfile.rst:31
 msgid ""
-"read/write support for the GNU tar format including *longname* and *longlink*"
-" extensions, read-only support for all variants of the *sparse* extension "
-"including restoration of sparse files."
+"read/write support for the GNU tar format including *longname* and "
+"*longlink* extensions, read-only support for all variants of the *sparse* "
+"extension including restoration of sparse files."
 msgstr ""
 
 #: ../../library/tarfile.rst:35
@@ -87,8 +87,8 @@ msgstr ""
 msgid ""
 "Set the default extraction filter to :func:`data <data_filter>`, which "
 "disallows some dangerous features such as links to absolute paths or paths "
-"outside of the destination. Previously, the filter strategy was equivalent to"
-" :func:`fully_trusted <fully_trusted_filter>`."
+"outside of the destination. Previously, the filter strategy was equivalent "
+"to :func:`fully_trusted <fully_trusted_filter>`."
 msgstr ""
 
 #: ../../library/tarfile.rst:57
@@ -170,8 +170,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:85
 msgid ""
-"Create a tarfile exclusively without compression. Raise a "
-":exc:`FileExistsError` exception if it already exists."
+"Create a tarfile exclusively without compression. Raise a :exc:"
+"`FileExistsError` exception if it already exists."
 msgstr ""
 
 #: ../../library/tarfile.rst:90
@@ -266,10 +266,10 @@ msgstr ""
 
 #: ../../library/tarfile.rst:121
 msgid ""
-"Note that ``'a:gz'``, ``'a:bz2'`` or ``'a:xz'`` is not possible. If *mode* is"
-" not suitable to open a certain (compressed) file for reading, "
-":exc:`ReadError` is raised. Use *mode* ``'r'`` to avoid this.  If a "
-"compression method is not supported, :exc:`CompressionError` is raised."
+"Note that ``'a:gz'``, ``'a:bz2'`` or ``'a:xz'`` is not possible. If *mode* "
+"is not suitable to open a certain (compressed) file for reading, :exc:"
+"`ReadError` is raised. Use *mode* ``'r'`` to avoid this.  If a compression "
+"method is not supported, :exc:`CompressionError` is raised."
 msgstr ""
 
 #: ../../library/tarfile.rst:126
@@ -280,15 +280,16 @@ msgstr ""
 
 #: ../../library/tarfile.rst:129
 msgid ""
-"For modes ``'w:gz'``, ``'x:gz'``, ``'w|gz'``, ``'w:bz2'``, ``'x:bz2'``, "
-"``'w|bz2'``, :func:`tarfile.open` accepts the keyword argument "
-"*compresslevel* (default ``6``) to specify the compression level of the file."
+"For modes ``'w:gz'``, ``'x:gz'``, ``'w|gz'``, ``'w:bz2'``, ``'x:bz2'``, ``'w|"
+"bz2'``, :func:`tarfile.open` accepts the keyword argument *compresslevel* "
+"(default ``6``) to specify the compression level of the file."
 msgstr ""
 
 #: ../../library/tarfile.rst:133
 msgid ""
-"For modes ``'w:xz'``, ``'x:xz'`` and ``'w|xz'``, :func:`tarfile.open` accepts"
-" the keyword argument *preset* to specify the compression level of the file."
+"For modes ``'w:xz'``, ``'x:xz'`` and ``'w|xz'``, :func:`tarfile.open` "
+"accepts the keyword argument *preset* to specify the compression level of "
+"the file."
 msgstr ""
 
 #: ../../library/tarfile.rst:136
@@ -296,34 +297,33 @@ msgid ""
 "For modes ``'w:zst'``, ``'x:zst'`` and ``'w|zst'``, :func:`tarfile.open` "
 "accepts the keyword argument *level* to specify the compression level of the "
 "file. The keyword argument *options* may also be passed, providing advanced "
-"Zstandard compression parameters described by "
-":class:`~compression.zstd.CompressionParameter`. The keyword argument "
-"*zstd_dict* can be passed to provide a :class:`~compression.zstd.ZstdDict`, a"
-" Zstandard dictionary used to improve compression of smaller amounts of data."
+"Zstandard compression parameters described by :class:`~compression.zstd."
+"CompressionParameter`. The keyword argument *zstd_dict* can be passed to "
+"provide a :class:`~compression.zstd.ZstdDict`, a Zstandard dictionary used "
+"to improve compression of smaller amounts of data."
 msgstr ""
 
 #: ../../library/tarfile.rst:145
 msgid ""
-"For modes ``'w:gz'`` and ``'w|gz'``, :func:`tarfile.open` accepts the keyword"
-" argument *mtime* to create a gzip archive header with that mtime. By "
-"default, the mtime is set to the time of creation of the archive. Use *mtime*"
-" ``0`` to generate a compressed stream that does not depend on creation time,"
-" for reproducible output."
+"For modes ``'w:gz'`` and ``'w|gz'``, :func:`tarfile.open` accepts the "
+"keyword argument *mtime* to create a gzip archive header with that mtime. By "
+"default, the mtime is set to the time of creation of the archive. Use "
+"*mtime* ``0`` to generate a compressed stream that does not depend on "
+"creation time, for reproducible output."
 msgstr ""
 
 #: ../../library/tarfile.rst:151
 msgid ""
-"For special purposes, there is a second format for *mode*: "
-"``'filemode|[compression]'``.  :func:`tarfile.open` will return a "
-":class:`TarFile` object that processes its data as a stream of blocks.  No "
-"random seeking will be done on the file. If given, *fileobj* may be any "
-"object that has a :meth:`~io.RawIOBase.read` or :meth:`~io.RawIOBase.write` "
-"method (depending on the *mode*) that works with bytes. *bufsize* specifies "
-"the blocksize and defaults to ``20 * 512`` bytes. Use this variant in "
-"combination with e.g. ``sys.stdin.buffer``, a socket :term:`file object` or a"
-" tape device. However, such a :class:`TarFile` object is limited in that it "
-"does not allow random access, see :ref:`tar-examples`.  The currently "
-"possible modes:"
+"For special purposes, there is a second format for *mode*: ``'filemode|"
+"[compression]'``.  :func:`tarfile.open` will return a :class:`TarFile` "
+"object that processes its data as a stream of blocks.  No random seeking "
+"will be done on the file. If given, *fileobj* may be any object that has a :"
+"meth:`~io.RawIOBase.read` or :meth:`~io.RawIOBase.write` method (depending "
+"on the *mode*) that works with bytes. *bufsize* specifies the blocksize and "
+"defaults to ``20 * 512`` bytes. Use this variant in combination with e.g. "
+"``sys.stdin.buffer``, a socket :term:`file object` or a tape device. "
+"However, such a :class:`TarFile` object is limited in that it does not allow "
+"random access, see :ref:`tar-examples`.  The currently possible modes:"
 msgstr ""
 
 #: ../../library/tarfile.rst:165
@@ -454,9 +454,9 @@ msgstr ""
 
 #: ../../library/tarfile.rst:226
 msgid ""
-"Return :const:`True` if *name* is a tar archive file, that the "
-":mod:`!tarfile` module can read. *name* may be a :class:`str`, file, or file-"
-"like object."
+"Return :const:`True` if *name* is a tar archive file, that the :mod:`!"
+"tarfile` module can read. *name* may be a :class:`str`, file, or file-like "
+"object."
 msgstr ""
 
 #: ../../library/tarfile.rst:229
@@ -473,8 +473,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:243
 msgid ""
-"Is raised when a tar archive is opened, that either cannot be handled by the "
-":mod:`!tarfile` module or is somehow invalid."
+"Is raised when a tar archive is opened, that either cannot be handled by "
+"the :mod:`!tarfile` module or is somehow invalid."
 msgstr ""
 
 #: ../../library/tarfile.rst:249
@@ -485,14 +485,14 @@ msgstr ""
 
 #: ../../library/tarfile.rst:255
 msgid ""
-"Is raised for the limitations that are typical for stream-like "
-":class:`TarFile` objects."
+"Is raised for the limitations that are typical for stream-like :class:"
+"`TarFile` objects."
 msgstr ""
 
 #: ../../library/tarfile.rst:261
 msgid ""
-"Is raised for *non-fatal* errors when using :meth:`TarFile.extract`, but only"
-" if :attr:`TarFile.errorlevel`\\ ``== 2``."
+"Is raised for *non-fatal* errors when using :meth:`TarFile.extract`, but "
+"only if :attr:`TarFile.errorlevel`\\ ``== 2``."
 msgstr ""
 
 #: ../../library/tarfile.rst:267
@@ -506,8 +506,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:277
 msgid ""
-"Information about the member that the filter refused to extract, as "
-":ref:`TarInfo <tarinfo-objects>`."
+"Information about the member that the filter refused to extract, as :ref:"
+"`TarInfo <tarinfo-objects>`."
 msgstr ""
 
 #: ../../library/tarfile.rst:282
@@ -546,8 +546,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:315
 msgid ""
-"The default character encoding: ``'utf-8'`` on Windows, the value returned by"
-" :func:`sys.getfilesystemencoding` otherwise."
+"The default character encoding: ``'utf-8'`` on Windows, the value returned "
+"by :func:`sys.getfilesystemencoding` otherwise."
 msgstr ""
 
 #: ../../library/tarfile.rst:321
@@ -596,8 +596,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:364
 msgid ""
-"Each of the following constants defines a tar archive format that the "
-":mod:`!tarfile` module is able to create. See section :ref:`tar-formats` for "
+"Each of the following constants defines a tar archive format that the :mod:`!"
+"tarfile` module is able to create. See section :ref:`tar-formats` for "
 "details."
 msgstr ""
 
@@ -615,14 +615,14 @@ msgstr ""
 
 #: ../../library/tarfile.rst:386
 msgid ""
-"The default format for creating archives. This is currently "
-":const:`PAX_FORMAT`."
+"The default format for creating archives. This is currently :const:"
+"`PAX_FORMAT`."
 msgstr ""
 
 #: ../../library/tarfile.rst:388
 msgid ""
-"The default format for new archives was changed to :const:`PAX_FORMAT` from "
-":const:`GNU_FORMAT`."
+"The default format for new archives was changed to :const:`PAX_FORMAT` from :"
+"const:`GNU_FORMAT`."
 msgstr ""
 
 #: ../../library/tarfile.rst:395
@@ -645,8 +645,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:402
 msgid ""
-"`GNU tar manual, Basic Tar Format "
-"<https://www.gnu.org/software/tar/manual/html_node/Standard.html>`_"
+"`GNU tar manual, Basic Tar Format <https://www.gnu.org/software/tar/manual/"
+"html_node/Standard.html>`_"
 msgstr ""
 
 #: ../../library/tarfile.rst:403
@@ -660,16 +660,16 @@ msgstr ""
 #: ../../library/tarfile.rst:411
 msgid ""
 "The :class:`TarFile` object provides an interface to a tar archive. A tar "
-"archive is a sequence of blocks. An archive member (a stored file) is made up"
-" of a header block followed by data blocks. It is possible to store a file in"
-" a tar archive several times. Each archive member is represented by a "
-":class:`TarInfo` object, see :ref:`tarinfo-objects` for details."
+"archive is a sequence of blocks. An archive member (a stored file) is made "
+"up of a header block followed by data blocks. It is possible to store a file "
+"in a tar archive several times. Each archive member is represented by a :"
+"class:`TarInfo` object, see :ref:`tarinfo-objects` for details."
 msgstr ""
 
 #: ../../library/tarfile.rst:417
 msgid ""
-"A :class:`TarFile` object can be used as a context manager in a "
-":keyword:`with` statement. It will automatically be closed when the block is "
+"A :class:`TarFile` object can be used as a context manager in a :keyword:"
+"`with` statement. It will automatically be closed when the block is "
 "completed. Please note that in the event of an exception an archive opened "
 "for writing will not be finalized; only the internally used file object will "
 "be closed. See the :ref:`tar-examples` section for a use case."
@@ -736,8 +736,8 @@ msgstr ""
 msgid ""
 "If *ignore_zeros* is :const:`False`, treat an empty block as the end of the "
 "archive. If it is :const:`True`, skip empty (and invalid) blocks and try to "
-"get as many members as possible. This is only useful for reading concatenated"
-" or damaged archives."
+"get as many members as possible. This is only useful for reading "
+"concatenated or damaged archives."
 msgstr ""
 
 #: ../../library/tarfile.rst:463
@@ -756,20 +756,20 @@ msgstr ""
 msgid ""
 "The *encoding* and *errors* arguments define the character encoding to be "
 "used for reading or writing the archive and how conversion errors are going "
-"to be handled. The default settings will work for most users. See section "
-":ref:`tar-unicode` for in-depth information."
+"to be handled. The default settings will work for most users. See section :"
+"ref:`tar-unicode` for in-depth information."
 msgstr ""
 
 #: ../../library/tarfile.rst:474
 msgid ""
-"The *pax_headers* argument is an optional dictionary of strings which will be"
-" added as a pax global header if *format* is :const:`PAX_FORMAT`."
+"The *pax_headers* argument is an optional dictionary of strings which will "
+"be added as a pax global header if *format* is :const:`PAX_FORMAT`."
 msgstr ""
 
 #: ../../library/tarfile.rst:477
 msgid ""
-"If *stream* is set to :const:`True` then while reading the archive info about"
-" files in the archive are not cached, saving memory."
+"If *stream* is set to :const:`True` then while reading the archive info "
+"about files in the archive are not cached, saving memory."
 msgstr ""
 
 #: ../../library/tarfile.rst:480 ../../library/tarfile.rst:803
@@ -824,8 +824,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:534
 msgid ""
-"Return the next member of the archive as a :class:`TarInfo` object, when "
-":class:`TarFile` is opened for reading. Return :const:`None` if there is no "
+"Return the next member of the archive as a :class:`TarInfo` object, when :"
+"class:`TarFile` is opened for reading. Return :const:`None` if there is no "
 "more available."
 msgstr ""
 
@@ -843,9 +843,9 @@ msgstr ""
 
 #: ../../library/tarfile.rst:549
 msgid ""
-"If *numeric_owner* is :const:`True`, the uid and gid numbers from the tarfile"
-" are used to set the owner/group for the extracted files. Otherwise, the "
-"named values from the tarfile are used."
+"If *numeric_owner* is :const:`True`, the uid and gid numbers from the "
+"tarfile are used to set the owner/group for the extracted files. Otherwise, "
+"the named values from the tarfile are used."
 msgstr ""
 
 #: ../../library/tarfile.rst:553
@@ -864,9 +864,9 @@ msgstr ""
 #: ../../library/tarfile.rst:564
 msgid ""
 "Since Python 3.14, the default (:func:`data <data_filter>`) will prevent the "
-"most dangerous security issues. However, it will not prevent *all* unintended"
-" or insecure behavior. Read the :ref:`tarfile-extraction-filter` section for "
-"details."
+"most dangerous security issues. However, it will not prevent *all* "
+"unintended or insecure behavior. Read the :ref:`tarfile-extraction-filter` "
+"section for details."
 msgstr ""
 
 #: ../../library/tarfile.rst:569 ../../library/tarfile.rst:606
@@ -888,8 +888,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:584
 msgid ""
-"Extract a member from the archive to the current working directory, using its"
-" full name. Its file information is extracted as accurately as possible. "
+"Extract a member from the archive to the current working directory, using "
+"its full name. Its file information is extracted as accurately as possible. "
 "*member* may be a filename or a :class:`TarInfo` object. You can specify a "
 "different directory using *path*. *path* may be a :term:`path-like object`. "
 "File attributes (owner, mtime, mode) are set unless *set_attrs* is false."
@@ -897,8 +897,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:590
 msgid ""
-"The *numeric_owner* and *filter* arguments are the same as for "
-":meth:`extractall`."
+"The *numeric_owner* and *filter* arguments are the same as for :meth:"
+"`extractall`."
 msgstr ""
 
 #: ../../library/tarfile.rst:595
@@ -938,25 +938,25 @@ msgstr ""
 
 #: ../../library/tarfile.rst:634
 msgid ""
-"If *errorlevel* is ``0``, errors are ignored when using "
-":meth:`TarFile.extract` and :meth:`TarFile.extractall`. Nevertheless, they "
-"appear as error messages in the debug output when *debug* is greater than 0. "
-"If ``1`` (the default), all *fatal* errors are raised as :exc:`OSError` or "
-":exc:`FilterError` exceptions. If ``2``, all *non-fatal* errors are raised as"
-" :exc:`TarError` exceptions as well."
+"If *errorlevel* is ``0``, errors are ignored when using :meth:`TarFile."
+"extract` and :meth:`TarFile.extractall`. Nevertheless, they appear as error "
+"messages in the debug output when *debug* is greater than 0. If ``1`` (the "
+"default), all *fatal* errors are raised as :exc:`OSError` or :exc:"
+"`FilterError` exceptions. If ``2``, all *non-fatal* errors are raised as :"
+"exc:`TarError` exceptions as well."
 msgstr ""
 
 #: ../../library/tarfile.rst:642
 msgid ""
-"Some exceptions, e.g. ones caused by wrong argument types or data corruption,"
-" are always raised."
+"Some exceptions, e.g. ones caused by wrong argument types or data "
+"corruption, are always raised."
 msgstr ""
 
 #: ../../library/tarfile.rst:645
 msgid ""
-"Custom :ref:`extraction filters <tarfile-extraction-filter>` should raise "
-":exc:`FilterError` for *fatal* errors and :exc:`ExtractError` for *non-fatal*"
-" ones."
+"Custom :ref:`extraction filters <tarfile-extraction-filter>` should raise :"
+"exc:`FilterError` for *fatal* errors and :exc:`ExtractError` for *non-fatal* "
+"ones."
 msgstr ""
 
 #: ../../library/tarfile.rst:649
@@ -968,14 +968,14 @@ msgstr ""
 #: ../../library/tarfile.rst:656
 msgid ""
 "The :ref:`extraction filter <tarfile-extraction-filter>` used as a default "
-"for the *filter* argument of :meth:`~TarFile.extract` and "
-":meth:`~TarFile.extractall`."
+"for the *filter* argument of :meth:`~TarFile.extract` and :meth:`~TarFile."
+"extractall`."
 msgstr ""
 
 #: ../../library/tarfile.rst:660
 msgid ""
-"The attribute may be ``None`` or a callable. String names are not allowed for"
-" this attribute, unlike the *filter* argument to :meth:`~TarFile.extract`."
+"The attribute may be ``None`` or a callable. String names are not allowed "
+"for this attribute, unlike the *filter* argument to :meth:`~TarFile.extract`."
 msgstr ""
 
 #: ../../library/tarfile.rst:664
@@ -986,20 +986,20 @@ msgstr ""
 
 #: ../../library/tarfile.rst:667
 msgid ""
-"The attribute may be set on instances or overridden in subclasses. It also is"
-" possible to set it on the ``TarFile`` class itself to set a global default, "
-"although, since it affects all uses of *tarfile*, it is best practice to only"
-" do so in top-level applications or :mod:`site configuration <site>`. To set "
-"a global default this way, a filter function needs to be wrapped in "
-":deco:`staticmethod` to prevent injection of a ``self`` argument."
+"The attribute may be set on instances or overridden in subclasses. It also "
+"is possible to set it on the ``TarFile`` class itself to set a global "
+"default, although, since it affects all uses of *tarfile*, it is best "
+"practice to only do so in top-level applications or :mod:`site configuration "
+"<site>`. To set a global default this way, a filter function needs to be "
+"wrapped in :deco:`staticmethod` to prevent injection of a ``self`` argument."
 msgstr ""
 
 #: ../../library/tarfile.rst:677
 msgid ""
-"The default filter is set to :func:`data <data_filter>`, which disallows some"
-" dangerous features such as links to absolute paths or paths outside of the "
-"destination. Previously, the default was equivalent to :func:`fully_trusted "
-"<fully_trusted_filter>`."
+"The default filter is set to :func:`data <data_filter>`, which disallows "
+"some dangerous features such as links to absolute paths or paths outside of "
+"the destination. Previously, the default was equivalent to :func:"
+"`fully_trusted <fully_trusted_filter>`."
 msgstr ""
 
 #: ../../library/tarfile.rst:685
@@ -1007,12 +1007,12 @@ msgid ""
 "Add the file *name* to the archive. *name* may be any type of file "
 "(directory, fifo, symbolic link, etc.). If given, *arcname* specifies an "
 "alternative name for the file in the archive. Directories are added "
-"recursively by default. This can be avoided by setting *recursive* to "
-":const:`False`. Recursion adds entries in sorted order. If *filter* is given,"
-" it should be a function that takes a :class:`TarInfo` object argument and "
-"returns the changed :class:`TarInfo` object. If it instead returns "
-":const:`None` the :class:`TarInfo` object will be excluded from the archive. "
-"See :ref:`tar-examples` for an example."
+"recursively by default. This can be avoided by setting *recursive* to :const:"
+"`False`. Recursion adds entries in sorted order. If *filter* is given, it "
+"should be a function that takes a :class:`TarInfo` object argument and "
+"returns the changed :class:`TarInfo` object. If it instead returns :const:"
+"`None` the :class:`TarInfo` object will be excluded from the archive. See :"
+"ref:`tar-examples` for an example."
 msgstr ""
 
 #: ../../library/tarfile.rst:699
@@ -1022,10 +1022,10 @@ msgstr ""
 #: ../../library/tarfile.rst:705
 msgid ""
 "Add the :class:`TarInfo` object *tarinfo* to the archive. If *tarinfo* "
-"represents a non zero-size regular file, the *fileobj* argument should be a "
-":term:`binary file`, and ``tarinfo.size`` bytes are read from it and added to"
-" the archive.  You can create :class:`TarInfo` objects directly, or by using "
-":meth:`gettarinfo`."
+"represents a non zero-size regular file, the *fileobj* argument should be a :"
+"term:`binary file`, and ``tarinfo.size`` bytes are read from it and added to "
+"the archive.  You can create :class:`TarInfo` objects directly, or by using :"
+"meth:`gettarinfo`."
 msgstr ""
 
 #: ../../library/tarfile.rst:712
@@ -1047,10 +1047,10 @@ msgstr ""
 msgid ""
 "You can modify some of the :class:`TarInfo`’s attributes before you add it "
 "using :meth:`addfile`. If the file object is not an ordinary file object "
-"positioned at the beginning of the file, attributes such as "
-":attr:`~TarInfo.size` may need modifying.  This is the case for objects such "
-"as :class:`~gzip.GzipFile`. The :attr:`~TarInfo.name` may also be modified, "
-"in which case *arcname* could be a dummy string."
+"positioned at the beginning of the file, attributes such as :attr:`~TarInfo."
+"size` may need modifying.  This is the case for objects such as :class:"
+"`~gzip.GzipFile`. The :attr:`~TarInfo.name` may also be modified, in which "
+"case *arcname* could be a dummy string."
 msgstr ""
 
 #: ../../library/tarfile.rst:740
@@ -1077,18 +1077,18 @@ msgstr ""
 
 #: ../../library/tarfile.rst:761
 msgid ""
-":class:`TarInfo` objects are returned by :class:`TarFile`'s methods "
-":meth:`~TarFile.getmember`, :meth:`~TarFile.getmembers` and "
-":meth:`~TarFile.gettarinfo`."
+":class:`TarInfo` objects are returned by :class:`TarFile`'s methods :meth:"
+"`~TarFile.getmember`, :meth:`~TarFile.getmembers` and :meth:`~TarFile."
+"gettarinfo`."
 msgstr ""
 
 #: ../../library/tarfile.rst:765
 msgid ""
-"Modifying the objects returned by :meth:`~TarFile.getmember` or "
-":meth:`~TarFile.getmembers` will affect all subsequent operations on the "
-"archive. For cases where this is unwanted, you can use :mod:`copy.copy() "
-"<copy>` or call the :meth:`~TarInfo.replace` method to create a modified copy"
-" in one step."
+"Modifying the objects returned by :meth:`~TarFile.getmember` or :meth:"
+"`~TarFile.getmembers` will affect all subsequent operations on the archive. "
+"For cases where this is unwanted, you can use :mod:`copy.copy() <copy>` or "
+"call the :meth:`~TarInfo.replace` method to create a modified copy in one "
+"step."
 msgstr ""
 
 #: ../../library/tarfile.rst:771
@@ -1126,14 +1126,14 @@ msgstr ""
 
 #: ../../library/tarfile.rst:794
 msgid ""
-"Read the next member from the :class:`TarFile` object *tarfile* and return it"
-" as a :class:`TarInfo` object."
+"Read the next member from the :class:`TarFile` object *tarfile* and return "
+"it as a :class:`TarInfo` object."
 msgstr ""
 
 #: ../../library/tarfile.rst:800
 msgid ""
-"Create a string buffer from a :class:`TarInfo` object. For information on the"
-" arguments see the constructor of the :class:`TarFile` class."
+"Create a string buffer from a :class:`TarInfo` object. For information on "
+"the arguments see the constructor of the :class:`TarFile` class."
 msgstr ""
 
 #: ../../library/tarfile.rst:807
@@ -1150,17 +1150,16 @@ msgstr ""
 
 #: ../../library/tarfile.rst:825
 msgid ""
-"Time of last modification in seconds since the :ref:`epoch <epoch>`, as in "
-":attr:`os.stat_result.st_mtime`."
+"Time of last modification in seconds since the :ref:`epoch <epoch>`, as in :"
+"attr:`os.stat_result.st_mtime`."
 msgstr ""
 
 #: ../../library/tarfile.rst:830 ../../library/tarfile.rst:841
 #: ../../library/tarfile.rst:873 ../../library/tarfile.rst:884
 #: ../../library/tarfile.rst:895 ../../library/tarfile.rst:906
 msgid ""
-"Can be set to ``None`` for :meth:`~TarFile.extract` and "
-":meth:`~TarFile.extractall`, causing extraction to skip applying this "
-"attribute."
+"Can be set to ``None`` for :meth:`~TarFile.extract` and :meth:`~TarFile."
+"extractall`, causing extraction to skip applying this attribute."
 msgstr ""
 
 #: ../../library/tarfile.rst:837
@@ -1169,10 +1168,10 @@ msgstr ""
 
 #: ../../library/tarfile.rst:847
 msgid ""
-"File type.  *type* is usually one of these constants: :const:`REGTYPE`, "
-":const:`AREGTYPE`, :const:`LNKTYPE`, :const:`SYMTYPE`, :const:`DIRTYPE`, "
-":const:`FIFOTYPE`, :const:`CONTTYPE`, :const:`CHRTYPE`, :const:`BLKTYPE`, "
-":const:`GNUTYPE_SPARSE`.  To determine the type of a :class:`TarInfo` object "
+"File type.  *type* is usually one of these constants: :const:`REGTYPE`, :"
+"const:`AREGTYPE`, :const:`LNKTYPE`, :const:`SYMTYPE`, :const:`DIRTYPE`, :"
+"const:`FIFOTYPE`, :const:`CONTTYPE`, :const:`CHRTYPE`, :const:`BLKTYPE`, :"
+"const:`GNUTYPE_SPARSE`.  To determine the type of a :class:`TarInfo` object "
 "more conveniently, use the ``is*()`` methods below."
 msgstr ""
 
@@ -1184,9 +1183,9 @@ msgstr ""
 
 #: ../../library/tarfile.rst:860
 msgid ""
-"For symbolic links (``SYMTYPE``), the *linkname* is relative to the directory"
-" that contains the link. For hard links (``LNKTYPE``), the *linkname* is "
-"relative to the root of the archive."
+"For symbolic links (``SYMTYPE``), the *linkname* is relative to the "
+"directory that contains the link. For hard links (``LNKTYPE``), the "
+"*linkname* is relative to the root of the archive."
 msgstr ""
 
 #: ../../library/tarfile.rst:869
@@ -1236,9 +1235,9 @@ msgstr ""
 
 #: ../../library/tarfile.rst:956
 msgid ""
-"Return a *new* copy of the :class:`!TarInfo` object with the given attributes"
-" changed. For example, to return a ``TarInfo`` with the group name set to "
-"``'staff'``, use::"
+"Return a *new* copy of the :class:`!TarInfo` object with the given "
+"attributes changed. For example, to return a ``TarInfo`` with the group name "
+"set to ``'staff'``, use::"
 msgstr ""
 
 #: ../../library/tarfile.rst:960
@@ -1247,8 +1246,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:962
 msgid ""
-"By default, a deep copy is made. If *deep* is false, the copy is shallow, "
-"i.e. ``pax_headers`` and any custom attributes are shared with the original "
+"By default, a deep copy is made. If *deep* is false, the copy is shallow, i."
+"e. ``pax_headers`` and any custom attributes are shared with the original "
 "``TarInfo`` object."
 msgstr ""
 
@@ -1300,9 +1299,9 @@ msgstr ""
 #: ../../library/tarfile.rst:1021
 msgid ""
 "The *tar* format is designed to capture all details of a UNIX-like "
-"filesystem, which makes it very powerful. Unfortunately, the features make it"
-" easy to create tar files that have unintended -- and possibly malicious -- "
-"effects when extracted. For example, extracting a tar file can overwrite "
+"filesystem, which makes it very powerful. Unfortunately, the features make "
+"it easy to create tar files that have unintended -- and possibly malicious "
+"-- effects when extracted. For example, extracting a tar file can overwrite "
 "arbitrary files in various ways (e.g.  by using absolute paths, ``..`` path "
 "components, or symlinks that affect later members)."
 msgstr ""
@@ -1317,8 +1316,8 @@ msgstr ""
 #: ../../library/tarfile.rst:1035
 msgid ""
 "None of the available filters blocks *all* dangerous archive features. Never "
-"extract archives from untrusted sources without prior inspection. See also "
-":ref:`tarfile-further-verification`."
+"extract archives from untrusted sources without prior inspection. See also :"
+"ref:`tarfile-further-verification`."
 msgstr ""
 
 #: ../../library/tarfile.rst:1041
@@ -1331,8 +1330,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1044
 msgid ""
-"The *filter* argument to :meth:`TarFile.extract` or "
-":meth:`~TarFile.extractall` can be:"
+"The *filter* argument to :meth:`TarFile.extract` or :meth:`~TarFile."
+"extractall` can be:"
 msgstr ""
 
 #: ../../library/tarfile.rst:1047
@@ -1352,8 +1351,8 @@ msgstr ""
 #: ../../library/tarfile.rst:1056
 msgid ""
 "the string ``'data'``: Ignore or block most features specific to UNIX-like "
-"filesystems. Intended for extracting cross-platform data archives. See "
-":func:`data_filter` for details."
+"filesystems. Intended for extracting cross-platform data archives. See :func:"
+"`data_filter` for details."
 msgstr ""
 
 #: ../../library/tarfile.rst:1060
@@ -1373,9 +1372,9 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1070
 msgid ""
-"A callable which will be called for each extracted member with a "
-":ref:`TarInfo <tarinfo-objects>` describing the member and the destination "
-"path to where the archive is extracted (i.e. the same path is used for all "
+"A callable which will be called for each extracted member with a :ref:"
+"`TarInfo <tarinfo-objects>` describing the member and the destination path "
+"to where the archive is extracted (i.e. the same path is used for all "
 "members)::"
 msgstr ""
 
@@ -1401,10 +1400,10 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1084
 msgid ""
-"raise an exception to abort the operation or skip the member, depending on "
-":attr:`~TarFile.errorlevel`. Note that when extraction is aborted, "
-":meth:`~TarFile.extractall` may leave the archive partially extracted. It "
-"does not attempt to clean up."
+"raise an exception to abort the operation or skip the member, depending on :"
+"attr:`~TarFile.errorlevel`. Note that when extraction is aborted, :meth:"
+"`~TarFile.extractall` may leave the archive partially extracted. It does not "
+"attempt to clean up."
 msgstr ""
 
 #: ../../library/tarfile.rst:1090
@@ -1436,16 +1435,16 @@ msgstr ""
 #: ../../library/tarfile.rst:1106
 msgid ""
 ":ref:`Refuse <tarfile-extraction-refuse>` to extract files with absolute "
-"paths (in case the name is absolute even after stripping slashes, e.g. "
-"``C:/foo`` on Windows). This raises :class:`~tarfile.AbsolutePathError`."
+"paths (in case the name is absolute even after stripping slashes, e.g. ``C:/"
+"foo`` on Windows). This raises :class:`~tarfile.AbsolutePathError`."
 msgstr ""
 
 #: ../../library/tarfile.rst:1110
 msgid ""
 "Normalize filenames (:attr:`TarInfo.name`) that contain ``..`` components "
 "using :func:`os.path.normpath`. Note that this removes internal ``..`` "
-"components, which may change the meaning of the name if it traverses symbolic"
-" links."
+"components, which may change the meaning of the name if it traverses "
+"symbolic links."
 msgstr ""
 
 #: ../../library/tarfile.rst:1114
@@ -1457,8 +1456,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1117
 msgid ""
-"Clear high mode bits (setuid, setgid, sticky) and group/other write bits "
-"(:const:`~stat.S_IWGRP` | :const:`~stat.S_IWOTH`)."
+"Clear high mode bits (setuid, setgid, sticky) and group/other write bits (:"
+"const:`~stat.S_IWGRP` | :const:`~stat.S_IWOTH`)."
 msgstr ""
 
 #: ../../library/tarfile.rst:1120 ../../library/tarfile.rst:1163
@@ -1476,10 +1475,10 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1131
 msgid ""
-"Normalize link targets (:attr:`TarInfo.linkname`) using "
-":func:`os.path.normpath`. Note that this removes internal ``..`` components, "
-"which may change the meaning of the link if the path in "
-":attr:`!TarInfo.linkname` traverses symbolic links."
+"Normalize link targets (:attr:`TarInfo.linkname`) using :func:`os.path."
+"normpath`. Note that this removes internal ``..`` components, which may "
+"change the meaning of the link if the path in :attr:`!TarInfo.linkname` "
+"traverses symbolic links."
 msgstr ""
 
 #: ../../library/tarfile.rst:1137
@@ -1490,8 +1489,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1140
 msgid ""
-"This raises :class:`~tarfile.AbsoluteLinkError` or "
-":class:`~tarfile.LinkOutsideDestinationError`."
+"This raises :class:`~tarfile.AbsoluteLinkError` or :class:`~tarfile."
+"LinkOutsideDestinationError`."
 msgstr ""
 
 #: ../../library/tarfile.rst:1143
@@ -1512,15 +1511,14 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1152
 msgid ""
-"Set the owner read and write permissions (:const:`~stat.S_IRUSR` | "
-":const:`~stat.S_IWUSR`)."
+"Set the owner read and write permissions (:const:`~stat.S_IRUSR` | :const:"
+"`~stat.S_IWUSR`)."
 msgstr ""
 
 #: ../../library/tarfile.rst:1154
 msgid ""
-"Remove the group & other executable permission (:const:`~stat.S_IXGRP` | "
-":const:`~stat.S_IXOTH`) if the owner doesn’t have it "
-"(:const:`~stat.S_IXUSR`)."
+"Remove the group & other executable permission (:const:`~stat.S_IXGRP` | :"
+"const:`~stat.S_IXOTH`) if the owner doesn’t have it (:const:`~stat.S_IXUSR`)."
 msgstr ""
 
 #: ../../library/tarfile.rst:1158
@@ -1531,14 +1529,14 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1160
 msgid ""
-"Set user and group info (``uid``, ``gid``, ``uname``, ``gname``) to ``None``,"
-" so that extraction methods skip setting it."
+"Set user and group info (``uid``, ``gid``, ``uname``, ``gname``) to "
+"``None``, so that extraction methods skip setting it."
 msgstr ""
 
 #: ../../library/tarfile.rst:1165
 msgid ""
-"Note that this filter does not block *all* dangerous archive features. See "
-":ref:`tarfile-further-verification`  for details."
+"Note that this filter does not block *all* dangerous archive features. See :"
+"ref:`tarfile-further-verification`  for details."
 msgstr ""
 
 #: ../../library/tarfile.rst:1170
@@ -1564,9 +1562,10 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1190
 msgid ""
-"Even with ``filter='data'``, *tarfile* is not suited for extracting untrusted"
-" files without prior inspection. Among other issues, the pre-defined filters "
-"do not prevent denial-of-service attacks. Users should do additional checks."
+"Even with ``filter='data'``, *tarfile* is not suited for extracting "
+"untrusted files without prior inspection. Among other issues, the pre-"
+"defined filters do not prevent denial-of-service attacks. Users should do "
+"additional checks."
 msgstr ""
 
 #: ../../library/tarfile.rst:1195
@@ -1575,9 +1574,9 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1197
 msgid ""
-"Extract to a :func:`new temporary directory <tempfile.mkdtemp>` to prevent "
-"e.g. exploiting pre-existing links, and to make it easier to clean up after a"
-" failed extraction."
+"Extract to a :func:`new temporary directory <tempfile.mkdtemp>` to prevent e."
+"g. exploiting pre-existing links, and to make it easier to clean up after a "
+"failed extraction."
 msgstr ""
 
 #: ../../library/tarfile.rst:1200
@@ -1755,8 +1754,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1306
 msgid ""
-"If you want to create a new tar archive, specify its name after the "
-":option:`-c` option and then list the filename(s) that should be included:"
+"If you want to create a new tar archive, specify its name after the :option:"
+"`-c` option and then list the filename(s) that should be included:"
 msgstr ""
 
 #: ../../library/tarfile.rst:1309
@@ -1773,8 +1772,8 @@ msgstr ""
 
 #: ../../library/tarfile.rst:1319
 msgid ""
-"If you want to extract a tar archive into the current directory, use the "
-":option:`-e` option:"
+"If you want to extract a tar archive into the current directory, use the :"
+"option:`-e` option:"
 msgstr ""
 
 #: ../../library/tarfile.rst:1322
@@ -1883,7 +1882,8 @@ msgid ""
 "import tarfile\n"
 "tar = tarfile.open(\"sample.tar.gz\", \"r:gz\")\n"
 "for tarinfo in tar:\n"
-"    print(tarinfo.name, \"is\", tarinfo.size, \"bytes in size and is \", end=\"\")\n"
+"    print(tarinfo.name, \"is\", tarinfo.size, \"bytes in size and is \", "
+"end=\"\")\n"
 "    if tarinfo.isreg():\n"
 "        print(\"a regular file.\")\n"
 "    elif tarinfo.isdir():\n"
@@ -1932,7 +1932,8 @@ msgstr ""
 msgid ""
 "import sys\n"
 "import tarfile\n"
-"with tarfile.open(\"sample.tar.gz\", \"w|gz\", fileobj=sys.stdout.buffer) as tar:\n"
+"with tarfile.open(\"sample.tar.gz\", \"w|gz\", fileobj=sys.stdout.buffer) as "
+"tar:\n"
 "    for name in [\"foo\", \"bar\", \"quux\"]:\n"
 "        tar.add(name)"
 msgstr ""
@@ -1986,9 +1987,9 @@ msgid ""
 "The POSIX.1-2001 pax format (:const:`PAX_FORMAT`). It is the most flexible "
 "format with virtually no limits. It supports long filenames and linknames, "
 "large files and stores pathnames in a portable way. Modern tar "
-"implementations, including GNU tar, bsdtar/libarchive and star, fully support"
-" extended *pax* features; some old or unmaintained libraries may not, but "
-"should treat *pax* archives as if they were in the universally supported "
+"implementations, including GNU tar, bsdtar/libarchive and star, fully "
+"support extended *pax* features; some old or unmaintained libraries may not, "
+"but should treat *pax* archives as if they were in the universally supported "
 "*ustar* format. It is the current default format for new archives."
 msgstr ""
 
@@ -2010,10 +2011,10 @@ msgstr ""
 #: ../../library/tarfile.rst:1493
 msgid ""
 "The ancient V7 format. This is the first tar format from Unix Seventh "
-"Edition, storing only regular files and directories. Names must not be longer"
-" than 100 characters, there is no user/group name information. Some archives "
-"have miscalculated header checksums in case of fields with non-ASCII "
-"characters."
+"Edition, storing only regular files and directories. Names must not be "
+"longer than 100 characters, there is no user/group name information. Some "
+"archives have miscalculated header checksums in case of fields with non-"
+"ASCII characters."
 msgstr ""
 
 #: ../../library/tarfile.rst:1498
@@ -2031,14 +2032,14 @@ msgid ""
 "The tar format was originally conceived to make backups on tape drives with "
 "the main focus on preserving file system information. Nowadays tar archives "
 "are commonly used for file distribution and exchanging archives over "
-"networks. One problem of the original format (which is the basis of all other"
-" formats) is that there is no concept of supporting different character "
+"networks. One problem of the original format (which is the basis of all "
+"other formats) is that there is no concept of supporting different character "
 "encodings. For example, an ordinary tar archive created on a *UTF-8* system "
 "cannot be read correctly on a *Latin-1* system if it contains non-*ASCII* "
 "characters. Textual metadata (like filenames, linknames, user/group names) "
 "will appear damaged. Unfortunately, there is no way to autodetect the "
-"encoding of an archive. The pax format was designed to solve this problem. It"
-" stores non-ASCII metadata using the universal character encoding *UTF-8*."
+"encoding of an archive. The pax format was designed to solve this problem. "
+"It stores non-ASCII metadata using the universal character encoding *UTF-8*."
 msgstr ""
 
 #: ../../library/tarfile.rst:1518
@@ -2052,8 +2053,8 @@ msgid ""
 "*encoding* defines the character encoding to use for the metadata in the "
 "archive. The default value is :func:`sys.getfilesystemencoding` or "
 "``'ascii'`` as a fallback. Depending on whether the archive is read or "
-"written, the metadata must be either decoded or encoded. If *encoding* is not"
-" set appropriately, this conversion may fail."
+"written, the metadata must be either decoded or encoded. If *encoding* is "
+"not set appropriately, this conversion may fail."
 msgstr ""
 
 #: ../../library/tarfile.rst:1527

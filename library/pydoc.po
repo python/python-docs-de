@@ -27,8 +27,8 @@ msgstr ""
 #: ../../library/pydoc.rst:16
 msgid ""
 "The :mod:`!pydoc` module automatically generates documentation from Python "
-"modules.  The documentation can be presented as pages of text on the console,"
-" served to a web browser, or saved to HTML files."
+"modules.  The documentation can be presented as pages of text on the "
+"console, served to a web browser, or saved to HTML files."
 msgstr ""
 
 #: ../../library/pydoc.rst:20
@@ -38,8 +38,8 @@ msgid ""
 "of the object, and recursively of its documentable members.  If there is no "
 "docstring, :mod:`!pydoc` tries to obtain a description from the block of "
 "comment lines just above the definition of the class, function or method in "
-"the source file, or at the top of the module (see "
-":func:`inspect.getcomments`)."
+"the source file, or at the top of the module (see :func:`inspect."
+"getcomments`)."
 msgstr ""
 
 #: ../../library/pydoc.rst:27
@@ -78,15 +78,15 @@ msgstr ""
 #: ../../library/pydoc.rst:51
 msgid ""
 "When printing output to the console, :program:`pydoc` attempts to paginate "
-"the output for easier reading.  If either the :envvar:`MANPAGER` or the "
-":envvar:`PAGER` environment variable is set, :program:`pydoc` will use its "
+"the output for easier reading.  If either the :envvar:`MANPAGER` or the :"
+"envvar:`PAGER` environment variable is set, :program:`pydoc` will use its "
 "value as a pagination program. When both are set, :envvar:`MANPAGER` is used."
 msgstr ""
 
 #: ../../library/pydoc.rst:56
 msgid ""
-"Specifying a ``-w`` flag before the argument will cause HTML documentation to"
-" be written out to a file in the current directory, instead of displaying "
+"Specifying a ``-w`` flag before the argument will cause HTML documentation "
+"to be written out to a file in the current directory, instead of displaying "
 "text on the console."
 msgstr ""
 
@@ -101,11 +101,11 @@ msgstr ""
 #: ../../library/pydoc.rst:65
 msgid ""
 "You can also use :program:`pydoc` to start an HTTP server on the local "
-"machine that will serve documentation to visiting web browsers.  "
-":program:`python -m pydoc -p 1234` will start a HTTP server on port 1234, "
-"allowing you to browse the documentation at ``http://localhost:1234/`` in "
-"your preferred web browser. Specifying ``0`` as the port number will select "
-"an arbitrary unused port."
+"machine that will serve documentation to visiting web browsers.  :program:"
+"`python -m pydoc -p 1234` will start a HTTP server on port 1234, allowing "
+"you to browse the documentation at ``http://localhost:1234/`` in your "
+"preferred web browser. Specifying ``0`` as the port number will select an "
+"arbitrary unused port."
 msgstr ""
 
 #: ../../library/pydoc.rst:73
@@ -118,35 +118,35 @@ msgstr ""
 msgid ""
 ":program:`python -m pydoc -n <hostname>` will start the server listening at "
 "the given hostname.  By default the hostname is 'localhost' but if you want "
-"the server to be reached from other machines, you may want to change the host"
-" name that the server responds to.  During development this is especially "
-"useful if you want to run pydoc from within a container."
+"the server to be reached from other machines, you may want to change the "
+"host name that the server responds to.  During development this is "
+"especially useful if you want to run pydoc from within a container."
 msgstr ""
 
 #: ../../library/pydoc.rst:82
 msgid ""
 ":program:`python -m pydoc -b` will start the server and additionally open a "
-"web browser to a module index page.  Each served page has a navigation bar at"
-" the top where you can *Get* help on an individual item, *Search* all modules"
-" with a keyword in their synopsis line, and go to the *Module index*, "
+"web browser to a module index page.  Each served page has a navigation bar "
+"at the top where you can *Get* help on an individual item, *Search* all "
+"modules with a keyword in their synopsis line, and go to the *Module index*, "
 "*Topics* and *Keywords* pages."
 msgstr ""
 
 #: ../../library/pydoc.rst:88
 msgid ""
 "When :program:`pydoc` generates documentation, it uses the current "
-"environment and path to locate modules.  Thus, invoking :program:`pydoc spam`"
-" documents precisely the version of the module you would get if you started "
-"the Python interpreter and typed ``import spam``."
+"environment and path to locate modules.  Thus, invoking :program:`pydoc "
+"spam` documents precisely the version of the module you would get if you "
+"started the Python interpreter and typed ``import spam``."
 msgstr ""
 
 #: ../../library/pydoc.rst:93
 msgid ""
-"Module docs for core modules are assumed to reside in "
-"``https://docs.python.org/X.Y/library/`` where ``X`` and ``Y`` are the major "
-"and minor version numbers of the Python interpreter.  This can be overridden "
-"by setting the :envvar:`!PYTHONDOCS` environment variable to a different URL "
-"or to a local directory containing the Library Reference Manual pages."
+"Module docs for core modules are assumed to reside in ``https://docs.python."
+"org/X.Y/library/`` where ``X`` and ``Y`` are the major and minor version "
+"numbers of the Python interpreter.  This can be overridden by setting the :"
+"envvar:`!PYTHONDOCS` environment variable to a different URL or to a local "
+"directory containing the Library Reference Manual pages."
 msgstr ""
 
 #: ../../library/pydoc.rst:100
@@ -159,9 +159,8 @@ msgstr ""
 
 #: ../../library/pydoc.rst:106
 msgid ""
-":mod:`!pydoc` now uses :func:`inspect.signature` rather than "
-":func:`inspect.getfullargspec` to extract signature information from "
-"callables."
+":mod:`!pydoc` now uses :func:`inspect.signature` rather than :func:`inspect."
+"getfullargspec` to extract signature information from callables."
 msgstr ""
 
 #: ../../library/pydoc.rst:111

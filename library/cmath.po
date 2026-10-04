@@ -38,12 +38,12 @@ msgstr ""
 #: ../../library/cmath.rst:18
 msgid ""
 "For functions involving branch cuts, we have the problem of deciding how to "
-"define those functions on the cut itself. Following Kahan's \"Branch cuts for"
-" complex elementary functions\" paper, as well as Annex G of C99 and later C "
-"standards, we use the sign of zero to distinguish one side of the branch cut "
-"from the other: for a branch cut along (a portion of) the real axis we look "
-"at the sign of the imaginary part, while for a branch cut along the imaginary"
-" axis we look at the sign of the real part."
+"define those functions on the cut itself. Following Kahan's \"Branch cuts "
+"for complex elementary functions\" paper, as well as Annex G of C99 and "
+"later C standards, we use the sign of zero to distinguish one side of the "
+"branch cut from the other: for a branch cut along (a portion of) the real "
+"axis we look at the sign of the imaginary part, while for a branch cut along "
+"the imaginary axis we look at the sign of the real part."
 msgstr ""
 
 #: ../../library/cmath.rst:26
@@ -343,8 +343,8 @@ msgstr ""
 #: ../../library/cmath.rst:95
 msgid ""
 "A Python complex number ``z`` is stored internally using *rectangular* or "
-"*Cartesian* coordinates.  It is completely determined by its *real part* "
-"``z.real`` and its *imaginary part* ``z.imag``."
+"*Cartesian* coordinates.  It is completely determined by its *real part* ``z."
+"real`` and its *imaginary part* ``z.imag``."
 msgstr ""
 
 #: ../../library/cmath.rst:99
@@ -368,8 +368,8 @@ msgid ""
 "Return the phase of *z* (also known as the *argument* of *z*), as a float. "
 "``phase(z)`` is equivalent to ``math.atan2(z.imag, z.real)``.  The result "
 "lies in the range [-\\ *π*, *π*], and the branch cut for this operation lies "
-"along the negative real axis.  The sign of the result is the same as the sign"
-" of ``z.imag``, even when ``z.imag`` is zero::"
+"along the negative real axis.  The sign of the result is the same as the "
+"sign of ``z.imag``, even when ``z.imag`` is zero::"
 msgstr ""
 
 #: ../../library/cmath.rst:117
@@ -383,8 +383,8 @@ msgstr ""
 #: ../../library/cmath.rst:125
 msgid ""
 "The modulus (absolute value) of a complex number *z* can be computed using "
-"the built-in :func:`abs` function.  There is no separate :mod:`!cmath` module"
-" function for this operation."
+"the built-in :func:`abs` function.  There is no separate :mod:`!cmath` "
+"module function for this operation."
 msgstr ""
 
 #: ../../library/cmath.rst:132
@@ -419,8 +419,8 @@ msgstr ""
 
 #: ../../library/cmath.rst:162
 msgid ""
-"Return the base-10 logarithm of *z*. This has the same branch cut as "
-":func:`log`."
+"Return the base-10 logarithm of *z*. This has the same branch cut as :func:"
+"`log`."
 msgstr ""
 
 #: ../../library/cmath.rst:168
@@ -517,8 +517,8 @@ msgstr ""
 
 #: ../../library/cmath.rst:265
 msgid ""
-"Return ``True`` if either the real or the imaginary part of *z* is a NaN, and"
-" ``False`` otherwise."
+"Return ``True`` if either the real or the imaginary part of *z* is a NaN, "
+"and ``False`` otherwise."
 msgstr ""
 
 #: ../../library/cmath.rst:271
@@ -537,10 +537,10 @@ msgstr ""
 #: ../../library/cmath.rst:278
 msgid ""
 "*rel_tol* is the relative tolerance -- it is the maximum allowed difference "
-"between *a* and *b*, relative to the larger absolute value of *a* or *b*. For"
-" example, to set a tolerance of 5%, pass ``rel_tol=0.05``.  The default "
-"tolerance is ``1e-09``, which assures that the two values are the same within"
-" about 9 decimal digits.  *rel_tol* must be nonnegative and less than "
+"between *a* and *b*, relative to the larger absolute value of *a* or *b*. "
+"For example, to set a tolerance of 5%, pass ``rel_tol=0.05``.  The default "
+"tolerance is ``1e-09``, which assures that the two values are the same "
+"within about 9 decimal digits.  *rel_tol* must be nonnegative and less than "
 "``1.0``."
 msgstr ""
 
@@ -555,10 +555,10 @@ msgstr ""
 
 #: ../../library/cmath.rst:291
 msgid ""
-"The IEEE 754 special values of ``NaN``, ``inf``, and ``-inf`` will be handled"
-" according to IEEE rules.  Specifically, ``NaN`` is not considered close to "
-"any other value, including ``NaN``.  ``inf`` and ``-inf`` are only considered"
-" close to themselves."
+"The IEEE 754 special values of ``NaN``, ``inf``, and ``-inf`` will be "
+"handled according to IEEE rules.  Specifically, ``NaN`` is not considered "
+"close to any other value, including ``NaN``.  ``inf`` and ``-inf`` are only "
+"considered close to themselves."
 msgstr ""
 
 #: ../../library/cmath.rst:300
@@ -608,10 +608,11 @@ msgid ""
 "Note that the selection of functions is similar, but not identical, to that "
 "in module :mod:`math`.  The reason for having two modules is that some users "
 "aren't interested in complex numbers, and perhaps don't even know what they "
-"are.  They would rather have ``math.sqrt(-1)`` raise an exception than return"
-" a complex number. Also note that the functions defined in :mod:`!cmath` "
-"always return a complex number, even if the answer can be expressed as a real"
-" number (in which case the complex number has an imaginary part of zero)."
+"are.  They would rather have ``math.sqrt(-1)`` raise an exception than "
+"return a complex number. Also note that the functions defined in :mod:`!"
+"cmath` always return a complex number, even if the answer can be expressed "
+"as a real number (in which case the complex number has an imaginary part of "
+"zero)."
 msgstr ""
 
 #: ../../library/cmath.rst:364
@@ -620,8 +621,8 @@ msgid ""
 "to be continuous.  They are a necessary feature of many complex functions.  "
 "It is assumed that if you need to compute with complex functions, you will "
 "understand about branch cuts.  Consult almost any (not too elementary) book "
-"on complex variables for enlightenment.  For information of the proper choice"
-" of branch cuts for numerical purposes, a good reference should be the "
+"on complex variables for enlightenment.  For information of the proper "
+"choice of branch cuts for numerical purposes, a good reference should be the "
 "following:"
 msgstr ""
 

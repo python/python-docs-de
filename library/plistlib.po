@@ -34,20 +34,21 @@ msgstr ""
 #: ../../library/plistlib.rst:19
 msgid ""
 "The property list (``.plist``) file format is a simple serialization "
-"supporting basic object types, like dictionaries, lists, numbers and strings."
-"  Usually the top level object is a dictionary or a frozen dictionary."
+"supporting basic object types, like dictionaries, lists, numbers and "
+"strings.  Usually the top level object is a dictionary or a frozen "
+"dictionary."
 msgstr ""
 
 #: ../../library/plistlib.rst:23
 msgid ""
-"To write out and to parse a plist file, use the :func:`dump` and :func:`load`"
-" functions."
+"To write out and to parse a plist file, use the :func:`dump` and :func:"
+"`load` functions."
 msgstr ""
 
 #: ../../library/plistlib.rst:26
 msgid ""
-"To work with plist data in bytes or string objects, use :func:`dumps` and "
-":func:`loads`."
+"To work with plist data in bytes or string objects, use :func:`dumps` and :"
+"func:`loads`."
 msgstr ""
 
 #: ../../library/plistlib.rst:29
@@ -63,8 +64,8 @@ msgstr ""
 
 #: ../../library/plistlib.rst:36
 msgid ""
-"Support added for reading and writing :class:`UID` tokens in binary plists as"
-" used by NSKeyedArchiver and NSKeyedUnarchiver."
+"Support added for reading and writing :class:`UID` tokens in binary plists "
+"as used by NSKeyedArchiver and NSKeyedUnarchiver."
 msgstr ""
 
 #: ../../library/plistlib.rst:40
@@ -73,8 +74,8 @@ msgstr ""
 
 #: ../../library/plistlib.rst:45
 msgid ""
-"`PList manual page "
-"<https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/PropertyLists/>`_"
+"`PList manual page <https://developer.apple.com/library/archive/"
+"documentation/Cocoa/Conceptual/PropertyLists/>`_"
 msgstr ""
 
 #: ../../library/plistlib.rst:46
@@ -115,17 +116,17 @@ msgstr ""
 
 #: ../../library/plistlib.rst:68
 msgid ""
-"When *aware_datetime* is true, fields with type ``datetime.datetime`` will be"
-" created as :ref:`aware object <datetime-naive-aware>`, with :attr:`!tzinfo` "
-"as :const:`datetime.UTC`."
+"When *aware_datetime* is true, fields with type ``datetime.datetime`` will "
+"be created as :ref:`aware object <datetime-naive-aware>`, with :attr:`!"
+"tzinfo` as :const:`datetime.UTC`."
 msgstr ""
 
 #: ../../library/plistlib.rst:72
 msgid ""
-"XML data for the :data:`FMT_XML` format is parsed using the Expat parser from"
-" :mod:`xml.parsers.expat` -- see its documentation for possible exceptions on"
-" ill-formed XML.  Unknown elements will simply be ignored by the plist "
-"parser."
+"XML data for the :data:`FMT_XML` format is parsed using the Expat parser "
+"from :mod:`xml.parsers.expat` -- see its documentation for possible "
+"exceptions on ill-formed XML.  Unknown elements will simply be ignored by "
+"the plist parser."
 msgstr ""
 
 #: ../../library/plistlib.rst:77
@@ -200,8 +201,8 @@ msgstr ""
 
 #: ../../library/plistlib.rst:132
 msgid ""
-"Return *value* as a plist-formatted bytes object. See the documentation for "
-":func:`dump` for an explanation of the keyword arguments of this function."
+"Return *value* as a plist-formatted bytes object. See the documentation for :"
+"func:`dump` for an explanation of the keyword arguments of this function."
 msgstr ""
 
 #: ../../library/plistlib.rst:139

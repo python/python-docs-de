@@ -204,8 +204,8 @@ msgstr ""
 
 #: ../../library/curses.ascii.rst:106
 msgid ""
-"Checks for an ASCII alphabetic character; it is equivalent to ``isupper(c) or"
-" islower(c)``."
+"Checks for an ASCII alphabetic character; it is equivalent to ``isupper(c) "
+"or islower(c)``."
 msgstr ""
 
 #: ../../library/curses.ascii.rst:112
@@ -257,14 +257,14 @@ msgstr ""
 
 #: ../../library/curses.ascii.rst:165
 msgid ""
-"Checks for an ASCII hexadecimal digit.  This is equivalent to ``c in "
-"string.hexdigits``."
+"Checks for an ASCII hexadecimal digit.  This is equivalent to ``c in string."
+"hexdigits``."
 msgstr ""
 
 #: ../../library/curses.ascii.rst:171
 msgid ""
-"Checks for an ASCII control character (ordinal values 0 to 31).  Unlike "
-":func:`iscntrl`, this does not include the delete character (0x7f)."
+"Checks for an ASCII control character (ordinal values 0 to 31).  Unlike :"
+"func:`iscntrl`, this does not include the delete character (0x7f)."
 msgstr ""
 
 #: ../../library/curses.ascii.rst:177
@@ -274,15 +274,15 @@ msgstr ""
 #: ../../library/curses.ascii.rst:179
 msgid ""
 "These functions accept either integers or single-character strings; when the "
-"argument is a string, it is first converted using the built-in function "
-":func:`ord`."
+"argument is a string, it is first converted using the built-in function :"
+"func:`ord`."
 msgstr ""
 
 #: ../../library/curses.ascii.rst:182
 msgid ""
 "Note that all these functions check ordinal bit values derived from the "
-"character of the string you pass in; they do not actually know anything about"
-" the host machine's character encoding."
+"character of the string you pass in; they do not actually know anything "
+"about the host machine's character encoding."
 msgstr ""
 
 #: ../../library/curses.ascii.rst:186

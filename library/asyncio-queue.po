@@ -31,14 +31,14 @@ msgstr ""
 #: ../../library/asyncio-queue.rst:13
 msgid ""
 "asyncio queues are designed to be similar to classes of the :mod:`queue` "
-"module.  Although asyncio queues are not thread-safe, they are designed to be"
-" used specifically in async/await code."
+"module.  Although asyncio queues are not thread-safe, they are designed to "
+"be used specifically in async/await code."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:17
 msgid ""
-"Note that methods of asyncio queues don't have a *timeout* parameter; use "
-":func:`asyncio.wait_for` function to do queue operations with a timeout."
+"Note that methods of asyncio queues don't have a *timeout* parameter; use :"
+"func:`asyncio.wait_for` function to do queue operations with a timeout."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:21
@@ -88,8 +88,8 @@ msgstr ""
 
 #: ../../library/asyncio-queue.rst:57
 msgid ""
-"If the queue was initialized with ``maxsize=0`` (the default), then "
-":meth:`full` never returns ``True``."
+"If the queue was initialized with ``maxsize=0`` (the default), then :meth:"
+"`full` never returns ``True``."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:63
@@ -120,10 +120,11 @@ msgstr ""
 
 #: ../../library/asyncio-queue.rst:81
 msgid ""
-"The count of unfinished tasks goes up whenever an item is added to the queue."
-" The count goes down whenever a consumer coroutine calls :meth:`task_done` to"
-" indicate that the item was retrieved and all work on it is complete.  When "
-"the count of unfinished tasks drops to zero, :meth:`join` unblocks."
+"The count of unfinished tasks goes up whenever an item is added to the "
+"queue. The count goes down whenever a consumer coroutine calls :meth:"
+"`task_done` to indicate that the item was retrieved and all work on it is "
+"complete.  When the count of unfinished tasks drops to zero, :meth:`join` "
+"unblocks."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:90
@@ -154,9 +155,9 @@ msgstr ""
 
 #: ../../library/asyncio-queue.rst:111
 msgid ""
-"The queue can no longer grow. Future calls to :meth:`~Queue.put` raise "
-":exc:`QueueShutDown`. Currently blocked callers of :meth:`~Queue.put` will be"
-" unblocked and will raise :exc:`QueueShutDown` in the formerly awaiting task."
+"The queue can no longer grow. Future calls to :meth:`~Queue.put` raise :exc:"
+"`QueueShutDown`. Currently blocked callers of :meth:`~Queue.put` will be "
+"unblocked and will raise :exc:`QueueShutDown` in the formerly awaiting task."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:116
@@ -167,31 +168,31 @@ msgstr ""
 
 #: ../../library/asyncio-queue.rst:120
 msgid ""
-"And if :meth:`~Queue.task_done` is called for each remaining task, a pending "
-":meth:`~Queue.join` will be unblocked normally."
+"And if :meth:`~Queue.task_done` is called for each remaining task, a "
+"pending :meth:`~Queue.join` will be unblocked normally."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:123
 msgid ""
-"Once the queue is empty, future calls to :meth:`~Queue.get` will raise "
-":exc:`QueueShutDown`."
+"Once the queue is empty, future calls to :meth:`~Queue.get` will raise :exc:"
+"`QueueShutDown`."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:126
 msgid ""
 "If *immediate* is true, the queue is terminated immediately. The queue is "
 "drained to be completely empty and the count of unfinished tasks is reduced "
-"by the number of tasks drained. If unfinished tasks is zero, callers of "
-":meth:`~Queue.join` are unblocked.  Also, blocked callers of "
-":meth:`~Queue.get` are unblocked and will raise :exc:`QueueShutDown` because "
-"the queue is empty."
+"by the number of tasks drained. If unfinished tasks is zero, callers of :"
+"meth:`~Queue.join` are unblocked.  Also, blocked callers of :meth:`~Queue."
+"get` are unblocked and will raise :exc:`QueueShutDown` because the queue is "
+"empty."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:134
 msgid ""
-"Use caution when using :meth:`~Queue.join` with *immediate* set to true. This"
-" unblocks the join even when no work has been done on the tasks, violating "
-"the usual invariant for joining a queue."
+"Use caution when using :meth:`~Queue.join` with *immediate* set to true. "
+"This unblocks the join even when no work has been done on the tasks, "
+"violating the usual invariant for joining a queue."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:142
@@ -214,8 +215,8 @@ msgstr ""
 
 #: ../../library/asyncio-queue.rst:153
 msgid ""
-"Raises :exc:`ValueError` if called more times than there were items placed in"
-" the queue."
+"Raises :exc:`ValueError` if called more times than there were items placed "
+"in the queue."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:158
@@ -260,9 +261,9 @@ msgstr ""
 
 #: ../../library/asyncio-queue.rst:195
 msgid ""
-"Exception raised when :meth:`~Queue.put`, :meth:`~Queue.put_nowait`, "
-":meth:`~Queue.get` or :meth:`~Queue.get_nowait` is called on a queue which "
-"has been shut down."
+"Exception raised when :meth:`~Queue.put`, :meth:`~Queue.put_nowait`, :meth:"
+"`~Queue.get` or :meth:`~Queue.get_nowait` is called on a queue which has "
+"been shut down."
 msgstr ""
 
 #: ../../library/asyncio-queue.rst:203

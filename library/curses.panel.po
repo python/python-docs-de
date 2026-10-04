@@ -22,8 +22,8 @@ msgstr ""
 
 #: ../../library/curses.panel.rst:9
 msgid ""
-"Panels are windows with the added feature of depth, so they can be stacked on"
-" top of each other, and only the visible portions of each window will be "
+"Panels are windows with the added feature of depth, so they can be stacked "
+"on top of each other, and only the visible portions of each window will be "
 "displayed.  Panels can be added, moved up or down in the stack, and removed."
 msgstr ""
 
@@ -114,8 +114,8 @@ msgstr ""
 
 #: ../../library/curses.panel.rst:123
 msgid ""
-"Set the panel's user pointer to *obj*. This is used to associate an arbitrary"
-" piece of data with the panel, and can be any Python object."
+"Set the panel's user pointer to *obj*. This is used to associate an "
+"arbitrary piece of data with the panel, and can be any Python object."
 msgstr ""
 
 #: ../../library/curses.panel.rst:129

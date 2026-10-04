@@ -37,10 +37,10 @@ msgid ""
 "The module is called :mod:`!bisect` because it uses a basic bisection "
 "algorithm to do its work.  Unlike other bisection tools that search for a "
 "specific value, the functions in this module are designed to locate an "
-"insertion point. Accordingly, the functions never call an "
-":meth:`~object.__eq__` method to determine whether a value has been found.  "
-"Instead, the functions only call the :meth:`~object.__lt__` method and will "
-"return an insertion point between values in an array."
+"insertion point. Accordingly, the functions never call an :meth:`~object."
+"__eq__` method to determine whether a value has been found.  Instead, the "
+"functions only call the :meth:`~object.__lt__` method and will return an "
+"insertion point between values in an array."
 msgstr ""
 
 #: ../../library/bisect.rst:26
@@ -48,9 +48,10 @@ msgid ""
 "The functions in this module are not thread-safe. If multiple threads "
 "concurrently use :mod:`!bisect` functions on the same sequence, this may "
 "result in undefined behaviour. Likewise, if the provided sequence is mutated "
-"by a different thread while a :mod:`!bisect` function is operating on it, the"
-" result is undefined. For example, using :py:func:`~bisect.insort_left` on "
-"the same list from multiple threads may result in the list becoming unsorted."
+"by a different thread while a :mod:`!bisect` function is operating on it, "
+"the result is undefined. For example, using :py:func:`~bisect.insort_left` "
+"on the same list from multiple threads may result in the list becoming "
+"unsorted."
 msgstr ""
 
 #: ../../library/bisect.rst:36
@@ -70,8 +71,9 @@ msgstr ""
 #: ../../library/bisect.rst:48
 msgid ""
 "The returned insertion point *ip* partitions the array *a* into two slices "
-"such that ``all(elem < x for elem in a[lo : ip])`` is true for the left slice"
-" and ``all(elem >= x for elem in a[ip : hi])`` is true for the right slice."
+"such that ``all(elem < x for elem in a[lo : ip])`` is true for the left "
+"slice and ``all(elem >= x for elem in a[ip : hi])`` is true for the right "
+"slice."
 msgstr ""
 
 #: ../../library/bisect.rst:53
@@ -131,8 +133,8 @@ msgstr ""
 
 #: ../../library/bisect.rst:99
 msgid ""
-"Similar to :py:func:`~bisect.insort_left`, but inserting *x* in *a* after any"
-" existing entries of *x*."
+"Similar to :py:func:`~bisect.insort_left`, but inserting *x* in *a* after "
+"any existing entries of *x*."
 msgstr ""
 
 #: ../../library/bisect.rst:102
@@ -167,12 +169,12 @@ msgstr ""
 #: ../../library/bisect.rst:128
 msgid ""
 "The search functions are stateless and discard key function results after "
-"they are used.  Consequently, if the search functions are used in a loop, the"
-" key function may be called again and again on the same array elements. If "
-"the key function isn't fast, consider wrapping it with "
-":py:deco:`functools.cache` to avoid duplicate computations.  Alternatively, "
-"consider searching an array of precomputed keys to locate the insertion point"
-" (as shown in the examples section below)."
+"they are used.  Consequently, if the search functions are used in a loop, "
+"the key function may be called again and again on the same array elements. "
+"If the key function isn't fast, consider wrapping it with :py:deco:"
+"`functools.cache` to avoid duplicate computations.  Alternatively, consider "
+"searching an array of precomputed keys to locate the insertion point (as "
+"shown in the examples section below)."
 msgstr ""
 
 #: ../../library/bisect.rst:138
@@ -184,11 +186,11 @@ msgstr ""
 
 #: ../../library/bisect.rst:142
 msgid ""
-"The `SortedCollection recipe "
-"<https://code.activestate.com/recipes/577197-sortedcollection/>`_ uses bisect"
-" to build a full-featured collection class with straight-forward search "
-"methods and support for a key-function.  The keys are precomputed to save "
-"unnecessary calls to the key function during searches."
+"The `SortedCollection recipe <https://code.activestate.com/recipes/577197-"
+"sortedcollection/>`_ uses bisect to build a full-featured collection class "
+"with straight-forward search methods and support for a key-function.  The "
+"keys are precomputed to save unnecessary calls to the key function during "
+"searches."
 msgstr ""
 
 #: ../../library/bisect.rst:150
@@ -197,10 +199,10 @@ msgstr ""
 
 #: ../../library/bisect.rst:152
 msgid ""
-"The above `bisect functions`_ are useful for finding insertion points but can"
-" be tricky or awkward to use for common searching tasks. The following five "
-"functions show how to transform them into the standard lookups for sorted "
-"lists::"
+"The above `bisect functions`_ are useful for finding insertion points but "
+"can be tricky or awkward to use for common searching tasks. The following "
+"five functions show how to transform them into the standard lookups for "
+"sorted lists::"
 msgstr ""
 
 #: ../../library/bisect.rst:157
@@ -266,8 +268,8 @@ msgstr ""
 #: ../../library/bisect.rst:210
 msgid ""
 "The :py:func:`~bisect.bisect` and :py:func:`~bisect.insort` functions also "
-"work with lists of tuples.  The *key* argument can serve to extract the field"
-" used for ordering records in a table::"
+"work with lists of tuples.  The *key* argument can serve to extract the "
+"field used for ordering records in a table::"
 msgstr ""
 
 #: ../../library/bisect.rst:214
