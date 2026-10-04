@@ -33,9 +33,9 @@ msgid ""
 "constraints on their semantics, but does not fully define the semantics."
 msgstr ""
 "Zu den integrierten Klassen gehören Datentypen, die man normalerweise dem "
-"„Kern“ einer Sprache zurechnen würde, etwa Zahlen und Listen. Für diese Typen"
-" legt der Sprachkern von Python die Form der Literale fest und schränkt ihre "
-"Semantik teilweise ein, definiert sie aber nicht vollständig."
+"„Kern“ einer Sprache zurechnen würde, etwa Zahlen und Listen. Für diese "
+"Typen legt der Sprachkern von Python die Form der Literale fest und schränkt "
+"ihre Semantik teilweise ein, definiert sie aber nicht vollständig."
 
 #: ../../builtins/index.rst:14
 msgid ""
