@@ -8,7 +8,6 @@
 # Jyst Breisgau, 2026
 # Swen Bachmann, 2026
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -46,17 +45,17 @@ msgid ""
 "module-requirements`."
 msgstr ""
 "Dies ist ein :term:`optionales Modul <optional module>`. Falls es in deiner "
-"Kopie von CPython fehlt, suche in der Dokumentation deines Distributors "
-"(also demjenigen, der dir Python zur Verfügung gestellt hat). Falls du "
-"selbst der Distributor bist, siehe :ref:`optional-module-requirements`."
+"Kopie von CPython fehlt, suche in der Dokumentation deines Distributors (also"
+" demjenigen, der dir Python zur Verfügung gestellt hat). Falls du selbst der "
+"Distributor bist, siehe :ref:`optional-module-requirements`."
 
 #: ../../library/ctypes.rst:21
 msgid ""
 ":mod:`!ctypes` provides low-level access to native libraries and the "
-"process's memory, bypassing Python's safety mechanisms and allowing "
-"execution of arbitrary native code. Incorrect use can corrupt data and "
-"objects, reveal sensitive information, cause crashes, or otherwise "
-"compromise the running process."
+"process's memory, bypassing Python's safety mechanisms and allowing execution"
+" of arbitrary native code. Incorrect use can corrupt data and objects, reveal"
+" sensitive information, cause crashes, or otherwise compromise the running "
+"process."
 msgstr ""
 
 #: ../../library/ctypes.rst:31
@@ -66,9 +65,9 @@ msgstr ""
 #: ../../library/ctypes.rst:33
 msgid ""
 "Note: Some code samples reference the ctypes :class:`c_int` type.  On "
-"platforms where ``sizeof(long) == sizeof(int)`` it is an alias to :class:"
-"`c_long`. So, you should not be confused if :class:`c_long` is printed if "
-"you would expect :class:`c_int` --- they are actually the same type."
+"platforms where ``sizeof(long) == sizeof(int)`` it is an alias to "
+":class:`c_long`. So, you should not be confused if :class:`c_long` is printed"
+" if you would expect :class:`c_int` --- they are actually the same type."
 msgstr ""
 
 #: ../../library/ctypes.rst:41
@@ -77,15 +76,15 @@ msgstr ""
 
 #: ../../library/ctypes.rst:43
 msgid ""
-":mod:`!ctypes` exports the :py:data:`~ctypes.cdll`, and on Windows :py:data:"
-"`~ctypes.windll` and :py:data:`~ctypes.oledll` objects, for loading dynamic "
-"link libraries."
+":mod:`!ctypes` exports the :py:data:`~ctypes.cdll`, and on Windows "
+":py:data:`~ctypes.windll` and :py:data:`~ctypes.oledll` objects, for loading "
+"dynamic link libraries."
 msgstr ""
 
 #: ../../library/ctypes.rst:47
 msgid ""
-"You load libraries by accessing them as attributes of these objects. :py:"
-"data:`!cdll` loads libraries which export functions using the standard "
+"You load libraries by accessing them as attributes of these objects. "
+":py:data:`!cdll` loads libraries which export functions using the standard "
 "``cdecl`` calling convention, while :py:data:`!windll` libraries call "
 "functions using the ``stdcall`` calling convention. :py:data:`~oledll` also "
 "uses the ``stdcall`` calling convention, and assumes the functions return a "
@@ -96,15 +95,15 @@ msgstr ""
 
 #: ../../library/ctypes.rst:57
 msgid ""
-"Windows errors used to raise :exc:`WindowsError`, which is now an alias of :"
-"exc:`OSError`."
+"Windows errors used to raise :exc:`WindowsError`, which is now an alias of "
+":exc:`OSError`."
 msgstr ""
 
 #: ../../library/ctypes.rst:62
 msgid ""
-"Here are some examples for Windows. Note that ``msvcrt`` is the MS standard "
-"C library containing most standard C functions, and uses the ``cdecl`` "
-"calling convention::"
+"Here are some examples for Windows. Note that ``msvcrt`` is the MS standard C"
+" library containing most standard C functions, and uses the ``cdecl`` calling"
+" convention::"
 msgstr ""
 
 #: ../../library/ctypes.rst:66
@@ -124,24 +123,24 @@ msgstr ""
 
 #: ../../library/ctypes.rst:77
 msgid ""
-"Accessing the standard C library through ``cdll.msvcrt`` will use an "
-"outdated version of the library that may be incompatible with the one being "
-"used by Python. Where possible, use native Python functionality, or else "
-"import and use the ``msvcrt`` module."
+"Accessing the standard C library through ``cdll.msvcrt`` will use an outdated"
+" version of the library that may be incompatible with the one being used by "
+"Python. Where possible, use native Python functionality, or else import and "
+"use the ``msvcrt`` module."
 msgstr ""
 
 #: ../../library/ctypes.rst:82
 msgid ""
 "Other systems require the filename *including* the extension to load a "
-"library, so attribute access can not be used to load libraries. Either the :"
-"meth:`~LibraryLoader.LoadLibrary` method of the dll loaders should be used, "
-"or you should load the library by creating an instance of :py:class:`CDLL` "
-"by calling the constructor."
+"library, so attribute access can not be used to load libraries. Either the "
+":meth:`~LibraryLoader.LoadLibrary` method of the dll loaders should be used, "
+"or you should load the library by creating an instance of :py:class:`CDLL` by"
+" calling the constructor."
 msgstr ""
 
 #: ../../library/ctypes.rst:88
 msgid "For example, on Linux::"
-msgstr ""
+msgstr "Zum Beispiel unter Linux::"
 
 #: ../../library/ctypes.rst:90
 msgid ""
@@ -218,8 +217,8 @@ msgstr ""
 #: ../../library/ctypes.rst:143
 msgid ""
 "Sometimes, dlls export functions with names which aren't valid Python "
-"identifiers, like ``\"??2@YAPAXI@Z\"``. In this case you have to use :func:"
-"`getattr` to retrieve the function::"
+"identifiers, like ``\"??2@YAPAXI@Z\"``. In this case you have to use "
+":func:`getattr` to retrieve the function::"
 msgstr ""
 
 #: ../../library/ctypes.rst:147
@@ -268,8 +267,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:176
 msgid ""
-"On Windows, you can call the ``GetModuleHandleA()`` function, which returns "
-"a win32 module handle (passing ``None`` as single argument to call it with a "
+"On Windows, you can call the ``GetModuleHandleA()`` function, which returns a"
+" win32 module handle (passing ``None`` as single argument to call it with a "
 "``NULL`` pointer)::"
 msgstr ""
 
@@ -291,29 +290,27 @@ msgid ""
 ">>> cdll.kernel32.GetModuleHandleA(None)\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
-"ValueError: Procedure probably called with not enough arguments (4 bytes "
-"missing)\n"
+"ValueError: Procedure probably called with not enough arguments (4 bytes missing)\n"
 ">>>\n"
 "\n"
 ">>> windll.msvcrt.printf(b\"spam\")\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
-"ValueError: Procedure probably called with too many arguments (4 bytes in "
-"excess)\n"
+"ValueError: Procedure probably called with too many arguments (4 bytes in excess)\n"
 ">>>"
 msgstr ""
 
 #: ../../library/ctypes.rst:198
 msgid ""
-"To find out the correct calling convention you have to look into the C "
-"header file or the documentation for the function you want to call."
+"To find out the correct calling convention you have to look into the C header"
+" file or the documentation for the function you want to call."
 msgstr ""
 
 #: ../../library/ctypes.rst:201
 msgid ""
 "On Windows, :mod:`!ctypes` uses win32 structured exception handling to "
-"prevent crashes from general protection faults when functions are called "
-"with invalid argument values::"
+"prevent crashes from general protection faults when functions are called with"
+" invalid argument values::"
 msgstr ""
 
 #: ../../library/ctypes.rst:205
@@ -336,9 +333,9 @@ msgid ""
 "``None``, integers, bytes objects and (unicode) strings are the only native "
 "Python objects that can directly be used as parameters in these function "
 "calls. ``None`` is passed as a C ``NULL`` pointer, bytes objects and strings "
-"are passed as pointer to the memory block that contains their data (:c:expr:"
-"`char *` or :c:expr:`wchar_t *`).  Python integers are passed as the "
-"platform's default C :c:expr:`int` type, their value is masked to fit into "
+"are passed as pointer to the memory block that contains their data "
+"(:c:expr:`char *` or :c:expr:`wchar_t *`).  Python integers are passed as the"
+" platform's default C :c:expr:`int` type, their value is masked to fit into "
 "the C type."
 msgstr ""
 
@@ -831,10 +828,10 @@ msgstr ""
 
 #: ../../library/ctypes.rst:403
 msgid ""
-"The constructors for numeric types will convert input using :py:meth:"
-"`~object.__bool__`, :py:meth:`~object.__index__` (for ``int``), :py:meth:"
-"`~object.__float__` or :py:meth:`~object.__complex__`. This means :py:class:"
-"`~ctypes.c_bool` accepts any object with a truth value::"
+"The constructors for numeric types will convert input using "
+":py:meth:`~object.__bool__`, :py:meth:`~object.__index__` (for ``int``), "
+":py:meth:`~object.__float__` or :py:meth:`~object.__complex__`. This means "
+":py:class:`~ctypes.c_bool` accepts any object with a truth value::"
 msgstr ""
 
 #: ../../library/ctypes.rst:409
@@ -864,8 +861,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:425
 msgid ""
-"Assigning a new value to instances of the pointer types :class:`c_char_p`, :"
-"class:`c_wchar_p`, and :class:`c_void_p` changes the *memory location* they "
+"Assigning a new value to instances of the pointer types :class:`c_char_p`, "
+":class:`c_wchar_p`, and :class:`c_void_p` changes the *memory location* they "
 "point to, *not the contents* of the memory block (of course not, because "
 "Python string objects are immutable)::"
 msgstr ""
@@ -891,8 +888,8 @@ msgstr ""
 #: ../../library/ctypes.rst:445
 msgid ""
 "You should be careful, however, not to pass them to functions expecting "
-"pointers to mutable memory. If you need mutable memory blocks, ctypes has a :"
-"func:`create_string_buffer` function which creates these in various ways.  "
+"pointers to mutable memory. If you need mutable memory blocks, ctypes has a "
+":func:`create_string_buffer` function which creates these in various ways.  "
 "The current memory block contents can be accessed (or changed) with the "
 "``raw`` property; if you want to access it as NUL terminated string, use the "
 "``value`` property::"
@@ -901,12 +898,10 @@ msgstr ""
 #: ../../library/ctypes.rst:452
 msgid ""
 ">>> from ctypes import *\n"
-">>> p = create_string_buffer(3)            # create a 3 byte buffer, "
-"initialized to NUL bytes\n"
+">>> p = create_string_buffer(3)            # create a 3 byte buffer, initialized to NUL bytes\n"
 ">>> print(sizeof(p), repr(p.raw))\n"
 "3 b'\\x00\\x00\\x00'\n"
-">>> p = create_string_buffer(b\"Hello\")     # create a buffer containing a "
-"NUL terminated string\n"
+">>> p = create_string_buffer(b\"Hello\")     # create a buffer containing a NUL terminated string\n"
 ">>> print(sizeof(p), repr(p.raw))\n"
 "6 b'Hello\\x00'\n"
 ">>> print(repr(p.value))\n"
@@ -924,8 +919,8 @@ msgstr ""
 msgid ""
 "The :func:`create_string_buffer` function replaces the old :func:`!c_buffer` "
 "function (which is still available as an alias).  To create a mutable memory "
-"block containing unicode characters of the C type :c:type:`wchar_t`, use "
-"the :func:`create_unicode_buffer` function."
+"block containing unicode characters of the C type :c:type:`wchar_t`, use the "
+":func:`create_unicode_buffer` function."
 msgstr ""
 
 #: ../../library/ctypes.rst:478
@@ -934,9 +929,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:480
 msgid ""
-"Note that printf prints to the real standard output channel, *not* to :data:"
-"`sys.stdout`, so these examples will only work at the console prompt, not "
-"from within *IDLE* or *PythonWin*::"
+"Note that printf prints to the real standard output channel, *not* to "
+":data:`sys.stdout`, so these examples will only work at the console prompt, "
+"not from within *IDLE* or *PythonWin*::"
 msgstr ""
 
 #: ../../library/ctypes.rst:484
@@ -954,8 +949,7 @@ msgid ""
 ">>> printf(b\"%f bottles of beer\\n\", 42.5)\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
-"ctypes.ArgumentError: argument 2: TypeError: Don't know how to convert "
-"parameter 2\n"
+"ctypes.ArgumentError: argument 2: TypeError: Don't know how to convert parameter 2\n"
 ">>>"
 msgstr ""
 
@@ -1031,9 +1025,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:551
 msgid ""
-"If you don't want to store the instance's data in the :attr:`!"
-"_as_parameter_` instance variable, you could define a :deco:`property` which "
-"makes the attribute available on request."
+"If you don't want to store the instance's data in the :attr:`!_as_parameter_`"
+" instance variable, you could define a :deco:`property` which makes the "
+"attribute available on request."
 msgstr ""
 
 #: ../../library/ctypes.rst:559
@@ -1048,10 +1042,10 @@ msgstr ""
 
 #: ../../library/ctypes.rst:564
 msgid ""
-":attr:`~_CFuncPtr.argtypes` must be a sequence of C data types (the :func:`!"
-"printf` function is probably not a good example here, because it takes a "
-"variable number and different types of parameters depending on the format "
-"string, on the other hand this is quite handy to experiment with this "
+":attr:`~_CFuncPtr.argtypes` must be a sequence of C data types (the "
+":func:`!printf` function is probably not a good example here, because it "
+"takes a variable number and different types of parameters depending on the "
+"format string, on the other hand this is quite handy to experiment with this "
 "feature)::"
 msgstr ""
 
@@ -1076,8 +1070,7 @@ msgid ""
 ">>> printf(b\"%d %d %d\", 1, 2, 3)\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
-"ctypes.ArgumentError: argument 2: TypeError: 'int' object cannot be "
-"interpreted as ctypes.c_char_p\n"
+"ctypes.ArgumentError: argument 2: TypeError: 'int' object cannot be interpreted as ctypes.c_char_p\n"
 ">>> printf(b\"%s %d %f\\n\", b\"X\", 2, 3)\n"
 "X 2 3.000000\n"
 "13\n"
@@ -1088,14 +1081,14 @@ msgstr ""
 msgid ""
 "If you have defined your own classes which you pass to function calls, you "
 "have to implement a :meth:`~_CData.from_param` class method for them to be "
-"able to use them in the :attr:`~_CFuncPtr.argtypes` sequence. The :meth:"
-"`~_CData.from_param` class method receives the Python object passed to the "
-"function call, it should do a typecheck or whatever is needed to make sure "
-"this object is acceptable, and then return the object itself, its :attr:`!"
-"_as_parameter_` attribute, or whatever you want to pass as the C function "
-"argument in this case. Again, the result should be an integer, string, "
-"bytes, a :mod:`!ctypes` instance, or an object with an :attr:`!"
-"_as_parameter_` attribute."
+"able to use them in the :attr:`~_CFuncPtr.argtypes` sequence. The "
+":meth:`~_CData.from_param` class method receives the Python object passed to "
+"the function call, it should do a typecheck or whatever is needed to make "
+"sure this object is acceptable, and then return the object itself, its "
+":attr:`!_as_parameter_` attribute, or whatever you want to pass as the C "
+"function argument in this case. Again, the result should be an integer, "
+"string, bytes, a :mod:`!ctypes` instance, or an object with an "
+":attr:`!_as_parameter_` attribute."
 msgstr ""
 
 #: ../../library/ctypes.rst:601
@@ -1111,9 +1104,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:615
 msgid ""
-"The C prototype of :c:func:`time` is ``time_t time(time_t *)``. Because :c:"
-"type:`time_t` might be of a different type than the default return type :c:"
-"expr:`int`, you should specify the :attr:`!restype` attribute::"
+"The C prototype of :c:func:`time` is ``time_t time(time_t *)``. Because "
+":c:type:`time_t` might be of a different type than the default return type "
+":c:expr:`int`, you should specify the :attr:`!restype` attribute::"
 msgstr ""
 
 #: ../../library/ctypes.rst:619
@@ -1174,8 +1167,7 @@ msgid ""
 "b'def'\n"
 ">>> strchr(b\"abcdef\", b\"def\")\n"
 "Traceback (most recent call last):\n"
-"ctypes.ArgumentError: argument 2: TypeError: one character bytes, bytearray "
-"or integer expected\n"
+"ctypes.ArgumentError: argument 2: TypeError: one character bytes, bytearray or integer expected\n"
 ">>> print(strchr(b\"abcdef\", b\"x\"))\n"
 "None\n"
 ">>> strchr(b\"abcdef\", b\"d\")\n"
@@ -1185,12 +1177,12 @@ msgstr ""
 
 #: ../../library/ctypes.rst:662
 msgid ""
-"You can also use a callable Python object (a function or a class for "
-"example) as the :attr:`~_CFuncPtr.restype` attribute, if the foreign "
-"function returns an integer.  The callable will be called with the *integer* "
-"the C function returns, and the result of this call will be used as the "
-"result of your function call. This is useful to check for error return "
-"values and automatically raise an exception::"
+"You can also use a callable Python object (a function or a class for example)"
+" as the :attr:`~_CFuncPtr.restype` attribute, if the foreign function returns"
+" an integer.  The callable will be called with the *integer* the C function "
+"returns, and the result of this call will be used as the result of your "
+"function call. This is useful to check for error return values and "
+"automatically raise an exception::"
 msgstr ""
 
 #: ../../library/ctypes.rst:668
@@ -1215,10 +1207,10 @@ msgstr ""
 
 #: ../../library/ctypes.rst:685
 msgid ""
-"``WinError`` is a function which will call Windows ``FormatMessage()`` api "
-"to get the string representation of an error code, and *returns* an "
-"exception. ``WinError`` takes an optional error code parameter, if no one is "
-"used, it calls :func:`GetLastError` to retrieve it."
+"``WinError`` is a function which will call Windows ``FormatMessage()`` api to"
+" get the string representation of an error code, and *returns* an exception. "
+"``WinError`` takes an optional error code parameter, if no one is used, it "
+"calls :func:`GetLastError` to retrieve it."
 msgstr ""
 
 #: ../../library/ctypes.rst:690
@@ -1243,10 +1235,10 @@ msgstr ""
 #: ../../library/ctypes.rst:704
 msgid ""
 ":mod:`!ctypes` exports the :func:`byref` function which is used to pass "
-"parameters by reference.  The same effect can be achieved with the :func:"
-"`pointer` function, although :func:`pointer` does a lot more work since it "
-"constructs a real pointer object, so it is faster to use :func:`byref` if "
-"you don't need the pointer object in Python itself::"
+"parameters by reference.  The same effect can be achieved with the "
+":func:`pointer` function, although :func:`pointer` does a lot more work since"
+" it constructs a real pointer object, so it is faster to use :func:`byref` if"
+" you don't need the pointer object in Python itself::"
 msgstr ""
 
 #: ../../library/ctypes.rst:710
@@ -1270,11 +1262,11 @@ msgstr ""
 
 #: ../../library/ctypes.rst:728
 msgid ""
-"Structures and unions must derive from the :class:`Structure` and :class:"
-"`Union` base classes which are defined in the :mod:`!ctypes` module. Each "
-"subclass must define a :attr:`~Structure._fields_` attribute.  :attr:`!"
-"_fields_` must be a list of *2-tuples*, containing a *field name* and a "
-"*field type*."
+"Structures and unions must derive from the :class:`Structure` and "
+":class:`Union` base classes which are defined in the :mod:`!ctypes` module. "
+"Each subclass must define a :attr:`~Structure._fields_` attribute.  "
+":attr:`!_fields_` must be a list of *2-tuples*, containing a *field name* and"
+" a *field type*."
 msgstr ""
 
 #: ../../library/ctypes.rst:733
@@ -1351,8 +1343,8 @@ msgstr ""
 #: ../../library/ctypes.rst:778
 msgid ""
 "Field :term:`descriptor`\\s can be retrieved from the *class*, they are "
-"useful for debugging because they can provide useful information. See :class:"
-"`CField`::"
+"useful for debugging because they can provide useful information. See "
+":class:`CField`::"
 msgstr ""
 
 #: ../../library/ctypes.rst:782
@@ -1368,8 +1360,8 @@ msgstr ""
 msgid ""
 ":mod:`!ctypes` does not support passing unions or structures with bit-fields "
 "to functions by value.  While this may work on 32-bit x86, it's not "
-"guaranteed by the library to work in the general case.  Unions and "
-"structures with bit-fields should always be passed to functions by pointer."
+"guaranteed by the library to work in the general case.  Unions and structures"
+" with bit-fields should always be passed to functions by pointer."
 msgstr ""
 
 #: ../../library/ctypes.rst:799
@@ -1386,18 +1378,18 @@ msgstr ""
 
 #: ../../library/ctypes.rst:806
 msgid ""
-"It is possible to specify the maximum alignment for the fields and/or for "
-"the structure itself by setting the class attributes :attr:`~Structure."
-"_pack_` and/or :attr:`~Structure._align_`, respectively. See the attribute "
+"It is possible to specify the maximum alignment for the fields and/or for the"
+" structure itself by setting the class attributes :attr:`~Structure._pack_` "
+"and/or :attr:`~Structure._align_`, respectively. See the attribute "
 "documentation for details."
 msgstr ""
 
 #: ../../library/ctypes.rst:811
 msgid ""
 ":mod:`!ctypes` uses the native byte order for Structures and Unions.  To "
-"build structures with non-native byte order, you can use one of the :class:"
-"`BigEndianStructure`, :class:`LittleEndianStructure`, :class:"
-"`BigEndianUnion`, and :class:`LittleEndianUnion` base classes.  These "
+"build structures with non-native byte order, you can use one of the "
+":class:`BigEndianStructure`, :class:`LittleEndianStructure`, "
+":class:`BigEndianUnion`, and :class:`LittleEndianUnion` base classes.  These "
 "classes cannot contain pointer fields."
 msgstr ""
 
@@ -1455,8 +1447,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:856
 msgid ""
-"Here is an example of a somewhat artificial data type, a structure "
-"containing 4 POINTs among other stuff::"
+"Here is an example of a somewhat artificial data type, a structure containing"
+" 4 POINTs among other stuff::"
 msgstr ""
 
 #: ../../library/ctypes.rst:859
@@ -1488,8 +1480,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:878
 msgid ""
-"The above code print a series of ``0 0`` lines, because the array contents "
-"is initialized to zeros."
+"The above code print a series of ``0 0`` lines, because the array contents is"
+" initialized to zeros."
 msgstr ""
 
 #: ../../library/ctypes.rst:881
@@ -1515,8 +1507,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:899
 msgid ""
-"Pointer instances are created by calling the :func:`pointer` function on a :"
-"mod:`!ctypes` type::"
+"Pointer instances are created by calling the :func:`pointer` function on a "
+":mod:`!ctypes` type::"
 msgstr ""
 
 #: ../../library/ctypes.rst:902
@@ -1557,9 +1549,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:923
 msgid ""
-"Assigning another :class:`c_int` instance to the pointer's contents "
-"attribute would cause the pointer to point to the memory location where this "
-"is stored::"
+"Assigning another :class:`c_int` instance to the pointer's contents attribute"
+" would cause the pointer to point to the memory location where this is "
+"stored::"
 msgstr ""
 
 #: ../../library/ctypes.rst:926
@@ -1607,9 +1599,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:958
 msgid ""
-"Because pointer objects support subscription, they implicitly support :term:"
-"`iteration <iterator>`. Unless doing this in a controlled manner, such as by "
-"manually calling :func:`next` on a :func:`pointer` iterator, this will "
+"Because pointer objects support subscription, they implicitly support "
+":term:`iteration <iterator>`. Unless doing this in a controlled manner, such "
+"as by manually calling :func:`next` on a :func:`pointer` iterator, this will "
 "typically lead to infinite loops or crashes, because ctypes has no way of "
 "knowing when to stop iteration. In other words, a ``pointer`` iterator will "
 "infinitely yield arbitrary memory."
@@ -1695,8 +1687,8 @@ msgid ""
 "In the above, it's only safe for one object to read and write to the address "
 "at once if the GIL is disabled. So, ``pointer_a`` can be shared and written "
 "to across multiple threads, but only if ``pointer_b`` is not also attempting "
-"to do the same. If this is an issue, consider using a :class:`threading."
-"Lock` to synchronize access to memory:"
+"to do the same. If this is an issue, consider using a :class:`threading.Lock`"
+" to synchronize access to memory:"
 msgstr ""
 
 #: ../../library/ctypes.rst:1023
@@ -1722,8 +1714,8 @@ msgid ""
 "as the type of a member field in a structure definition, only instances of "
 "exactly the same type are accepted.  There are some exceptions to this rule, "
 "where ctypes accepts other objects.  For example, you can pass compatible "
-"array instances instead of pointer types.  So, for ``POINTER(c_int)``, "
-"ctypes accepts an array of c_int::"
+"array instances instead of pointer types.  So, for ``POINTER(c_int)``, ctypes"
+" accepts an array of c_int::"
 msgstr ""
 
 #: ../../library/ctypes.rst:1047
@@ -1776,8 +1768,7 @@ msgid ""
 ">>> bar.values = (c_byte * 4)()\n"
 "Traceback (most recent call last):\n"
 "  File \"<stdin>\", line 1, in <module>\n"
-"TypeError: incompatible types, c_byte_Array_4 instance instead of LP_c_long "
-"instance\n"
+"TypeError: incompatible types, c_byte_Array_4 instance instead of LP_c_long instance\n"
 ">>>"
 msgstr ""
 
@@ -1804,8 +1795,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1098
 msgid ""
-"So, :func:`cast` can be used to assign to the ``values`` field of ``Bar`` "
-"the structure::"
+"So, :func:`cast` can be used to assign to the ``values`` field of ``Bar`` the"
+" structure::"
 msgstr ""
 
 #: ../../library/ctypes.rst:1101
@@ -1823,8 +1814,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1113
 msgid ""
-"*Incomplete Types* are structures, unions or arrays whose members are not "
-"yet specified. In C, they are specified by forward declarations, which are "
+"*Incomplete Types* are structures, unions or arrays whose members are not yet"
+" specified. In C, they are specified by forward declarations, which are "
 "defined later::"
 msgstr ""
 
@@ -1860,8 +1851,8 @@ msgstr ""
 #: ../../library/ctypes.rst:1137
 msgid ""
 "because the new ``class cell`` is not available in the class statement "
-"itself. In :mod:`!ctypes`, we can define the ``cell`` class and set the :"
-"attr:`~Structure._fields_` attribute later, after the class statement::"
+"itself. In :mod:`!ctypes`, we can define the ``cell`` class and set the "
+":attr:`~Structure._fields_` attribute later, after the class statement::"
 msgstr ""
 
 #: ../../library/ctypes.rst:1141
@@ -1877,8 +1868,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1149
 msgid ""
-"Let's try it. We create two instances of ``cell``, and let them point to "
-"each other, and finally follow the pointer chain a few times::"
+"Let's try it. We create two instances of ``cell``, and let them point to each"
+" other, and finally follow the pointer chain a few times::"
 msgstr ""
 
 #: ../../library/ctypes.rst:1152
@@ -1910,9 +1901,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1175
 msgid ""
-"First, you must create a class for the callback function. The class knows "
-"the calling convention, the return type, and the number and types of "
-"arguments this function will receive."
+"First, you must create a class for the callback function. The class knows the"
+" calling convention, the return type, and the number and types of arguments "
+"this function will receive."
 msgstr ""
 
 #: ../../library/ctypes.rst:1179
@@ -1926,15 +1917,16 @@ msgstr ""
 #: ../../library/ctypes.rst:1184
 msgid ""
 "Both of these factory functions are called with the result type as first "
-"argument, and the callback functions expected argument types as the "
-"remaining arguments."
+"argument, and the callback functions expected argument types as the remaining"
+" arguments."
 msgstr ""
 
 #: ../../library/ctypes.rst:1188
 msgid ""
-"I will present an example here which uses the standard C library's :c:func:`!"
-"qsort` function, that is used to sort items with the help of a callback "
-"function.  :c:func:`!qsort` will be used to sort an array of integers::"
+"I will present an example here which uses the standard C library's "
+":c:func:`!qsort` function, that is used to sort items with the help of a "
+"callback function.  :c:func:`!qsort` will be used to sort an array of "
+"integers::"
 msgstr ""
 
 #: ../../library/ctypes.rst:1192
@@ -1951,8 +1943,8 @@ msgid ""
 ":func:`!qsort` must be called with a pointer to the data to sort, the number "
 "of items in the data array, the size of one item, and a pointer to the "
 "comparison function, the callback. The callback will then be called with two "
-"pointers to items, and it must return a negative integer if the first item "
-"is smaller than the second, a zero if they are equal, and a positive integer "
+"pointers to items, and it must return a negative integer if the first item is"
+" smaller than the second, a zero if they are equal, and a positive integer "
 "otherwise."
 msgstr ""
 
@@ -2064,10 +2056,10 @@ msgstr ""
 msgid ""
 "Also, note that if the callback function is called in a thread created "
 "outside of Python's control (e.g. by the foreign code that calls the "
-"callback), ctypes creates a new dummy Python thread on every invocation. "
-"This behavior is correct for most purposes, but it means that values stored "
-"with :class:`threading.local` will *not* survive across different callbacks, "
-"even when those calls are made from the same C thread."
+"callback), ctypes creates a new dummy Python thread on every invocation. This"
+" behavior is correct for most purposes, but it means that values stored with "
+":class:`threading.local` will *not* survive across different callbacks, even "
+"when those calls are made from the same C thread."
 msgstr ""
 
 #: ../../library/ctypes.rst:1284
@@ -2097,8 +2089,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1298
 msgid ""
-"An extended example which also demonstrates the use of pointers accesses "
-"the :c:data:`PyImport_FrozenModules` pointer exported by Python."
+"An extended example which also demonstrates the use of pointers accesses the "
+":c:data:`PyImport_FrozenModules` pointer exported by Python."
 msgstr ""
 
 #: ../../library/ctypes.rst:1301
@@ -2116,8 +2108,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1308
 msgid ""
-"So manipulating this pointer could even prove useful. To restrict the "
-"example size, we show only how this table can be read with :mod:`!ctypes`::"
+"So manipulating this pointer could even prove useful. To restrict the example"
+" size, we show only how this table can be read with :mod:`!ctypes`::"
 msgstr ""
 
 #: ../../library/ctypes.rst:1311
@@ -2182,8 +2174,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1355
 msgid ""
-"There are some edges in :mod:`!ctypes` where you might expect something "
-"other than what actually happens."
+"There are some edges in :mod:`!ctypes` where you might expect something other"
+" than what actually happens."
 msgstr ""
 
 #: ../../library/ctypes.rst:1358
@@ -2227,11 +2219,11 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1386
 msgid ""
-"Note that ``temp0`` and ``temp1`` are objects still using the internal "
-"buffer of the ``rc`` object above. So executing ``rc.a = temp0`` copies the "
-"buffer contents of ``temp0`` into ``rc`` 's buffer.  This, in turn, changes "
-"the contents of ``temp1``. So, the last assignment ``rc.b = temp1``, doesn't "
-"have the expected effect."
+"Note that ``temp0`` and ``temp1`` are objects still using the internal buffer"
+" of the ``rc`` object above. So executing ``rc.a = temp0`` copies the buffer "
+"contents of ``temp0`` into ``rc`` 's buffer.  This, in turn, changes the "
+"contents of ``temp1``. So, the last assignment ``rc.b = temp1``, doesn't have"
+" the expected effect."
 msgstr ""
 
 #: ../../library/ctypes.rst:1392
@@ -2268,9 +2260,9 @@ msgstr ""
 msgid ""
 "Why is it printing ``False``?  ctypes instances are objects containing a "
 "memory block plus some :term:`descriptor`\\s accessing the contents of the "
-"memory. Storing a Python object in the memory block does not store the "
-"object itself, instead the ``contents`` of the object is stored.  Accessing "
-"the contents again constructs a new Python object each time!"
+"memory. Storing a Python object in the memory block does not store the object"
+" itself, instead the ``contents`` of the object is stored.  Accessing the "
+"contents again constructs a new Python object each time!"
 msgstr ""
 
 #: ../../library/ctypes.rst:1421
@@ -2286,10 +2278,10 @@ msgstr ""
 #: ../../library/ctypes.rst:1425
 msgid ""
 "The :func:`resize` function can be used to resize the memory buffer of an "
-"existing ctypes object.  The function takes the object as first argument, "
-"and the requested size in bytes as the second argument.  The memory block "
-"cannot be made smaller than the natural memory block specified by the "
-"objects type, a :exc:`ValueError` is raised if this is tried::"
+"existing ctypes object.  The function takes the object as first argument, and"
+" the requested size in bytes as the second argument.  The memory block cannot"
+" be made smaller than the natural memory block specified by the objects type,"
+" a :exc:`ValueError` is raised if this is tried::"
 msgstr ""
 
 #: ../../library/ctypes.rst:1431
@@ -2352,8 +2344,8 @@ msgstr ""
 msgid ""
 "The purpose of the :func:`~ctypes.util.find_library` function is to locate a "
 "library in a way similar to what the compiler or runtime loader does (on "
-"platforms with several versions of a shared library the most recent should "
-"be loaded), while the ctypes library loaders act like when a program is run, "
+"platforms with several versions of a shared library the most recent should be"
+" loaded), while the ctypes library loaders act like when a program is run, "
 "and call the runtime loader directly."
 msgstr ""
 
@@ -2367,8 +2359,8 @@ msgstr ""
 msgid ""
 "Try to find a library and return a pathname.  *name* is the library name "
 "without any prefix like *lib*, suffix like ``.so``, ``.dylib`` or version "
-"number (this is the form used for the posix linker option :option:`!-l`).  "
-"If no library can be found, returns ``None``."
+"number (this is the form used for the posix linker option :option:`!-l`).  If"
+" no library can be found, returns ``None``."
 msgstr ""
 
 #: ../../library/ctypes.rst:1495 ../../library/ctypes.rst:2257
@@ -2443,9 +2435,9 @@ msgstr ""
 #: ../../library/ctypes.rst:1538
 msgid ""
 "If wrapping a shared library with :mod:`!ctypes`, it *may* be better to "
-"determine the shared library name at development time, and hardcode that "
-"into the wrapper module instead of using :func:`~ctypes.util.find_library` "
-"to locate the library at runtime."
+"determine the shared library name at development time, and hardcode that into"
+" the wrapper module instead of using :func:`~ctypes.util.find_library` to "
+"locate the library at runtime."
 msgstr ""
 
 #: ../../library/ctypes.rst:1546
@@ -2454,16 +2446,16 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1548
 msgid ""
-"When writing code that relies on code loaded from shared libraries, it can "
-"be useful to know which shared libraries have already been loaded into the "
+"When writing code that relies on code loaded from shared libraries, it can be"
+" useful to know which shared libraries have already been loaded into the "
 "current process."
 msgstr ""
 
 #: ../../library/ctypes.rst:1552
 msgid ""
 "The :mod:`!ctypes.util` module provides the :func:`~ctypes.util.dllist` "
-"function, which calls the different APIs provided by the various platforms "
-"to help determine which shared libraries have already been loaded into the "
+"function, which calls the different APIs provided by the various platforms to"
+" help determine which shared libraries have already been loaded into the "
 "current process."
 msgstr ""
 
@@ -2479,8 +2471,7 @@ msgstr ""
 msgid ""
 ">>> from ctypes.util import dllist\n"
 ">>> dllist()\n"
-"['', 'linux-vdso.so.1', '/lib/x86_64-linux-gnu/libm.so.6', '/lib/x86_64-"
-"linux-gnu/libc.so.6', ... ]"
+"['', 'linux-vdso.so.1', '/lib/x86_64-linux-gnu/libm.so.6', '/lib/x86_64-linux-gnu/libc.so.6', ... ]"
 msgstr ""
 
 #: ../../library/ctypes.rst:1568
@@ -2489,8 +2480,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1570
 msgid ""
-"There are several ways to load shared libraries into the Python process.  "
-"One way is to instantiate :py:class:`CDLL` or one of its subclasses:"
+"There are several ways to load shared libraries into the Python process.  One"
+" way is to instantiate :py:class:`CDLL` or one of its subclasses:"
 msgstr ""
 
 #: ../../library/ctypes.rst:1576
@@ -2502,25 +2493,25 @@ msgid ""
 "Functions in this library use the standard C calling convention, and are "
 "assumed to return :c:expr:`int`. The Python :term:`global interpreter lock` "
 "is released before calling any function exported by these libraries, and "
-"reacquired afterwards. For different function behavior, use a subclass: :py:"
-"class:`~ctypes.OleDLL`, :py:class:`~ctypes.WinDLL`, or :py:class:`~ctypes."
-"PyDLL`."
+"reacquired afterwards. For different function behavior, use a subclass: "
+":py:class:`~ctypes.OleDLL`, :py:class:`~ctypes.WinDLL`, or "
+":py:class:`~ctypes.PyDLL`."
 msgstr ""
 
 #: ../../library/ctypes.rst:1585
 msgid ""
-"If you have an existing :py:attr:`handle <ctypes.CDLL._handle>` to an "
-"already loaded shared library, it can be passed as the *handle* argument to "
-"wrap the opened library in a new :py:class:`!CDLL` object. In this case, "
-"*name* is only used to set the :py:attr:`~ctypes.CDLL._name` attribute, but "
-"it may be adjusted and/or validated."
+"If you have an existing :py:attr:`handle <ctypes.CDLL._handle>` to an already"
+" loaded shared library, it can be passed as the *handle* argument to wrap the"
+" opened library in a new :py:class:`!CDLL` object. In this case, *name* is "
+"only used to set the :py:attr:`~ctypes.CDLL._name` attribute, but it may be "
+"adjusted and/or validated."
 msgstr ""
 
 #: ../../library/ctypes.rst:1591
 msgid ""
-"If *handle* is ``None``, the underlying platform's :manpage:`dlopen(3)` or :"
-"c:func:`!LoadLibrary` function is used to load the library into the process, "
-"and to get a handle to it."
+"If *handle* is ``None``, the underlying platform's :manpage:`dlopen(3)` or "
+":c:func:`!LoadLibrary` function is used to load the library into the process,"
+" and to get a handle to it."
 msgstr ""
 
 #: ../../library/ctypes.rst:1595
@@ -2531,8 +2522,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1599
 msgid ""
-"On non-Windows systems, *name* can  be ``None``. In this case, :c:func:`!"
-"dlopen` is called with ``NULL``, which opens the main program as a "
+"On non-Windows systems, *name* can  be ``None``. In this case, "
+":c:func:`!dlopen` is called with ``NULL``, which opens the main program as a "
 "\"library\". (Some systems do the same is *name* is empty; ``None``/``NULL`` "
 "is more portable.)"
 msgstr ""
@@ -2573,8 +2564,8 @@ msgstr ""
 #: ../../library/ctypes.rst:1624
 msgid ""
 "The *use_errno* parameter, when set to true, enables a ctypes mechanism that "
-"allows accessing the system :data:`errno` error number in a safe way. :mod:`!"
-"ctypes` maintains a thread-local copy of the system's :data:`errno` "
+"allows accessing the system :data:`errno` error number in a safe way. "
+":mod:`!ctypes` maintains a thread-local copy of the system's :data:`errno` "
 "variable; if you call foreign functions created with ``use_errno=True`` then "
 "the :data:`errno` value before the function call is swapped with the ctypes "
 "private copy, the same happens immediately after the function call."
@@ -2582,16 +2573,16 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1631
 msgid ""
-"The function :func:`ctypes.get_errno` returns the value of the ctypes "
-"private copy, and the function :func:`ctypes.set_errno` changes the ctypes "
-"private copy to a new value and returns the former value."
+"The function :func:`ctypes.get_errno` returns the value of the ctypes private"
+" copy, and the function :func:`ctypes.set_errno` changes the ctypes private "
+"copy to a new value and returns the former value."
 msgstr ""
 
 #: ../../library/ctypes.rst:1635
 msgid ""
 "The *use_last_error* parameter, when set to true, enables the same mechanism "
-"for the Windows error code which is managed by the :func:`GetLastError` and :"
-"func:`!SetLastError` Windows API functions; :func:`ctypes.get_last_error` "
+"for the Windows error code which is managed by the :func:`GetLastError` and "
+":func:`!SetLastError` Windows API functions; :func:`ctypes.get_last_error` "
 "and :func:`ctypes.set_last_error` are used to request and change the ctypes "
 "private copy of the windows error code."
 msgstr ""
@@ -2609,20 +2600,20 @@ msgstr ""
 #: ../../library/ctypes.rst:1648
 msgid ""
 "On Windows creating a :class:`CDLL` instance may fail even if the DLL name "
-"exists. When a dependent DLL of the loaded DLL is not found, a :exc:"
-"`OSError` error is raised with the message *\"[WinError 126] The specified "
-"module could not be found\".* This error message does not contain the name "
-"of the missing DLL because the Windows API does not return this information "
-"making this error hard to diagnose. To resolve this error and determine "
-"which DLL is not found, you need to find the list of dependent DLLs and "
-"determine which one is not found using Windows debugging and tracing tools."
+"exists. When a dependent DLL of the loaded DLL is not found, a :exc:`OSError`"
+" error is raised with the message *\"[WinError 126] The specified module "
+"could not be found\".* This error message does not contain the name of the "
+"missing DLL because the Windows API does not return this information making "
+"this error hard to diagnose. To resolve this error and determine which DLL is"
+" not found, you need to find the list of dependent DLLs and determine which "
+"one is not found using Windows debugging and tracing tools."
 msgstr ""
 
 #: ../../library/ctypes.rst:1660
 msgid ""
-"`Microsoft DUMPBIN tool <https://learn.microsoft.com/en-us/cpp/build/"
-"reference/dumpbin-reference?view=msvc-170>`_ -- A tool to find DLL "
-"dependents."
+"`Microsoft DUMPBIN tool <https://learn.microsoft.com/en-"
+"us/cpp/build/reference/dumpbin-reference?view=msvc-170>`_ -- A tool to find "
+"DLL dependents."
 msgstr ""
 
 #: ../../library/ctypes.rst:1663
@@ -2674,10 +2665,10 @@ msgstr ""
 #: ../../library/ctypes.rst:1698
 msgid ""
 "Functions in this library use the ``stdcall`` calling convention, and are "
-"assumed to return the windows specific :class:`HRESULT` code.  :class:"
-"`HRESULT` values contain information specifying whether the function call "
-"failed or succeeded, together with additional error code.  If the return "
-"value signals a failure, an :class:`OSError` is automatically raised."
+"assumed to return the windows specific :class:`HRESULT` code.  "
+":class:`HRESULT` values contain information specifying whether the function "
+"call failed or succeeded, together with additional error code.  If the return"
+" value signals a failure, an :class:`OSError` is automatically raised."
 msgstr ""
 
 #: ../../library/ctypes.rst:1704 ../../library/ctypes.rst:1718
@@ -2694,8 +2685,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1706
 msgid ""
-":exc:`WindowsError` used to be raised, which is now an alias of :exc:"
-"`OSError`."
+":exc:`WindowsError` used to be raised, which is now an alias of "
+":exc:`OSError`."
 msgstr ""
 
 #: ../../library/ctypes.rst:1715
@@ -2743,16 +2734,15 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1757
 msgid ""
-"Class which loads shared libraries.  *dlltype* should be one of the :class:"
-"`CDLL`, :class:`PyDLL`, :class:`WinDLL`, or :class:`OleDLL` types."
+"Class which loads shared libraries.  *dlltype* should be one of the "
+":class:`CDLL`, :class:`PyDLL`, :class:`WinDLL`, or :class:`OleDLL` types."
 msgstr ""
 
 #: ../../library/ctypes.rst:1760
 msgid ""
-":meth:`!__getattr__` has special behavior: It allows loading a shared "
-"library by accessing it as attribute of a library loader instance.  The "
-"result is cached, so repeated attribute accesses return the same library "
-"each time."
+":meth:`!__getattr__` has special behavior: It allows loading a shared library"
+" by accessing it as attribute of a library loader instance.  The result is "
+"cached, so repeated attribute accesses return the same library each time."
 msgstr ""
 
 #: ../../library/ctypes.rst:1766
@@ -2783,16 +2773,16 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1796
 msgid ""
-"For accessing the C Python api directly, a ready-to-use Python shared "
-"library object is available:"
+"For accessing the C Python api directly, a ready-to-use Python shared library"
+" object is available:"
 msgstr ""
 
 #: ../../library/ctypes.rst:1801
 msgid ""
 "An instance of :class:`PyDLL` that exposes Python C API functions as "
-"attributes.  Note that all these functions are assumed to return C :c:expr:"
-"`int`, which is of course not always the truth, so you have to assign the "
-"correct :attr:`!restype` attribute to use these functions."
+"attributes.  Note that all these functions are assumed to return C "
+":c:expr:`int`, which is of course not always the truth, so you have to assign"
+" the correct :attr:`!restype` attribute to use these functions."
 msgstr ""
 
 #: ../../library/ctypes.rst:1806
@@ -2803,16 +2793,16 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1809 ../../library/ctypes.rst:1811
 msgid ""
-"Loading a library through any of these objects raises an :ref:`auditing "
-"event <auditing>` ``ctypes.dlopen`` with string argument ``name``, the name "
-"used to load the library."
+"Loading a library through any of these objects raises an :ref:`auditing event"
+" <auditing>` ``ctypes.dlopen`` with string argument ``name``, the name used "
+"to load the library."
 msgstr ""
 
 #: ../../library/ctypes.rst:1815 ../../library/ctypes.rst:1817
 msgid ""
-"Accessing a function on a loaded library raises an auditing event ``ctypes."
-"dlsym`` with arguments ``library`` (the library object) and ``name`` (the "
-"symbol's name as a string or integer)."
+"Accessing a function on a loaded library raises an auditing event "
+"``ctypes.dlsym`` with arguments ``library`` (the library object) and ``name``"
+" (the symbol's name as a string or integer)."
 msgstr ""
 
 #: ../../library/ctypes.rst:1821 ../../library/ctypes.rst:1823
@@ -2887,18 +2877,18 @@ msgstr ""
 msgid ""
 "Assign a tuple of ctypes types to specify the argument types that the "
 "function accepts.  Functions using the ``stdcall`` calling convention can "
-"only be called with the same number of arguments as the length of this "
-"tuple; functions using the C calling convention accept additional, "
-"unspecified arguments as well."
+"only be called with the same number of arguments as the length of this tuple;"
+" functions using the C calling convention accept additional, unspecified "
+"arguments as well."
 msgstr ""
 
 #: ../../library/ctypes.rst:1879
 msgid ""
-"When a foreign function is called, each actual argument is passed to the :"
-"meth:`~_CData.from_param` class method of the items in the :attr:`argtypes` "
+"When a foreign function is called, each actual argument is passed to the "
+":meth:`~_CData.from_param` class method of the items in the :attr:`argtypes` "
 "tuple, this method allows adapting the actual argument to an object that the "
-"foreign function accepts.  For example, a :class:`c_char_p` item in the :"
-"attr:`argtypes` tuple will convert a string passed as argument into a bytes "
+"foreign function accepts.  For example, a :class:`c_char_p` item in the "
+":attr:`argtypes` tuple will convert a string passed as argument into a bytes "
 "object using ctypes conversion rules."
 msgstr ""
 
@@ -2918,8 +2908,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1900
 msgid ""
-"*result* is what the foreign function returns, as specified by the :attr:`!"
-"restype` attribute."
+"*result* is what the foreign function returns, as specified by the "
+":attr:`!restype` attribute."
 msgstr ""
 
 #: ../../library/ctypes.rst:1903
@@ -2944,10 +2934,10 @@ msgstr ""
 #: ../../library/ctypes.rst:1916 ../../library/ctypes.rst:1918
 msgid ""
 "On Windows, when a foreign function call raises a system exception (for "
-"example, due to an access violation), it will be captured and replaced with "
-"a suitable Python exception. Further, an auditing event ``ctypes."
-"set_exception`` with argument ``code`` will be raised, allowing an audit "
-"hook to replace the exception with its own."
+"example, due to an access violation), it will be captured and replaced with a"
+" suitable Python exception. Further, an auditing event "
+"``ctypes.set_exception`` with argument ``code`` will be raised, allowing an "
+"audit hook to replace the exception with its own."
 msgstr ""
 
 #: ../../library/ctypes.rst:1924 ../../library/ctypes.rst:1926
@@ -2976,9 +2966,10 @@ msgstr ""
 msgid ""
 "The returned function prototype creates functions that use the standard C "
 "calling convention.  The function will release the GIL during the call.  If "
-"*use_errno* is set to true, the ctypes private copy of the system :data:"
-"`errno` variable is exchanged with the real :data:`errno` value before and "
-"after the call; *use_last_error* does the same for the Windows error code."
+"*use_errno* is set to true, the ctypes private copy of the system "
+":data:`errno` variable is exchanged with the real :data:`errno` value before "
+"and after the call; *use_last_error* does the same for the Windows error "
+"code."
 msgstr ""
 
 #: ../../library/ctypes.rst:1956
@@ -2990,14 +2981,14 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1966
 msgid ""
-"The returned function prototype creates functions that use the Python "
-"calling convention.  The function will *not* release the GIL during the call."
+"The returned function prototype creates functions that use the Python calling"
+" convention.  The function will *not* release the GIL during the call."
 msgstr ""
 
 #: ../../library/ctypes.rst:1969
 msgid ""
-"Function prototypes created by these factory functions can be instantiated "
-"in different ways, depending on the type and number of the parameters in the "
+"Function prototypes created by these factory functions can be instantiated in"
+" different ways, depending on the type and number of the parameters in the "
 "call:"
 msgstr ""
 
@@ -3015,8 +3006,8 @@ msgstr ""
 msgid ""
 "Returns a foreign function exported by a shared library. *func_spec* must be "
 "a 2-tuple ``(name_or_ordinal, library)``. The first item is the name of the "
-"exported function as string, or the ordinal of the exported function as "
-"small integer.  The second item is the shared library instance."
+"exported function as string, or the ordinal of the exported function as small"
+" integer.  The second item is the shared library instance."
 msgstr ""
 
 #: ../../library/ctypes.rst:2000
@@ -3029,9 +3020,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2005
 msgid ""
-"If *iid* is not specified, an :exc:`OSError` is raised if the COM method "
-"call fails. If *iid* is specified, a :exc:`~ctypes.COMError` is raised "
-"instead."
+"If *iid* is not specified, an :exc:`OSError` is raised if the COM method call"
+" fails. If *iid* is specified, a :exc:`~ctypes.COMError` is raised instead."
 msgstr ""
 
 #: ../../library/ctypes.rst:2009
@@ -3049,8 +3039,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2019
 msgid ""
-"*paramflags* must be a tuple of the same length as :attr:`~_CFuncPtr."
-"argtypes`."
+"*paramflags* must be a tuple of the same length as "
+":attr:`~_CFuncPtr.argtypes`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2021
@@ -3125,8 +3115,7 @@ msgid ""
 ">>> from ctypes import c_int, WINFUNCTYPE, windll\n"
 ">>> from ctypes.wintypes import HWND, LPCWSTR, UINT\n"
 ">>> prototype = WINFUNCTYPE(c_int, HWND, LPCWSTR, LPCWSTR, UINT)\n"
-">>> paramflags = (1, \"hwnd\", 0), (1, \"text\", \"Hi\"), (1, \"caption\", "
-"\"Hello from ctypes\"), (1, \"flags\", 0)\n"
+">>> paramflags = (1, \"hwnd\", 0), (1, \"text\", \"Hi\"), (1, \"caption\", \"Hello from ctypes\"), (1, \"flags\", 0)\n"
 ">>> MessageBox = prototype((\"MessageBoxW\", windll.user32), paramflags)"
 msgstr ""
 
@@ -3143,10 +3132,10 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2067
 msgid ""
-"A second example demonstrates output parameters.  The win32 "
-"``GetWindowRect`` function retrieves the dimensions of a specified window by "
-"copying them into ``RECT`` structure that the caller has to supply.  Here is "
-"the C declaration::"
+"A second example demonstrates output parameters.  The win32 ``GetWindowRect``"
+" function retrieves the dimensions of a specified window by copying them into"
+" ``RECT`` structure that the caller has to supply.  Here is the C "
+"declaration::"
 msgstr ""
 
 #: ../../library/ctypes.rst:2071
@@ -3163,8 +3152,7 @@ msgid ""
 ">>> from ctypes.wintypes import BOOL, HWND, RECT\n"
 ">>> prototype = WINFUNCTYPE(BOOL, HWND, POINTER(RECT))\n"
 ">>> paramflags = (1, \"hwnd\"), (2, \"lprect\")\n"
-">>> GetWindowRect = prototype((\"GetWindowRect\", windll.user32), "
-"paramflags)\n"
+">>> GetWindowRect = prototype((\"GetWindowRect\", windll.user32), paramflags)\n"
 ">>>"
 msgstr ""
 
@@ -3199,11 +3187,10 @@ msgstr ""
 #: ../../library/ctypes.rst:2103
 msgid ""
 "If the :attr:`~_CFuncPtr.errcheck` function returns the argument tuple it "
-"receives unchanged, :mod:`!ctypes` continues the normal processing it does "
-"on the output parameters.  If you want to return a tuple of window "
-"coordinates instead of a ``RECT`` instance, you can retrieve the fields in "
-"the function and return them instead, the normal processing will no longer "
-"take place::"
+"receives unchanged, :mod:`!ctypes` continues the normal processing it does on"
+" the output parameters.  If you want to return a tuple of window coordinates "
+"instead of a ``RECT`` instance, you can retrieve the fields in the function "
+"and return them instead, the normal processing will no longer take place::"
 msgstr ""
 
 #: ../../library/ctypes.rst:2109
@@ -3230,8 +3217,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2129
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.addressof`` with "
-"argument ``obj``."
+"Raises an :ref:`auditing event <auditing>` ``ctypes.addressof`` with argument"
+" ``obj``."
 msgstr ""
 
 #: ../../library/ctypes.rst:2134
@@ -3257,14 +3244,14 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2148
 msgid ""
-"The returned object can only be used as a foreign function call parameter. "
-"It behaves similar to ``pointer(obj)``, but the construction is a lot faster."
+"The returned object can only be used as a foreign function call parameter. It"
+" behaves similar to ``pointer(obj)``, but the construction is a lot faster."
 msgstr ""
 
 #: ../../library/ctypes.rst:2154
 msgid ""
-"Copies a COM pointer from *src* to *dst* and returns the Windows specific :c:"
-"type:`!HRESULT` value."
+"Copies a COM pointer from *src* to *dst* and returns the Windows specific "
+":c:type:`!HRESULT` value."
 msgstr ""
 
 #: ../../library/ctypes.rst:2157
@@ -3283,10 +3270,10 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2172
 msgid ""
-"This function is similar to the cast operator in C. It returns a new "
-"instance of *type* which points to the same memory block as *obj*.  *type* "
-"must be a pointer type, and *obj* must be an object that can be interpreted "
-"as a pointer."
+"This function is similar to the cast operator in C. It returns a new instance"
+" of *type* which points to the same memory block as *obj*.  *type* must be a "
+"pointer type, and *obj* must be an object that can be interpreted as a "
+"pointer."
 msgstr ""
 
 #: ../../library/ctypes.rst:2181
@@ -3310,8 +3297,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2191
 msgid ""
-"If *size* is not given (or if it is ``None``), the buffer is made one "
-"element larger than *init*, effectively adding a NUL terminator."
+"If *size* is not given (or if it is ``None``), the buffer is made one element"
+" larger than *init*, effectively adding a NUL terminator."
 msgstr ""
 
 #: ../../library/ctypes.rst:2194
@@ -3353,14 +3340,14 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2222
 msgid ""
-"This function creates a mutable unicode character buffer. The returned "
-"object is a ctypes array of :class:`c_wchar`."
+"This function creates a mutable unicode character buffer. The returned object"
+" is a ctypes array of :class:`c_wchar`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2225
 msgid ""
-"The function takes the same arguments as :func:`~create_string_buffer` "
-"except *init* must be a string and *size* counts :class:`c_wchar`."
+"The function takes the same arguments as :func:`~create_string_buffer` except"
+" *init* must be a string and *size* counts :class:`c_wchar`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2228
@@ -3371,15 +3358,15 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2233
 msgid ""
-"This function is a hook which allows implementing in-process COM servers "
-"with ctypes.  It is called from the DllCanUnloadNow function that the "
-"_ctypes extension dll exports."
+"This function is a hook which allows implementing in-process COM servers with"
+" ctypes.  It is called from the DllCanUnloadNow function that the _ctypes "
+"extension dll exports."
 msgstr ""
 
 #: ../../library/ctypes.rst:2242
 msgid ""
-"This function is a hook which allows implementing in-process COM servers "
-"with ctypes.  It is called from the DllGetClassObject function that the "
+"This function is a hook which allows implementing in-process COM servers with"
+" ctypes.  It is called from the DllGetClassObject function that the "
 "``_ctypes`` extension dll exports."
 msgstr ""
 
@@ -3387,8 +3374,8 @@ msgstr ""
 msgid ""
 "Try to find a library and return a pathname.  *name* is the library name "
 "without any prefix like ``lib``, suffix like ``.so``, ``.dylib`` or version "
-"number (this is the form used for the posix linker option :option:`!-l`).  "
-"If no library can be found, returns ``None``."
+"number (this is the form used for the posix linker option :option:`!-l`).  If"
+" no library can be found, returns ``None``."
 msgstr ""
 
 #: ../../library/ctypes.rst:2259
@@ -3398,8 +3385,8 @@ msgstr ""
 #: ../../library/ctypes.rst:2265
 msgid ""
 "Returns the filename of the VC runtime library used by Python, and by the "
-"extension modules.  If the name of the library cannot be determined, "
-"``None`` is returned."
+"extension modules.  If the name of the library cannot be determined, ``None``"
+" is returned."
 msgstr ""
 
 #: ../../library/ctypes.rst:2269
@@ -3426,8 +3413,8 @@ msgstr ""
 #: ../../library/ctypes.rst:2292
 msgid ""
 "Returns a textual description of the error code *code*.  If no error code is "
-"specified, the last error code is used by calling the Windows API function :"
-"func:`GetLastError`."
+"specified, the last error code is used by calling the Windows API function "
+":func:`GetLastError`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2301
@@ -3439,8 +3426,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2310
 msgid ""
-"Returns the current value of the ctypes-private copy of the system :data:"
-"`errno` variable in the calling thread."
+"Returns the current value of the ctypes-private copy of the system "
+":data:`errno` variable in the calling thread."
 msgstr ""
 
 #: ../../library/ctypes.rst:2313
@@ -3451,8 +3438,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2317
 msgid ""
-"Returns the current value of the ctypes-private copy of the system :data:`!"
-"LastError` variable in the calling thread."
+"Returns the current value of the ctypes-private copy of the system "
+":data:`!LastError` variable in the calling thread."
 msgstr ""
 
 #: ../../library/ctypes.rst:2322
@@ -3464,8 +3451,8 @@ msgstr ""
 #: ../../library/ctypes.rst:2327
 msgid ""
 "Same as the standard C memmove library function: copies *count* bytes from "
-"*src* to *dst*. *dst* and *src* must be integers or ctypes instances that "
-"can be converted to pointers."
+"*src* to *dst*. *dst* and *src* must be integers or ctypes instances that can"
+" be converted to pointers."
 msgstr ""
 
 #: ../../library/ctypes.rst:2334
@@ -3484,8 +3471,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2347
 msgid ""
-"The resulting pointer type is cached in the ``__pointer_type__`` attribute "
-"of *type*. It is possible to set this attribute before the first call to "
+"The resulting pointer type is cached in the ``__pointer_type__`` attribute of"
+" *type*. It is possible to set this attribute before the first call to "
 "``POINTER`` in order to set a custom pointer type. However, doing this is "
 "discouraged: manually creating a suitable pointer type is difficult without "
 "relying on implementation details that may change in future Python versions."
@@ -3519,15 +3506,15 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2378
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.set_errno`` with "
-"argument ``errno``."
+"Raises an :ref:`auditing event <auditing>` ``ctypes.set_errno`` with argument"
+" ``errno``."
 msgstr ""
 
 #: ../../library/ctypes.rst:2383
 msgid ""
-"Sets the current value of the ctypes-private copy of the system :data:`!"
-"LastError` variable in the calling thread to *value* and return the previous "
-"value."
+"Sets the current value of the ctypes-private copy of the system "
+":data:`!LastError` variable in the calling thread to *value* and return the "
+"previous value."
 msgstr ""
 
 #: ../../library/ctypes.rst:2389
@@ -3556,10 +3543,10 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2409
 msgid ""
-"Creates an instance of :exc:`OSError`.  If *code* is not specified, :func:"
-"`GetLastError` is called to determine the error code. If *descr* is not "
-"specified, :func:`FormatError` is called to get a textual description of the "
-"error."
+"Creates an instance of :exc:`OSError`.  If *code* is not specified, "
+":func:`GetLastError` is called to determine the error code. If *descr* is not"
+" specified, :func:`FormatError` is called to get a textual description of the"
+" error."
 msgstr ""
 
 #: ../../library/ctypes.rst:2416
@@ -3570,9 +3557,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2423
 msgid ""
-"Return the wide-character string at *void \\*ptr*. If *size* is specified, "
-"it is used as the number of characters of the string, otherwise the string "
-"is assumed to be zero-terminated."
+"Return the wide-character string at *void \\*ptr*. If *size* is specified, it"
+" is used as the number of characters of the string, otherwise the string is "
+"assumed to be zero-terminated."
 msgstr ""
 
 #: ../../library/ctypes.rst:2428
@@ -3590,18 +3577,18 @@ msgstr ""
 #: ../../library/ctypes.rst:2436
 msgid ""
 "If *readonly* is true, the returned :class:`!memoryview` object can not be "
-"used to modify the underlying memory. (Changes made by other means will "
-"still be reflected in the returned object.)"
+"used to modify the underlying memory. (Changes made by other means will still"
+" be reflected in the returned object.)"
 msgstr ""
 
 #: ../../library/ctypes.rst:2441
 msgid ""
 "This function is similar to :func:`string_at` with the key difference of not "
 "making a copy of the specified memory. It is a semantically equivalent (but "
-"more efficient) alternative to ``memoryview((c_byte * size)."
-"from_address(ptr))``. (While :meth:`~_CData.from_address` only takes "
-"integers, *ptr* can also be given as a :class:`ctypes.POINTER` or a :func:"
-"`~ctypes.byref` object.)"
+"more efficient) alternative to ``memoryview((c_byte * "
+"size).from_address(ptr))``. (While :meth:`~_CData.from_address` only takes "
+"integers, *ptr* can also be given as a :class:`ctypes.POINTER` or a "
+":func:`~ctypes.byref` object.)"
 msgstr ""
 
 #: ../../library/ctypes.rst:2448
@@ -3618,9 +3605,9 @@ msgstr ""
 msgid ""
 "This non-public class is the common base class of all ctypes data types. "
 "Among other things, all ctypes type instances contain a memory block that "
-"hold C compatible data; the address of the memory block is returned by the :"
-"func:`addressof` helper function. Another instance variable is exposed as :"
-"attr:`_objects`; this contains other Python objects that need to be kept "
+"hold C compatible data; the address of the memory block is returned by the "
+":func:`addressof` helper function. Another instance variable is exposed as "
+":attr:`_objects`; this contains other Python objects that need to be kept "
 "alive in case the memory block contains pointers."
 msgstr ""
 
@@ -3634,9 +3621,9 @@ msgstr ""
 msgid ""
 "This method returns a ctypes instance that shares the buffer of the *source* "
 "object.  The *source* object must support the writeable buffer interface.  "
-"The optional *offset* parameter specifies an offset into the source buffer "
-"in bytes; the default is zero.  If the source buffer is not large enough a :"
-"exc:`ValueError` is raised."
+"The optional *offset* parameter specifies an offset into the source buffer in"
+" bytes; the default is zero.  If the source buffer is not large enough a "
+":exc:`ValueError` is raised."
 msgstr ""
 
 #: ../../library/ctypes.rst:2479 ../../library/ctypes.rst:2489
@@ -3649,8 +3636,8 @@ msgstr ""
 msgid ""
 "This method creates a ctypes instance, copying the buffer from the *source* "
 "object buffer which must be readable.  The optional *offset* parameter "
-"specifies an offset into the source buffer in bytes; the default is zero.  "
-"If the source buffer is not large enough a :exc:`ValueError` is raised."
+"specifies an offset into the source buffer in bytes; the default is zero.  If"
+" the source buffer is not large enough a :exc:`ValueError` is raised."
 msgstr ""
 
 #: ../../library/ctypes.rst:2493
@@ -3661,8 +3648,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2496 ../../library/ctypes.rst:2498
 msgid ""
-"This method, and others that indirectly call this method, raises an :ref:"
-"`auditing event <auditing>` ``ctypes.cdata`` with argument ``address``."
+"This method, and others that indirectly call this method, raises an "
+":ref:`auditing event <auditing>` ``ctypes.cdata`` with argument ``address``."
 msgstr ""
 
 #: ../../library/ctypes.rst:2504
@@ -3676,8 +3663,8 @@ msgstr ""
 #: ../../library/ctypes.rst:2509
 msgid ""
 "All ctypes data types have a default implementation of this classmethod that "
-"normally returns *obj* if that is an instance of the type.  Some types "
-"accept other objects as well."
+"normally returns *obj* if that is an instance of the type.  Some types accept"
+" other objects as well."
 msgstr ""
 
 #: ../../library/ctypes.rst:2515
@@ -3705,9 +3692,9 @@ msgstr ""
 #: ../../library/ctypes.rst:2533
 msgid ""
 "Sometimes ctypes data instances do not own the memory block they contain, "
-"instead they share part of the memory block of a base object.  The :attr:"
-"`_b_base_` read-only member is the root ctypes object that owns the memory "
-"block."
+"instead they share part of the memory block of a base object.  The "
+":attr:`_b_base_` read-only member is the root ctypes object that owns the "
+"memory block."
 msgstr ""
 
 #: ../../library/ctypes.rst:2540
@@ -3718,18 +3705,18 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2545
 msgid ""
-"This member is either ``None`` or a dictionary containing Python objects "
-"that need to be kept alive so that the memory block contents is kept valid.  "
-"This object is only exposed for debugging; never modify the contents of this "
+"This member is either ``None`` or a dictionary containing Python objects that"
+" need to be kept alive so that the memory block contents is kept valid.  This"
+" object is only exposed for debugging; never modify the contents of this "
 "dictionary."
 msgstr ""
 
 #: ../../library/ctypes.rst:2558
 msgid ""
-"This non-public class is the base class of all fundamental ctypes data "
-"types. It is mentioned here because it contains the common attributes of the "
-"fundamental ctypes data types.  :class:`_SimpleCData` is a subclass of :"
-"class:`_CData`, so it inherits their methods and attributes. ctypes data "
+"This non-public class is the base class of all fundamental ctypes data types."
+" It is mentioned here because it contains the common attributes of the "
+"fundamental ctypes data types.  :class:`_SimpleCData` is a subclass of "
+":class:`_CData`, so it inherits their methods and attributes. ctypes data "
 "types that are not and do not contain pointers can now be pickled."
 msgstr ""
 
@@ -3749,8 +3736,8 @@ msgstr ""
 msgid ""
 "When the ``value`` attribute is retrieved from a ctypes instance, usually a "
 "new object is returned each time.  :mod:`!ctypes` does *not* implement "
-"original object return, always a new object is constructed.  The same is "
-"true for all other ctypes object instances."
+"original object return, always a new object is constructed.  The same is true"
+" for all other ctypes object instances."
 msgstr ""
 
 #: ../../library/ctypes.rst:2578
@@ -3765,37 +3752,36 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2586
 msgid ""
-"Types marked \\* in the summary may be (or always are) aliases of a "
-"different :class:`_SimpleCData` subclass, and will not necessarily use the "
-"listed type code. For example, if the platform's :c:expr:`long`, :c:expr:"
-"`long long` and :c:expr:`time_t` C types are the same, then :class:"
-"`c_long`, :class:`c_longlong` and :class:`c_time_t` all refer to a single "
-"class, :class:`c_long`, whose :attr:`_type_` code is ``'l'``. The ``'L'`` "
-"code will be unused."
+"Types marked \\* in the summary may be (or always are) aliases of a different"
+" :class:`_SimpleCData` subclass, and will not necessarily use the listed type"
+" code. For example, if the platform's :c:expr:`long`, :c:expr:`long long` and"
+" :c:expr:`time_t` C types are the same, then :class:`c_long`, "
+":class:`c_longlong` and :class:`c_time_t` all refer to a single class, "
+":class:`c_long`, whose :attr:`_type_` code is ``'l'``. The ``'L'`` code will "
+"be unused."
 msgstr ""
 
 #: ../../library/ctypes.rst:2597
 msgid ""
 "The :mod:`array` and :ref:`struct <format-characters>` modules, as well as "
-"third-party modules like `numpy <https://numpy.org/doc/stable/reference/"
-"arrays.interface.html#object.__array_interface__>`__, use similar -- but "
-"slightly different -- type codes."
+"third-party modules like `numpy "
+"<https://numpy.org/doc/stable/reference/arrays.interface.html#object.__array_interface__>`__,"
+" use similar -- but slightly different -- type codes."
 msgstr ""
 
 #: ../../library/ctypes.rst:2602
 msgid ""
 "Fundamental data types, when returned as foreign function call results, or, "
 "for example, by retrieving structure field members or array items, are "
-"transparently converted to native Python types.  In other words, if a "
-"foreign function has a :attr:`~_CFuncPtr.restype` of :class:`c_char_p`, you "
-"will always receive a Python bytes object, *not* a :class:`c_char_p` "
-"instance."
+"transparently converted to native Python types.  In other words, if a foreign"
+" function has a :attr:`~_CFuncPtr.restype` of :class:`c_char_p`, you will "
+"always receive a Python bytes object, *not* a :class:`c_char_p` instance."
 msgstr ""
 
 #: ../../library/ctypes.rst:2610
 msgid ""
-"Subclasses of fundamental data types do *not* inherit this behavior. So, if "
-"a foreign functions :attr:`!restype` is a subclass of :class:`c_void_p`, you "
+"Subclasses of fundamental data types do *not* inherit this behavior. So, if a"
+" foreign functions :attr:`!restype` is a subclass of :class:`c_void_p`, you "
 "will receive an instance of this subclass from the function call. Of course, "
 "you can get the value of the pointer by accessing the ``value`` attribute."
 msgstr ""
@@ -3872,26 +3858,26 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2690
 msgid ""
-"Represents the C 8-bit :c:expr:`signed int` datatype.  It is an alias for :"
-"class:`c_byte`."
+"Represents the C 8-bit :c:expr:`signed int` datatype.  It is an alias for "
+":class:`c_byte`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2696
 msgid ""
-"Represents the C 16-bit :c:expr:`signed int` datatype.  Usually an alias "
-"for :class:`c_short`."
+"Represents the C 16-bit :c:expr:`signed int` datatype.  Usually an alias for "
+":class:`c_short`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2702
 msgid ""
-"Represents the C 32-bit :c:expr:`signed int` datatype.  Usually an alias "
-"for :class:`c_int`."
+"Represents the C 32-bit :c:expr:`signed int` datatype.  Usually an alias for "
+":class:`c_int`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2708
 msgid ""
-"Represents the C 64-bit :c:expr:`signed int` datatype.  Usually an alias "
-"for :class:`c_longlong`."
+"Represents the C 64-bit :c:expr:`signed int` datatype.  Usually an alias for "
+":class:`c_longlong`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2714
@@ -3904,14 +3890,14 @@ msgstr ""
 msgid ""
 "Represents the C :c:expr:`signed long long` datatype.  The constructor "
 "accepts an optional integer initializer; no overflow checking is done. On "
-"platforms where ``sizeof(long long) == sizeof(long)`` it is an alias to :"
-"class:`c_long`."
+"platforms where ``sizeof(long long) == sizeof(long)`` it is an alias to "
+":class:`c_long`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2728
 msgid ""
-"Represents the C :c:expr:`signed short` datatype.  The constructor accepts "
-"an optional integer initializer; no overflow checking is done."
+"Represents the C :c:expr:`signed short` datatype.  The constructor accepts an"
+" optional integer initializer; no overflow checking is done."
 msgstr ""
 
 #: ../../library/ctypes.rst:2734
@@ -3922,9 +3908,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2740
 msgid ""
-"Represents the :c:type:`Py_ssize_t` datatype. This is a signed version of :c:"
-"type:`size_t`; that is, the POSIX :c:type:`ssize_t` type. Usually an alias "
-"for another integer type."
+"Represents the :c:type:`Py_ssize_t` datatype. This is a signed version of "
+":c:type:`size_t`; that is, the POSIX :c:type:`ssize_t` type. Usually an alias"
+" for another integer type."
 msgstr ""
 
 #: ../../library/ctypes.rst:2750
@@ -3935,22 +3921,22 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2758
 msgid ""
-"Represents the C :c:expr:`unsigned char` datatype, it interprets the value "
-"as small integer.  The constructor accepts an optional integer initializer; "
-"no overflow checking is done."
+"Represents the C :c:expr:`unsigned char` datatype, it interprets the value as"
+" small integer.  The constructor accepts an optional integer initializer; no "
+"overflow checking is done."
 msgstr ""
 
 #: ../../library/ctypes.rst:2765
 msgid ""
-"Represents the C :c:expr:`unsigned int` datatype.  The constructor accepts "
-"an optional integer initializer; no overflow checking is done.  On platforms "
+"Represents the C :c:expr:`unsigned int` datatype.  The constructor accepts an"
+" optional integer initializer; no overflow checking is done.  On platforms "
 "where ``sizeof(int) == sizeof(long)`` it is an alias for :class:`c_ulong`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2772
 msgid ""
-"Represents the C 8-bit :c:expr:`unsigned int` datatype.  It is an alias for :"
-"class:`c_ubyte`."
+"Represents the C 8-bit :c:expr:`unsigned int` datatype.  It is an alias for "
+":class:`c_ubyte`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2778
@@ -3981,8 +3967,8 @@ msgstr ""
 msgid ""
 "Represents the C :c:expr:`unsigned long long` datatype.  The constructor "
 "accepts an optional integer initializer; no overflow checking is done. On "
-"platforms where ``sizeof(long long) == sizeof(long)`` it is an alias to :"
-"class:`c_long`."
+"platforms where ``sizeof(long long) == sizeof(long)`` it is an alias to "
+":class:`c_long`."
 msgstr ""
 
 #: ../../library/ctypes.rst:2810
@@ -3993,8 +3979,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2816
 msgid ""
-"Represents the C :c:expr:`void *` type.  The value is represented as "
-"integer. The constructor accepts an optional integer initializer."
+"Represents the C :c:expr:`void *` type.  The value is represented as integer."
+" The constructor accepts an optional integer initializer."
 msgstr ""
 
 #: ../../library/ctypes.rst:2822
@@ -4036,10 +4022,10 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2859
 msgid ""
-"The :mod:`!ctypes.wintypes` module provides quite some other Windows "
-"specific data types, for example :c:type:`!HWND`, :c:type:`!WPARAM`, :c:type:"
-"`!VARIANT_BOOL` or :c:type:`!DWORD`. Some useful structures like :c:type:`!"
-"MSG` or :c:type:`!RECT` are also defined."
+"The :mod:`!ctypes.wintypes` module provides quite some other Windows specific"
+" data types, for example :c:type:`!HWND`, :c:type:`!WPARAM`, "
+":c:type:`!VARIANT_BOOL` or :c:type:`!DWORD`. Some useful structures like "
+":c:type:`!MSG` or :c:type:`!RECT` are also defined."
 msgstr ""
 
 #: ../../library/ctypes.rst:2868
@@ -4052,8 +4038,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2875
 msgid ""
-"Unions share common attributes and behavior with structures; see :class:"
-"`Structure` documentation for details."
+"Unions share common attributes and behavior with structures; see "
+":class:`Structure` documentation for details."
 msgstr ""
 
 #: ../../library/ctypes.rst:2880
@@ -4085,16 +4071,16 @@ msgstr ""
 #: ../../library/ctypes.rst:2907
 msgid ""
 "Concrete structure and union types must be created by subclassing one of "
-"these types, and at least define a :attr:`_fields_` class variable. :mod:`!"
-"ctypes` will create :term:`descriptor`\\s which allow reading and writing "
-"the fields by direct attribute accesses.  These are the"
+"these types, and at least define a :attr:`_fields_` class variable. "
+":mod:`!ctypes` will create :term:`descriptor`\\s which allow reading and "
+"writing the fields by direct attribute accesses.  These are the"
 msgstr ""
 
 #: ../../library/ctypes.rst:2915
 msgid ""
-"A sequence defining the structure fields.  The items must be 2-tuples or 3-"
-"tuples.  The first item is the name of the field, the second item specifies "
-"the type of the field; it can be any ctypes data type."
+"A sequence defining the structure fields.  The items must be 2-tuples or "
+"3-tuples.  The first item is the name of the field, the second item specifies"
+" the type of the field; it can be any ctypes data type."
 msgstr ""
 
 #: ../../library/ctypes.rst:2919
@@ -4134,10 +4120,10 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2939
 msgid ""
-"Additionally, the :attr:`!_fields_` class variable must be defined before "
-"the structure or union type is first used: an instance or subclass is "
-"created, :func:`sizeof` is called on it, and so on. Later assignments to :"
-"attr:`!_fields_` will raise an :exc:`AttributeError`. If :attr:`!_fields_` "
+"Additionally, the :attr:`!_fields_` class variable must be defined before the"
+" structure or union type is first used: an instance or subclass is created, "
+":func:`sizeof` is called on it, and so on. Later assignments to "
+":attr:`!_fields_` will raise an :exc:`AttributeError`. If :attr:`!_fields_` "
 "has not been set before such use, the structure or union will have no own "
 "fields, as if :attr:`!_fields_` was empty."
 msgstr ""
@@ -4156,16 +4142,16 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2956
 msgid ""
-"This is only implemented for the MSVC-compatible memory layout (see :attr:"
-"`_layout_`)."
+"This is only implemented for the MSVC-compatible memory layout (see "
+":attr:`_layout_`)."
 msgstr ""
 
 #: ../../library/ctypes.rst:2959
 msgid ""
-"Setting :attr:`!_pack_` to 0 is the same as not setting it at all. "
-"Otherwise, the value must be a positive power of two. The effect is "
-"equivalent to ``#pragma pack(N)`` in C, except :mod:`!ctypes` may allow "
-"larger *n* than what the compiler accepts."
+"Setting :attr:`!_pack_` to 0 is the same as not setting it at all. Otherwise,"
+" the value must be a positive power of two. The effect is equivalent to "
+"``#pragma pack(N)`` in C, except :mod:`!ctypes` may allow larger *n* than "
+"what the compiler accepts."
 msgstr ""
 
 #: ../../library/ctypes.rst:2964
@@ -4228,8 +4214,8 @@ msgstr ""
 #: ../../library/ctypes.rst:3005
 msgid ""
 "``\"gcc-sysv\"``: the layout used by GCC with the System V or “SysV-like” "
-"data model, as used on Linux and macOS. With this layout, :attr:`~Structure."
-"_pack_` must be unset or zero."
+"data model, as used on Linux and macOS. With this layout, "
+":attr:`~Structure._pack_` must be unset or zero."
 msgstr ""
 
 #: ../../library/ctypes.rst:3009
@@ -4246,8 +4232,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:3016
 msgid ""
-"When :attr:`~Structure._pack_` is specified: ``\"ms\"``. (This is "
-"deprecated; see :attr:`~Structure._pack_` documentation.)"
+"When :attr:`~Structure._pack_` is specified: ``\"ms\"``. (This is deprecated;"
+" see :attr:`~Structure._pack_` documentation.)"
 msgstr ""
 
 #: ../../library/ctypes.rst:3018
@@ -4256,21 +4242,21 @@ msgstr ""
 
 #: ../../library/ctypes.rst:3020
 msgid ""
-":attr:`!_layout_` must already be defined when :attr:`~Structure._fields_` "
-"is assigned, otherwise it will have no effect."
+":attr:`!_layout_` must already be defined when :attr:`~Structure._fields_` is"
+" assigned, otherwise it will have no effect."
 msgstr ""
 
 #: ../../library/ctypes.rst:3027
 msgid ""
-"An optional sequence that lists the names of unnamed (anonymous) fields. :"
-"attr:`_anonymous_` must be already defined when :attr:`_fields_` is "
+"An optional sequence that lists the names of unnamed (anonymous) fields. "
+":attr:`_anonymous_` must be already defined when :attr:`_fields_` is "
 "assigned, otherwise it will have no effect."
 msgstr ""
 
 #: ../../library/ctypes.rst:3031
 msgid ""
-"The fields listed in this variable must be structure or union type fields. :"
-"mod:`!ctypes` will create descriptors in the structure type that allows "
+"The fields listed in this variable must be structure or union type fields. "
+":mod:`!ctypes` will create descriptors in the structure type that allows "
 "accessing the nested fields directly, without the need to create the "
 "structure or union field."
 msgstr ""
@@ -4296,8 +4282,8 @@ msgstr ""
 msgid ""
 "The ``TYPEDESC`` structure describes a COM data type, the ``vt`` field "
 "specifies which one of the union fields is valid.  Since the ``u`` field is "
-"defined as anonymous field, it is now possible to access the members "
-"directly off the TYPEDESC instance. ``td.lptdesc`` and ``td.u.lptdesc`` are "
+"defined as anonymous field, it is now possible to access the members directly"
+" off the TYPEDESC instance. ``td.lptdesc`` and ``td.u.lptdesc`` are "
 "equivalent, but the former is faster since it does not need to create a "
 "temporary union instance::"
 msgstr ""
@@ -4313,9 +4299,9 @@ msgstr ""
 #: ../../library/ctypes.rst:3061
 msgid ""
 "It is possible to define sub-subclasses of structures, they inherit the "
-"fields of the base class.  If the subclass definition has a separate :attr:"
-"`_fields_` variable, the fields specified in this are appended to the fields "
-"of the base class."
+"fields of the base class.  If the subclass definition has a separate "
+":attr:`_fields_` variable, the fields specified in this are appended to the "
+"fields of the base class."
 msgstr ""
 
 #: ../../library/ctypes.rst:3066
@@ -4323,9 +4309,9 @@ msgid ""
 "Structure and union constructors accept both positional and keyword "
 "arguments.  Positional arguments are used to initialize member fields in the "
 "same order as they are appear in :attr:`_fields_`.  Keyword arguments in the "
-"constructor are interpreted as attribute assignments, so they will "
-"initialize :attr:`_fields_` with the same name, or create new attributes for "
-"names not present in :attr:`_fields_`."
+"constructor are interpreted as attribute assignments, so they will initialize"
+" :attr:`_fields_` with the same name, or create new attributes for names not "
+"present in :attr:`_fields_`."
 msgstr ""
 
 #: ../../library/ctypes.rst:3076
@@ -4419,8 +4405,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:3149
 msgid ""
-"The location of a bitfield within its *storage unit*, that is, within :attr:"
-"`~CField.byte_size` bytes of memory starting at :attr:`~CField.byte_offset`."
+"The location of a bitfield within its *storage unit*, that is, within "
+":attr:`~CField.byte_size` bytes of memory starting at "
+":attr:`~CField.byte_offset`."
 msgstr ""
 
 #: ../../library/ctypes.rst:3153
@@ -4432,8 +4419,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:3157
 msgid ""
-"For non-bitfields, :attr:`!bit_offset` is zero and :attr:`!bit_size` is "
-"equal to ``byte_size * 8``."
+"For non-bitfields, :attr:`!bit_offset` is zero and :attr:`!bit_size` is equal"
+" to ``byte_size * 8``."
 msgstr ""
 
 #: ../../library/ctypes.rst:3162
@@ -4452,12 +4439,12 @@ msgstr ""
 
 #: ../../library/ctypes.rst:3175
 msgid ""
-"The recommended way to create concrete array types is by multiplying any :"
-"mod:`!ctypes` data type with a non-negative integer.  Alternatively, you can "
-"subclass this type and define :attr:`_length_` and :attr:`_type_` class "
+"The recommended way to create concrete array types is by multiplying any "
+":mod:`!ctypes` data type with a non-negative integer.  Alternatively, you can"
+" subclass this type and define :attr:`_length_` and :attr:`_type_` class "
 "variables. Array elements can be read and written using standard subscript "
-"and slice accesses; for slice reads, the resulting object is *not* itself "
-"an :class:`Array`."
+"and slice accesses; for slice reads, the resulting object is *not* itself an "
+":class:`Array`."
 msgstr ""
 
 #: ../../library/ctypes.rst:3182
@@ -4467,8 +4454,8 @@ msgstr ""
 #: ../../library/ctypes.rst:3187
 msgid ""
 "A positive integer specifying the number of elements in the array. Out-of-"
-"range subscripts result in an :exc:`IndexError`. Will be returned by :func:"
-"`len`."
+"range subscripts result in an :exc:`IndexError`. Will be returned by "
+":func:`len`."
 msgstr ""
 
 #: ../../library/ctypes.rst:3194
@@ -4483,8 +4470,8 @@ msgstr ""
 
 #: ../../library/ctypes.rst:3202
 msgid ""
-"Create an array. Equivalent to ``type * length``, where *type* is a :mod:`!"
-"ctypes` data type and *length* an integer."
+"Create an array. Equivalent to ``type * length``, where *type* is a "
+":mod:`!ctypes` data type and *length* an integer."
 msgstr ""
 
 #: ../../library/ctypes.rst:3206
@@ -4504,8 +4491,8 @@ msgstr ""
 #: ../../library/ctypes.rst:3218
 msgid ""
 "If a pointer points to an array, its elements can be read and written using "
-"standard subscript and slice accesses.  Pointer objects have no size, so :"
-"func:`len` will raise :exc:`TypeError`.  Negative subscripts will read from "
+"standard subscript and slice accesses.  Pointer objects have no size, so "
+":func:`len` will raise :exc:`TypeError`.  Negative subscripts will read from "
 "the memory *before* the pointer (as in C), and out-of-range subscripts will "
 "probably crash with an access violation (if you're lucky)."
 msgstr ""
@@ -4549,8 +4536,7 @@ msgstr ""
 #: ../../library/ctypes.rst:3263
 msgid ""
 "*descr* is the textual description.  *source* is the language-dependent "
-"``ProgID`` for the class or application that raised the error.  *helpfile* "
-"is the path of the help file.  *helpcontext* is the help context "
-"identifier.  *progid* is the ``ProgID`` of the interface that defined the "
-"error."
+"``ProgID`` for the class or application that raised the error.  *helpfile* is"
+" the path of the help file.  *helpcontext* is the help context identifier.  "
+"*progid* is the ``ProgID`` of the interface that defined the error."
 msgstr ""

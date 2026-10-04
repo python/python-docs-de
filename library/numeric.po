@@ -6,7 +6,6 @@
 # Translators:
 # Swen Bachmann, 2026
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -23,18 +22,25 @@ msgstr ""
 
 #: ../../library/numeric.rst:6
 msgid "Numeric and Mathematical Modules"
-msgstr ""
+msgstr "Numerische und mathematische Module"
 
 #: ../../library/numeric.rst:8
 msgid ""
 "The modules described in this chapter provide numeric and math-related "
 "functions and data types. The :mod:`numbers` module defines an abstract "
 "hierarchy of numeric types. The :mod:`math` and :mod:`cmath` modules contain "
-"various mathematical functions for floating-point and complex numbers. The :"
-"mod:`decimal` module supports exact representations of decimal numbers, "
+"various mathematical functions for floating-point and complex numbers. The "
+":mod:`decimal` module supports exact representations of decimal numbers, "
 "using arbitrary precision arithmetic."
 msgstr ""
+"Die in diesem Kapitel beschriebenen Module stellen numerische und "
+"mathematische Funktionen sowie Datentypen bereit. Das Modul :mod:`numbers` "
+"definiert eine abstrakte Hierarchie numerischer Typen. Die Module :mod:`math`"
+" und :mod:`cmath` enthalten verschiedene mathematische Funktionen für "
+"Gleitkommazahlen und komplexe Zahlen. Das Modul :mod:`decimal` unterstützt "
+"die exakte Darstellung von Dezimalzahlen mittels Arithmetik mit beliebiger "
+"Genauigkeit."
 
 #: ../../library/numeric.rst:15
 msgid "The following modules are documented in this chapter:"
-msgstr "In diesem Kapitel werden die folgenden Module beschrieben:"
+msgstr "In diesem Kapitel sind die folgenden Module dokumentiert:"

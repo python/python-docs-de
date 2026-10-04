@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -19,7 +18,7 @@ msgstr ""
 
 #: ../../library/mm.rst:5
 msgid "Multimedia Services"
-msgstr ""
+msgstr "Multimedia-Dienste"
 
 #: ../../library/mm.rst:7
 msgid ""
@@ -27,3 +26,7 @@ msgid ""
 "interfaces that are mainly useful for multimedia applications.  They are "
 "available at the discretion of the installation.  Here's an overview:"
 msgstr ""
+"Die in diesem Kapitel beschriebenen Module implementieren verschiedene "
+"Algorithmen und Schnittstellen, die vor allem für Multimedia-Anwendungen "
+"nützlich sind. Ob sie verfügbar sind, hängt von der jeweiligen Installation "
+"ab. Hier eine Übersicht:"

@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -19,10 +18,12 @@ msgstr ""
 
 #: ../../howto/clinic.rst:8
 msgid "Argument Clinic How-To"
-msgstr ""
+msgstr "Argument-Clinic-Anleitung"
 
 #: ../../howto/clinic.rst:13
 msgid ""
 "The Argument Clinic How-TO has been moved to the `Python Developer's Guide "
 "<https://devguide.python.org/development-tools/clinic/>`__."
 msgstr ""
+"Die Argument-Clinic-Anleitung wurde in den `Python Developer's Guide "
+"<https://devguide.python.org/development-tools/clinic/>`__ verschoben."

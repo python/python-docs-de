@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -19,10 +18,12 @@ msgstr ""
 
 #: ../../library/netdata.rst:6
 msgid "Internet Data Handling"
-msgstr ""
+msgstr "Verarbeitung von Internetdaten"
 
 #: ../../library/netdata.rst:8
 msgid ""
 "This chapter describes modules which support handling data formats commonly "
 "used on the internet."
 msgstr ""
+"Dieses Kapitel beschreibt Module, die bei der Verarbeitung von Datenformaten "
+"helfen, die im Internet häufig verwendet werden."

@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -19,13 +18,15 @@ msgstr ""
 
 #: ../../howto/cporting.rst:7
 msgid "Porting Extension Modules to Python 3"
-msgstr ""
+msgstr "Erweiterungsmodule auf Python 3 portieren"
 
 #: ../../howto/cporting.rst:9
 msgid ""
 "We recommend the following resources for porting extension modules to Python "
 "3:"
 msgstr ""
+"Für das Portieren von Erweiterungsmodulen auf Python 3 empfehlen wir die "
+"folgenden Quellen:"
 
 #: ../../howto/cporting.rst:11
 msgid ""
@@ -33,12 +34,17 @@ msgid ""
 "guide*, a book on moving from Python 2 to Python 3 in general, guides the "
 "reader through porting an extension module."
 msgstr ""
+"Das Kapitel `Migrating C extensions`_ aus *Supporting Python 3: An in-depth "
+"guide*, einem Buch über den Umstieg von Python 2 auf Python 3 im Allgemeinen,"
+" führt Schritt für Schritt durch das Portieren eines Erweiterungsmoduls."
 
 #: ../../howto/cporting.rst:15
 msgid ""
-"The `Porting guide`_ from the *py3c* project provides opinionated "
-"suggestions with supporting code."
+"The `Porting guide`_ from the *py3c* project provides opinionated suggestions"
+" with supporting code."
 msgstr ""
+"Der `Porting guide`_ des Projekts *py3c* enthält klar positionierte "
+"Empfehlungen samt zugehörigem Code."
 
 #: ../../howto/cporting.rst:17
 msgid ""
@@ -47,3 +53,8 @@ msgid ""
 "them, but the library then handles differences between various Python "
 "versions and implementations."
 msgstr ""
+":ref:`Empfohlene Werkzeuge von Drittanbietern <c-api-tools>` bieten "
+"Abstraktionen über der C-API von Python. Erweiterungen müssen dafür in der "
+"Regel umgeschrieben werden, dafür kümmert sich die jeweilige Bibliothek dann "
+"um die Unterschiede zwischen den verschiedenen Python-Versionen und "
+"-Implementierungen."

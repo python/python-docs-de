@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
@@ -56,5 +55,5 @@ msgid ""
 "See :ref:`history-and-license` for complete license and permissions "
 "information."
 msgstr ""
-"Vollständige Lizenz- und Genehmigungsinformationen finden Sie hier :ref:"
-"`history-and-license`."
+"Vollständige Lizenz- und Genehmigungsinformationen findest du hier "
+":ref:`history-and-license`."
