@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -42,7 +41,7 @@ msgstr ""
 
 #: ../../library/rlcompleter.rst:20
 msgid "Example::"
-msgstr ""
+msgstr "Beispiel::"
 
 #: ../../library/rlcompleter.rst:22
 msgid ""
@@ -50,26 +49,24 @@ msgid ""
 ">>> import readline\n"
 ">>> readline.parse_and_bind(\"tab: complete\")\n"
 ">>> readline. <TAB PRESSED>\n"
-"readline.__doc__          readline.get_line_buffer(  readline."
-"read_init_file(\n"
-"readline.__file__         readline.insert_text(      readline."
-"set_completer(\n"
+"readline.__doc__          readline.get_line_buffer(  readline.read_init_file(\n"
+"readline.__file__         readline.insert_text(      readline.set_completer(\n"
 "readline.__name__         readline.parse_and_bind(\n"
 ">>> readline."
 msgstr ""
 
 #: ../../library/rlcompleter.rst:31
 msgid ""
-"The :mod:`!rlcompleter` module is designed for use with Python's :ref:"
-"`interactive mode <tut-interactive>`.  Unless Python is run with the :option:"
-"`-S` option, the module is automatically imported and configured (see :ref:"
-"`rlcompleter-config`)."
+"The :mod:`!rlcompleter` module is designed for use with Python's "
+":ref:`interactive mode <tut-interactive>`.  Unless Python is run with the "
+":option:`-S` option, the module is automatically imported and configured (see"
+" :ref:`rlcompleter-config`)."
 msgstr ""
 
 #: ../../library/rlcompleter.rst:36
 msgid ""
-"On platforms without :mod:`readline`, the :class:`Completer` class defined "
-"by this module can still be used for custom purposes."
+"On platforms without :mod:`readline`, the :class:`Completer` class defined by"
+" this module can still be used for custom purposes."
 msgstr ""
 
 #: ../../library/rlcompleter.rst:44
@@ -82,24 +79,23 @@ msgstr ""
 
 #: ../../library/rlcompleter.rst:50
 msgid ""
-"When called by the :mod:`readline` module, this method is called "
-"successively with ``state == 0, 1, 2, ...`` until the method returns "
-"``None``."
+"When called by the :mod:`readline` module, this method is called successively"
+" with ``state == 0, 1, 2, ...`` until the method returns ``None``."
 msgstr ""
 
 #: ../../library/rlcompleter.rst:54
 msgid ""
 "If called for *text* that doesn't include a period character (``'.'``), it "
-"will complete from names currently defined in :mod:`__main__`, :mod:"
-"`builtins` and keywords (as defined by the :mod:`keyword` module)."
+"will complete from names currently defined in :mod:`__main__`, "
+":mod:`builtins` and keywords (as defined by the :mod:`keyword` module)."
 msgstr ""
 
 #: ../../library/rlcompleter.rst:58
 msgid ""
-"If called for a dotted name, it will try to evaluate anything without "
-"obvious side-effects (functions will not be evaluated, but it can generate "
-"calls to :meth:`~object.__getattr__`) up to the last part, and find matches "
-"for the rest via the :func:`dir` function.  Any exception raised during the "
+"If called for a dotted name, it will try to evaluate anything without obvious"
+" side-effects (functions will not be evaluated, but it can generate calls to "
+":meth:`~object.__getattr__`) up to the last part, and find matches for the "
+"rest via the :func:`dir` function.  Any exception raised during the "
 "evaluation of the expression is caught, silenced and :const:`None` is "
 "returned."
 msgstr ""

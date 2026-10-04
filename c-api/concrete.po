@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -33,11 +32,10 @@ msgstr ""
 
 #: ../../c-api/concrete.rst:19
 msgid ""
-"While the functions described in this chapter carefully check the type of "
-"the objects which are passed in, many of them do not check for ``NULL`` "
-"being passed instead of a valid object.  Allowing ``NULL`` to be passed in "
-"can cause memory access violations and immediate termination of the "
-"interpreter."
+"While the functions described in this chapter carefully check the type of the"
+" objects which are passed in, many of them do not check for ``NULL`` being "
+"passed instead of a valid object.  Allowing ``NULL`` to be passed in can "
+"cause memory access violations and immediate termination of the interpreter."
 msgstr ""
 
 #: ../../c-api/concrete.rst:28
@@ -83,7 +81,7 @@ msgstr ""
 #: ../../c-api/concrete.rst:43 ../../c-api/concrete.rst:58
 #: ../../c-api/concrete.rst:80
 msgid "object"
-msgstr ""
+msgstr "Objekt"
 
 #: ../../c-api/concrete.rst:43
 msgid "numeric"
@@ -91,8 +89,8 @@ msgstr ""
 
 #: ../../c-api/concrete.rst:58
 msgid "sequence"
-msgstr ""
+msgstr "Abfolge"
 
 #: ../../c-api/concrete.rst:80
 msgid "mapping"
-msgstr ""
+msgstr "Kartierung"

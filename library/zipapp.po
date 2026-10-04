@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -81,8 +80,8 @@ msgstr ""
 msgid ""
 "Write the output to a file named *output*.  If this option is not specified, "
 "the output filename will be the same as the input *source*, with the "
-"extension ``.pyz`` added.  If an explicit filename is given, it is used as "
-"is (so a ``.pyz`` extension should be included if required)."
+"extension ``.pyz`` added.  If an explicit filename is given, it is used as is"
+" (so a ``.pyz`` extension should be included if required)."
 msgstr ""
 
 #: ../../library/zipapp.rst:64
@@ -101,9 +100,9 @@ msgstr ""
 #: ../../library/zipapp.rst:75
 msgid ""
 "Write a ``__main__.py`` file to the archive that executes *mainfn*.  The "
-"*mainfn* argument should have the form \"pkg.mod:fn\", where \"pkg.mod\" is "
-"a package/module in the archive, and \"fn\" is a callable in the given "
-"module. The ``__main__.py`` file will execute that callable."
+"*mainfn* argument should have the form \"pkg.mod:fn\", where \"pkg.mod\" is a"
+" package/module in the archive, and \"fn\" is a callable in the given module."
+" The ``__main__.py`` file will execute that callable."
 msgstr ""
 
 #: ../../library/zipapp.rst:80
@@ -112,8 +111,8 @@ msgstr ""
 
 #: ../../library/zipapp.rst:84
 msgid ""
-"Compress files with the deflate method, reducing the size of the output "
-"file. By default, files are stored uncompressed in the archive."
+"Compress files with the deflate method, reducing the size of the output file."
+" By default, files are stored uncompressed in the archive."
 msgstr ""
 
 #: ../../library/zipapp.rst:87
@@ -122,9 +121,9 @@ msgstr ""
 
 #: ../../library/zipapp.rst:93
 msgid ""
-"Display the interpreter embedded in the archive, for diagnostic purposes.  "
-"In this case, any other options are ignored and SOURCE must be an archive, "
-"not a directory."
+"Display the interpreter embedded in the archive, for diagnostic purposes.  In"
+" this case, any other options are ignored and SOURCE must be an archive, not "
+"a directory."
 msgstr ""
 
 #: ../../library/zipapp.rst:99
@@ -162,9 +161,9 @@ msgstr ""
 
 #: ../../library/zipapp.rst:122
 msgid ""
-"A file object open for reading in bytes mode.  The content of the file "
-"should be an application archive, and the file object is assumed to be "
-"positioned at the start of the archive."
+"A file object open for reading in bytes mode.  The content of the file should"
+" be an application archive, and the file object is assumed to be positioned "
+"at the start of the archive."
 msgstr ""
 
 #: ../../library/zipapp.rst:126
@@ -197,8 +196,8 @@ msgid ""
 "which the archive will be executed.  It is written as a \"shebang\" line at "
 "the start of the archive.  On POSIX, this will be interpreted by the OS, and "
 "on Windows it will be handled by the Python launcher.  Omitting the "
-"*interpreter* results in no shebang line being written.  If an interpreter "
-"is specified, and the target is a filename, the executable bit of the target "
+"*interpreter* results in no shebang line being written.  If an interpreter is"
+" specified, and the target is a filename, the executable bit of the target "
 "file will be set."
 msgstr ""
 
@@ -206,18 +205,18 @@ msgstr ""
 msgid ""
 "The *main* argument specifies the name of a callable which will be used as "
 "the main program for the archive.  It can only be specified if the source is "
-"a directory, and the source does not already contain a ``__main__.py`` "
-"file.  The *main* argument should take the form \"pkg.module:callable\" and "
-"the archive will be run by importing \"pkg.module\" and executing the given "
-"callable with no arguments.  It is an error to omit *main* if the source is "
-"a directory and does not contain a ``__main__.py`` file, as otherwise the "
+"a directory, and the source does not already contain a ``__main__.py`` file."
+"  The *main* argument should take the form \"pkg.module:callable\" and the "
+"archive will be run by importing \"pkg.module\" and executing the given "
+"callable with no arguments.  It is an error to omit *main* if the source is a"
+" directory and does not contain a ``__main__.py`` file, as otherwise the "
 "resulting archive would not be executable."
 msgstr ""
 
 #: ../../library/zipapp.rst:155
 msgid ""
-"The optional *filter* argument specifies a callback function that is passed "
-"a Path object representing the path to the file being added (relative to the "
+"The optional *filter* argument specifies a callback function that is passed a"
+" Path object representing the path to the file being added (relative to the "
 "source directory).  It should return ``True`` if the file is to be added."
 msgstr ""
 
@@ -225,8 +224,8 @@ msgstr ""
 msgid ""
 "The optional *compressed* argument determines whether files are compressed.  "
 "If set to ``True``, files in the archive are compressed with the deflate "
-"method; otherwise, files are stored uncompressed. This argument has no "
-"effect when copying an existing archive."
+"method; otherwise, files are stored uncompressed. This argument has no effect"
+" when copying an existing archive."
 msgstr ""
 
 #: ../../library/zipapp.rst:165
@@ -239,8 +238,8 @@ msgstr ""
 msgid ""
 "When copying an existing archive, file objects supplied only need ``read`` "
 "and ``readline``, or ``write`` methods.  When creating an archive from a "
-"directory, if the target is a file object it will be passed to the ``zipfile."
-"ZipFile`` class, and must supply the methods needed by that class."
+"directory, if the target is a file object it will be passed to the "
+"``zipfile.ZipFile`` class, and must supply the methods needed by that class."
 msgstr ""
 
 #: ../../library/zipapp.rst:174
@@ -257,7 +256,7 @@ msgstr ""
 
 #: ../../library/zipapp.rst:188
 msgid "Examples"
-msgstr ""
+msgstr "Beispiele"
 
 #: ../../library/zipapp.rst:190
 msgid "Pack up a directory into an archive, and run it."
@@ -295,25 +294,24 @@ msgstr ""
 
 #: ../../library/zipapp.rst:212
 msgid ""
-"To replace the shebang line on an existing archive, create a modified "
-"archive using the :func:`create_archive` function::"
+"To replace the shebang line on an existing archive, create a modified archive"
+" using the :func:`create_archive` function::"
 msgstr ""
 
 #: ../../library/zipapp.rst:215
 msgid ""
 ">>> import zipapp\n"
-">>> zipapp.create_archive('old_archive.pyz', 'new_archive.pyz', '/usr/bin/"
-"python3')"
+">>> zipapp.create_archive('old_archive.pyz', 'new_archive.pyz', '/usr/bin/python3')"
 msgstr ""
 
 #: ../../library/zipapp.rst:218
 msgid ""
-"To update the file in place, do the replacement in memory using a :class:"
-"`~io.BytesIO` object, and then overwrite the source afterwards.  Note that "
-"there is a risk when overwriting a file in place that an error will result "
-"in the loss of the original file.  This code does not protect against such "
-"errors, but production code should do so.  Also, this method will only work "
-"if the archive fits in memory::"
+"To update the file in place, do the replacement in memory using a "
+":class:`~io.BytesIO` object, and then overwrite the source afterwards.  Note "
+"that there is a risk when overwriting a file in place that an error will "
+"result in the loss of the original file.  This code does not protect against "
+"such errors, but production code should do so.  Also, this method will only "
+"work if the archive fits in memory::"
 msgstr ""
 
 #: ../../library/zipapp.rst:225
@@ -340,10 +338,10 @@ msgstr ""
 
 #: ../../library/zipapp.rst:243
 msgid ""
-"If you use \"/usr/bin/env python\" (or other forms of the \"python\" "
-"command, such as \"/usr/bin/python\"), you need to consider that your users "
-"may have either Python 2 or Python 3 as their default, and write your code "
-"to work under both versions."
+"If you use \"/usr/bin/env python\" (or other forms of the \"python\" command,"
+" such as \"/usr/bin/python\"), you need to consider that your users may have "
+"either Python 2 or Python 3 as their default, and write your code to work "
+"under both versions."
 msgstr ""
 
 #: ../../library/zipapp.rst:247
@@ -356,8 +354,8 @@ msgstr ""
 #: ../../library/zipapp.rst:250
 msgid ""
 "There is no way to say \"python X.Y or later\", so be careful of using an "
-"exact version like \"/usr/bin/env python3.4\" as you will need to change "
-"your shebang line for users of Python 3.5, for example."
+"exact version like \"/usr/bin/env python3.4\" as you will need to change your"
+" shebang line for users of Python 3.5, for example."
 msgstr ""
 
 #: ../../library/zipapp.rst:254
@@ -403,8 +401,8 @@ msgstr ""
 #: ../../library/zipapp.rst:280
 msgid ""
 "(this assumes you have your project requirements in a ``requirements.txt`` "
-"file - if not, you can just list the dependencies manually on the pip "
-"command line)."
+"file - if not, you can just list the dependencies manually on the pip command"
+" line)."
 msgstr ""
 
 #: ../../library/zipapp.rst:284
@@ -466,8 +464,8 @@ msgstr ""
 
 #: ../../library/zipapp.rst:325
 msgid ""
-"The zip file format allows arbitrary data to be prepended to a zip file.  "
-"The zip application format uses this ability to prepend a standard POSIX "
+"The zip file format allows arbitrary data to be prepended to a zip file.  The"
+" zip application format uses this ability to prepend a standard POSIX "
 "\"shebang\" line to the file (``#!/path/to/interpreter``)."
 msgstr ""
 
@@ -478,11 +476,10 @@ msgstr ""
 #: ../../library/zipapp.rst:331
 msgid ""
 "An optional shebang line, containing the characters ``b'#!'`` followed by an "
-"interpreter name, and then a newline (``b'\\n'``) character.  The "
-"interpreter name can be anything acceptable to the OS \"shebang\" "
-"processing, or the Python launcher on Windows.  The interpreter should be "
-"encoded in UTF-8 on Windows, and in :func:`sys.getfilesystemencoding` on "
-"POSIX."
+"interpreter name, and then a newline (``b'\\n'``) character.  The interpreter"
+" name can be anything acceptable to the OS \"shebang\" processing, or the "
+"Python launcher on Windows.  The interpreter should be encoded in UTF-8 on "
+"Windows, and in :func:`sys.getfilesystemencoding` on POSIX."
 msgstr ""
 
 #: ../../library/zipapp.rst:336
@@ -502,8 +499,8 @@ msgstr ""
 #: ../../library/zipapp.rst:344
 msgid ""
 "There is no requirement that the tools in this module are used to create "
-"application archives - the module is a convenience, but archives in the "
-"above format created by any means are acceptable to Python."
+"application archives - the module is a convenience, but archives in the above"
+" format created by any means are acceptable to Python."
 msgstr ""
 
 #: ../../library/zipapp.rst:11

@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -35,18 +34,18 @@ msgstr ""
 
 #: ../../library/tokenize.rst:16
 msgid ""
-"To simplify token stream handling, all :ref:`operator <operators>` and :ref:"
-"`delimiter <delimiters>` tokens and :data:`Ellipsis` are returned using the "
-"generic :data:`~token.OP` token type.  The exact type can be determined by "
-"checking the ``exact_type`` property on the :term:`named tuple` returned "
+"To simplify token stream handling, all :ref:`operator <operators>` and "
+":ref:`delimiter <delimiters>` tokens and :data:`Ellipsis` are returned using "
+"the generic :data:`~token.OP` token type.  The exact type can be determined "
+"by checking the ``exact_type`` property on the :term:`named tuple` returned "
 "from :func:`tokenize.tokenize`."
 msgstr ""
 
 #: ../../library/tokenize.rst:25
 msgid ""
 "Note that the functions in this module are only designed to parse "
-"syntactically valid Python code (code that does not raise when parsed using :"
-"func:`ast.parse`).  The behavior of the functions in this module is "
+"syntactically valid Python code (code that does not raise when parsed using "
+":func:`ast.parse`).  The behavior of the functions in this module is "
 "**undefined** when providing invalid Python code and it can change at any "
 "point."
 msgstr ""
@@ -61,21 +60,21 @@ msgstr ""
 
 #: ../../library/tokenize.rst:38
 msgid ""
-"The :func:`.tokenize` generator requires one argument, *readline*, which "
-"must be a callable object which provides the same interface as the :meth:`io."
-"IOBase.readline` method of file objects.  Each call to the function should "
-"return one line of input as bytes."
+"The :func:`.tokenize` generator requires one argument, *readline*, which must"
+" be a callable object which provides the same interface as the "
+":meth:`io.IOBase.readline` method of file objects.  Each call to the function"
+" should return one line of input as bytes."
 msgstr ""
 
 #: ../../library/tokenize.rst:43
 msgid ""
-"The generator produces 5-tuples with these members: the token type; the "
-"token string; a 2-tuple ``(srow, scol)`` of ints specifying the row and "
-"column where the token begins in the source; a 2-tuple ``(erow, ecol)`` of "
-"ints specifying the row and column where the token ends in the source; and "
-"the line on which the token was found. The line passed (the last tuple item) "
-"is the *physical* line.  The 5 tuple is returned as a :term:`named tuple` "
-"with the field names: ``type string start end line``."
+"The generator produces 5-tuples with these members: the token type; the token"
+" string; a 2-tuple ``(srow, scol)`` of ints specifying the row and column "
+"where the token begins in the source; a 2-tuple ``(erow, ecol)`` of ints "
+"specifying the row and column where the token ends in the source; and the "
+"line on which the token was found. The line passed (the last tuple item) is "
+"the *physical* line.  The 5 tuple is returned as a :term:`named tuple` with "
+"the field names: ``type string start end line``."
 msgstr ""
 
 #: ../../library/tokenize.rst:52
@@ -96,8 +95,8 @@ msgstr ""
 
 #: ../../library/tokenize.rst:63
 msgid ""
-":func:`.tokenize` determines the source encoding of the file by looking for "
-"a UTF-8 BOM or encoding cookie, according to :pep:`263`."
+":func:`.tokenize` determines the source encoding of the file by looking for a"
+" UTF-8 BOM or encoding cookie, according to :pep:`263`."
 msgstr ""
 
 #: ../../library/tokenize.rst:68
@@ -113,14 +112,14 @@ msgstr ""
 
 #: ../../library/tokenize.rst:74
 msgid ""
-"The result is an iterator yielding named tuples, exactly like :func:`."
-"tokenize`. It does not yield an :data:`~token.ENCODING` token."
+"The result is an iterator yielding named tuples, exactly like "
+":func:`.tokenize`. It does not yield an :data:`~token.ENCODING` token."
 msgstr ""
 
 #: ../../library/tokenize.rst:77
 msgid ""
-"All constants from the :mod:`token` module are also exported from :mod:`!"
-"tokenize`."
+"All constants from the :mod:`token` module are also exported from "
+":mod:`!tokenize`."
 msgstr ""
 
 #: ../../library/tokenize.rst:80
@@ -141,15 +140,15 @@ msgstr ""
 msgid ""
 "The result is guaranteed to tokenize back to match the input so that the "
 "conversion is lossless and round-trips are assured.  The guarantee applies "
-"only to the token type and token string as the spacing between tokens "
-"(column positions) may change."
+"only to the token type and token string as the spacing between tokens (column"
+" positions) may change."
 msgstr ""
 
 #: ../../library/tokenize.rst:96
 msgid ""
 "It returns bytes, encoded using the :data:`~token.ENCODING` token, which is "
-"the first token sequence output by :func:`.tokenize`. If there is no "
-"encoding token in the input, it returns a str instead."
+"the first token sequence output by :func:`.tokenize`. If there is no encoding"
+" token in the input, it returns a str instead."
 msgstr ""
 
 #: ../../library/tokenize.rst:101
@@ -187,14 +186,14 @@ msgstr ""
 
 #: ../../library/tokenize.rst:122
 msgid ""
-"Use :func:`.open` to open Python source files: it uses :func:"
-"`detect_encoding` to detect the file encoding."
+"Use :func:`.open` to open Python source files: it uses "
+":func:`detect_encoding` to detect the file encoding."
 msgstr ""
 
 #: ../../library/tokenize.rst:128
 msgid ""
-"Open a file in read only mode using the encoding detected by :func:"
-"`detect_encoding`."
+"Open a file in read only mode using the encoding detected by "
+":func:`detect_encoding`."
 msgstr ""
 
 #: ../../library/tokenize.rst:135
@@ -260,7 +259,7 @@ msgstr ""
 
 #: ../../library/tokenize.rst:181
 msgid "Examples"
-msgstr ""
+msgstr "Beispiele"
 
 #: ../../library/tokenize.rst:183
 msgid ""
@@ -296,8 +295,7 @@ msgid ""
 "    -3.217160342717258261933904529E-7\n"
 "    \"\"\"\n"
 "    result = []\n"
-"    g = tokenize(BytesIO(s.encode('utf-8')).readline)  # tokenize the "
-"string\n"
+"    g = tokenize(BytesIO(s.encode('utf-8')).readline)  # tokenize the string\n"
 "    for toknum, tokval, _, _, _ in g:\n"
 "        if toknum == NUMBER and '.' in tokval:  # replace NUMBER tokens\n"
 "            result.extend([\n"
@@ -325,10 +323,10 @@ msgstr ""
 
 #: ../../library/tokenize.rst:232
 msgid ""
-"will be tokenized to the following output where the first column is the "
-"range of the line/column coordinates where the token is found, the second "
-"column is the name of the token, and the final column is the value of the "
-"token (if any):"
+"will be tokenized to the following output where the first column is the range"
+" of the line/column coordinates where the token is found, the second column "
+"is the name of the token, and the final column is the value of the token (if "
+"any):"
 msgstr ""
 
 #: ../../library/tokenize.rst:236

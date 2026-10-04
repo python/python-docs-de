@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -63,18 +62,18 @@ msgstr ""
 #: ../../library/asyncio-runner.rst:38 ../../library/asyncio-runner.rst:97
 msgid ""
 "If *debug* is ``True``, the event loop will be run in debug mode. ``False`` "
-"disables debug mode explicitly. ``None`` is used to respect the global :ref:"
-"`asyncio-debug-mode` settings."
+"disables debug mode explicitly. ``None`` is used to respect the global "
+":ref:`asyncio-debug-mode` settings."
 msgstr ""
 
 #: ../../library/asyncio-runner.rst:42
 msgid ""
 "If *loop_factory* is not ``None``, it is used to create a new event loop; "
 "otherwise :func:`asyncio.new_event_loop` is used. The loop is closed at the "
-"end. This function should be used as a main entry point for asyncio "
-"programs, and should ideally only be called once. It is recommended to use "
-"*loop_factory* to configure the event loop instead of policies. Passing :"
-"class:`asyncio.EventLoop` allows running asyncio without the policy system."
+"end. This function should be used as a main entry point for asyncio programs,"
+" and should ideally only be called once. It is recommended to use "
+"*loop_factory* to configure the event loop instead of policies. Passing "
+":class:`asyncio.EventLoop` allows running asyncio without the policy system."
 msgstr ""
 
 #: ../../library/asyncio-runner.rst:50
@@ -86,7 +85,7 @@ msgstr ""
 
 #: ../../library/asyncio-runner.rst:54
 msgid "Example::"
-msgstr ""
+msgstr "Beispiel::"
 
 #: ../../library/asyncio-runner.rst:56
 msgid ""
@@ -116,9 +115,9 @@ msgstr ""
 
 #: ../../library/asyncio-runner.rst:81
 msgid ""
-"The :mod:`!asyncio` policy system is deprecated and will be removed in "
-"Python 3.16; from there on, an explicit *loop_factory* is needed to "
-"configure the event loop."
+"The :mod:`!asyncio` policy system is deprecated and will be removed in Python"
+" 3.16; from there on, an explicit *loop_factory* is needed to configure the "
+"event loop."
 msgstr ""
 
 #: ../../library/asyncio-runner.rst:87
@@ -127,14 +126,14 @@ msgstr ""
 
 #: ../../library/asyncio-runner.rst:91
 msgid ""
-"A context manager that simplifies *multiple* async function calls in the "
-"same context."
+"A context manager that simplifies *multiple* async function calls in the same"
+" context."
 msgstr ""
 
 #: ../../library/asyncio-runner.rst:94
 msgid ""
-"Sometimes several top-level async functions should be called in the same :"
-"ref:`event loop <asyncio-event-loop>` and :class:`contextvars.Context`."
+"Sometimes several top-level async functions should be called in the same "
+":ref:`event loop <asyncio-event-loop>` and :class:`contextvars.Context`."
 msgstr ""
 
 #: ../../library/asyncio-runner.rst:101
@@ -171,8 +170,8 @@ msgstr ""
 
 #: ../../library/asyncio-runner.rst:125
 msgid ""
-"An optional keyword-only *context* argument allows specifying a custom :"
-"class:`contextvars.Context` for the code to run in. The runner's default "
+"An optional keyword-only *context* argument allows specifying a custom "
+":class:`contextvars.Context` for the code to run in. The runner's default "
 "context is used if context is ``None``."
 msgstr ""
 
@@ -212,8 +211,8 @@ msgstr ""
 
 #: ../../library/asyncio-runner.rst:163
 msgid ""
-"When :const:`signal.SIGINT` is raised by :kbd:`Ctrl-C`, :exc:"
-"`KeyboardInterrupt` exception is raised in the main thread by default. "
+"When :const:`signal.SIGINT` is raised by :kbd:`Ctrl-C`, "
+":exc:`KeyboardInterrupt` exception is raised in the main thread by default. "
 "However this doesn't work with :mod:`asyncio` because it can interrupt "
 "asyncio internals and can hang the program from exiting."
 msgstr ""
@@ -242,15 +241,15 @@ msgid ""
 "When :const:`signal.SIGINT` is raised by :kbd:`Ctrl-C`, the custom signal "
 "handler cancels the main task by calling :meth:`asyncio.Task.cancel` which "
 "raises :exc:`asyncio.CancelledError` inside the main task.  This causes the "
-"Python stack to unwind, ``try/except`` and ``try/finally`` blocks can be "
-"used for resource cleanup.  After the main task is cancelled, :meth:`asyncio."
-"Runner.run` raises :exc:`KeyboardInterrupt`."
+"Python stack to unwind, ``try/except`` and ``try/finally`` blocks can be used"
+" for resource cleanup.  After the main task is cancelled, "
+":meth:`asyncio.Runner.run` raises :exc:`KeyboardInterrupt`."
 msgstr ""
 
 #: ../../library/asyncio-runner.rst:180
 msgid ""
-"A user could write a tight loop which cannot be interrupted by :meth:"
-"`asyncio.Task.cancel`, in which case the second following :kbd:`Ctrl-C` "
-"immediately raises the :exc:`KeyboardInterrupt` without cancelling the main "
+"A user could write a tight loop which cannot be interrupted by "
+":meth:`asyncio.Task.cancel`, in which case the second following :kbd:`Ctrl-C`"
+" immediately raises the :exc:`KeyboardInterrupt` without cancelling the main "
 "task."
 msgstr ""

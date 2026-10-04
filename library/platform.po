@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -114,8 +113,8 @@ msgstr ""
 msgid ""
 "If *aliased* is true, the function will use aliases for various platforms "
 "that report system names which differ from their common names, for example "
-"SunOS will be reported as Solaris.  The :func:`system_alias` function is "
-"used to implement this."
+"SunOS will be reported as Solaris.  The :func:`system_alias` function is used"
+" to implement this."
 msgstr ""
 
 #: ../../library/platform.rst:78
@@ -136,9 +135,9 @@ msgstr ""
 
 #: ../../library/platform.rst:91
 msgid ""
-"An empty string is returned if the value cannot be determined. Note that "
-"many platforms do not provide this information or simply return the same "
-"value as for :func:`machine`.  NetBSD does this."
+"An empty string is returned if the value cannot be determined. Note that many"
+" platforms do not provide this information or simply return the same value as"
+" for :func:`machine`.  NetBSD does this."
 msgstr ""
 
 #: ../../library/platform.rst:98
@@ -214,22 +213,22 @@ msgstr ""
 
 #: ../../library/platform.rst:158
 msgid ""
-"Returns ``(system, release, version)`` aliased to common marketing names "
-"used for some systems.  It also does some reordering of the information in "
-"some cases where it would otherwise cause confusion."
+"Returns ``(system, release, version)`` aliased to common marketing names used"
+" for some systems.  It also does some reordering of the information in some "
+"cases where it would otherwise cause confusion."
 msgstr ""
 
 #: ../../library/platform.rst:165
 msgid ""
-"Returns the system's release version, e.g. ``'#3 on degas'``. An empty "
-"string is returned if the value cannot be determined."
+"Returns the system's release version, e.g. ``'#3 on degas'``. An empty string"
+" is returned if the value cannot be determined."
 msgstr ""
 
 #: ../../library/platform.rst:170
 msgid ""
 "Fairly portable uname interface. Returns a :func:`~collections.namedtuple` "
-"containing six attributes: :attr:`system`, :attr:`node`, :attr:`release`, :"
-"attr:`version`, :attr:`machine`, and :attr:`processor`."
+"containing six attributes: :attr:`system`, :attr:`node`, :attr:`release`, "
+":attr:`version`, :attr:`machine`, and :attr:`processor`."
 msgstr ""
 
 #: ../../library/platform.rst:174
@@ -238,8 +237,9 @@ msgstr ""
 
 #: ../../library/platform.rst:176
 msgid ""
-"Note: the first two attribute names differ from the names presented by :func:"
-"`os.uname`, where they are named :attr:`!sysname` and :attr:`!nodename`."
+"Note: the first two attribute names differ from the names presented by "
+":func:`os.uname`, where they are named :attr:`!sysname` and "
+":attr:`!nodename`."
 msgstr ""
 
 #: ../../library/platform.rst:180
@@ -269,26 +269,25 @@ msgstr ""
 msgid ""
 "Get additional version information from the Windows Registry and return a "
 "tuple ``(release, version, csd, ptype)`` referring to OS release, version "
-"number, CSD level (service pack) and OS type (multi/single processor). "
-"Values which cannot be determined are set to the defaults given as "
-"parameters (which all default to an empty string)."
+"number, CSD level (service pack) and OS type (multi/single processor). Values"
+" which cannot be determined are set to the defaults given as parameters "
+"(which all default to an empty string)."
 msgstr ""
 
 #: ../../library/platform.rst:209
 msgid ""
-"As a hint: *ptype* is ``'Uniprocessor Free'`` on single processor NT "
-"machines and ``'Multiprocessor Free'`` on multi processor machines. The "
-"``'Free'`` refers to the OS version being free of debugging code. It could "
-"also state ``'Checked'`` which means the OS version uses debugging code, i."
-"e. code that checks arguments, ranges, etc."
+"As a hint: *ptype* is ``'Uniprocessor Free'`` on single processor NT machines"
+" and ``'Multiprocessor Free'`` on multi processor machines. The ``'Free'`` "
+"refers to the OS version being free of debugging code. It could also state "
+"``'Checked'`` which means the OS version uses debugging code, i.e. code that "
+"checks arguments, ranges, etc."
 msgstr ""
 
 #: ../../library/platform.rst:217
 msgid ""
-"Returns a string representing the current Windows edition, or ``None`` if "
-"the value cannot be determined.  Possible values include but are not limited "
-"to ``'Enterprise'``, ``'IoTUAP'``, ``'ServerStandard'``, and "
-"``'nanoserver'``."
+"Returns a string representing the current Windows edition, or ``None`` if the"
+" value cannot be determined.  Possible values include but are not limited to "
+"``'Enterprise'``, ``'IoTUAP'``, ``'ServerStandard'``, and ``'nanoserver'``."
 msgstr ""
 
 #: ../../library/platform.rst:225
@@ -303,9 +302,9 @@ msgstr ""
 
 #: ../../library/platform.rst:236
 msgid ""
-"Get macOS version information and return it as tuple ``(release, "
-"versioninfo, machine)`` with *versioninfo* being a tuple ``(version, "
-"dev_stage, non_release_version)``."
+"Get macOS version information and return it as tuple ``(release, versioninfo,"
+" machine)`` with *versioninfo* being a tuple ``(version, dev_stage, "
+"non_release_version)``."
 msgstr ""
 
 #: ../../library/platform.rst:240
@@ -320,8 +319,8 @@ msgstr ""
 
 #: ../../library/platform.rst:248
 msgid ""
-"Get iOS version information and return it as a :func:`~collections."
-"namedtuple` with the following attributes:"
+"Get iOS version information and return it as a "
+":func:`~collections.namedtuple` with the following attributes:"
 msgstr ""
 
 #: ../../library/platform.rst:251
@@ -340,8 +339,8 @@ msgstr ""
 
 #: ../../library/platform.rst:255
 msgid ""
-"``is_simulator`` is a boolean describing if the app is running on a "
-"simulator or a physical device."
+"``is_simulator`` is a boolean describing if the app is running on a simulator"
+" or a physical device."
 msgstr ""
 
 #: ../../library/platform.rst:258
@@ -364,9 +363,9 @@ msgstr ""
 
 #: ../../library/platform.rst:271
 msgid ""
-"Note that this function has intimate knowledge of how different libc "
-"versions add symbols to the executable is probably only usable for "
-"executables compiled using :program:`gcc`."
+"Note that this function has intimate knowledge of how different libc versions"
+" add symbols to the executable is probably only usable for executables "
+"compiled using :program:`gcc`."
 msgstr ""
 
 #: ../../library/platform.rst:275
@@ -379,26 +378,26 @@ msgstr ""
 
 #: ../../library/platform.rst:283
 msgid ""
-"Get operating system identification from ``os-release`` file and return it "
-"as a dict. The ``os-release`` file is a `freedesktop.org standard <https://"
-"www.freedesktop.org/software/systemd/man/os-release.html>`_ and is available "
-"in most Linux distributions. A noticeable exception is Android and Android-"
-"based distributions."
+"Get operating system identification from ``os-release`` file and return it as"
+" a dict. The ``os-release`` file is a `freedesktop.org standard "
+"<https://www.freedesktop.org/software/systemd/man/os-release.html>`_ and is "
+"available in most Linux distributions. A noticeable exception is Android and "
+"Android-based distributions."
 msgstr ""
 
 #: ../../library/platform.rst:289
 msgid ""
-"Raises :exc:`OSError` or subclass when neither ``/etc/os-release`` nor ``/"
-"usr/lib/os-release`` can be read."
+"Raises :exc:`OSError` or subclass when neither ``/etc/os-release`` nor "
+"``/usr/lib/os-release`` can be read."
 msgstr ""
 
 #: ../../library/platform.rst:292
 msgid ""
 "On success, the function returns a dictionary where keys and values are "
-"strings. Values have their special characters like ``\"`` and ``$`` "
-"unquoted. The fields ``NAME``, ``ID``, and ``PRETTY_NAME`` are always "
-"defined according to the standard. All other fields are optional. Vendors "
-"may include additional fields."
+"strings. Values have their special characters like ``\"`` and ``$`` unquoted."
+" The fields ``NAME``, ``ID``, and ``PRETTY_NAME`` are always defined "
+"according to the standard. All other fields are optional. Vendors may include"
+" additional fields."
 msgstr ""
 
 #: ../../library/platform.rst:298
@@ -411,7 +410,7 @@ msgstr ""
 
 #: ../../library/platform.rst:303
 msgid "Example::"
-msgstr ""
+msgstr "Beispiel::"
 
 #: ../../library/platform.rst:305
 msgid ""
@@ -442,26 +441,28 @@ msgstr ""
 #: ../../library/platform.rst:328
 msgid ""
 "``api_level`` - API level of the running device, as an integer (e.g. ``34`` "
-"for Android 14). To get the API level which Python was built against, see :"
-"func:`sys.getandroidapilevel`."
+"for Android 14). To get the API level which Python was built against, see "
+":func:`sys.getandroidapilevel`."
 msgstr ""
 
 #: ../../library/platform.rst:332
 msgid ""
-"``manufacturer`` - `Manufacturer name <https://developer.android.com/"
-"reference/android/os/Build#MANUFACTURER>`__."
+"``manufacturer`` - `Manufacturer name "
+"<https://developer.android.com/reference/android/os/Build#MANUFACTURER>`__."
 msgstr ""
 
 #: ../../library/platform.rst:335
 msgid ""
-"``model`` - `Model name <https://developer.android.com/reference/android/os/"
-"Build#MODEL>`__ – typically the marketing name or model number."
+"``model`` - `Model name "
+"<https://developer.android.com/reference/android/os/Build#MODEL>`__ – "
+"typically the marketing name or model number."
 msgstr ""
 
 #: ../../library/platform.rst:339
 msgid ""
-"``device`` - `Device name <https://developer.android.com/reference/android/"
-"os/Build#DEVICE>`__ – typically the model number or a codename."
+"``device`` - `Device name "
+"<https://developer.android.com/reference/android/os/Build#DEVICE>`__ – "
+"typically the model number or a codename."
 msgstr ""
 
 #: ../../library/platform.rst:343
@@ -472,8 +473,8 @@ msgstr ""
 
 #: ../../library/platform.rst:346
 msgid ""
-"Google maintains a `list of known model and device names <https://storage."
-"googleapis.com/play_public/supported_devices.html>`__."
+"Google maintains a `list of known model and device names "
+"<https://storage.googleapis.com/play_public/supported_devices.html>`__."
 msgstr ""
 
 #: ../../library/platform.rst:354
@@ -496,8 +497,8 @@ msgstr ""
 
 #: ../../library/platform.rst:367
 msgid ""
-"Print terse information about the platform. This is equivalent to calling :"
-"func:`platform.platform` with the *terse* argument set to ``True``."
+"Print terse information about the platform. This is equivalent to calling "
+":func:`platform.platform` with the *terse* argument set to ``True``."
 msgstr ""
 
 #: ../../library/platform.rst:372

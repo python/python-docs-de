@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -58,9 +57,8 @@ msgstr ""
 
 #: ../../library/copy.rst:44
 msgid ""
-"The difference between shallow and deep copying is only relevant for "
-"compound objects (objects that contain other objects, like lists or class "
-"instances):"
+"The difference between shallow and deep copying is only relevant for compound"
+" objects (objects that contain other objects, like lists or class instances):"
 msgstr ""
 
 #: ../../library/copy.rst:47
@@ -71,8 +69,8 @@ msgstr ""
 
 #: ../../library/copy.rst:50
 msgid ""
-"A *deep copy* constructs a new compound object and then, recursively, "
-"inserts *copies* into it of the objects found in the original."
+"A *deep copy* constructs a new compound object and then, recursively, inserts"
+" *copies* into it of the objects found in the original."
 msgstr ""
 
 #: ../../library/copy.rst:53
@@ -114,19 +112,19 @@ msgid ""
 "This module does not copy types like module, method, stack trace, stack "
 "frame, file, socket, window, or any similar types.  It does \"copy\" "
 "functions and classes (shallow and deeply), by returning the original object "
-"unchanged; this is compatible with the way these are treated by the :mod:"
-"`pickle` module."
+"unchanged; this is compatible with the way these are treated by the "
+":mod:`pickle` module."
 msgstr ""
 
 #: ../../library/copy.rst:75
 msgid ""
-"Shallow copies of many collections can be made using the corresponding :meth:"
-"`!copy` method (such as :meth:`list.copy`, :meth:`dict.copy` or :meth:`set."
-"copy`), and of sequences (such as lists or bytearrays) by making a slice of "
-"the entire sequence (``sequence[:]``). However, these methods and slicing "
-"can create an instance of the base type when copying an instance of a "
-"subclass, whereas :func:`copy.copy` normally returns an instance of the same "
-"type."
+"Shallow copies of many collections can be made using the corresponding "
+":meth:`!copy` method (such as :meth:`list.copy`, :meth:`dict.copy` or "
+":meth:`set.copy`), and of sequences (such as lists or bytearrays) by making a"
+" slice of the entire sequence (``sequence[:]``). However, these methods and "
+"slicing can create an instance of the base type when copying an instance of a"
+" subclass, whereas :func:`copy.copy` normally returns an instance of the same"
+" type."
 msgstr ""
 
 #: ../../library/copy.rst:85
@@ -160,9 +158,9 @@ msgstr ""
 
 #: ../../library/copy.rst:118
 msgid ""
-"Function :func:`!copy.replace` is more limited than :func:`~copy.copy` and :"
-"func:`~copy.deepcopy`, and only supports named tuples created by :func:"
-"`~collections.namedtuple`, :mod:`dataclasses`, and other classes which "
+"Function :func:`!copy.replace` is more limited than :func:`~copy.copy` and "
+":func:`~copy.deepcopy`, and only supports named tuples created by "
+":func:`~collections.namedtuple`, :mod:`dataclasses`, and other classes which "
 "define method :meth:`~object.__replace__`."
 msgstr ""
 
@@ -184,7 +182,7 @@ msgstr ""
 
 #: ../../library/copy.rst:83
 msgid "module"
-msgstr ""
+msgstr "Modul"
 
 #: ../../library/copy.rst:83
 msgid "pickle"

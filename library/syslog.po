@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -35,8 +34,8 @@ msgstr ""
 #: ../../library/syslog.rst:15
 msgid ""
 "This module wraps the system ``syslog`` family of routines.  A pure Python "
-"library that can speak to a syslog server is available in the :mod:`logging."
-"handlers` module as :class:`~logging.handlers.SysLogHandler`."
+"library that can speak to a syslog server is available in the "
+":mod:`logging.handlers` module as :class:`~logging.handlers.SysLogHandler`."
 msgstr ""
 
 #: ../../library/syslog.rst:19
@@ -55,8 +54,8 @@ msgstr ""
 
 #: ../../library/syslog.rst:32
 msgid ""
-"If :func:`openlog` has not been called prior to the call to :func:`syslog`, :"
-"func:`openlog` will be called with no arguments."
+"If :func:`openlog` has not been called prior to the call to :func:`syslog`, "
+":func:`openlog` will be called with no arguments."
 msgstr ""
 
 #: ../../library/syslog.rst:35
@@ -67,35 +66,35 @@ msgstr ""
 
 #: ../../library/syslog.rst:37
 msgid ""
-"In previous versions, :func:`openlog` would not be called automatically if "
-"it wasn't called prior to the call to :func:`syslog`, deferring to the "
-"syslog implementation to call ``openlog()``."
+"In previous versions, :func:`openlog` would not be called automatically if it"
+" wasn't called prior to the call to :func:`syslog`, deferring to the syslog "
+"implementation to call ``openlog()``."
 msgstr ""
 
 #: ../../library/syslog.rst:42
 msgid ""
 "This function is restricted in subinterpreters. (Only code that runs in "
 "multiple interpreters is affected and the restriction is not relevant for "
-"most users.) :func:`openlog` must be called in the main interpreter before :"
-"func:`syslog` may be used in a subinterpreter.  Otherwise it will raise :exc:"
-"`RuntimeError`."
+"most users.) :func:`openlog` must be called in the main interpreter before "
+":func:`syslog` may be used in a subinterpreter.  Otherwise it will raise "
+":exc:`RuntimeError`."
 msgstr ""
 
 #: ../../library/syslog.rst:52
 msgid ""
-"Logging options of subsequent :func:`syslog` calls can be set by calling :"
-"func:`openlog`.  :func:`syslog` will call :func:`openlog` with no arguments "
+"Logging options of subsequent :func:`syslog` calls can be set by calling "
+":func:`openlog`.  :func:`syslog` will call :func:`openlog` with no arguments "
 "if the log is not currently open."
 msgstr ""
 
 #: ../../library/syslog.rst:56
 msgid ""
-"The optional *ident* keyword argument is a string which is prepended to "
-"every message, and defaults to ``sys.argv[0]`` with leading path components "
+"The optional *ident* keyword argument is a string which is prepended to every"
+" message, and defaults to ``sys.argv[0]`` with leading path components "
 "stripped.  The optional *logoption* keyword argument (default is 0) is a bit "
 "field -- see below for possible values to combine.  The optional *facility* "
-"keyword argument (default is :const:`LOG_USER`) sets the default facility "
-"for messages which do not have a facility explicitly encoded."
+"keyword argument (default is :const:`LOG_USER`) sets the default facility for"
+" messages which do not have a facility explicitly encoded."
 msgstr ""
 
 #: ../../library/syslog.rst:63
@@ -114,8 +113,8 @@ msgstr ""
 msgid ""
 "This function is restricted in subinterpreters. (Only code that runs in "
 "multiple interpreters is affected and the restriction is not relevant for "
-"most users.) This may only be called in the main interpreter. It will raise :"
-"exc:`RuntimeError` if called in a subinterpreter."
+"most users.) This may only be called in the main interpreter. It will raise "
+":exc:`RuntimeError` if called in a subinterpreter."
 msgstr ""
 
 #: ../../library/syslog.rst:79
@@ -126,9 +125,9 @@ msgstr ""
 #: ../../library/syslog.rst:81
 msgid ""
 "This causes the module to behave as it does when initially imported.  For "
-"example, :func:`openlog` will be called on the first :func:`syslog` call "
-"(if :func:`openlog` hasn't already been called), and *ident* and other :func:"
-"`openlog` parameters are reset to defaults."
+"example, :func:`openlog` will be called on the first :func:`syslog` call (if "
+":func:`openlog` hasn't already been called), and *ident* and other "
+":func:`openlog` parameters are reset to defaults."
 msgstr ""
 
 #: ../../library/syslog.rst:86
@@ -139,12 +138,12 @@ msgstr ""
 
 #: ../../library/syslog.rst:98
 msgid ""
-"Set the priority mask to *maskpri* and return the previous mask value.  "
-"Calls to :func:`syslog` with a priority level not set in *maskpri* are "
-"ignored. The default is to log all priorities.  The function "
-"``LOG_MASK(pri)`` calculates the mask for the individual priority *pri*.  "
-"The function ``LOG_UPTO(pri)`` calculates the mask for all priorities up to "
-"and including *pri*."
+"Set the priority mask to *maskpri* and return the previous mask value.  Calls"
+" to :func:`syslog` with a priority level not set in *maskpri* are ignored. "
+"The default is to log all priorities.  The function ``LOG_MASK(pri)`` "
+"calculates the mask for the individual priority *pri*.  The function "
+"``LOG_UPTO(pri)`` calculates the mask for all priorities up to and including "
+"*pri*."
 msgstr ""
 
 #: ../../library/syslog.rst:105
@@ -163,26 +162,26 @@ msgstr ""
 
 #: ../../library/syslog.rst:148
 msgid ""
-"Facilities, depending on availability in ``<syslog.h>`` for :const:"
-"`LOG_AUTHPRIV`, :const:`LOG_FTP`, :const:`LOG_NETINFO`, :const:"
-"`LOG_REMOTEAUTH`, :const:`LOG_INSTALL` and :const:`LOG_RAS`."
+"Facilities, depending on availability in ``<syslog.h>`` for "
+":const:`LOG_AUTHPRIV`, :const:`LOG_FTP`, :const:`LOG_NETINFO`, "
+":const:`LOG_REMOTEAUTH`, :const:`LOG_INSTALL` and :const:`LOG_RAS`."
 msgstr ""
 
 #: ../../library/syslog.rst:152
 msgid ""
-"Added :const:`LOG_FTP`, :const:`LOG_NETINFO`, :const:`LOG_REMOTEAUTH`, :"
-"const:`LOG_INSTALL`, :const:`LOG_RAS`, and :const:`LOG_LAUNCHD`."
+"Added :const:`LOG_FTP`, :const:`LOG_NETINFO`, :const:`LOG_REMOTEAUTH`, "
+":const:`LOG_INSTALL`, :const:`LOG_RAS`, and :const:`LOG_LAUNCHD`."
 msgstr ""
 
 #: ../../library/syslog.rst:163
 msgid ""
-"Log options, depending on availability in ``<syslog.h>`` for :const:"
-"`LOG_ODELAY`, :const:`LOG_NOWAIT` and :const:`LOG_PERROR`."
+"Log options, depending on availability in ``<syslog.h>`` for "
+":const:`LOG_ODELAY`, :const:`LOG_NOWAIT` and :const:`LOG_PERROR`."
 msgstr ""
 
 #: ../../library/syslog.rst:168
 msgid "Examples"
-msgstr ""
+msgstr "Beispiele"
 
 #: ../../library/syslog.rst:171
 msgid "Simple example"
@@ -203,9 +202,9 @@ msgstr ""
 
 #: ../../library/syslog.rst:181
 msgid ""
-"An example of setting some log options, these would include the process ID "
-"in logged messages, and write the messages to the destination facility used "
-"for mail logging::"
+"An example of setting some log options, these would include the process ID in"
+" logged messages, and write the messages to the destination facility used for"
+" mail logging::"
 msgstr ""
 
 #: ../../library/syslog.rst:185

@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -19,12 +18,17 @@ msgstr ""
 
 #: ../../c-api/index.rst:5
 msgid "Python/C API reference manual"
-msgstr ""
+msgstr "Python/C-API-Referenzhandbuch"
 
 #: ../../c-api/index.rst:7
 msgid ""
-"This manual documents the API used by C and C++ programmers who want to "
-"write extension modules or embed Python.  It is a companion to :ref:"
-"`extending-index`, which describes the general principles of extension "
-"writing but does not document the API functions in detail."
+"This manual documents the API used by C and C++ programmers who want to write"
+" extension modules or embed Python.  It is a companion to :ref:`extending-"
+"index`, which describes the general principles of extension writing but does "
+"not document the API functions in detail."
 msgstr ""
+"Dieses Handbuch dokumentiert die API, die von C- und C++-Programmierern "
+"verwendet wird, die Erweiterungsmodule schreiben oder Python einbinden "
+"möchten. Es ist eine Ergänzung zu :ref:`extending-index`, das die allgemeinen"
+" Grundsätze zum Erstellen von Erweiterungen beschreibt, die API-Funktionen "
+"jedoch nicht im Detail dokumentiert."

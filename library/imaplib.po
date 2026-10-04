@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -27,11 +26,11 @@ msgstr ""
 
 #: ../../library/imaplib.rst:16
 msgid ""
-"This module defines three classes, :class:`IMAP4`, :class:`IMAP4_SSL` and :"
-"class:`IMAP4_stream`, which encapsulate a connection to an IMAP4 server and "
-"implement a large subset of the IMAP4rev1 client protocol as defined in :rfc:"
-"`3501`. It is backward compatible with IMAP4 (:rfc:`1730`) servers, but note "
-"that the ``STATUS`` command is not supported in IMAP4."
+"This module defines three classes, :class:`IMAP4`, :class:`IMAP4_SSL` and "
+":class:`IMAP4_stream`, which encapsulate a connection to an IMAP4 server and "
+"implement a large subset of the IMAP4rev1 client protocol as defined in "
+":rfc:`3501`. It is backward compatible with IMAP4 (:rfc:`1730`) servers, but "
+"note that the ``STATUS`` command is not supported in IMAP4."
 msgstr ""
 
 #: ../../includes/wasm-notavail.rst:3
@@ -64,8 +63,8 @@ msgstr ""
 #: ../../library/imaplib.rst:37
 msgid ""
 "The :class:`IMAP4` class supports the :keyword:`with` statement.  When used "
-"like this, the IMAP4 ``LOGOUT`` command is issued automatically when the :"
-"keyword:`!with` statement exits.  E.g.::"
+"like this, the IMAP4 ``LOGOUT`` command is issued automatically when the "
+":keyword:`!with` statement exits.  E.g.::"
 msgstr ""
 
 #: ../../library/imaplib.rst:41
@@ -146,8 +145,9 @@ msgstr ""
 
 #: ../../library/imaplib.rst:106
 msgid ""
-"The class now supports hostname check with :attr:`ssl.SSLContext."
-"check_hostname` and *Server Name Indication* (see :const:`ssl.HAS_SNI`)."
+"The class now supports hostname check with "
+":attr:`ssl.SSLContext.check_hostname` and *Server Name Indication* (see "
+":const:`ssl.HAS_SNI`)."
 msgstr ""
 
 #: ../../library/imaplib.rst:114
@@ -160,9 +160,9 @@ msgstr ""
 
 #: ../../library/imaplib.rst:122
 msgid ""
-"This is a subclass derived from :class:`IMAP4` that connects to the ``stdin/"
-"stdout`` file descriptors created by passing *command* to ``subprocess."
-"Popen()``."
+"This is a subclass derived from :class:`IMAP4` that connects to the "
+"``stdin/stdout`` file descriptors created by passing *command* to "
+"``subprocess.Popen()``."
 msgstr ""
 
 #: ../../library/imaplib.rst:127
@@ -172,14 +172,14 @@ msgstr ""
 #: ../../library/imaplib.rst:132
 msgid ""
 "Parse a :term:`bytes-like object` containing an IMAP4 ``INTERNALDATE`` "
-"response and return the corresponding local time.  The return value is a :"
-"class:`time.struct_time` tuple or ``None`` if the input has wrong format."
+"response and return the corresponding local time.  The return value is a "
+":class:`time.struct_time` tuple or ``None`` if the input has wrong format."
 msgstr ""
 
 #: ../../library/imaplib.rst:138
 msgid ""
-"Converts an integer into a bytes representation using characters from the "
-"set [``A`` .. ``P``]."
+"Converts an integer into a bytes representation using characters from the set"
+" [``A`` .. ``P``]."
 msgstr ""
 
 #: ../../library/imaplib.rst:144
@@ -194,19 +194,19 @@ msgid ""
 "Convert *date_time* to an IMAP4 ``INTERNALDATE`` representation. The return "
 "value is a string in the form: ``\"DD-Mmm-YYYY HH:MM:SS +HHMM\"`` (including "
 "double-quotes).  The *date_time* argument can be a number (int or float) "
-"representing seconds since epoch (as returned by :func:`time.time`), a 9-"
-"tuple representing local time an instance of :class:`time.struct_time` (as "
-"returned by :func:`time.localtime`), an aware instance of :class:`datetime."
-"datetime`, or a double-quoted string.  In the last case, it is assumed to "
-"already be in the correct format."
+"representing seconds since epoch (as returned by :func:`time.time`), a "
+"9-tuple representing local time an instance of :class:`time.struct_time` (as "
+"returned by :func:`time.localtime`), an aware instance of "
+":class:`datetime.datetime`, or a double-quoted string.  In the last case, it "
+"is assumed to already be in the correct format."
 msgstr ""
 
 #: ../../library/imaplib.rst:161
 msgid ""
-"Note that IMAP4 message numbers change as the mailbox changes; in "
-"particular, after an ``EXPUNGE`` command performs deletions the remaining "
-"messages are renumbered. So it is highly advisable to use UIDs instead, with "
-"the UID command."
+"Note that IMAP4 message numbers change as the mailbox changes; in particular,"
+" after an ``EXPUNGE`` command performs deletions the remaining messages are "
+"renumbered. So it is highly advisable to use UIDs instead, with the UID "
+"command."
 msgstr ""
 
 #: ../../library/imaplib.rst:165
@@ -249,8 +249,8 @@ msgstr ""
 
 #: ../../library/imaplib.rst:195
 msgid ""
-"Most commands return a tuple: ``(type, [data, ...])`` where *type* is "
-"usually ``'OK'`` or ``'NO'``, and *data* is either the text from the command "
+"Most commands return a tuple: ``(type, [data, ...])`` where *type* is usually"
+" ``'OK'`` or ``'NO'``, and *data* is either the text from the command "
 "response, or mandated results from the command. Each *data* is either a "
 "``bytes``, or a tuple. If a tuple, then the first part is the header of the "
 "response, and the second part contains the data (ie: 'literal' value)."
@@ -259,10 +259,10 @@ msgstr ""
 #: ../../library/imaplib.rst:201
 msgid ""
 "The *message_set* options to commands below is a string specifying one or "
-"more messages to be acted upon.  It may be a simple message number "
-"(``'1'``), a range of message numbers (``'2:4'``), or a group of non-"
-"contiguous ranges separated by commas (``'1:3,6:9'``).  A range can contain "
-"an asterisk to indicate an infinite upper bound (``'3:*'``)."
+"more messages to be acted upon.  It may be a simple message number (``'1'``),"
+" a range of message numbers (``'2:4'``), or a group of non-contiguous ranges "
+"separated by commas (``'1:3,6:9'``).  A range can contain an asterisk to "
+"indicate an infinite upper bound (``'3:*'``)."
 msgstr ""
 
 #: ../../library/imaplib.rst:207
@@ -342,8 +342,8 @@ msgstr ""
 #: ../../library/imaplib.rst:274
 msgid ""
 "Enable *capability* (see :rfc:`5161`).  Most capabilities do not need to be "
-"enabled.  Currently only the ``UTF8=ACCEPT`` capability is supported (see :"
-"RFC:`6855`)."
+"enabled.  Currently only the ``UTF8=ACCEPT`` capability is supported (see "
+":RFC:`6855`)."
 msgstr ""
 
 #: ../../library/imaplib.rst:278
@@ -390,37 +390,37 @@ msgstr ""
 
 #: ../../library/imaplib.rst:322
 msgid ""
-"Return an :class:`!Idler`: an iterable context manager implementing the "
-"IMAP4 ``IDLE`` command as defined in :rfc:`2177`."
+"Return an :class:`!Idler`: an iterable context manager implementing the IMAP4"
+" ``IDLE`` command as defined in :rfc:`2177`."
 msgstr ""
 
 #: ../../library/imaplib.rst:325
 msgid ""
-"The returned object sends the ``IDLE`` command when activated by the :"
-"keyword:`with` statement, produces IMAP untagged responses via the :term:"
-"`iterator` protocol, and sends ``DONE`` upon context exit."
+"The returned object sends the ``IDLE`` command when activated by the "
+":keyword:`with` statement, produces IMAP untagged responses via the "
+":term:`iterator` protocol, and sends ``DONE`` upon context exit."
 msgstr ""
 
 #: ../../library/imaplib.rst:329
 msgid ""
 "All untagged responses that arrive after sending the ``IDLE`` command "
 "(including any that arrive before the server acknowledges the command) will "
-"be available via iteration. Any leftover responses (those not iterated in "
-"the :keyword:`with` context) can be retrieved in the usual way after "
-"``IDLE`` ends, using :meth:`IMAP4.response`."
+"be available via iteration. Any leftover responses (those not iterated in the"
+" :keyword:`with` context) can be retrieved in the usual way after ``IDLE`` "
+"ends, using :meth:`IMAP4.response`."
 msgstr ""
 
 #: ../../library/imaplib.rst:335
 msgid ""
-"Responses are represented as ``(type, [data, ...])`` tuples, as described "
-"in :ref:`IMAP4 Objects <imap4-objects>`."
+"Responses are represented as ``(type, [data, ...])`` tuples, as described in "
+":ref:`IMAP4 Objects <imap4-objects>`."
 msgstr ""
 
 #: ../../library/imaplib.rst:338
 msgid ""
 "The *duration* argument sets a maximum duration (in seconds) to keep idling, "
-"after which any ongoing iteration will stop. It can be an :class:`int` or :"
-"class:`float`, or ``None`` for no time limit. Callers wishing to avoid "
+"after which any ongoing iteration will stop. It can be an :class:`int` or "
+":class:`float`, or ``None`` for no time limit. Callers wishing to avoid "
 "inactivity timeouts on servers that impose them should keep this at most 29 "
 "minutes (1740 seconds). Requires a socket connection; *duration* must be "
 "``None`` on :class:`IMAP4_stream` connections."
@@ -444,8 +444,8 @@ msgstr ""
 
 #: ../../library/imaplib.rst:361
 msgid ""
-"This :term:`generator` is an alternative to iterating one response at a "
-"time, intended to aid in efficient batch processing. It retrieves the next "
+"This :term:`generator` is an alternative to iterating one response at a time,"
+" intended to aid in efficient batch processing. It retrieves the next "
 "response along with any immediately available subsequent responses. (For "
 "example, a rapid series of ``EXPUNGE`` responses after a bulk delete.)"
 msgstr ""
@@ -479,18 +479,18 @@ msgstr ""
 
 #: ../../library/imaplib.rst:392
 msgid ""
-"The iterator returned by :meth:`IMAP4.idle` is usable only within a :keyword:"
-"`with` statement. Before or after that context, unsolicited responses are "
-"collected internally whenever a command finishes, and can be retrieved with :"
-"meth:`IMAP4.response`."
+"The iterator returned by :meth:`IMAP4.idle` is usable only within a "
+":keyword:`with` statement. Before or after that context, unsolicited "
+"responses are collected internally whenever a command finishes, and can be "
+"retrieved with :meth:`IMAP4.response`."
 msgstr ""
 
 #: ../../library/imaplib.rst:399
 msgid ""
-"The :class:`!Idler` class name and structure are internal interfaces, "
-"subject to change. Calling code can rely on its context management, "
-"iteration, and public method to remain stable, but should not subclass, "
-"instantiate, compare, or otherwise directly reference the class."
+"The :class:`!Idler` class name and structure are internal interfaces, subject"
+" to change. Calling code can rely on its context management, iteration, and "
+"public method to remain stable, but should not subclass, instantiate, "
+"compare, or otherwise directly reference the class."
 msgstr ""
 
 #: ../../library/imaplib.rst:409
@@ -548,13 +548,13 @@ msgstr ""
 msgid ""
 "Opens socket to *port* at *host*. The optional *timeout* parameter specifies "
 "a timeout in seconds for the connection attempt. If timeout is not given or "
-"is ``None``, the global default socket timeout is used. Also note that if "
-"the *timeout* parameter is set to be zero, it will raise a :class:"
-"`ValueError` to reject creating a non-blocking socket. This method is "
-"implicitly called by the :class:`IMAP4` constructor. The connection objects "
-"established by this method will be used in the :meth:`IMAP4.read`, :meth:"
-"`IMAP4.readline`, :meth:`IMAP4.send`, and :meth:`IMAP4.shutdown` methods. "
-"You may override this method."
+"is ``None``, the global default socket timeout is used. Also note that if the"
+" *timeout* parameter is set to be zero, it will raise a :class:`ValueError` "
+"to reject creating a non-blocking socket. This method is implicitly called by"
+" the :class:`IMAP4` constructor. The connection objects established by this "
+"method will be used in the :meth:`IMAP4.read`, :meth:`IMAP4.readline`, "
+":meth:`IMAP4.send`, and :meth:`IMAP4.shutdown` methods. You may override this"
+" method."
 msgstr ""
 
 #: ../../library/imaplib.rst:471
@@ -607,16 +607,16 @@ msgstr ""
 #: ../../library/imaplib.rst:517
 msgid ""
 "Search mailbox for matching messages.  *charset* may be ``None``, in which "
-"case no ``CHARSET`` will be specified in the request to the server.  The "
-"IMAP protocol requires that at least one criterion be specified; an "
-"exception will be raised when the server returns an error.  *charset* must "
-"be ``None`` if the ``UTF8=ACCEPT`` capability was enabled using the :meth:"
-"`enable` command."
+"case no ``CHARSET`` will be specified in the request to the server.  The IMAP"
+" protocol requires that at least one criterion be specified; an exception "
+"will be raised when the server returns an error.  *charset* must be ``None`` "
+"if the ``UTF8=ACCEPT`` capability was enabled using the :meth:`enable` "
+"command."
 msgstr ""
 
 #: ../../library/imaplib.rst:524
 msgid "Example::"
-msgstr ""
+msgstr "Beispiel::"
 
 #: ../../library/imaplib.rst:526
 msgid ""
@@ -646,8 +646,8 @@ msgstr ""
 
 #: ../../library/imaplib.rst:549
 msgid ""
-"Set an ``ACL`` for *mailbox*. The method is non-standard, but is supported "
-"by the ``Cyrus`` server."
+"Set an ``ACL`` for *mailbox*. The method is non-standard, but is supported by"
+" the ``Cyrus`` server."
 msgstr ""
 
 #: ../../library/imaplib.rst:555
@@ -683,12 +683,12 @@ msgstr ""
 msgid ""
 "Sort has two arguments before the *search_criterion* argument(s); a "
 "parenthesized list of *sort_criteria*, and the searching *charset*.  Note "
-"that unlike ``search``, the searching *charset* argument is mandatory.  "
-"There is also a ``uid sort`` command which corresponds to ``sort`` the way "
-"that ``uid search`` corresponds to ``search``.  The ``sort`` command first "
+"that unlike ``search``, the searching *charset* argument is mandatory.  There"
+" is also a ``uid sort`` command which corresponds to ``sort`` the way that "
+"``uid search`` corresponds to ``search``.  The ``sort`` command first "
 "searches the mailbox for messages that match the given searching criteria "
-"using the charset argument for the interpretation of strings in the "
-"searching criteria.  It then returns the numbers of matching messages."
+"using the charset argument for the interpretation of strings in the searching"
+" criteria.  It then returns the numbers of matching messages."
 msgstr ""
 
 #: ../../library/imaplib.rst:591 ../../library/imaplib.rst:669
@@ -704,8 +704,9 @@ msgstr ""
 
 #: ../../library/imaplib.rst:610
 msgid ""
-"The method now supports hostname check with :attr:`ssl.SSLContext."
-"check_hostname` and *Server Name Indication* (see :const:`ssl.HAS_SNI`)."
+"The method now supports hostname check with "
+":attr:`ssl.SSLContext.check_hostname` and *Server Name Indication* (see "
+":const:`ssl.HAS_SNI`)."
 msgstr ""
 
 #: ../../library/imaplib.rst:618
@@ -715,8 +716,8 @@ msgstr ""
 #: ../../library/imaplib.rst:623
 msgid ""
 "Alters flag dispositions for messages in mailbox.  *command* is specified by "
-"section 6.4.6 of :rfc:`3501` as being one of \"FLAGS\", \"+FLAGS\", or \"-"
-"FLAGS\", optionally with a suffix of \".SILENT\"."
+"section 6.4.6 of :rfc:`3501` as being one of \"FLAGS\", \"+FLAGS\", or "
+"\"-FLAGS\", optionally with a suffix of \".SILENT\"."
 msgstr ""
 
 #: ../../library/imaplib.rst:627
@@ -736,9 +737,9 @@ msgid ""
 "Creating flags containing ']' (for example: \"[test]\") violates :rfc:`3501` "
 "(the IMAP protocol).  However, imaplib has historically allowed creation of "
 "such flags, and popular IMAP servers, such as Gmail, accept and produce such "
-"flags.  There are non-Python programs which also create such flags.  "
-"Although it is an RFC violation and IMAP clients and servers are supposed to "
-"be strict, imaplib still continues to allow such flags to be created for "
+"flags.  There are non-Python programs which also create such flags.  Although"
+" it is an RFC violation and IMAP clients and servers are supposed to be "
+"strict, imaplib still continues to allow such flags to be created for "
 "backward compatibility reasons, and as of Python 3.6, handles them if they "
 "are sent from the server, since this improves real-world compatibility."
 msgstr ""
@@ -756,8 +757,8 @@ msgstr ""
 
 #: ../../library/imaplib.rst:656
 msgid ""
-"Thread members consist of zero or more messages numbers, delimited by "
-"spaces, indicating successive parent and child."
+"Thread members consist of zero or more messages numbers, delimited by spaces,"
+" indicating successive parent and child."
 msgstr ""
 
 #: ../../library/imaplib.rst:659
@@ -776,9 +777,9 @@ msgstr ""
 #: ../../library/imaplib.rst:674
 msgid ""
 "Execute command args with messages identified by UID, rather than message "
-"number.  Returns response appropriate to command.  At least one argument "
-"must be supplied; if none are provided, the server will return an error and "
-"an exception will be raised."
+"number.  Returns response appropriate to command.  At least one argument must"
+" be supplied; if none are provided, the server will return an error and an "
+"exception will be raised."
 msgstr ""
 
 #: ../../library/imaplib.rst:682
@@ -789,8 +790,8 @@ msgstr ""
 msgid ""
 ":meth:`imaplib.IMAP4.unselect` frees server's resources associated with the "
 "selected mailbox and returns the server to the authenticated state. This "
-"command performs the same actions as :meth:`imaplib.IMAP4.close`, except "
-"that no messages are permanently removed from the currently selected mailbox."
+"command performs the same actions as :meth:`imaplib.IMAP4.close`, except that"
+" no messages are permanently removed from the currently selected mailbox."
 msgstr ""
 
 #: ../../library/imaplib.rst:696
@@ -818,8 +819,9 @@ msgstr ""
 
 #: ../../library/imaplib.rst:715
 msgid ""
-"Boolean value that is normally ``False``, but is set to ``True`` if an :meth:"
-"`enable` command is successfully issued for the ``UTF8=ACCEPT`` capability."
+"Boolean value that is normally ``False``, but is set to ``True`` if an "
+":meth:`enable` command is successfully issued for the ``UTF8=ACCEPT`` "
+"capability."
 msgstr ""
 
 #: ../../library/imaplib.rst:724
@@ -857,9 +859,9 @@ msgstr ""
 
 #: ../../library/imaplib.rst:754
 msgid ""
-"A ``FETCH`` response may contain additional or unsolicited data (see :rfc:"
-"`3501`, section 7.4.2), so production code should inspect the whole response "
-"rather than rely on ``data[0][1]``."
+"A ``FETCH`` response may contain additional or unsolicited data (see "
+":rfc:`3501`, section 7.4.2), so production code should inspect the whole "
+"response rather than rely on ``data[0][1]``."
 msgstr ""
 
 #: ../../library/imaplib.rst:9
@@ -868,7 +870,7 @@ msgstr ""
 
 #: ../../library/imaplib.rst:9
 msgid "protocol"
-msgstr ""
+msgstr "Protokoll"
 
 #: ../../library/imaplib.rst:9
 msgid "IMAP4_SSL"

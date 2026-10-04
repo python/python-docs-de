@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -31,12 +30,12 @@ msgstr ""
 #: ../../library/datatypes.rst:11
 msgid ""
 "Python also provides :ref:`some built-in data types <bltin-types>`, in "
-"particular, :class:`list`, :class:`tuple`, :class:`dict`, :class:"
-"`frozendict`, :class:`set`,  and :class:`frozenset`. The :class:`str` class "
-"is used to hold Unicode strings, and the :class:`bytes` and :class:"
-"`bytearray` classes are used to hold binary data."
+"particular, :class:`list`, :class:`tuple`, :class:`dict`, "
+":class:`frozendict`, :class:`set`,  and :class:`frozenset`. The :class:`str` "
+"class is used to hold Unicode strings, and the :class:`bytes` and "
+":class:`bytearray` classes are used to hold binary data."
 msgstr ""
 
 #: ../../library/datatypes.rst:18
 msgid "The following modules are documented in this chapter:"
-msgstr ""
+msgstr "In diesem Kapitel werden die folgenden Module beschrieben:"

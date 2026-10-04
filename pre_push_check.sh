@@ -25,7 +25,7 @@ REPO_ROOT="${REPO_ROOT:-$(pwd)}"
 CPYTHON_ROOT="${CPYTHON_ROOT:-/Volumes/Dev_SSD/GitHub}"
 CHECK_ROLES_PY="${CHECK_ROLES_PY:-$REPO_ROOT/check_roles.py}"
 CHECK_MARKUP_PY="${CHECK_MARKUP_PY:-$REPO_ROOT/tools/check_markup.py}"
-EXCLUDE_DIRS=("c-api" ".venv" ".git")
+EXCLUDE_DIRS=(".venv" ".git" "cpython-src")
 
 BRANCH="$(git -C "$REPO_ROOT" branch --show-current 2>/dev/null)"
 if [[ -z "$BRANCH" ]]; then
@@ -193,13 +193,13 @@ if $RUN_FULL; then
     echo "Starte 'make html' mit -W --keep-going (wie CI) ..."
     BUILD_LOG=$(mktemp)
     (cd "$CPYTHON_SRC/Doc" && \
-        make -e SPHINXOPTS="--color -D language='de' -D suppress_warnings=i18n.inconsistent_references -W --keep-going" html \
+        make -e SPHINXOPTS="--color -D language='de' -W --keep-going" html \
         > "$BUILD_LOG" 2>&1)
     build_status=$?
 
     echo
-    echo "--- Warnungen/Fehler (ohne den bekannten Sphinx-Bug i18n.inconsistent_references) ---"
-    relevant=$(grep -E "WARNING|ERROR" "$BUILD_LOG" | grep -v "i18n.inconsistent_references" || true)
+    echo "--- Warnungen/Fehler ---"
+    relevant=$(grep -E "WARNING|ERROR" "$BUILD_LOG" || true)
     if [[ -z "$relevant" ]]; then
         echo "Keine weiteren Warnungen gefunden."
     else

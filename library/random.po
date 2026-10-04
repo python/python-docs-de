@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -52,10 +51,10 @@ msgid ""
 "which generates a random float uniformly in the half-open range ``0.0 <= X < "
 "1.0``. Python uses the Mersenne Twister as the core generator.  It produces "
 "53-bit precision floats and has a period of 2\\*\\*19937-1.  The underlying "
-"implementation in C is both fast and threadsafe.  The Mersenne Twister is "
-"one of the most extensively tested random number generators in existence.  "
-"However, being completely deterministic, it is not suitable for all "
-"purposes, and is completely unsuitable for cryptographic purposes."
+"implementation in C is both fast and threadsafe.  The Mersenne Twister is one"
+" of the most extensively tested random number generators in existence.  "
+"However, being completely deterministic, it is not suitable for all purposes,"
+" and is completely unsuitable for cryptographic purposes."
 msgstr ""
 
 #: ../../library/random.rst:32
@@ -68,15 +67,15 @@ msgstr ""
 #: ../../library/random.rst:36
 msgid ""
 "Class :class:`Random` can also be subclassed if you want to use a different "
-"basic generator of your own devising: see the documentation on that class "
-"for more details."
+"basic generator of your own devising: see the documentation on that class for"
+" more details."
 msgstr ""
 
 #: ../../library/random.rst:40
 msgid ""
-"The :mod:`!random` module also provides the :class:`SystemRandom` class "
-"which uses the system function :func:`os.urandom` to generate random numbers "
-"from sources provided by the operating system."
+"The :mod:`!random` module also provides the :class:`SystemRandom` class which"
+" uses the system function :func:`os.urandom` to generate random numbers from "
+"sources provided by the operating system."
 msgstr ""
 
 #: ../../library/random.rst:46
@@ -94,10 +93,10 @@ msgstr ""
 
 #: ../../library/random.rst:57
 msgid ""
-"`Complementary-Multiply-with-Carry recipe <https://code.activestate.com/"
-"recipes/576707-long-period-random-number-generator/>`_ for a compatible "
-"alternative random number generator with a long period and comparatively "
-"simple update operations."
+"`Complementary-Multiply-with-Carry recipe "
+"<https://code.activestate.com/recipes/576707-long-period-random-number-"
+"generator/>`_ for a compatible alternative random number generator with a "
+"long period and comparatively simple update operations."
 msgstr ""
 
 #: ../../library/random.rst:63
@@ -105,8 +104,8 @@ msgid ""
 "The global random number generator and instances of :class:`Random` are "
 "thread-safe. However, in the free-threaded build, concurrent calls to the "
 "global generator or to the same instance of :class:`Random` may encounter "
-"contention and poor performance. Consider using separate instances of :class:"
-"`Random` per thread instead."
+"contention and poor performance. Consider using separate instances of "
+":class:`Random` per thread instead."
 msgstr ""
 
 #: ../../library/random.rst:70
@@ -131,16 +130,16 @@ msgstr ""
 
 #: ../../library/random.rst:83
 msgid ""
-"With version 2 (the default), a :class:`str`, :class:`bytes`, or :class:"
-"`bytearray` object gets converted to an :class:`int` and all of its bits are "
-"used."
+"With version 2 (the default), a :class:`str`, :class:`bytes`, or "
+":class:`bytearray` object gets converted to an :class:`int` and all of its "
+"bits are used."
 msgstr ""
 
 #: ../../library/random.rst:86
 msgid ""
-"With version 1 (provided for reproducing random sequences from older "
-"versions of Python), the algorithm for :class:`str` and :class:`bytes` "
-"generates a narrower range of seeds."
+"With version 1 (provided for reproducing random sequences from older versions"
+" of Python), the algorithm for :class:`str` and :class:`bytes` generates a "
+"narrower range of seeds."
 msgstr ""
 
 #: ../../library/random.rst:90
@@ -150,14 +149,14 @@ msgstr ""
 
 #: ../../library/random.rst:93
 msgid ""
-"The *seed* must be one of the following types: ``None``, :class:`int`, :"
-"class:`float`, :class:`str`, :class:`bytes`, or :class:`bytearray`."
+"The *seed* must be one of the following types: ``None``, :class:`int`, "
+":class:`float`, :class:`str`, :class:`bytes`, or :class:`bytearray`."
 msgstr ""
 
 #: ../../library/random.rst:100
 msgid ""
-"Return an object capturing the current internal state of the generator.  "
-"This object can be passed to :func:`setstate` to restore the state."
+"Return an object capturing the current internal state of the generator.  This"
+" object can be passed to :func:`setstate` to restore the state."
 msgstr ""
 
 #: ../../library/random.rst:106
@@ -177,8 +176,8 @@ msgstr ""
 
 #: ../../library/random.rst:118
 msgid ""
-"This method should not be used for generating security tokens. Use :func:"
-"`secrets.token_bytes` instead."
+"This method should not be used for generating security tokens. Use "
+":func:`secrets.token_bytes` instead."
 msgstr ""
 
 #: ../../library/random.rst:125
@@ -216,8 +215,8 @@ msgstr ""
 #: ../../library/random.rst:146
 msgid ""
 "Automatic conversion of non-integer types is no longer supported. Calls such "
-"as ``randrange(10.0)`` and ``randrange(Fraction(10, 1))`` now raise a :exc:"
-"`TypeError`."
+"as ``randrange(10.0)`` and ``randrange(Fraction(10, 1))`` now raise a "
+":exc:`TypeError`."
 msgstr ""
 
 #: ../../library/random.rst:153
@@ -230,8 +229,9 @@ msgstr ""
 msgid ""
 "Returns a non-negative Python integer with *k* random bits. This method is "
 "supplied with the Mersenne Twister generator and some other generators may "
-"also provide it as an optional part of the API. When available, :meth:"
-"`getrandbits` enables :meth:`randrange` to handle arbitrarily large ranges."
+"also provide it as an optional part of the API. When available, "
+":meth:`getrandbits` enables :meth:`randrange` to handle arbitrarily large "
+"ranges."
 msgstr ""
 
 #: ../../library/random.rst:164
@@ -244,8 +244,8 @@ msgstr ""
 
 #: ../../library/random.rst:173
 msgid ""
-"Return a random element from the non-empty sequence *seq*. If *seq* is "
-"empty, raises :exc:`IndexError`."
+"Return a random element from the non-empty sequence *seq*. If *seq* is empty,"
+" raises :exc:`IndexError`."
 msgstr ""
 
 #: ../../library/random.rst:178
@@ -284,12 +284,12 @@ msgstr ""
 
 #: ../../library/random.rst:201
 msgid ""
-"For a given seed, the :func:`choices` function with equal weighting "
-"typically produces a different sequence than repeated calls to :func:"
-"`choice`.  The algorithm used by :func:`choices` uses floating-point "
-"arithmetic for internal consistency and speed.  The algorithm used by :func:"
-"`choice` defaults to integer arithmetic with repeated selections to avoid "
-"small biases from round-off error."
+"For a given seed, the :func:`choices` function with equal weighting typically"
+" produces a different sequence than repeated calls to :func:`choice`.  The "
+"algorithm used by :func:`choices` uses floating-point arithmetic for internal"
+" consistency and speed.  The algorithm used by :func:`choice` defaults to "
+"integer arithmetic with repeated selections to avoid small biases from round-"
+"off error."
 msgstr ""
 
 #: ../../library/random.rst:210
@@ -351,15 +351,15 @@ msgstr ""
 
 #: ../../library/random.rst:250
 msgid ""
-"To choose a sample from a range of integers, use a :func:`range` object as "
-"an argument.  This is especially fast and space efficient for sampling from "
-"a large population:  ``sample(range(10000000), k=60)``."
+"To choose a sample from a range of integers, use a :func:`range` object as an"
+" argument.  This is especially fast and space efficient for sampling from a "
+"large population:  ``sample(range(10000000), k=60)``."
 msgstr ""
 
 #: ../../library/random.rst:254
 msgid ""
-"If the sample size is larger than the population size, a :exc:`ValueError` "
-"is raised."
+"If the sample size is larger than the population size, a :exc:`ValueError` is"
+" raised."
 msgstr ""
 
 #: ../../library/random.rst:257
@@ -382,9 +382,10 @@ msgstr ""
 
 #: ../../library/random.rst:272
 msgid ""
-"`Binomial distribution <https://mathworld.wolfram.com/BinomialDistribution."
-"html>`_. Return the number of successes for *n* independent trials with the "
-"probability of success in each trial being *p*:"
+"`Binomial distribution "
+"<https://mathworld.wolfram.com/BinomialDistribution.html>`_. Return the "
+"number of successes for *n* independent trials with the probability of "
+"success in each trial being *p*:"
 msgstr ""
 
 #: ../../library/random.rst:277
@@ -397,9 +398,9 @@ msgstr ""
 
 #: ../../library/random.rst:281
 msgid ""
-"The number of trials *n* should be a non-negative integer. The probability "
-"of success *p* should be between ``0.0 <= p <= 1.0``. The result is an "
-"integer in the range ``0 <= X <= n``."
+"The number of trials *n* should be a non-negative integer. The probability of"
+" success *p* should be between ``0.0 <= p <= 1.0``. The result is an integer "
+"in the range ``0 <= X <= n``."
 msgstr ""
 
 #: ../../library/random.rst:291
@@ -408,10 +409,10 @@ msgstr ""
 
 #: ../../library/random.rst:293
 msgid ""
-"The following functions generate specific real-valued distributions. "
-"Function parameters are named after the corresponding variables in the "
-"distribution's equation, as used in common mathematical practice; most of "
-"these equations can be found in any statistics text."
+"The following functions generate specific real-valued distributions. Function"
+" parameters are named after the corresponding variables in the distribution's"
+" equation, as used in common mathematical practice; most of these equations "
+"can be found in any statistics text."
 msgstr ""
 
 #: ../../library/random.rst:301
@@ -441,8 +442,8 @@ msgstr ""
 
 #: ../../library/random.rst:324
 msgid ""
-"Beta distribution.  Conditions on the parameters are ``alpha > 0`` and "
-"``beta > 0``. Returned values range between 0 and 1."
+"Beta distribution.  Conditions on the parameters are ``alpha > 0`` and ``beta"
+" > 0``. Returned values range between 0 and 1."
 msgstr ""
 
 #: ../../library/random.rst:330
@@ -478,9 +479,9 @@ msgstr ""
 
 #: ../../library/random.rst:356
 msgid ""
-"Normal distribution, also called the Gaussian distribution. *mu* is the "
-"mean, and *sigma* is the standard deviation.  This is slightly faster than "
-"the :func:`normalvariate` function defined below."
+"Normal distribution, also called the Gaussian distribution. *mu* is the mean,"
+" and *sigma* is the standard deviation.  This is slightly faster than the "
+":func:`normalvariate` function defined below."
 msgstr ""
 
 #: ../../library/random.rst:361
@@ -500,8 +501,8 @@ msgstr ""
 msgid ""
 "Log normal distribution.  If you take the natural logarithm of this "
 "distribution, you'll get a normal distribution with mean *mu* and standard "
-"deviation *sigma*.  *mu* can have any value, and *sigma* must be greater "
-"than zero."
+"deviation *sigma*.  *mu* can have any value, and *sigma* must be greater than"
+" zero."
 msgstr ""
 
 #: ../../library/random.rst:382
@@ -514,8 +515,8 @@ msgstr ""
 msgid ""
 "*mu* is the mean angle, expressed in radians between 0 and 2\\*\\ *pi*, and "
 "*kappa* is the concentration parameter, which must be greater than or equal "
-"to zero.  If *kappa* is equal to zero, this distribution reduces to a "
-"uniform random angle over the range 0 to 2\\*\\ *pi*."
+"to zero.  If *kappa* is equal to zero, this distribution reduces to a uniform"
+" random angle over the range 0 to 2\\*\\ *pi*."
 msgstr ""
 
 #: ../../library/random.rst:398
@@ -524,8 +525,8 @@ msgstr ""
 
 #: ../../library/random.rst:403
 msgid ""
-"Weibull distribution.  *alpha* is the scale parameter and *beta* is the "
-"shape parameter."
+"Weibull distribution.  *alpha* is the scale parameter and *beta* is the shape"
+" parameter."
 msgstr ""
 
 #: ../../library/random.rst:408
@@ -534,15 +535,15 @@ msgstr ""
 
 #: ../../library/random.rst:412
 msgid ""
-"Class that implements the default pseudo-random number generator used by "
-"the :mod:`!random` module."
+"Class that implements the default pseudo-random number generator used by the "
+":mod:`!random` module."
 msgstr ""
 
 #: ../../library/random.rst:415
 msgid ""
 "Formerly the *seed* could be any hashable object.  Now it is limited to: "
-"``None``, :class:`int`, :class:`float`, :class:`str`, :class:`bytes`, or :"
-"class:`bytearray`."
+"``None``, :class:`int`, :class:`float`, :class:`str`, :class:`bytes`, or "
+":class:`bytearray`."
 msgstr ""
 
 #: ../../library/random.rst:420
@@ -582,24 +583,24 @@ msgstr ""
 
 #: ../../library/random.rst:447
 msgid ""
-"Override this method in subclasses to customise the :meth:`~random."
-"getrandbits` behaviour of :class:`!Random` instances."
+"Override this method in subclasses to customise the "
+":meth:`~random.getrandbits` behaviour of :class:`!Random` instances."
 msgstr ""
 
 #: ../../library/random.rst:452
 msgid ""
-"Override this method in subclasses to customise the :meth:`~random."
-"randbytes` behaviour of :class:`!Random` instances."
+"Override this method in subclasses to customise the :meth:`~random.randbytes`"
+" behaviour of :class:`!Random` instances."
 msgstr ""
 
 #: ../../library/random.rst:458
 msgid ""
-"Class that uses the :func:`os.urandom` function for generating random "
-"numbers from sources provided by the operating system. Not available on all "
-"systems. Does not rely on software state, and sequences are not "
-"reproducible. Accordingly, the :meth:`seed` method has no effect and is "
-"ignored. The :meth:`getstate` and :meth:`setstate` methods raise :exc:"
-"`NotImplementedError` if called."
+"Class that uses the :func:`os.urandom` function for generating random numbers"
+" from sources provided by the operating system. Not available on all systems."
+" Does not rely on software state, and sequences are not reproducible. "
+"Accordingly, the :meth:`seed` method has no effect and is ignored. The "
+":meth:`getstate` and :meth:`setstate` methods raise "
+":exc:`NotImplementedError` if called."
 msgstr ""
 
 #: ../../library/random.rst:467
@@ -634,7 +635,7 @@ msgstr ""
 
 #: ../../library/random.rst:485
 msgid "Examples"
-msgstr ""
+msgstr "Beispiele"
 
 #: ../../library/random.rst:487
 msgid "Basic examples::"
@@ -648,19 +649,16 @@ msgid ""
 ">>> uniform(2.5, 10.0)                # Random float:  2.5 <= x <= 10.0\n"
 "3.1800146073117523\n"
 "\n"
-">>> expovariate(1 / 5)                # Interval between arrivals averaging "
-"5 seconds\n"
+">>> expovariate(1 / 5)                # Interval between arrivals averaging 5 seconds\n"
 "5.148957571865031\n"
 "\n"
 ">>> randrange(10)                     # Integer from 0 to 9 inclusive\n"
 "7\n"
 "\n"
-">>> randrange(0, 101, 2)              # Even integer from 0 to 100 "
-"inclusive\n"
+">>> randrange(0, 101, 2)              # Even integer from 0 to 100 inclusive\n"
 "26\n"
 "\n"
-">>> choice(['win', 'lose', 'draw'])   # Single random element from a "
-"sequence\n"
+">>> choice(['win', 'lose', 'draw'])   # Single random element from a sequence\n"
 "'draw'\n"
 "\n"
 ">>> deck = 'ace two three four'.split()\n"
@@ -704,9 +702,10 @@ msgstr ""
 
 #: ../../library/random.rst:540
 msgid ""
-"Example of `statistical bootstrapping <https://en.wikipedia.org/wiki/"
-"Bootstrapping_(statistics)>`_ using resampling with replacement to estimate "
-"a confidence interval for the mean of a sample::"
+"Example of `statistical bootstrapping "
+"<https://en.wikipedia.org/wiki/Bootstrapping_(statistics)>`_ using resampling"
+" with replacement to estimate a confidence interval for the mean of a "
+"sample::"
 msgstr ""
 
 #: ../../library/random.rst:544
@@ -723,10 +722,11 @@ msgstr ""
 
 #: ../../library/random.rst:553
 msgid ""
-"Example of a `resampling permutation test <https://en.wikipedia.org/wiki/"
-"Resampling_(statistics)#Permutation_tests>`_ to determine the statistical "
-"significance or `p-value <https://en.wikipedia.org/wiki/P-value>`_ of an "
-"observed difference between the effects of a drug versus a placebo::"
+"Example of a `resampling permutation test "
+"<https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests>`_ "
+"to determine the statistical significance or `p-value "
+"<https://en.wikipedia.org/wiki/P-value>`_ of an observed difference between "
+"the effects of a drug versus a placebo::"
 msgstr ""
 
 #: ../../library/random.rst:559
@@ -747,14 +747,10 @@ msgid ""
 "    new_diff = mean(combined[:len(drug)]) - mean(combined[len(drug):])\n"
 "    count += (new_diff >= observed_diff)\n"
 "\n"
-"print(f'{n} label reshufflings produced only {count} instances with a "
-"difference')\n"
-"print(f'at least as extreme as the observed difference of "
-"{observed_diff:.1f}.')\n"
-"print(f'The one-sided p-value of {count / n:.4f} leads us to reject the "
-"null')\n"
-"print(f'hypothesis that there is no difference between the drug and the "
-"placebo.')"
+"print(f'{n} label reshufflings produced only {count} instances with a difference')\n"
+"print(f'at least as extreme as the observed difference of {observed_diff:.1f}.')\n"
+"print(f'The one-sided p-value of {count / n:.4f} leads us to reject the null')\n"
+"print(f'hypothesis that there is no difference between the drug and the placebo.')"
 msgstr ""
 
 #: ../../library/random.rst:580
@@ -782,8 +778,7 @@ msgid ""
 "    next_server_available = servers[0]\n"
 "    wait = max(0.0, next_server_available - arrival_time)\n"
 "    waits.append(wait)\n"
-"    service_duration = max(0.0, gauss(average_service_time, "
-"stdev_service_time))\n"
+"    service_duration = max(0.0, gauss(average_service_time, stdev_service_time))\n"
 "    service_completed = arrival_time + wait + service_duration\n"
 "    heapreplace(servers, service_completed)\n"
 "\n"
@@ -794,26 +789,28 @@ msgstr ""
 #: ../../library/random.rst:609
 msgid ""
 "`Statistics for Hackers <https://www.youtube.com/watch?v=Iq9DzN6mvYA>`_ a "
-"video tutorial by `Jake Vanderplas <https://us.pycon.org/2016/speaker/"
-"profile/295/>`_ on statistical analysis using just a few fundamental "
-"concepts including simulation, sampling, shuffling, and cross-validation."
+"video tutorial by `Jake Vanderplas "
+"<https://us.pycon.org/2016/speaker/profile/295/>`_ on statistical analysis "
+"using just a few fundamental concepts including simulation, sampling, "
+"shuffling, and cross-validation."
 msgstr ""
 
 #: ../../library/random.rst:615
 msgid ""
-"`Economics Simulation <https://nbviewer.org/url/norvig.com/ipython/Economics."
-"ipynb>`_ a simulation of a marketplace by `Peter Norvig <https://norvig.com/"
-"bio.html>`_ that shows effective use of many of the tools and distributions "
-"provided by this module (gauss, uniform, sample, betavariate, choice, "
-"triangular, and randrange)."
+"`Economics Simulation "
+"<https://nbviewer.org/url/norvig.com/ipython/Economics.ipynb>`_ a simulation "
+"of a marketplace by `Peter Norvig <https://norvig.com/bio.html>`_ that shows "
+"effective use of many of the tools and distributions provided by this module "
+"(gauss, uniform, sample, betavariate, choice, triangular, and randrange)."
 msgstr ""
 
 #: ../../library/random.rst:622
 msgid ""
-"`A Concrete Introduction to Probability (using Python) <https://nbviewer.org/"
-"url/norvig.com/ipython/Probability.ipynb>`_ a tutorial by `Peter Norvig "
-"<https://norvig.com/bio.html>`_ covering the basics of probability theory, "
-"how to write simulations, and how to perform data analysis using Python."
+"`A Concrete Introduction to Probability (using Python) "
+"<https://nbviewer.org/url/norvig.com/ipython/Probability.ipynb>`_ a tutorial "
+"by `Peter Norvig <https://norvig.com/bio.html>`_ covering the basics of "
+"probability theory, how to write simulations, and how to perform data "
+"analysis using Python."
 msgstr ""
 
 #: ../../library/random.rst:630
@@ -850,18 +847,15 @@ msgid ""
 "    return tuple(pool[i] for i in indices)\n"
 "\n"
 "def random_combination_with_replacement(iterable, r):\n"
-"    \"Choose r elements with replacement.  Order the result to match the "
-"iterable.\"\n"
-"    # Result will be in set(itertools."
-"combinations_with_replacement(iterable, r)).\n"
+"    \"Choose r elements with replacement.  Order the result to match the iterable.\"\n"
+"    # Result will be in set(itertools.combinations_with_replacement(iterable, r)).\n"
 "    pool = tuple(iterable)\n"
 "    n = len(pool)\n"
 "    indices = sorted(random.choices(range(n), k=r))\n"
 "    return tuple(pool[i] for i in indices)\n"
 "\n"
 "def random_derangement(iterable):\n"
-"    \"Choose a permutation where no element stays in its original position."
-"\"\n"
+"    \"Choose a permutation where no element stays in its original position.\"\n"
 "    seq = tuple(iterable)\n"
 "    if len(seq) < 2:\n"
 "        if not seq:\n"
@@ -877,10 +871,10 @@ msgstr ""
 
 #: ../../library/random.rst:751
 msgid ""
-"The default :func:`.random` returns multiples of 2⁻⁵³ in the range *0.0 ≤ x "
-"< 1.0*.  All such numbers are evenly spaced and are exactly representable as "
-"Python floats.  However, many other representable floats in that interval "
-"are not possible selections.  For example, ``0.05954861408025609`` isn't an "
+"The default :func:`.random` returns multiples of 2⁻⁵³ in the range *0.0 ≤ x <"
+" 1.0*.  All such numbers are evenly spaced and are exactly representable as "
+"Python floats.  However, many other representable floats in that interval are"
+" not possible selections.  For example, ``0.05954861408025609`` isn't an "
 "integer multiple of 2⁻⁵³."
 msgstr ""
 
@@ -889,8 +883,8 @@ msgid ""
 "The following recipe takes a different approach.  All floats in the interval "
 "are possible selections.  The mantissa comes from a uniform distribution of "
 "integers in the range *2⁵² ≤ mantissa < 2⁵³*.  The exponent comes from a "
-"geometric distribution where exponents smaller than *-53* occur half as "
-"often as the next larger exponent."
+"geometric distribution where exponents smaller than *-53* occur half as often"
+" as the next larger exponent."
 msgstr ""
 
 #: ../../library/random.rst:765
@@ -912,8 +906,8 @@ msgstr ""
 
 #: ../../library/random.rst:779
 msgid ""
-"All :ref:`real valued distributions <real-valued-distributions>` in the "
-"class will use the new method::"
+"All :ref:`real valued distributions <real-valued-distributions>` in the class"
+" will use the new method::"
 msgstr ""
 
 #: ../../library/random.rst:782
@@ -936,10 +930,10 @@ msgstr ""
 
 #: ../../library/random.rst:797
 msgid ""
-"`Generating Pseudo-random Floating-Point Values <https://allendowney.com/"
-"research/rand/downey07randfloat.pdf>`_ a paper by Allen B. Downey describing "
-"ways to generate more fine-grained floats than normally generated by :func:`."
-"random`."
+"`Generating Pseudo-random Floating-Point Values "
+"<https://allendowney.com/research/rand/downey07randfloat.pdf>`_ a paper by "
+"Allen B. Downey describing ways to generate more fine-grained floats than "
+"normally generated by :func:`.random`."
 msgstr ""
 
 #: ../../library/random.rst:805
@@ -974,8 +968,8 @@ msgstr ""
 
 #: ../../library/random.rst:836
 msgid ""
-"Print a random floating-point number between 0 and N inclusive, using :meth:"
-"`uniform`."
+"Print a random floating-point number between 0 and N inclusive, using "
+":meth:`uniform`."
 msgstr ""
 
 #: ../../library/random.rst:839
@@ -1005,8 +999,7 @@ msgstr ""
 #: ../../library/random.rst:852
 msgid ""
 "$ # Choose one at random\n"
-"$ python -m random egg bacon sausage spam \"Lobster Thermidor aux crevettes "
-"with a Mornay sauce\"\n"
+"$ python -m random egg bacon sausage spam \"Lobster Thermidor aux crevettes with a Mornay sauce\"\n"
 "Lobster Thermidor aux crevettes with a Mornay sauce\n"
 "\n"
 "$ # Random integer\n"
@@ -1018,8 +1011,7 @@ msgid ""
 "1.7080016272295635\n"
 "\n"
 "$ # With explicit arguments\n"
-"$ python  -m random --choice egg bacon sausage spam \"Lobster Thermidor aux "
-"crevettes with a Mornay sauce\"\n"
+"$ python  -m random --choice egg bacon sausage spam \"Lobster Thermidor aux crevettes with a Mornay sauce\"\n"
 "egg\n"
 "\n"
 "$ python -m random --integer 6\n"

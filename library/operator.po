@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -28,10 +27,10 @@ msgstr ""
 #: ../../library/operator.rst:16
 msgid ""
 "The :mod:`!operator` module exports a set of efficient functions "
-"corresponding to the intrinsic operators of Python.  For example, ``operator."
-"add(x, y)`` is equivalent to the expression ``x+y``. Many function names are "
-"those used for special methods, without the double underscores.  For "
-"backward compatibility, many of these have a variant with the double "
+"corresponding to the intrinsic operators of Python.  For example, "
+"``operator.add(x, y)`` is equivalent to the expression ``x+y``. Many function"
+" names are those used for special methods, without the double underscores.  "
+"For backward compatibility, many of these have a variant with the double "
 "underscores kept. The variants without the double underscores are preferred "
 "for clarity."
 msgstr ""
@@ -51,12 +50,12 @@ msgstr ""
 #: ../../library/operator.rst:43
 msgid ""
 "Perform \"rich comparisons\" between *a* and *b*. Specifically, ``lt(a, b)`` "
-"is equivalent to ``a < b``, ``le(a, b)`` is equivalent to ``a <= b``, "
-"``eq(a, b)`` is equivalent to ``a == b``, ``ne(a, b)`` is equivalent to ``a !"
-"= b``, ``gt(a, b)`` is equivalent to ``a > b`` and ``ge(a, b)`` is "
-"equivalent to ``a >= b``.  Note that these functions can return any value, "
-"which may or may not be interpretable as a Boolean value.  See :ref:"
-"`comparisons` for more information about rich comparisons."
+"is equivalent to ``a < b``, ``le(a, b)`` is equivalent to ``a <= b``, ``eq(a,"
+" b)`` is equivalent to ``a == b``, ``ne(a, b)`` is equivalent to ``a != b``, "
+"``gt(a, b)`` is equivalent to ``a > b`` and ``ge(a, b)`` is equivalent to ``a"
+" >= b``.  Note that these functions can return any value, which may or may "
+"not be interpretable as a Boolean value.  See :ref:`comparisons` for more "
+"information about rich comparisons."
 msgstr ""
 
 #: ../../library/operator.rst:52
@@ -67,16 +66,16 @@ msgstr ""
 
 #: ../../library/operator.rst:59
 msgid ""
-"Return the outcome of :keyword:`not` *obj*.  (Note that there is no :meth:`!"
-"__not__` method for object instances; only the interpreter core defines this "
-"operation.  The result is affected by the :meth:`~object.__bool__` and :meth:"
-"`~object.__len__` methods.)"
+"Return the outcome of :keyword:`not` *obj*.  (Note that there is no "
+":meth:`!__not__` method for object instances; only the interpreter core "
+"defines this operation.  The result is affected by the "
+":meth:`~object.__bool__` and :meth:`~object.__len__` methods.)"
 msgstr ""
 
 #: ../../library/operator.rst:67
 msgid ""
-"Return :const:`True` if *obj* is true, and :const:`False` otherwise.  This "
-"is equivalent to using the :class:`bool` constructor."
+"Return :const:`True` if *obj* is true, and :const:`False` otherwise.  This is"
+" equivalent to using the :class:`bool` constructor."
 msgstr ""
 
 #: ../../library/operator.rst:73
@@ -231,9 +230,9 @@ msgstr ""
 #: ../../library/operator.rst:276
 msgid ""
 "The :mod:`!operator` module also defines tools for generalized attribute and "
-"item lookups.  These are useful for making fast field extractors as "
-"arguments for :func:`map`, :func:`sorted`, :meth:`itertools.groupby`, or "
-"other functions that expect a function argument."
+"item lookups.  These are useful for making fast field extractors as arguments"
+" for :func:`map`, :func:`sorted`, :meth:`itertools.groupby`, or other "
+"functions that expect a function argument."
 msgstr ""
 
 #: ../../library/operator.rst:285
@@ -249,8 +248,8 @@ msgstr ""
 
 #: ../../library/operator.rst:291
 msgid ""
-"After ``f = attrgetter('name', 'date')``, the call ``f(b)`` returns ``(b."
-"name, b.date)``."
+"After ``f = attrgetter('name', 'date')``, the call ``f(b)`` returns "
+"``(b.name, b.date)``."
 msgstr ""
 
 #: ../../library/operator.rst:294
@@ -262,7 +261,7 @@ msgstr ""
 #: ../../library/operator.rst:297 ../../library/operator.rst:329
 #: ../../library/operator.rst:377
 msgid "Equivalent to::"
-msgstr ""
+msgstr "Gleichbedeutend mit::"
 
 #: ../../library/operator.rst:299
 msgid ""
@@ -316,9 +315,9 @@ msgstr ""
 
 #: ../../library/operator.rst:341
 msgid ""
-"The items can be any type accepted by the operand's :meth:`~object."
-"__getitem__` method.  Dictionaries accept any :term:`hashable` value.  "
-"Lists, tuples, and strings accept an index or a slice:"
+"The items can be any type accepted by the operand's "
+":meth:`~object.__getitem__` method.  Dictionaries accept any :term:`hashable`"
+" value.  Lists, tuples, and strings accept an index or a slice:"
 msgstr ""
 
 #: ../../library/operator.rst:355
@@ -365,7 +364,7 @@ msgstr ""
 
 #: ../../library/operator.rst:394
 msgid "Operation"
-msgstr ""
+msgstr "Operation"
 
 #: ../../library/operator.rst:394
 msgid "Syntax"
@@ -800,9 +799,9 @@ msgstr ""
 #: ../../library/operator.rst:479
 msgid ""
 "Many operations have an \"in-place\" version.  Listed below are functions "
-"providing a more primitive access to in-place operators than the usual "
-"syntax does; for example, the :term:`statement` ``x += y`` is equivalent to "
-"``x = operator.iadd(x, y)``.  Another way to put it is to say that ``z = "
+"providing a more primitive access to in-place operators than the usual syntax"
+" does; for example, the :term:`statement` ``x += y`` is equivalent to ``x = "
+"operator.iadd(x, y)``.  Another way to put it is to say that ``z = "
 "operator.iadd(x, y)`` is equivalent to the compound statement ``z = x; z += "
 "y``."
 msgstr ""
@@ -810,15 +809,15 @@ msgstr ""
 #: ../../library/operator.rst:486
 msgid ""
 "In those examples, note that when an in-place method is called, the "
-"computation and assignment are performed in two separate steps.  The in-"
-"place functions listed below only do the first step, calling the in-place "
-"method.  The second step, assignment, is not handled."
+"computation and assignment are performed in two separate steps.  The in-place"
+" functions listed below only do the first step, calling the in-place method."
+"  The second step, assignment, is not handled."
 msgstr ""
 
 #: ../../library/operator.rst:491
 msgid ""
-"For immutable targets such as strings, numbers, and tuples, the updated "
-"value is computed, but not assigned back to the input variable:"
+"For immutable targets such as strings, numbers, and tuples, the updated value"
+" is computed, but not assigned back to the input variable:"
 msgstr ""
 
 #: ../../library/operator.rst:500

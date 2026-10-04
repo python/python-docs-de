@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -48,11 +47,11 @@ msgstr ""
 
 #: ../../library/pwd.rst:19
 msgid "Meaning"
-msgstr ""
+msgstr "Bedeutung"
 
 #: ../../library/pwd.rst:21
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../../library/pwd.rst:21
 msgid "``pw_name``"
@@ -100,7 +99,7 @@ msgstr ""
 
 #: ../../library/pwd.rst:29
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../../library/pwd.rst:29
 msgid "``pw_gecos``"
@@ -146,9 +145,9 @@ msgid ""
 "encrypted with a DES derived algorithm.  However most modern unices  use a "
 "so-called *shadow password* system.  On those unices the *pw_passwd* field "
 "only contains an asterisk (``'*'``) or the  letter ``'x'`` where the "
-"encrypted password is stored in a file :file:`/etc/shadow` which is not "
-"world readable.  Whether the *pw_passwd* field contains anything useful is "
-"system-dependent."
+"encrypted password is stored in a file :file:`/etc/shadow` which is not world"
+" readable.  Whether the *pw_passwd* field contains anything useful is system-"
+"dependent."
 msgstr ""
 
 #: ../../library/pwd.rst:49

@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -44,14 +43,15 @@ msgstr ""
 msgid ""
 "Declares that *function* should be used as a \"reduction\" function for "
 "objects of type *type*.  *function* must return either a string or a tuple "
-"containing between two and six elements. See the :attr:`~pickle.Pickler."
-"dispatch_table` for more details on the interface of *function*."
+"containing between two and six elements. See the "
+":attr:`~pickle.Pickler.dispatch_table` for more details on the interface of "
+"*function*."
 msgstr ""
 
 #: ../../library/copyreg.rst:35
 msgid ""
-"The *constructor_ob* parameter is a legacy feature and is now ignored, but "
-"if passed it must be a callable."
+"The *constructor_ob* parameter is a legacy feature and is now ignored, but if"
+" passed it must be a callable."
 msgstr ""
 
 #: ../../library/copyreg.rst:38
@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../../library/copyreg.rst:9
 msgid "module"
-msgstr ""
+msgstr "Modul"
 
 #: ../../library/copyreg.rst:9
 msgid "pickle"

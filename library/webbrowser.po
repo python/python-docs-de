@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -40,20 +39,20 @@ msgstr ""
 msgid ""
 "Under Unix, graphical browsers are preferred under X11, but text-mode "
 "browsers will be used if graphical browsers are not available or an X11 "
-"display isn't available.  If text-mode browsers are used, the calling "
-"process will block until the user exits the browser."
+"display isn't available.  If text-mode browsers are used, the calling process"
+" will block until the user exits the browser."
 msgstr ""
 
 #: ../../library/webbrowser.rst:20
 msgid ""
 "If the environment variable :envvar:`BROWSER` exists, it is interpreted as "
 "the :data:`os.pathsep`-separated list of browsers to try ahead of the "
-"platform defaults.  When the value of a list part contains the string "
-"``%s``, then it is interpreted as a literal browser command line to be used "
-"with the argument URL substituted for ``%s``; if the value is a single word "
-"that refers to one of the already registered browsers this browser is added "
-"to the front of the search list; if the part does not contain ``%s``, it is "
-"simply interpreted as the name of the browser to launch. [1]_"
+"platform defaults.  When the value of a list part contains the string ``%s``,"
+" then it is interpreted as a literal browser command line to be used with the"
+" argument URL substituted for ``%s``; if the value is a single word that "
+"refers to one of the already registered browsers this browser is added to the"
+" front of the search list; if the part does not contain ``%s``, it is simply "
+"interpreted as the name of the browser to launch. [1]_"
 msgstr ""
 
 #: ../../library/webbrowser.rst:31
@@ -129,10 +128,10 @@ msgstr ""
 msgid ""
 "Display *url* using the default browser. If *new* is 0, the *url* is opened "
 "in the same browser window if possible.  If *new* is 1, a new browser window "
-"is opened if possible.  If *new* is 2, a new browser page (\"tab\") is "
-"opened if possible.  If *autoraise* is ``True``, the window is raised if "
-"possible (note that under many window managers this will occur regardless of "
-"the setting of this variable)."
+"is opened if possible.  If *new* is 2, a new browser page (\"tab\") is opened"
+" if possible.  If *autoraise* is ``True``, the window is raised if possible "
+"(note that under many window managers this will occur regardless of the "
+"setting of this variable)."
 msgstr ""
 
 #: ../../library/webbrowser.rst:95 ../../library/webbrowser.rst:109
@@ -175,8 +174,8 @@ msgstr ""
 
 #: ../../library/webbrowser.rst:129
 msgid ""
-"Register the browser type *name*.  Once a browser type is registered, the :"
-"func:`get` function can return a controller for that browser type.  If "
+"Register the browser type *name*.  Once a browser type is registered, the "
+":func:`get` function can return a controller for that browser type.  If "
 "*instance* is not provided, or is ``None``, *constructor* will be called "
 "without parameters to create an instance when needed.  If *instance* is "
 "provided, *constructor* will never be called, and may be ``None``."
@@ -184,10 +183,10 @@ msgstr ""
 
 #: ../../library/webbrowser.rst:135
 msgid ""
-"Setting *preferred* to ``True`` makes this browser a preferred result for a :"
-"func:`get` call with no argument.  Otherwise, this entry point is only "
-"useful if you plan to either set the :envvar:`BROWSER` variable or call :"
-"func:`get` with a nonempty argument matching the name of a handler you "
+"Setting *preferred* to ``True`` makes this browser a preferred result for a "
+":func:`get` call with no argument.  Otherwise, this entry point is only "
+"useful if you plan to either set the :envvar:`BROWSER` variable or call "
+":func:`get` with a nonempty argument matching the name of a handler you "
 "declare."
 msgstr ""
 
@@ -212,7 +211,7 @@ msgstr ""
 
 #: ../../library/webbrowser.rst:149
 msgid "Notes"
-msgstr ""
+msgstr "Hinweise"
 
 #: ../../library/webbrowser.rst:151
 msgid "``'mozilla'``"
@@ -246,7 +245,7 @@ msgstr ""
 #: ../../library/webbrowser.rst:157 ../../library/webbrowser.rst:159
 #: ../../library/webbrowser.rst:161
 msgid "\\(1)"
-msgstr ""
+msgstr "\\(1)"
 
 #: ../../library/webbrowser.rst:159
 msgid "``'konqueror'``"
@@ -306,7 +305,7 @@ msgstr ""
 
 #: ../../library/webbrowser.rst:173
 msgid "\\(2)"
-msgstr ""
+msgstr "\\(2)"
 
 #: ../../library/webbrowser.rst:175
 msgid "``'macos'``"
@@ -319,7 +318,7 @@ msgstr ""
 #: ../../library/webbrowser.rst:175 ../../library/webbrowser.rst:177
 #: ../../library/webbrowser.rst:179 ../../library/webbrowser.rst:181
 msgid "\\(3)"
-msgstr ""
+msgstr "\\(3)"
 
 #: ../../library/webbrowser.rst:177
 msgid "``'safari'``"
@@ -375,19 +374,19 @@ msgstr ""
 
 #: ../../library/webbrowser.rst:189
 msgid "\\(4)"
-msgstr ""
+msgstr "\\(4)"
 
 #: ../../library/webbrowser.rst:192
 msgid "Notes:"
-msgstr ""
+msgstr "Hinweise:"
 
 #: ../../library/webbrowser.rst:195
 msgid ""
 "\"Konqueror\" is the file manager for the KDE desktop environment for Unix, "
 "and only makes sense to use if KDE is running.  Some way of reliably "
 "detecting KDE would be nice; the :envvar:`!KDEDIR` variable is not "
-"sufficient.  Note also that the name \"kfm\" is used even when using the :"
-"program:`konqueror` command with KDE 2 --- the implementation selects the "
+"sufficient.  Note also that the name \"kfm\" is used even when using the "
+":program:`konqueror` command with KDE 2 --- the implementation selects the "
 "best strategy for running Konqueror."
 msgstr ""
 
@@ -406,8 +405,8 @@ msgstr ""
 #: ../../library/webbrowser.rst:210
 msgid ""
 "A new :class:`!MacOSXOSAScript` class has been added and is used on Mac "
-"instead of the previous :class:`!MacOSX` class. This adds support for "
-"opening browsers not currently set as the OS default."
+"instead of the previous :class:`!MacOSX` class. This adds support for opening"
+" browsers not currently set as the OS default."
 msgstr ""
 
 #: ../../library/webbrowser.rst:215
@@ -427,18 +426,17 @@ msgstr ""
 
 #: ../../library/webbrowser.rst:226
 msgid ""
-":class:`!MacOS` has been added as a replacement for :class:`!"
-"MacOSXOSAScript`, opening browsers via :program:`/usr/bin/open` instead of :"
-"program:`osascript`."
+":class:`!MacOS` has been added as a replacement for "
+":class:`!MacOSXOSAScript`, opening browsers via :program:`/usr/bin/open` "
+"instead of :program:`osascript`."
 msgstr ""
 
 #: ../../library/webbrowser.rst:230
 msgid ""
-":class:`!MacOSXOSAScript` is deprecated in favour of :class:`!MacOS`. Using :"
-"program:`/usr/bin/open` instead of :program:`osascript` is a security and "
-"usability improvement: :program:`osascript` may be blocked on managed "
-"systems due to its abuse potential as a general-purpose scripting "
-"interpreter."
+":class:`!MacOSXOSAScript` is deprecated in favour of :class:`!MacOS`. Using "
+":program:`/usr/bin/open` instead of :program:`osascript` is a security and "
+"usability improvement: :program:`osascript` may be blocked on managed systems"
+" due to its abuse potential as a general-purpose scripting interpreter."
 msgstr ""
 
 #: ../../library/webbrowser.rst:237
@@ -480,14 +478,14 @@ msgstr ""
 #: ../../library/webbrowser.rst:271
 msgid ""
 "Open *url* in a new window of the browser handled by this controller, if "
-"possible, otherwise, open *url* in the only browser window.  Alias :func:"
-"`open_new`."
+"possible, otherwise, open *url* in the only browser window.  Alias "
+":func:`open_new`."
 msgstr ""
 
 #: ../../library/webbrowser.rst:278
 msgid ""
-"Open *url* in a new page (\"tab\") of the browser handled by this "
-"controller, if possible, otherwise equivalent to :func:`open_new`."
+"Open *url* in a new page (\"tab\") of the browser handled by this controller,"
+" if possible, otherwise equivalent to :func:`open_new`."
 msgstr ""
 
 #: ../../library/webbrowser.rst:283

@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -31,8 +30,8 @@ msgstr ""
 
 #: ../../library/http.server.rst:22
 msgid ""
-":mod:`!http.server` is not recommended for production. It only implements :"
-"ref:`basic security checks <http.server-security>`."
+":mod:`!http.server` is not recommended for production. It only implements "
+":ref:`basic security checks <http.server-security>`."
 msgstr ""
 
 #: ../../includes/wasm-notavail.rst:3
@@ -48,8 +47,8 @@ msgstr ""
 #: ../../library/http.server.rst:27
 msgid ""
 "One class, :class:`HTTPServer`, is a :class:`socketserver.TCPServer` "
-"subclass. It creates and listens at the HTTP socket, dispatching the "
-"requests to a handler.  Code to create and run the server looks like this::"
+"subclass. It creates and listens at the HTTP socket, dispatching the requests"
+" to a handler.  Code to create and run the server looks like this::"
 msgstr ""
 
 #: ../../library/http.server.rst:31
@@ -63,10 +62,10 @@ msgstr ""
 #: ../../library/http.server.rst:39
 msgid ""
 "This class builds on the :class:`~socketserver.TCPServer` class by storing "
-"the server address as instance variables named :attr:`server_name` and :attr:"
-"`server_port`. The server is accessible by the handler, typically through "
-"the handler's :attr:`~socketserver.BaseRequestHandler.server` instance "
-"variable."
+"the server address as instance variables named :attr:`server_name` and "
+":attr:`server_port`. The server is accessible by the handler, typically "
+"through the handler's :attr:`~socketserver.BaseRequestHandler.server` "
+"instance variable."
 msgstr ""
 
 #: ../../library/http.server.rst:47
@@ -80,16 +79,16 @@ msgstr ""
 #: ../../library/http.server.rst:56
 msgid ""
 "This class is identical to HTTPServer but uses threads to handle requests by "
-"using the :class:`~socketserver.ThreadingMixIn`. This is useful to handle "
-"web browsers pre-opening sockets, on which :class:`HTTPServer` would wait "
+"using the :class:`~socketserver.ThreadingMixIn`. This is useful to handle web"
+" browsers pre-opening sockets, on which :class:`HTTPServer` would wait "
 "indefinitely."
 msgstr ""
 
 #: ../../library/http.server.rst:68
 msgid ""
 "Subclass of :class:`HTTPServer` with a wrapped socket using the :mod:`ssl` "
-"module. If the :mod:`ssl` module is not available, instantiating a :class:`!"
-"HTTPSServer` object fails with a :exc:`RuntimeError`."
+"module. If the :mod:`ssl` module is not available, instantiating a "
+":class:`!HTTPSServer` object fails with a :exc:`RuntimeError`."
 msgstr ""
 
 #: ../../library/http.server.rst:72
@@ -140,11 +139,11 @@ msgstr ""
 
 #: ../../library/http.server.rst:110
 msgid ""
-"This class is used to handle the HTTP requests that arrive at the server.  "
-"By itself, it cannot respond to any actual HTTP requests; it must be "
-"subclassed to handle each request method (for example, ``'GET'`` or "
-"``'POST'``). :class:`BaseHTTPRequestHandler` provides a number of class and "
-"instance variables, and methods for use by subclasses."
+"This class is used to handle the HTTP requests that arrive at the server.  By"
+" itself, it cannot respond to any actual HTTP requests; it must be subclassed"
+" to handle each request method (for example, ``'GET'`` or ``'POST'``). "
+":class:`BaseHTTPRequestHandler` provides a number of class and instance "
+"variables, and methods for use by subclasses."
 msgstr ""
 
 #: ../../library/http.server.rst:116
@@ -174,16 +173,16 @@ msgstr ""
 #: ../../library/http.server.rst:136
 msgid ""
 "Boolean that should be set before :meth:`handle_one_request` returns, "
-"indicating if another request may be expected, or if the connection should "
-"be shut down."
+"indicating if another request may be expected, or if the connection should be"
+" shut down."
 msgstr ""
 
 #: ../../library/http.server.rst:142
 msgid ""
 "Contains the string representation of the HTTP request line. The terminating "
-"CRLF is stripped. This attribute should be set by :meth:"
-"`handle_one_request`. If no valid request line was processed, it should be "
-"set to the empty string."
+"CRLF is stripped. This attribute should be set by :meth:`handle_one_request`."
+" If no valid request line was processed, it should be set to the empty "
+"string."
 msgstr ""
 
 #: ../../library/http.server.rst:149
@@ -192,9 +191,9 @@ msgstr ""
 
 #: ../../library/http.server.rst:153
 msgid ""
-"Contains the request path. If the query component of the URL is present, "
-"then ``path`` includes the query. Using the terminology of :rfc:`3986`, "
-"``path`` here includes ``hier-part`` and the ``query``."
+"Contains the request path. If the query component of the URL is present, then"
+" ``path`` includes the query. Using the terminology of :rfc:`3986`, ``path`` "
+"here includes ``hier-part`` and the ``query``."
 msgstr ""
 
 #: ../../library/http.server.rst:159
@@ -241,23 +240,23 @@ msgstr ""
 
 #: ../../library/http.server.rst:194
 msgid ""
-"Contains the Python system version, in a form usable by the :attr:"
-"`version_string` method and the :attr:`server_version` class variable. For "
-"example, ``'Python/1.4'``."
+"Contains the Python system version, in a form usable by the "
+":attr:`version_string` method and the :attr:`server_version` class variable. "
+"For example, ``'Python/1.4'``."
 msgstr ""
 
 #: ../../library/http.server.rst:200
 msgid ""
 "Specifies a format string that should be used by :meth:`send_error` method "
-"for building an error response to the client. The string is filled by "
-"default with variables from :attr:`responses` based on the status code "
-"passed to :meth:`send_error`."
+"for building an error response to the client. The string is filled by default"
+" with variables from :attr:`responses` based on the status code passed to "
+":meth:`send_error`."
 msgstr ""
 
 #: ../../library/http.server.rst:207
 msgid ""
-"Specifies the Content-Type HTTP header of error responses sent to the "
-"client.  The default value is ``'text/html'``."
+"Specifies the Content-Type HTTP header of error responses sent to the client."
+"  The default value is ``'text/html'``."
 msgstr ""
 
 #: ../../library/http.server.rst:212
@@ -266,16 +265,16 @@ msgid ""
 "responses to let the client know the server's communication capabilities for "
 "future requests. If set to ``'HTTP/1.1'``, the server will permit HTTP "
 "persistent connections; however, your server *must* then include an accurate "
-"``Content-Length`` header (using :meth:`send_header`) in all of its "
-"responses to clients. For backwards compatibility, the setting defaults to "
+"``Content-Length`` header (using :meth:`send_header`) in all of its responses"
+" to clients. For backwards compatibility, the setting defaults to "
 "``'HTTP/1.0'``."
 msgstr ""
 
 #: ../../library/http.server.rst:222
 msgid ""
 "Specifies an :class:`email.message.Message`\\ -like class to parse HTTP "
-"headers.  Typically, this is not overridden, and it defaults to :class:`http."
-"client.HTTPMessage`."
+"headers.  Typically, this is not overridden, and it defaults to "
+":class:`http.client.HTTPMessage`."
 msgstr ""
 
 #: ../../library/http.server.rst:228
@@ -300,8 +299,8 @@ msgstr ""
 
 #: ../../library/http.server.rst:245
 msgid ""
-"This method will parse and dispatch the request to the appropriate :meth:`!"
-"do_\\*` method.  You should never need to override it."
+"This method will parse and dispatch the request to the appropriate "
+":meth:`!do_\\*` method.  You should never need to override it."
 msgstr ""
 
 #: ../../library/http.server.rst:250
@@ -318,14 +317,14 @@ msgid ""
 "Sends and logs a complete error reply to the client. The numeric *code* "
 "specifies the HTTP error code, with *message* as an optional, short, human "
 "readable description of the error.  The *explain* argument can be used to "
-"provide more detailed information about the error; it will be formatted "
-"using the :attr:`error_message_format` attribute and emitted, after a "
-"complete set of headers, as the response body.  The :attr:`responses` "
-"attribute holds the default values for *message* and *explain* that will be "
-"used if no value is provided; for unknown codes the default value for both "
-"is the string ``???``. The body will be empty if the method is HEAD or the "
-"response code is one of the following: :samp:`1{xx}`, ``204 No Content``, "
-"``205 Reset Content``, ``304 Not Modified``."
+"provide more detailed information about the error; it will be formatted using"
+" the :attr:`error_message_format` attribute and emitted, after a complete set"
+" of headers, as the response body.  The :attr:`responses` attribute holds the"
+" default values for *message* and *explain* that will be used if no value is "
+"provided; for unknown codes the default value for both is the string ``???``."
+" The body will be empty if the method is HEAD or the response code is one of "
+"the following: :samp:`1{xx}`, ``204 No Content``, ``205 Reset Content``, "
+"``304 Not Modified``."
 msgstr ""
 
 #: ../../library/http.server.rst:273
@@ -341,8 +340,8 @@ msgid ""
 "*Server* and *Date* headers. The values for these two headers are picked up "
 "from the :meth:`version_string` and :meth:`date_time_string` methods, "
 "respectively. If the server does not intend to send any other headers using "
-"the :meth:`send_header` method, then :meth:`send_response` should be "
-"followed by an :meth:`end_headers` call."
+"the :meth:`send_header` method, then :meth:`send_response` should be followed"
+" by an :meth:`end_headers` call."
 msgstr ""
 
 #: ../../library/http.server.rst:288
@@ -355,9 +354,9 @@ msgstr ""
 msgid ""
 "Adds the HTTP header to an internal buffer which will be written to the "
 "output stream when either :meth:`end_headers` or :meth:`flush_headers` is "
-"invoked. *keyword* should specify the header keyword, with *value* "
-"specifying its value. Note that, after the send_header calls are done, :meth:"
-"`end_headers` MUST BE called in order to complete the operation."
+"invoked. *keyword* should specify the header keyword, with *value* specifying"
+" its value. Note that, after the send_header calls are done, "
+":meth:`end_headers` MUST BE called in order to complete the operation."
 msgstr ""
 
 #: ../../library/http.server.rst:300
@@ -382,8 +381,8 @@ msgstr ""
 
 #: ../../library/http.server.rst:318
 msgid ""
-"Adds a blank line (indicating the end of the HTTP headers in the response) "
-"to the headers buffer and calls :meth:`flush_headers`."
+"Adds a blank line (indicating the end of the HTTP headers in the response) to"
+" the headers buffer and calls :meth:`flush_headers`."
 msgstr ""
 
 #: ../../library/http.server.rst:322
@@ -398,9 +397,9 @@ msgstr ""
 
 #: ../../library/http.server.rst:334
 msgid ""
-"Logs an accepted (successful) request. *code* should specify the numeric "
-"HTTP code associated with the response. If a size of the response is "
-"available, then it should be passed as the *size* parameter."
+"Logs an accepted (successful) request. *code* should specify the numeric HTTP"
+" code associated with the response. If a size of the response is available, "
+"then it should be passed as the *size* parameter."
 msgstr ""
 
 #: ../../library/http.server.rst:340
@@ -414,22 +413,22 @@ msgstr ""
 msgid ""
 "Logs an arbitrary message to ``sys.stderr``. This is typically overridden to "
 "create custom error logging mechanisms. The *format* argument is a standard "
-"printf-style format string, where the additional arguments to :meth:"
-"`log_message` are applied as inputs to the formatting. The client IP address "
-"and current date and time are prefixed to every message logged."
+"printf-style format string, where the additional arguments to "
+":meth:`log_message` are applied as inputs to the formatting. The client IP "
+"address and current date and time are prefixed to every message logged."
 msgstr ""
 
 #: ../../library/http.server.rst:355
 msgid ""
-"Returns the server software's version string. This is a combination of the :"
-"attr:`server_version` and :attr:`sys_version` attributes."
+"Returns the server software's version string. This is a combination of the "
+":attr:`server_version` and :attr:`sys_version` attributes."
 msgstr ""
 
 #: ../../library/http.server.rst:360
 msgid ""
 "Returns the date and time given by *timestamp* (which must be ``None`` or in "
-"the format returned by :func:`time.time`), formatted for a message header. "
-"If *timestamp* is omitted, it uses the current date and time."
+"the format returned by :func:`time.time`), formatted for a message header. If"
+" *timestamp* is omitted, it uses the current date and time."
 msgstr ""
 
 #: ../../library/http.server.rst:364
@@ -471,15 +470,15 @@ msgstr ""
 
 #: ../../library/http.server.rst:395
 msgid ""
-"A lot of the work, such as parsing the request, is done by the base class :"
-"class:`BaseHTTPRequestHandler`.  This class implements the :func:`do_GET` "
+"A lot of the work, such as parsing the request, is done by the base class "
+":class:`BaseHTTPRequestHandler`.  This class implements the :func:`do_GET` "
 "and :func:`do_HEAD` functions."
 msgstr ""
 
 #: ../../library/http.server.rst:399
 msgid ""
-"The following are defined as class-level attributes of :class:"
-"`SimpleHTTPRequestHandler`:"
+"The following are defined as class-level attributes of "
+":class:`SimpleHTTPRequestHandler`:"
 msgstr ""
 
 #: ../../library/http.server.rst:404
@@ -525,8 +524,8 @@ msgstr ""
 
 #: ../../library/http.server.rst:439
 msgid ""
-"Headers that the server sends automatically such as ``Content-Type`` will "
-"not be overwritten by :attr:`!extra_response_headers`."
+"Headers that the server sends automatically such as ``Content-Type`` will not"
+" be overwritten by :attr:`!extra_response_headers`."
 msgstr ""
 
 #: ../../library/http.server.rst:442
@@ -536,9 +535,9 @@ msgstr ""
 
 #: ../../library/http.server.rst:446
 msgid ""
-"This method serves the ``'HEAD'`` request type: it sends the headers it "
-"would send for the equivalent ``GET`` request. See the :meth:`do_GET` method "
-"for a more complete explanation of the possible headers."
+"This method serves the ``'HEAD'`` request type: it sends the headers it would"
+" send for the equivalent ``GET`` request. See the :meth:`do_GET` method for a"
+" more complete explanation of the possible headers."
 msgstr ""
 
 #: ../../library/http.server.rst:452
@@ -550,11 +549,11 @@ msgstr ""
 #: ../../library/http.server.rst:455
 msgid ""
 "If the request was mapped to a directory, the directory is checked for an "
-"index page as specified by :attr:`index_pages`. If found, the file's "
-"contents are returned; otherwise a directory listing is generated by calling "
-"the :meth:`list_directory` method. This method uses :func:`os.listdir` to "
-"scan the directory, and returns a ``404`` error response if the :func:`~os."
-"listdir` fails."
+"index page as specified by :attr:`index_pages`. If found, the file's contents"
+" are returned; otherwise a directory listing is generated by calling the "
+":meth:`list_directory` method. This method uses :func:`os.listdir` to scan "
+"the directory, and returns a ``404`` error response if the "
+":func:`~os.listdir` fails."
 msgstr ""
 
 #: ../../library/http.server.rst:462
@@ -589,8 +588,8 @@ msgstr ""
 
 #: ../../library/http.server.rst:480
 msgid ""
-"For example usage, see the implementation of the ``test`` function in :"
-"source:`Lib/http/server.py`."
+"For example usage, see the implementation of the ``test`` function in "
+":source:`Lib/http/server.py`."
 msgstr ""
 
 #: ../../library/http.server.rst:483
@@ -620,9 +619,9 @@ msgstr ""
 
 #: ../../library/http.server.rst:501
 msgid ""
-"The default implementation looks the file's extension up in :attr:"
-"`extensions_map`, falling back to :func:`mimetypes.guess_file_type` and then "
-"to :attr:`default_content_type`."
+"The default implementation looks the file's extension up in "
+":attr:`extensions_map`, falling back to :func:`mimetypes.guess_file_type` and"
+" then to :attr:`default_content_type`."
 msgstr ""
 
 #: ../../library/http.server.rst:506
@@ -651,9 +650,9 @@ msgstr ""
 
 #: ../../library/http.server.rst:525
 msgid ""
-":class:`SimpleHTTPRequestHandler` can also be subclassed to enhance "
-"behavior, such as using different index file names by overriding the class "
-"attribute :attr:`~SimpleHTTPRequestHandler.index_pages`."
+":class:`SimpleHTTPRequestHandler` can also be subclassed to enhance behavior,"
+" such as using different index file names by overriding the class attribute "
+":attr:`~SimpleHTTPRequestHandler.index_pages`."
 msgstr ""
 
 #: ../../library/http.server.rst:533
@@ -714,9 +713,9 @@ msgstr ""
 
 #: ../../library/http.server.rst:586
 msgid ""
-"Specifies the HTTP version to which the server is conformant. By default, "
-"the server is conformant to HTTP/1.0. For example, the following command "
-"runs an HTTP/1.1 conformant server:"
+"Specifies the HTTP version to which the server is conformant. By default, the"
+" server is conformant to HTTP/1.0. For example, the following command runs an"
+" HTTP/1.1 conformant server:"
 msgstr ""
 
 #: ../../library/http.server.rst:590
@@ -725,8 +724,8 @@ msgstr ""
 
 #: ../../library/http.server.rst:598
 msgid ""
-"Specifies the default Content-Type HTTP header used when the MIME type "
-"cannot be guessed from the URL's file extension. By default, the server uses "
+"Specifies the default Content-Type HTTP header used when the MIME type cannot"
+" be guessed from the URL's file extension. By default, the server uses "
 "``'application/octet-stream'``:"
 msgstr ""
 
@@ -777,23 +776,23 @@ msgstr ""
 #: ../../library/http.server.rst:658
 msgid ""
 ":class:`SimpleHTTPRequestHandler` will follow symbolic links when handling "
-"requests which makes it possible for files outside of the specified "
-"directory to be served."
+"requests which makes it possible for files outside of the specified directory"
+" to be served."
 msgstr ""
 
 #: ../../library/http.server.rst:662
 msgid ""
-"Methods :meth:`BaseHTTPRequestHandler.send_header` and :meth:"
-"`BaseHTTPRequestHandler.send_response_only` assume sanitized input and do "
-"not perform input validation such as checking for the presence of CRLF "
+"Methods :meth:`BaseHTTPRequestHandler.send_header` and "
+":meth:`BaseHTTPRequestHandler.send_response_only` assume sanitized input and "
+"do not perform input validation such as checking for the presence of CRLF "
 "sequences. Untrusted input may result in HTTP header injection attacks."
 msgstr ""
 
 #: ../../library/http.server.rst:667
 msgid ""
 "Earlier versions of Python did not scrub control characters from the log "
-"messages emitted to stderr from ``python -m http.server`` or the default :"
-"class:`BaseHTTPRequestHandler` ``.log_message`` implementation. This could "
+"messages emitted to stderr from ``python -m http.server`` or the default "
+":class:`BaseHTTPRequestHandler` ``.log_message`` implementation. This could "
 "allow remote clients connecting to your server to send nefarious control "
 "codes to your terminal."
 msgstr ""
@@ -816,7 +815,7 @@ msgstr ""
 
 #: ../../library/http.server.rst:9
 msgid "protocol"
-msgstr ""
+msgstr "Protokoll"
 
 #: ../../library/http.server.rst:9
 msgid "URL"

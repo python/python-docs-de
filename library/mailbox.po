@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -32,11 +31,11 @@ msgstr ""
 #: ../../library/mailbox.rst:11
 msgid ""
 "This module defines two classes, :class:`Mailbox` and :class:`Message`, for "
-"accessing and manipulating on-disk mailboxes and the messages they contain. :"
-"class:`!Mailbox` offers a dictionary-like mapping from keys to messages. :"
-"class:`!Message` extends the :mod:`email.message` module's :class:`~email."
-"message.Message` class with format-specific state and behavior. Supported "
-"mailbox formats are Maildir, mbox, MH, Babyl, and MMDF."
+"accessing and manipulating on-disk mailboxes and the messages they contain. "
+":class:`!Mailbox` offers a dictionary-like mapping from keys to messages. "
+":class:`!Message` extends the :mod:`email.message` module's "
+":class:`~email.message.Message` class with format-specific state and "
+"behavior. Supported mailbox formats are Maildir, mbox, MH, Babyl, and MMDF."
 msgstr ""
 
 #: ../../library/mailbox.rst:21
@@ -58,17 +57,17 @@ msgstr ""
 #: ../../library/mailbox.rst:34
 msgid ""
 "The :class:`!Mailbox` class defines an interface and is not intended to be "
-"instantiated.  Instead, format-specific subclasses should inherit from :"
-"class:`!Mailbox` and your code should instantiate a particular subclass."
+"instantiated.  Instead, format-specific subclasses should inherit from "
+":class:`!Mailbox` and your code should instantiate a particular subclass."
 msgstr ""
 
 #: ../../library/mailbox.rst:38
 msgid ""
 "The :class:`!Mailbox` interface is dictionary-like, with small keys "
 "corresponding to messages. Keys are issued by the :class:`!Mailbox` instance "
-"with which they will be used and are only meaningful to that :class:`!"
-"Mailbox` instance. A key continues to identify a message even if the "
-"corresponding message is modified, such as by replacing it with another "
+"with which they will be used and are only meaningful to that "
+":class:`!Mailbox` instance. A key continues to identify a message even if the"
+" corresponding message is modified, such as by replacing it with another "
 "message."
 msgstr ""
 
@@ -84,10 +83,10 @@ msgid ""
 ":class:`!Mailbox` interface semantics differ from dictionary semantics in "
 "some noteworthy ways. Each time a message is requested, a new representation "
 "(typically a :class:`Message` instance) is generated based upon the current "
-"state of the mailbox. Similarly, when a message is added to a :class:`!"
-"Mailbox` instance, the provided message representation's contents are "
-"copied. In neither case is a reference to the message representation kept by "
-"the :class:`!Mailbox` instance."
+"state of the mailbox. Similarly, when a message is added to a "
+":class:`!Mailbox` instance, the provided message representation's contents "
+"are copied. In neither case is a reference to the message representation kept"
+" by the :class:`!Mailbox` instance."
 msgstr ""
 
 #: ../../library/mailbox.rst:56
@@ -106,8 +105,8 @@ msgstr ""
 msgid ""
 "Be very cautious when modifying mailboxes that might be simultaneously "
 "changed by some other process.  The safest mailbox format to use for such "
-"tasks is :class:`Maildir`; try to avoid using single-file formats such as :"
-"class:`mbox` for concurrent writing.  If you're modifying a mailbox, you "
+"tasks is :class:`Maildir`; try to avoid using single-file formats such as "
+":class:`mbox` for concurrent writing.  If you're modifying a mailbox, you "
 "*must* lock it by calling the :meth:`lock` and :meth:`unlock` methods "
 "*before* reading any messages in the file or making any changes by adding or "
 "deleting a message.  Failing to lock the mailbox runs the risk of losing "
@@ -137,13 +136,13 @@ msgstr ""
 
 #: ../../library/mailbox.rst:94
 msgid ""
-"Parameter *message* may be a :class:`Message` instance, an :class:`email."
-"message.Message` instance, a string, a byte string, or a file-like object "
-"(which should be open in binary mode). If *message* is an instance of the "
-"appropriate format-specific :class:`Message` subclass (e.g., if it's an :"
-"class:`mboxMessage` instance and this is an :class:`mbox` instance), its "
-"format-specific information is used. Otherwise, reasonable defaults for "
-"format-specific information are used."
+"Parameter *message* may be a :class:`Message` instance, an "
+":class:`email.message.Message` instance, a string, a byte string, or a file-"
+"like object (which should be open in binary mode). If *message* is an "
+"instance of the appropriate format-specific :class:`Message` subclass (e.g., "
+"if it's an :class:`mboxMessage` instance and this is an :class:`mbox` "
+"instance), its format-specific information is used. Otherwise, reasonable "
+"defaults for format-specific information are used."
 msgstr ""
 
 #: ../../library/mailbox.rst:103
@@ -158,15 +157,15 @@ msgstr ""
 msgid ""
 "If no such message exists, a :exc:`KeyError` exception is raised if the "
 "method was called as :meth:`remove` or :meth:`__delitem__` but no exception "
-"is raised if the method was called as :meth:`discard`. The behavior of :meth:"
-"`discard` may be preferred if the underlying mailbox format supports "
+"is raised if the method was called as :meth:`discard`. The behavior of "
+":meth:`discard` may be preferred if the underlying mailbox format supports "
 "concurrent modification by other processes."
 msgstr ""
 
 #: ../../library/mailbox.rst:122
 msgid ""
-"Replace the message corresponding to *key* with *message*. Raise a :exc:"
-"`KeyError` exception if no message already corresponds to *key*."
+"Replace the message corresponding to *key* with *message*. Raise a "
+":exc:`KeyError` exception if no message already corresponds to *key*."
 msgstr ""
 
 #: ../../library/mailbox.rst:125
@@ -193,9 +192,9 @@ msgstr ""
 
 #: ../../library/mailbox.rst:150
 msgid ""
-"Return an :term:`iterator` over representations of all messages. The "
-"messages are represented as instances of the appropriate format-specific :"
-"class:`Message` subclass unless a custom message factory was specified when "
+"Return an :term:`iterator` over representations of all messages. The messages"
+" are represented as instances of the appropriate format-specific "
+":class:`Message` subclass unless a custom message factory was specified when "
 "the :class:`!Mailbox` instance was initialized."
 msgstr ""
 
@@ -229,19 +228,18 @@ msgstr ""
 #: ../../library/mailbox.rst:186
 msgid ""
 "Return a representation of the message corresponding to *key*. If no such "
-"message exists, *default* is returned if the method was called as :meth:"
-"`get` and a :exc:`KeyError` exception is raised if the method was called as :"
-"meth:`!__getitem__`. The message is represented as an instance of the "
-"appropriate format-specific :class:`Message` subclass unless a custom "
-"message factory was specified when the :class:`!Mailbox` instance was "
-"initialized."
+"message exists, *default* is returned if the method was called as :meth:`get`"
+" and a :exc:`KeyError` exception is raised if the method was called as "
+":meth:`!__getitem__`. The message is represented as an instance of the "
+"appropriate format-specific :class:`Message` subclass unless a custom message"
+" factory was specified when the :class:`!Mailbox` instance was initialized."
 msgstr ""
 
 #: ../../library/mailbox.rst:197
 msgid ""
 "Return a representation of the message corresponding to *key* as an instance "
-"of the appropriate format-specific :class:`Message` subclass, or raise a :"
-"exc:`KeyError` exception if no such message exists."
+"of the appropriate format-specific :class:`Message` subclass, or raise a "
+":exc:`KeyError` exception if no such message exists."
 msgstr ""
 
 #: ../../library/mailbox.rst:204
@@ -277,9 +275,9 @@ msgstr ""
 #: ../../library/mailbox.rst:234
 msgid ""
 "Unlike other representations of messages, :term:`file-like <file-like "
-"object>` representations are not necessarily independent of the :class:`!"
-"Mailbox` instance that created them or of the underlying mailbox.  More "
-"specific documentation is provided by each subclass."
+"object>` representations are not necessarily independent of the "
+":class:`!Mailbox` instance that created them or of the underlying mailbox.  "
+"More specific documentation is provided by each subclass."
 msgstr ""
 
 #: ../../library/mailbox.rst:243
@@ -298,9 +296,9 @@ msgstr ""
 msgid ""
 "Return a representation of the message corresponding to *key* and delete the "
 "message. If no such message exists, return *default*. The message is "
-"represented as an instance of the appropriate format-specific :class:"
-"`Message` subclass unless a custom message factory was specified when the :"
-"class:`!Mailbox` instance was initialized."
+"represented as an instance of the appropriate format-specific "
+":class:`Message` subclass unless a custom message factory was specified when "
+"the :class:`!Mailbox` instance was initialized."
 msgstr ""
 
 #: ../../library/mailbox.rst:267
@@ -308,9 +306,9 @@ msgid ""
 "Return an arbitrary (*key*, *message*) pair, where *key* is a key and "
 "*message* is a message representation, and delete the corresponding message. "
 "If the mailbox is empty, raise a :exc:`KeyError` exception. The message is "
-"represented as an instance of the appropriate format-specific :class:"
-"`Message` subclass unless a custom message factory was specified when the :"
-"class:`!Mailbox` instance was initialized."
+"represented as an instance of the appropriate format-specific "
+":class:`Message` subclass unless a custom message factory was specified when "
+"the :class:`!Mailbox` instance was initialized."
 msgstr ""
 
 #: ../../library/mailbox.rst:277
@@ -320,8 +318,8 @@ msgid ""
 "and *message*, the message corresponding to *key* is set to *message* as if "
 "by using :meth:`__setitem__`. As with :meth:`__setitem__`, each *key* must "
 "already correspond to a message in the mailbox or else a :exc:`KeyError` "
-"exception will be raised, so in general it is incorrect for *arg* to be a :"
-"class:`!Mailbox` instance."
+"exception will be raised, so in general it is incorrect for *arg* to be a "
+":class:`!Mailbox` instance."
 msgstr ""
 
 #: ../../library/mailbox.rst:287
@@ -339,8 +337,8 @@ msgstr ""
 msgid ""
 "Acquire an exclusive advisory lock on the mailbox so that other processes "
 "know not to modify it. An :exc:`ExternalClashError` is raised if the lock is "
-"not available. The particular locking mechanisms used depend upon the "
-"mailbox format.  You should *always* lock the mailbox before making any "
+"not available. The particular locking mechanisms used depend upon the mailbox"
+" format.  You should *always* lock the mailbox before making any "
 "modifications to its contents."
 msgstr ""
 
@@ -350,8 +348,8 @@ msgstr ""
 
 #: ../../library/mailbox.rst:313
 msgid ""
-"Flush the mailbox, unlock it if necessary, and close any open files. For "
-"some :class:`!Mailbox` subclasses, this method does nothing."
+"Flush the mailbox, unlock it if necessary, and close any open files. For some"
+" :class:`!Mailbox` subclasses, this method does nothing."
 msgstr ""
 
 #: ../../library/mailbox.rst:320
@@ -392,20 +390,20 @@ msgstr ""
 
 #: ../../library/mailbox.rst:344
 msgid ""
-"Maildir mailboxes contain three subdirectories, namely: :file:`tmp`, :file:"
-"`new`, and :file:`cur`. Messages are created momentarily in the :file:`tmp` "
-"subdirectory and then moved to the :file:`new` subdirectory to finalize "
-"delivery. A mail user agent may subsequently move the message to the :file:"
-"`cur` subdirectory and store information about the state of the message in a "
-"special \"info\" section appended to its file name."
+"Maildir mailboxes contain three subdirectories, namely: :file:`tmp`, "
+":file:`new`, and :file:`cur`. Messages are created momentarily in the "
+":file:`tmp` subdirectory and then moved to the :file:`new` subdirectory to "
+"finalize delivery. A mail user agent may subsequently move the message to the"
+" :file:`cur` subdirectory and store information about the state of the "
+"message in a special \"info\" section appended to its file name."
 msgstr ""
 
 #: ../../library/mailbox.rst:351
 msgid ""
 "Folders of the style introduced by the Courier mail transfer agent are also "
 "supported. Any subdirectory of the main mailbox is considered a folder if "
-"``'.'`` is the first character in its name. Folder names are represented by :"
-"class:`!Maildir` without the leading ``'.'``. Each folder is itself a "
+"``'.'`` is the first character in its name. Folder names are represented by "
+":class:`!Maildir` without the leading ``'.'``. Each folder is itself a "
 "Maildir mailbox but should not contain other folders. Instead, a logical "
 "nesting is indicated using ``'.'`` to delimit levels, e.g., "
 "\"Archived.2005.07\"."
@@ -460,8 +458,8 @@ msgstr ""
 #: ../../library/mailbox.rst:399 ../../library/mailbox.rst:692
 msgid ""
 "Delete the folder whose name is *folder*. If the folder contains any "
-"messages, a :exc:`NotEmptyError` exception will be raised and the folder "
-"will not be deleted."
+"messages, a :exc:`NotEmptyError` exception will be raised and the folder will"
+" not be deleted."
 msgstr ""
 
 #: ../../library/mailbox.rst:406
@@ -481,18 +479,19 @@ msgstr ""
 
 #: ../../library/mailbox.rst:420
 msgid ""
-"If you do have a :class:`MaildirMessage` object, use its :meth:"
-"`~MaildirMessage.get_flags` method instead, because changes made by the "
-"message's :meth:`~MaildirMessage.set_flags`, :meth:`~MaildirMessage."
-"add_flag` and :meth:`~MaildirMessage.remove_flag` methods are not reflected "
-"here until the mailbox's :meth:`__setitem__` method is called."
+"If you do have a :class:`MaildirMessage` object, use its "
+":meth:`~MaildirMessage.get_flags` method instead, because changes made by the"
+" message's :meth:`~MaildirMessage.set_flags`, "
+":meth:`~MaildirMessage.add_flag` and :meth:`~MaildirMessage.remove_flag` "
+"methods are not reflected here until the mailbox's :meth:`__setitem__` method"
+" is called."
 msgstr ""
 
 #: ../../library/mailbox.rst:432
 msgid ""
-"On the message corresponding to *key*, set the flags specified by *flags* "
-"and unset all others. Calling ``some_mailbox.set_flags(key, flags)`` is "
-"similar to ::"
+"On the message corresponding to *key*, set the flags specified by *flags* and"
+" unset all others. Calling ``some_mailbox.set_flags(key, flags)`` is similar "
+"to ::"
 msgstr ""
 
 #: ../../library/mailbox.rst:436
@@ -508,24 +507,24 @@ msgstr ""
 
 #: ../../library/mailbox.rst:442
 msgid ""
-"If you do have a :class:`MaildirMessage` object, use its :meth:"
-"`~MaildirMessage.set_flags` method instead, because changes made with this "
-"mailbox method will not be visible to the message object's method, :meth:"
-"`~MaildirMessage.get_flags`."
+"If you do have a :class:`MaildirMessage` object, use its "
+":meth:`~MaildirMessage.set_flags` method instead, because changes made with "
+"this mailbox method will not be visible to the message object's method, "
+":meth:`~MaildirMessage.get_flags`."
 msgstr ""
 
 #: ../../library/mailbox.rst:452
 msgid ""
 "On the message corresponding to *key*, set the flags specified by *flag* "
-"without changing other flags. To add more than one flag at a time, *flag* "
-"may be a string of more than one character."
+"without changing other flags. To add more than one flag at a time, *flag* may"
+" be a string of more than one character."
 msgstr ""
 
 #: ../../library/mailbox.rst:456
 msgid ""
-"Considerations for using this method versus the message object's :meth:"
-"`~MaildirMessage.add_flag` method are similar to those for :meth:"
-"`set_flags`; see the discussion there."
+"Considerations for using this method versus the message object's "
+":meth:`~MaildirMessage.add_flag` method are similar to those for "
+":meth:`set_flags`; see the discussion there."
 msgstr ""
 
 #: ../../library/mailbox.rst:465
@@ -537,9 +536,9 @@ msgstr ""
 
 #: ../../library/mailbox.rst:469
 msgid ""
-"Considerations for using this method versus the message object's :meth:"
-"`~MaildirMessage.remove_flag` method are similar to those for :meth:"
-"`set_flags`; see the discussion there."
+"Considerations for using this method versus the message object's "
+":meth:`~MaildirMessage.remove_flag` method are similar to those for "
+":meth:`set_flags`; see the discussion there."
 msgstr ""
 
 #: ../../library/mailbox.rst:478
@@ -552,8 +551,8 @@ msgstr ""
 
 #: ../../library/mailbox.rst:485
 msgid ""
-"If you do have a :class:`MaildirMessage` object, use its :meth:"
-"`~MaildirMessage.get_info` method instead, because changes made by the "
+"If you do have a :class:`MaildirMessage` object, use its "
+":meth:`~MaildirMessage.get_info` method instead, because changes made by the "
 "message's :meth:`~MaildirMessage.set_info` method are not reflected here "
 "until the mailbox's :meth:`__setitem__` method is called."
 msgstr ""
@@ -573,10 +572,10 @@ msgstr ""
 
 #: ../../library/mailbox.rst:505
 msgid ""
-"If you do have a :class:`MaildirMessage` object, use its :meth:"
-"`~MaildirMessage.set_info` method instead, because changes made with this "
-"mailbox method will not be visible to the message object's method, :meth:"
-"`~MaildirMessage.get_info`."
+"If you do have a :class:`MaildirMessage` object, use its "
+":meth:`~MaildirMessage.set_info` method instead, because changes made with "
+"this mailbox method will not be visible to the message object's method, "
+":meth:`~MaildirMessage.get_info`."
 msgstr ""
 
 #: ../../library/mailbox.rst:512
@@ -589,14 +588,14 @@ msgstr ""
 msgid ""
 "These methods generate unique file names based upon the current process ID. "
 "When using multiple threads, undetected name clashes may occur and cause "
-"corruption of the mailbox unless threads are coordinated to avoid using "
-"these methods to manipulate the same mailbox simultaneously."
+"corruption of the mailbox unless threads are coordinated to avoid using these"
+" methods to manipulate the same mailbox simultaneously."
 msgstr ""
 
 #: ../../library/mailbox.rst:530
 msgid ""
-"All changes to Maildir mailboxes are immediately applied, so this method "
-"does nothing."
+"All changes to Maildir mailboxes are immediately applied, so this method does"
+" nothing."
 msgstr ""
 
 #: ../../library/mailbox.rst:537
@@ -647,29 +646,28 @@ msgid ""
 "A subclass of :class:`Mailbox` for mailboxes in mbox format. Parameter "
 "*factory* is a callable object that accepts a file-like message "
 "representation (which behaves as if opened in binary mode) and returns a "
-"custom representation. If *factory* is ``None``, :class:`mboxMessage` is "
-"used as the default message representation. If *create* is ``True``, the "
-"mailbox is created if it does not exist."
+"custom representation. If *factory* is ``None``, :class:`mboxMessage` is used"
+" as the default message representation. If *create* is ``True``, the mailbox "
+"is created if it does not exist."
 msgstr ""
 
 #: ../../library/mailbox.rst:579
 msgid ""
 "The mbox format is the classic format for storing mail on Unix systems. All "
-"messages in an mbox mailbox are stored in a single file with the beginning "
-"of each message indicated by a line whose first five characters are \"From "
-"\"."
+"messages in an mbox mailbox are stored in a single file with the beginning of"
+" each message indicated by a line whose first five characters are \"From \"."
 msgstr ""
 
 #: ../../library/mailbox.rst:583
 msgid ""
-"Several variations of the mbox format exist to address perceived "
-"shortcomings in the original. In the interest of compatibility, :class:`!"
-"mbox` implements the original format, which is sometimes referred to as :dfn:"
-"`mboxo`. This means that the :mailheader:`Content-Length` header, if "
-"present, is ignored and that any occurrences of \"From \" at the beginning "
-"of a line in a message body are transformed to \">From \" when storing the "
-"message, although occurrences of \">From \" are not transformed to \"From \" "
-"when reading the message."
+"Several variations of the mbox format exist to address perceived shortcomings"
+" in the original. In the interest of compatibility, :class:`!mbox` implements"
+" the original format, which is sometimes referred to as :dfn:`mboxo`. This "
+"means that the :mailheader:`Content-Length` header, if present, is ignored "
+"and that any occurrences of \"From \" at the beginning of a line in a message"
+" body are transformed to \">From \" when storing the message, although "
+"occurrences of \">From \" are not transformed to \"From \" when reading the "
+"message."
 msgstr ""
 
 #: ../../library/mailbox.rst:591
@@ -689,22 +687,22 @@ msgstr ""
 
 #: ../../library/mailbox.rst:603
 msgid ""
-"Using the file after calling :meth:`~Mailbox.flush` or :meth:`~Mailbox."
-"close` on the :class:`!mbox` instance may yield unpredictable results or "
-"raise an exception."
+"Using the file after calling :meth:`~Mailbox.flush` or :meth:`~Mailbox.close`"
+" on the :class:`!mbox` instance may yield unpredictable results or raise an "
+"exception."
 msgstr ""
 
 #: ../../library/mailbox.rst:620 ../../library/mailbox.rst:833
 #: ../../library/mailbox.rst:894
 msgid ""
-"Three locking mechanisms are used---dot locking and, if available, the :c:"
-"func:`!flock` and :c:func:`!lockf` system calls."
+"Three locking mechanisms are used---dot locking and, if available, the "
+":c:func:`!flock` and :c:func:`!lockf` system calls."
 msgstr ""
 
 #: ../../library/mailbox.rst:626
 msgid ""
-"`mbox man page from tin <http://www.tin.org/bin/man.cgi?"
-"section=5&topic=mbox>`_"
+"`mbox man page from tin "
+"<http://www.tin.org/bin/man.cgi?section=5&topic=mbox>`_"
 msgstr ""
 
 #: ../../library/mailbox.rst:627
@@ -749,9 +747,9 @@ msgstr ""
 msgid ""
 "MH is a directory-based mailbox format invented for the MH Message Handling "
 "System, a mail user agent. Each message in an MH mailbox resides in its own "
-"file. An MH mailbox may contain other MH mailboxes (called :dfn:`folders`) "
-"in addition to messages. Folders may be nested indefinitely. MH mailboxes "
-"also support :dfn:`sequences`, which are named lists used to logically group "
+"file. An MH mailbox may contain other MH mailboxes (called :dfn:`folders`) in"
+" addition to messages. Folders may be nested indefinitely. MH mailboxes also "
+"support :dfn:`sequences`, which are named lists used to logically group "
 "messages without moving them to sub-folders. Sequences are defined in a file "
 "called :file:`.mh_sequences` in each folder."
 msgstr ""
@@ -796,8 +794,8 @@ msgstr ""
 #: ../../library/mailbox.rst:705
 msgid ""
 "Re-define the sequences that exist in the mailbox based upon *sequences*, a "
-"dictionary of names mapped to key lists, like returned by :meth:"
-"`get_sequences`."
+"dictionary of names mapped to key lists, like returned by "
+":meth:`get_sequences`."
 msgstr ""
 
 #: ../../library/mailbox.rst:712
@@ -826,9 +824,9 @@ msgstr ""
 
 #: ../../library/mailbox.rst:735
 msgid ""
-"Three locking mechanisms are used---dot locking and, if available, the :c:"
-"func:`!flock` and :c:func:`!lockf` system calls. For MH mailboxes, locking "
-"the mailbox means locking the :file:`.mh_sequences` file and, only for the "
+"Three locking mechanisms are used---dot locking and, if available, the "
+":c:func:`!flock` and :c:func:`!lockf` system calls. For MH mailboxes, locking"
+" the mailbox means locking the :file:`.mh_sequences` file and, only for the "
 "duration of any operations that affect them, locking individual message "
 "files."
 msgstr ""
@@ -857,14 +855,14 @@ msgstr ""
 
 #: ../../library/mailbox.rst:763
 msgid ""
-"Home page of :program:`nmh`, an updated version of the original :program:"
-"`mh`."
+"Home page of :program:`nmh`, an updated version of the original "
+":program:`mh`."
 msgstr ""
 
 #: ../../library/mailbox.rst:765
 msgid ""
-"`MH & nmh: Email for Users & Programmers <https://rand-mh.sourceforge.io/"
-"book/>`_"
+"`MH & nmh: Email for Users & Programmers <https://rand-"
+"mh.sourceforge.io/book/>`_"
 msgstr ""
 
 #: ../../library/mailbox.rst:766
@@ -902,8 +900,8 @@ msgid ""
 "Messages in a Babyl mailbox have two sets of headers, original headers and "
 "so-called visible headers. Visible headers are typically a subset of the "
 "original headers that have been reformatted or abridged to be more "
-"attractive. Each message in a Babyl mailbox also has an accompanying list "
-"of :dfn:`labels`, or short strings that record extra information about the "
+"attractive. Each message in a Babyl mailbox also has an accompanying list of "
+":dfn:`labels`, or short strings that record extra information about the "
 "message, and a list of all user-defined labels found in the mailbox is kept "
 "in the Babyl options section."
 msgstr ""
@@ -934,12 +932,12 @@ msgstr ""
 
 #: ../../library/mailbox.rst:821
 msgid ""
-"In Babyl mailboxes, the headers of a message are not stored contiguously "
-"with the body of the message. To generate a file-like representation, the "
-"headers and body are copied together into an :class:`io.BytesIO` instance, "
-"which has an API identical to that of a file. As a result, the file-like "
-"object is truly independent of the underlying mailbox but does not save "
-"memory compared to a string representation."
+"In Babyl mailboxes, the headers of a message are not stored contiguously with"
+" the body of the message. To generate a file-like representation, the headers"
+" and body are copied together into an :class:`io.BytesIO` instance, which has"
+" an API identical to that of a file. As a result, the file-like object is "
+"truly independent of the underlying mailbox but does not save memory compared"
+" to a string representation."
 msgstr ""
 
 #: ../../library/mailbox.rst:839
@@ -953,8 +951,8 @@ msgstr ""
 
 #: ../../library/mailbox.rst:842
 msgid ""
-"`Reading Mail with Rmail <https://www.gnu.org/software/emacs/manual/"
-"html_node/emacs/Rmail.html>`_"
+"`Reading Mail with Rmail "
+"<https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail.html>`_"
 msgstr ""
 
 #: ../../library/mailbox.rst:843
@@ -970,22 +968,21 @@ msgid ""
 "A subclass of :class:`Mailbox` for mailboxes in MMDF format. Parameter "
 "*factory* is a callable object that accepts a file-like message "
 "representation (which behaves as if opened in binary mode) and returns a "
-"custom representation. If *factory* is ``None``, :class:`MMDFMessage` is "
-"used as the default message representation. If *create* is ``True``, the "
-"mailbox is created if it does not exist."
+"custom representation. If *factory* is ``None``, :class:`MMDFMessage` is used"
+" as the default message representation. If *create* is ``True``, the mailbox "
+"is created if it does not exist."
 msgstr ""
 
 #: ../../library/mailbox.rst:861
 msgid ""
-"MMDF is a single-file mailbox format invented for the Multichannel "
-"Memorandum Distribution Facility, a mail transfer agent. Each message is in "
-"the same form as an mbox message but is bracketed before and after by lines "
-"containing four Control-A (``'\\001'``) characters. As with the mbox format, "
-"the beginning of each message is indicated by a line whose first five "
-"characters are \"From \", but additional occurrences of \"From \" are not "
-"transformed to \">From \" when storing messages because the extra message "
-"separator lines prevent mistaking such occurrences for the starts of "
-"subsequent messages."
+"MMDF is a single-file mailbox format invented for the Multichannel Memorandum"
+" Distribution Facility, a mail transfer agent. Each message is in the same "
+"form as an mbox message but is bracketed before and after by lines containing"
+" four Control-A (``'\\001'``) characters. As with the mbox format, the "
+"beginning of each message is indicated by a line whose first five characters "
+"are \"From \", but additional occurrences of \"From \" are not transformed to"
+" \">From \" when storing messages because the extra message separator lines "
+"prevent mistaking such occurrences for the starts of subsequent messages."
 msgstr ""
 
 #: ../../library/mailbox.rst:870
@@ -996,15 +993,15 @@ msgstr ""
 
 #: ../../library/mailbox.rst:882
 msgid ""
-"Using the file after calling :meth:`~Mailbox.flush` or :meth:`~Mailbox."
-"close` on the :class:`!MMDF` instance may yield unpredictable results or "
-"raise an exception."
+"Using the file after calling :meth:`~Mailbox.flush` or :meth:`~Mailbox.close`"
+" on the :class:`!MMDF` instance may yield unpredictable results or raise an "
+"exception."
 msgstr ""
 
 #: ../../library/mailbox.rst:900
 msgid ""
-"`mmdf man page from tin <http://www.tin.org/bin/man.cgi?"
-"section=5&topic=mmdf>`_"
+"`mmdf man page from tin "
+"<http://www.tin.org/bin/man.cgi?section=5&topic=mmdf>`_"
 msgstr ""
 
 #: ../../library/mailbox.rst:901
@@ -1028,9 +1025,9 @@ msgstr ""
 
 #: ../../library/mailbox.rst:916
 msgid ""
-"A subclass of the :mod:`email.message` module's :class:`~email.message."
-"Message`. Subclasses of :class:`!mailbox.Message` add mailbox-format-"
-"specific state and behavior."
+"A subclass of the :mod:`email.message` module's "
+":class:`~email.message.Message`. Subclasses of :class:`!mailbox.Message` add "
+"mailbox-format-specific state and behavior."
 msgstr ""
 
 #: ../../library/mailbox.rst:920
@@ -1039,8 +1036,8 @@ msgid ""
 "state. If *message* is an :class:`email.message.Message` instance, its "
 "contents are copied; furthermore, any format-specific information is "
 "converted insofar as possible if *message* is a :class:`!Message` instance. "
-"If *message* is a string, a byte string, or a file, it should contain an :"
-"rfc:`5322`\\ -compliant message, which is read and parsed.  Files should be "
+"If *message* is a string, a byte string, or a file, it should contain an "
+":rfc:`5322`\\ -compliant message, which is read and parsed.  Files should be "
 "open in binary mode, but text mode files are accepted for backward "
 "compatibility."
 msgstr ""
@@ -1052,20 +1049,19 @@ msgid ""
 "mailbox that are supported (although presumably the properties are specific "
 "to a particular mailbox format). For example, file offsets for single-file "
 "mailbox formats and file names for directory-based mailbox formats are not "
-"retained, because they are only applicable to the original mailbox. But "
-"state such as whether a message has been read by the user or marked as "
-"important is retained, because it applies to the message itself."
+"retained, because they are only applicable to the original mailbox. But state"
+" such as whether a message has been read by the user or marked as important "
+"is retained, because it applies to the message itself."
 msgstr ""
 
 #: ../../library/mailbox.rst:938
 msgid ""
-"There is no requirement that :class:`!Message` instances be used to "
-"represent messages retrieved using :class:`Mailbox` instances. In some "
-"situations, the time and memory required to generate :class:`!Message` "
-"representations might not be acceptable. For such situations, :class:`!"
-"Mailbox` instances also offer string and file-like representations, and a "
-"custom message factory may be specified when a :class:`!Mailbox` instance is "
-"initialized."
+"There is no requirement that :class:`!Message` instances be used to represent"
+" messages retrieved using :class:`Mailbox` instances. In some situations, the"
+" time and memory required to generate :class:`!Message` representations might"
+" not be acceptable. For such situations, :class:`!Mailbox` instances also "
+"offer string and file-like representations, and a custom message factory may "
+"be specified when a :class:`!Mailbox` instance is initialized."
 msgstr ""
 
 #: ../../library/mailbox.rst:949
@@ -1080,33 +1076,33 @@ msgstr ""
 
 #: ../../library/mailbox.rst:957
 msgid ""
-"Typically, a mail user agent application moves all of the messages in the :"
-"file:`new` subdirectory to the :file:`cur` subdirectory after the first time "
-"the user opens and closes the mailbox, recording that the messages are old "
-"whether or not they've actually been read. Each message in :file:`cur` has "
-"an \"info\" section added to its file name to store information about its "
-"state. (Some mail readers may also add an \"info\" section to messages in :"
-"file:`new`.)  The \"info\" section may take one of two forms: it may contain "
-"\"2,\" followed by a list of standardized flags (e.g., \"2,FR\") or it may "
-"contain \"1,\" followed by so-called experimental information. Standard "
-"flags for Maildir messages are as follows:"
+"Typically, a mail user agent application moves all of the messages in the "
+":file:`new` subdirectory to the :file:`cur` subdirectory after the first time"
+" the user opens and closes the mailbox, recording that the messages are old "
+"whether or not they've actually been read. Each message in :file:`cur` has an"
+" \"info\" section added to its file name to store information about its "
+"state. (Some mail readers may also add an \"info\" section to messages in "
+":file:`new`.)  The \"info\" section may take one of two forms: it may contain"
+" \"2,\" followed by a list of standardized flags (e.g., \"2,FR\") or it may "
+"contain \"1,\" followed by so-called experimental information. Standard flags"
+" for Maildir messages are as follows:"
 msgstr ""
 
 #: ../../library/mailbox.rst:969 ../../library/mailbox.rst:1136
 #: ../../library/mailbox.rst:1507
 msgid "Flag"
-msgstr ""
+msgstr "Flag"
 
 #: ../../library/mailbox.rst:969 ../../library/mailbox.rst:1136
 #: ../../library/mailbox.rst:1507
 msgid "Meaning"
-msgstr ""
+msgstr "Bedeutung"
 
 #: ../../library/mailbox.rst:969 ../../library/mailbox.rst:1136
 #: ../../library/mailbox.rst:1287 ../../library/mailbox.rst:1374
 #: ../../library/mailbox.rst:1507
 msgid "Explanation"
-msgstr ""
+msgstr "Erklärung"
 
 #: ../../library/mailbox.rst:971 ../../library/mailbox.rst:1142
 #: ../../library/mailbox.rst:1513
@@ -1209,15 +1205,15 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1003
 msgid ""
-"Set the subdirectory the message should be stored in. Parameter *subdir* "
-"must be either \"new\" or \"cur\"."
+"Set the subdirectory the message should be stored in. Parameter *subdir* must"
+" be either \"new\" or \"cur\"."
 msgstr ""
 
 #: ../../library/mailbox.rst:1009
 msgid ""
 "Return a string specifying the flags that are currently set. If the message "
-"complies with the standard Maildir format, the result is the concatenation "
-"in alphabetical order of zero or one occurrence of each of ``'D'``, ``'F'``, "
+"complies with the standard Maildir format, the result is the concatenation in"
+" alphabetical order of zero or one occurrence of each of ``'D'``, ``'F'``, "
 "``'P'``, ``'R'``, ``'S'``, and ``'T'``. The empty string is returned if no "
 "flags are set or if \"info\" contains experimental semantics."
 msgstr ""
@@ -1228,16 +1224,16 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1024
 msgid ""
-"Set the flag(s) specified by *flag* without changing other flags. To add "
-"more than one flag at a time, *flag* may be a string of more than one "
-"character. The current \"info\" is overwritten whether or not it contains "
-"experimental information rather than flags."
+"Set the flag(s) specified by *flag* without changing other flags. To add more"
+" than one flag at a time, *flag* may be a string of more than one character. "
+"The current \"info\" is overwritten whether or not it contains experimental "
+"information rather than flags."
 msgstr ""
 
 #: ../../library/mailbox.rst:1032
 msgid ""
-"Unset the flag(s) specified by *flag* without changing other flags. To "
-"remove more than one flag at a time, *flag* may be a string of more than one "
+"Unset the flag(s) specified by *flag* without changing other flags. To remove"
+" more than one flag at a time, *flag* may be a string of more than one "
 "character.  If \"info\" contains experimental information rather than flags, "
 "the current \"info\" is not modified."
 msgstr ""
@@ -1267,10 +1263,10 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1061
 msgid ""
-"When a :class:`!MaildirMessage` instance is created based upon an :class:"
-"`mboxMessage` or :class:`MMDFMessage` instance, the :mailheader:`Status` "
-"and :mailheader:`X-Status` headers are omitted and the following conversions "
-"take place:"
+"When a :class:`!MaildirMessage` instance is created based upon an "
+":class:`mboxMessage` or :class:`MMDFMessage` instance, the "
+":mailheader:`Status` and :mailheader:`X-Status` headers are omitted and the "
+"following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1067 ../../library/mailbox.rst:1085
@@ -1350,8 +1346,8 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1081
 msgid ""
-"When a :class:`!MaildirMessage` instance is created based upon an :class:"
-"`MHMessage` instance, the following conversions take place:"
+"When a :class:`!MaildirMessage` instance is created based upon an "
+":class:`MHMessage` instance, the following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1085 ../../library/mailbox.rst:1224
@@ -1390,8 +1386,8 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1096
 msgid ""
-"When a :class:`!MaildirMessage` instance is created based upon a :class:"
-"`BabylMessage` instance, the following conversions take place:"
+"When a :class:`!MaildirMessage` instance is created based upon a "
+":class:`BabylMessage` instance, the following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1100 ../../library/mailbox.rst:1239
@@ -1505,15 +1501,15 @@ msgid ""
 "leading \"From \" or trailing newline. For convenience, *time_* may be "
 "specified and will be formatted appropriately and appended to *from_*. If "
 "*time_* is specified, it should be a :class:`time.struct_time` instance, a "
-"tuple suitable for passing to :func:`time.strftime`, or ``True`` (to use :"
-"func:`time.gmtime`)."
+"tuple suitable for passing to :func:`time.strftime`, or ``True`` (to use "
+":func:`time.gmtime`)."
 msgstr ""
 
 #: ../../library/mailbox.rst:1175 ../../library/mailbox.rst:1547
 msgid ""
 "Return a string specifying the flags that are currently set. If the message "
-"complies with the conventional format, the result is the concatenation in "
-"the following order of zero or one occurrence of each of ``'R'``, ``'O'``, "
+"complies with the conventional format, the result is the concatenation in the"
+" following order of zero or one occurrence of each of ``'R'``, ``'O'``, "
 "``'D'``, ``'F'``, and ``'A'``."
 msgstr ""
 
@@ -1526,23 +1522,22 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1190 ../../library/mailbox.rst:1562
 msgid ""
-"Set the flag(s) specified by *flag* without changing other flags. To add "
-"more than one flag at a time, *flag* may be a string of more than one "
-"character."
+"Set the flag(s) specified by *flag* without changing other flags. To add more"
+" than one flag at a time, *flag* may be a string of more than one character."
 msgstr ""
 
 #: ../../library/mailbox.rst:1197 ../../library/mailbox.rst:1569
 msgid ""
-"Unset the flag(s) specified by *flag* without changing other flags. To "
-"remove more than one flag at a time, *flag* may be a string of more than one "
+"Unset the flag(s) specified by *flag* without changing other flags. To remove"
+" more than one flag at a time, *flag* may be a string of more than one "
 "character."
 msgstr ""
 
 #: ../../library/mailbox.rst:1201
 msgid ""
-"When an :class:`!mboxMessage` instance is created based upon a :class:"
-"`MaildirMessage` instance, a \"From \" line is generated based upon the :"
-"class:`MaildirMessage` instance's delivery date, and the following "
+"When an :class:`!mboxMessage` instance is created based upon a "
+":class:`MaildirMessage` instance, a \"From \" line is generated based upon "
+"the :class:`MaildirMessage` instance's delivery date, and the following "
 "conversions take place:"
 msgstr ""
 
@@ -1553,8 +1548,8 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1220
 msgid ""
-"When an :class:`!mboxMessage` instance is created based upon an :class:"
-"`MHMessage` instance, the following conversions take place:"
+"When an :class:`!mboxMessage` instance is created based upon an "
+":class:`MHMessage` instance, the following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1226 ../../library/mailbox.rst:1241
@@ -1564,15 +1559,15 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1235
 msgid ""
-"When an :class:`!mboxMessage` instance is created based upon a :class:"
-"`BabylMessage` instance, the following conversions take place:"
+"When an :class:`!mboxMessage` instance is created based upon a "
+":class:`BabylMessage` instance, the following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1250
 msgid ""
-"When a :class:`!mboxMessage` instance is created based upon an :class:"
-"`MMDFMessage` instance, the \"From \" line is copied and all flags directly "
-"correspond:"
+"When a :class:`!mboxMessage` instance is created based upon an "
+":class:`MMDFMessage` instance, the \"From \" line is copied and all flags "
+"directly correspond:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1255
@@ -1592,9 +1587,9 @@ msgstr ""
 #: ../../library/mailbox.rst:1280
 msgid ""
 "MH messages do not support marks or flags in the traditional sense, but they "
-"do support sequences, which are logical groupings of arbitrary messages. "
-"Some mail reading programs (although not the standard :program:`mh` and :"
-"program:`nmh`) use sequences in much the same way flags are used with other "
+"do support sequences, which are logical groupings of arbitrary messages. Some"
+" mail reading programs (although not the standard :program:`mh` and "
+":program:`nmh`) use sequences in much the same way flags are used with other "
 "formats, as follows:"
 msgstr ""
 
@@ -1640,8 +1635,8 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1318
 msgid ""
-"When an :class:`!MHMessage` instance is created based upon a :class:"
-"`MaildirMessage` instance, the following conversions take place:"
+"When an :class:`!MHMessage` instance is created based upon a "
+":class:`MaildirMessage` instance, the following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1324 ../../library/mailbox.rst:1450
@@ -1650,10 +1645,10 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1331
 msgid ""
-"When an :class:`!MHMessage` instance is created based upon an :class:"
-"`mboxMessage` or :class:`MMDFMessage` instance, the :mailheader:`Status` "
-"and :mailheader:`X-Status` headers are omitted and the following conversions "
-"take place:"
+"When an :class:`!MHMessage` instance is created based upon an "
+":class:`mboxMessage` or :class:`MMDFMessage` instance, the "
+":mailheader:`Status` and :mailheader:`X-Status` headers are omitted and the "
+"following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1340 ../../library/mailbox.rst:1468
@@ -1662,8 +1657,8 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1347
 msgid ""
-"When an :class:`!MHMessage` instance is created based upon a :class:"
-"`BabylMessage` instance, the following conversions take place:"
+"When an :class:`!MHMessage` instance is created based upon a "
+":class:`BabylMessage` instance, the following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1362
@@ -1761,9 +1756,9 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1426
 msgid ""
-"Set the message's visible headers to be the same as the headers in "
-"*message*.  Parameter *visible* should be a :class:`Message` instance, an :"
-"class:`email.message.Message` instance, a string, or a file-like object "
+"Set the message's visible headers to be the same as the headers in *message*."
+"  Parameter *visible* should be a :class:`Message` instance, an "
+":class:`email.message.Message` instance, a string, or a file-like object "
 "(which should be open in text mode)."
 msgstr ""
 
@@ -1774,16 +1769,16 @@ msgid ""
 "updates the visible headers as follows: each visible header with a "
 "corresponding original header is set to the value of the original header, "
 "each visible header without a corresponding original header is removed, and "
-"any of :mailheader:`Date`, :mailheader:`From`, :mailheader:`Reply-To`, :"
-"mailheader:`To`, :mailheader:`CC`, and :mailheader:`Subject` that are "
+"any of :mailheader:`Date`, :mailheader:`From`, :mailheader:`Reply-To`, "
+":mailheader:`To`, :mailheader:`CC`, and :mailheader:`Subject` that are "
 "present in the original headers but not the visible headers are added to the "
 "visible headers."
 msgstr ""
 
 #: ../../library/mailbox.rst:1444
 msgid ""
-"When a :class:`!BabylMessage` instance is created based upon a :class:"
-"`MaildirMessage` instance, the following conversions take place:"
+"When a :class:`!BabylMessage` instance is created based upon a "
+":class:`MaildirMessage` instance, the following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1456
@@ -1792,16 +1787,16 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1459
 msgid ""
-"When a :class:`!BabylMessage` instance is created based upon an :class:"
-"`mboxMessage` or :class:`MMDFMessage` instance, the :mailheader:`Status` "
-"and :mailheader:`X-Status` headers are omitted and the following conversions "
-"take place:"
+"When a :class:`!BabylMessage` instance is created based upon an "
+":class:`mboxMessage` or :class:`MMDFMessage` instance, the "
+":mailheader:`Status` and :mailheader:`X-Status` headers are omitted and the "
+"following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1475
 msgid ""
-"When a :class:`!BabylMessage` instance is created based upon an :class:"
-"`MHMessage` instance, the following conversions take place:"
+"When a :class:`!BabylMessage` instance is created based upon an "
+":class:`MHMessage` instance, the following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1490
@@ -1836,29 +1831,29 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1573
 msgid ""
-"When an :class:`!MMDFMessage` instance is created based upon a :class:"
-"`MaildirMessage` instance, a \"From \" line is generated based upon the :"
-"class:`MaildirMessage` instance's delivery date, and the following "
+"When an :class:`!MMDFMessage` instance is created based upon a "
+":class:`MaildirMessage` instance, a \"From \" line is generated based upon "
+"the :class:`MaildirMessage` instance's delivery date, and the following "
 "conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1592
 msgid ""
-"When an :class:`!MMDFMessage` instance is created based upon an :class:"
-"`MHMessage` instance, the following conversions take place:"
+"When an :class:`!MMDFMessage` instance is created based upon an "
+":class:`MHMessage` instance, the following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1607
 msgid ""
-"When an :class:`!MMDFMessage` instance is created based upon a :class:"
-"`BabylMessage` instance, the following conversions take place:"
+"When an :class:`!MMDFMessage` instance is created based upon a "
+":class:`BabylMessage` instance, the following conversions take place:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1622
 msgid ""
-"When an :class:`!MMDFMessage` instance is created based upon an :class:"
-"`mboxMessage` instance, the \"From \" line is copied and all flags directly "
-"correspond:"
+"When an :class:`!MMDFMessage` instance is created based upon an "
+":class:`mboxMessage` instance, the \"From \" line is copied and all flags "
+"directly correspond:"
 msgstr ""
 
 #: ../../library/mailbox.rst:1627
@@ -1908,7 +1903,7 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1682
 msgid "Examples"
-msgstr ""
+msgstr "Beispiele"
 
 #: ../../library/mailbox.rst:1684
 msgid ""
@@ -1927,8 +1922,8 @@ msgstr ""
 
 #: ../../library/mailbox.rst:1693
 msgid ""
-"To copy all mail from a Babyl mailbox to an MH mailbox, converting all of "
-"the format-specific information that can be converted::"
+"To copy all mail from a Babyl mailbox to an MH mailbox, converting all of the"
+" format-specific information that can be converted::"
 msgstr ""
 
 #: ../../library/mailbox.rst:1696

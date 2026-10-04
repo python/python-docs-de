@@ -6,7 +6,6 @@
 # Translators:
 # python-doc bot, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -32,8 +31,8 @@ msgstr ""
 #: ../../library/tomllib.rst:11
 msgid ""
 "This module provides an interface for parsing TOML 1.1.0 (Tom's Obvious "
-"Minimal Language, `https://toml.io <https://toml.io/en/>`_). This module "
-"does not support writing TOML."
+"Minimal Language, `https://toml.io <https://toml.io/en/>`_). This module does"
+" not support writing TOML."
 msgstr ""
 
 #: ../../library/tomllib.rst:15
@@ -42,15 +41,15 @@ msgstr ""
 
 #: ../../library/tomllib.rst:18
 msgid ""
-"Added TOML 1.1.0 support. See the :ref:`What's New <whatsnew315-"
-"tomllib-1-1-0>` for details."
+"Added TOML 1.1.0 support. See the :ref:`What's New "
+"<whatsnew315-tomllib-1-1-0>` for details."
 msgstr ""
 
 #: ../../library/tomllib.rst:24
 msgid ""
-"Be cautious when parsing data from untrusted sources. A malicious TOML "
-"string may cause the decoder to consume considerable CPU and memory "
-"resources. Limiting the size of data to be parsed is recommended."
+"Be cautious when parsing data from untrusted sources. A malicious TOML string"
+" may cause the decoder to consume considerable CPU and memory resources. "
+"Limiting the size of data to be parsed is recommended."
 msgstr ""
 
 #: ../../library/tomllib.rst:31
@@ -63,8 +62,8 @@ msgstr ""
 #: ../../library/tomllib.rst:38
 msgid ""
 "The :pypi:`TOML Kit package <tomlkit>` is a style-preserving TOML library "
-"with both read and write capability. It is a recommended replacement for "
-"this module for editing already existing TOML files."
+"with both read and write capability. It is a recommended replacement for this"
+" module for editing already existing TOML files."
 msgstr ""
 
 #: ../../library/tomllib.rst:44
@@ -74,17 +73,17 @@ msgstr ""
 #: ../../library/tomllib.rst:48
 msgid ""
 "Read a TOML file. The first argument should be a readable and binary file "
-"object. Return a :class:`dict`. Convert TOML types to Python using this :ref:"
-"`conversion table <toml-to-py-table>`."
+"object. Return a :class:`dict`. Convert TOML types to Python using this "
+":ref:`conversion table <toml-to-py-table>`."
 msgstr ""
 
 #: ../../library/tomllib.rst:52
 msgid ""
 "*parse_float* will be called with the string of every TOML float to be "
 "decoded.  By default, this is equivalent to ``float(num_str)``. This can be "
-"used to use another datatype or parser for TOML floats (e.g. :class:`decimal."
-"Decimal`). The callable must not return a :class:`dict` or a :class:`list`, "
-"else a :exc:`ValueError` is raised."
+"used to use another datatype or parser for TOML floats (e.g. "
+":class:`decimal.Decimal`). The callable must not return a :class:`dict` or a "
+":class:`list`, else a :exc:`ValueError` is raised."
 msgstr ""
 
 #: ../../library/tomllib.rst:58 ../../library/tomllib.rst:67
@@ -128,8 +127,8 @@ msgstr ""
 
 #: ../../library/tomllib.rst:96
 msgid ""
-"Added the *msg*, *doc* and *pos* parameters. Added the :attr:`msg`, :attr:"
-"`doc`, :attr:`pos`, :attr:`lineno` and :attr:`colno` attributes."
+"Added the *msg*, *doc* and *pos* parameters. Added the :attr:`msg`, "
+":attr:`doc`, :attr:`pos`, :attr:`lineno` and :attr:`colno` attributes."
 msgstr ""
 
 #: ../../library/tomllib.rst:100
@@ -138,7 +137,7 @@ msgstr ""
 
 #: ../../library/tomllib.rst:105
 msgid "Examples"
-msgstr ""
+msgstr "Beispiele"
 
 #: ../../library/tomllib.rst:107
 msgid "Parsing a TOML file::"
@@ -191,7 +190,7 @@ msgstr ""
 
 #: ../../library/tomllib.rst:136
 msgid "string"
-msgstr ""
+msgstr "Zeichenkette"
 
 #: ../../library/tomllib.rst:136
 msgid "str"
@@ -199,15 +198,15 @@ msgstr ""
 
 #: ../../library/tomllib.rst:138
 msgid "integer"
-msgstr ""
+msgstr "Ganzzahl"
 
 #: ../../library/tomllib.rst:138
 msgid "int"
-msgstr ""
+msgstr "int"
 
 #: ../../library/tomllib.rst:140
 msgid "float"
-msgstr ""
+msgstr "float"
 
 #: ../../library/tomllib.rst:140
 msgid "float (configurable with *parse_float*)"
@@ -227,8 +226,8 @@ msgstr ""
 
 #: ../../library/tomllib.rst:144
 msgid ""
-"datetime.datetime (``tzinfo`` attribute set to an instance of ``datetime."
-"timezone``)"
+"datetime.datetime (``tzinfo`` attribute set to an instance of "
+"``datetime.timezone``)"
 msgstr ""
 
 #: ../../library/tomllib.rst:146
@@ -261,7 +260,7 @@ msgstr "Array"
 
 #: ../../library/tomllib.rst:152
 msgid "list"
-msgstr ""
+msgstr "Liste"
 
 #: ../../library/tomllib.rst:154
 msgid "table"
@@ -286,9 +285,9 @@ msgstr ""
 #: ../../library/tomllib.rst:164
 msgid ""
 ":mod:`!tomllib` places some limits on the documents it can handle, and it "
-"preserves details that other TOML parsers are allowed to ignore. When "
-"writing portable TOML files, only use features that are guaranteed or "
-"recommended by the standard."
+"preserves details that other TOML parsers are allowed to ignore. When writing"
+" portable TOML files, only use features that are guaranteed or recommended by"
+" the standard."
 msgstr ""
 
 #: ../../library/tomllib.rst:169
@@ -303,8 +302,8 @@ msgstr ""
 
 #: ../../library/tomllib.rst:172
 msgid ""
-"The TOML spec does not guarantee key/value pairs in TOML documents and "
-"tables to be in any specific order."
+"The TOML spec does not guarantee key/value pairs in TOML documents and tables"
+" to be in any specific order."
 msgstr ""
 
 #: ../../library/tomllib.rst:176
@@ -358,7 +357,7 @@ msgstr ""
 
 #: ../../library/tomllib.rst:202
 msgid ""
-"In :mod:`!tomllib`, the nesting level is mainly limited by Python's :func:"
-"`recursion limit <sys.getrecursionlimit>`. Note that code that calls :mod:`!"
-"tomllib` may contribute to the limit."
+"In :mod:`!tomllib`, the nesting level is mainly limited by Python's "
+":func:`recursion limit <sys.getrecursionlimit>`. Note that code that calls "
+":mod:`!tomllib` may contribute to the limit."
 msgstr ""

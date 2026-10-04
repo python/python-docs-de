@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -19,14 +18,17 @@ msgstr ""
 
 #: ../../library/functional.rst:3
 msgid "Functional Programming Modules"
-msgstr ""
+msgstr "Module zur funktionalen Programmierung"
 
 #: ../../library/functional.rst:5
 msgid ""
 "The modules described in this chapter provide functions and classes that "
 "support a functional programming style, and general operations on callables."
 msgstr ""
+"Die in diesem Kapitel beschriebenen Module bieten Funktionen und Klassen, die"
+" einen funktionalen Programmierstil sowie allgemeine Operationen auf "
+"aufrufbaren Objekten unterstützen."
 
 #: ../../library/functional.rst:8
 msgid "The following modules are documented in this chapter:"
-msgstr ""
+msgstr "In diesem Kapitel werden die folgenden Module beschrieben:"

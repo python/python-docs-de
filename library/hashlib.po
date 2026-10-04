@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
@@ -30,14 +29,14 @@ msgid ""
 "This module implements a common interface to many different hash algorithms. "
 "Included are the FIPS secure hash algorithms SHA224, SHA256, SHA384, SHA512, "
 "(defined in `the FIPS 180-4 standard`_), the SHA-3 series (defined in `the "
-"FIPS 202 standard`_) as well as the legacy algorithms SHA1 (`formerly part "
-"of FIPS`_) and the MD5 algorithm (defined in internet :rfc:`1321`)."
+"FIPS 202 standard`_) as well as the legacy algorithms SHA1 (`formerly part of"
+" FIPS`_) and the MD5 algorithm (defined in internet :rfc:`1321`)."
 msgstr ""
 
 #: ../../library/hashlib.rst:28
 msgid ""
-"If you want the adler32 or crc32 hash functions, they are available in the :"
-"mod:`zlib` module."
+"If you want the adler32 or crc32 hash functions, they are available in the "
+":mod:`zlib` module."
 msgstr ""
 
 #: ../../library/hashlib.rst:35
@@ -47,29 +46,29 @@ msgstr ""
 #: ../../library/hashlib.rst:37
 msgid ""
 "There is one constructor method named for each type of :dfn:`hash`.  All "
-"return a hash object with the same simple interface. For example: use :func:"
-"`sha256` to create a SHA-256 hash object. You can now feed this object with :"
-"term:`bytes-like objects <bytes-like object>` (normally :class:`bytes`) "
-"using the :meth:`update<hash.update>` method.  At any point you can ask it "
-"for the :dfn:`digest` of the concatenation of the data fed to it so far "
-"using the :meth:`digest()<hash.digest>` or :meth:`hexdigest()<hash."
-"hexdigest>` methods."
+"return a hash object with the same simple interface. For example: use "
+":func:`sha256` to create a SHA-256 hash object. You can now feed this object "
+"with :term:`bytes-like objects <bytes-like object>` (normally :class:`bytes`)"
+" using the :meth:`update<hash.update>` method.  At any point you can ask it "
+"for the :dfn:`digest` of the concatenation of the data fed to it so far using"
+" the :meth:`digest()<hash.digest>` or :meth:`hexdigest()<hash.hexdigest>` "
+"methods."
 msgstr ""
 
 #: ../../library/hashlib.rst:45
 msgid ""
-"To allow multithreading, the Python :term:`GIL` is released while computing "
-"a hash supplied more than 2047 bytes of data at once in its constructor or :"
-"meth:`.update<hash.update>` method."
+"To allow multithreading, the Python :term:`GIL` is released while computing a"
+" hash supplied more than 2047 bytes of data at once in its constructor or "
+":meth:`.update<hash.update>` method."
 msgstr ""
 
 #: ../../library/hashlib.rst:52
 msgid ""
-"Constructors for hash algorithms that are always present in this module are :"
-"func:`md5`, :func:`sha1`, :func:`sha224`, :func:`sha256`, :func:`sha384`, :"
-"func:`sha512`, :func:`sha3_224`, :func:`sha3_256`, :func:`sha3_384`, :func:"
-"`sha3_512`, :func:`shake_128`, :func:`shake_256`, :func:`blake2b`, and :func:"
-"`blake2s`.  These correspond to :data:`algorithms_guaranteed`."
+"Constructors for hash algorithms that are always present in this module are "
+":func:`md5`, :func:`sha1`, :func:`sha224`, :func:`sha256`, :func:`sha384`, "
+":func:`sha512`, :func:`sha3_224`, :func:`sha3_256`, :func:`sha3_384`, "
+":func:`sha3_512`, :func:`shake_128`, :func:`shake_256`, :func:`blake2b`, and "
+":func:`blake2s`.  These correspond to :data:`algorithms_guaranteed`."
 msgstr ""
 
 #: ../../library/hashlib.rst:58
@@ -77,14 +76,14 @@ msgid ""
 "Any of these may nonetheless be missing or blocked in unusual environments, "
 "such as a rare \"FIPS compliant\" build of Python or when OpenSSL's \"FIPS "
 "mode\" is configured to exclude some algorithms from its default provider.  "
-"Calling the constructor of an algorithm that is unavailable raises :exc:"
-"`ValueError`."
+"Calling the constructor of an algorithm that is unavailable raises "
+":exc:`ValueError`."
 msgstr ""
 
 #: ../../library/hashlib.rst:63
 msgid ""
-"Additional algorithms may also be available if your Python distribution's :"
-"mod:`!hashlib` was linked against a build of OpenSSL that provides others. "
+"Additional algorithms may also be available if your Python distribution's "
+":mod:`!hashlib` was linked against a build of OpenSSL that provides others. "
 "Others *are not guaranteed available* on all installations and will only be "
 "accessible by name via :func:`new`.  See :data:`algorithms_available`."
 msgstr ""
@@ -98,9 +97,9 @@ msgstr ""
 
 #: ../../library/hashlib.rst:74
 msgid ""
-"SHA3 (Keccak) and SHAKE constructors :func:`sha3_224`, :func:`sha3_256`, :"
-"func:`sha3_384`, :func:`sha3_512`, :func:`shake_128`, :func:`shake_256` were "
-"added. :func:`blake2b` and :func:`blake2s` were added."
+"SHA3 (Keccak) and SHAKE constructors :func:`sha3_224`, :func:`sha3_256`, "
+":func:`sha3_384`, :func:`sha3_512`, :func:`shake_128`, :func:`shake_256` were"
+" added. :func:`blake2b` and :func:`blake2s` were added."
 msgstr ""
 
 #: ../../library/hashlib.rst:82
@@ -148,9 +147,7 @@ msgid ""
 ">>> m.update(b\"Nobody inspects\")\n"
 ">>> m.update(b\" the spammish repetition\")\n"
 ">>> m.digest()\n"
-"b'\\x03\\x1e\\xdd}Ae\\x15\\x93\\xc5\\xfe\\\\"
-"\\x00o\\xa5u+7\\xfd\\xdf\\xf7\\xbcN\\x84:"
-"\\xa6\\xaf\\x0c\\x95\\x0fK\\x94\\x06'\n"
+"b'\\x03\\x1e\\xdd}Ae\\x15\\x93\\xc5\\xfe\\\\\\x00o\\xa5u+7\\xfd\\xdf\\xf7\\xbcN\\x84:\\xa6\\xaf\\x0c\\x95\\x0fK\\x94\\x06'\n"
 ">>> m.hexdigest()\n"
 "'031edd7d41651593c5fe5c006fa5752b37fddff7bc4e843aa6af0c950f4b9406'"
 msgstr ""
@@ -167,8 +164,8 @@ msgstr ""
 msgid ""
 "Is a generic constructor that takes the string *name* of the desired "
 "algorithm as its first parameter.  It also exists to allow access to the "
-"above listed hashes as well as any other algorithms that your OpenSSL "
-"library may offer."
+"above listed hashes as well as any other algorithms that your OpenSSL library"
+" may offer."
 msgstr ""
 
 #: ../../library/hashlib.rst:134
@@ -177,8 +174,8 @@ msgstr ""
 
 #: ../../library/hashlib.rst:153
 msgid ""
-"Named constructors such as these are faster than passing an algorithm name "
-"to :func:`new`."
+"Named constructors such as these are faster than passing an algorithm name to"
+" :func:`new`."
 msgstr ""
 
 #: ../../library/hashlib.rst:157
@@ -200,8 +197,8 @@ msgstr ""
 #: ../../library/hashlib.rst:172
 msgid ""
 "A set containing the names of the hash algorithms that are available in the "
-"running Python interpreter.  These names will be recognized when passed to :"
-"func:`new`.  :attr:`algorithms_guaranteed` will always be a subset.  The "
+"running Python interpreter.  These names will be recognized when passed to "
+":func:`new`.  :attr:`algorithms_guaranteed` will always be a subset.  The "
 "same algorithm may appear multiple times in this set under different names "
 "(thanks to OpenSSL)."
 msgstr ""
@@ -236,9 +233,8 @@ msgstr ""
 
 #: ../../library/hashlib.rst:201
 msgid ""
-"The name attribute has been present in CPython since its inception, but "
-"until Python 3.4 was not formally specified, so may not exist on some "
-"platforms."
+"The name attribute has been present in CPython since its inception, but until"
+" Python 3.4 was not formally specified, so may not exist on some platforms."
 msgstr ""
 
 #: ../../library/hashlib.rst:206
@@ -247,16 +243,16 @@ msgstr ""
 
 #: ../../library/hashlib.rst:211
 msgid ""
-"Update the hash object with the :term:`bytes-like object`. Repeated calls "
-"are equivalent to a single call with the concatenation of all the arguments: "
+"Update the hash object with the :term:`bytes-like object`. Repeated calls are"
+" equivalent to a single call with the concatenation of all the arguments: "
 "``m.update(a); m.update(b)`` is equivalent to ``m.update(a+b)``."
 msgstr ""
 
 #: ../../library/hashlib.rst:219
 msgid ""
 "Return the digest of the data passed to the :meth:`update` method so far. "
-"This is a bytes object of size :attr:`digest_size` which may contain bytes "
-"in the whole range from 0 to 255."
+"This is a bytes object of size :attr:`digest_size` which may contain bytes in"
+" the whole range from 0 to 255."
 msgstr ""
 
 #: ../../library/hashlib.rst:226
@@ -280,8 +276,8 @@ msgstr ""
 msgid ""
 "The :func:`shake_128` and :func:`shake_256` algorithms provide variable "
 "length digests with length_in_bits//2 up to 128 or 256 bits of security. As "
-"such, their digest methods require a length. Maximum length is not limited "
-"by the SHAKE algorithm."
+"such, their digest methods require a length. Maximum length is not limited by"
+" the SHAKE algorithm."
 msgstr ""
 
 #: ../../library/hashlib.rst:250
@@ -308,8 +304,8 @@ msgstr ""
 
 #: ../../library/hashlib.rst:270
 msgid ""
-"The hashlib module provides a helper function for efficient hashing of a "
-"file or file-like object."
+"The hashlib module provides a helper function for efficient hashing of a file"
+" or file-like object."
 msgstr ""
 
 #: ../../library/hashlib.rst:275
@@ -321,28 +317,28 @@ msgstr ""
 msgid ""
 "*fileobj* must be a file-like object opened for reading in binary mode. It "
 "accepts file objects from  builtin :func:`open`, :class:`~io.BytesIO` "
-"instances, SocketIO objects from :meth:`socket.socket.makefile`, and "
-"similar. *fileobj* must be opened in blocking mode, otherwise a :exc:"
-"`BlockingIOError` may be raised."
+"instances, SocketIO objects from :meth:`socket.socket.makefile`, and similar."
+" *fileobj* must be opened in blocking mode, otherwise a "
+":exc:`BlockingIOError` may be raised."
 msgstr ""
 
 #: ../../library/hashlib.rst:283
 msgid ""
-"The function may bypass Python's I/O and use the file descriptor from :meth:"
-"`~io.IOBase.fileno` directly. *fileobj* must be assumed to be in an unknown "
-"state after this function returns or raises. It is up to the caller to close "
-"*fileobj*."
+"The function may bypass Python's I/O and use the file descriptor from "
+":meth:`~io.IOBase.fileno` directly. *fileobj* must be assumed to be in an "
+"unknown state after this function returns or raises. It is up to the caller "
+"to close *fileobj*."
 msgstr ""
 
 #: ../../library/hashlib.rst:288
 msgid ""
-"*digest* must either be a hash algorithm name as a *str*, a hash "
-"constructor, or a callable that returns a hash object."
+"*digest* must either be a hash algorithm name as a *str*, a hash constructor,"
+" or a callable that returns a hash object."
 msgstr ""
 
 #: ../../library/hashlib.rst:291
 msgid "Example:"
-msgstr ""
+msgstr "Beispiel:"
 
 #: ../../library/hashlib.rst:312
 msgid ""
@@ -356,11 +352,11 @@ msgstr ""
 
 #: ../../library/hashlib.rst:320
 msgid ""
-"Key derivation and key stretching algorithms are designed for secure "
-"password hashing. Naive algorithms such as ``sha1(password)`` are not "
-"resistant against brute-force attacks. A good password hashing function must "
-"be tunable, slow, and include a `salt <https://en.wikipedia.org/wiki/"
-"Salt_%28cryptography%29>`_."
+"Key derivation and key stretching algorithms are designed for secure password"
+" hashing. Naive algorithms such as ``sha1(password)`` are not resistant "
+"against brute-force attacks. A good password hashing function must be "
+"tunable, slow, and include a `salt "
+"<https://en.wikipedia.org/wiki/Salt_%28cryptography%29>`_."
 msgstr ""
 
 #: ../../library/hashlib.rst:328
@@ -412,17 +408,17 @@ msgstr ""
 
 #: ../../library/hashlib.rst:365
 msgid ""
-"*password* and *salt* must be :term:`bytes-like objects <bytes-like "
-"object>`.  Applications and libraries should limit *password* to a sensible "
-"length (e.g. 1024).  *salt* should be about 16 or more bytes from a proper "
-"source, e.g. :func:`os.urandom`."
+"*password* and *salt* must be :term:`bytes-like objects <bytes-like object>`."
+"  Applications and libraries should limit *password* to a sensible length "
+"(e.g. 1024).  *salt* should be about 16 or more bytes from a proper source, "
+"e.g. :func:`os.urandom`."
 msgstr ""
 
 #: ../../library/hashlib.rst:370
 msgid ""
 "*n* is the CPU/Memory cost factor, *r* the block size, *p* parallelization "
-"factor and *maxmem* limits memory (OpenSSL 1.1.0 defaults to 32 MiB). "
-"*dklen* is the length of the derived key in bytes."
+"factor and *maxmem* limits memory (OpenSSL 1.1.0 defaults to 32 MiB). *dklen*"
+" is the length of the derived key in bytes."
 msgstr ""
 
 #: ../../library/hashlib.rst:380
@@ -431,8 +427,8 @@ msgstr ""
 
 #: ../../library/hashlib.rst:385
 msgid ""
-"BLAKE2_ is a cryptographic hash function defined in :rfc:`7693` that comes "
-"in two flavors:"
+"BLAKE2_ is a cryptographic hash function defined in :rfc:`7693` that comes in"
+" two flavors:"
 msgstr ""
 
 #: ../../library/hashlib.rst:388
@@ -443,8 +439,8 @@ msgstr ""
 
 #: ../../library/hashlib.rst:391
 msgid ""
-"**BLAKE2s**, optimized for 8- to 32-bit platforms and produces digests of "
-"any size between 1 and 32 bytes."
+"**BLAKE2s**, optimized for 8- to 32-bit platforms and produces digests of any"
+" size between 1 and 32 bytes."
 msgstr ""
 
 #: ../../library/hashlib.rst:394
@@ -455,8 +451,8 @@ msgstr ""
 
 #: ../../library/hashlib.rst:397
 msgid ""
-"Hash objects from this module follow the API of standard library's :mod:`!"
-"hashlib` objects."
+"Hash objects from this module follow the API of standard library's "
+":mod:`!hashlib` objects."
 msgstr ""
 
 #: ../../library/hashlib.rst:402
@@ -469,8 +465,8 @@ msgstr ""
 
 #: ../../library/hashlib.rst:418
 msgid ""
-"These functions return the corresponding hash objects for calculating "
-"BLAKE2b or BLAKE2s. They optionally take these general parameters:"
+"These functions return the corresponding hash objects for calculating BLAKE2b"
+" or BLAKE2s. They optionally take these general parameters:"
 msgstr ""
 
 #: ../../library/hashlib.rst:421
@@ -535,7 +531,7 @@ msgstr ""
 
 #: ../../library/hashlib.rst:440
 msgid "16"
-msgstr ""
+msgstr "16"
 
 #: ../../library/hashlib.rst:441
 msgid "BLAKE2s"
@@ -547,16 +543,16 @@ msgstr ""
 
 #: ../../library/hashlib.rst:441
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: ../../library/hashlib.rst:446
 msgid ""
 "BLAKE2 specification defines constant lengths for salt and personalization "
 "parameters, however, for convenience, this implementation accepts byte "
 "strings of any size up to the specified length. If the length of the "
-"parameter is less than specified, it is padded with zeros, thus, for "
-"example, ``b'salt'`` and ``b'salt\\x00'`` is the same value. (This is not "
-"the case for *key*.)"
+"parameter is less than specified, it is padded with zeros, thus, for example,"
+" ``b'salt'`` and ``b'salt\\x00'`` is the same value. (This is not the case "
+"for *key*.)"
 msgstr ""
 
 #: ../../library/hashlib.rst:453
@@ -580,8 +576,8 @@ msgstr ""
 
 #: ../../library/hashlib.rst:462
 msgid ""
-"*leaf_size*: maximal byte length of leaf (0 to ``2**32-1``, 0 if unlimited "
-"or in sequential mode)."
+"*leaf_size*: maximal byte length of leaf (0 to ``2**32-1``, 0 if unlimited or"
+" in sequential mode)."
 msgstr ""
 
 #: ../../library/hashlib.rst:465
@@ -613,8 +609,9 @@ msgstr ""
 
 #: ../../library/hashlib.rst:480
 msgid ""
-"See section 2.10 in `BLAKE2 specification <https://www.blake2.net/"
-"blake2_20130129.pdf>`_ for comprehensive review of tree hashing."
+"See section 2.10 in `BLAKE2 specification "
+"<https://www.blake2.net/blake2_20130129.pdf>`_ for comprehensive review of "
+"tree hashing."
 msgstr ""
 
 #: ../../library/hashlib.rst:486
@@ -640,7 +637,7 @@ msgstr ""
 
 #: ../../library/hashlib.rst:513
 msgid "Examples"
-msgstr ""
+msgstr "Beispiele"
 
 #: ../../library/hashlib.rst:516
 msgid "Simple hashing"
@@ -649,16 +646,17 @@ msgstr ""
 #: ../../library/hashlib.rst:518
 msgid ""
 "To calculate hash of some data, you should first construct a hash object by "
-"calling the appropriate constructor function (:func:`blake2b` or :func:"
-"`blake2s`), then update it with the data by calling :meth:`~hash.update` on "
-"the object, and, finally, get the digest out of the object by calling :meth:"
-"`~hash.digest` (or :meth:`~hash.hexdigest` for hex-encoded string)."
+"calling the appropriate constructor function (:func:`blake2b` or "
+":func:`blake2s`), then update it with the data by calling "
+":meth:`~hash.update` on the object, and, finally, get the digest out of the "
+"object by calling :meth:`~hash.digest` (or :meth:`~hash.hexdigest` for hex-"
+"encoded string)."
 msgstr ""
 
 #: ../../library/hashlib.rst:531
 msgid ""
-"As a shortcut, you can pass the first chunk of data to update directly to "
-"the constructor as the positional argument:"
+"As a shortcut, you can pass the first chunk of data to update directly to the"
+" constructor as the positional argument:"
 msgstr ""
 
 #: ../../library/hashlib.rst:538
@@ -692,15 +690,16 @@ msgstr ""
 #: ../../library/hashlib.rst:586
 msgid ""
 "Keyed hashing can be used for authentication as a faster and simpler "
-"replacement for `Hash-based message authentication code <https://en."
-"wikipedia.org/wiki/HMAC>`_ (HMAC). BLAKE2 can be securely used in prefix-MAC "
-"mode thanks to the indifferentiability property inherited from BLAKE."
+"replacement for `Hash-based message authentication code "
+"<https://en.wikipedia.org/wiki/HMAC>`_ (HMAC). BLAKE2 can be securely used in"
+" prefix-MAC mode thanks to the indifferentiability property inherited from "
+"BLAKE."
 msgstr ""
 
 #: ../../library/hashlib.rst:592
 msgid ""
-"This example shows how to get a (hex-encoded) 128-bit authentication code "
-"for message ``b'message data'`` with key ``b'pseudorandom key'``::"
+"This example shows how to get a (hex-encoded) 128-bit authentication code for"
+" message ``b'message data'`` with key ``b'pseudorandom key'``::"
 msgstr ""
 
 #: ../../library/hashlib.rst:595
@@ -714,8 +713,8 @@ msgstr ""
 
 #: ../../library/hashlib.rst:602
 msgid ""
-"As a practical example, a web application can symmetrically sign cookies "
-"sent to users and later verify them to make sure they weren't tampered with::"
+"As a practical example, a web application can symmetrically sign cookies sent"
+" to users and later verify them to make sure they weren't tampered with::"
 msgstr ""
 
 #: ../../library/hashlib.rst:605
@@ -779,25 +778,25 @@ msgid ""
 "preparer, generates all or part of a message to be signed by a second party, "
 "the message signer. If the message preparer is able to find cryptographic "
 "hash function collisions (i.e., two messages producing the same hash value), "
-"then they might prepare meaningful versions of the message that would "
-"produce the same hash value and digital signature, but with different "
-"results (e.g., transferring $1,000,000 to an account, rather than $10). "
-"Cryptographic hash functions have been designed with collision resistance as "
-"a major goal, but the current concentration on attacking cryptographic hash "
-"functions may result in a given cryptographic hash function providing less "
-"collision resistance than expected. Randomized hashing offers the signer "
-"additional protection by reducing the likelihood that a preparer can "
-"generate two or more messages that ultimately yield the same hash value "
-"during the digital signature generation process --- even if it is practical "
-"to find collisions for the hash function. However, the use of randomized "
-"hashing may reduce the amount of security provided by a digital signature "
-"when all portions of the message are prepared by the signer."
+"then they might prepare meaningful versions of the message that would produce"
+" the same hash value and digital signature, but with different results (e.g.,"
+" transferring $1,000,000 to an account, rather than $10). Cryptographic hash "
+"functions have been designed with collision resistance as a major goal, but "
+"the current concentration on attacking cryptographic hash functions may "
+"result in a given cryptographic hash function providing less collision "
+"resistance than expected. Randomized hashing offers the signer additional "
+"protection by reducing the likelihood that a preparer can generate two or "
+"more messages that ultimately yield the same hash value during the digital "
+"signature generation process --- even if it is practical to find collisions "
+"for the hash function. However, the use of randomized hashing may reduce the "
+"amount of security provided by a digital signature when all portions of the "
+"message are prepared by the signer."
 msgstr ""
 
 #: ../../library/hashlib.rst:667
 msgid ""
-"(`NIST SP-800-106 \"Randomized Hashing for Digital Signatures\" <https://"
-"csrc.nist.gov/pubs/sp/800/106/final>`_)"
+"(`NIST SP-800-106 \"Randomized Hashing for Digital Signatures\" "
+"<https://csrc.nist.gov/pubs/sp/800/106/final>`_)"
 msgstr ""
 
 #: ../../library/hashlib.rst:670
@@ -827,18 +826,18 @@ msgstr ""
 
 #: ../../library/hashlib.rst:704
 msgid ""
-"We recommend that all application designers seriously consider doing this; "
-"we have seen many protocols where a hash that is computed in one part of the "
+"We recommend that all application designers seriously consider doing this; we"
+" have seen many protocols where a hash that is computed in one part of the "
 "protocol can be used in an entirely different part because two hash "
-"computations were done on similar or related data, and the attacker can "
-"force the application to make the hash inputs the same. Personalizing each "
-"hash function used in the protocol summarily stops this type of attack."
+"computations were done on similar or related data, and the attacker can force"
+" the application to make the hash inputs the same. Personalizing each hash "
+"function used in the protocol summarily stops this type of attack."
 msgstr ""
 
 #: ../../library/hashlib.rst:711
 msgid ""
-"(`The Skein Hash Function Family <https://www.schneier.com/wp-content/"
-"uploads/2016/02/skein.pdf>`_, p. 21)"
+"(`The Skein Hash Function Family <https://www.schneier.com/wp-"
+"content/uploads/2016/02/skein.pdf>`_, p. 21)"
 msgstr ""
 
 #: ../../library/hashlib.rst:715
@@ -961,8 +960,8 @@ msgstr ""
 #: ../../library/hashlib.rst:803
 msgid ""
 "You should have received a copy of the CC0 Public Domain Dedication along "
-"with this software. If not, see https://creativecommons.org/publicdomain/"
-"zero/1.0/."
+"with this software. If not, see "
+"https://creativecommons.org/publicdomain/zero/1.0/."
 msgstr ""
 
 #: ../../library/hashlib.rst:807
