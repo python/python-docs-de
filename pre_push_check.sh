@@ -78,7 +78,25 @@ if ! $NONINTERACTIVE; then
 fi
 
 if $RUN_QUICK; then
-    log_section "1a/4  msgfmt --check (Syntax)"
+    log_section "1a/5  powrap (Zeilenumbruch auf 80 Zeichen)"
+    if ! command -v powrap &>/dev/null; then
+        echo "powrap nicht gefunden -- installiere mit: pip install powrap"
+    else
+        # Die CI formatiert nach jedem Push automatisch mit powrap und
+        # committet das Ergebnis. Wer lokal nicht formatiert, bekommt beim
+        # naechsten Rebase Konflikte in genau diesen Zeilen. Deshalb hier.
+        vorher=$(git -C "$REPO_ROOT" diff --name-only -- '*.po' | wc -l | tr -d ' ')
+        powrap -m 2>/dev/null
+        nachher=$(git -C "$REPO_ROOT" diff --name-only -- '*.po' | wc -l | tr -d ' ')
+        if [[ "$vorher" != "$nachher" ]]; then
+            echo "powrap hat weitere Dateien umbrochen -- bitte mit committen."
+        else
+            echo "OK -- Umbruch war bereits sauber."
+        fi
+        pass=$((pass + 1))
+    fi
+
+    log_section "1b/5  msgfmt --check (Syntax)"
     msgfmt_errors=0
     while IFS= read -r -d '' po; do
         rel="${po#"$REPO_ROOT"/}"
@@ -97,7 +115,7 @@ if $RUN_QUICK; then
         fail=$((fail + 1))
     fi
 
-    log_section "1b/4  sphinx-lint (Backtick-/Rollen-Syntax)"
+    log_section "1c/5  sphinx-lint (Backtick-/Rollen-Syntax)"
     if ! command -v sphinx-lint &>/dev/null; then
         echo "sphinx-lint nicht gefunden -- installiere mit: pip install sphinx-lint"
         fail=$((fail + 1))
@@ -118,7 +136,7 @@ if $RUN_QUICK; then
         fi
     fi
 
-    log_section "1c/4  Rollen-Konsistenz (eigener Check, kein Build noetig)"
+    log_section "1d/5  Rollen-Konsistenz (eigener Check, kein Build noetig)"
     if [[ ! -f "$CHECK_ROLES_PY" ]]; then
         echo "check_roles.py nicht gefunden unter $CHECK_ROLES_PY -- Schritt uebersprungen."
     else
@@ -129,7 +147,7 @@ if $RUN_QUICK; then
         fi
     fi
 
-    log_section "1d/4  Auszeichnung (ueberfluessige Backticks, Codebloecke, Literale)"
+    log_section "1e/5  Auszeichnung (ueberfluessige Backticks, Codebloecke, Literale)"
     if [[ ! -f "$CHECK_MARKUP_PY" ]]; then
         echo "check_markup.py nicht gefunden unter $CHECK_MARKUP_PY -- Schritt uebersprungen."
     else
