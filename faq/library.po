@@ -45,10 +45,10 @@ msgstr ""
 
 #: ../../faq/library.rst:21
 msgid ""
-"For third-party packages, search the `Python Package Index "
-"<https://pypi.org>`_ or try `Google <https://www.google.com>`_ or another web"
-" search engine.  Searching for \"Python\" plus a keyword or two for your "
-"topic of interest will usually find something helpful."
+"For third-party packages, search the `Python Package Index <https://pypi."
+"org>`_ or try `Google <https://www.google.com>`_ or another web search "
+"engine.  Searching for \"Python\" plus a keyword or two for your topic of "
+"interest will usually find something helpful."
 msgstr ""
 
 #: ../../faq/library.rst:28
@@ -59,8 +59,8 @@ msgstr ""
 msgid ""
 "If you can't find a source file for a module it may be a built-in or "
 "dynamically loaded module implemented in C, C++ or other compiled language. "
-"In this case you may not have the source file or it may be something like "
-":file:`mathmodule.c`, somewhere in a C source directory (not on the Python "
+"In this case you may not have the source file or it may be something like :"
+"file:`mathmodule.c`, somewhere in a C source directory (not on the Python "
 "Path)."
 msgstr ""
 
@@ -79,8 +79,8 @@ msgstr ""
 
 #: ../../faq/library.rst:39
 msgid ""
-"modules written in C and linked with the interpreter; to get a list of these,"
-" type::"
+"modules written in C and linked with the interpreter; to get a list of "
+"these, type::"
 msgstr ""
 
 #: ../../faq/library.rst:42
@@ -102,8 +102,8 @@ msgstr ""
 
 #: ../../faq/library.rst:53
 msgid ""
-"The first is done by executing ``chmod +x scriptfile`` or perhaps ``chmod 755"
-" scriptfile``."
+"The first is done by executing ``chmod +x scriptfile`` or perhaps ``chmod "
+"755 scriptfile``."
 msgstr ""
 
 #: ../../faq/library.rst:56
@@ -136,16 +136,16 @@ msgstr ""
 
 #: ../../faq/library.rst:71
 msgid ""
-"*Don't* do this for CGI scripts.  The :envvar:`PATH` variable for CGI scripts"
-" is often very minimal, so you need to use the actual absolute pathname of "
-"the interpreter."
+"*Don't* do this for CGI scripts.  The :envvar:`PATH` variable for CGI "
+"scripts is often very minimal, so you need to use the actual absolute "
+"pathname of the interpreter."
 msgstr ""
 
 #: ../../faq/library.rst:75
 msgid ""
-"Occasionally, a user's environment is so full that the "
-":program:`/usr/bin/env` program fails; or there's no env program at all.  In "
-"that case, you can try the following hack (due to Alex Rezinsky):"
+"Occasionally, a user's environment is so full that the :program:`/usr/bin/"
+"env` program fails; or there's no env program at all.  In that case, you can "
+"try the following hack (due to Alex Rezinsky):"
 msgstr ""
 
 #: ../../faq/library.rst:79
@@ -173,18 +173,19 @@ msgstr ""
 #: ../../faq/library.rst:98
 msgid ""
 "For Unix variants: The standard Python source distribution comes with a "
-"curses module in the :source:`Modules` subdirectory, though it's not compiled"
-" by default. (Note that this is not available in the Windows distribution -- "
-"there is no curses module for Windows.)"
+"curses module in the :source:`Modules` subdirectory, though it's not "
+"compiled by default. (Note that this is not available in the Windows "
+"distribution -- there is no curses module for Windows.)"
 msgstr ""
 
 #: ../../faq/library.rst:103
 msgid ""
 "The :mod:`curses` module supports basic curses features as well as many "
-"additional functions from ncurses and SYSV curses such as colour, alternative"
-" character set support, pads, and mouse support. This means the module isn't "
-"compatible with operating systems that only have BSD curses, but there don't "
-"seem to be any currently maintained OSes that fall into this category."
+"additional functions from ncurses and SYSV curses such as colour, "
+"alternative character set support, pads, and mouse support. This means the "
+"module isn't compatible with operating systems that only have BSD curses, "
+"but there don't seem to be any currently maintained OSes that fall into this "
+"category."
 msgstr ""
 
 #: ../../faq/library.rst:111
@@ -193,8 +194,8 @@ msgstr ""
 
 #: ../../faq/library.rst:113
 msgid ""
-"The :mod:`atexit` module provides a register function that is similar to C's "
-":c:func:`!onexit`."
+"The :mod:`atexit` module provides a register function that is similar to "
+"C's :c:func:`!onexit`."
 msgstr ""
 
 #: ../../faq/library.rst:118
@@ -203,8 +204,8 @@ msgstr ""
 
 #: ../../faq/library.rst:120
 msgid ""
-"The most common problem is that the signal handler is declared with the wrong"
-" argument list.  It is called as ::"
+"The most common problem is that the signal handler is declared with the "
+"wrong argument list.  It is called as ::"
 msgstr ""
 
 #: ../../faq/library.rst:123
@@ -272,11 +273,11 @@ msgid ""
 "Once your program is organized as a tractable collection of function and "
 "class behaviours, you should write test functions that exercise the "
 "behaviours.  A test suite that automates a sequence of tests can be "
-"associated with each module. This sounds like a lot of work, but since Python"
-" is so terse and flexible it's surprisingly easy.  You can make coding much "
-"more pleasant and fun by writing your test functions in parallel with the "
-"\"production code\", since this makes it easy to find bugs and even design "
-"flaws earlier."
+"associated with each module. This sounds like a lot of work, but since "
+"Python is so terse and flexible it's surprisingly easy.  You can make coding "
+"much more pleasant and fun by writing your test functions in parallel with "
+"the \"production code\", since this makes it easy to find bugs and even "
+"design flaws earlier."
 msgstr ""
 
 #: ../../faq/library.rst:167
@@ -306,8 +307,8 @@ msgstr ""
 msgid ""
 "The :mod:`pydoc` module can create HTML from the doc strings in your Python "
 "source code.  An alternative for creating API documentation purely from "
-"docstrings is `epydoc <https://epydoc.sourceforge.net/>`_.  `Sphinx "
-"<https://www.sphinx-doc.org>`_ can also include docstring content."
+"docstrings is `epydoc <https://epydoc.sourceforge.net/>`_.  `Sphinx <https://"
+"www.sphinx-doc.org>`_ can also include docstring content."
 msgstr ""
 
 #: ../../faq/library.rst:188
@@ -330,9 +331,9 @@ msgstr ""
 
 #: ../../faq/library.rst:239
 msgid ""
-"Be sure to use the :mod:`threading` module and not the :mod:`_thread` module."
-" The :mod:`threading` module builds convenient abstractions on top of the "
-"low-level primitives provided by the :mod:`_thread` module."
+"Be sure to use the :mod:`threading` module and not the :mod:`_thread` "
+"module. The :mod:`threading` module builds convenient abstractions on top of "
+"the low-level primitives provided by the :mod:`_thread` module."
 msgstr ""
 
 #: ../../faq/library.rst:245
@@ -394,10 +395,10 @@ msgstr ""
 #: ../../faq/library.rst:282
 msgid ""
 "Instead of trying to guess a good delay value for :func:`time.sleep`, it's "
-"better to use some kind of semaphore mechanism.  One idea is to use the "
-":mod:`queue` module to create a queue object, let each thread append a token "
-"to the queue when it finishes, and let the main thread read as many tokens "
-"from the queue as there are threads."
+"better to use some kind of semaphore mechanism.  One idea is to use the :mod:"
+"`queue` module to create a queue object, let each thread append a token to "
+"the queue when it finishes, and let the main thread read as many tokens from "
+"the queue as there are threads."
 msgstr ""
 
 #: ../../faq/library.rst:290
@@ -486,8 +487,8 @@ msgstr ""
 
 #: ../../faq/library.rst:358
 msgid ""
-"Consult the module's documentation for more details; the "
-":class:`~queue.Queue` class provides a featureful interface."
+"Consult the module's documentation for more details; the :class:`~queue."
+"Queue` class provides a featureful interface."
 msgstr ""
 
 #: ../../faq/library.rst:363
@@ -498,8 +499,8 @@ msgstr ""
 msgid ""
 "A :term:`global interpreter lock` (GIL) is used internally to ensure that "
 "only one thread runs in the Python VM at a time.  In general, Python offers "
-"to switch among threads only between bytecode instructions; how frequently it"
-" switches can be set via :func:`sys.setswitchinterval`.  Each bytecode "
+"to switch among threads only between bytecode instructions; how frequently "
+"it switches can be set via :func:`sys.setswitchinterval`.  Each bytecode "
 "instruction and therefore all the C implementation code reached from each "
 "instruction is therefore atomic from the point of view of a Python program."
 msgstr ""
@@ -508,14 +509,14 @@ msgstr ""
 msgid ""
 "In theory, this means an exact accounting requires an exact understanding of "
 "the PVM bytecode implementation.  In practice, it means that operations on "
-"shared variables of built-in data types (ints, lists, dicts, etc) that \"look"
-" atomic\" really are."
+"shared variables of built-in data types (ints, lists, dicts, etc) that "
+"\"look atomic\" really are."
 msgstr ""
 
 #: ../../faq/library.rst:377
 msgid ""
-"For example, the following operations are all atomic (L, L1, L2 are lists, D,"
-" D1, D2 are dicts, x, y are objects, i, j are ints)::"
+"For example, the following operations are all atomic (L, L1, L2 are lists, "
+"D, D1, D2 are dicts, x, y are objects, i, j are ints)::"
 msgstr ""
 
 #: ../../faq/library.rst:380
@@ -547,9 +548,9 @@ msgstr ""
 
 #: ../../faq/library.rst:399
 msgid ""
-"Operations that replace other objects may invoke those other objects' "
-":meth:`~object.__del__` method when their reference count reaches zero, and "
-"that can affect things.  This is especially true for the mass updates to "
+"Operations that replace other objects may invoke those other objects' :meth:"
+"`~object.__del__` method when their reference count reaches zero, and that "
+"can affect things.  This is especially true for the mass updates to "
 "dictionaries and lists.  When in doubt, use a mutex!"
 msgstr ""
 
@@ -568,29 +569,28 @@ msgstr ""
 #: ../../faq/library.rst:413
 msgid ""
 "With the approval of :pep:`703` work is now underway to remove the GIL from "
-"the CPython implementation of Python.  Initially it will be implemented as an"
-" optional compiler flag when building the interpreter, and so separate builds"
-" will be available with and without the GIL.  Long-term, the hope is to "
-"settle on a single build, once the performance implications of removing the "
-"GIL are fully understood.  Python 3.13 is likely to be the first release "
+"the CPython implementation of Python.  Initially it will be implemented as "
+"an optional compiler flag when building the interpreter, and so separate "
+"builds will be available with and without the GIL.  Long-term, the hope is "
+"to settle on a single build, once the performance implications of removing "
+"the GIL are fully understood.  Python 3.13 is likely to be the first release "
 "containing this work, although it may not be completely functional in this "
 "release."
 msgstr ""
 
 #: ../../faq/library.rst:422
 msgid ""
-"The current work to remove the GIL is based on a `fork of Python 3.9 with the"
-" GIL removed <https://github.com/colesbury/nogil>`_ by Sam Gross. Prior to "
-"that, in the days of Python 1.5, Greg Stein actually implemented a "
-"comprehensive patch set (the \"free threading\" patches) that removed the GIL"
-" and replaced it with fine-grained locking.  Adam Olsen did a similar "
-"experiment in his `python-safethread "
-"<https://code.google.com/archive/p/python-safethread>`_ project.  "
-"Unfortunately, both of these earlier experiments exhibited a sharp drop in "
-"single-thread performance (at least 30% slower), due to the amount of fine-"
-"grained locking necessary to compensate for the removal of the GIL.  The "
-"Python 3.9 fork is the first attempt at removing the GIL with an acceptable "
-"performance impact."
+"The current work to remove the GIL is based on a `fork of Python 3.9 with "
+"the GIL removed <https://github.com/colesbury/nogil>`_ by Sam Gross. Prior "
+"to that, in the days of Python 1.5, Greg Stein actually implemented a "
+"comprehensive patch set (the \"free threading\" patches) that removed the "
+"GIL and replaced it with fine-grained locking.  Adam Olsen did a similar "
+"experiment in his `python-safethread <https://code.google.com/archive/p/"
+"python-safethread>`_ project.  Unfortunately, both of these earlier "
+"experiments exhibited a sharp drop in single-thread performance (at least "
+"30% slower), due to the amount of fine-grained locking necessary to "
+"compensate for the removal of the GIL.  The Python 3.9 fork is the first "
+"attempt at removing the GIL with an acceptable performance impact."
 msgstr ""
 
 #: ../../faq/library.rst:437
@@ -608,9 +608,9 @@ msgstr ""
 msgid ""
 "Judicious use of C extensions will also help; if you use a C extension to "
 "perform a time-consuming task, the extension can release the GIL while the "
-"thread of execution is in the C code and allow other threads to get some work"
-" done.  Some standard library modules such as :mod:`zlib` and :mod:`hashlib` "
-"already do this."
+"thread of execution is in the C code and allow other threads to get some "
+"work done.  Some standard library modules such as :mod:`zlib` and :mod:"
+"`hashlib` already do this."
 msgstr ""
 
 #: ../../faq/library.rst:452
@@ -618,10 +618,10 @@ msgid ""
 "An alternative approach to reducing the impact of the GIL is to make the GIL "
 "a per-interpreter-state lock rather than truly global. This was :ref:`first "
 "implemented in Python 3.12 <whatsnew312-pep684>` and is available in the C "
-"API. A Python interface to it is expected in Python 3.13. The main limitation"
-" to it at the moment is likely to be 3rd party extension modules, since these"
-" must be written with multiple interpreters in mind in order to be usable, so"
-" many older extension modules will not be usable."
+"API. A Python interface to it is expected in Python 3.13. The main "
+"limitation to it at the moment is likely to be 3rd party extension modules, "
+"since these must be written with multiple interpreters in mind in order to "
+"be usable, so many older extension modules will not be usable."
 msgstr ""
 
 #: ../../faq/library.rst:462
@@ -635,9 +635,8 @@ msgstr ""
 #: ../../faq/library.rst:467
 msgid ""
 "Use ``os.remove(filename)`` or ``os.unlink(filename)``; for documentation, "
-"see the :mod:`os` module.  The two functions are identical; "
-":func:`~os.unlink` is simply the name of the Unix system call for this "
-"function."
+"see the :mod:`os` module.  The two functions are identical; :func:`~os."
+"unlink` is simply the name of the Unix system call for this function."
 msgstr ""
 
 #: ../../faq/library.rst:471
@@ -657,15 +656,15 @@ msgstr ""
 msgid ""
 "To truncate a file, open it using ``f = open(filename, \"rb+\")``, and use "
 "``f.truncate(offset)``; offset defaults to the current seek position.  "
-"There's also ``os.ftruncate(fd, offset)`` for files opened with "
-":func:`os.open`, where *fd* is the file descriptor (a small integer)."
+"There's also ``os.ftruncate(fd, offset)`` for files opened with :func:`os."
+"open`, where *fd* is the file descriptor (a small integer)."
 msgstr ""
 
 #: ../../faq/library.rst:484
 msgid ""
-"The :mod:`shutil` module also contains a number of functions to work on files"
-" including :func:`~shutil.copyfile`, :func:`~shutil.copytree`, and "
-":func:`~shutil.rmtree`."
+"The :mod:`shutil` module also contains a number of functions to work on "
+"files including :func:`~shutil.copyfile`, :func:`~shutil.copytree`, and :"
+"func:`~shutil.rmtree`."
 msgstr ""
 
 #: ../../faq/library.rst:490
@@ -689,8 +688,8 @@ msgstr ""
 
 #: ../../faq/library.rst:505
 msgid ""
-"To read or write complex binary data formats, it's best to use the "
-":mod:`struct` module.  It allows you to take a string containing binary data "
+"To read or write complex binary data formats, it's best to use the :mod:"
+"`struct` module.  It allows you to take a string containing binary data "
 "(usually numbers) and convert it to Python objects; and vice versa."
 msgstr ""
 
@@ -711,9 +710,9 @@ msgstr ""
 
 #: ../../faq/library.rst:518
 msgid ""
-"The '>' in the format string forces big-endian data; the letter 'h' reads one"
-" \"short integer\" (2 bytes), and 'l' reads one \"long integer\" (4 bytes) "
-"from the string."
+"The '>' in the format string forces big-endian data; the letter 'h' reads "
+"one \"short integer\" (2 bytes), and 'l' reads one \"long integer\" (4 "
+"bytes) from the string."
 msgstr ""
 
 #: ../../faq/library.rst:522
@@ -739,8 +738,8 @@ msgid ""
 ":func:`os.read` is a low-level function which takes a file descriptor, a "
 "small integer representing the opened file.  :func:`os.popen` creates a high-"
 "level file object, the same type returned by the built-in :func:`open` "
-"function. Thus, to read *n* bytes from a pipe *p* created with "
-":func:`os.popen`, you need to use ``p.read(n)``."
+"function. Thus, to read *n* bytes from a pipe *p* created with :func:`os."
+"popen`, you need to use ``p.read(n)``."
 msgstr ""
 
 #: ../../faq/library.rst:545
@@ -785,8 +784,8 @@ msgstr ""
 #: ../../faq/library.rst:568
 msgid ""
 "But stdin, stdout and stderr are treated specially by Python, because of the "
-"special status also given to them by C.  Running ``sys.stdout.close()`` marks"
-" the Python-level file object as being closed, but does *not* close the "
+"special status also given to them by C.  Running ``sys.stdout.close()`` "
+"marks the Python-level file object as being closed, but does *not* close the "
 "associated C file descriptor."
 msgstr ""
 
@@ -825,8 +824,8 @@ msgstr ""
 
 #: ../../faq/library.rst:596
 msgid ""
-"A summary of available frameworks is maintained by Paul Boddie at "
-"https://wiki.python.org/moin/WebProgramming\\ ."
+"A summary of available frameworks is maintained by Paul Boddie at https://"
+"wiki.python.org/moin/WebProgramming\\ ."
 msgstr ""
 
 #: ../../faq/library.rst:601
@@ -876,8 +875,8 @@ msgstr ""
 #: ../../faq/library.rst:634
 msgid ""
 "A Unix-only alternative uses sendmail.  The location of the sendmail program "
-"varies between systems; sometimes it is ``/usr/lib/sendmail``, sometimes "
-"``/usr/sbin/sendmail``.  The sendmail manual page will help you out.  Here's "
+"varies between systems; sometimes it is ``/usr/lib/sendmail``, sometimes ``/"
+"usr/sbin/sendmail``.  The sendmail manual page will help you out.  Here's "
 "some sample code::"
 msgstr ""
 
@@ -910,9 +909,9 @@ msgstr ""
 #: ../../faq/library.rst:659
 msgid ""
 "To prevent the TCP connect from blocking, you can set the socket to non-"
-"blocking mode.  Then when you do the :meth:`~socket.socket.connect`, you will"
-" either connect immediately (unlikely) or get an exception that contains the "
-"error number as ``.errno``. ``errno.EINPROGRESS`` indicates that the "
+"blocking mode.  Then when you do the :meth:`~socket.socket.connect`, you "
+"will either connect immediately (unlikely) or get an exception that contains "
+"the error number as ``.errno``. ``errno.EINPROGRESS`` indicates that the "
 "connection is in progress, but hasn't finished yet.  Different OSes will "
 "return different values, so you're going to have to check what's returned on "
 "your system."
@@ -920,11 +919,11 @@ msgstr ""
 
 #: ../../faq/library.rst:667
 msgid ""
-"You can use the :meth:`~socket.socket.connect_ex` method to avoid creating an"
-" exception. It will just return the errno value. To poll, you can call "
-":meth:`~socket.socket.connect_ex` again later -- ``0`` or ``errno.EISCONN`` "
-"indicate that you're connected -- or you can pass this socket to "
-":meth:`select.select` to check if it's writable."
+"You can use the :meth:`~socket.socket.connect_ex` method to avoid creating "
+"an exception. It will just return the errno value. To poll, you can call :"
+"meth:`~socket.socket.connect_ex` again later -- ``0`` or ``errno.EISCONN`` "
+"indicate that you're connected -- or you can pass this socket to :meth:"
+"`select.select` to check if it's writable."
 msgstr ""
 
 #: ../../faq/library.rst:675
@@ -950,16 +949,16 @@ msgstr ""
 #: ../../faq/library.rst:690
 msgid ""
 "Interfaces to disk-based hashes such as :mod:`DBM <dbm.ndbm>` and :mod:`GDBM "
-"<dbm.gnu>` are also included with standard Python.  There is also the "
-":mod:`sqlite3` module, which provides a lightweight disk-based relational "
+"<dbm.gnu>` are also included with standard Python.  There is also the :mod:"
+"`sqlite3` module, which provides a lightweight disk-based relational "
 "database."
 msgstr ""
 
 #: ../../faq/library.rst:695
 msgid ""
 "Support for most relational databases is available.  See the "
-"`DatabaseProgramming wiki page "
-"<https://wiki.python.org/moin/DatabaseProgramming>`_ for details."
+"`DatabaseProgramming wiki page <https://wiki.python.org/moin/"
+"DatabaseProgramming>`_ for details."
 msgstr ""
 
 #: ../../faq/library.rst:701
@@ -969,8 +968,8 @@ msgstr ""
 #: ../../faq/library.rst:703
 msgid ""
 "The :mod:`pickle` library module solves this in a very general way (though "
-"you still can't store things like open files, sockets or windows), and the "
-":mod:`shelve` library module uses pickle and (g)dbm to create persistent "
+"you still can't store things like open files, sockets or windows), and the :"
+"mod:`shelve` library module uses pickle and (g)dbm to create persistent "
 "mappings containing arbitrary Python objects."
 msgstr ""
 
