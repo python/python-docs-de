@@ -996,9 +996,9 @@ msgid ""
 "``0`` is returned on success, ``-1`` on error."
 msgstr ""
 "Kopiert *len* zusammenhängende Bytes von *buf* nach *view*. *order* kann "
-"``'C'``, ``'F'`` oder ``'A'`` sein (für eine Anordnung im C-Stil, im "
-"Fortran-Stil oder für eine von beiden). Bei Erfolg wird ``0`` zurückgegeben, "
-"bei einem Fehler ``-1``."
+"``'C'``, ``'F'`` oder ``'A'`` sein (für eine Anordnung im C-Stil, im Fortran-"
+"Stil oder für eine von beiden). Bei Erfolg wird ``0`` zurückgegeben, bei "
+"einem Fehler ``-1``."
 
 #: ../../c-api/buffer.rst:515
 msgid ""
