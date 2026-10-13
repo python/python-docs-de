@@ -1,19 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
-"PO-Revision-Date: 2025-09-16 00:02+0000\n"
+"PO-Revision-Date: 2026-10-13 22:45+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1435,7 +1435,7 @@ msgstr ""
 
 #: ../../reference/simple_stmts.rst:878
 msgid "Lazy imports"
-msgstr ""
+msgstr "Verzögerte Importe"
 
 #: ../../reference/simple_stmts.rst:884
 msgid ""
@@ -1447,6 +1447,13 @@ msgid ""
 "created and bound to the name. The actual module is loaded on first use of "
 "that name."
 msgstr ""
+"Das Schlüsselwort :keyword:`lazy` ist ein :ref:`weiches Schlüsselwort <soft-"
+"keywords>`, das nur dann eine besondere Bedeutung hat, wenn es unmittelbar "
+"vor einer :keyword:`import`- oder :keyword:`from`-Anweisung steht. Steht :"
+"keyword:`lazy` vor einer Import-Anweisung, wird der Import *verzögert*: Das "
+"Modul wird nicht sofort an der Import-Anweisung geladen. Stattdessen wird "
+"ein verzögerndes Stellvertreterobjekt erzeugt und an den Namen gebunden. Das "
+"eigentliche Modul wird bei der ersten Verwendung dieses Namens geladen."
 
 #: ../../reference/simple_stmts.rst:892
 msgid ""
@@ -1456,6 +1463,12 @@ msgid ""
 "(``lazy from module import *`` is a syntax error), and :ref:`future "
 "statements <future>` cannot be lazy."
 msgstr ""
+"Verzögerte Importe sind nur auf Modulebene erlaubt. Die Verwendung von :"
+"keyword:`lazy` innerhalb einer Funktion, eines Klassenrumpfs oder eines :"
+"keyword:`try`/:keyword:`except`/:keyword:`finally`-Blocks löst einen :exc:"
+"`SyntaxError` aus. Sternimporte können nicht verzögert sein (``lazy from "
+"module import *`` ist ein Syntaxfehler), und :ref:`Future-Anweisungen "
+"<future>` ebenfalls nicht."
 
 #: ../../reference/simple_stmts.rst:899
 msgid ""
@@ -1464,10 +1477,15 @@ msgid ""
 "entire module and resolves only that specific name to its actual value. "
 "Other names remain as lazy proxies until they are accessed."
 msgstr ""
+"Bei ``lazy from ... import`` wird jeder importierte Name an ein verzögerndes "
+"Stellvertreterobjekt gebunden. Der erste Zugriff auf einen dieser Namen löst "
+"das Laden des gesamten Moduls aus und löst nur diesen einen Namen zu seinem "
+"tatsächlichen Wert auf. Die übrigen Namen bleiben Stellvertreter, bis auf "
+"sie zugegriffen wird."
 
 #: ../../reference/simple_stmts.rst:904
 msgid "Example::"
-msgstr ""
+msgstr "Beispiel::"
 
 #: ../../reference/simple_stmts.rst:906
 msgid ""
@@ -1481,6 +1499,15 @@ msgid ""
 "\n"
 "print('json' in sys.modules)  # True - now loaded"
 msgstr ""
+"lazy import json\n"
+"import sys\n"
+"\n"
+"print('json' in sys.modules)  # False - json-Modul noch nicht geladen\n"
+"\n"
+"# Die erste Verwendung löst das Laden aus\n"
+"result = json.dumps({\"hello\": \"world\"})\n"
+"\n"
+"print('json' in sys.modules)  # True - jetzt geladen"
 
 #: ../../reference/simple_stmts.rst:916
 msgid ""
@@ -1488,14 +1515,19 @@ msgid ""
 "`SyntaxError`), it is raised at the point where the lazy import is first "
 "used, not at the import statement itself."
 msgstr ""
+"Tritt beim Laden des Moduls ein Fehler auf, etwa ein :exc:`ImportError` oder "
+"ein :exc:`SyntaxError`, wird er an der Stelle ausgelöst, an der der "
+"verzögerte Import zum ersten Mal verwendet wird, nicht an der Import-"
+"Anweisung selbst."
 
 #: ../../reference/simple_stmts.rst:920
 msgid "See :pep:`810` for the full specification of lazy imports."
 msgstr ""
+"Die vollständige Spezifikation der verzögerten Importe steht in :pep:`810`."
 
 #: ../../reference/simple_stmts.rst:927
 msgid "Compatibility via ``__lazy_modules__``"
-msgstr ""
+msgstr "Verträglichkeit über ``__lazy_modules__``"
 
 #: ../../reference/simple_stmts.rst:932
 msgid ""
@@ -1507,6 +1539,14 @@ msgid ""
 "__lazy_modules__` is treated as a lazy import, exactly as if the :keyword:"
 "`lazy` keyword had been used."
 msgstr ""
+"Als Alternative zum Schlüsselwort :keyword:`lazy` kann ein Modul das "
+"verzögerte Laden für bestimmte Importe einschalten, indem es auf Modulebene "
+"eine Variable :attr:`~module.__lazy_modules__` definiert. Ist sie vorhanden, "
+"muss sie ein Behälter mit vollständig qualifizierten Modulnamen als "
+"Zeichenketten sein. Jede gewöhnliche, also nicht mit ``lazy`` versehene :"
+"keyword:`import`-Anweisung auf Modulebene, deren Ziel in :attr:`!"
+"__lazy_modules__` steht, wird als verzögerter Import behandelt, genau als "
+"stünde das Schlüsselwort :keyword:`lazy` davor."
 
 #: ../../reference/simple_stmts.rst:940
 msgid ""
@@ -1514,6 +1554,10 @@ msgid ""
 "changing individual ``import`` statements. This is useful when supporting "
 "Python versions older than 3.15 while using lazy imports in 3.15+::"
 msgstr ""
+"Damit lässt sich das verzögerte Laden für einzelne Abhängigkeiten "
+"einschalten, ohne die einzelnen ``import``-Anweisungen zu ändern. Das ist "
+"nützlich, wenn du Python-Versionen vor 3.15 unterstützen und ab 3.15 "
+"trotzdem verzögerte Importe verwenden willst::"
 
 #: ../../reference/simple_stmts.rst:944
 msgid ""
@@ -1524,18 +1568,29 @@ msgid ""
 "\n"
 "import pathlib  # loaded lazily"
 msgstr ""
+"__lazy_modules__ = [\"json\", \"pathlib\"]\n"
+"\n"
+"import json     # verzögert geladen (Name steht in __lazy_modules__)\n"
+"import os       # sofort geladen (Name steht nicht in __lazy_modules__)\n"
+"\n"
+"import pathlib  # verzögert geladen"
 
 #: ../../reference/simple_stmts.rst:951
 msgid ""
 "Relative imports are resolved to their absolute name before the lookup, so :"
 "attr:`!__lazy_modules__` must always contain fully qualified module names."
 msgstr ""
+"Relative Importe werden vor dem Nachschlagen zu ihrem absoluten Namen "
+"aufgelöst, deshalb muss :attr:`!__lazy_modules__` immer vollständig "
+"qualifizierte Modulnamen enthalten."
 
 #: ../../reference/simple_stmts.rst:954
 msgid ""
 "For ``from``-style imports, the relevant name is the module following "
 "``from``, not the names of its members::"
 msgstr ""
+"Bei Importen der Form ``from`` ist der maßgebliche Name das Modul hinter "
+"``from``, nicht die Namen seiner Bestandteile::"
 
 #: ../../reference/simple_stmts.rst:957
 msgid ""
@@ -1547,6 +1602,14 @@ msgid ""
 "mypackage.sub.utils\n"
 "import json                  # loaded eagerly (not in __lazy_modules__)"
 msgstr ""
+"# In mypackage/mymodule.py\n"
+"__lazy_modules__ = [\"mypackage\", \"mypackage.sub.utils\"]\n"
+"\n"
+"from . import helper         # verzögert geladen: . wird zu mypackage "
+"aufgelöst\n"
+"from .sub.utils import func  # verzögert geladen: .sub.utils wird zu "
+"mypackage.sub.utils aufgelöst\n"
+"import json                  # sofort geladen (nicht in __lazy_modules__)"
 
 #: ../../reference/simple_stmts.rst:964
 msgid ""
@@ -1554,6 +1617,9 @@ msgid ""
 "keyword:`finally` blocks are always eager, regardless of :attr:`!"
 "__lazy_modules__`."
 msgstr ""
+"Importe innerhalb von Funktionen, Klassenrümpfen oder :keyword:`try`/:"
+"keyword:`except`/:keyword:`finally`-Blöcken sind immer sofortig, unabhängig "
+"von :attr:`!__lazy_modules__`."
 
 #: ../../reference/simple_stmts.rst:973
 msgid "Future statements"
@@ -2359,7 +2425,7 @@ msgstr "als"
 
 #: ../../reference/simple_stmts.rst:740 ../../reference/simple_stmts.rst:880
 msgid "lazy"
-msgstr ""
+msgstr "lazy"
 
 #: ../../reference/simple_stmts.rst:740
 msgid "ImportError"
@@ -2380,11 +2446,11 @@ msgstr "Verwandter"
 
 #: ../../reference/simple_stmts.rst:880
 msgid "lazy import"
-msgstr ""
+msgstr "lazy import"
 
 #: ../../reference/simple_stmts.rst:929
 msgid "__lazy_modules__"
-msgstr ""
+msgstr "__lazy_modules__"
 
 #: ../../reference/simple_stmts.rst:975
 msgid "future"

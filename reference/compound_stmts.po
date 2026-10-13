@@ -1,19 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 20:17+0000\n"
-"PO-Revision-Date: 2025-09-16 00:02+0000\n"
+"PO-Revision-Date: 2026-10-13 22:45+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2114,7 +2114,7 @@ msgstr ":class:`float`"
 
 #: ../../reference/compound_stmts.rst:1175
 msgid ":class:`frozendict`"
-msgstr ""
+msgstr ":class:`frozendict`"
 
 #: ../../reference/compound_stmts.rst:1176
 msgid ":class:`frozenset`"
@@ -2573,6 +2573,8 @@ msgid ""
 "There may be one or more base classes; see :ref:`multiple-inheritance` below "
 "for more information."
 msgstr ""
+"Es kann eine oder mehrere Basisklassen geben, weitere Informationen dazu "
+"unter :ref:`multiple-inheritance` weiter unten."
 
 #: ../../reference/compound_stmts.rst:1438
 msgid ""
@@ -2724,7 +2726,7 @@ msgstr ""
 
 #: ../../reference/compound_stmts.rst:1510
 msgid "Multiple inheritance"
-msgstr ""
+msgstr "Mehrfachvererbung"
 
 #: ../../reference/compound_stmts.rst:1512
 msgid ""
@@ -2733,6 +2735,11 @@ msgid ""
 "definition by listing them in parentheses after the class name, separated by "
 "commas. For example, the following class definition:"
 msgstr ""
+"Python-Klassen können mehrere Basisklassen haben, eine Technik, die als "
+"*Mehrfachvererbung* bekannt ist. Die Basisklassen werden in der "
+"Klassendefinition angegeben, indem man sie durch Kommas getrennt in Klammern "
+"hinter den Klassennamen schreibt. Die folgende Klassendefinition zum "
+"Beispiel:"
 
 #: ../../reference/compound_stmts.rst:1517
 msgid ""
@@ -2740,10 +2747,13 @@ msgid ""
 ">>> class B: pass\n"
 ">>> class C(A, B): pass"
 msgstr ""
+">>> class A: pass\n"
+">>> class B: pass\n"
+">>> class C(A, B): pass"
 
 #: ../../reference/compound_stmts.rst:1523
 msgid "defines a class ``C`` that inherits from classes ``A`` and ``B``."
-msgstr ""
+msgstr "definiert eine Klasse ``C``, die von den Klassen ``A`` und ``B`` erbt."
 
 #: ../../reference/compound_stmts.rst:1525
 msgid ""
@@ -2752,6 +2762,10 @@ msgid ""
 "`python_2.3_mro` for a description of how Python determines the MRO for a "
 "class."
 msgstr ""
+"Die :term:`Reihenfolge der Methodenauflösung <method resolution order>` "
+"(MRO) ist die Reihenfolge, in der die Basisklassen durchsucht werden, wenn "
+"ein Attribut einer Klasse nachgeschlagen wird. Unter :ref:`python_2.3_mro` "
+"ist beschrieben, wie Python die MRO einer Klasse bestimmt."
 
 #: ../../reference/compound_stmts.rst:1529
 msgid ""
@@ -2761,12 +2775,20 @@ msgid ""
 "metaclass can be determined, or if there is an instance layout conflict. "
 "We'll discuss each of these in turn."
 msgstr ""
+"Mehrfachvererbung ist nicht immer erlaubt. Der Versuch, eine Klasse mit "
+"Mehrfachvererbung zu definieren, löst einen Fehler aus, wenn eine der "
+"Basisklassen keine Unterklassen zulässt, wenn sich keine konsistente MRO "
+"erzeugen lässt, wenn sich keine gültige Metaklasse bestimmen lässt oder wenn "
+"ein Konflikt im Instanz-Layout besteht. Wir gehen diese Fälle der Reihe nach "
+"durch."
 
 #: ../../reference/compound_stmts.rst:1534
 msgid ""
 "First, all base classes must allow subclassing. While most classes allow "
 "subclassing, some built-in classes do not, such as :class:`bool`:"
 msgstr ""
+"Erstens müssen alle Basisklassen Unterklassen zulassen. Die meisten Klassen "
+"tun das, einige integrierte Klassen jedoch nicht, zum Beispiel :class:`bool`:"
 
 #: ../../reference/compound_stmts.rst:1537
 msgid ""
@@ -2776,6 +2798,11 @@ msgid ""
 "   ...\n"
 "TypeError: type 'bool' is not an acceptable base type"
 msgstr ""
+">>> class SubBool(bool):  # TypeError\n"
+"...    pass\n"
+"Traceback (most recent call last):\n"
+"   ...\n"
+"TypeError: type 'bool' is not an acceptable base type"
 
 #: ../../reference/compound_stmts.rst:1545
 msgid ""
@@ -2785,6 +2812,11 @@ msgid ""
 "impossible to resolve a consistent MRO that satisfies these rules from the "
 "list of bases provided:"
 msgstr ""
+"In der aufgelösten MRO einer Klasse erscheinen deren Basisklassen in der "
+"Reihenfolge, in der sie in der Basisklassenliste angegeben wurden. Außerdem "
+"führt die MRO eine Kindklasse immer vor allen ihren Basisklassen auf. Eine "
+"Klassendefinition schlägt fehl, wenn sich aus der angegebenen Liste von "
+"Basisklassen keine konsistente MRO auflösen lässt, die diese Regeln erfüllt:"
 
 #: ../../reference/compound_stmts.rst:1550
 msgid ""
@@ -2796,6 +2828,13 @@ msgid ""
 "TypeError: Cannot create a consistent method resolution order (MRO) for "
 "bases Base, Child"
 msgstr ""
+">>> class Base: pass\n"
+">>> class Child(Base): pass\n"
+">>> class Grandchild(Base, Child): pass  # TypeError\n"
+"Traceback (most recent call last):\n"
+"   ...\n"
+"TypeError: Cannot create a consistent method resolution order (MRO) for "
+"bases Base, Child"
 
 #: ../../reference/compound_stmts.rst:1559
 msgid ""
@@ -2804,6 +2843,10 @@ msgid ""
 "because it is a parent of ``Child``. This is a contradiction, so the class "
 "cannot be defined."
 msgstr ""
+"In der MRO von ``Grandchild`` muss ``Base`` vor ``Child`` stehen, weil es in "
+"der Basisklassenliste zuerst kommt, es muss aber zugleich nach ``Child`` "
+"stehen, weil es ein Elternteil von ``Child`` ist. Das ist ein Widerspruch, "
+"also lässt sich die Klasse nicht definieren."
 
 #: ../../reference/compound_stmts.rst:1563
 msgid ""
@@ -2814,6 +2857,13 @@ msgid ""
 "exists among the candidates, the class cannot be created, as explained in :"
 "ref:`metaclass-determination`."
 msgstr ""
+"Haben einige der Basisklassen eine eigene :term:`Metaklasse <metaclass>`, "
+"wird die Metaklasse der entstehenden Klasse unter den Metaklassen der "
+"Basisklassen und der ausdrücklich angegebenen Metaklasse der Kindklasse "
+"ausgewählt. Es muss eine Metaklasse sein, die eine Unterklasse aller anderen "
+"in Frage kommenden Metaklassen ist. Gibt es unter den Kandidaten keine "
+"solche Metaklasse, lässt sich die Klasse nicht erzeugen, wie unter :ref:"
+"`metaclass-determination` erläutert."
 
 #: ../../reference/compound_stmts.rst:1569
 msgid ""
@@ -2821,6 +2871,10 @@ msgid ""
 "that it must be possible to compute a *solid base* for the class. Exactly "
 "which classes are solid bases depends on the Python implementation."
 msgstr ""
+"Schließlich müssen die Instanz-Layouts der Basisklassen zueinander passen. "
+"Das heißt, es muss möglich sein, für die Klasse eine *solid base* zu "
+"berechnen. Welche Klassen genau solid bases sind, hängt von der jeweiligen "
+"Python-Umsetzung ab."
 
 #: ../../reference/compound_stmts.rst:1575
 msgid ""
@@ -2831,6 +2885,13 @@ msgid ""
 "Generally, a C class is a solid base if its underlying struct is different "
 "in size from its base class."
 msgstr ""
+"In CPython ist eine Klasse eine solid base, wenn sie eine nicht leere "
+"Definition von :attr:`~object.__slots__` hat. Viele, aber nicht alle in C "
+"definierten Klassen sind ebenfalls solid bases, darunter die meisten "
+"integrierten Klassen (etwa :class:`int` oder :class:`BaseException`), nicht "
+"aber die meisten konkreten :class:`Exception`-Klassen. Allgemein ist eine C-"
+"Klasse eine solid base, wenn sich ihr zugrunde liegendes struct in der Größe "
+"von dem ihrer Basisklasse unterscheidet."
 
 #: ../../reference/compound_stmts.rst:1582
 msgid ""
@@ -2842,10 +2903,18 @@ msgid ""
 "that is a subclass of all others, then that class is the solid base. "
 "Otherwise, class creation fails."
 msgstr ""
+"Jede Klasse hat eine solid base. :class:`object`, die Basisklasse, ist ihre "
+"eigene solid base. Gibt es eine einzige Basisklasse, ist die solid base der "
+"Kindklasse diese Klasse selbst, sofern sie eine solid base ist, andernfalls "
+"die solid base der Basisklasse. Gibt es mehrere Basisklassen, wird zunächst "
+"für jede von ihnen die solid base ermittelt, was eine Liste von Kandidaten "
+"ergibt. Gibt es darunter genau eine solid base, die Unterklasse aller "
+"anderen ist, dann ist das die solid base. Andernfalls schlägt die "
+"Klassenerzeugung fehl."
 
 #: ../../reference/compound_stmts.rst:1589
 msgid "Example:"
-msgstr ""
+msgstr "Beispiel:"
 
 #: ../../reference/compound_stmts.rst:1591
 msgid ""
@@ -2879,6 +2948,35 @@ msgid ""
 "  ...\n"
 "TypeError: multiple bases have instance lay-out conflict"
 msgstr ""
+">>> class Solid1:\n"
+"...    __slots__ = (\"solid1\",)\n"
+">>>\n"
+">>> class Solid2:\n"
+"...    __slots__ = (\"solid2\",)\n"
+">>>\n"
+">>> class SolidChild(Solid1):\n"
+"...    __slots__ = (\"solid_child\",)\n"
+">>>\n"
+">>> class C1:  # solid base ist `object`\n"
+"...    pass\n"
+">>>\n"
+">>> # OK: solid bases sind `Solid1` und `object`, und `Solid1` ist eine "
+"Unterklasse von `object`.\n"
+">>> class C2(Solid1, C1):  # solid base ist `Solid1`\n"
+"...    pass\n"
+">>>\n"
+">>> # OK: solid bases sind `SolidChild` und `Solid1`, und `SolidChild` ist "
+"eine Unterklasse von `Solid1`.\n"
+">>> class C3(SolidChild, Solid1):  # solid base ist `SolidChild`\n"
+"...    pass\n"
+">>>\n"
+">>> # Fehler: solid bases sind `Solid1` und `Solid2`, aber keine ist "
+"Unterklasse der anderen.\n"
+">>> class C4(Solid1, Solid2):  # Fehler: keine eindeutige solid base\n"
+"...    pass\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"TypeError: multiple bases have instance lay-out conflict"
 
 #: ../../reference/compound_stmts.rst:1623
 msgid "Coroutines"
