@@ -4,13 +4,14 @@
 #
 # Translators:
 # Transifex, 2026
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-19 17:44+0000\n"
-"PO-Revision-Date: 2026-09-25 22:09+0200\n"
+"PO-Revision-Date: 2026-10-13 21:00+0200\n"
 "Last-Translator: Transifex\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -21,7 +22,7 @@ msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.14.rst:2
 msgid "Pending removal in Python 3.14"
-msgstr ""
+msgstr "Ausstehende Entfernung in Python 3.14"
 
 #: ../../deprecations/pending-removal-in-3.14.rst:4
 msgid ""

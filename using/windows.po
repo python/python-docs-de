@@ -1,19 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-15 09:12+0000\n"
-"PO-Revision-Date: 2025-09-16 00:02+0000\n"
+"PO-Revision-Date: 2026-10-13 21:00+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2875,6 +2875,9 @@ msgid ""
 "Page).  Python uses it for the default encoding of text files (e.g. :func:"
 "`locale.getencoding`)."
 msgstr ""
+"Windows verwendet für die Systemkodierung weiterhin alte Kodierungen (die "
+"ANSI-Codepage). Python verwendet sie als Standardkodierung für Textdateien, "
+"etwa in :func:`locale.getencoding`."
 
 #: ../../using/windows.rst:1337
 msgid ""
@@ -2892,12 +2895,21 @@ msgid ""
 "environment variable.  See :envvar:`PYTHONUTF8` for enabling UTF-8 mode, "
 "and :ref:`setting-envvars` for how to modify environment variables."
 msgstr ""
+"Mit dem :ref:`Python-UTF-8-Modus <utf8-mode>` kannst du die "
+"Standardkodierung für Text auf UTF-8 umstellen. Einschalten lässt sich der "
+":ref:`Python-UTF-8-Modus <utf8-mode>` über die Befehlszeilenoption ``-X "
+"utf8`` oder über die Umgebungsvariable ``PYTHONUTF8=1``. Zum Einschalten des "
+"UTF-8-Modus siehe :envvar:`PYTHONUTF8`, und wie du Umgebungsvariablen "
+"änderst, steht unter :ref:`setting-envvars`."
 
 #: ../../using/windows.rst:1346
 msgid ""
 "When the :ref:`Python UTF-8 Mode <utf8-mode>` is enabled, you can still use "
 "the system encoding (the ANSI Code Page) via the \"mbcs\" codec."
 msgstr ""
+"Ist der :ref:`Python-UTF-8-Modus <utf8-mode>` eingeschaltet, lässt sich die "
+"Systemkodierung (die ANSI-Codepage) weiterhin über den Codec „mbcs“ "
+"verwenden."
 
 #: ../../using/windows.rst:1349
 msgid ""
@@ -2907,6 +2919,11 @@ msgid ""
 "recommended to set the environment variable temporarily or use the ``-X "
 "utf8`` command line option."
 msgstr ""
+"Beachte, dass ``PYTHONUTF8=1`` in den Standard-Umgebungsvariablen alle "
+"Python-Anwendungen ab 3.7 auf deinem System betrifft. Wenn du Anwendungen ab "
+"Python 3.7 hast, die auf die alte Systemkodierung angewiesen sind, solltest "
+"du die Umgebungsvariable besser nur zeitweise setzen oder die "
+"Befehlszeilenoption ``-X utf8`` verwenden."
 
 #: ../../using/windows.rst:1356
 msgid ""

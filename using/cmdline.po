@@ -1,15 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-05 16:53+0200\n"
-"PO-Revision-Date: 2025-09-16 00:02+0000\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"PO-Revision-Date: 2026-10-13 21:00+0200\n"
+"Last-Translator: python-doc bot, 2025\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -108,6 +111,10 @@ msgid ""
 "as *command*.  Here *command* may contain multiple statements separated by "
 "newlines. Leading whitespace is significant in Python statements!"
 msgstr ""
+"Wird er mit ``-c command`` aufgerufen, führt er die als *command* "
+"angegebenen Python-Anweisungen aus. *command* darf dabei mehrere, durch "
+"Zeilenumbrüche getrennte Anweisungen enthalten. Führende Leerzeichen sind in "
+"Python-Anweisungen bedeutsam!"
 
 #: ../../using/cmdline.rst:53
 msgid ""
@@ -868,6 +875,8 @@ msgid ""
 "The *message* field must match the whole warning message; this match is case-"
 "insensitive."
 msgstr ""
+"Das Feld *message* muss auf die gesamte Warnmeldung passen, wobei Groß- und "
+"Kleinschreibung keine Rolle spielt."
 
 #: ../../using/cmdline.rst:476
 msgid ""
@@ -886,6 +895,8 @@ msgid ""
 "The *module* field matches the (fully qualified) module name; this match is "
 "case-sensitive."
 msgstr ""
+"Das Feld *module* passt auf den (vollständig qualifizierten) Modulnamen, "
+"wobei Groß- und Kleinschreibung hier eine Rolle spielt."
 
 #: ../../using/cmdline.rst:484
 msgid ""
@@ -1210,6 +1221,12 @@ msgid ""
 "initialization. Python needs to be :ref:`built in debug mode <debug-build>` "
 "for this option to exist.  See also :envvar:`PYTHON_PRESITE`."
 msgstr ""
+":samp:`-X presite={package.module}` gibt ein Modul an, das importiert werden "
+"soll, bevor das Modul :mod:`site` ausgeführt wird und bevor das Modul "
+":mod:`__main__` existiert. Das importierte Modul ist deshalb nicht "
+":mod:`__main__`. Damit lässt sich früh während der Python-Initialisierung "
+"Code ausführen. Python muss :ref:`im Debug-Modus gebaut <debug-build>` sein, "
+"damit es diese Option gibt. Siehe auch :envvar:`PYTHON_PRESITE`."
 
 #: ../../using/cmdline.rst:666
 msgid ""
@@ -1685,6 +1702,8 @@ msgid ""
 "If this is set, Python won't add the :data:`user site-packages directory "
 "<site.USER_SITE>` to :data:`sys.path`."
 msgstr ""
+"Ist sie gesetzt, fügt Python das :data:`site-packages-Verzeichnis des "
+"Benutzers <site.USER_SITE>` nicht zu :data:`sys.path` hinzu."
 
 #: ../../using/cmdline.rst:954
 msgid ""

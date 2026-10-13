@@ -1,7 +1,6 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2026
@@ -13,9 +12,9 @@ msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-28 03:11+0000\n"
-"PO-Revision-Date: 2026-05-08 17:17+0000\n"
+"PO-Revision-Date: 2026-10-13 21:00+0200\n"
 "Last-Translator: Swen Bachmann, 2026\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +23,7 @@ msgstr ""
 
 #: ../../library/csv.rst:2
 msgid ":mod:`!csv` --- CSV File Reading and Writing"
-msgstr ""
+msgstr ":mod:`!csv` --- CSV-Dateien lesen und schreiben"
 
 #: ../../library/csv.rst:9
 msgid "**Source code:** :source:`Lib/csv.py`"
@@ -96,7 +95,7 @@ msgstr ""
 
 #: ../../library/csv.rst:48
 msgid "Module Contents"
-msgstr ""
+msgstr "Modulinhalt"
 
 #: ../../library/csv.rst:50
 msgid "The :mod:`!csv` module defines the following functions:"
@@ -777,7 +776,7 @@ msgstr "Wird von einer der Funktionen ausgelöst, wenn ein Fehler erkannt wird."
 
 #: ../../library/csv.rst:435
 msgid "Dialects and Formatting Parameters"
-msgstr ""
+msgstr "Dialekte und Formatierungsparameter"
 
 #: ../../library/csv.rst:437
 msgid ""
@@ -953,7 +952,7 @@ msgstr ""
 
 #: ../../library/csv.rst:534
 msgid "Reader Objects"
-msgstr ""
+msgstr "Reader-Objekte"
 
 #: ../../library/csv.rst:536
 msgid ""
@@ -1010,7 +1009,7 @@ msgstr ""
 
 #: ../../library/csv.rst:571
 msgid "Writer Objects"
-msgstr ""
+msgstr "Writer-Objekte"
 
 #: ../../library/csv.rst:573
 msgid ""
@@ -1152,6 +1151,10 @@ msgid ""
 "`locale.getencoding`).  To decode a file using a different encoding, use the "
 "``encoding`` argument of open::"
 msgstr ""
+"Da eine CSV-Datei zum Lesen mit :func:`open` geöffnet wird, wird sie "
+"standardmäßig mit der Standardkodierung des Systems nach Unicode dekodiert "
+"(siehe :func:`locale.getencoding`). Um eine Datei mit einer anderen "
+"Kodierung zu dekodieren, verwende das Argument ``encoding`` von open::"
 
 #: ../../library/csv.rst:653
 msgid ""
@@ -1161,12 +1164,19 @@ msgid ""
 "    for row in reader:\n"
 "        print(row)"
 msgstr ""
+"import csv\n"
+"with open('some.csv', newline='', encoding='utf-8') as f:\n"
+"    reader = csv.reader(f)\n"
+"    for row in reader:\n"
+"        print(row)"
 
 #: ../../library/csv.rst:659
 msgid ""
 "The same applies to writing in something other than the system default "
 "encoding: specify the encoding argument when opening the output file."
 msgstr ""
+"Dasselbe gilt für das Schreiben in einer anderen als der Standardkodierung "
+"des Systems: Gib beim Öffnen der Ausgabedatei das Argument encoding an."
 
 #: ../../library/csv.rst:662
 msgid "Registering a new dialect::"

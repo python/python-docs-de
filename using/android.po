@@ -1,15 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-05 16:53+0200\n"
-"PO-Revision-Date: 2025-09-16 00:02+0000\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"PO-Revision-Date: 2026-10-13 21:00+0200\n"
+"Last-Translator: python-doc bot, 2025\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,6 +116,9 @@ msgid ""
 "the :source:`testbed app <Android/testbed>` as a guide; each step below "
 "contains a link to the relevant file."
 msgstr ""
+"Wenn du sicher bist, dass du das alles von Hand machen willst, lies weiter. "
+"Die :source:`Testbed-App <Android/testbed>` kann dir als Vorlage dienen, "
+"jeder Schritt unten enthält einen Link zur jeweiligen Datei."
 
 #: ../../using/android.rst:43
 msgid "First, acquire a build of Python for Android:"
@@ -134,6 +140,9 @@ msgid ""
 "`Android/README.md`. The ``prefix`` directory will be created under :samp:"
 "`cross-build/{HOST}`."
 msgstr ""
+"Oder folge, wenn du es selbst bauen willst, der Anleitung in "
+":source:`Android/README.md`. Das Verzeichnis ``prefix`` wird unter "
+":samp:`cross-build/{HOST}` erzeugt."
 
 #: ../../using/android.rst:53
 msgid ""
@@ -141,6 +150,10 @@ msgid ""
 "kts>` file to copy the following items into your project. All except your "
 "own Python code can be copied from ``prefix/lib``:"
 msgstr ""
+"Füge in deiner Datei :source:`build.gradle "
+"<Android/testbed/app/build.gradle.kts>` Code ein, der die folgenden "
+"Bestandteile in dein Projekt kopiert. Alles außer deinem eigenen Python-Code "
+"lässt sich aus ``prefix/lib`` kopieren:"
 
 #: ../../using/android.rst:57
 msgid "In your JNI libraries:"
@@ -171,6 +184,8 @@ msgid ""
 "Add code to your app to :source:`extract the assets to the filesystem "
 "<Android/testbed/app/src/main/java/org/python/testbed/MainActivity.kt>`."
 msgstr ""
+"Füge Code in deine App ein, der :source:`die Assets ins Dateisystem entpackt "
+"<Android/testbed/app/src/main/java/org/python/testbed/MainActivity.kt>`."
 
 #: ../../using/android.rst:70
 msgid ""
@@ -178,6 +193,9 @@ msgid ""
 "testbed/app/src/main/c/main_activity.c>`. This will need to be C code called "
 "via JNI."
 msgstr ""
+"Füge Code in deine App ein, der :source:`Python im eingebetteten Modus "
+"startet <Android/testbed/app/src/main/c/main_activity.c>`. Das muss C-Code "
+"sein, der über JNI aufgerufen wird."
 
 #: ../../using/android.rst:75
 msgid "Building a Python package for Android"
