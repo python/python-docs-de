@@ -6,7 +6,7 @@ hier um Schaeden *innerhalb* der Auszeichnung, die Sphinx entweder gar nicht
 meldet oder erst als Folgefehler. Die meisten stammen aus maschineller
 Voruebersetzung, bei der reST-Syntax wie Fließtext behandelt wurde.
 
-Geprueft werden sechs Fehlerarten (Kuerzel fuer --art):
+Geprueft werden acht Fehlerarten (Kuerzel fuer --art):
 
   klammer     Ueberfluessige Backtick- oder Stern-Klammer um eine Rolle:
                   Ein ` :class:`tuple` `, der ...
@@ -38,6 +38,20 @@ Geprueft werden sechs Fehlerarten (Kuerzel fuer --art):
   bindestrich Leerzeichen zwischen Rolle und angehaengtem Wort:
                   :exc:`GeneratorExit` -Ausnahme
               Technisch harmlos, im Satz aber ein Fremdkoerper.
+
+  titel       Der Seitentitel eines LaTeX-Wurzeldokuments beginnt mit
+              Auszeichnung:
+                  ``optparse``-Code nach ``argparse`` migrieren
+              Sphinx baut aus jedem HOWTO und aus jedem Wurzeldokument ein
+              eigenes LaTeX-Dokument. Dessen erste Ueberschrift wird zum
+              \\title{} -- und dafuer verlangt der LaTeX-Writer einen reinen
+              Textknoten am Anfang (sphinx/writers/latex.py, visit_title).
+              Sonst warnt er "document title is not a single Text node", und
+              weil der CPython-Build mit -W laeuft, bricht er ab. Im
+              Fliesstext und in Zwischenueberschriften ist Auszeichnung am
+              Anfang dagegen unbedenklich -- nur die H1 dieser Seiten zaehlt.
+              Abhilfe: umformulieren, sodass der Titel mit Text beginnt
+              ("Migration von ``optparse``-Code zu ``argparse``").
 
 Das Skript aendert nichts. Es meldet nur, wo etwas zu tun ist -- die
 Korrekturen sind oft Ermessensfragen und gehoeren von Hand entschieden.
@@ -124,6 +138,61 @@ CODE_START = re.compile(r'^(>>>|\.\.\.|def |class |async def |import |from )')
 
 def ist_code(msgid: str) -> bool:
     return "\n" in msgid and bool(CODE_START.match(msgid.lstrip()))
+
+
+# --- Titel von LaTeX-Wurzeldokumenten --------------------------------------
+#
+# CPythons Doc/conf.py macht aus jeder Datei in latex_documents ein eigenes
+# .tex -- und zusaetzlich aus *jedem* howto/*.rst ausser index.rst. Nur bei
+# diesen Seiten wird die erste Ueberschrift zum \title{} und damit von
+# sphinx/writers/latex.py geprueft. Alle anderen Seiten (etwa library/json)
+# duerfen mit einer Rolle beginnen; dort passiert nichts.
+
+WURZELN = {
+    "about.po", "bugs.po", "contents.po", "glossary.po",
+    "c-api/index.po", "distributing/index.po", "extending/index.po",
+    "faq/index.po", "installing/index.po", "library/index.po",
+    "reference/index.po", "tutorial/index.po", "using/index.po",
+    "whatsnew/index.po",
+}
+
+# Auszeichnung, die einen eigenen Knoten erzeugt und deshalb nicht am
+# Titelanfang stehen darf.
+TITEL_AUSZEICHNUNG = re.compile(
+    r'^\s*('
+    r'``[^`]+``'                      # ``Literal``
+    r'|:[a-zA-Z][\w-]*:`[^`]*`'       # :rolle:`Text`
+    r'|`[^`]+`__?'                    # `Verweis`_
+    r'|\*\*[^*]+\*\*'                 # **fett**
+    r'|\*[^*]+\*'                     # *kursiv*
+    r')'
+)
+
+
+def ist_latex_wurzel(datei: Path) -> bool:
+    teile = datei.parts
+    name = teile[-1]
+    ordner = teile[-2] if len(teile) >= 2 else ""
+    if ordner == "howto" and name != "index.po":
+        return True
+    if ordner == "whatsnew" and re.fullmatch(r"3\.\d+\.po", name):
+        return True
+    return name in WURZELN or f"{ordner}/{name}" in WURZELN
+
+
+def pruefe_titel(datei: Path, msgstr: str) -> list:
+    """Prueft die erste Ueberschrift eines LaTeX-Wurzeldokuments."""
+    if not ist_latex_wurzel(datei):
+        return []
+    treffer = TITEL_AUSZEICHNUNG.match(msgstr)
+    if not treffer:
+        return []
+    # Besteht der Titel *nur* aus der Auszeichnung, ist es ein einzelner
+    # Knoten -- genau den laesst der LaTeX-Writer durchgehen.
+    if not msgstr[treffer.end():].strip():
+        return []
+    return [("titel", "Seitentitel beginnt mit Auszeichnung",
+             msgstr[:70].replace("\n", " "))]
 
 
 # --- PO-Parser (bewusst ohne polib, damit das Skript ueberall laeuft) ------
@@ -261,7 +330,7 @@ def pruefe_eintrag(msgid: str, msgstr: str, arten: set) -> list:
 # --- Hauptprogramm ---------------------------------------------------------
 
 ALLE_ARTEN = ["klammer", "anzeige", "verweis", "code", "literal", "typo",
-              "bindestrich"]
+              "bindestrich", "titel"]
 
 ERKLAERUNG = {
     "klammer": "Ueberfluessige Backtick-/Stern-Klammer um eine Rolle -- zerstoert die folgenden Querverweise",
@@ -271,6 +340,7 @@ ERKLAERUNG = {
     "literal": "``Literale`` aus dem Original fehlen in der Uebersetzung -- Code wurde mituebersetzt",
     "typo": "Typografische Anfuehrungszeichen innerhalb von Code oder Literalen",
     "bindestrich": "Leerzeichen zwischen Rolle und angehaengtem Wort",
+    "titel": "Seitentitel eines LaTeX-Wurzeldokuments beginnt mit Auszeichnung -- bricht den LaTeX-Build mit -W ab",
 }
 
 
@@ -320,8 +390,15 @@ def main() -> None:
         if nr % 100 == 0:
             print(f"  {nr}/{len(dateien)}", file=sys.stderr)
         try:
+            erster = True
             for po_zeile, quelle, msgid, msgstr in po_eintraege(datei):
-                for art, name, ausschnitt in pruefe_eintrag(msgid, msgstr, arten):
+                treffer = list(pruefe_eintrag(msgid, msgstr, arten))
+                if erster:
+                    # Der erste uebersetzte Eintrag einer Datei ist ihre H1.
+                    erster = False
+                    if "titel" in arten:
+                        treffer += pruefe_titel(datei, msgstr)
+                for art, name, ausschnitt in treffer:
                     funde[art].append((str(datei), po_zeile, quelle, name, ausschnitt))
                     betroffene_dateien[art].add(str(datei))
         except Exception as fehler:                      # defekte Datei nicht verschlucken
