@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../c-api/allocation.rst:24
 msgid ""
-optimised individual sentence structures and phrasing."In general, consider this function to be a low-level routine. "
+"In general, consider this function to be a low-level routine. "
 "Use :c:member:`~PyTypeObject.tp_alloc` where possible. For "
 "implementing :c:member:`!tp_alloc` for your type, "
 "prefer :c:func:`PyType_GenericAlloc` or :c:func:`PyObject_New`."
