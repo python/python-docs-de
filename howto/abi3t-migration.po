@@ -1,16 +1,18 @@
-# German translations for Python package.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# Automatically generated, 2026.
+#
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-23 06:17+0000\n"
-"PO-Revision-Date: 2026-09-22 21:21+0200\n"
+"PO-Revision-Date: 2026-10-15 06:00+0200\n"
 "Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +21,7 @@ msgstr ""
 
 #: ../../howto/abi3t-migration.rst:7
 msgid "Migrating to Stable ABI for free threading (``abi3t``)"
-msgstr ""
+msgstr "Umstieg auf das stabile ABI für freies Threading (``abi3t``)"
 
 #: ../../howto/abi3t-migration.rst:9
 msgid ""
@@ -28,10 +30,15 @@ msgid ""
 "for Free-Threaded Builds, or ``abi3t`` for short. This document describes "
 "how to adapt C API extensions to support free threading."
 msgstr ""
+"Seit der Veröffentlichung von 3.15 unterstützt CPython eine Variante des "
+"stabilen ABI, die :term:`free-threaded <free threading>` Python unterstützt: "
+"das stabile ABI für Free-Threaded-Builds, kurz ``abi3t``. Dieses Dokument "
+"beschreibt, wie du C-API-Erweiterungen anpasst, damit sie freies Threading "
+"unterstützen."
 
 #: ../../howto/abi3t-migration.rst:15
 msgid "Why do this"
-msgstr ""
+msgstr "Warum man das tun sollte"
 
 #: ../../howto/abi3t-migration.rst:17
 msgid ""
@@ -39,6 +46,9 @@ msgid ""
 "artifacts that you need to build and distribute for each version of your "
 "library."
 msgstr ""
+"Der übliche Grund, das stabile ABI zu verwenden, ist, die Zahl der Artefakte "
+"zu verringern, die du für jede Version deiner Bibliothek bauen und verteilen "
+"musst."
 
 #: ../../howto/abi3t-migration.rst:20
 msgid ""
@@ -47,118 +57,128 @@ msgid ""
 "wish to support. For example, each tag in the following table represents a "
 "separate library/wheel:"
 msgstr ""
+"Ohne das stabile ABI musst du für jede Funktionsversion von CPython, die du "
+"unterstützen willst, eine eigene dynamische Bibliothek und üblicherweise "
+"eine *Wheel*-Distribution bauen. Jede Kennzeichnung in der folgenden Tabelle "
+"steht zum Beispiel für eine eigene Bibliothek beziehungsweise ein eigenes "
+"Wheel:"
 
 #: ../../howto/abi3t-migration.rst:27 ../../howto/abi3t-migration.rst:49
 #: ../../howto/abi3t-migration.rst:69
 msgid "CPython version"
-msgstr ""
+msgstr "CPython-Version"
 
 #: ../../howto/abi3t-migration.rst:27 ../../howto/abi3t-migration.rst:49
 #: ../../howto/abi3t-migration.rst:69
 msgid "Non-free-threaded"
-msgstr ""
+msgstr "Ohne freies Threading"
 
 #: ../../howto/abi3t-migration.rst:27 ../../howto/abi3t-migration.rst:49
 #: ../../howto/abi3t-migration.rst:69
 msgid "Free-threaded"
-msgstr ""
+msgstr "Mit freiem Threading"
 
 #: ../../howto/abi3t-migration.rst:29 ../../howto/abi3t-migration.rst:51
 #: ../../howto/abi3t-migration.rst:71
 msgid "3.12"
-msgstr ""
+msgstr "3.12"
 
 #: ../../howto/abi3t-migration.rst:29
 msgid "``cpython-312``"
-msgstr ""
+msgstr "``cpython-312``"
 
 #: ../../howto/abi3t-migration.rst:29 ../../howto/abi3t-migration.rst:51
 #: ../../howto/abi3t-migration.rst:71
 msgid "---"
-msgstr ""
+msgstr "---"
 
 #: ../../howto/abi3t-migration.rst:31 ../../howto/abi3t-migration.rst:53
 #: ../../howto/abi3t-migration.rst:73
 msgid "3.13"
-msgstr ""
+msgstr "3.13"
 
 #: ../../howto/abi3t-migration.rst:31
 msgid "``cpython-313``"
-msgstr ""
+msgstr "``cpython-313``"
 
 #: ../../howto/abi3t-migration.rst:31 ../../howto/abi3t-migration.rst:53
 #: ../../howto/abi3t-migration.rst:73
 msgid "``cpython-313t``"
-msgstr ""
+msgstr "``cpython-313t``"
 
 #: ../../howto/abi3t-migration.rst:33 ../../howto/abi3t-migration.rst:55
 #: ../../howto/abi3t-migration.rst:75
 msgid "3.14"
-msgstr ""
+msgstr "3.14"
 
 #: ../../howto/abi3t-migration.rst:33
 msgid "``cpython-314``"
-msgstr ""
+msgstr "``cpython-314``"
 
 #: ../../howto/abi3t-migration.rst:33 ../../howto/abi3t-migration.rst:55
 #: ../../howto/abi3t-migration.rst:75
 msgid "``cpython-314t``"
-msgstr ""
+msgstr "``cpython-314t``"
 
 #: ../../howto/abi3t-migration.rst:35 ../../howto/abi3t-migration.rst:57
 #: ../../howto/abi3t-migration.rst:77
 msgid "3.15"
-msgstr ""
+msgstr "3.15"
 
 #: ../../howto/abi3t-migration.rst:35
 msgid "``cpython-315``"
-msgstr ""
+msgstr "``cpython-315``"
 
 #: ../../howto/abi3t-migration.rst:35 ../../howto/abi3t-migration.rst:57
 msgid "``cpython-315t``"
-msgstr ""
+msgstr "``cpython-315t``"
 
 #: ../../howto/abi3t-migration.rst:37 ../../howto/abi3t-migration.rst:59
 #: ../../howto/abi3t-migration.rst:79
 msgid "3.16"
-msgstr ""
+msgstr "3.16"
 
 #: ../../howto/abi3t-migration.rst:37
 msgid "``cpython-316``"
-msgstr ""
+msgstr "``cpython-316``"
 
 #: ../../howto/abi3t-migration.rst:37 ../../howto/abi3t-migration.rst:59
 msgid "``cpython-316t``"
-msgstr ""
+msgstr "``cpython-316t``"
 
 #: ../../howto/abi3t-migration.rst:39 ../../howto/abi3t-migration.rst:61
 #: ../../howto/abi3t-migration.rst:81
 msgid "Later versions"
-msgstr ""
+msgstr "Spätere Versionen"
 
 #: ../../howto/abi3t-migration.rst:39
 msgid ":samp:`cpython-3{XX}`"
-msgstr ""
+msgstr ":samp:`cpython-3{XX}`"
 
 #: ../../howto/abi3t-migration.rst:39 ../../howto/abi3t-migration.rst:61
 msgid ":samp:`cpython-3{XX}t`"
-msgstr ""
+msgstr ":samp:`cpython-3{XX}t`"
 
 #: ../../howto/abi3t-migration.rst:42
 msgid ""
 "That's a lot of builds, especially when multiplied by the number of "
 "supported platforms."
 msgstr ""
+"Das sind eine Menge Builds, besonders wenn man sie mit der Zahl der "
+"unterstützten Plattformen multipliziert."
 
 #: ../../howto/abi3t-migration.rst:45
 msgid ""
 "With the Stable ABI (``abi3``, introduced in CPython 3.2), a single "
 "extension (per platform) can cover all *non-free-threaded* builds of CPython:"
 msgstr ""
+"Mit dem stabilen ABI (``abi3``, eingeführt in CPython 3.2) kann eine einzige "
+"Erweiterung (je Plattform) alle Builds von CPython *ohne freies Threading* "
+"abdecken:"
 
 #: ../../howto/abi3t-migration.rst:51
 msgid "``abi3``"
-msgstr ""
+msgstr "``abi3``"
 
 #: ../../howto/abi3t-migration.rst:64
 msgid ""
@@ -166,14 +186,17 @@ msgid ""
 "3.15, does the same for free-threaded builds. And it's compatible with non-"
 "free-threaded ones as well:"
 msgstr ""
+"Das stabile ABI für Free-Threaded-Builds (``abi3t``), eingeführt in CPython "
+"3.15, tut dasselbe für Free-Threaded-Builds. Und es ist zugleich mit denen "
+"ohne freies Threading kompatibel:"
 
 #: ../../howto/abi3t-migration.rst:71
 msgid "``abi3`` *"
-msgstr ""
+msgstr "``abi3`` *"
 
 #: ../../howto/abi3t-migration.rst:77
 msgid "``abi3t``"
-msgstr ""
+msgstr "``abi3t``"
 
 #: ../../howto/abi3t-migration.rst:84
 msgid ""
@@ -181,14 +204,17 @@ msgid ""
 "threaded builds; even the 3.15+ ones that this table \"attributes\" to "
 "``abi3t``.)"
 msgstr ""
+"\\* (Wie oben ist die ``abi3``-Erweiterung mit allen Builds ohne freies "
+"Threading kompatibel – auch mit denen ab 3.15, die diese Tabelle ``abi3t`` "
+"„zuschreibt“.)"
 
 #: ../../howto/abi3t-migration.rst:88
 msgid "Why *not* do this"
-msgstr ""
+msgstr "Warum man das *nicht* tun sollte"
 
 #: ../../howto/abi3t-migration.rst:90
 msgid "There are two main downsides to the Stable ABI."
-msgstr ""
+msgstr "Das stabile ABI hat zwei wesentliche Nachteile."
 
 #: ../../howto/abi3t-migration.rst:92
 msgid ""
@@ -197,6 +223,11 @@ msgid ""
 "and often can be mitigated by using the same source to build both a Stable "
 "ABI build and a few version-specific ones for \"tier 1\" CPython versions."
 msgstr ""
+"Erstens kann deine Erweiterung langsamer werden, weil das stabile ABI die "
+"Kompatibilität über die Leistung stellt. Der Unterschied ist üblicherweise "
+"nicht bemerkbar und lässt sich oft abmildern, indem du aus derselben Quelle "
+"sowohl einen Build mit stabilem ABI als auch einige versionsspezifische "
+"Builds für die CPython-Versionen der „Stufe 1“ erzeugst."
 
 #: ../../howto/abi3t-migration.rst:98
 msgid ""
@@ -204,6 +235,9 @@ msgid ""
 "build for the Stable ABI, which may be difficult or, in rare cases, "
 "impossible."
 msgstr ""
+"Zweitens ist nicht die gesamte C-API verfügbar. Erweiterungen müssen "
+"portiert werden, um für das stabile ABI gebaut werden zu können, und das "
+"kann schwierig oder in seltenen Fällen unmöglich sein."
 
 #: ../../howto/abi3t-migration.rst:102
 msgid ""
@@ -211,10 +245,13 @@ msgid ""
 "build your extension for older versions of CPython from the same source, you "
 "have two main options:"
 msgstr ""
+"Insbesondere setzt ``abi3t`` APIs voraus, die in CPython 3.15 ergänzt "
+"wurden. Wenn du deine Erweiterung aus derselben Quelle auch für ältere "
+"CPython-Versionen bauen willst, hast du zwei wesentliche Möglichkeiten:"
 
 #: ../../howto/abi3t-migration.rst:106
 msgid "Use preprocessor conditionals."
-msgstr ""
+msgstr "Verwende Bedingungen des Präprozessors."
 
 #: ../../howto/abi3t-migration.rst:108
 msgid ""
@@ -222,6 +259,10 @@ msgid ""
 "you are told to do a change that breaks the build on CPython versions you "
 "care about. Keep the pre-existing code in ``#else`` blocks."
 msgstr ""
+"Verwende beim Befolgen dieser Anleitung ``#ifdef Py_TARGET_ABI3T``-Blöcke, "
+"wann immer du eine Änderung vornehmen sollst, die den Build auf CPython-"
+"Versionen bricht, die dir wichtig sind. Behalte den bisherigen Code in "
+"``#else``-Blöcken."
 
 #: ../../howto/abi3t-migration.rst:112
 msgid ""
@@ -229,28 +270,39 @@ msgid ""
 "3.12, due to additions introduced in :pep:`697`. Keeping compatibility with "
 "3.11 and below may be worth it for code generators (for example, Cython)."
 msgstr ""
+"Für handgeschriebene C-Erweiterungen ist dieser Ansatz dank der Ergänzungen "
+"aus :pep:`697` bis hinunter zu CPython 3.12 vernünftig. Die Kompatibilität "
+"mit 3.11 und älter aufrechtzuerhalten, kann sich für Codegeneratoren lohnen "
+"(zum Beispiel für Cython)."
 
 #: ../../howto/abi3t-migration.rst:117
 msgid ""
 "Do not port to ``abi3t``, and continue building separate extensions for each "
 "version of CPython, until you can drop support for the older versions."
 msgstr ""
+"Portiere nicht auf ``abi3t`` und baue weiterhin eigene Erweiterungen für "
+"jede CPython-Version, bis du die Unterstützung für die älteren Versionen "
+"aufgeben kannst."
 
 #: ../../howto/abi3t-migration.rst:120
 msgid ""
 "This is a valid approach. Not all extensions need to switch to ``abi3t`` "
 "right now."
 msgstr ""
+"Das ist ein gültiger Ansatz. Nicht jede Erweiterung muss jetzt schon auf "
+"``abi3t`` umsteigen."
 
 #: ../../howto/abi3t-migration.rst:125
 msgid "Prerequisites"
-msgstr ""
+msgstr "Voraussetzungen"
 
 #: ../../howto/abi3t-migration.rst:127
 msgid ""
 "This guide assumes that you have an extension written directly in C (or C+"
 "+), which you want to port to ``abi3t``."
 msgstr ""
+"Diese Anleitung geht davon aus, dass du eine unmittelbar in C (oder C++) "
+"geschriebene Erweiterung hast, die du auf ``abi3t`` portieren willst."
 
 #: ../../howto/abi3t-migration.rst:130
 msgid ""
@@ -259,10 +311,14 @@ msgid ""
 "you maintain such a tool, you might be able to adapt the instructions here "
 "for your tool."
 msgstr ""
+"Wenn deine Erweiterung einen Codegenerator (wie Cython) oder eine "
+"Sprachanbindung (wie PyO3) verwendet, ist es am besten, zu warten, bis "
+"dieses Werkzeug ``abi3t`` unterstützt. Wenn du ein solches Werkzeug pflegst, "
+"kannst du die Hinweise hier möglicherweise für dein Werkzeug anpassen."
 
 #: ../../howto/abi3t-migration.rst:136
 msgid "Non-free-threaded Stable ABI"
-msgstr ""
+msgstr "Stabiles ABI ohne freies Threading"
 
 #: ../../howto/abi3t-migration.rst:138
 msgid ""
@@ -270,10 +326,14 @@ msgid ""
 "If not, either port it first, or follow this guide but be prepared to fix "
 "issues it does not mention."
 msgstr ""
+"Deine Erweiterung sollte das stabile ABI ohne freies Threading (``abi3``) "
+"unterstützen. Falls nicht, portiere sie entweder zuerst darauf oder folge "
+"dieser Anleitung und sei darauf vorbereitet, Probleme zu beheben, die sie "
+"nicht erwähnt."
 
 #: ../../howto/abi3t-migration.rst:143
 msgid "Free-threading support"
-msgstr ""
+msgstr "Unterstützung für freies Threading"
 
 #: ../../howto/abi3t-migration.rst:145
 msgid ""
@@ -281,6 +341,10 @@ msgid ""
 "prepare your extension for free threading before you port it to ``abi3t``. "
 "See :ref:`freethreading-extensions-howto` for instructions."
 msgstr ""
+"Es ist technisch gesehen keine harte Voraussetzung, aber du wirst deine "
+"Erweiterung höchstwahrscheinlich auf freies Threading vorbereiten wollen, "
+"bevor du sie auf ``abi3t`` portierst. Hinweise dazu stehen "
+"unter :ref:`freethreading-extensions-howto`."
 
 #: ../../howto/abi3t-migration.rst:151
 msgid ""
@@ -288,34 +352,46 @@ msgid ""
 "threading.github.io/porting/>`__: A community-maintained porting guide for "
 "extension authors."
 msgstr ""
+"`Porting Extension Modules to Support Free-Threading <https://py-free-"
+"threading.github.io/porting/>`__: eine von der Gemeinschaft gepflegte "
+"Portierungsanleitung für Autoren von Erweiterungen."
 
 #: ../../howto/abi3t-migration.rst:156
 msgid "Isolating extension modules"
-msgstr ""
+msgstr "Erweiterungsmodule isolieren"
 
 #: ../../howto/abi3t-migration.rst:158
 msgid ""
 "Your module should use :ref:`multi-phase initialization <multi-phase-"
 "initialization>`, and it should either be isolated or limit itself to be "
-"loaded at most once per process. If it is not your case, follow :ref:"
-"`isolating-extensions-howto` first. (See the :ref:`opt-out section "
-"<isolating-extensions-optout>` for a shortcut.)"
+"loaded at most once per process. If it is not your case, "
+"follow :ref:`isolating-extensions-howto` first. (See the :ref:`opt-out "
+"section <isolating-extensions-optout>` for a shortcut.)"
 msgstr ""
+"Dein Modul sollte eine :ref:`mehrphasige Initialisierung <multi-phase-"
+"initialization>` verwenden und entweder isoliert sein oder sich darauf "
+"beschränken, je Prozess höchstens einmal geladen zu werden. Ist das bei dir "
+"nicht der Fall, folge zuerst :ref:`isolating-extensions-howto`. (Eine "
+"Abkürzung findest du im :ref:`Abschnitt zum Verzicht <isolating-extensions-"
+"optout>`.)"
 
 #: ../../howto/abi3t-migration.rst:165
 msgid "Avoiding variable-sized types"
-msgstr ""
+msgstr "Typen mit veränderlicher Größe vermeiden"
 
 #: ../../howto/abi3t-migration.rst:167
 msgid ""
-"If your extension defines variable-sized types (using :c:macro:"
-"`Py_tp_itemsize` or :c:member:`PyTypeObject.tp_itemsize`), it cannot be "
-"ported to ``abi3t`` 3.15."
+"If your extension defines variable-sized types "
+"(using :c:macro:`Py_tp_itemsize` or :c:member:`PyTypeObject.tp_itemsize`), "
+"it cannot be ported to ``abi3t`` 3.15."
 msgstr ""
+"Wenn deine Erweiterung Typen mit veränderlicher Größe definiert "
+"(über :c:macro:`Py_tp_itemsize` oder :c:member:`PyTypeObject.tp_itemsize`), "
+"lässt sie sich nicht auf ``abi3t`` 3.15 portieren."
 
 #: ../../howto/abi3t-migration.rst:173
 msgid "Setting up the build"
-msgstr ""
+msgstr "Den Build einrichten"
 
 #: ../../howto/abi3t-migration.rst:175
 msgid ""
@@ -325,6 +401,12 @@ msgid ""
 "may want to verify that it set the right flag by temporarily adding the "
 "following just after ``#include <Python.h>``::"
 msgstr ""
+"Wenn du ein Build-Werkzeug verwendest (etwa setuptools, meson-python, scikit-"
+"build-core), suche in dessen Dokumentation nach einem Weg, ``abi3t`` zu "
+"wählen. Zum Zeitpunkt der Abfassung haben das noch nicht alle, wenn dein "
+"Werkzeug es kann, verwende es. Du kannst prüfen, ob es das richtige Flag "
+"gesetzt hat, indem du vorübergehend direkt hinter ``#include <Python.h>`` "
+"Folgendes ergänzt::"
 
 #: ../../howto/abi3t-migration.rst:182
 msgid ""
@@ -332,35 +414,43 @@ msgid ""
 "#error \"abi3t define is not set!\"\n"
 "#endif"
 msgstr ""
+"#if Py_TARGET_ABI3T+0 <= 0x30f0000\n"
+"#error \"abi3t define is not set!\"\n"
+"#endif"
 
 #: ../../howto/abi3t-migration.rst:186
 msgid ""
 "This should result in a different error than \"``abi3t`` define is not set\"."
 msgstr ""
+"Das sollte zu einem anderen Fehler führen als „``abi3t`` define is not set“."
 
 #: ../../howto/abi3t-migration.rst:190
 msgid ""
 "If your build tool doesn't support ``abi3t`` yet, set the following macro "
 "before including ``Python.h``::"
 msgstr ""
+"Wenn dein Build-Werkzeug ``abi3t`` noch nicht unterstützt, setze vor dem "
+"Einbinden von ``Python.h`` das folgende Makro::"
 
 #: ../../howto/abi3t-migration.rst:193
 msgid "#define Py_TARGET_ABI3T 0x30f0000"
-msgstr ""
+msgstr "#define Py_TARGET_ABI3T 0x30f0000"
 
 #: ../../howto/abi3t-migration.rst:195
 msgid "or specify it as a compiler flag, for example::"
-msgstr ""
+msgstr "oder gib es als Compilerflag an, zum Beispiel::"
 
 #: ../../howto/abi3t-migration.rst:197
 msgid "-DPy_TARGET_ABI3T=0x30f0000"
-msgstr ""
+msgstr "-DPy_TARGET_ABI3T=0x30f0000"
 
 #: ../../howto/abi3t-migration.rst:199
 msgid ""
 "Once your extension builds with this setting, it will be compatible with "
 "CPython 3.15 and above."
 msgstr ""
+"Sobald deine Erweiterung mit dieser Einstellung baut, ist sie mit CPython "
+"3.15 und neuer kompatibel."
 
 #: ../../howto/abi3t-migration.rst:202
 msgid ""
@@ -368,6 +458,9 @@ msgid ""
 "resulting extension manually as well. This is covered in :ref:`abi3t-"
 "migration-tagging` below."
 msgstr ""
+"Wenn du dieses Makro von Hand setzt, musst du die entstehende Erweiterung "
+"später ebenfalls von Hand benennen und kennzeichnen. Das wird unten "
+"unter :ref:`abi3t-migration-tagging` behandelt."
 
 #: ../../howto/abi3t-migration.rst:206
 msgid ""
@@ -376,25 +469,38 @@ msgid ""
 "configuration, and ideally run tests on all Python versions you support. "
 "This will ensure that nothing breaks as you are porting."
 msgstr ""
+"Diese Anleitung bittet dich, eine Reihe von Änderungen vorzunehmen. Prüfe "
+"nach jeder einzelnen, ob deine Erweiterung in der ursprünglichen "
+"Konfiguration (ohne ``abi3t``) noch baut, und lasse im Idealfall die Tests "
+"auf allen Python-Versionen laufen, die du unterstützt. So stellst du sicher, "
+"dass beim Portieren nichts bricht."
 
 #: ../../howto/abi3t-migration.rst:216
 msgid "Module export hook"
-msgstr ""
+msgstr "Export-Haken des Moduls"
 
 #: ../../howto/abi3t-migration.rst:218
 msgid ""
-"Unless you've done this step already, your extension module defines a :ref:"
-"`module initialization function <extension-pyinit>` named :samp:"
-"`PyInit_{<module_name>}`. You will need to port it to a :ref:`module export "
-"hook <extension-export-hook>`, :samp:`PyModExport_{<module name>}`, a "
-"feature added in CPython 3.15 in :pep:`793`."
+"Unless you've done this step already, your extension module defines "
+"a :ref:`module initialization function <extension-pyinit>` "
+"named :samp:`PyInit_{<module_name>}`. You will need to port it to "
+"a :ref:`module export hook <extension-export-"
+"hook>`, :samp:`PyModExport_{<module name>}`, a feature added in CPython 3.15 "
+"in :pep:`793`."
 msgstr ""
+"Sofern du diesen Schritt nicht schon erledigt hast, definiert dein "
+"Erweiterungsmodul eine :ref:`Initialisierungsfunktion <extension-pyinit>` "
+"namens :samp:`PyInit_{<module_name>}`. Du musst sie auf einen :ref:`Export-"
+"Haken <extension-export-hook>` portieren, :samp:`PyModExport_{<module name>}"
+"` – eine Funktionalität, die in CPython 3.15 mit :pep:`793` ergänzt wurde."
 
 #: ../../howto/abi3t-migration.rst:225
 msgid ""
 "Your existing init function should look like this (with your own names for "
 "``<modname>`` and ``<moddef>``):"
 msgstr ""
+"Deine bestehende init-Funktion sollte so aussehen (mit deinen eigenen Namen "
+"für ``<modname>`` und ``<moddef>``):"
 
 #: ../../howto/abi3t-migration.rst:228
 msgid ""
@@ -404,13 +510,21 @@ msgid ""
 "    return PyModuleDef_Init(&<moddef>);\n"
 "}"
 msgstr ""
+"PyMODINIT_FUNC\n"
+"PyInit_<modname>(void)\n"
+"{\n"
+"    return PyModuleDef_Init(&<moddef>);\n"
+"}"
 
 #: ../../howto/abi3t-migration.rst:237
 msgid ""
-"If there is some code before the ``return``, move it to a :c:macro:"
-"`Py_mod_create` or :c:macro:`Py_mod_exec` slot function. See the :ref:"
-"`PyInit documentation <extension-pyinit>` for related information."
+"If there is some code before the ``return``, move it to "
+"a :c:macro:`Py_mod_create` or :c:macro:`Py_mod_exec` slot function. See "
+"the :ref:`PyInit documentation <extension-pyinit>` for related information."
 msgstr ""
+"Steht vor dem ``return`` noch Code, verschiebe ihn in eine Slot-"
+"Funktion :c:macro:`Py_mod_create` oder :c:macro:`Py_mod_exec`. Verwandte "
+"Informationen stehen in der :ref:`PyInit-Dokumentation <extension-pyinit>`."
 
 #: ../../howto/abi3t-migration.rst:241
 msgid ""
@@ -418,6 +532,9 @@ msgid ""
 "above). Its definition should be similar to the following, with different "
 "values and perhaps some fields unnnamed or left out:"
 msgstr ""
+"Die Funktion verweist auf ein ``PyModuleDef``-Objekt (``<moddef>`` im obigen "
+"Code). Dessen Definition dürfte dem Folgenden ähneln, mit anderen Werten und "
+"vielleicht einigen unbenannten oder weggelassenen Feldern:"
 
 #: ../../howto/abi3t-migration.rst:246
 msgid ""
@@ -433,6 +550,17 @@ msgid ""
 "    .m_free = my_free,\n"
 "};"
 msgstr ""
+"static PyModuleDef <moddef> = {\n"
+"    PyModuleDef_HEAD_INIT,\n"
+"    .m_name = \"my_module\",\n"
+"    .m_doc = \"my docstring\",\n"
+"    .m_size = sizeof(my_state_struct),\n"
+"    .m_methods = my_methods,\n"
+"    .m_slots = my_slots,\n"
+"    .m_traverse = my_traverse,\n"
+"    .m_clear = my_clear,\n"
+"    .m_free = my_free,\n"
+"};"
 
 #: ../../howto/abi3t-migration.rst:261
 msgid ""
@@ -440,6 +568,9 @@ msgid ""
 "``#ifndef Py_TARGET_ABI3T`` block, to retain backwards compatibility), and "
 "replace them with the following:"
 msgstr ""
+"Entferne diese Definition und die ``PyInit``-Funktion (oder stecke sie in "
+"einen ``#ifndef Py_TARGET_ABI3T``-Block, um die Rückwärtskompatibilität zu "
+"erhalten) und ersetze sie durch Folgendes:"
 
 #: ../../howto/abi3t-migration.rst:265
 msgid ""
@@ -464,35 +595,66 @@ msgid ""
 "    return my_slot_array;\n"
 "}"
 msgstr ""
+"PyABIInfo_VAR(abi_info);\n"
+"\n"
+"static PySlot my_slot_array[] = {\n"
+"    PySlot_STATIC_DATA(Py_mod_abi, &abi_info),\n"
+"    PySlot_STATIC_DATA(Py_mod_name, \"my_module\"),\n"
+"    PySlot_STATIC_DATA(Py_mod_doc, \"my docstring\"),\n"
+"    PySlot_SIZE(Py_mod_state_size, sizeof(my_state_struct)),\n"
+"    PySlot_STATIC_DATA(Py_mod_methods, my_methods),\n"
+"    PySlot_STATIC_DATA(Py_mod_slots, my_slots),\n"
+"    PySlot_FUNC(Py_mod_state_traverse, my_traverse),\n"
+"    PySlot_FUNC(Py_mod_state_clear, my_clear),\n"
+"    PySlot_FUNC(Py_mod_state_free, my_free),\n"
+"    PySlot_END\n"
+"};\n"
+"\n"
+"PyMODEXPORT_FUNC\n"
+"PyModExport_<modname>(void)\n"
+"{\n"
+"    return my_slot_array;\n"
+"}"
 
 #: ../../howto/abi3t-migration.rst:289
 msgid ""
-"Leave out any fields that were missing (except the new :c:macro:"
-"`Py_mod_abi`), and substitute your own values."
+"Leave out any fields that were missing (except the "
+"new :c:macro:`Py_mod_abi`), and substitute your own values."
 msgstr ""
+"Lasse alle Felder weg, die gefehlt haben (außer dem "
+"neuen :c:macro:`Py_mod_abi`), und setze deine eigenen Werte ein."
 
 #: ../../howto/abi3t-migration.rst:292
 msgid ""
 "See the :c:type:`PySlot` and :c:ref:`export hook <extension-export-hook>` "
 "documentation for details on this API."
 msgstr ""
+"Einzelheiten zu dieser API stehen in der Dokumentation zu :c:type:`PySlot` "
+"und zum :c:ref:`Export-Haken <extension-export-hook>`."
 
 #: ../../howto/abi3t-migration.rst:295
 msgid ""
 "As in the example, your ``PyModExport_`` function should *only* return a "
-"pointer to static data. If you cannot avoid additional code, refer to the :"
-"ref:`caveats in PyModExport documentation <pymodexport-api-caveats>`."
+"pointer to static data. If you cannot avoid additional code, refer to "
+"the :ref:`caveats in PyModExport documentation <pymodexport-api-caveats>`."
 msgstr ""
+"Wie im Beispiel sollte deine ``PyModExport_``-Funktion *nur* einen Zeiger "
+"auf statische Daten zurückgeben. Wenn du zusätzlichen Code nicht vermeiden "
+"kannst, lies die :ref:`Vorbehalte in der PyModExport-Dokumentation "
+"<pymodexport-api-caveats>`."
 
 #: ../../howto/abi3t-migration.rst:302
 msgid "Existing slots"
-msgstr ""
+msgstr "Bestehende Slots"
 
 #: ../../howto/abi3t-migration.rst:304
 msgid ""
 "If you have a ``Py_mod_slots`` slot, check the array it refers to. It should "
 "be a :c:type:`PyModuleDef_Slot` array like the following:"
 msgstr ""
+"Wenn du einen ``Py_mod_slots``-Slot hast, prüfe das Feld, auf das er "
+"verweist. Es sollte ein :c:type:`PyModuleDef_Slot`-Feld wie das folgende "
+"sein:"
 
 #: ../../howto/abi3t-migration.rst:307
 msgid ""
@@ -509,23 +671,40 @@ msgid ""
 "   {0, NULL}\n"
 "};"
 msgstr ""
+"static PyObject *create_module(PyObject *spec, PyModuleDef *def) { ... }\n"
+"static int my_first_module_exec(PyObject *module) { ... }\n"
+"static int my_second_module_exec(PyObject *module) { ... }\n"
+"\n"
+"static PyModuleDef_Slot my_slots[] = {\n"
+"   {Py_mod_gil, Py_MOD_GIL_NOT_USED},\n"
+"   {Py_mod_multiple_interpreters, Py_MOD_PER_INTERPRETER_GIL_SUPPORTED},\n"
+"   {Py_mod_create, my_module_create},\n"
+"   {Py_mod_exec, my_first_module_exec},\n"
+"   {Py_mod_exec, my_second_module_exec},\n"
+"   {0, NULL}\n"
+"};"
 
 #: ../../howto/abi3t-migration.rst:324
 msgid "``py_mod_create``"
-msgstr ""
+msgstr "``py_mod_create``"
 
 #: ../../howto/abi3t-migration.rst:327
 msgid ""
 "If you have a :c:macro:`Py_mod_create` entry, make sure the function can be "
-"called with ``NULL`` as its second argument (instead of the :c:type:"
-"`PyModuleDef`, which you are removing). Often, this argument isn't used at "
-"all; you can check by renaming it:"
+"called with ``NULL`` as its second argument (instead of "
+"the :c:type:`PyModuleDef`, which you are removing). Often, this argument "
+"isn't used at all; you can check by renaming it:"
 msgstr ""
+"Wenn du einen :c:macro:`Py_mod_create`-Eintrag hast, stelle sicher, dass die "
+"Funktion mit ``NULL`` als zweitem Argument aufgerufen werden kann (anstelle "
+"des :c:type:`PyModuleDef`, das du entfernst). Oft wird dieses Argument "
+"überhaupt nicht verwendet. Du kannst das prüfen, indem du es umbenennst:"
 
 #: ../../howto/abi3t-migration.rst:332
 msgid ""
 "static PyObject *create_module(PyObject *spec, PyModuleDef *_unused) { ... }"
 msgstr ""
+"static PyObject *create_module(PyObject *spec, PyModuleDef *_unused) { ... }"
 
 #: ../../howto/abi3t-migration.rst:337
 msgid ""
@@ -534,10 +713,15 @@ msgid ""
 "reusing a single function for several different modules, consider defining "
 "several functions instead.)"
 msgstr ""
+"Wird das Argument verwendet, finde einen anderen Weg, die Daten "
+"hineinzugeben. Üblicherweise ist die Information statisch und du kannst "
+"unmittelbar darauf verweisen. (Wenn du eine einzige Funktion für mehrere "
+"verschiedene Module wiederverwendest, erwäge, stattdessen mehrere Funktionen "
+"zu definieren.)"
 
 #: ../../howto/abi3t-migration.rst:344
 msgid "Multiple ``py_mod_exec``"
-msgstr ""
+msgstr "Multiple ``py_mod_exec``"
 
 #: ../../howto/abi3t-migration.rst:346
 msgid ""
@@ -545,6 +729,9 @@ msgid ""
 "create a new function that calls the others, and replace existing slots with "
 "it."
 msgstr ""
+"Wenn du *mehr als einen* :c:macro:`Py_mod_exec`-Eintrag hast, fasse sie "
+"zusammen: Erzeuge eine neue Funktion, die die anderen aufruft, und ersetze "
+"die bestehenden Slots durch sie."
 
 #: ../../howto/abi3t-migration.rst:350
 msgid ""
@@ -561,15 +748,29 @@ msgid ""
 "   {0, NULL}\n"
 "};"
 msgstr ""
+"static int my_module_exec(PyObject *module) {\n"
+"   if (my_first_module_exec(module) < 0) return -1;\n"
+"   if (my_second_module_exec(module) < 0) return -1;\n"
+"}\n"
+"\n"
+"static PyModuleDef_Slot my_slots[] = {\n"
+"   ...\n"
+"   /* (remove other Py_mod_exec slots) */\n"
+"   ...\n"
+"   {Py_mod_exec, my_module_exec},\n"
+"   {0, NULL}\n"
+"};"
 
 #: ../../howto/abi3t-migration.rst:366
 msgid ""
 "If the functions aren't used elsewhere, you can combine their bodies instead."
 msgstr ""
+"Werden die Funktionen nicht anderswo verwendet, kannst du ihre Rümpfe "
+"stattdessen zusammenlegen."
 
 #: ../../howto/abi3t-migration.rst:370
 msgid "Merging slot arrays"
-msgstr ""
+msgstr "Slot-Felder zusammenführen"
 
 #: ../../howto/abi3t-migration.rst:372
 msgid ""
@@ -577,6 +778,10 @@ msgid ""
 "the code by moving slots into the :c:type:`PySlot` array, and converting the "
 "definitions to :c:macro:`PySlot_DATA` and :c:macro:`PySlot_FUNC`:"
 msgstr ""
+"Wenn du die Kompatibilität mit Python 3.14 aufgibst, kannst du den Code auf "
+"Wunsch aufräumen, indem du die Slots in das :c:type:`PySlot`-Feld "
+"verschiebst und die Definitionen auf :c:macro:`PySlot_DATA` "
+"und :c:macro:`PySlot_FUNC` umstellst:"
 
 #: ../../howto/abi3t-migration.rst:376
 msgid ""
@@ -590,16 +795,27 @@ msgid ""
 "    PySlot_END\n"
 "};"
 msgstr ""
+"static PySlot my_slot_array[] = {\n"
+"    ...\n"
+"    PySlot_DATA(Py_mod_gil, Py_MOD_GIL_NOT_USED),\n"
+"    PySlot_DATA(Py_mod_multiple_interpreters,\n"
+"         Py_MOD_PER_INTERPRETER_GIL_SUPPORTED)\n"
+"    PySlot_FUNC(Py_mod_create, my_module_create),\n"
+"    PySlot_FUNC(Py_mod_exec, my_module_exec),\n"
+"    PySlot_END\n"
+"};"
 
 #: ../../howto/abi3t-migration.rst:389
 msgid ""
 "If you do this, delete the original :c:type:`PyModuleDef_Slot` array and its "
 "``Py_mod_slots`` entry."
 msgstr ""
+"Wenn du das tust, lösche das ursprüngliche :c:type:`PyModuleDef_Slot`-Feld "
+"und seinen ``Py_mod_slots``-Eintrag."
 
 #: ../../howto/abi3t-migration.rst:394
 msgid "Associated ``PyModuleDef``"
-msgstr ""
+msgstr "Zugehöriges ``PyModuleDef``"
 
 #: ../../howto/abi3t-migration.rst:396
 msgid ""
@@ -607,23 +823,28 @@ msgid ""
 "definition will not be associated with the resulting module. This changes "
 "the behavior of the following functions:"
 msgstr ""
+"Da die neue API keine :c:type:`!PyModuleDef`-Struktur verwendet, wird dem "
+"entstehenden Modul keine Definition zugeordnet. Das ändert das Verhalten der "
+"folgenden Funktionen:"
 
 #: ../../howto/abi3t-migration.rst:400
 msgid ":c:func:`PyModule_GetDef`"
-msgstr ""
+msgstr ":c:func:`PyModule_GetDef`"
 
 #: ../../howto/abi3t-migration.rst:401
 msgid ":c:func:`PyType_GetModuleByDef`"
-msgstr ""
+msgstr ":c:func:`PyType_GetModuleByDef`"
 
 #: ../../howto/abi3t-migration.rst:403
 msgid ""
 "Check your code for these. If you do not use them, you can skip this section."
 msgstr ""
+"Prüfe deinen Code auf diese Funktionen. Wenn du sie nicht verwendest, kannst "
+"du diesen Abschnitt überspringen."
 
 #: ../../howto/abi3t-migration.rst:406
 msgid "These functions are typically used for two purposes:"
-msgstr ""
+msgstr "Diese Funktionen werden üblicherweise für zwei Zwecke verwendet:"
 
 #: ../../howto/abi3t-migration.rst:408
 msgid ""
@@ -632,6 +853,10 @@ msgid ""
 "definition, so you will need to figure out a different way to pass the "
 "relevant data around."
 msgstr ""
+"Um die Definition zu bekommen, mit der das Modul erzeugt wurde. Mit der "
+"neuen API ist das nicht mehr möglich. Module halten keine Referenz mehr auf "
+"die Definition. Du musst dir also einen anderen Weg überlegen, die "
+"relevanten Daten weiterzugeben."
 
 #: ../../howto/abi3t-migration.rst:415
 msgid ""
@@ -640,15 +865,22 @@ msgid ""
 "a module. To use a token, declare (or reuse) a unique static variable, for "
 "example:"
 msgstr ""
+"Um zu prüfen, ob ein gegebenes Modulobjekt „deines“ ist. Dieser "
+"Anwendungsfall wird jetzt über :ref:`Modul-Token <ext-module-token>` "
+"abgedeckt – undurchsichtige Zeiger, die ein Modul kennzeichnen. Um ein Token "
+"zu verwenden, deklariere (oder wiederverwende) eine eindeutige statische "
+"Variable, zum Beispiel:"
 
 #: ../../howto/abi3t-migration.rst:420
 msgid "static char my_token;"
-msgstr ""
+msgstr "static char my_token;"
 
 #: ../../howto/abi3t-migration.rst:425
 msgid ""
 "and add a pointer to it in a new entry to your module's ``PySlot`` array:"
 msgstr ""
+"und ergänze in einem neuen Eintrag des ``PySlot``-Feldes deines Moduls einen "
+"Zeiger darauf:"
 
 #: ../../howto/abi3t-migration.rst:427
 msgid ""
@@ -658,20 +890,27 @@ msgid ""
 "   PySlot_END\n"
 "}"
 msgstr ""
+"static PySlot my_slot_array[] = {\n"
+"   ...\n"
+"   PySlot_STATIC_DATA(Py_mod_token, &my_token),\n"
+"   PySlot_END\n"
+"}"
 
 #: ../../howto/abi3t-migration.rst:437
 msgid "Then, switch from :c:func:`PyModule_GetDef` calls such as:"
-msgstr ""
+msgstr "Wechsle dann von :c:func:`PyModule_GetDef`-Aufrufen wie:"
 
 #: ../../howto/abi3t-migration.rst:439
 msgid "PyModuleDef *def = PyModule_GetDef(module);"
-msgstr ""
+msgstr "PyModuleDef *def = PyModule_GetDef(module);"
 
 #: ../../howto/abi3t-migration.rst:444
 msgid ""
 "to :c:func:`PyModule_GetToken` (which uses an output argument and may fail "
 "with an exception):"
 msgstr ""
+"zu :c:func:`PyModule_GetToken` (das ein Ausgabeargument verwendet und mit "
+"einer Ausnahme scheitern kann):"
 
 #: ../../howto/abi3t-migration.rst:447
 msgid ""
@@ -680,21 +919,28 @@ msgid ""
 "    /* handle error */\n"
 "}"
 msgstr ""
+"void *token;\n"
+"if (PyModule_GetToken(module, &token) < 0) {\n"
+"    /* handle error */\n"
+"}"
 
 #: ../../howto/abi3t-migration.rst:455
 msgid "and from :c:func:`PyType_GetModuleByDef` calls such as:"
-msgstr ""
+msgstr "und von :c:func:`PyType_GetModuleByDef`-Aufrufen wie:"
 
 #: ../../howto/abi3t-migration.rst:457
 msgid ""
 "PyObject *module = PyType_GetModuleByDef(type, my_def);\n"
 "/* handle error; use module */"
 msgstr ""
+"PyObject *module = PyType_GetModuleByDef(type, my_def);\n"
+"/* handle error; use module */"
 
 #: ../../howto/abi3t-migration.rst:463
 msgid ""
 "to :c:func:`PyType_GetModuleByToken` (which returns a strong reference):"
 msgstr ""
+"zu :c:func:`PyType_GetModuleByToken` (das eine starke Referenz zurückgibt):"
 
 #: ../../howto/abi3t-migration.rst:465
 msgid ""
@@ -702,58 +948,74 @@ msgid ""
 "/* handle error; use module */\n"
 "Py_XDECREF(module);"
 msgstr ""
+"PyObject *module = PyType_GetModuleByToken(type, my_token);\n"
+"/* handle error; use module */\n"
+"Py_XDECREF(module);"
 
 #: ../../howto/abi3t-migration.rst:473
 msgid "``PyObject`` opaqueness"
-msgstr ""
+msgstr "Undurchsichtigkeit von ``PyObject``"
 
 #: ../../howto/abi3t-migration.rst:475
 msgid ""
 "The :c:type:`PyObject` and :c:type:`PyVarObject` structures are opaque in "
 "``abi3t``."
 msgstr ""
+"Die Strukturen :c:type:`PyObject` und :c:type:`PyVarObject` sind in "
+"``abi3t`` undurchsichtig."
 
 #: ../../howto/abi3t-migration.rst:478
 msgid ""
 "Accessing their members is prohibited. If you do this, switch to getter/"
 "setter functions mentioned in their documentation:"
 msgstr ""
+"Der Zugriff auf ihre Felder ist verboten. Wenn du das tust, wechsle zu den "
+"Lese- und Schreibfunktionen, die in deren Dokumentation genannt sind:"
 
 #: ../../howto/abi3t-migration.rst:482
 msgid ":c:member:`PyObject.ob_type`"
-msgstr ""
+msgstr ":c:member:`PyObject.ob_type`"
 
 #: ../../howto/abi3t-migration.rst:483
 msgid ":c:member:`PyObject.ob_refcnt`"
-msgstr ""
+msgstr ":c:member:`PyObject.ob_refcnt`"
 
 #: ../../howto/abi3t-migration.rst:484
 msgid ":c:member:`PyVarObject.ob_size`"
-msgstr ""
+msgstr ":c:member:`PyVarObject.ob_size`"
 
 #: ../../howto/abi3t-migration.rst:486
 msgid ""
 "Also, the *size* of the :c:type:`PyObject` structures is unknown to the "
 "compiler. It can -- and *does* -- change between different CPython builds."
 msgstr ""
+"Außerdem ist die *Größe* der :c:type:`PyObject`-Strukturen dem Compiler "
+"unbekannt. Sie kann sich zwischen verschiedenen CPython-Builds ändern – und "
+"sie *tut* es."
 
 #: ../../howto/abi3t-migration.rst:492
 msgid ""
-"While the size is available at runtime (for example as ``sys."
-"getsizeof(object())`` in Python code), you should resist the temptation to "
-"calculate pointer offsets from it. The object memory layout is subject to "
-"change in future ``abi3t`` implementations."
+"While the size is available at runtime (for example as "
+"``sys.getsizeof(object())`` in Python code), you should resist the "
+"temptation to calculate pointer offsets from it. The object memory layout is "
+"subject to change in future ``abi3t`` implementations."
 msgstr ""
+"Die Größe ist zur Laufzeit zwar verfügbar (in Python-Code zum Beispiel als "
+"``sys.getsizeof(object())``), du solltest der Versuchung aber widerstehen, "
+"daraus Zeigerversätze zu berechnen. Die Speicheranordnung der Objekte kann "
+"sich in künftigen ``abi3t``-Implementierungen ändern."
 
 #: ../../howto/abi3t-migration.rst:500
 msgid "Custom type definitions"
-msgstr ""
+msgstr "Eigene Typdefinitionen"
 
 #: ../../howto/abi3t-migration.rst:502
 msgid ""
 "Since :c:type:`!PyObject` is opaque, the traditional way of defining custom "
 "types no longer works:"
 msgstr ""
+"Da :c:type:`!PyObject` undurchsichtig ist, funktioniert der herkömmliche "
+"Weg, eigene Typen zu definieren, nicht mehr:"
 
 #: ../../howto/abi3t-migration.rst:505
 msgid ""
@@ -769,6 +1031,17 @@ msgid ""
 "   ...\n"
 "};"
 msgstr ""
+"typedef struct {\n"
+"   PyObject_HEAD  // expands to `PyObject ob_base;` which has unknown size\n"
+"\n"
+"   int my_data;\n"
+"} CustomObject;\n"
+"\n"
+"static PyType_Spec CustomType_spec = {\n"
+"   ...\n"
+"   .basicsize = sizeof(CustomObject),\n"
+"   ...\n"
+"};"
 
 #: ../../howto/abi3t-migration.rst:520
 msgid ""
@@ -776,6 +1049,9 @@ msgid ""
 "classes' data, will need to be rewritten. This will probably be the biggest "
 "change you need to support ``abi3t``."
 msgstr ""
+"Höchstwahrscheinlich müssen alle deine Klassendefinitionen *und* aller Code, "
+"der auf die Daten deiner Klassen zugreift, neu geschrieben werden. Das "
+"dürfte die größte Änderung sein, die du für ``abi3t`` brauchst."
 
 #: ../../howto/abi3t-migration.rst:524
 msgid ""
@@ -783,6 +1059,9 @@ msgid ""
 "instance, define one with only the “additional” fields -- ones specific to "
 "your class, not its superclasses:"
 msgstr ""
+"Definiere für jeden solchen Typ, anstelle einer ``struct`` für die gesamte "
+"Instanz, eine mit ausschließlich den „zusätzlichen“ Feldern – denen, die zu "
+"deiner Klasse gehören und nicht zu ihren Oberklassen:"
 
 #: ../../howto/abi3t-migration.rst:528
 msgid ""
@@ -790,6 +1069,9 @@ msgid ""
 "   int my_data;\n"
 "} CustomObjectData;"
 msgstr ""
+"typedef struct {\n"
+"   int my_data;\n"
+"} CustomObjectData;"
 
 #: ../../howto/abi3t-migration.rst:535
 msgid ""
@@ -800,12 +1082,21 @@ msgid ""
 "typing the type name, this won't work. Be extra careful, and consider "
 "running tools to detect undefined behavior.)"
 msgstr ""
+"Ändere den Namen. Fast aller Code, der die Struktur verwendet, muss sich "
+"ändern (vor allem lassen sich Zeiger auf die neue Struktur nicht von und "
+"nach ``PyObject*`` umwandeln), und die Namensänderung hebt die "
+"Verwendungsstellen als Compilerfehler hervor. (Wenn du ``typeof``, ``auto`` "
+"aus C++ oder ähnliche Wege nutzt, um den Typnamen nicht ausschreiben zu "
+"müssen, funktioniert das nicht. Sei dann besonders vorsichtig und erwäge, "
+"Werkzeuge zum Aufspüren undefinierten Verhaltens laufen zu lassen.)"
 
 #: ../../howto/abi3t-migration.rst:543
 msgid ""
 "Then, to create the class, use *negative* ``basicsize`` to indicate “extra” "
 "storage space rather than *total* instance size:"
 msgstr ""
+"Verwende dann zum Erzeugen der Klasse eine *negative* ``basicsize``, um "
+"„zusätzlichen“ Speicherplatz anzugeben und nicht die *gesamte* Instanzgröße:"
 
 #: ../../howto/abi3t-migration.rst:546
 msgid ""
@@ -815,6 +1106,11 @@ msgid ""
 "   ...\n"
 "};"
 msgstr ""
+"static PyType_Spec CustomType_spec = {\n"
+"   ...\n"
+"   .basicsize = -sizeof(CustomObjectData), /* note the minus sign */\n"
+"   ...\n"
+"};"
 
 #: ../../howto/abi3t-migration.rst:555
 msgid ""
@@ -822,10 +1118,13 @@ msgid ""
 "flag on each member and specify the :c:member:`~PyMemberDef.offset` relative "
 "to your new struct."
 msgstr ""
+"Wenn du :c:macro:`Py_tp_members` verwendest, setze bei jedem Feld das "
+"Flag :c:macro:`Py_RELATIVE_OFFSET` und gib "
+"den :c:member:`~PyMemberDef.offset` relativ zu deiner neuen Struktur an."
 
 #: ../../howto/abi3t-migration.rst:561
 msgid "Custom type data access"
-msgstr ""
+msgstr "Zugriff auf die Daten eigener Typen"
 
 #: ../../howto/abi3t-migration.rst:563
 msgid ""
@@ -833,38 +1132,55 @@ msgid ""
 "will need an additional :c:func:`PyObject_GetTypeData` call to retrieve a "
 "``CustomObjectData *`` pointer from ``PyObject *``:"
 msgstr ""
+"Dann kommt der schwierige Teil: In allem Code, der auf diese Struktur "
+"zugreifen muss, brauchst du einen zusätzlichen Aufruf "
+"von :c:func:`PyObject_GetTypeData`, um aus einem ``PyObject *`` einen Zeiger "
+"``CustomObjectData *`` zu gewinnen:"
 
 #: ../../howto/abi3t-migration.rst:567
 msgid ""
 "PyObject *obj = ...;\n"
 "CustomObjectData *data = PyObject_GetTypeData(obj, cls);"
 msgstr ""
+"PyObject *obj = ...;\n"
+"CustomObjectData *data = PyObject_GetTypeData(obj, cls);"
 
 #: ../../howto/abi3t-migration.rst:573
 msgid ""
 "Note that this call requires the *type object* for your class (``cls``)."
 msgstr ""
+"Beachte, dass dieser Aufruf das *Typobjekt* deiner Klasse (``cls``) verlangt."
 
 #: ../../howto/abi3t-migration.rst:575
 msgid ""
-"If your class is not subclassable (that is, it does not use the :c:macro:"
-"`Py_TPFLAGS_BASETYPE` flag), ``cls`` will be ``Py_TYPE(obj)``. Otherwise, "
-"**DO NOT USE** ``Py_TYPE`` with :c:func:`!PyObject_GetTypeData`: it might "
-"return memory reserved to an unrelated subclass! For example, if a user "
-"makes a subclass like this:"
+"If your class is not subclassable (that is, it does not use "
+"the :c:macro:`Py_TPFLAGS_BASETYPE` flag), ``cls`` will be ``Py_TYPE(obj)``. "
+"Otherwise, **DO NOT USE** ``Py_TYPE`` with :c:func:`!PyObject_GetTypeData`: "
+"it might return memory reserved to an unrelated subclass! For example, if a "
+"user makes a subclass like this:"
 msgstr ""
+"Ist deine Klasse nicht ableitbar (verwendet sie also nicht das "
+"Flag :c:macro:`Py_TPFLAGS_BASETYPE`), ist ``cls`` gleich ``Py_TYPE(obj)``. "
+"Andernfalls **VERWENDE** ``Py_TYPE`` **NICHT** mit :c:func:`!"
+"PyObject_GetTypeData`: Es könnte Speicher zurückgeben, der einer nicht "
+"verwandten Unterklasse vorbehalten ist! Wenn ein Benutzer zum Beispiel eine "
+"Unterklasse wie diese anlegt:"
 
 #: ../../howto/abi3t-migration.rst:581
 msgid ""
 "class Sub(YourCustomClass):\n"
 "   __slots__ = ('a', 'b')"
 msgstr ""
+"class Sub(YourCustomClass):\n"
+"   __slots__ = ('a', 'b')"
 
 #: ../../howto/abi3t-migration.rst:586
 msgid ""
 "then ``Py_TYPE(obj)`` is ``Sub``, and the underlying memory may look like "
 "this:"
 msgstr ""
+"dann ist ``Py_TYPE(obj)`` gleich ``Sub``, und der darunterliegende Speicher "
+"kann so aussehen:"
 
 #: ../../howto/abi3t-migration.rst:589
 msgid ""
@@ -877,6 +1193,14 @@ msgid ""
 "│ PyObject │...│ CustomTypeData │...│ PyObject *a │...│ PyObject *b │\n"
 "└──────────┴───┴────────────────┴───┴─────────────┴───┴─────────────┘"
 msgstr ""
+"╭─ PyObject *obj\n"
+"│              ╭─ the pointer you want\n"
+"│              │                    ╭─ PyObject_GetTypeData(obj, "
+"Py_TYPE(obj))\n"
+"▼              ▼                    ▼\n"
+"┌──────────┬───┬────────────────┬───┬─────────────┬───┬─────────────┐\n"
+"│ PyObject │...│ CustomTypeData │...│ PyObject *a │...│ PyObject *b │\n"
+"└──────────┴───┴────────────────┴───┴─────────────┴───┴─────────────┘"
 
 #: ../../howto/abi3t-migration.rst:599
 msgid ""
@@ -884,23 +1208,33 @@ msgid ""
 "guaranteed: future versions of Python may add different padding or even "
 "switch the order of the structures.)"
 msgstr ""
+"(Auslassungspunkte deuten möglichen Füllraum an. Beachte, dass diese "
+"Speicheranordnung nicht zugesichert ist: Künftige Python-Versionen können "
+"anderen Füllraum ergänzen oder sogar die Reihenfolge der Strukturen ändern.)"
 
 #: ../../howto/abi3t-migration.rst:603
 msgid "There are two main ways to get the right class:"
-msgstr ""
+msgstr "Es gibt zwei wesentliche Wege, die richtige Klasse zu bekommen:"
 
 #: ../../howto/abi3t-migration.rst:605
 msgid ""
 "In instance methods, your implementation may use the :c:type:`PyCMethod` "
-"signature (and the :c:macro:`METH_METHOD` bit in :c:member:`PyMethodDef."
-"ml_flags`), and get the class as the ``defining_class`` argument."
+"signature (and the :c:macro:`METH_METHOD` bit "
+"in :c:member:`PyMethodDef.ml_flags`), and get the class as the "
+"``defining_class`` argument."
 msgstr ""
+"In Instanzmethoden kann deine Implementierung die "
+"Signatur :c:type:`PyCMethod` verwenden (und das Bit :c:macro:`METH_METHOD` "
+"in :c:member:`PyMethodDef.ml_flags`) und die Klasse als Argument "
+"``defining_class`` bekommen."
 
 #: ../../howto/abi3t-migration.rst:609
 msgid ""
-"Otherwise, give your class a unique static token using the :c:macro:"
-"`Py_tp_token` slot, and use:"
+"Otherwise, give your class a unique static token using "
+"the :c:macro:`Py_tp_token` slot, and use:"
 msgstr ""
+"Andernfalls gib deiner Klasse über den Slot :c:macro:`Py_tp_token` ein "
+"eindeutiges statisches Token und verwende:"
 
 #: ../../howto/abi3t-migration.rst:612
 msgid ""
@@ -910,16 +1244,23 @@ msgid ""
 "}\n"
 "CustomObjectData *data = PyObject_GetTypeData(obj, cls);"
 msgstr ""
+"PyTypeObject cls;\n"
+"if (PyType_GetBaseByToken(Py_TYPE(obj), my_tp_token, &cls) < 0) {\n"
+"    /* handle error */\n"
+"}\n"
+"CustomObjectData *data = PyObject_GetTypeData(obj, cls);"
 
 #: ../../howto/abi3t-migration.rst:621
 msgid ""
 "Type tokens work similarly to module tokens covered :ref:`earlier in this "
 "guide <abi3t-migration-module-token>`."
 msgstr ""
+"Typ-Token arbeiten ähnlich wie die Modul-Token, die :ref:`früher in dieser "
+"Anleitung <abi3t-migration-module-token>` behandelt wurden."
 
 #: ../../howto/abi3t-migration.rst:627
 msgid "Avoid build-time conditionals"
-msgstr ""
+msgstr "Bedingungen zur Build-Zeit vermeiden"
 
 #: ../../howto/abi3t-migration.rst:629
 msgid ""
@@ -928,22 +1269,27 @@ msgid ""
 "extension runs on, so code that uses this information often needs changing. "
 "The macros to check for are:"
 msgstr ""
+"Prüfe deinen Code auf APIs, die die Python-Version bestimmen, mit der deine "
+"Erweiterung *gebaut* wurde. Diese entspricht nicht mehr dem Python, auf dem "
+"deine Erweiterung läuft; Code, der diese Information nutzt, muss daher "
+"häufig geändert werden. Die Makros, auf die zu prüfen ist, sind:"
 
 #: ../../howto/abi3t-migration.rst:635
-msgid ""
-":c:macro:`PY_VERSION_HEX`, :c:macro:`PY_MAJOR_VERSION`, :c:macro:"
-"`PY_MINOR_VERSION`:"
-msgstr ""
+msgid ":c:macro:`PY_VERSION_HEX`, :c:macro:`PY_MAJOR_VERSION`, :c:macro:`PY_MINOR_VERSION`:"
+msgstr ":c:macro:`PY_VERSION_HEX`, :c:macro:`PY_MAJOR_VERSION`, :c:macro:`PY_MINOR_VERSION`:"
 
 #: ../../howto/abi3t-migration.rst:638
 msgid "to get the run-time version, use :c:data:`Py_Version`;"
-msgstr ""
+msgstr "um die Laufzeitversion zu bekommen, verwende :c:data:`Py_Version`;"
 
 #: ../../howto/abi3t-migration.rst:639
 msgid ""
 "to determine what C API is available, use :c:macro:`Py_TARGET_ABI3T`. This "
 "macro is set to the minimum supported version."
 msgstr ""
+"um zu bestimmen, welche C-API verfügbar ist, "
+"verwende :c:macro:`Py_TARGET_ABI3T`. Dieses Makro ist auf die mindestens "
+"unterstützte Version gesetzt."
 
 #: ../../howto/abi3t-migration.rst:642
 msgid ""
@@ -953,10 +1299,16 @@ msgid ""
 "(unless it, for some reason, requires more than one :term:`attached thread "
 "state <attached thread state>` at one time)."
 msgstr ""
+":c:macro:`Py_GIL_DISABLED`: Unter ``abi3t`` ist dieses Makro immer "
+"definiert. Code, der mit Python mit freiem Threading arbeitet, *sollte* auch "
+"mit eingeschaltetem GIL arbeiten (weil der GIL zur Laufzeit eingeschaltet "
+"werden kann), und üblicherweise *tut* er das auch (sofern er nicht aus "
+"irgendeinem Grund mehr als einen :term:`angehängten Thread-Zustand <attached "
+"thread state>` gleichzeitig braucht)."
 
 #: ../../howto/abi3t-migration.rst:650
 msgid "Further code changes"
-msgstr ""
+msgstr "Weitere Codeänderungen"
 
 #: ../../howto/abi3t-migration.rst:652
 msgid ""
@@ -964,13 +1316,19 @@ msgid ""
 "them. Alas, this guide is limited, and cannot cover all possible code "
 "changes extensions may need."
 msgstr ""
+"Wenn dir noch Compilerfehler oder Warnungen bleiben, finde einen Weg, sie zu "
+"beheben. Diese Anleitung ist leider begrenzt und kann nicht alle möglichen "
+"Codeänderungen abdecken, die Erweiterungen brauchen können."
 
 #: ../../howto/abi3t-migration.rst:656
 msgid ""
-"If you find a problem that other extension authors might run into, consider :"
-"ref:`reporting an issue <reporting-documentation-bugs>` (or sending a pull "
-"request) for this guide."
+"If you find a problem that other extension authors might run into, "
+"consider :ref:`reporting an issue <reporting-documentation-bugs>` (or "
+"sending a pull request) for this guide."
 msgstr ""
+"Wenn du ein Problem findest, auf das auch andere Autoren von Erweiterungen "
+"stoßen könnten, erwäge, für diese Anleitung :ref:`ein Problem zu melden "
+"<reporting-documentation-bugs>` (oder einen Pull Request zu schicken)."
 
 #: ../../howto/abi3t-migration.rst:660
 msgid ""
@@ -978,24 +1336,32 @@ msgid ""
 "``abi3t``. In that case, reporting it may help it get prioritized for the "
 "next version of CPython."
 msgstr ""
+"Es ist möglich, dass dein Problem für die aktuelle Fassung von ``abi3t`` "
+"nicht behoben werden kann. In diesem Fall kann eine Meldung helfen, dass es "
+"für die nächste CPython-Version vorgezogen wird."
 
 #: ../../howto/abi3t-migration.rst:668
 msgid "Tagging and distribution"
-msgstr ""
+msgstr "Kennzeichnen und Verteilen"
 
 #: ../../howto/abi3t-migration.rst:670
 msgid ""
 "If you are using a build tool with ``abi3t`` support, your extension is "
 "ready, but you might want to check that it was built correctly."
 msgstr ""
+"Wenn du ein Build-Werkzeug mit ``abi3t``-Unterstützung verwendest, ist deine "
+"Erweiterung fertig, aber du solltest vielleicht prüfen, ob sie richtig "
+"gebaut wurde."
 
 #: ../../howto/abi3t-migration.rst:673
 msgid "Extensions built with ``abi3t`` should have the following extension:"
 msgstr ""
+"Erweiterungen, die mit ``abi3t`` gebaut wurden, sollten die folgende "
+"Dateiendung haben:"
 
 #: ../../howto/abi3t-migration.rst:675
 msgid "On Windows: ``.pyd`` (like any other extension);"
-msgstr ""
+msgstr "Unter Windows: ``.pyd`` (wie jede andere Erweiterung);"
 
 #: ../../howto/abi3t-migration.rst:676
 msgid ""
@@ -1003,14 +1369,22 @@ msgid ""
 "(**not** ``.cpython-315t.so`` or ``.abi3.so``). Note that both free-threaded "
 "and non-free-threaded builds will load ``.abi3t.so`` extensions;"
 msgstr ""
+"Unter Linux, macOS und anderen Systemen, die die Endung ``.so`` verwenden: "
+"``.abi3t.so`` (**nicht** ``.cpython-315t.so`` oder ``.abi3.so``). Beachte, "
+"dass sowohl Builds mit als auch ohne freies Threading ``.abi3t.so``-"
+"Erweiterungen laden;"
 
 #: ../../howto/abi3t-migration.rst:680
 msgid "Other systems: consult your distributor, and perhaps update this guide."
 msgstr ""
+"Andere Systeme: Frage bei deinem Distributor nach und ergänze diese "
+"Anleitung vielleicht."
 
 #: ../../howto/abi3t-migration.rst:682
 msgid "If you distribute the extension as a *wheel*, use the following tags:"
 msgstr ""
+"Wenn du die Erweiterung als *Wheel* verteilst, verwende die folgenden "
+"Kennzeichnungen:"
 
 #: ../../howto/abi3t-migration.rst:684
 msgid ""
@@ -1019,20 +1393,27 @@ msgid ""
 "``Py_TARGET_ABI3T`` to ``0x30f0000``. See :ref:`abi3-compiling` for more "
 "values.)"
 msgstr ""
+"Python-Kennzeichnung: :samp:`cp3{XX}`, wobei *XX* die kleinste Python-"
+"Version ist, für die die Erweiterung gebaut wurde. (Zum Beispiel ``cp315``, "
+"wenn du ``Py_TARGET_ABI3T`` auf ``0x30f0000`` gesetzt hast. Weitere Werte "
+"stehen unter :ref:`abi3-compiling`.)"
 
 #: ../../howto/abi3t-migration.rst:688
 msgid ""
 "ABI tag: ``abi3.abi3t``. This is a *compressed tag set* that indicates "
 "support for both non-free-threaded and free-threaded builds."
 msgstr ""
+"ABI-Kennzeichnung: ``abi3.abi3t``. Das ist ein *komprimierter "
+"Kennzeichnungssatz*, der die Unterstützung für Builds sowohl mit als auch "
+"ohne freies Threading angibt."
 
 #: ../../howto/abi3t-migration.rst:691
 msgid "For example, the wheel filename may look like this:"
-msgstr ""
+msgstr "Der Dateiname des Wheels kann zum Beispiel so aussehen:"
 
 #: ../../howto/abi3t-migration.rst:693
 msgid "myproject-1.0-cp315-abi3.abi3t-macosx_11_0_arm64.whl"
-msgstr ""
+msgstr "myproject-1.0-cp315-abi3.abi3t-macosx_11_0_arm64.whl"
 
 #: ../../howto/abi3t-migration.rst:697
 msgid ""
@@ -1040,14 +1421,18 @@ msgid ""
 "specifications/platform-compatibility-tags/>`__ in the PyPA package "
 "distribution metadata."
 msgstr ""
+"`Platform Compatibility Tags <https://packaging.python.org/en/latest/"
+"specifications/platform-compatibility-tags/>`__ in den Metadaten zur "
+"Paketverteilung der PyPA."
 
 #: ../../howto/abi3t-migration.rst:699
 msgid "If the filename or tags are incorrect, fix them."
 msgstr ""
+"Wenn der Dateiname oder die Kennzeichnungen falsch sind, korrigiere sie."
 
 #: ../../howto/abi3t-migration.rst:703
 msgid "Testing"
-msgstr ""
+msgstr "Testen"
 
 #: ../../howto/abi3t-migration.rst:705
 msgid ""
@@ -1057,13 +1442,20 @@ msgid ""
 "compatibility; there may also be behavior changes -- both intentional ones "
 "(covered by :pep:`387`) and bugs."
 msgstr ""
+"Beachte: Wenn du eine Erweiterung baust, die mit mehreren CPython-Versionen "
+"kompatibel ist, solltest du sie immer mit jeder unterstützten Version "
+"*testen* (zum Beispiel 3.15, 3.16 und so weiter). Das stabile ABI sichert "
+"nur die *ABI*-Kompatibilität zu. Es kann auch Verhaltensänderungen geben – "
+"sowohl beabsichtigte (abgedeckt durch :pep:`387`) als auch Fehler."
 
 #: ../../howto/abi3t-migration.rst:711
 msgid ""
 "Be sure to run tests on both free-threaded and non-free-threaded builds of "
 "CPython."
 msgstr ""
+"Lasse die Tests unbedingt auf Builds von CPython sowohl mit als auch ohne "
+"freies Threading laufen."
 
 #: ../../howto/abi3t-migration.rst:714
 msgid "If they pass, congratulations! You have an ``abi3t`` extension."
-msgstr ""
+msgstr "Wenn sie durchlaufen: Gratulation! Du hast eine ``abi3t``-Erweiterung."
