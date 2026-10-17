@@ -539,7 +539,7 @@ msgid ""
 "constructor and will return month and weekday names in the specified locale."
 msgstr ""
 "Dieser Unterklasse von :class:`TextCalendar` lässt sich im Konstruktor ein "
-"Gebietsschemaname übergeben; sie gibt die Monats- und Wochentagsnamen dann "
+"Gebietsschemaname übergeben. Sie gibt die Monats- und Wochentagsnamen dann "
 "in diesem Gebietsschema zurück."
 
 #: ../../library/calendar.rst:354
@@ -548,7 +548,7 @@ msgid ""
 "constructor and will return month and weekday names in the specified locale."
 msgstr ""
 "Dieser Unterklasse von :class:`HTMLCalendar` lässt sich im Konstruktor ein "
-"Gebietsschemaname übergeben; sie gibt die Monats- und Wochentagsnamen dann "
+"Gebietsschemaname übergeben. Sie gibt die Monats- und Wochentagsnamen dann "
 "in diesem Gebietsschema zurück."
 
 #: ../../library/calendar.rst:360
@@ -1069,7 +1069,7 @@ msgid ""
 "By default, today's date is highlighted in color and can be :ref:`controlled "
 "using environment variables <using-on-controlling-color>`."
 msgstr ""
-"Standardmäßig wird das heutige Datum farbig hervorgehoben; das lässt "
+"Standardmäßig wird das heutige Datum farbig hervorgehoben. Das lässt "
 "sich :ref:`über Umgebungsvariablen steuern <using-on-controlling-color>`."
 
 #: ../../library/calendar.rst:759
