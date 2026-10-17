@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 "Python ist eine Programmiersprache. Sie wird für viele verschiedene "
 "Anwendungen eingesetzt. An manchen Schulen und Hochschulen dient sie als "
-"Einstiegssprache, weil Python leicht zu lernen ist; zugleich nutzen sie "
+"Einstiegssprache, weil Python leicht zu lernen ist. Zugleich nutzen sie "
 "professionelle Softwareentwickler an Orten wie Google, NASA und Lucasfilm "
 "Ltd."
 
@@ -68,7 +68,7 @@ msgid ""
 "might have installed it."
 msgstr ""
 "Vielleicht wollte eine andere Person, die den Computer nutzt, das "
-"Programmieren lernen und hat es installiert; du musst herausfinden, wer den "
+"Programmieren lernen und hat es installiert. Du musst herausfinden, wer den "
 "Rechner verwendet hat und es installiert haben könnte."
 
 #: ../../faq/installed.rst:26
