@@ -147,7 +147,7 @@ msgid ""
 ":func:`os.uname` reports kernel-level details; it will report a name of "
 "``Darwin``."
 msgstr ""
-":func:`os.uname` gibt Details auf Kernel-Ebene zurück; es wird der Name "
+":func:`os.uname` gibt Details auf Kernel-Ebene zurück. Es wird der Name "
 "``Darwin`` gemeldet."
 
 #: ../../using/ios.rst:63
@@ -313,7 +313,7 @@ msgstr ""
 "Dies führt zu ``CC``/``CPP``/``LD``/``AR``-Definitionen, die Leerzeichen "
 "enthalten. Es gibt viele Werkzeuge im C-Ökosystem, die davon ausgehen, dass "
 "man eine Befehlszeile am ersten Leerzeichen aufteilen kann, um den Pfad zur "
-"ausführbaren Compiler-Datei zu erhalten; das ist bei der Verwendung von "
+"ausführbaren Compiler-Datei zu erhalten. Das ist bei der Verwendung von "
 "``xcrun`` nicht der Fall."
 
 #: ../../using/ios.rst:133
