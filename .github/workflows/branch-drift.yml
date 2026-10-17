@@ -12,9 +12,6 @@
 name: Branch-Abgleich 3.15 nach 3.14
 
 on:
-  push:
-    branches: ['3.14', '3.15']
-    paths: ['**.po']
   schedule:
     - cron: '0 9 * * 1'      # montags 9 Uhr, sechs Stunden nach dem Upstream-Sync
   workflow_dispatch:
@@ -44,8 +41,8 @@ jobs:
         shell: bash
         run: |
           python tools/sync_branches.py \
-            --von origin/3.15 --leere-ziele --streng \
-            -o konflikte.md 2>/dev/null | tee ergebnis.txt
+              --von origin/3.15 --leere-ziele \
+              -o konflikte.md 2>&1 | tee ergebnis.txt
 
       - name: Bericht in die Zusammenfassung schreiben
         if: always()
@@ -67,7 +64,7 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Konfliktbericht als Artefakt ablegen
-        if: failure()
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: konflikte
