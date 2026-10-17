@@ -53,12 +53,12 @@ msgstr ""
 #: ../../howto/pyporting.rst:19
 msgid ""
 "Since Python 3.11 the original porting guide was discontinued. You can find "
-"the old guide in the `archive <https://docs.python.org/3.10/howto/"
-"pyporting.html>`_."
+"the old guide in the `archive <https://docs.python.org/3.10/howto/pyporting."
+"html>`_."
 msgstr ""
 "Seit Python 3.11 wird der ursprüngliche Portierungsleitfaden nicht mehr "
-"fortgeführt. Den alten Leitfaden findest du im `Archiv <https://"
-"docs.python.org/3.10/howto/pyporting.html>`_."
+"fortgeführt. Den alten Leitfaden findest du im `Archiv <https://docs.python."
+"org/3.10/howto/pyporting.html>`_."
 
 #: ../../howto/pyporting.rst:25
 msgid "Third-party guides"
