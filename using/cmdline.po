@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-05 16:53+0200\n"
+"POT-Creation-Date: 2026-10-17 13:50+0000\n"
 "PO-Revision-Date: 2026-10-13 21:00+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -1177,8 +1177,9 @@ msgstr ""
 "auch :envvar:`PYTHON_PERF_JIT_SUPPORT` und :ref:`perf_profiling`."
 
 #: ../../using/cmdline.rst:637
+#, fuzzy
 msgid ""
-"``-X disable_remote_debug`` disables the remote debugging support as "
+"``-X disable-remote-debug`` disables the remote debugging support as "
 "described in :pep:`768`.  This includes both the functionality to schedule "
 "code for execution in another process and the functionality to receive code "
 "for execution in the current process."
@@ -1222,10 +1223,10 @@ msgid ""
 "for this option to exist.  See also :envvar:`PYTHON_PRESITE`."
 msgstr ""
 ":samp:`-X presite={package.module}` gibt ein Modul an, das importiert werden "
-"soll, bevor das Modul :mod:`site` ausgeführt wird und bevor das Modul "
-":mod:`__main__` existiert. Das importierte Modul ist deshalb nicht "
-":mod:`__main__`. Damit lässt sich früh während der Python-Initialisierung "
-"Code ausführen. Python muss :ref:`im Debug-Modus gebaut <debug-build>` sein, "
+"soll, bevor das Modul :mod:`site` ausgeführt wird und bevor das Modul :mod:"
+"`__main__` existiert. Das importierte Modul ist deshalb nicht :mod:"
+"`__main__`. Damit lässt sich früh während der Python-Initialisierung Code "
+"ausführen. Python muss :ref:`im Debug-Modus gebaut <debug-build>` sein, "
 "damit es diese Option gibt. Siehe auch :envvar:`PYTHON_PRESITE`."
 
 #: ../../using/cmdline.rst:666
@@ -2214,7 +2215,8 @@ msgstr ""
 "Prozess zu empfangen."
 
 #: ../../using/cmdline.rst:1247
-msgid "See also the :option:`-X disable_remote_debug` command-line option."
+#, fuzzy
+msgid "See also the :option:`-X disable-remote-debug` command-line option."
 msgstr "Siehe auch die Befehlszeilenoption :option:`-X disable_remote_debug`."
 
 #: ../../using/cmdline.rst:1253
