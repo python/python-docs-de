@@ -43,9 +43,9 @@ msgid ""
 "volunteers are always welcome!"
 msgstr ""
 "Die Entwicklung der Dokumentation und ihrer Toolchain erfolgt vollständig "
-"ehrenamtlich, genauso wie Python selbst. Wenn Sie dazu beitragen möchten, "
-"werfen Sie bitte einen Blick auf die Seite :ref:`reporting-bugs` für "
-"Informationen dazu. Neue Freiwillige sind jederzeit willkommen!"
+"ehrenamtlich, genauso wie Python selbst. Wenn du dazu beitragen möchtest, "
+"wirf bitte einen Blick auf die Seite :ref:`reporting-bugs` für Informationen "
+"dazu. Neue Freiwillige sind jederzeit willkommen!"
 
 #: ../../about.rst:21
 msgid "Many thanks go to:"
