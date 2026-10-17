@@ -15,8 +15,8 @@ STATS_RE = re.compile(
     r"(?:, (\d+) fuzzy translations?)?"
     r"(?:, (\d+) untranslated messages?)?"
 )
-CORE_FILES = {"bugs.po", "builtins/functions.po"}
-CORE_DIRS = ("tutorial/",)
+CORE_FILES = {"bugs.po"}
+CORE_DIRS = ("tutorial/", "builtins/")
 FUZZY_FLAG_RE = re.compile(r"^#,.*\bfuzzy\b", re.MULTILINE)
 
 
