@@ -137,7 +137,7 @@ msgid ""
 "the :class:`DndHandler` instance managing the drag, or ``None`` if a drag "
 "could not be started."
 msgstr ""
-"Fabrikfunktion für den Drag-and-drop-Vorgang. Gibt die :class:`DndHandler`-"
+"Factory-Funktion für den Drag-and-drop-Vorgang. Gibt die :class:`DndHandler`-"
 "Instanz zurück, die das Ziehen verwaltet, oder ``None``, wenn kein Ziehen "
 "gestartet werden konnte."
 
