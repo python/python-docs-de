@@ -3706,7 +3706,7 @@ msgstr ""
 
 #: ../../glossary.rst:1466
 msgid "set comprehension"
-msgstr "Mengenkomprimierung"
+msgstr "Set Comprehension"
 
 #: ../../glossary.rst:1468
 msgid ""
