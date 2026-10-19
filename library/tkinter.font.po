@@ -58,8 +58,8 @@ msgid ""
 "Two fonts now compare equal (``==``) only when both are :class:`Font`   "
 "instances with the same name belonging to the same Tcl interpreter."
 msgstr ""
-"Zwei Schriftarten gelten jetzt nur dann als gleich (``==``), wenn "
-"beide :class:`Font`-Instanzen mit demselben Namen sind und zum selben Tcl-"
+"Zwei Schriftarten gelten jetzt nur dann als gleich (``==``), wenn beide :"
+"class:`Font`-Instanzen mit demselben Namen sind und zum selben Tcl-"
 "Interpreter gehören."
 
 #: ../../library/tkinter.font.rst:33
