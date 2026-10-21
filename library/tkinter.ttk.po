@@ -1238,8 +1238,8 @@ msgid ""
 "the specified position."
 msgstr ""
 "*pos* ist entweder die Zeichenkette „end“, ein ganzzahliger Index oder der "
-"Name eines verwalteten Kindes. Wird *child* bereits vom Notebook verwaltet, "
-"wird es an die angegebene Position verschoben."
+"Name eines verwalteten Kind-Widgets. Wird *child* bereits vom Notebook "
+"verwaltet, wird es an die angegebene Position verschoben."
 
 #: ../../library/tkinter.ttk.rst:648
 msgid "Selects the specified *tab_id*."
@@ -1318,8 +1318,8 @@ msgid ""
 msgstr ""
 "Mehrere Notebooks in einem einzelnen Toplevel können für das Durchlaufen "
 "eingeschaltet werden, auch verschachtelte Notebooks. Das Durchlaufen eines "
-"Notebooks funktioniert aber nur richtig, wenn alle Flächen unmittelbare "
-"Kinder des Notebooks sind."
+"Notebooks funktioniert aber nur richtig, wenn alle Flächen unmittelbare Kind-"
+"Widgets des Notebooks sind."
 
 #: ../../library/tkinter.ttk.rst:688
 msgid "Progressbar"
@@ -1582,8 +1582,8 @@ msgstr ""
 "Jeder Eintrag wird durch einen eindeutigen Namen bezeichnet. Das Widget "
 "erzeugt Eintrags-IDs, wenn der Aufrufer sie nicht angibt. Es gibt einen "
 "ausgezeichneten Wurzeleintrag mit dem Namen ``{}``. Der Wurzeleintrag selbst "
-"wird nicht angezeigt, seine Kinder erscheinen auf der obersten Ebene der "
-"Hierarchie."
+"wird nicht angezeigt, seine Kindeinträge erscheinen auf der obersten Ebene "
+"der Hierarchie."
 
 #: ../../library/tkinter.ttk.rst:832
 msgid ""
@@ -1767,8 +1767,8 @@ msgid ""
 "``True``/``False`` value indicating whether the item's children should be "
 "displayed or hidden."
 msgstr ""
-"``True``/``False``-Wert, der angibt, ob die Kinder des Eintrags angezeigt "
-"oder verborgen werden."
+"``True``/``False``-Wert, der angibt, ob die Kindeinträge des Eintrags "
+"angezeigt oder verborgen werden."
 
 #: ../../library/tkinter.ttk.rst:925
 msgid "tags"
@@ -1948,16 +1948,16 @@ msgstr ""
 
 #: ../../library/tkinter.ttk.rst:1017
 msgid "Returns a tuple of children belonging to *item*."
-msgstr "Gibt ein Tupel der Kinder zurück, die zu *item* gehören."
+msgstr "Gibt ein Tupel der Kindeinträge zurück, die zu *item* gehören."
 
 #: ../../library/tkinter.ttk.rst:1019
 msgid "If *item* is not specified, returns root children."
 msgstr ""
-"Ist *item* nicht angegeben, werden die Kinder der Wurzel zurückgegeben."
+"Ist *item* nicht angegeben, werden die Kindeinträge der Wurzel zurückgegeben."
 
 #: ../../library/tkinter.ttk.rst:1024
 msgid "Replaces *item*'s children with *newchildren*."
-msgstr "Ersetzt die Kinder von *item* durch *newchildren*."
+msgstr "Ersetzt die Kindeinträge von *item* durch *newchildren*."
 
 #: ../../library/tkinter.ttk.rst:1026
 msgid ""
@@ -1966,10 +1966,10 @@ msgid ""
 "*item*. Note that not specifying *newchildren* results in detaching *item*'s "
 "children."
 msgstr ""
-"Kinder, die in *item* vorhanden sind, aber nicht in *newchildren*, werden "
-"vom Baum gelöst. Kein Eintrag in *newchildren* darf ein Vorfahre von *item* "
-"sein. Beachte, dass *newchildren* nicht anzugeben dazu führt, dass die "
-"Kinder von *item* gelöst werden."
+"Kindeinträge, die in *item* vorhanden sind, aber nicht in *newchildren*, "
+"werden vom Baum gelöst. Kein Eintrag in *newchildren* darf ein Vorfahre von "
+"*item* sein. Beachte, dass *newchildren* nicht anzugeben dazu führt, dass "
+"die Kindeinträge von *item* gelöst werden."
 
 #: ../../library/tkinter.ttk.rst:1034
 msgid "Query or modify the options for the specified *column*."
@@ -2248,8 +2248,8 @@ msgstr "Gibt das Element an Position *x*, *y* zurück."
 msgid ""
 "Returns the integer index of *item* within its parent's list of children."
 msgstr ""
-"Gibt den ganzzahligen Index von *item* innerhalb der Kinderliste seines "
-"Elternteils zurück."
+"Gibt den ganzzahligen Index von *item* innerhalb der Liste der Kindeinträge "
+"seines Elternteils zurück."
 
 #: ../../library/tkinter.ttk.rst:1169
 msgid ""
@@ -2271,13 +2271,13 @@ msgid ""
 msgstr ""
 "*parent* ist die Eintrags-ID des Elterneintrags oder die leere Zeichenkette, "
 "um einen neuen Eintrag der obersten Ebene zu erzeugen. *index* ist eine "
-"ganze Zahl oder der Wert „end“ und gibt an, an welcher Stelle in der "
-"Kinderliste des Elternteils der neue Eintrag eingefügt wird. Ist *index* "
-"kleiner oder gleich null, wird der neue Knoten am Anfang eingefügt. Ist "
-"*index* größer oder gleich der aktuellen Anzahl der Kinder, wird er am Ende "
-"eingefügt. Ist *iid* angegeben, wird es als Eintragskennung verwendet und "
-"darf im Baum noch nicht vorhanden sein. Andernfalls wird eine neue, "
-"eindeutige Kennung erzeugt."
+"ganze Zahl oder der Wert „end“ und gibt an, an welcher Stelle in der Liste "
+"der Kindeinträge des Elternteils der neue Eintrag eingefügt wird. Ist "
+"*index* kleiner oder gleich null, wird der neue Knoten am Anfang eingefügt. "
+"Ist *index* größer oder gleich der aktuellen Anzahl der Kindeinträge, wird "
+"er am Ende eingefügt. Ist *iid* angegeben, wird es als Eintragskennung "
+"verwendet und darf im Baum noch nicht vorhanden sein. Andernfalls wird eine "
+"neue, eindeutige Kennung erzeugt."
 
 #: ../../library/tkinter.ttk.rst:1181
 msgid "See `Item Options`_ for the list of available options."
@@ -2303,7 +2303,8 @@ msgstr ""
 #: ../../library/tkinter.ttk.rst:1199
 msgid "Moves *item* to position *index* in *parent*'s list of children."
 msgstr ""
-"Verschiebt *item* an die Position *index* in der Kinderliste von *parent*."
+"Verschiebt *item* an die Position *index* in der Liste der Kindeinträge von "
+"*parent*."
 
 #: ../../library/tkinter.ttk.rst:1201
 msgid ""
@@ -2314,8 +2315,8 @@ msgid ""
 msgstr ""
 "Einen Eintrag unter einen seiner Nachkommen zu verschieben ist nicht "
 "erlaubt. Ist *index* kleiner oder gleich null, wird *item* an den Anfang "
-"verschoben, ist es größer oder gleich der Anzahl der Kinder, an das Ende. "
-"War *item* gelöst, wird es wieder angehängt."
+"verschoben, ist es größer oder gleich der Anzahl der Kindeinträge, an das "
+"Ende. War *item* gelöst, wird es wieder angehängt."
 
 #: ../../library/tkinter.ttk.rst:1206
 msgid ":meth:`reattach` is an alias of :meth:`!move`."
@@ -2327,7 +2328,7 @@ msgid ""
 "child of its parent."
 msgstr ""
 "Gibt die Kennung des nächsten Geschwisters von *item* zurück oder '', wenn "
-"*item* das letzte Kind seines Elternteils ist."
+"*item* der letzte Kindeintrag seines Elternteils ist."
 
 #: ../../library/tkinter.ttk.rst:1217
 msgid ""
@@ -2343,7 +2344,7 @@ msgid ""
 "first child of its parent."
 msgstr ""
 "Gibt die Kennung des vorherigen Geschwisters von *item* zurück oder '', wenn "
-"*item* das erste Kind seines Elternteils ist."
+"*item* der erste Kindeintrag seines Elternteils ist."
 
 #: ../../library/tkinter.ttk.rst:1229
 msgid "Ensure that *item* is visible."
