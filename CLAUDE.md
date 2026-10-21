@@ -17,9 +17,15 @@ als Gettext-Dateien (`.po`). Übersetzt wird ausschließlich der `msgstr`.
 - „iterable" → „Iterable" (im Repo 66 zu 42 gegenüber „iterierbares Objekt")
 - „comprehension" → „Comprehension", nie „Kompression" oder „Abstraktion"
 - „display" (list/set/dict display) → „Display", nicht „Anzeige". Dafür
-  gibt es kein Glossar-Stichwort; die Wortbildung lautet
+  gibt es kein Glossar-Stichwort. Die Wortbildung lautet
   „Wörterbuch-Display" (13 Fundstellen gegen keine andere Variante)
-- „decorator" → „Decorator" (nicht „Dekorateur")
+- „decorator" → „Dekorator", nicht „Decorator" und erst recht nicht
+  „Dekorateur" (das ist der Raumausstatter). „Dekorator" ist der etablierte
+  deutsche Name des Entwurfsmusters und bildet saubere Komposita, die
+  **zusammengeschrieben** werden: Klassendekoratoren, Funktionsdekoratoren,
+  Methodendekoratoren, Dekoratorausdrücke. Folgt direkt eine Rolle, bleibt
+  der Bindestrich stehen, weil die Rolle nicht in ein Kompositum
+  hineingezogen werden darf: `` :term:`Dekorator <decorator>`-Ausdrücken ``
 - „font" → „Schriftart", nicht „Schrift"
 - „root window" → „Root-Fenster", „toplevel window" → „Toplevel-Fenster",
   „main window" → „Hauptfenster"
@@ -51,7 +57,7 @@ Varianten vor — „Listen-Comprehension", „Listen-Comprehensions",
 „List Comprehension", „List Comprehensions", „List-Comprehension",
 „List-Comprehensions" und „Listenkomprimierung". Das Glossar schreibt
 „List Comprehension", „Dictionary Comprehension" und „Set Comprehension",
-also englisch mit Leerzeichen; danach wäre das die Zielform. Vor dem
+also englisch mit Leerzeichen, danach wäre das die Zielform. Vor dem
 Angleichen entscheiden, dann in einem Durchgang über alle neun betroffenen
 Dateien (builtins/stdtypes, glossary, howto/functional, reference/expressions,
 tutorial/classes, tutorial/datastructures, whatsnew/3.15 und zwei weitere).
@@ -92,7 +98,7 @@ und nicht betroffen.
 - Code-Literale, Programmausgaben und `::` am Zeilenende unverändert.
   ``Literale`` aus dem Original bleiben erhalten und werden nicht durch
   deutsche Anführungszeichen ersetzt
-- Codeblöcke bleiben buchstabengetreu; übersetzt werden höchstens die
+- Codeblöcke bleiben buchstabengetreu, übersetzt werden höchstens die
   Kommentarzeilen. Nie übersetzt werden Schlüsselwörter,
   Interpreter-Ausgaben und String-Literale, auf die sich eine Ausgabe bezieht
 - Platzhalter wie `%s`, `{0}` oder `<TRANSLATION_REPO_>` bleiben unverändert
@@ -155,5 +161,17 @@ warten.
 - Keine neuen Skripte im Repository anlegen, ohne vorher zu fragen
 - Vor einer Korrektur erst zeigen, was geändert werden soll — mit Datei und
   Zeilennummer, nicht als Umschreibung
+- **Textersetzung über eine ganze PO-Datei nur dann, wenn der Suchbegriff im
+  englischen Original unmöglich vorkommen kann.** Bei jedem englischen Wort
+  muss die Ersetzung auf den `msgstr`-Bereich jedes Blocks beschränkt
+  werden, sonst verändert sie `msgid`. So ist es bei der Umstellung von
+  „Decorator" auf „Dekorator" passiert: In `reference/compound_stmts.po`
+  wurde aus `msgid ":pep:`318` - Decorators for Functions and Methods"` ein
+  „Dekorators". Bei deutschen Begriffen wie „Fabrikfunktion" oder
+  „Wörterbuch" ist eine Ersetzung auf Dateiebene unbedenklich, bei
+  englischen nie. Nach jeder solchen Aktion die msgid-Listen von Original
+  und Ergebnis zeichenweise vergleichen, nicht nur `msgfmt` laufen lassen —
+  eine geänderte `msgid` ist syntaktisch einwandfrei und fällt keiner der
+  fünf Prüfungen auf
 - Dateien unter `.github/workflows/` sind über die Gerätebrücke nicht
-  schreibbar; solche Änderungen gehen als fertige Datei in den Chat
+  schreibbar. Solche Änderungen gehen als fertige Datei in den Chat
