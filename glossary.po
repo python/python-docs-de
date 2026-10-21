@@ -1061,7 +1061,7 @@ msgstr ""
 
 #: ../../glossary.rst:415
 msgid "decorator"
-msgstr "Dekorateur"
+msgstr "Dekorator"
 
 #: ../../glossary.rst:417
 msgid ""
