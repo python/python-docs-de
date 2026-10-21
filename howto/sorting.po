@@ -818,7 +818,7 @@ msgstr ""
 "meth:`~object.__lt__` nicht implementiert ist (Einzelheiten zur Mechanik "
 "stehen bei :func:`object.__lt__`). Um Überraschungen zu vermeiden, "
 "empfiehlt :pep:`8`, alle sechs Vergleichsmethoden zu implementieren. Der "
-"Decorator :deco:`~functools.total_ordering` ist dafür da, diese Aufgabe zu "
+"Dekorator :deco:`~functools.total_ordering` ist dafür da, diese Aufgabe zu "
 "erleichtern."
 
 #: ../../howto/sorting.rst:378
