@@ -1,20 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
-"PO-Revision-Date: 2025-09-16 00:00+0000\n"
+"PO-Revision-Date: 2026-10-19 22:45+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +22,7 @@ msgstr ""
 
 #: ../../faq/library.rst:5
 msgid "Library and Extension FAQ"
-msgstr ""
+msgstr "FAQ zu Bibliothek und Erweiterungen"
 
 #: ../../faq/library.rst:8
 msgid "Contents"
@@ -31,11 +30,11 @@ msgstr "Inhalt"
 
 #: ../../faq/library.rst:12
 msgid "General Library Questions"
-msgstr ""
+msgstr "Allgemeine Fragen zur Bibliothek"
 
 #: ../../faq/library.rst:15
 msgid "How do I find a module or application to perform task X?"
-msgstr ""
+msgstr "Wie finde ich ein Modul oder eine Anwendung für Aufgabe X?"
 
 #: ../../faq/library.rst:17
 msgid ""
@@ -43,6 +42,9 @@ msgid ""
 "relevant standard library module.  (Eventually you'll learn what's in the "
 "standard library and will be able to skip this step.)"
 msgstr ""
+"Sieh in :ref:`der Bibliotheksreferenz <library-index>` nach, ob es ein "
+"passendes Modul der Standardbibliothek gibt. (Irgendwann weißt du, was in "
+"der Standardbibliothek steckt, und kannst diesen Schritt überspringen.)"
 
 #: ../../faq/library.rst:21
 msgid ""
@@ -51,10 +53,14 @@ msgid ""
 "engine.  Searching for \"Python\" plus a keyword or two for your topic of "
 "interest will usually find something helpful."
 msgstr ""
+"Für Pakete von Dritten suche im `Python Package Index <https://pypi.org>`_ "
+"oder versuche es mit `Google <https://www.google.com>`_ oder einer anderen "
+"Suchmaschine. Nach „Python“ plus einem oder zwei Stichwörtern zu deinem "
+"Thema zu suchen findet meist etwas Hilfreiches."
 
 #: ../../faq/library.rst:28
 msgid "Where is the math.py (socket.py, regex.py, etc.) source file?"
-msgstr ""
+msgstr "Wo ist die Quelldatei math.py (socket.py, regex.py und so weiter)?"
 
 #: ../../faq/library.rst:30
 msgid ""
@@ -64,35 +70,46 @@ msgid ""
 "file:`mathmodule.c`, somewhere in a C source directory (not on the Python "
 "Path)."
 msgstr ""
+"Findest du für ein Modul keine Quelldatei, ist es vielleicht ein "
+"integriertes oder dynamisch geladenes Modul, das in C, C++ oder einer "
+"anderen kompilierten Sprache umgesetzt ist. In diesem Fall hast du die "
+"Quelldatei möglicherweise nicht, oder sie heißt etwa :file:`mathmodule.c` "
+"und liegt irgendwo in einem C-Quellverzeichnis und nicht im Python-Pfad."
 
 #: ../../faq/library.rst:35
 msgid "There are (at least) three kinds of modules in Python:"
-msgstr ""
+msgstr "Es gibt (mindestens) drei Arten von Modulen in Python:"
 
 #: ../../faq/library.rst:37
 msgid "modules written in Python (.py);"
-msgstr ""
+msgstr "Module, die in Python geschrieben sind (.py);"
 
 #: ../../faq/library.rst:38
 msgid ""
 "modules written in C and dynamically loaded (.dll, .pyd, .so, .sl, etc);"
 msgstr ""
+"Module, die in C geschrieben und dynamisch geladen werden (.dll, .pyd, .so, ."
+"sl und so weiter);"
 
 #: ../../faq/library.rst:39
 msgid ""
 "modules written in C and linked with the interpreter; to get a list of "
 "these, type::"
 msgstr ""
+"Module, die in C geschrieben und mit dem Interpreter gebunden sind. Um eine "
+"Liste davon zu bekommen, gib ein::"
 
 #: ../../faq/library.rst:42
 msgid ""
 "import sys\n"
 "print(sys.builtin_module_names)"
 msgstr ""
+"import sys\n"
+"print(sys.builtin_module_names)"
 
 #: ../../faq/library.rst:47
 msgid "How do I make a Python script executable on Unix?"
-msgstr ""
+msgstr "Wie mache ich ein Python-Skript unter Unix ausführbar?"
 
 #: ../../faq/library.rst:49
 msgid ""
@@ -100,28 +117,35 @@ msgid ""
 "first line must begin with ``#!`` followed by the path of the Python "
 "interpreter."
 msgstr ""
+"Du musst zwei Dinge tun: Der Modus der Skriptdatei muss ausführbar sein, und "
+"die erste Zeile muss mit ``#!`` beginnen, gefolgt vom Pfad des Python-"
+"Interpreters."
 
 #: ../../faq/library.rst:53
 msgid ""
 "The first is done by executing ``chmod +x scriptfile`` or perhaps ``chmod "
 "755 scriptfile``."
 msgstr ""
+"Das Erste erledigst du mit ``chmod +x scriptfile`` oder vielleicht ``chmod "
+"755 scriptfile``."
 
 #: ../../faq/library.rst:56
 msgid ""
 "The second can be done in a number of ways.  The most straightforward way is "
 "to write ::"
-msgstr ""
+msgstr "Das Zweite geht auf mehrere Weisen. Am geradlinigsten ist es, ::"
 
 #: ../../faq/library.rst:59
 msgid "#!/usr/local/bin/python"
-msgstr ""
+msgstr "#!/usr/local/bin/python"
 
 #: ../../faq/library.rst:61
 msgid ""
 "as the very first line of your file, using the pathname for where the Python "
 "interpreter is installed on your platform."
 msgstr ""
+"als allererste Zeile deiner Datei zu schreiben, mit dem Pfadnamen, unter dem "
+"der Python-Interpreter auf deiner Plattform installiert ist."
 
 #: ../../faq/library.rst:64
 msgid ""
@@ -130,10 +154,14 @@ msgid ""
 "variants support the following, assuming the Python interpreter is in a "
 "directory on the user's :envvar:`PATH`::"
 msgstr ""
+"Soll das Skript unabhängig davon sein, wo der Python-Interpreter liegt, "
+"kannst du das Programm :program:`env` verwenden. Fast alle Unix-Varianten "
+"unterstützen das Folgende, sofern der Python-Interpreter in einem "
+"Verzeichnis im :envvar:`PATH` des Benutzers liegt::"
 
 #: ../../faq/library.rst:69
 msgid "#!/usr/bin/env python"
-msgstr ""
+msgstr "#!/usr/bin/env python"
 
 #: ../../faq/library.rst:71
 msgid ""
@@ -141,6 +169,9 @@ msgid ""
 "scripts is often very minimal, so you need to use the actual absolute "
 "pathname of the interpreter."
 msgstr ""
+"Mach das *nicht* bei CGI-Skripten. Die Variable :envvar:`PATH` ist für CGI-"
+"Skripte oft sehr knapp gehalten, du musst deshalb den tatsächlichen "
+"absoluten Pfadnamen des Interpreters verwenden."
 
 #: ../../faq/library.rst:75
 msgid ""
@@ -148,6 +179,9 @@ msgid ""
 "env` program fails; or there's no env program at all.  In that case, you can "
 "try the following hack (due to Alex Rezinsky):"
 msgstr ""
+"Gelegentlich ist die Umgebung eines Benutzers so voll, dass das Programm :"
+"program:`/usr/bin/env` scheitert, oder es gibt überhaupt kein env-Programm. "
+"In diesem Fall kannst du den folgenden Trick versuchen (von Alex Rezinsky):"
 
 #: ../../faq/library.rst:79
 msgid ""
@@ -156,20 +190,26 @@ msgid ""
 "exec python $0 ${1+\"$@\"}\n"
 "\"\"\""
 msgstr ""
+"#! /bin/sh\n"
+"\"\"\":\"\n"
+"exec python $0 ${1+\"$@\"}\n"
+"\"\"\""
 
 #: ../../faq/library.rst:86
 msgid ""
 "The minor disadvantage is that this defines the script's __doc__ string. "
 "However, you can fix that by adding ::"
 msgstr ""
+"Der kleine Nachteil ist, dass dies die __doc__-Zeichenkette des Skripts "
+"festlegt. Das kannst du aber beheben, indem du ::"
 
 #: ../../faq/library.rst:89
 msgid "__doc__ = \"\"\"...Whatever...\"\"\""
-msgstr ""
+msgstr "__doc__ = \"\"\"...Whatever...\"\"\""
 
 #: ../../faq/library.rst:94
 msgid "Is there a curses/termcap package for Python?"
-msgstr ""
+msgstr "Gibt es ein curses/termcap-Paket für Python?"
 
 #: ../../faq/library.rst:98
 msgid ""
@@ -178,6 +218,10 @@ msgid ""
 "compiled by default. (Note that this is not available in the Windows "
 "distribution -- there is no curses module for Windows.)"
 msgstr ""
+"Für Unix-Varianten: Die Standard-Quellcode-Distribution von Python bringt im "
+"Unterverzeichnis :source:`Modules` ein curses-Modul mit, das allerdings "
+"nicht standardmäßig kompiliert wird. (Beachte, dass es in der Windows-"
+"Distribution nicht verfügbar ist -- es gibt kein curses-Modul für Windows.)"
 
 #: ../../faq/library.rst:103
 msgid ""
@@ -188,48 +232,60 @@ msgid ""
 "but there don't seem to be any currently maintained OSes that fall into this "
 "category."
 msgstr ""
+"Das Modul :mod:`curses` unterstützt die grundlegenden curses-Funktionen "
+"sowie viele zusätzliche Funktionen aus ncurses und SYSV-curses, etwa Farben, "
+"alternative Zeichensätze, Pads und Mausunterstützung. Das bedeutet, dass das "
+"Modul mit Betriebssystemen nicht kompatibel ist, die nur BSD-curses haben, "
+"aber es scheint derzeit keine gepflegten Betriebssysteme zu geben, die in "
+"diese Kategorie fallen."
 
 #: ../../faq/library.rst:111
 msgid "Is there an equivalent to C's onexit() in Python?"
-msgstr ""
+msgstr "Gibt es in Python eine Entsprechung zu onexit() aus C?"
 
 #: ../../faq/library.rst:113
 msgid ""
 "The :mod:`atexit` module provides a register function that is similar to "
 "C's :c:func:`!onexit`."
 msgstr ""
+"Das Modul :mod:`atexit` stellt eine Funktion register bereit, die :c:func:`!"
+"onexit` aus C ähnelt."
 
 #: ../../faq/library.rst:118
 msgid "Why don't my signal handlers work?"
-msgstr ""
+msgstr "Warum funktionieren meine Signalbehandler nicht?"
 
 #: ../../faq/library.rst:120
 msgid ""
 "The most common problem is that the signal handler is declared with the "
 "wrong argument list.  It is called as ::"
 msgstr ""
+"Das häufigste Problem ist, dass der Signalbehandler mit der falschen "
+"Argumentliste deklariert ist. Er wird so aufgerufen: ::"
 
 #: ../../faq/library.rst:123
 msgid "handler(signum, frame)"
-msgstr ""
+msgstr "handler(signum, frame)"
 
 #: ../../faq/library.rst:125
 msgid "so it should be declared with two parameters::"
-msgstr ""
+msgstr "er sollte also mit zwei Parametern deklariert werden::"
 
 #: ../../faq/library.rst:127
 msgid ""
 "def handler(signum, frame):\n"
 "    ..."
 msgstr ""
+"def handler(signum, frame):\n"
+"    ..."
 
 #: ../../faq/library.rst:132
 msgid "Common tasks"
-msgstr ""
+msgstr "Häufige Aufgaben"
 
 #: ../../faq/library.rst:135
 msgid "How do I test a Python program or component?"
-msgstr ""
+msgstr "Wie teste ich ein Python-Programm oder einen Bestandteil davon?"
 
 #: ../../faq/library.rst:137
 msgid ""
@@ -237,12 +293,17 @@ msgid ""
 "examples in the docstrings for a module and runs them, comparing the output "
 "with the expected output given in the docstring."
 msgstr ""
+"Python bringt zwei Testframeworks mit. Das Modul :mod:`doctest` findet "
+"Beispiele in den Docstrings eines Moduls und führt sie aus, wobei es die "
+"Ausgabe mit der im Docstring angegebenen erwarteten Ausgabe vergleicht."
 
 #: ../../faq/library.rst:141
 msgid ""
 "The :mod:`unittest` module is a fancier testing framework modelled on Java "
 "and Smalltalk testing frameworks."
 msgstr ""
+"Das Modul :mod:`unittest` ist ein aufwendigeres Testframework, nachempfunden "
+"den Testframeworks von Java und Smalltalk."
 
 #: ../../faq/library.rst:144
 msgid ""
@@ -254,20 +315,29 @@ msgid ""
 "avoid depending on mutating global variables, since this makes testing much "
 "more difficult to do."
 msgstr ""
+"Um das Testen zu erleichtern, solltest du in deinem Programm einen guten "
+"modularen Entwurf verwenden. Dein Programm sollte fast alle Funktionalität "
+"in Funktionen oder Klassenmethoden kapseln -- und das hat manchmal den "
+"überraschenden und erfreulichen Effekt, dass das Programm schneller läuft, "
+"weil Zugriffe auf lokale Variablen schneller sind als auf globale. Außerdem "
+"sollte das Programm es vermeiden, von veränderten globalen Variablen "
+"abzuhängen, denn das macht das Testen viel schwieriger."
 
 #: ../../faq/library.rst:152
 msgid "The \"global main logic\" of your program may be as simple as ::"
-msgstr ""
+msgstr "Die „globale Hauptlogik“ deines Programms darf so einfach sein wie ::"
 
 #: ../../faq/library.rst:154
 msgid ""
 "if __name__ == \"__main__\":\n"
 "    main_logic()"
 msgstr ""
+"if __name__ == \"__main__\":\n"
+"    main_logic()"
 
 #: ../../faq/library.rst:157
 msgid "at the bottom of the main module of your program."
-msgstr ""
+msgstr "am Ende des Hauptmoduls deines Programms."
 
 #: ../../faq/library.rst:159
 msgid ""
@@ -280,18 +350,30 @@ msgid ""
 "the \"production code\", since this makes it easy to find bugs and even "
 "design flaws earlier."
 msgstr ""
+"Sobald dein Programm als überschaubare Sammlung von Funktions- und "
+"Klassenverhalten organisiert ist, solltest du Testfunktionen schreiben, die "
+"diese Verhalten durchlaufen. Jedem Modul lässt sich eine Testsammlung "
+"zuordnen, die eine Folge von Tests automatisiert. Das klingt nach viel "
+"Arbeit, ist aber überraschend leicht, weil Python so knapp und flexibel ist. "
+"Du kannst das Programmieren viel angenehmer und unterhaltsamer machen, indem "
+"du deine Testfunktionen parallel zum „produktiven Code“ schreibst, denn so "
+"lassen sich Fehler und sogar Entwurfsschwächen früher finden."
 
 #: ../../faq/library.rst:167
 msgid ""
 "\"Support modules\" that are not intended to be the main module of a program "
 "may include a self-test of the module. ::"
 msgstr ""
+"„Hilfsmodule“, die nicht als Hauptmodul eines Programms gedacht sind, dürfen "
+"einen Selbsttest des Moduls enthalten. ::"
 
 #: ../../faq/library.rst:170
 msgid ""
 "if __name__ == \"__main__\":\n"
 "    self_test()"
 msgstr ""
+"if __name__ == \"__main__\":\n"
+"    self_test()"
 
 #: ../../faq/library.rst:173
 msgid ""
@@ -299,10 +381,13 @@ msgid ""
 "when the external interfaces are unavailable by using \"fake\" interfaces "
 "implemented in Python."
 msgstr ""
+"Selbst Programme, die mit komplexen externen Schnittstellen arbeiten, lassen "
+"sich testen, wenn die externen Schnittstellen nicht verfügbar sind, indem "
+"man „falsche“ Schnittstellen verwendet, die in Python umgesetzt sind."
 
 #: ../../faq/library.rst:179
 msgid "How do I create documentation from doc strings?"
-msgstr ""
+msgstr "Wie erzeuge ich aus Docstrings Dokumentation?"
 
 #: ../../faq/library.rst:181
 msgid ""
@@ -311,24 +396,32 @@ msgid ""
 "docstrings is `epydoc <https://epydoc.sourceforge.net/>`_.  `Sphinx <https://"
 "www.sphinx-doc.org>`_ can also include docstring content."
 msgstr ""
+"Das Modul :mod:`pydoc` kann aus den Docstrings in deinem Python-Quellcode "
+"HTML erzeugen. Eine Alternative, um API-Dokumentation ausschließlich aus "
+"Docstrings zu erzeugen, ist `epydoc <https://epydoc.sourceforge.net/>`_. "
+"Auch `Sphinx <https://www.sphinx-doc.org>`_ kann Inhalte aus Docstrings "
+"einbeziehen."
 
 #: ../../faq/library.rst:188
 msgid "How do I get a single keypress at a time?"
-msgstr ""
+msgstr "Wie bekomme ich einzelne Tastendrücke?"
 
 #: ../../faq/library.rst:190
 msgid ""
 "For Unix variants there are several solutions.  It's straightforward to do "
 "this using curses, but curses is a fairly large module to learn."
 msgstr ""
+"Für Unix-Varianten gibt es mehrere Lösungen. Mit curses geht das "
+"geradeheraus, aber curses ist ein recht umfangreiches Modul, in das man sich "
+"einarbeiten muss."
 
 #: ../../faq/library.rst:234
 msgid "Threads"
-msgstr ""
+msgstr "Threads"
 
 #: ../../faq/library.rst:237
 msgid "How do I program using threads?"
-msgstr ""
+msgstr "Wie programmiere ich mit Threads?"
 
 #: ../../faq/library.rst:239
 msgid ""
@@ -336,22 +429,30 @@ msgid ""
 "module. The :mod:`threading` module builds convenient abstractions on top of "
 "the low-level primitives provided by the :mod:`_thread` module."
 msgstr ""
+"Verwende unbedingt das Modul :mod:`threading` und nicht das Modul :mod:"
+"`_thread`. Das Modul :mod:`threading` baut bequeme Abstraktionen auf den "
+"grundlegenden Mitteln auf, die das Modul :mod:`_thread` bereitstellt."
 
 #: ../../faq/library.rst:245
 msgid "None of my threads seem to run: why?"
-msgstr ""
+msgstr "Keiner meiner Threads scheint zu laufen. Warum?"
 
 #: ../../faq/library.rst:247
 msgid ""
 "As soon as the main thread exits, all threads are killed.  Your main thread "
 "is running too quickly, giving the threads no time to do any work."
 msgstr ""
+"Sobald der Haupt-Thread sich beendet, werden alle Threads getötet. Dein "
+"Haupt-Thread läuft zu schnell durch und gibt den Threads keine Zeit, "
+"irgendetwas zu tun."
 
 #: ../../faq/library.rst:250
 msgid ""
 "A simple fix is to add a sleep to the end of the program that's long enough "
 "for all the threads to finish::"
 msgstr ""
+"Eine einfache Abhilfe ist, am Ende des Programms eine Wartezeit einzufügen, "
+"die lang genug ist, damit alle Threads fertig werden::"
 
 #: ../../faq/library.rst:253
 msgid ""
@@ -367,6 +468,17 @@ msgid ""
 "\n"
 "time.sleep(10)  # <---------------------------!"
 msgstr ""
+"import threading, time\n"
+"\n"
+"def thread_task(name, n):\n"
+"    for i in range(n):\n"
+"        print(name, i)\n"
+"\n"
+"for i in range(10):\n"
+"    T = threading.Thread(target=thread_task, args=(str(i), i))\n"
+"    T.start()\n"
+"\n"
+"time.sleep(10)  # <---------------------------!"
 
 #: ../../faq/library.rst:265
 msgid ""
@@ -374,10 +486,16 @@ msgid ""
 "run sequentially, one at a time!  The reason is that the OS thread scheduler "
 "doesn't start a new thread until the previous thread is blocked."
 msgstr ""
+"Aber jetzt laufen die Threads (auf vielen Plattformen) nicht parallel, "
+"sondern scheinen hintereinander zu laufen, einer nach dem anderen! Der Grund "
+"ist, dass der Thread-Planer des Betriebssystems keinen neuen Thread startet, "
+"solange der vorherige nicht blockiert ist."
 
 #: ../../faq/library.rst:269
 msgid "A simple fix is to add a tiny sleep to the start of the run function::"
 msgstr ""
+"Eine einfache Abhilfe ist, am Anfang der Ausführungsfunktion eine winzige "
+"Wartezeit einzufügen::"
 
 #: ../../faq/library.rst:271
 msgid ""
@@ -392,6 +510,16 @@ msgid ""
 "\n"
 "time.sleep(10)"
 msgstr ""
+"def thread_task(name, n):\n"
+"    time.sleep(0.001)  # <--------------------!\n"
+"    for i in range(n):\n"
+"        print(name, i)\n"
+"\n"
+"for i in range(10):\n"
+"    T = threading.Thread(target=thread_task, args=(str(i), i))\n"
+"    T.start()\n"
+"\n"
+"time.sleep(10)"
 
 #: ../../faq/library.rst:282
 msgid ""
@@ -401,16 +529,24 @@ msgid ""
 "the queue when it finishes, and let the main thread read as many tokens from "
 "the queue as there are threads."
 msgstr ""
+"Statt zu versuchen, einen guten Wert für die Wartezeit von :func:`time."
+"sleep` zu erraten, ist es besser, irgendeine Art von Semaphor-Mechanismus zu "
+"verwenden. Eine Idee ist, mit dem Modul :mod:`queue` ein "
+"Warteschlangenobjekt zu erzeugen, jeden Thread beim Beenden ein Zeichen an "
+"die Warteschlange anhängen zu lassen und den Haupt-Thread so viele Zeichen "
+"aus der Warteschlange zu lesen, wie es Threads gibt."
 
 #: ../../faq/library.rst:290
 msgid "How do I parcel out work among a bunch of worker threads?"
-msgstr ""
+msgstr "Wie verteile ich Arbeit auf eine Reihe von Arbeiter-Threads?"
 
 #: ../../faq/library.rst:292
 msgid ""
 "The easiest way is to use the :mod:`concurrent.futures` module, especially "
 "the :mod:`~concurrent.futures.ThreadPoolExecutor` class."
 msgstr ""
+"Am einfachsten geht das mit dem Modul :mod:`concurrent.futures`, "
+"insbesondere mit der Klasse :mod:`~concurrent.futures.ThreadPoolExecutor`."
 
 #: ../../faq/library.rst:295
 msgid ""
@@ -421,10 +557,17 @@ msgid ""
 "``.get()`` method to return them.  The class will take care of the locking "
 "necessary to ensure that each job is handed out exactly once."
 msgstr ""
+"Oder du schreibst deine eigene Logik von Hand, wenn du die Verteilung genau "
+"steuern willst. Erzeuge mit dem Modul :mod:`queue` eine Warteschlange, die "
+"eine Liste von Aufträgen enthält. Die Klasse :class:`~queue.Queue` führt "
+"eine Liste von Objekten und hat eine Methode ``.put(obj)``, die Elemente zur "
+"Warteschlange hinzufügt, sowie eine Methode ``.get()``, die sie zurückgibt. "
+"Die Klasse kümmert sich um die nötige Sperrung, damit jeder Auftrag genau "
+"einmal ausgegeben wird."
 
 #: ../../faq/library.rst:302
 msgid "Here's a trivial example::"
-msgstr ""
+msgstr "Hier ein einfaches Beispiel::"
 
 #: ../../faq/library.rst:304
 msgid ""
@@ -464,10 +607,45 @@ msgid ""
 "print('Main thread sleeping')\n"
 "time.sleep(5)"
 msgstr ""
+"import threading, queue, time\n"
+"\n"
+"# Der Arbeiter-Thread holt Aufträge aus der Warteschlange. Ist sie leer,\n"
+"# nimmt er an, dass keine Arbeit mehr kommt, und beendet sich.\n"
+"# (In der Praxis laufen Arbeiter, bis sie beendet werden.)\n"
+"def worker():\n"
+"    print('Running worker')\n"
+"    time.sleep(0.1)\n"
+"    while True:\n"
+"        try:\n"
+"            arg = q.get(block=False)\n"
+"        except queue.Empty:\n"
+"            print('Worker', threading.current_thread(), end=' ')\n"
+"            print('queue empty')\n"
+"            break\n"
+"        else:\n"
+"            print('Worker', threading.current_thread(), end=' ')\n"
+"            print('running with argument', arg)\n"
+"            time.sleep(0.5)\n"
+"\n"
+"# Warteschlange erzeugen\n"
+"q = queue.Queue()\n"
+"\n"
+"# einen Vorrat von 5 Arbeitern starten\n"
+"for i in range(5):\n"
+"    t = threading.Thread(target=worker, name='worker %i' % (i+1))\n"
+"    t.start()\n"
+"\n"
+"# beginnen, Arbeit in die Warteschlange zu legen\n"
+"for i in range(50):\n"
+"    q.put(i)\n"
+"\n"
+"# den Threads Zeit zum Laufen geben\n"
+"print('Main thread sleeping')\n"
+"time.sleep(5)"
 
 #: ../../faq/library.rst:340
 msgid "When run, this will produce the following output:"
-msgstr ""
+msgstr "Ausgeführt ergibt das die folgende Ausgabe:"
 
 #: ../../faq/library.rst:342
 msgid ""
@@ -485,16 +663,31 @@ msgid ""
 "Worker <Thread(worker 1, started 130283832797456)> running with argument 5\n"
 "..."
 msgstr ""
+"Running worker\n"
+"Running worker\n"
+"Running worker\n"
+"Running worker\n"
+"Running worker\n"
+"Main thread sleeping\n"
+"Worker <Thread(worker 1, started 130283832797456)> running with argument 0\n"
+"Worker <Thread(worker 2, started 130283824404752)> running with argument 1\n"
+"Worker <Thread(worker 3, started 130283816012048)> running with argument 2\n"
+"Worker <Thread(worker 4, started 130283807619344)> running with argument 3\n"
+"Worker <Thread(worker 5, started 130283799226640)> running with argument 4\n"
+"Worker <Thread(worker 1, started 130283832797456)> running with argument 5\n"
+"..."
 
 #: ../../faq/library.rst:358
 msgid ""
 "Consult the module's documentation for more details; the :class:`~queue."
 "Queue` class provides a featureful interface."
 msgstr ""
+"Weitere Einzelheiten stehen in der Dokumentation des Moduls. Die Klasse :"
+"class:`~queue.Queue` bietet eine reichhaltige Schnittstelle."
 
 #: ../../faq/library.rst:363
 msgid "What kinds of global value mutation are thread-safe?"
-msgstr ""
+msgstr "Welche Arten der Änderung globaler Werte sind thread-sicher?"
 
 #: ../../faq/library.rst:365
 msgid ""
@@ -505,6 +698,12 @@ msgid ""
 "instruction and therefore all the C implementation code reached from each "
 "instruction is therefore atomic from the point of view of a Python program."
 msgstr ""
+"Intern wird ein :term:`global interpreter lock` (GIL) verwendet, um "
+"sicherzustellen, dass immer nur ein Thread in der Python-VM läuft. Im "
+"Allgemeinen wechselt Python nur zwischen Bytecode-Anweisungen den Thread. "
+"Wie häufig es wechselt, lässt sich über :func:`sys.setswitchinterval` "
+"einstellen. Jede Bytecode-Anweisung und damit aller von ihr erreichte C-Code "
+"ist aus Sicht eines Python-Programms deshalb atomar."
 
 #: ../../faq/library.rst:372
 msgid ""
@@ -513,12 +712,19 @@ msgid ""
 "shared variables of built-in data types (ints, lists, dicts, etc) that "
 "\"look atomic\" really are."
 msgstr ""
+"Theoretisch bedeutet das, dass eine genaue Abrechnung ein genaues "
+"Verständnis der Bytecode-Umsetzung der PVM erfordert. In der Praxis bedeutet "
+"es, dass Operationen auf gemeinsam genutzten Variablen integrierter "
+"Datentypen (ints, Listen, Dictionarys und so weiter), die „atomar aussehen“, "
+"es wirklich sind."
 
 #: ../../faq/library.rst:377
 msgid ""
 "For example, the following operations are all atomic (L, L1, L2 are lists, "
 "D, D1, D2 are dicts, x, y are objects, i, j are ints)::"
 msgstr ""
+"Zum Beispiel sind die folgenden Operationen alle atomar (L, L1, L2 sind "
+"Listen, D, D1, D2 sind Dictionarys, x, y sind Objekte, i, j sind ints)::"
 
 #: ../../faq/library.rst:380
 msgid ""
@@ -534,10 +740,21 @@ msgid ""
 "D1.update(D2)\n"
 "D.keys()"
 msgstr ""
+"L.append(x)\n"
+"L1.extend(L2)\n"
+"x = L[i]\n"
+"x = L.pop()\n"
+"L1[i:j] = L2\n"
+"L.sort()\n"
+"x = y\n"
+"x.field = y\n"
+"D[x] = y\n"
+"D1.update(D2)\n"
+"D.keys()"
 
 #: ../../faq/library.rst:392
 msgid "These aren't::"
-msgstr ""
+msgstr "Diese nicht::"
 
 #: ../../faq/library.rst:394
 msgid ""
@@ -546,6 +763,10 @@ msgid ""
 "L[i] = L[j]\n"
 "D[x] = D[x] + 1"
 msgstr ""
+"i = i+1\n"
+"L.append(L[-1])\n"
+"L[i] = L[j]\n"
+"D[x] = D[x] + 1"
 
 #: ../../faq/library.rst:399
 msgid ""
@@ -554,10 +775,15 @@ msgid ""
 "can affect things.  This is especially true for the mass updates to "
 "dictionaries and lists.  When in doubt, use a mutex!"
 msgstr ""
+"Operationen, die andere Objekte ersetzen, können die Methode :meth:`~object."
+"__del__` dieser anderen Objekte auslösen, sobald deren Referenzzähler null "
+"erreicht, und das kann sich auswirken. Besonders gilt das für "
+"Massenaktualisierungen von Dictionarys und Listen. Im Zweifel: nimm einen "
+"Mutex!"
 
 #: ../../faq/library.rst:406
 msgid "Can't we get rid of the Global Interpreter Lock?"
-msgstr ""
+msgstr "Können wir den Global Interpreter Lock nicht loswerden?"
 
 #: ../../faq/library.rst:408
 msgid ""
@@ -566,6 +792,10 @@ msgid ""
 "multi-threaded Python program effectively only uses one CPU, due to the "
 "insistence that (almost) all Python code can only run while the GIL is held."
 msgstr ""
+"Der :term:`global interpreter lock` (GIL) wird oft als Hindernis für den "
+"Einsatz von Python auf hochwertigen Mehrprozessor-Servern gesehen, denn ein "
+"Python-Programm mit mehreren Threads nutzt tatsächlich nur eine CPU, weil "
+"(fast) aller Python-Code nur laufen darf, solange der GIL gehalten wird."
 
 #: ../../faq/library.rst:413
 msgid ""
@@ -578,6 +808,15 @@ msgid ""
 "containing this work, although it may not be completely functional in this "
 "release."
 msgstr ""
+"Mit der Zustimmung zu :pep:`703` ist nun die Arbeit daran im Gange, den GIL "
+"aus der CPython-Implementierung von Python zu entfernen. Zunächst wird das "
+"als optionaler Compiler-Schalter beim Bauen des Interpreters umgesetzt, "
+"sodass getrennte Builds mit und ohne GIL verfügbar sein werden. Langfristig "
+"besteht die Hoffnung, sich auf einen einzigen Build festzulegen, sobald die "
+"Auswirkungen des Entfernens auf die Geschwindigkeit vollständig verstanden "
+"sind. Python 3.13 wird wahrscheinlich die erste Veröffentlichung sein, die "
+"diese Arbeit enthält, auch wenn sie darin vielleicht noch nicht vollständig "
+"funktioniert."
 
 #: ../../faq/library.rst:422
 msgid ""
@@ -593,6 +832,18 @@ msgid ""
 "compensate for the removal of the GIL.  The Python 3.9 fork is the first "
 "attempt at removing the GIL with an acceptable performance impact."
 msgstr ""
+"Die aktuelle Arbeit am Entfernen des GIL beruht auf einem `Fork von Python "
+"3.9 ohne GIL <https://github.com/colesbury/nogil>`_ von Sam Gross. Davor, zu "
+"Zeiten von Python 1.5, hat Greg Stein tatsächlich einen umfassenden Satz von "
+"Patches umgesetzt (die „free threading“-Patches), die den GIL entfernten und "
+"durch feingranulare Sperren ersetzten. Adam Olsen hat in seinem Projekt "
+"`python-safethread <https://code.google.com/archive/p/python-safethread>`_ "
+"ein ähnliches Experiment gemacht. Leider zeigten beide früheren Experimente "
+"einen scharfen Einbruch der Geschwindigkeit bei einzelnen Threads, "
+"mindestens 30 % langsamer, wegen der Menge an feingranularen Sperren, die "
+"zum Ausgleich für das entfernte GIL nötig waren. Der Fork von Python 3.9 ist "
+"der erste Versuch, den GIL mit annehmbaren Auswirkungen auf die "
+"Geschwindigkeit zu entfernen."
 
 #: ../../faq/library.rst:437
 msgid ""
@@ -604,6 +855,14 @@ msgid ""
 "doing so; the :mod:`multiprocessing` module provides a lower-level API in "
 "case you want more control over dispatching of tasks."
 msgstr ""
+"Dass der GIL in den aktuellen Python-Veröffentlichungen vorhanden ist, "
+"bedeutet nicht, dass du Python auf Maschinen mit mehreren CPUs nicht gut "
+"nutzen kannst! Du musst nur kreativ dabei sein, die Arbeit auf mehrere "
+"*Prozesse* statt auf mehrere *Threads* zu verteilen. Die Klasse :class:"
+"`~concurrent.futures.ProcessPoolExecutor` im neuen Modul :mod:`concurrent."
+"futures` bietet dafür einen einfachen Weg. Das Modul :mod:`multiprocessing` "
+"bietet eine API auf niedrigerer Ebene, falls du die Verteilung der Aufgaben "
+"genauer steuern willst."
 
 #: ../../faq/library.rst:446
 msgid ""
@@ -613,6 +872,11 @@ msgid ""
 "work done.  Some standard library modules such as :mod:`zlib` and :mod:"
 "`hashlib` already do this."
 msgstr ""
+"Der umsichtige Einsatz von C-Erweiterungen hilft ebenfalls. Verwendest du "
+"eine C-Erweiterung für eine zeitaufwendige Aufgabe, kann die Erweiterung den "
+"GIL freigeben, während der Ausführungsfaden im C-Code ist, und anderen "
+"Threads so erlauben, etwas Arbeit zu erledigen. Einige Module der "
+"Standardbibliothek wie :mod:`zlib` und :mod:`hashlib` machen das bereits."
 
 #: ../../faq/library.rst:452
 msgid ""
@@ -624,14 +888,22 @@ msgid ""
 "since these must be written with multiple interpreters in mind in order to "
 "be usable, so many older extension modules will not be usable."
 msgstr ""
+"Ein anderer Weg, die Auswirkung des GIL zu verringern, ist, ihn zu einer "
+"Sperre pro Interpreter-Zustand zu machen statt zu einer wirklich globalen. "
+"Das wurde :ref:`erstmals in Python 3.12 umgesetzt <whatsnew312-pep684>` und "
+"ist in der C-API verfügbar. Eine Python-Schnittstelle dazu wird für Python "
+"3.13 erwartet. Die wichtigste Einschränkung dürfte derzeit bei "
+"Erweiterungsmodulen von Dritten liegen, denn diese müssen mit mehreren "
+"Interpretern im Blick geschrieben sein, um nutzbar zu sein, weshalb viele "
+"älteren Erweiterungsmodule nicht nutzbar sein werden."
 
 #: ../../faq/library.rst:462
 msgid "Input and Output"
-msgstr ""
+msgstr "Ein- und Ausgabe"
 
 #: ../../faq/library.rst:465
 msgid "How do I delete a file? (And other file questions...)"
-msgstr ""
+msgstr "Wie lösche ich eine Datei? (Und andere Fragen zu Dateien ...)"
 
 #: ../../faq/library.rst:467
 msgid ""
@@ -639,6 +911,10 @@ msgid ""
 "see the :mod:`os` module.  The two functions are identical; :func:`~os."
 "unlink` is simply the name of the Unix system call for this function."
 msgstr ""
+"Verwende ``os.remove(filename)`` oder ``os.unlink(filename)``. Die "
+"Dokumentation dazu steht beim Modul :mod:`os`. Die beiden Funktionen sind "
+"identisch, :func:`~os.unlink` ist einfach der Name des Unix-Systemaufrufs "
+"für diese Funktion."
 
 #: ../../faq/library.rst:471
 msgid ""
@@ -648,10 +924,16 @@ msgid ""
 "directories as long as they're empty; if you want to delete an entire "
 "directory tree and its contents, use :func:`shutil.rmtree`."
 msgstr ""
+"Um ein Verzeichnis zu entfernen, verwende :func:`os.rmdir`, zum Anlegen :"
+"func:`os.mkdir`. ``os.makedirs(path)`` legt alle Zwischenverzeichnisse in "
+"``path`` an, die noch nicht vorhanden sind. ``os.removedirs(path)`` entfernt "
+"Zwischenverzeichnisse, solange sie leer sind. Willst du einen ganzen "
+"Verzeichnisbaum samt Inhalt löschen, verwende :func:`shutil.rmtree`."
 
 #: ../../faq/library.rst:477
 msgid "To rename a file, use ``os.rename(old_path, new_path)``."
 msgstr ""
+"Um eine Datei umzubenennen, verwende ``os.rename(old_path, new_path)``."
 
 #: ../../faq/library.rst:479
 msgid ""
@@ -660,6 +942,11 @@ msgid ""
 "There's also ``os.ftruncate(fd, offset)`` for files opened with :func:`os."
 "open`, where *fd* is the file descriptor (a small integer)."
 msgstr ""
+"Um eine Datei abzuschneiden, öffne sie mit ``f = open(filename, \"rb+\")`` "
+"und verwende ``f.truncate(offset)``. Voreingestellt ist offset die aktuelle "
+"Position des Lesezeigers. Für Dateien, die mit :func:`os.open` geöffnet "
+"wurden, gibt es außerdem ``os.ftruncate(fd, offset)``, wobei *fd* der "
+"Dateideskriptor ist, also eine kleine ganze Zahl."
 
 #: ../../faq/library.rst:484
 msgid ""
@@ -667,10 +954,13 @@ msgid ""
 "files including :func:`~shutil.copyfile`, :func:`~shutil.copytree`, and :"
 "func:`~shutil.rmtree`."
 msgstr ""
+"Das Modul :mod:`shutil` enthält außerdem eine Reihe von Funktionen für die "
+"Arbeit mit Dateien, darunter :func:`~shutil.copyfile`, :func:`~shutil."
+"copytree` und :func:`~shutil.rmtree`."
 
 #: ../../faq/library.rst:490
 msgid "How do I copy a file?"
-msgstr ""
+msgstr "Wie kopiere ich eine Datei?"
 
 #: ../../faq/library.rst:492
 msgid ""
@@ -682,10 +972,18 @@ msgid ""
 "permissions and metadata, though using :func:`shutil.copy2` instead will "
 "preserve most (though not all) of it."
 msgstr ""
+"Das Modul :mod:`shutil` enthält eine Funktion :func:`~shutil.copyfile`. "
+"Beachte, dass sie auf NTFS-Datenträgern unter Windows keine `alternativen "
+"Datenströme <https://en.wikipedia.org/wiki/"
+"NTFS#Alternate_data_stream_(ADS)>`_ kopiert und auf HFS+-Datenträgern unter "
+"macOS keine `Ressourcenzweige <https://en.wikipedia.org/wiki/"
+"Resource_fork>`__, auch wenn beides inzwischen selten verwendet wird. Sie "
+"kopiert außerdem keine Dateirechte und Metadaten, wobei :func:`shutil.copy2` "
+"davon das meiste erhält, wenn auch nicht alles."
 
 #: ../../faq/library.rst:503
 msgid "How do I read (or write) binary data?"
-msgstr ""
+msgstr "Wie lese oder schreibe ich Binärdaten?"
 
 #: ../../faq/library.rst:505
 msgid ""
@@ -693,12 +991,18 @@ msgid ""
 "`struct` module.  It allows you to take a string containing binary data "
 "(usually numbers) and convert it to Python objects; and vice versa."
 msgstr ""
+"Um komplexe Binärdatenformate zu lesen oder zu schreiben, verwendest du am "
+"besten das Modul :mod:`struct`. Es erlaubt dir, eine Zeichenkette mit "
+"Binärdaten zu nehmen, meist Zahlen, und sie in Python-Objekte umzuwandeln — "
+"und umgekehrt."
 
 #: ../../faq/library.rst:509
 msgid ""
 "For example, the following code reads two 2-byte integers and one 4-byte "
 "integer in big-endian format from a file::"
 msgstr ""
+"Der folgende Code liest zum Beispiel zwei 2-Byte-Ganzzahlen und eine 4-Byte-"
+"Ganzzahl im Big-Endian-Format aus einer Datei::"
 
 #: ../../faq/library.rst:512
 msgid ""
@@ -708,6 +1012,11 @@ msgid ""
 "    s = f.read(8)\n"
 "    x, y, z = struct.unpack(\">hhl\", s)"
 msgstr ""
+"import struct\n"
+"\n"
+"with open(filename, \"rb\") as f:\n"
+"    s = f.read(8)\n"
+"    x, y, z = struct.unpack(\">hhl\", s)"
 
 #: ../../faq/library.rst:518
 msgid ""
@@ -715,12 +1024,17 @@ msgid ""
 "one \"short integer\" (2 bytes), and 'l' reads one \"long integer\" (4 "
 "bytes) from the string."
 msgstr ""
+"Das '>' in der Formatzeichenkette erzwingt Big-Endian-Daten. Der Buchstabe "
+"'h' liest eine „short integer“ (2 Byte) und 'l' eine „long integer“ (4 Byte) "
+"aus der Zeichenkette."
 
 #: ../../faq/library.rst:522
 msgid ""
 "For data that is more regular (e.g. a homogeneous list of ints or floats), "
 "you can also use the :mod:`array` module."
 msgstr ""
+"Für gleichmäßigere Daten, etwa eine Liste aus durchweg ints oder floats, "
+"kannst du auch das Modul :mod:`array` verwenden."
 
 #: ../../faq/library.rst:527
 msgid ""
@@ -729,10 +1043,17 @@ msgid ""
 "instead (the default), the file will be open in text mode and ``f.read()`` "
 "will return :class:`str` objects rather than :class:`bytes` objects."
 msgstr ""
+"Um Binärdaten zu lesen und zu schreiben, musst die Datei zwingend im "
+"Binärmodus geöffnet werden, hier also mit ``\"rb\"`` an :func:`open`. "
+"Verwendest du stattdessen ``\"r\"`` (die Voreinstellung), wird die Datei im "
+"Textmodus geöffnet, und ``f.read()`` gibt :class:`str`-Objekte statt :class:"
+"`bytes`-Objekten zurück."
 
 #: ../../faq/library.rst:535
 msgid "I can't seem to use os.read() on a pipe created with os.popen(); why?"
 msgstr ""
+"Ich kann os.read() offenbar nicht auf einer mit os.popen() erzeugten Pipe "
+"verwenden. Warum?"
 
 #: ../../faq/library.rst:537
 msgid ""
@@ -742,36 +1063,46 @@ msgid ""
 "function. Thus, to read *n* bytes from a pipe *p* created with :func:`os."
 "popen`, you need to use ``p.read(n)``."
 msgstr ""
+":func:`os.read` ist eine Funktion auf niedriger Ebene, die einen "
+"Dateideskriptor nimmt, also eine kleine ganze Zahl, die die geöffnete Datei "
+"darstellt. :func:`os.popen` erzeugt ein Dateiobjekt auf höherer Ebene, "
+"denselben Typ, den die integrierte Funktion :func:`open` zurückgibt. Um also "
+"*n* Byte aus einer mit :func:`os.popen` erzeugten Pipe *p* zu lesen, musst "
+"du ``p.read(n)`` verwenden."
 
 #: ../../faq/library.rst:545
 msgid "How do I access the serial (RS232) port?"
-msgstr ""
+msgstr "Wie greife ich auf die serielle Schnittstelle (RS232) zu?"
 
 #: ../../faq/library.rst:547
 msgid "For Win32, OSX, Linux, BSD, Jython, IronPython:"
-msgstr ""
+msgstr "Für Win32, OSX, Linux, BSD, Jython, IronPython:"
 
 #: ../../faq/library.rst:549
 msgid ":pypi:`pyserial`"
-msgstr ""
+msgstr ":pypi:`pyserial`"
 
 #: ../../faq/library.rst:551
 msgid "For Unix, see a Usenet post by Mitch Chapman:"
-msgstr ""
+msgstr "Für Unix siehe einen Usenet-Beitrag von Mitch Chapman:"
 
 #: ../../faq/library.rst:553
 msgid "https://groups.google.com/groups?selm=34A04430.CF9@ohioee.com"
-msgstr ""
+msgstr "https://groups.google.com/groups?selm=34A04430.CF9@ohioee.com"
 
 #: ../../faq/library.rst:557
 msgid "Why doesn't closing sys.stdout (stdin, stderr) really close it?"
 msgstr ""
+"Warum schließt das Schließen von sys.stdout (stdin, stderr) es nicht "
+"wirklich?"
 
 #: ../../faq/library.rst:559
 msgid ""
 "Python :term:`file objects <file object>` are a high-level layer of "
 "abstraction on low-level C file descriptors."
 msgstr ""
+":term:`Dateiobjekte <file object>` in Python sind eine Abstraktionsschicht "
+"auf höherer Ebene über den C-Dateideskriptoren auf niedriger Ebene."
 
 #: ../../faq/library.rst:562
 msgid ""
@@ -781,6 +1112,11 @@ msgid ""
 "descriptor.  This also happens automatically in ``f``'s destructor, when "
 "``f`` becomes garbage."
 msgstr ""
+"Für die meisten Dateiobjekte, die du in Python über die integrierte "
+"Funktion :func:`open` erzeugst, kennzeichnet ``f.close()`` das Python-"
+"Dateiobjekt aus Sicht von Python als geschlossen und sorgt außerdem dafür, "
+"dass der darunter liegende C-Dateideskriptor geschlossen wird. Das passiert "
+"auch automatisch im Destruktor von ``f``, wenn ``f`` zu Müll wird."
 
 #: ../../faq/library.rst:568
 msgid ""
@@ -789,6 +1125,10 @@ msgid ""
 "marks the Python-level file object as being closed, but does *not* close the "
 "associated C file descriptor."
 msgstr ""
+"Aber stdin, stdout und stderr werden von Python besonders behandelt, weil C "
+"ihnen ebenfalls einen besonderen Status gibt. ``sys.stdout.close()`` "
+"auszuführen kennzeichnet das Dateiobjekt auf Python-Ebene als geschlossen, "
+"schließt den zugehörigen C-Dateideskriptor aber *nicht*."
 
 #: ../../faq/library.rst:573
 msgid ""
@@ -796,6 +1136,10 @@ msgid ""
 "first be sure that's what you really want to do (e.g., you may confuse "
 "extension modules trying to do I/O).  If it is, use :func:`os.close`::"
 msgstr ""
+"Um den darunter liegenden C-Dateideskriptor für einen dieser drei zu "
+"schließen, solltest du zuerst sicher sein, dass du das wirklich willst — du "
+"bringst damit zum Beispiel vielleicht Erweiterungsmodule in Schwierigkeiten, "
+"die Ein- und Ausgabe machen wollen. Wenn ja, verwende :func:`os.close`::"
 
 #: ../../faq/library.rst:577
 msgid ""
@@ -803,18 +1147,21 @@ msgid ""
 "os.close(stdout.fileno())\n"
 "os.close(stderr.fileno())"
 msgstr ""
+"os.close(stdin.fileno())\n"
+"os.close(stdout.fileno())\n"
+"os.close(stderr.fileno())"
 
 #: ../../faq/library.rst:581
 msgid "Or you can use the numeric constants 0, 1 and 2, respectively."
-msgstr ""
+msgstr "Oder du verwendest die Zahlenkonstanten 0, 1 und 2."
 
 #: ../../faq/library.rst:585
 msgid "Network/Internet Programming"
-msgstr ""
+msgstr "Netzwerk- und Internetprogrammierung"
 
 #: ../../faq/library.rst:588
 msgid "What WWW tools are there for Python?"
-msgstr ""
+msgstr "Welche WWW-Werkzeuge gibt es für Python?"
 
 #: ../../faq/library.rst:590
 msgid ""
@@ -822,36 +1169,45 @@ msgid ""
 "Reference Manual.  Python has many modules that will help you build server-"
 "side and client-side web systems."
 msgstr ""
+"Siehe die Kapitel :ref:`internet` und :ref:`netdata` im Referenzhandbuch der "
+"Bibliothek. Python hat viele Module, die dir beim Bau von Websystemen auf "
+"Server- und auf Clientseite helfen."
 
 #: ../../faq/library.rst:596
 msgid ""
 "A summary of available frameworks is maintained by Paul Boddie at https://"
 "wiki.python.org/moin/WebProgramming\\ ."
 msgstr ""
+"Eine Übersicht der verfügbaren Frameworks pflegt Paul Boddie unter https://"
+"wiki.python.org/moin/WebProgramming\\ ."
 
 #: ../../faq/library.rst:601
 msgid "What module should I use to help with generating HTML?"
-msgstr ""
+msgstr "Welches Modul sollte ich zur Hilfe beim Erzeugen von HTML verwenden?"
 
 #: ../../faq/library.rst:605
 msgid ""
 "You can find a collection of useful links on the `Web Programming wiki page "
 "<https://wiki.python.org/moin/WebProgramming>`_."
 msgstr ""
+"Eine Sammlung nützlicher Links findest du auf der `Wiki-Seite Web "
+"Programming <https://wiki.python.org/moin/WebProgramming>`_."
 
 #: ../../faq/library.rst:610
 msgid "How do I send mail from a Python script?"
-msgstr ""
+msgstr "Wie versende ich aus einem Python-Skript E-Mail?"
 
 #: ../../faq/library.rst:612
 msgid "Use the standard library module :mod:`smtplib`."
-msgstr ""
+msgstr "Verwende das Modul :mod:`smtplib` aus der Standardbibliothek."
 
 #: ../../faq/library.rst:614
 msgid ""
 "Here's a very simple interactive mail sender that uses it.  This method will "
 "work on any host that supports an SMTP listener. ::"
 msgstr ""
+"Hier ein sehr einfacher interaktiver Mailversender, der es verwendet. Diese "
+"Methode funktioniert auf jedem Rechner, der einen SMTP-Dienst unterstützt. ::"
 
 #: ../../faq/library.rst:617
 msgid ""
@@ -872,6 +1228,22 @@ msgid ""
 "server.sendmail(fromaddr, toaddrs, msg)\n"
 "server.quit()"
 msgstr ""
+"import sys, smtplib\n"
+"\n"
+"fromaddr = input(\"From: \")\n"
+"toaddrs  = input(\"To: \").split(',')\n"
+"print(\"Enter message, end with ^D:\")\n"
+"msg = ''\n"
+"while True:\n"
+"    line = sys.stdin.readline()\n"
+"    if not line:\n"
+"        break\n"
+"    msg += line\n"
+"\n"
+"# der eigentliche Mailversand\n"
+"server = smtplib.SMTP('localhost')\n"
+"server.sendmail(fromaddr, toaddrs, msg)\n"
+"server.quit()"
 
 #: ../../faq/library.rst:634
 msgid ""
@@ -880,6 +1252,10 @@ msgid ""
 "usr/sbin/sendmail``.  The sendmail manual page will help you out.  Here's "
 "some sample code::"
 msgstr ""
+"Eine Alternative nur für Unix verwendet sendmail. Der Ort des Programms "
+"sendmail unterscheidet sich je nach System, manchmal ist es ``/usr/lib/"
+"sendmail``, manchmal ``/usr/sbin/sendmail``. Die Manpage von sendmail hilft "
+"dir weiter. Hier etwas Beispielcode::"
 
 #: ../../faq/library.rst:639
 msgid ""
@@ -896,16 +1272,30 @@ msgid ""
 "if sts != 0:\n"
 "    print(\"Sendmail exit status\", sts)"
 msgstr ""
+"import os\n"
+"\n"
+"SENDMAIL = \"/usr/sbin/sendmail\"  # Ort von sendmail\n"
+"p = os.popen(\"%s -t -i\" % SENDMAIL, \"w\")\n"
+"p.write(\"To: receiver@example.com\\n\")\n"
+"p.write(\"Subject: test\\n\")\n"
+"p.write(\"\\n\")  # Leerzeile, die Kopfzeilen vom Rumpf trennt\n"
+"p.write(\"Some text\\n\")\n"
+"p.write(\"some more text\\n\")\n"
+"sts = p.close()\n"
+"if sts != 0:\n"
+"    print(\"Sendmail exit status\", sts)"
 
 #: ../../faq/library.rst:654
 msgid "How do I avoid blocking in the connect() method of a socket?"
-msgstr ""
+msgstr "Wie vermeide ich Blockieren in der Methode connect() eines Sockets?"
 
 #: ../../faq/library.rst:656
 msgid ""
 "The :mod:`select` module is commonly used to help with asynchronous I/O on "
 "sockets."
 msgstr ""
+"Das Modul :mod:`select` wird häufig verwendet, um bei asynchroner Ein- und "
+"Ausgabe auf Sockets zu helfen."
 
 #: ../../faq/library.rst:659
 msgid ""
@@ -917,6 +1307,13 @@ msgid ""
 "return different values, so you're going to have to check what's returned on "
 "your system."
 msgstr ""
+"Damit das TCP-connect nicht blockiert, kannst du den Socket in den nicht "
+"blockierenden Modus setzen. Beim :meth:`~socket.socket.connect` verbindest "
+"du dich dann entweder sofort (unwahrscheinlich) oder bekommst eine Ausnahme, "
+"die die Fehlernummer als ``.errno`` enthält. ``errno.EINPROGRESS`` zeigt an, "
+"dass die Verbindung im Aufbau, aber noch nicht fertig ist. Verschiedene "
+"Betriebssysteme geben verschiedene Werte zurück, du musst also prüfen, was "
+"auf deinem System zurückkommt."
 
 #: ../../faq/library.rst:667
 msgid ""
@@ -926,6 +1323,12 @@ msgid ""
 "indicate that you're connected -- or you can pass this socket to :meth:"
 "`select.select` to check if it's writable."
 msgstr ""
+"Mit der Methode :meth:`~socket.socket.connect_ex` kannst du vermeiden, dass "
+"eine Ausnahme entsteht. Sie gibt einfach den errno-Wert zurück. Zum Abfragen "
+"kannst du :meth:`~socket.socket.connect_ex` später erneut aufrufen -- ``0`` "
+"oder ``errno.EISCONN`` zeigen an, dass du verbunden bist -- oder du "
+"übergibst diesen Socket an :meth:`select.select`, um zu prüfen, ob er "
+"beschreibbar ist."
 
 #: ../../faq/library.rst:675
 msgid ""
@@ -934,18 +1337,22 @@ msgid ""
 "network code. The third-party `Twisted <https://twisted.org/>`_ library is a "
 "popular and feature-rich alternative."
 msgstr ""
+"Das Modul :mod:`asyncio` bietet eine allgemein verwendbare, einfädige und "
+"nebenläufige asynchrone Bibliothek, mit der sich nicht blockierender "
+"Netzwerkcode schreiben lässt. Die Bibliothek `Twisted <https://twisted.org/"
+">`_ von Dritten ist eine beliebte und funktionsreiche Alternative."
 
 #: ../../faq/library.rst:683
 msgid "Databases"
-msgstr ""
+msgstr "Datenbanken"
 
 #: ../../faq/library.rst:686
 msgid "Are there any interfaces to database packages in Python?"
-msgstr ""
+msgstr "Gibt es in Python Schnittstellen zu Datenbankpaketen?"
 
 #: ../../faq/library.rst:688
 msgid "Yes."
-msgstr ""
+msgstr "Ja."
 
 #: ../../faq/library.rst:690
 msgid ""
@@ -954,6 +1361,10 @@ msgid ""
 "`sqlite3` module, which provides a lightweight disk-based relational "
 "database."
 msgstr ""
+"Schnittstellen zu plattenbasierten Hashes wie :mod:`DBM <dbm.ndbm>` und :mod:"
+"`GDBM <dbm.gnu>` sind ebenfalls im Standard-Python enthalten. Es gibt "
+"außerdem das Modul :mod:`sqlite3`, das eine leichtgewichtige, "
+"plattenbasierte relationale Datenbank bereitstellt."
 
 #: ../../faq/library.rst:695
 msgid ""
@@ -961,10 +1372,13 @@ msgid ""
 "`DatabaseProgramming wiki page <https://wiki.python.org/moin/"
 "DatabaseProgramming>`_ for details."
 msgstr ""
+"Unterstützung für die meisten relationalen Datenbanken ist verfügbar. "
+"Einzelheiten stehen auf der `Wiki-Seite DatabaseProgramming <https://wiki."
+"python.org/moin/DatabaseProgramming>`_."
 
 #: ../../faq/library.rst:701
 msgid "How do you implement persistent objects in Python?"
-msgstr ""
+msgstr "Wie setzt man in Python persistente Objekte um?"
 
 #: ../../faq/library.rst:703
 msgid ""
@@ -973,63 +1387,83 @@ msgid ""
 "mod:`shelve` library module uses pickle and (g)dbm to create persistent "
 "mappings containing arbitrary Python objects."
 msgstr ""
+"Das Bibliotheksmodul :mod:`pickle` löst das auf sehr allgemeine Weise, auch "
+"wenn du Dinge wie offene Dateien, Sockets oder Fenster weiterhin nicht "
+"speichern kannst, und das Bibliotheksmodul :mod:`shelve` verwendet pickle "
+"und (g)dbm, um persistente Mappings zu erzeugen, die beliebige Python-"
+"Objekte enthalten."
 
 #: ../../faq/library.rst:710
 msgid "Mathematics and Numerics"
-msgstr ""
+msgstr "Mathematik und Numerik"
 
 #: ../../faq/library.rst:713
 msgid "How do I generate random numbers in Python?"
-msgstr ""
+msgstr "Wie erzeuge ich in Python Zufallszahlen?"
 
 #: ../../faq/library.rst:715
 msgid ""
 "The standard module :mod:`random` implements a random number generator.  "
 "Usage is simple::"
 msgstr ""
+"Das Standardmodul :mod:`random` setzt einen Zufallszahlengenerator um. Die "
+"Verwendung ist einfach::"
 
 #: ../../faq/library.rst:718
 msgid ""
 "import random\n"
 "random.random()"
 msgstr ""
+"import random\n"
+"random.random()"
 
 #: ../../faq/library.rst:721
 msgid "This returns a random floating-point number in the range [0, 1)."
-msgstr ""
+msgstr "Das gibt eine zufällige Gleitkommazahl im Bereich [0, 1) zurück."
 
 #: ../../faq/library.rst:723
 msgid ""
 "There are also many other specialized generators in this module, such as:"
 msgstr ""
+"In diesem Modul gibt es auch viele weitere spezialisierte Generatoren, zum "
+"Beispiel:"
 
 #: ../../faq/library.rst:725
 msgid "``randrange(a, b)`` chooses an integer in the range [a, b)."
-msgstr ""
+msgstr "``randrange(a, b)`` wählt eine ganze Zahl im Bereich [a, b)."
 
 #: ../../faq/library.rst:726
 msgid "``uniform(a, b)`` chooses a floating-point number in the range [a, b)."
-msgstr ""
+msgstr "``uniform(a, b)`` wählt eine Gleitkommazahl im Bereich [a, b)."
 
 #: ../../faq/library.rst:727
 msgid ""
 "``normalvariate(mean, sdev)`` samples the normal (Gaussian) distribution."
 msgstr ""
+"``normalvariate(mean, sdev)`` zieht aus der Normalverteilung, also der Gauß-"
+"Verteilung."
 
 #: ../../faq/library.rst:729
 msgid "Some higher-level functions operate on sequences directly, such as:"
 msgstr ""
+"Einige Funktionen auf höherer Ebene arbeiten direkt auf Sequenzen, zum "
+"Beispiel:"
 
 #: ../../faq/library.rst:731
 msgid "``choice(S)`` chooses a random element from a given sequence."
 msgstr ""
+"``choice(S)`` wählt ein zufälliges Element aus einer gegebenen Sequenz."
 
 #: ../../faq/library.rst:732
 msgid "``shuffle(L)`` shuffles a list in-place, i.e. permutes it randomly."
 msgstr ""
+"``shuffle(L)`` mischt eine Liste an ihrem Platz, permutiert sie also "
+"zufällig."
 
 #: ../../faq/library.rst:734
 msgid ""
 "There's also a ``Random`` class you can instantiate to create independent "
 "multiple random number generators."
 msgstr ""
+"Es gibt außerdem eine Klasse ``Random``, die du instanziieren kannst, um "
+"mehrere voneinander unabhängige Zufallszahlengeneratoren zu erzeugen."
