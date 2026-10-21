@@ -1,20 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 20:17+0000\n"
-"PO-Revision-Date: 2025-09-16 00:00+0000\n"
+"PO-Revision-Date: 2026-10-19 22:45+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +30,7 @@ msgstr "Inhalt"
 
 #: ../../faq/design.rst:11
 msgid "Why does Python use indentation for grouping of statements?"
-msgstr ""
+msgstr "Warum verwendet Python Einrückung, um Anweisungen zu gruppieren?"
 
 #: ../../faq/design.rst:13
 msgid ""
@@ -39,6 +38,10 @@ msgid ""
 "elegant and contributes a lot to the clarity of the average Python program. "
 "Most people learn to love this feature after a while."
 msgstr ""
+"Guido van Rossum ist der Ansicht, dass Einrückung zur Gruppierung "
+"ausgesprochen elegant ist und viel zur Klarheit des durchschnittlichen "
+"Python-Programms beiträgt. Die meisten Leute lernen diese Eigenschaft nach "
+"einer Weile zu lieben."
 
 #: ../../faq/design.rst:17
 msgid ""
@@ -46,6 +49,10 @@ msgid ""
 "grouping perceived by the parser and the human reader.  Occasionally C "
 "programmers will encounter a fragment of code like this::"
 msgstr ""
+"Da es keine Klammern für Anfang und Ende gibt, kann es keine Abweichung "
+"zwischen der Gruppierung geben, die der Parser sieht, und der, die der "
+"menschliche Leser sieht. Gelegentlich stoßen C-Programmierer auf ein "
+"Codefragment wie dieses::"
 
 #: ../../faq/design.rst:21
 msgid ""
@@ -54,6 +61,10 @@ msgid ""
 "        y--;\n"
 "z++;"
 msgstr ""
+"if (x <= y)\n"
+"        x++;\n"
+"        y--;\n"
+"z++;"
 
 #: ../../faq/design.rst:26
 msgid ""
@@ -62,6 +73,10 @@ msgid ""
 "will sometimes stare at it a long time wondering as to why ``y`` is being "
 "decremented even for ``x > y``."
 msgstr ""
+"Nur die Anweisung ``x++`` wird ausgeführt, wenn die Bedingung wahr ist, aber "
+"die Einrückung lässt viele etwas anderes glauben. Selbst erfahrene C-"
+"Programmierer starren das manchmal lange an und fragen sich, warum ``y`` "
+"auch für ``x > y`` verringert wird."
 
 #: ../../faq/design.rst:31
 msgid ""
@@ -71,6 +86,12 @@ msgid ""
 "is normal to feel somewhat uneasy when reading (or being required to write) "
 "in a different one."
 msgstr ""
+"Weil es keine Klammern für Anfang und Ende gibt, ist Python viel weniger "
+"anfällig für Streit über den Programmierstil. In C gibt es viele "
+"verschiedene Arten, die geschweiften Klammern zu setzen. Hat man sich daran "
+"gewöhnt, Code in einem bestimmten Stil zu lesen und zu schreiben, ist es "
+"normal, sich beim Lesen eines anderen Stils etwas unbehaglich zu fühlen — "
+"oder wenn man ihn schreiben muss."
 
 #: ../../faq/design.rst:38
 msgid ""
@@ -82,10 +103,19 @@ msgid ""
 "brackets -- the lack of declarations and the high-level data types are also "
 "responsible -- but the indentation-based syntax certainly helps."
 msgstr ""
+"Viele Programmierstile setzen die Klammern für Anfang und Ende auf eigene "
+"Zeilen. Das macht Programme deutlich länger und verschwendet wertvollen "
+"Platz auf dem Bildschirm, wodurch es schwerer wird, ein Programm im "
+"Überblick zu erfassen. Im Idealfall sollte eine Funktion auf einen "
+"Bildschirm passen, sagen wir 20--30 Zeilen. 20 Zeilen Python können viel "
+"mehr leisten als 20 Zeilen C. Das liegt nicht allein an den fehlenden "
+"Klammern für Anfang und Ende -- die fehlenden Deklarationen und die höheren "
+"Datentypen tragen ebenfalls dazu bei --, aber die auf Einrückung beruhende "
+"Syntax hilft durchaus."
 
 #: ../../faq/design.rst:48
 msgid "Why am I getting strange results with simple arithmetic operations?"
-msgstr ""
+msgstr "Warum bekomme ich bei einfachen Rechenoperationen seltsame Ergebnisse?"
 
 #: ../../faq/design.rst:50
 msgid "See the next question."
@@ -93,7 +123,7 @@ msgstr "Nächste Frage ansehen."
 
 #: ../../faq/design.rst:54
 msgid "Why are floating-point calculations so inaccurate?"
-msgstr ""
+msgstr "Warum sind Gleitkommaberechnungen so ungenau?"
 
 #: ../../faq/design.rst:56
 msgid "Users are often surprised by results like this::"
@@ -104,6 +134,8 @@ msgid ""
 ">>> 1.2 - 1.0\n"
 "0.19999999999999996"
 msgstr ""
+">>> 1.2 - 1.0\n"
+"0.19999999999999996"
 
 #: ../../faq/design.rst:61
 msgid ""
@@ -111,6 +143,9 @@ msgid ""
 "Python, and much more to do with how the underlying platform handles "
 "floating-point numbers."
 msgstr ""
+"und halten es für einen Fehler in Python. Ist es aber nicht. Das hat wenig "
+"mit Python zu tun und viel mehr damit, wie die darunter liegende Plattform "
+"mit Gleitkommazahlen umgeht."
 
 #: ../../faq/design.rst:65
 msgid ""
@@ -121,16 +156,26 @@ msgid ""
 "point operations. This means that as far as floating-point operations are "
 "concerned, Python behaves like many popular languages including C and Java."
 msgstr ""
+"Der Typ :class:`float` in CPython verwendet zur Speicherung ein ``double`` "
+"aus C. Der Wert eines :class:`float`-Objekts wird als binäre Gleitkommazahl "
+"mit fester Genauigkeit gespeichert, typischerweise 53 Bit, und Python "
+"verwendet für Gleitkommaoperationen C-Operationen, die sich ihrerseits auf "
+"die Umsetzung in der Hardware des Prozessors stützen. Das bedeutet, dass "
+"sich Python bei Gleitkommaoperationen wie viele verbreitete Sprachen "
+"verhält, darunter C und Java."
 
 #: ../../faq/design.rst:72
 msgid ""
 "Many numbers that can be written easily in decimal notation cannot be "
 "expressed exactly in binary floating point.  For example, after::"
 msgstr ""
+"Viele Zahlen, die sich in Dezimalschreibweise leicht hinschreiben lassen, "
+"sind als binäre Gleitkommazahl nicht genau darstellbar. Zum Beispiel ist "
+"nach::"
 
 #: ../../faq/design.rst:75
 msgid ">>> x = 1.2"
-msgstr ""
+msgstr ">>> x = 1.2"
 
 #: ../../faq/design.rst:77
 msgid ""
@@ -138,34 +183,41 @@ msgid ""
 "value ``1.2``, but is not exactly equal to it.  On a typical machine, the "
 "actual stored value is::"
 msgstr ""
+"der für ``x`` gespeicherte Wert eine (sehr gute) Annäherung an den "
+"Dezimalwert ``1.2``, aber nicht genau gleich. Auf einer typischen Maschine "
+"ist der tatsächlich gespeicherte Wert::"
 
 #: ../../faq/design.rst:81
 msgid "1.0011001100110011001100110011001100110011001100110011 (binary)"
-msgstr ""
+msgstr "1.0011001100110011001100110011001100110011001100110011 (binary)"
 
 #: ../../faq/design.rst:83
 msgid "which is exactly::"
-msgstr ""
+msgstr "was genau dies ist::"
 
 #: ../../faq/design.rst:85
 msgid "1.1999999999999999555910790149937383830547332763671875 (decimal)"
-msgstr ""
+msgstr "1.1999999999999999555910790149937383830547332763671875 (decimal)"
 
 #: ../../faq/design.rst:87
 msgid ""
 "The typical precision of 53 bits provides Python floats with 15--16 decimal "
 "digits of accuracy."
 msgstr ""
+"Die typische Genauigkeit von 53 Bit gibt Python-Gleitkommazahlen eine "
+"Genauigkeit von 15--16 Dezimalstellen."
 
 #: ../../faq/design.rst:90
 msgid ""
 "For a fuller explanation, please see the :ref:`floating-point arithmetic "
 "<tut-fp-issues>` chapter in the Python tutorial."
 msgstr ""
+"Eine ausführlichere Erklärung findest du im Kapitel :ref:"
+"`Gleitkommaarithmetik <tut-fp-issues>` im Python-Tutorial."
 
 #: ../../faq/design.rst:95
 msgid "Why are Python strings immutable?"
-msgstr ""
+msgstr "Warum sind Zeichenketten in Python unveränderlich?"
 
 #: ../../faq/design.rst:97
 msgid "There are several advantages."
@@ -178,6 +230,11 @@ msgid ""
 "unchanging.  This is also one of the reasons for the distinction between "
 "tuples and lists."
 msgstr ""
+"Ein Grund ist die Geschwindigkeit: Zu wissen, dass eine Zeichenkette "
+"unveränderlich ist, bedeutet, dass wir den Platz für sie bei ihrer Erzeugung "
+"reservieren können, und der Speicherbedarf liegt fest und ändert sich nicht. "
+"Das ist auch einer der Gründe für die Unterscheidung zwischen Tupeln und "
+"Listen."
 
 #: ../../faq/design.rst:104
 msgid ""
@@ -186,16 +243,24 @@ msgid ""
 "and in Python, no amount of activity will change the string \"eight\" to "
 "anything else."
 msgstr ""
+"Ein weiterer Vorteil ist, dass Zeichenketten in Python als genauso "
+"„elementar“ gelten wie Zahlen. Keine Aktivität der Welt ändert den Wert 8 in "
+"etwas anderes, und in Python ändert keine Aktivität der Welt die "
+"Zeichenkette „eight“ in etwas anderes."
 
 #: ../../faq/design.rst:112
 msgid "Why must 'self' be used explicitly in method definitions and calls?"
 msgstr ""
+"Warum muss 'self' in Methodendefinitionen und -aufrufen ausdrücklich "
+"angegeben werden?"
 
 #: ../../faq/design.rst:114
 msgid ""
 "The idea was borrowed from Modula-3.  It turns out to be very useful, for a "
 "variety of reasons."
 msgstr ""
+"Die Idee wurde von Modula-3 übernommen. Sie erweist sich aus verschiedenen "
+"Gründen als sehr nützlich."
 
 #: ../../faq/design.rst:117
 msgid ""
@@ -209,6 +274,17 @@ msgid ""
 "Some C++ and Java coding standards call for instance attributes to have an "
 "``m_`` prefix, so this explicitness is still useful in those languages, too."
 msgstr ""
+"Erstens ist offensichtlicher, dass du eine Methode oder ein Instanzattribut "
+"verwendest und nicht eine lokale Variable. ``self.x`` oder ``self.meth()`` "
+"zu lesen macht völlig klar, dass eine Instanzvariable oder Methode verwendet "
+"wird, selbst wenn du die Klassendefinition nicht im Kopf hast. In C++ kannst "
+"du es einigermaßen daran erkennen, dass eine Deklaration der lokalen "
+"Variablen fehlt -- vorausgesetzt, globale Variablen sind selten oder leicht "
+"erkennbar. In Python gibt es aber keine Deklarationen lokaler Variablen, du "
+"müsstest also in der Klassendefinition nachsehen, um sicher zu sein. Manche "
+"Programmierrichtlinien für C++ und Java verlangen für Instanzattribute das "
+"Präfix ``m_``, diese Ausdrücklichkeit ist also auch in jenen Sprachen "
+"nützlich."
 
 #: ../../faq/design.rst:127
 msgid ""
@@ -221,6 +297,15 @@ msgid ""
 "derived class method wants to extend the base class method of the same name "
 "and thus has to call the base class method somehow."
 msgstr ""
+"Zweitens bedeutet es, dass keine besondere Syntax nötig ist, wenn du die "
+"Methode einer bestimmten Klasse ausdrücklich ansprechen oder aufrufen "
+"willst. In C++ musst du den Operator ``::`` verwenden, wenn du eine Methode "
+"einer Basisklasse nutzen willst, die in einer abgeleiteten Klasse "
+"überschrieben ist -- in Python schreibst du ``baseclass.methodname(self, "
+"<argument list>)``. Das ist besonders nützlich für :meth:`~object.__init__`-"
+"Methoden und allgemein in Fällen, in denen die Methode einer abgeleiteten "
+"Klasse die gleichnamige Methode der Basisklasse erweitern und sie deshalb "
+"irgendwie aufrufen will."
 
 #: ../../faq/design.rst:136
 msgid ""
@@ -239,40 +324,60 @@ msgid ""
 "instance variables live in two different namespaces, and you need to tell "
 "Python which namespace to use."
 msgstr ""
+"Drittens löst es bei Instanzvariablen ein syntaktisches Problem mit der "
+"Zuweisung. Da lokale Variablen in Python per Definition jene Variablen sind, "
+"denen im Rumpf einer Funktion ein Wert zugewiesen wird und die nicht "
+"ausdrücklich als global deklariert sind, muss es eine Möglichkeit geben, dem "
+"Interpreter zu sagen, dass eine Zuweisung einer Instanzvariablen und nicht "
+"einer lokalen Variablen gelten soll — und das sollte aus Effizienzgründen "
+"besser syntaktisch geschehen. C++ macht das über Deklarationen, aber Python "
+"hat keine Deklarationen, und es wäre schade, sie nur zu diesem Zweck "
+"einzuführen. Das ausdrückliche ``self.var`` löst das elegant. Entsprechend "
+"bedeutet es beim Verwenden von Instanzvariablen, dass Verweise auf "
+"unqualifizierte Namen innerhalb einer Methode nicht die Dictionarys der "
+"Instanz durchsuchen müssen. Anders gesagt: Lokale Variablen und "
+"Instanzvariablen leben in zwei verschiedenen Namensräumen, und du musst "
+"Python sagen, welcher gemeint ist."
 
 #: ../../faq/design.rst:154
 msgid "Why can't I use an assignment in an expression?"
-msgstr ""
+msgstr "Warum kann ich in einem Ausdruck keine Zuweisung verwenden?"
 
 #: ../../faq/design.rst:156
 msgid "Starting in Python 3.8, you can!"
-msgstr ""
+msgstr "Ab Python 3.8 kannst du das!"
 
 #: ../../faq/design.rst:158
 msgid ""
 "Assignment expressions using the walrus operator ``:=`` assign a variable in "
 "an expression::"
 msgstr ""
+"Zuweisungsausdrücke mit dem Walross-Operator ``:=`` weisen einer Variablen "
+"innerhalb eines Ausdrucks einen Wert zu::"
 
 #: ../../faq/design.rst:161
 msgid ""
 "while chunk := fp.read(200):\n"
 "   print(chunk)"
 msgstr ""
+"while chunk := fp.read(200):\n"
+"   print(chunk)"
 
 #: ../../faq/design.rst:164
 msgid "See :pep:`572` for more information."
-msgstr ""
+msgstr "Weitere Informationen stehen in :pep:`572`."
 
 #: ../../faq/design.rst:169
 msgid ""
 "Why does Python use methods for some functionality (e.g. list.index()) but "
 "functions for other (e.g. len(list))?"
 msgstr ""
+"Warum verwendet Python für manches Methoden (z. B. list.index()), für "
+"anderes aber Funktionen (z. B. len(list))?"
 
 #: ../../faq/design.rst:171
 msgid "As Guido said:"
-msgstr ""
+msgstr "Guido sagte dazu:"
 
 #: ../../faq/design.rst:173
 msgid ""
@@ -282,6 +387,13 @@ msgid ""
 "problem. Compare the easy with which we rewrite a formula like x*(a+b) into "
 "x*a + x*b to the clumsiness of doing the same thing using a raw OO notation."
 msgstr ""
+"(a) Bei manchen Operationen liest sich die Präfixschreibweise einfach besser "
+"als die Postfixschreibweise -- Präfix- (und Infix-!) Operationen haben in "
+"der Mathematik eine lange Tradition, und die mag Schreibweisen, bei denen "
+"das Bild dem Mathematiker beim Nachdenken über ein Problem hilft. Vergleiche "
+"die Leichtigkeit, mit der wir eine Formel wie x*(a+b) zu x*a + x*b "
+"umschreiben, mit der Schwerfälligkeit, dasselbe in reiner objektorientierter "
+"Schreibweise zu tun."
 
 #: ../../faq/design.rst:180
 msgid ""
@@ -294,14 +406,25 @@ msgid ""
 "mapping has a get() or keys() method, or something that isn't a file has a "
 "write() method."
 msgstr ""
+"(b) Wenn ich Code lese, in dem len(x) steht, dann *weiß* ich, dass nach der "
+"Länge von etwas gefragt wird. Das sagt mir zwei Dinge: Das Ergebnis ist eine "
+"ganze Zahl, und das Argument ist irgendeine Art von Container. Lese ich "
+"dagegen x.len(), muss ich schon wissen, dass x irgendeine Art von Container "
+"ist, der eine Schnittstelle umsetzt oder von einer Klasse erbt, die ein "
+"übliches len() hat. Man sieht ja, welche Verwirrung gelegentlich entsteht, "
+"wenn eine Klasse, die kein Mapping umsetzt, eine Methode get() oder keys() "
+"hat, oder wenn etwas, das keine Datei ist, eine Methode write() hat."
 
 #: ../../faq/design.rst:189
 msgid "https://mail.python.org/pipermail/python-3000/2006-November/004643.html"
 msgstr ""
+"https://mail.python.org/pipermail/python-3000/2006-November/004643.html"
 
 #: ../../faq/design.rst:193
 msgid "Why is join() a string method instead of a list or tuple method?"
 msgstr ""
+"Warum ist join() eine Methode von Zeichenketten und nicht von Listen oder "
+"Tupeln?"
 
 #: ../../faq/design.rst:195
 msgid ""
@@ -311,22 +434,27 @@ msgid ""
 "methods have been widely accepted, but the one which appears to make some "
 "programmers feel uncomfortable is::"
 msgstr ""
+"Zeichenketten wurden ab Python 1.6 den anderen Standardtypen viel ähnlicher, "
+"als Methoden hinzukamen, die dieselbe Funktionalität bieten wie die schon "
+"immer verfügbaren Funktionen des Moduls string. Die meisten dieser neuen "
+"Methoden sind weithin akzeptiert, aber die eine, bei der sich manche "
+"Programmierer offenbar unbehaglich fühlen, ist::"
 
 #: ../../faq/design.rst:201
 msgid "\", \".join(['1', '2', '4', '8', '16'])"
-msgstr ""
+msgstr "\", \".join(['1', '2', '4', '8', '16'])"
 
 #: ../../faq/design.rst:203
 msgid "which gives the result::"
-msgstr ""
+msgstr "was dieses Ergebnis liefert::"
 
 #: ../../faq/design.rst:205
 msgid "\"1, 2, 4, 8, 16\""
-msgstr ""
+msgstr "\"1, 2, 4, 8, 16\""
 
 #: ../../faq/design.rst:207
 msgid "There are two common arguments against this usage."
-msgstr ""
+msgstr "Gegen diese Verwendung gibt es zwei verbreitete Einwände."
 
 #: ../../faq/design.rst:209
 msgid ""
@@ -336,6 +464,12 @@ msgid ""
 "on names bound to strings there is no logical reason to make them "
 "unavailable on literals."
 msgstr ""
+"Der erste geht in diese Richtung: „Es sieht wirklich hässlich aus, eine "
+"Methode eines Zeichenkettenliterals (einer Zeichenkettenkonstante) zu "
+"verwenden.“ Die Antwort darauf ist, dass es das vielleicht tut, ein "
+"Zeichenkettenliteral aber einfach ein fester Wert ist. Wenn die Methoden auf "
+"Namen erlaubt sein sollen, die an Zeichenketten gebunden sind, gibt es "
+"keinen logischen Grund, sie auf Literalen zu verbieten."
 
 #: ../../faq/design.rst:215
 msgid ""
@@ -344,16 +478,24 @@ msgid ""
 "For some reason there seems to be much less difficulty with having :meth:"
 "`~str.split` as a string method, since in that case it is easy to see that ::"
 msgstr ""
+"Der zweite Einwand lautet typischerweise: „Ich sage doch eigentlich einer "
+"Sequenz, sie solle ihre Elemente mit einer Zeichenkettenkonstante "
+"verbinden.“ Leider nicht. Aus irgendeinem Grund scheint es deutlich weniger "
+"Schwierigkeiten damit zu geben, dass :meth:`~str.split` eine Methode von "
+"Zeichenketten ist, denn dort sieht man leicht, dass ::"
 
 #: ../../faq/design.rst:220
 msgid "\"1, 2, 4, 8, 16\".split(\", \")"
-msgstr ""
+msgstr "\"1, 2, 4, 8, 16\".split(\", \")"
 
 #: ../../faq/design.rst:222
 msgid ""
 "is an instruction to a string literal to return the substrings delimited by "
 "the given separator (or, by default, arbitrary runs of white space)."
 msgstr ""
+"eine Anweisung an ein Zeichenkettenliteral ist, die Teilzeichenketten "
+"zurückzugeben, die durch das angegebene Trennzeichen begrenzt sind (oder, "
+"voreingestellt, durch beliebige Folgen von Leerraum)."
 
 #: ../../faq/design.rst:225
 msgid ""
@@ -363,10 +505,16 @@ msgid ""
 "obeys the rules for sequence objects, including any new classes you might "
 "define yourself. Similar methods exist for bytes and bytearray objects."
 msgstr ""
+":meth:`~str.join` ist eine Methode von Zeichenketten, weil du damit der "
+"Trennzeichenkette sagst, sie solle über eine Folge von Zeichenketten "
+"iterieren und sich selbst zwischen benachbarte Elemente einfügen. Diese "
+"Methode lässt sich mit jedem Argument verwenden, das den Regeln für "
+"Sequenzobjekte folgt, auch mit neuen Klassen, die du selbst festlegst. "
+"Entsprechende Methoden gibt es für bytes- und bytearray-Objekte."
 
 #: ../../faq/design.rst:233
 msgid "How fast are exceptions?"
-msgstr ""
+msgstr "Wie schnell sind Ausnahmen?"
 
 #: ../../faq/design.rst:235
 msgid ""
@@ -374,6 +522,10 @@ msgid ""
 "exceptions are raised.  Actually catching an exception is expensive.  In "
 "versions of Python prior to 2.0 it was common to use this idiom::"
 msgstr ""
+"Ein :keyword:`try`/:keyword:`except`-Block ist ausgesprochen effizient, "
+"solange keine Ausnahmen ausgelöst werden. Eine Ausnahme tatsächlich "
+"abzufangen ist teuer. In Python-Versionen vor 2.0 war diese Schreibweise "
+"üblich::"
 
 #: ../../faq/design.rst:240
 msgid ""
@@ -383,12 +535,20 @@ msgid ""
 "    mydict[key] = getvalue(key)\n"
 "    value = mydict[key]"
 msgstr ""
+"try:\n"
+"    value = mydict[key]\n"
+"except KeyError:\n"
+"    mydict[key] = getvalue(key)\n"
+"    value = mydict[key]"
 
 #: ../../faq/design.rst:246
 msgid ""
 "This only made sense when you expected the dict to have the key almost all "
 "the time.  If that wasn't the case, you coded it like this::"
 msgstr ""
+"Das war nur dann sinnvoll, wenn du erwartet hast, dass das Dictionary den "
+"Schlüssel fast immer enthält. War das nicht der Fall, hast du es so "
+"geschrieben::"
 
 #: ../../faq/design.rst:249
 msgid ""
@@ -397,6 +557,10 @@ msgid ""
 "else:\n"
 "    value = mydict[key] = getvalue(key)"
 msgstr ""
+"if key in mydict:\n"
+"    value = mydict[key]\n"
+"else:\n"
+"    value = mydict[key] = getvalue(key)"
 
 #: ../../faq/design.rst:254
 msgid ""
@@ -404,10 +568,13 @@ msgid ""
 "getvalue(key))``, but only if the ``getvalue()`` call is cheap enough "
 "because it is evaluated in all cases."
 msgstr ""
+"Für diesen speziellen Fall könntest du auch ``value = dict.setdefault(key, "
+"getvalue(key))`` verwenden, aber nur, wenn der Aufruf von ``getvalue()`` "
+"günstig genug ist, denn er wird in jedem Fall ausgewertet."
 
 #: ../../faq/design.rst:260
 msgid "Why isn't there a switch or case statement in Python?"
-msgstr ""
+msgstr "Warum gibt es in Python keine switch- oder case-Anweisung?"
 
 #: ../../faq/design.rst:262
 msgid ""
@@ -419,6 +586,13 @@ msgid ""
 "statements. An older alternative is a sequence of ``if... elif... elif... "
 "else``."
 msgstr ""
+"Allgemein führen strukturierte switch-Anweisungen einen Codeblock aus, wenn "
+"ein Ausdruck einen bestimmten Wert oder eine bestimmte Menge von Werten hat. "
+"Seit Python 3.10 lassen sich literale Werte oder Konstanten innerhalb eines "
+"Namensraums bequem mit einer ``match ... case``-Anweisung abgleichen. "
+"Weitere Informationen zu :keyword:`match`-Anweisungen stehen in :ref:`der "
+"Spezifikation <match>` und im :ref:`Tutorial <tut-match>`. Eine ältere "
+"Alternative ist eine Folge von ``if... elif... elif... else``."
 
 #: ../../faq/design.rst:270
 msgid ""
@@ -426,6 +600,9 @@ msgid ""
 "possibilities, you can create a dictionary mapping case values to functions "
 "to call.  For example::"
 msgstr ""
+"Für Fälle, in denen du aus sehr vielen Möglichkeiten auswählen musst, kannst "
+"du ein Dictionary anlegen, das die Fallwerte auf die aufzurufenden "
+"Funktionen abbildet. Zum Beispiel::"
 
 #: ../../faq/design.rst:274
 msgid ""
@@ -436,12 +613,21 @@ msgid ""
 "func = functions[value]\n"
 "func()"
 msgstr ""
+"functions = {'a': function_1,\n"
+"             'b': function_2,\n"
+"             'c': self.method_1}\n"
+"\n"
+"func = functions[value]\n"
+"func()"
 
 #: ../../faq/design.rst:281
 msgid ""
 "For calling methods on objects, you can simplify yet further by using the :"
 "func:`getattr` built-in to retrieve methods with a particular name::"
 msgstr ""
+"Um Methoden auf Objekten aufzurufen, kannst du es noch weiter vereinfachen, "
+"indem du die integrierte Funktion :func:`getattr` verwendest, um Methoden "
+"mit einem bestimmten Namen zu holen::"
 
 #: ../../faq/design.rst:284
 msgid ""
@@ -454,6 +640,14 @@ msgid ""
 "        method = getattr(self, method_name)\n"
 "        method()"
 msgstr ""
+"class MyVisitor:\n"
+"    def visit_a(self):\n"
+"        ...\n"
+"\n"
+"    def dispatch(self, value):\n"
+"        method_name = 'visit_' + str(value)\n"
+"        method = getattr(self, method_name)\n"
+"        method()"
 
 #: ../../faq/design.rst:293
 msgid ""
@@ -462,18 +656,26 @@ msgid ""
 "from an untrusted source, an attacker would be able to call any method on "
 "your object."
 msgstr ""
+"Es wird empfohlen, für die Methodennamen ein Präfix zu verwenden, in diesem "
+"Beispiel ``visit_``. Ohne so ein Präfix könnte ein Angreifer jede Methode "
+"deines Objekts aufrufen, falls die Werte aus einer nicht vertrauenswürdigen "
+"Quelle kommen."
 
 #: ../../faq/design.rst:297
 msgid ""
 "Imitating switch with fallthrough, as with C's switch-case-default, is "
 "possible, much harder, and less needed."
 msgstr ""
+"switch mit Durchfallen nachzubilden, wie beim switch-case-default aus C, ist "
+"möglich, aber deutlich schwieriger und wird seltener gebraucht."
 
 #: ../../faq/design.rst:302
 msgid ""
 "Can't you emulate threads in the interpreter instead of relying on an OS-"
 "specific thread implementation?"
 msgstr ""
+"Könnt ihr Threads nicht im Interpreter nachbilden, statt sich auf eine "
+"betriebssystemspezifische Thread-Umsetzung zu stützen?"
 
 #: ../../faq/design.rst:304
 msgid ""
@@ -482,6 +684,10 @@ msgid ""
 "almost random moments.  Therefore, a complete threads implementation "
 "requires thread support for C."
 msgstr ""
+"Antwort 1: Leider legt der Interpreter für jeden Python-Stapelrahmen "
+"mindestens einen C-Stapelrahmen an. Außerdem können Erweiterungen zu fast "
+"beliebigen Zeitpunkten in Python zurückrufen. Eine vollständige Thread-"
+"Umsetzung erfordert deshalb Thread-Unterstützung für C."
 
 #: ../../faq/design.rst:309
 msgid ""
@@ -489,10 +695,13 @@ msgid ""
 "stackless-dev/stackless/wiki>`_, which has a completely redesigned "
 "interpreter loop that avoids the C stack."
 msgstr ""
+"Antwort 2: Zum Glück gibt es `Stackless Python <https://github.com/stackless-"
+"dev/stackless/wiki>`_ mit einer völlig neu entworfenen Interpreterschleife, "
+"die den C-Stapel umgeht."
 
 #: ../../faq/design.rst:314
 msgid "Why can't lambda expressions contain statements?"
-msgstr ""
+msgstr "Warum dürfen Lambda-Ausdrücke keine Anweisungen enthalten?"
 
 #: ../../faq/design.rst:316
 msgid ""
@@ -502,6 +711,12 @@ msgid ""
 "other languages, where they add functionality, Python lambdas are only a "
 "shorthand notation if you're too lazy to define a function."
 msgstr ""
+"Lambda-Ausdrücke in Python dürfen keine Anweisungen enthalten, weil das "
+"syntaktische Gerüst von Python keine Anweisungen verarbeiten kann, die in "
+"Ausdrücken verschachtelt sind. In Python ist das aber kein ernstes Problem. "
+"Anders als Lambda-Formen in anderen Sprachen, wo sie Funktionalität "
+"hinzufügen, sind Lambdas in Python nur eine Kurzschreibweise für den Fall, "
+"dass man zu faul ist, eine Funktion zu definieren."
 
 #: ../../faq/design.rst:322
 msgid ""
@@ -512,10 +727,17 @@ msgid ""
 "(which is exactly the same type of object that a lambda expression yields) "
 "is assigned!"
 msgstr ""
+"Funktionen sind in Python bereits Objekte erster Klasse und lassen sich in "
+"einem lokalen Gültigkeitsbereich deklarieren. Der einzige Vorteil eines "
+"Lambdas gegenüber einer lokal definierten Funktion besteht deshalb darin, "
+"dass du für die Funktion keinen Namen erfinden musst -- aber das ist nur "
+"eine lokale Variable, der das Funktionsobjekt zugewiesen wird, und zwar "
+"genau derselbe Objekttyp, den ein Lambda-Ausdruck liefert!"
 
 #: ../../faq/design.rst:330
 msgid "Can Python be compiled to machine code, C or some other language?"
 msgstr ""
+"Lässt sich Python zu Maschinencode, C oder einer anderen Sprache kompilieren?"
 
 #: ../../faq/design.rst:332
 msgid ""
@@ -524,10 +746,14 @@ msgid ""
 "an up-and-coming compiler of Python into C++ code, aiming to support the "
 "full Python language."
 msgstr ""
+"`Cython <https://cython.org/>`_ übersetzt eine abgewandelte Fassung von "
+"Python mit optionalen Annotationen in C-Erweiterungen. `Nuitka <https://"
+"nuitka.net/>`_ ist ein aufstrebender Compiler, der Python in C++-Code "
+"übersetzt und die vollständige Sprache unterstützen will."
 
 #: ../../faq/design.rst:339
 msgid "How does Python manage memory?"
-msgstr ""
+msgstr "Wie verwaltet Python den Speicher?"
 
 #: ../../faq/design.rst:341
 msgid ""
@@ -539,6 +765,14 @@ msgid ""
 "provides functions to perform a garbage collection, obtain debugging "
 "statistics, and tune the collector's parameters."
 msgstr ""
+"Die Einzelheiten der Speicherverwaltung von Python hängen von der "
+"Implementierung ab. Die Standardimplementierung :term:`CPython` verwendet "
+"Referenzzählung, um unerreichbare Objekte zu erkennen, und einen weiteren "
+"Mechanismus, um Referenzzyklen einzusammeln: Sie führt regelmäßig einen "
+"Algorithmus zur Zykluserkennung aus, der nach unerreichbaren Zyklen sucht "
+"und die beteiligten Objekte löscht. Das Modul :mod:`gc` stellt Funktionen "
+"bereit, um eine Speicherbereinigung durchzuführen, Statistiken zur "
+"Fehlersuche abzurufen und die Parameter der Bereinigung einzustellen."
 
 #: ../../faq/design.rst:349
 msgid ""
@@ -548,12 +782,19 @@ msgid ""
 "problems if your Python code depends on the behavior of the reference "
 "counting implementation."
 msgstr ""
+"Andere Implementierungen wie `Jython <https://www.jython.org>`_ oder `PyPy "
+"<https://pypy.org>`_ können sich dagegen auf einen anderen Mechanismus "
+"stützen, etwa auf eine vollwertige Speicherbereinigung. Dieser Unterschied "
+"kann zu feinen Problemen beim Portieren führen, wenn dein Python-Code vom "
+"Verhalten der Referenzzählung abhängt."
 
 #: ../../faq/design.rst:355
 msgid ""
 "In some Python implementations, the following code (which is fine in "
 "CPython) will probably run out of file descriptors::"
 msgstr ""
+"In manchen Python-Implementierungen gehen dem folgenden Code vermutlich die "
+"Dateideskriptoren aus, obwohl er unter CPython in Ordnung ist::"
 
 #: ../../faq/design.rst:358
 msgid ""
@@ -561,6 +802,9 @@ msgid ""
 "    f = open(file)\n"
 "    c = f.read(1)"
 msgstr ""
+"for file in very_long_list_of_files:\n"
+"    f = open(file)\n"
+"    c = f.read(1)"
 
 #: ../../faq/design.rst:362
 msgid ""
@@ -569,6 +813,11 @@ msgid ""
 "however, those file objects will only get collected (and closed) at varying "
 "and possibly long intervals."
 msgstr ""
+"Mit der Referenzzählung und dem Destruktorschema von CPython schließt "
+"nämlich jede neue Zuweisung an ``f`` die vorherige Datei. Mit einer "
+"herkömmlichen Speicherbereinigung werden diese Dateiobjekte dagegen erst in "
+"unterschiedlichen und möglicherweise langen Abständen eingesammelt und "
+"geschlossen."
 
 #: ../../faq/design.rst:367
 msgid ""
@@ -576,6 +825,10 @@ msgid ""
 "should explicitly close the file or use the :keyword:`with` statement; this "
 "will work regardless of memory management scheme::"
 msgstr ""
+"Willst du Code schreiben, der mit jeder Python-Implementierung funktioniert, "
+"solltest du die Datei ausdrücklich schließen oder die :keyword:`with`-"
+"Anweisung verwenden. Das funktioniert unabhängig vom Schema der "
+"Speicherverwaltung::"
 
 #: ../../faq/design.rst:371
 msgid ""
@@ -583,10 +836,14 @@ msgid ""
 "    with open(file) as f:\n"
 "        c = f.read(1)"
 msgstr ""
+"for file in very_long_list_of_files:\n"
+"    with open(file) as f:\n"
+"        c = f.read(1)"
 
 #: ../../faq/design.rst:377
 msgid "Why doesn't CPython use a more traditional garbage collection scheme?"
 msgstr ""
+"Warum verwendet CPython kein herkömmlicheres Schema zur Speicherbereinigung?"
 
 #: ../../faq/design.rst:379
 msgid ""
@@ -596,6 +853,11 @@ msgid ""
 "transparent, it isn't completely transparent; patches are required to get "
 "Python to work with it.)"
 msgstr ""
+"Zum einen ist das keine Standardeigenschaft von C und damit nicht portabel. "
+"(Ja, wir kennen die Boehm-GC-Bibliothek. Sie hat Teile in Assembler für die "
+"*meisten* verbreiteten Plattformen, aber nicht für alle, und obwohl sie "
+"größtenteils transparent ist, ist sie es nicht vollständig. Es sind Patches "
+"nötig, damit Python mit ihr funktioniert.)"
 
 #: ../../faq/design.rst:385
 msgid ""
@@ -607,10 +869,17 @@ msgid ""
 "Right now, CPython works with anything that implements ``malloc()`` and "
 "``free()`` properly."
 msgstr ""
+"Eine herkömmliche Speicherbereinigung wird außerdem zum Problem, wenn Python "
+"in andere Anwendungen eingebettet wird. Während es in einem eigenständigen "
+"Python in Ordnung ist, das übliche ``malloc()`` und ``free()`` durch "
+"Fassungen aus der GC-Bibliothek zu ersetzen, möchte eine Anwendung, die "
+"Python einbettet, vielleicht ihren *eigenen* Ersatz für ``malloc()`` und "
+"``free()`` haben und nicht den von Python. Derzeit arbeitet CPython mit "
+"allem zusammen, was ``malloc()`` und ``free()`` sauber umsetzt."
 
 #: ../../faq/design.rst:394
 msgid "Why isn't all memory freed when CPython exits?"
-msgstr ""
+msgstr "Warum wird beim Beenden von CPython nicht aller Speicher freigegeben?"
 
 #: ../../faq/design.rst:396
 msgid ""
@@ -621,16 +890,26 @@ msgid ""
 "about these).  Python is, however, aggressive about cleaning up memory on "
 "exit and does try to destroy every single object."
 msgstr ""
+"Objekte, auf die aus den globalen Namensräumen von Python-Modulen verwiesen "
+"wird, werden beim Beenden von Python nicht immer freigegeben. Das kann "
+"passieren, wenn es zirkuläre Verweise gibt. Außerdem gibt es bestimmte "
+"Speicherbereiche, die von der C-Bibliothek belegt werden und sich unmöglich "
+"freigeben lassen (ein Werkzeug wie Purify beschwert sich darüber). Python "
+"geht beim Aufräumen des Speichers am Ende aber entschlossen vor und versucht "
+"durchaus, jedes einzelne Objekt zu zerstören."
 
 #: ../../faq/design.rst:403
 msgid ""
 "If you want to force Python to delete certain things on deallocation use "
 "the :mod:`atexit` module to run a function that will force those deletions."
 msgstr ""
+"Willst du Python dazu zwingen, bestimmte Dinge bei der Freigabe zu löschen, "
+"verwende das Modul :mod:`atexit`, um eine Funktion auszuführen, die diese "
+"Löschungen erzwingt."
 
 #: ../../faq/design.rst:408
 msgid "Why are there separate tuple and list data types?"
-msgstr ""
+msgstr "Warum gibt es getrennte Datentypen für Tupel und Listen?"
 
 #: ../../faq/design.rst:410
 msgid ""
@@ -641,6 +920,12 @@ msgid ""
 "example, a Cartesian coordinate is appropriately represented as a tuple of "
 "two or three numbers."
 msgstr ""
+"Listen und Tupel sind sich in vielem ähnlich, werden aber im Allgemeinen auf "
+"grundlegend verschiedene Weise verwendet. Tupel lassen sich als ähnlich zu "
+"``records`` in Pascal oder ``structs`` in C auffassen. Sie sind kleine "
+"Sammlungen zusammengehöriger Daten, die von unterschiedlichem Typ sein "
+"können und als Gruppe bearbeitet werden. Eine kartesische Koordinate wird "
+"zum Beispiel passend als Tupel aus zwei oder drei Zahlen dargestellt."
 
 #: ../../faq/design.rst:417
 msgid ""
@@ -651,6 +936,13 @@ msgid ""
 "directory.  Functions which operate on this output would generally not break "
 "if you added another file or two to the directory."
 msgstr ""
+"Listen sind dagegen eher wie Arrays in anderen Sprachen. Sie enthalten in "
+"der Regel eine wechselnde Anzahl von Objekten, die alle denselben Typ haben "
+"und die einzeln bearbeitet werden. So gibt :func:`os.listdir('.') <os."
+"listdir>` zum Beispiel eine Liste von Zeichenketten zurück, die die Dateien "
+"im aktuellen Verzeichnis benennen. Funktionen, die mit dieser Ausgabe "
+"arbeiten, gingen normalerweise nicht kaputt, wenn du dem Verzeichnis eine "
+"oder zwei weitere Dateien hinzufügst."
 
 #: ../../faq/design.rst:425
 msgid ""
@@ -661,10 +953,18 @@ msgid ""
 "hashable, which is why tuples, but not lists, can be used as keys. Note, "
 "however, that a tuple is only hashable if all of its elements are hashable."
 msgstr ""
+"Tupel sind :term:`unveränderlich <immutable>`, das heißt, sobald ein Tupel "
+"erzeugt ist, kannst du keines seiner Elemente durch einen neuen Wert "
+"ersetzen. Listen sind :term:`veränderlich <mutable>`, das heißt, du kannst "
+"die Elemente einer Liste jederzeit ändern. Als Schlüssel eines Dictionarys "
+"lassen sich nur :term:`hashbare <hashable>` Objekte verwenden. Die meisten "
+"unveränderlichen Typen sind hashbar, und deshalb lassen sich Tupel als "
+"Schlüssel verwenden, Listen aber nicht. Beachte aber, dass ein Tupel nur "
+"dann hashbar ist, wenn alle seine Elemente hashbar sind."
 
 #: ../../faq/design.rst:436
 msgid "How are lists implemented in CPython?"
-msgstr ""
+msgstr "Wie sind Listen in CPython umgesetzt?"
 
 #: ../../faq/design.rst:438
 msgid ""
@@ -673,12 +973,18 @@ msgid ""
 "objects, and keeps a pointer to this array and the array's length in a list "
 "head structure."
 msgstr ""
+"Die Listen von CPython sind in Wirklichkeit Arrays veränderlicher Länge und "
+"keine verketteten Listen im Stil von Lisp. Die Umsetzung verwendet ein "
+"zusammenhängendes Array von Referenzen auf andere Objekte und hält in einer "
+"Kopfstruktur der Liste einen Zeiger auf dieses Array sowie dessen Länge."
 
 #: ../../faq/design.rst:442
 msgid ""
 "This makes indexing a list ``a[i]`` an operation whose cost is independent "
 "of the size of the list or the value of the index."
 msgstr ""
+"Dadurch ist der Zugriff auf ein Listenelement ``a[i]`` eine Operation, deren "
+"Kosten unabhängig von der Größe der Liste und vom Wert des Index sind."
 
 #: ../../faq/design.rst:445
 msgid ""
@@ -687,15 +993,22 @@ msgid ""
 "repeatedly; when the array must be grown, some extra space is allocated so "
 "the next few times don't require an actual resize."
 msgstr ""
+"Werden Elemente angehängt oder eingefügt, wird die Größe des Arrays von "
+"Referenzen angepasst. Dabei kommt einiger Scharfsinn zum Einsatz, um das "
+"wiederholte Anhängen von Elementen zu beschleunigen: Wenn das Array wachsen "
+"muss, wird etwas zusätzlicher Platz belegt, sodass die nächsten Male keine "
+"tatsächliche Größenänderung nötig ist."
 
 #: ../../faq/design.rst:450
 msgid ""
 "See :ref:`time-complexity` for the costs of the various list operations."
 msgstr ""
+"Die Kosten der verschiedenen Listenoperationen stehen unter :ref:`time-"
+"complexity`."
 
 #: ../../faq/design.rst:456
 msgid "How are dictionaries implemented in CPython?"
-msgstr ""
+msgstr "Wie sind Dictionarys in CPython umgesetzt?"
 
 #: ../../faq/design.rst:458
 msgid ""
@@ -704,6 +1017,10 @@ msgid ""
 "operation by far) under most circumstances, and the implementation is "
 "simpler."
 msgstr ""
+"Die Dictionarys von CPython sind als Hashtabellen veränderlicher Größe "
+"umgesetzt. Gegenüber B-Bäumen bringt das unter den meisten Umständen eine "
+"bessere Geschwindigkeit beim Nachschlagen — der mit Abstand häufigsten "
+"Operation —, und die Umsetzung ist einfacher."
 
 #: ../../faq/design.rst:462
 msgid ""
@@ -717,16 +1034,29 @@ msgid ""
 "values, this means that dictionaries take constant time -- *O*\\ (1), in Big-"
 "O notation -- to retrieve a key."
 msgstr ""
+"Dictionarys arbeiten so, dass sie mit der integrierten Funktion :func:`hash` "
+"für jeden im Dictionary gespeicherten Schlüssel einen Hashwert berechnen. "
+"Der Hashwert unterscheidet sich stark je nach Schlüssel und je nach einem "
+"prozessweiten Startwert. So könnte ``'Python'`` zu ``-539294296`` hashen, "
+"während ``'python'``, eine Zeichenkette, die sich nur um ein einziges Bit "
+"unterscheidet, zu ``1142331976`` hashen könnte. Der Hashwert wird dann "
+"verwendet, um eine Position in einem internen Array zu berechnen, an der der "
+"Wert gespeichert wird. Angenommen, du speicherst Schlüssel, die alle "
+"unterschiedliche Hashwerte haben, dann bedeutet das, dass Dictionarys zum "
+"Abrufen eines Schlüssels konstante Zeit brauchen -- *O*\\ (1) in der Groß-O-"
+"Schreibweise."
 
 #: ../../faq/design.rst:471
 msgid ""
 "See :ref:`time-complexity` for the costs of the various dictionary "
 "operations."
 msgstr ""
+"Die Kosten der verschiedenen Dictionary-Operationen stehen unter :ref:`time-"
+"complexity`."
 
 #: ../../faq/design.rst:475
 msgid "Why must dictionary keys be immutable?"
-msgstr ""
+msgstr "Warum müssen Schlüssel eines Dictionarys unveränderlich sein?"
 
 #: ../../faq/design.rst:477
 msgid ""
@@ -740,6 +1070,16 @@ msgid ""
 "be found either, because the value of the object found in that hash bin "
 "would be different."
 msgstr ""
+"Die Umsetzung von Dictionarys als Hashtabelle verwendet einen Hashwert, der "
+"aus dem Wert des Schlüssels berechnet wird, um den Schlüssel zu finden. Wäre "
+"der Schlüssel ein veränderliches Objekt, könnte sich sein Wert ändern und "
+"damit auch sein Hashwert. Da aber derjenige, der das Schlüsselobjekt ändert, "
+"nicht erkennen kann, dass es als Schlüssel eines Dictionarys verwendet wird, "
+"kann er den Eintrag im Dictionary nicht verschieben. Wenn du dann dasselbe "
+"Objekt im Dictionary nachschlägst, wird es nicht gefunden, weil sein "
+"Hashwert ein anderer ist. Würdest du den alten Wert nachschlagen, würde er "
+"ebenfalls nicht gefunden, weil der Wert des Objekts in diesem Hash-Behälter "
+"ein anderer wäre."
 
 #: ../../faq/design.rst:486
 msgid ""
@@ -748,22 +1088,31 @@ msgid ""
 "as the list ``L``.  Tuples are immutable and can therefore be used as "
 "dictionary keys."
 msgstr ""
+"Willst du ein Dictionary mit einer Liste als Index, wandle die Liste einfach "
+"zuerst in ein Tupel um. Die Funktion ``tuple(L)`` erzeugt ein Tupel mit "
+"denselben Einträgen wie die Liste ``L``. Tupel sind unveränderlich und "
+"lassen sich deshalb als Schlüssel eines Dictionarys verwenden."
 
 #: ../../faq/design.rst:490
 msgid "Some unacceptable solutions that have been proposed:"
-msgstr ""
+msgstr "Einige vorgeschlagene, aber untaugliche Lösungen:"
 
 #: ../../faq/design.rst:492
 msgid ""
 "Hash lists by their address (object ID).  This doesn't work because if you "
 "construct a new list with the same value it won't be found; e.g.::"
 msgstr ""
+"Listen über ihre Adresse hashen, also über die Objekt-ID. Das funktioniert "
+"nicht, denn wenn du eine neue Liste mit demselben Wert aufbaust, wird sie "
+"nicht gefunden, zum Beispiel::"
 
 #: ../../faq/design.rst:495
 msgid ""
 "mydict = {[1, 2]: '12'}\n"
 "print(mydict[[1, 2]])"
 msgstr ""
+"mydict = {[1, 2]: '12'}\n"
+"print(mydict[[1, 2]])"
 
 #: ../../faq/design.rst:498
 msgid ""
@@ -772,6 +1121,10 @@ msgid ""
 "words, dictionary keys should be compared using ``==``, not using :keyword:"
 "`is`."
 msgstr ""
+"würde eine :exc:`KeyError`-Ausnahme auslösen, weil die ID des in der zweiten "
+"Zeile verwendeten ``[1, 2]`` sich von der in der ersten Zeile unterscheidet. "
+"Anders gesagt sollten Schlüssel eines Dictionarys mit ``==`` verglichen "
+"werden und nicht mit :keyword:`is`."
 
 #: ../../faq/design.rst:502
 msgid ""
@@ -779,6 +1132,10 @@ msgid ""
 "being a mutable object, could contain a reference to itself, and then the "
 "copying code would run into an infinite loop."
 msgstr ""
+"Eine Kopie anlegen, wenn eine Liste als Schlüssel verwendet wird. Das "
+"funktioniert nicht, weil die Liste als veränderliches Objekt einen Verweis "
+"auf sich selbst enthalten könnte und der kopierende Code dann in eine "
+"Endlosschleife liefe."
 
 #: ../../faq/design.rst:506
 msgid ""
@@ -787,6 +1144,12 @@ msgid ""
 "by accident. It also invalidates an important invariant of dictionaries: "
 "every value in ``d.keys()`` is usable as a key of the dictionary."
 msgstr ""
+"Listen als Schlüssel erlauben, dem Benutzer aber sagen, er solle sie nicht "
+"verändern. Das würde eine ganze Klasse schwer auffindbarer Fehler in "
+"Programmen zulassen, nämlich wenn du es vergisst oder eine Liste "
+"versehentlich änderst. Es macht außerdem eine wichtige Invariante von "
+"Dictionarys zunichte: Jeder Wert in ``d.keys()`` ist als Schlüssel des "
+"Dictionarys verwendbar."
 
 #: ../../faq/design.rst:511
 msgid ""
@@ -797,6 +1160,13 @@ msgid ""
 "read-only -- and again, self-referential objects could cause an infinite "
 "loop."
 msgstr ""
+"Listen als nur lesbar kennzeichnen, sobald sie als Schlüssel eines "
+"Dictionarys verwendet werden. Das Problem ist, dass nicht nur das Objekt der "
+"obersten Ebene seinen Wert ändern könnte: Du könntest ein Tupel, das eine "
+"Liste enthält, als Schlüssel verwenden. Irgendetwas als Schlüssel in ein "
+"Dictionary einzutragen würde bedeuten, alle von dort aus erreichbaren "
+"Objekte als nur lesbar zu kennzeichnen -- und auch hier könnten "
+"selbstbezügliche Objekte eine Endlosschleife verursachen."
 
 #: ../../faq/design.rst:517
 msgid ""
@@ -807,6 +1177,13 @@ msgid ""
 "reside in a dictionary (or other hash based structure), remain fixed while "
 "the object is in the dictionary (or other structure). ::"
 msgstr ""
+"Es gibt einen Trick, das zu umgehen, falls du ihn brauchst, aber auf eigene "
+"Gefahr: Du kannst eine veränderliche Struktur in eine Klasseninstanz hüllen, "
+"die sowohl eine Methode :meth:`~object.__eq__` als auch :meth:`~object."
+"__hash__` hat. Dann musst du sicherstellen, dass der Hashwert aller solchen "
+"Hüllobjekte, die in einem Dictionary liegen (oder in einer anderen auf "
+"Hashwerten beruhenden Struktur), unverändert bleibt, solange das Objekt im "
+"Dictionary (oder in der anderen Struktur) liegt. ::"
 
 #: ../../faq/design.rst:525
 msgid ""
@@ -827,6 +1204,22 @@ msgid ""
 "                result = (result % 7777777) + i * 333\n"
 "        return result"
 msgstr ""
+"class ListWrapper:\n"
+"    def __init__(self, the_list):\n"
+"        self.the_list = the_list\n"
+"\n"
+"    def __eq__(self, other):\n"
+"        return self.the_list == other.the_list\n"
+"\n"
+"    def __hash__(self):\n"
+"        l = self.the_list\n"
+"        result = 98767 - len(l)*555\n"
+"        for i, el in enumerate(l):\n"
+"            try:\n"
+"                result = result + (hash(el) % 9999999) * 1001 + i\n"
+"            except Exception:\n"
+"                result = (result % 7777777) + i * 333\n"
+"        return result"
 
 #: ../../faq/design.rst:542
 msgid ""
@@ -834,6 +1227,9 @@ msgid ""
 "members of the list may be unhashable and also by the possibility of "
 "arithmetic overflow."
 msgstr ""
+"Beachte, dass die Hashberechnung dadurch verkompliziert wird, dass einige "
+"Elemente der Liste nicht hashbar sein könnten und dass es zu einem "
+"arithmetischen Überlauf kommen könnte."
 
 #: ../../faq/design.rst:546
 msgid ""
@@ -843,6 +1239,12 @@ msgid ""
 "not.  If you fail to meet these restrictions dictionaries and other hash "
 "based structures will misbehave."
 msgstr ""
+"Darüber hinaus muss immer gelten: Wenn ``o1 == o2`` gilt (d. h. ``o1."
+"__eq__(o2) is True``), dann auch ``hash(o1) == hash(o2)`` (d. h. ``o1."
+"__hash__() == o2.__hash__()``), unabhängig davon, ob das Objekt in einem "
+"Dictionary liegt oder nicht. Hältst du diese Einschränkungen nicht ein, "
+"verhalten sich Dictionarys und andere auf Hashwerten beruhende Strukturen "
+"fehlerhaft."
 
 #: ../../faq/design.rst:551
 msgid ""
@@ -851,10 +1253,15 @@ msgid ""
 "this unless you are prepared to think hard about the requirements and the "
 "consequences of not meeting them correctly.  Consider yourself warned."
 msgstr ""
+"Im Fall von :class:`!ListWrapper` darf sich die eingehüllte Liste nicht "
+"ändern, solange das Hüllobjekt in einem Dictionary liegt, sonst kommt es zu "
+"Unstimmigkeiten. Mach das nur, wenn du bereit bist, gründlich über die "
+"Anforderungen und über die Folgen nachzudenken, sie nicht richtig "
+"einzuhalten. Du bist gewarnt."
 
 #: ../../faq/design.rst:558
 msgid "Why doesn't list.sort() return the sorted list?"
-msgstr ""
+msgstr "Warum gibt list.sort() nicht die sortierte Liste zurück?"
 
 #: ../../faq/design.rst:560
 msgid ""
@@ -865,6 +1272,12 @@ msgid ""
 "when you need a sorted copy but also need to keep the unsorted version "
 "around."
 msgstr ""
+"In Situationen, in denen die Geschwindigkeit zählt, wäre es Verschwendung, "
+"eine Kopie der Liste nur zum Sortieren anzulegen. Deshalb sortiert :meth:"
+"`list.sort` die Liste an ihrem Platz. Um dich daran zu erinnern, gibt die "
+"Methode die sortierte Liste nicht zurück. So lässt du dich nicht dazu "
+"verleiten, versehentlich eine Liste zu überschreiben, wenn du eine sortierte "
+"Kopie brauchst, die unsortierte Fassung aber behalten willst."
 
 #: ../../faq/design.rst:566
 msgid ""
@@ -873,16 +1286,25 @@ msgid ""
 "it and returns it.  For example, here's how to iterate over the keys of a "
 "dictionary in sorted order::"
 msgstr ""
+"Willst du eine neue Liste zurückbekommen, verwende stattdessen die "
+"integrierte Funktion :func:`sorted`. Diese Funktion erzeugt aus einem "
+"übergebenen iterierbaren Objekt eine neue Liste, sortiert sie und gibt sie "
+"zurück. So durchläufst du zum Beispiel die Schlüssel eines Dictionarys in "
+"sortierter Reihenfolge::"
 
 #: ../../faq/design.rst:571
 msgid ""
 "for key in sorted(mydict):\n"
 "    ...  # do whatever with mydict[key]..."
 msgstr ""
+"for key in sorted(mydict):\n"
+"    ...  # mach irgendwas mit mydict[key] ..."
 
 #: ../../faq/design.rst:576
 msgid "How do you specify and enforce an interface spec in Python?"
 msgstr ""
+"Wie gibt man in Python eine Schnittstellenspezifikation an und setzt sie "
+"durch?"
 
 #: ../../faq/design.rst:578
 msgid ""
@@ -891,6 +1313,11 @@ msgid ""
 "module.  Many feel that compile-time enforcement of interface specifications "
 "helps in the construction of large programs."
 msgstr ""
+"Eine Schnittstellenspezifikation für ein Modul, wie Sprachen etwa C++ und "
+"Java sie bereitstellen, beschreibt die Prototypen der Methoden und "
+"Funktionen des Moduls. Viele finden, dass es beim Bau großer Programme "
+"hilft, wenn Schnittstellenspezifikationen zur Übersetzungszeit durchgesetzt "
+"werden."
 
 #: ../../faq/design.rst:583
 msgid ""
@@ -901,12 +1328,20 @@ msgid ""
 "`~collections.abc.Iterable`, :class:`~collections.abc.Container`, and :class:"
 "`~collections.abc.MutableMapping`."
 msgstr ""
+"Python 2.6 fügt ein Modul :mod:`abc` hinzu, mit dem du abstrakte "
+"Basisklassen (ABCs) festlegen kannst. Mit :func:`isinstance` und :func:"
+"`issubclass` kannst du dann prüfen, ob eine Instanz oder eine Klasse eine "
+"bestimmte ABC umsetzt. Das Modul :mod:`collections.abc` legt eine Reihe "
+"nützlicher ABCs fest, etwa :class:`~collections.abc.Iterable`, :class:"
+"`~collections.abc.Container` und :class:`~collections.abc.MutableMapping`."
 
 #: ../../faq/design.rst:590
 msgid ""
 "For Python, many of the advantages of interface specifications can be "
 "obtained by an appropriate test discipline for components."
 msgstr ""
+"Für Python lassen sich viele der Vorteile von Schnittstellenspezifikationen "
+"durch eine passende Testdisziplin für die Bestandteile erreichen."
 
 #: ../../faq/design.rst:593
 msgid ""
@@ -919,6 +1354,15 @@ msgid ""
 "be used to construct exhaustive test suites that exercise every line of code "
 "in a module."
 msgstr ""
+"Eine gute Testsammlung für ein Modul kann gleichzeitig als Regressionstest "
+"dienen und als Schnittstellenspezifikation des Moduls samt einer Reihe von "
+"Beispielen. Viele Python-Module lassen sich als Skript ausführen und bieten "
+"dann einen einfachen „Selbsttest“. Selbst Module, die komplexe externe "
+"Schnittstellen verwenden, lassen sich oft isoliert testen, indem man die "
+"externe Schnittstelle mit einfachen Platzhaltern nachbildet. Mit den "
+"Modulen :mod:`doctest` und :mod:`unittest` oder mit Testframeworks von "
+"Dritten lassen sich erschöpfende Testsammlungen bauen, die jede Codezeile "
+"eines Moduls durchlaufen."
 
 #: ../../faq/design.rst:601
 msgid ""
@@ -931,6 +1375,14 @@ msgid ""
 "actually do this correctly, but it's trivial to check this property in a "
 "test suite."
 msgstr ""
+"Eine passende Testdisziplin kann beim Bau großer, komplexer Anwendungen in "
+"Python genauso helfen wie Schnittstellenspezifikationen. Sie kann sogar "
+"besser sein, denn eine Schnittstellenspezifikation kann bestimmte "
+"Eigenschaften eines Programms nicht prüfen. So wird von der Methode :meth:"
+"`list.append` erwartet, dass sie neue Elemente am Ende einer internen Liste "
+"hinzufügt. Eine Schnittstellenspezifikation kann nicht prüfen, ob deine "
+"Umsetzung von :meth:`list.append` das tatsächlich richtig macht, in einer "
+"Testsammlung ist diese Eigenschaft aber mühelos zu prüfen."
 
 #: ../../faq/design.rst:609
 msgid ""
@@ -940,10 +1392,16 @@ msgid ""
 "write any of the actual code.  Of course Python allows you to be sloppy and "
 "not write test cases at all."
 msgstr ""
+"Testsammlungen zu schreiben ist sehr hilfreich, und du solltest deinen Code "
+"vielleicht so entwerfen, dass er leicht zu testen ist. Eine immer beliebtere "
+"Technik, die testgetriebene Entwicklung, verlangt, Teile der Testsammlung "
+"zuerst zu schreiben, bevor du irgendwelchen eigentlichen Code schreibst. "
+"Natürlich erlaubt Python dir auch, schludrig zu sein und überhaupt keine "
+"Testfälle zu schreiben."
 
 #: ../../faq/design.rst:617
 msgid "Why is there no goto?"
-msgstr ""
+msgstr "Warum gibt es kein goto?"
 
 #: ../../faq/design.rst:619
 msgid ""
@@ -955,6 +1413,14 @@ msgid ""
 "`while` and :keyword:`for` statements, possibly containing :keyword:"
 "`continue` and :keyword:`break`)."
 msgstr ""
+"In den 1970er Jahren erkannte man, dass unbeschränktes goto zu "
+"unordentlichem „Spaghetti“-Code führen kann, der schwer zu verstehen und zu "
+"überarbeiten ist. In einer höheren Programmiersprache ist es außerdem "
+"unnötig, solange es Möglichkeiten gibt zu verzweigen (in Python mit :keyword:"
+"`if`-Anweisungen und den Ausdrücken :keyword:`or`, :keyword:`and` und :"
+"keyword:`if`/:keyword:`else`) und zu schleifen (mit :keyword:`while`- und :"
+"keyword:`for`-Anweisungen, die :keyword:`continue` und :keyword:`break` "
+"enthalten können)."
 
 #: ../../faq/design.rst:626
 msgid ""
@@ -963,6 +1429,11 @@ msgid ""
 "all reasonable uses of the ``go`` or ``goto`` constructs of C, Fortran, and "
 "other languages.  For example::"
 msgstr ""
+"Man kann Ausnahmen auch verwenden, um ein „strukturiertes goto“ "
+"bereitzustellen, das sogar über Funktionsaufrufe hinweg funktioniert. Viele "
+"finden, dass Ausnahmen alle vernünftigen Verwendungen der Konstrukte ``go`` "
+"oder ``goto`` aus C, Fortran und anderen Sprachen bequem nachbilden können. "
+"Zum Beispiel::"
 
 #: ../../faq/design.rst:632
 msgid ""
@@ -976,16 +1447,29 @@ msgid ""
 "    pass\n"
 "..."
 msgstr ""
+"class label(Exception): pass  # ein Label deklarieren\n"
+"\n"
+"try:\n"
+"    ...\n"
+"    if condition: raise label()  # goto label\n"
+"    ...\n"
+"except label:  # wohin das goto führt\n"
+"    pass\n"
+"..."
 
 #: ../../faq/design.rst:642
 msgid ""
 "This doesn't allow you to jump into the middle of a loop, but that's usually "
 "considered an abuse of ``goto`` anyway.  Use sparingly."
 msgstr ""
+"Damit kannst du nicht in die Mitte einer Schleife springen, aber das gilt "
+"ohnehin meist als Missbrauch von ``goto``. Sparsam verwenden."
 
 #: ../../faq/design.rst:647
 msgid "Why can't raw strings (r-strings) end with a backslash?"
 msgstr ""
+"Warum dürfen rohe Zeichenketten (r-Strings) nicht mit einem "
+"Rückwärtsschrägstrich enden?"
 
 #: ../../faq/design.rst:649
 msgid ""
@@ -993,6 +1477,10 @@ msgid ""
 "unpaired backslash at the end escapes the closing quote character, leaving "
 "an unterminated string."
 msgstr ""
+"Genauer gesagt dürfen sie nicht mit einer ungeraden Anzahl von "
+"Rückwärtsschrägstrichen enden: Der ungepaarte Rückwärtsschrägstrich am Ende "
+"maskiert das schließende Anführungszeichen, wodurch eine unbeendete "
+"Zeichenkette übrig bleibt."
 
 #: ../../faq/design.rst:653
 msgid ""
@@ -1003,21 +1491,34 @@ msgid ""
 "pass on the string quote character by escaping it with a backslash.  These "
 "rules work well when r-strings are used for their intended purpose."
 msgstr ""
+"Rohe Zeichenketten wurden entworfen, um das Erzeugen von Eingaben für "
+"Verarbeiter zu erleichtern, vor allem für Maschinen für reguläre Ausdrücke, "
+"die die Maskierung mit Rückwärtsschrägstrichen selbst übernehmen wollen. "
+"Solche Verarbeiter betrachten einen ungepaarten abschließenden "
+"Rückwärtsschrägstrich ohnehin als Fehler, deshalb verbieten rohe "
+"Zeichenketten das. Im Gegenzug erlauben sie dir, das Anführungszeichen der "
+"Zeichenkette weiterzugeben, indem du es mit einem Rückwärtsschrägstrich "
+"maskierst. Diese Regeln funktionieren gut, wenn r-Strings für ihren "
+"eigentlichen Zweck verwendet werden."
 
 #: ../../faq/design.rst:660
 msgid ""
 "If you're trying to build Windows pathnames, note that all Windows system "
 "calls accept forward slashes too::"
 msgstr ""
+"Wenn du versuchst, Windows-Pfadnamen zu bauen, beachte, dass alle "
+"Systemaufrufe von Windows auch Vorwärtsschrägstriche annehmen::"
 
 #: ../../faq/design.rst:663
 msgid "f = open(\"/mydir/file.txt\")  # works fine!"
-msgstr ""
+msgstr "f = open(\"/mydir/file.txt\")  # funktioniert einwandfrei!"
 
 #: ../../faq/design.rst:665
 msgid ""
 "If you're trying to build a pathname for a DOS command, try e.g. one of ::"
 msgstr ""
+"Wenn du versuchst, einen Pfadnamen für einen DOS-Befehl zu bauen, versuche "
+"zum Beispiel eines von ::"
 
 #: ../../faq/design.rst:667
 msgid ""
@@ -1025,10 +1526,13 @@ msgid ""
 "dir = r\"\\this\\is\\my\\dos\\dir\\ \"[:-1]\n"
 "dir = \"\\\\this\\\\is\\\\my\\\\dos\\\\dir\\\\\""
 msgstr ""
+"dir = r\"\\this\\is\\my\\dos\\dir\" \"\\\\\"\n"
+"dir = r\"\\this\\is\\my\\dos\\dir\\ \"[:-1]\n"
+"dir = \"\\\\this\\\\is\\\\my\\\\dos\\\\dir\\\\\""
 
 #: ../../faq/design.rst:673
 msgid "Why doesn't Python have a \"with\" statement for attribute assignments?"
-msgstr ""
+msgstr "Warum hat Python keine „with“-Anweisung für Attributzuweisungen?"
 
 #: ../../faq/design.rst:675
 msgid ""
@@ -1036,6 +1540,9 @@ msgid ""
 "calling code on the entrance and exit from the block.  Some languages have a "
 "construct that looks like this::"
 msgstr ""
+"Python hat eine :keyword:`with`-Anweisung, die die Ausführung eines Blocks "
+"umschließt und beim Eintritt in den Block und beim Verlassen Code aufruft. "
+"Manche Sprachen haben ein Konstrukt, das so aussieht::"
 
 #: ../../faq/design.rst:679
 msgid ""
@@ -1043,10 +1550,13 @@ msgid ""
 "    a = 1               # equivalent to obj.a = 1\n"
 "    total = total + 1   # obj.total = obj.total + 1"
 msgstr ""
+"with obj:\n"
+"    a = 1               # entspricht obj.a = 1\n"
+"    total = total + 1   # obj.total = obj.total + 1"
 
 #: ../../faq/design.rst:683
 msgid "In Python, such a construct would be ambiguous."
-msgstr ""
+msgstr "In Python wäre ein solches Konstrukt zweideutig."
 
 #: ../../faq/design.rst:685
 msgid ""
@@ -1055,6 +1565,10 @@ msgid ""
 "assigned to. This is the main point of static typing -- the compiler "
 "*always* knows the scope of every variable at compile time."
 msgstr ""
+"Andere Sprachen wie Object Pascal, Delphi und C++ verwenden statische Typen, "
+"deshalb lässt sich dort eindeutig feststellen, welchem Mitglied zugewiesen "
+"wird. Das ist der wesentliche Punkt statischer Typisierung -- der Compiler "
+"kennt den Gültigkeitsbereich jeder Variablen zur Übersetzungszeit *immer*."
 
 #: ../../faq/design.rst:690
 msgid ""
@@ -1064,10 +1578,15 @@ msgid ""
 "simple reading, what attribute is being referenced: a local one, a global "
 "one, or a member attribute?"
 msgstr ""
+"Python verwendet dynamische Typen. Es ist unmöglich, im Voraus zu wissen, "
+"welches Attribut zur Laufzeit angesprochen wird. Attribute können Objekten "
+"im laufenden Betrieb hinzugefügt oder entfernt werden. Dadurch lässt sich "
+"beim bloßen Lesen nicht feststellen, welches Attribut angesprochen wird: ein "
+"lokales, ein globales oder ein Attribut des Objekts?"
 
 #: ../../faq/design.rst:696
 msgid "For instance, take the following incomplete snippet::"
-msgstr ""
+msgstr "Nimm zum Beispiel das folgende unvollständige Codestück::"
 
 #: ../../faq/design.rst:698
 msgid ""
@@ -1075,6 +1594,9 @@ msgid ""
 "    with a:\n"
 "        print(x)"
 msgstr ""
+"def foo(a):\n"
+"    with a:\n"
+"        print(x)"
 
 #: ../../faq/design.rst:702
 msgid ""
@@ -1084,6 +1606,12 @@ msgid ""
 "variable named ``x``, will it be used inside the :keyword:`with` block?  As "
 "you see, the dynamic nature of Python makes such choices much harder."
 msgstr ""
+"Das Codestück setzt voraus, dass ``a`` ein Attribut namens ``x`` haben muss. "
+"Es gibt in Python aber nichts, was dem Interpreter das sagt. Was sollte "
+"passieren, wenn ``a``, sagen wir, eine ganze Zahl ist? Und wenn es eine "
+"globale Variable namens ``x`` gibt, wird sie dann innerhalb des :keyword:"
+"`with`-Blocks verwendet? Wie du siehst, macht die dynamische Natur von "
+"Python solche Entscheidungen deutlich schwerer."
 
 #: ../../faq/design.rst:708
 msgid ""
@@ -1091,6 +1619,9 @@ msgid ""
 "(reduction of code volume) can, however, easily be achieved in Python by "
 "assignment.  Instead of::"
 msgstr ""
+"Der wichtigste Vorteil von :keyword:`with` und ähnlichen Sprachmitteln, "
+"nämlich weniger Code, lässt sich in Python aber leicht durch eine Zuweisung "
+"erreichen. Statt::"
 
 #: ../../faq/design.rst:711
 msgid ""
@@ -1098,10 +1629,13 @@ msgid ""
 "function(args).mydict[index][index].b = 42\n"
 "function(args).mydict[index][index].c = 63"
 msgstr ""
+"function(args).mydict[index][index].a = 21\n"
+"function(args).mydict[index][index].b = 42\n"
+"function(args).mydict[index][index].c = 63"
 
 #: ../../faq/design.rst:715
 msgid "write this::"
-msgstr ""
+msgstr "schreibe dies::"
 
 #: ../../faq/design.rst:717
 msgid ""
@@ -1110,6 +1644,10 @@ msgid ""
 "ref.b = 42\n"
 "ref.c = 63"
 msgstr ""
+"ref = function(args).mydict[index][index]\n"
+"ref.a = 21\n"
+"ref.b = 42\n"
+"ref.c = 63"
 
 #: ../../faq/design.rst:722
 msgid ""
@@ -1117,6 +1655,9 @@ msgid ""
 "bindings are resolved at run-time in Python, and the second version only "
 "needs to perform the resolution once."
 msgstr ""
+"Das hat auch den Nebeneffekt, die Ausführung zu beschleunigen, denn "
+"Namensbindungen werden in Python zur Laufzeit aufgelöst, und die zweite "
+"Fassung muss die Auflösung nur einmal durchführen."
 
 #: ../../faq/design.rst:726
 msgid ""
@@ -1124,10 +1665,14 @@ msgid ""
 "such as using a 'leading dot', have been rejected in favour of explicitness "
 "(see https://mail.python.org/pipermail/python-ideas/2016-May/040070.html)."
 msgstr ""
+"Ähnliche Vorschläge, die Syntax einführen würden, um die Menge an Code "
+"weiter zu verringern, etwa über einen führenden Punkt, wurden zugunsten der "
+"Ausdrücklichkeit abgelehnt (siehe https://mail.python.org/pipermail/python-"
+"ideas/2016-May/040070.html)."
 
 #: ../../faq/design.rst:732
 msgid "Why don't generators support the with statement?"
-msgstr ""
+msgstr "Warum unterstützen Generatoren die with-Anweisung nicht?"
 
 #: ../../faq/design.rst:734
 msgid ""
@@ -1137,32 +1682,43 @@ msgid ""
 "func:`contextlib.closing(generator) <contextlib.closing>` in the :keyword:"
 "`with` statement."
 msgstr ""
+"Aus technischen Gründen würde ein Generator, der direkt als Kontextmanager "
+"verwendet wird, nicht richtig funktionieren. Wird ein Generator wie meist "
+"als Iterator bis zum Ende durchlaufen, ist kein Schließen nötig. Ist es doch "
+"nötig, hülle ihn in der :keyword:`with`-Anweisung als :func:`contextlib."
+"closing(generator) <contextlib.closing>` ein."
 
 #: ../../faq/design.rst:742
 msgid "Why are colons required for the if/while/def/class statements?"
-msgstr ""
+msgstr "Warum sind bei den Anweisungen if/while/def/class Doppelpunkte nötig?"
 
 #: ../../faq/design.rst:744
 msgid ""
 "The colon is required primarily to enhance readability (one of the results "
 "of the experimental ABC language).  Consider this::"
 msgstr ""
+"Der Doppelpunkt ist vor allem nötig, um die Lesbarkeit zu verbessern — eines "
+"der Ergebnisse der experimentellen Sprache ABC. Sieh dir dies an::"
 
 #: ../../faq/design.rst:747
 msgid ""
 "if a == b\n"
 "    print(a)"
 msgstr ""
+"if a == b\n"
+"    print(a)"
 
 #: ../../faq/design.rst:750
 msgid "versus ::"
-msgstr ""
+msgstr "gegenüber ::"
 
 #: ../../faq/design.rst:752
 msgid ""
 "if a == b:\n"
 "    print(a)"
 msgstr ""
+"if a == b:\n"
+"    print(a)"
 
 #: ../../faq/design.rst:755
 msgid ""
@@ -1170,6 +1726,9 @@ msgid ""
 "colon sets off the example in this FAQ answer; it's a standard usage in "
 "English."
 msgstr ""
+"Beachte, wie das zweite etwas leichter zu lesen ist. Beachte außerdem, wie "
+"ein Doppelpunkt das Beispiel in dieser FAQ-Antwort einleitet. Das ist im "
+"Deutschen wie im Englischen üblich."
 
 #: ../../faq/design.rst:758
 msgid ""
@@ -1178,16 +1737,22 @@ msgid ""
 "needs to be increased instead of having to do a more elaborate parsing of "
 "the program text."
 msgstr ""
+"Ein weiterer, kleinerer Grund ist, dass der Doppelpunkt es Editoren mit "
+"Syntaxhervorhebung leichter macht. Sie können nach Doppelpunkten suchen, um "
+"zu entscheiden, wann die Einrückung erhöht werden muss, statt den "
+"Programmtext aufwendiger zerlegen zu müssen."
 
 #: ../../faq/design.rst:764
 msgid "Why does Python allow commas at the end of lists and tuples?"
-msgstr ""
+msgstr "Warum erlaubt Python Kommas am Ende von Listen und Tupeln?"
 
 #: ../../faq/design.rst:766
 msgid ""
 "Python lets you add a trailing comma at the end of lists, tuples, and "
 "dictionaries::"
 msgstr ""
+"Python erlaubt dir, am Ende von Listen, Tupeln und Dictionarys ein "
+"abschließendes Komma zu setzen::"
 
 #: ../../faq/design.rst:769
 msgid ""
@@ -1198,6 +1763,13 @@ msgid ""
 "    \"B\": [6, 7],  # last trailing comma is optional but good style\n"
 "}"
 msgstr ""
+"[1, 2, 3,]\n"
+"('a', 'b', 'c',)\n"
+"d = {\n"
+"    \"A\": [1, 5],\n"
+"    \"B\": [6, 7],  # das letzte abschließende Komma ist optional, aber "
+"guter Stil\n"
+"}"
 
 #: ../../faq/design.rst:777
 msgid "There are several reasons to allow this."
@@ -1210,12 +1782,19 @@ msgid ""
 "remember to add a comma to the previous line.  The lines can also be "
 "reordered without creating a syntax error."
 msgstr ""
+"Hast du einen literalen Wert für eine Liste, ein Tupel oder ein Dictionary "
+"über mehrere Zeilen verteilt, ist es leichter, weitere Elemente "
+"hinzuzufügen, weil du nicht daran denken musst, in der vorherigen Zeile ein "
+"Komma zu ergänzen. Die Zeilen lassen sich außerdem umsortieren, ohne einen "
+"Syntaxfehler zu erzeugen."
 
 #: ../../faq/design.rst:784
 msgid ""
 "Accidentally omitting the comma can lead to errors that are hard to "
 "diagnose. For example::"
 msgstr ""
+"Das Komma versehentlich weglassen kann zu Fehlern führen, die schwer zu "
+"finden sind. Zum Beispiel::"
 
 #: ../../faq/design.rst:787
 msgid ""
@@ -1226,6 +1805,12 @@ msgid ""
 "  \"fum\"\n"
 "]"
 msgstr ""
+"x = [\n"
+"  \"fee\",\n"
+"  \"fie\"\n"
+"  \"foo\",\n"
+"  \"fum\"\n"
+"]"
 
 #: ../../faq/design.rst:794
 msgid ""
@@ -1233,9 +1818,14 @@ msgid ""
 "\"fee\", \"fiefoo\" and \"fum\".  Always adding the comma avoids this source "
 "of error."
 msgstr ""
+"Diese Liste sieht aus, als hätte sie vier Elemente, tatsächlich enthält sie "
+"aber drei: \"fee\", \"fiefoo\" und \"fum\". Das Komma immer zu setzen "
+"vermeidet diese Fehlerquelle."
 
 #: ../../faq/design.rst:797
 msgid ""
 "Allowing the trailing comma may also make programmatic code generation "
 "easier."
 msgstr ""
+"Ein abschließendes Komma zu erlauben kann außerdem das programmgesteuerte "
+"Erzeugen von Code erleichtern."
