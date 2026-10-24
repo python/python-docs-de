@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 03:11+0000\n"
+"POT-Creation-Date: 2026-10-19 03:08+0000\n"
 "PO-Revision-Date: 2026-09-22 21:21+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -31,40 +31,30 @@ msgstr "Hugo van Kemenade"
 
 #: ../../whatsnew/3.15.rst:48
 msgid ""
-"This article explains the new features in Python 3.15, compared to 3.14."
+"This article explains the new features in Python 3.15, compared to 3.14. "
+"Python 3.15 was released on 9 October 2026. For full details, see the :ref:"
+"`changelog <changelog>`."
 msgstr ""
-"Dieser Artikel erläutert die neuen Features in Python 3.15 im Vergleich zu "
-"3.14."
-
-#: ../../whatsnew/3.15.rst:50
-msgid "For full details, see the :ref:`changelog <changelog>`."
-msgstr "Ausführliche Informationen findest du im :ref:`Changelog <changelog>`."
 
 #: ../../whatsnew/3.15.rst:54
-msgid ""
-"Prerelease users should be aware that this document is currently in draft "
-"form. It will be updated substantially as Python 3.15 moves towards release, "
-"so it's worth checking back even after reading earlier versions."
+msgid ":pep:`790` -- Python 3.15 release schedule"
 msgstr ""
-"Wenn du eine Vorabversion verwendest, beachte bitte, dass sich dieses "
-"Dokument derzeit im Entwurfsstadium befindet. Es wird auf dem Weg zur "
-"Veröffentlichung von Python 3.15 noch wesentlich überarbeitet, daher lohnt "
-"es sich, auch nach dem Lesen früherer Fassungen erneut hineinzuschauen."
 
-#: ../../whatsnew/3.15.rst:60
+#: ../../whatsnew/3.15.rst:58
 msgid "Summary -- Release highlights"
 msgstr "Zusammenfassung -- Highlights des Releases"
 
-#: ../../whatsnew/3.15.rst:65
+#: ../../whatsnew/3.15.rst:63
+#, fuzzy
 msgid ""
-"Python 3.15 will be the latest stable release of the Python programming "
-"language, with a mix of changes to the language, the implementation, and the "
-"standard library. The biggest changes include :ref:`lazy imports "
-"<whatsnew315-lazy-imports>`, :ref:`frozendict <whatsnew315-frozendict>` and :"
-"ref:`sentinel <whatsnew315-sentinel>` builtins, :ref:`UTF-8 as the default "
-"encoding <whatsnew315-utf8-default>`, :ref:`unpacking in comprehensions "
-"<whatsnew315-unpacking-in-comprehensions>`, and a :ref:`stable ABI for free-"
-"threaded builds <whatsnew315-abi3t>`."
+"Python 3.15 is the latest stable release of the Python programming language, "
+"with a mix of changes to the language, the implementation, and the standard "
+"library. The biggest changes include :ref:`lazy imports <whatsnew315-lazy-"
+"imports>`, :ref:`frozendict <whatsnew315-frozendict>` and :ref:`sentinel "
+"<whatsnew315-sentinel>` builtins, :ref:`UTF-8 as the default encoding "
+"<whatsnew315-utf8-default>`, :ref:`unpacking in comprehensions <whatsnew315-"
+"unpacking-in-comprehensions>`, and a :ref:`stable ABI for free-threaded "
+"builds <whatsnew315-abi3t>`."
 msgstr ""
 "Python 3.15 wird die neueste stabile Version der Programmiersprache Python "
 "sein, mit einer Mischung aus Änderungen an der Sprache, der Implementierung "
@@ -75,7 +65,7 @@ msgstr ""
 "Comprehensions <whatsnew315-unpacking-in-comprehensions>` sowie eine :ref:"
 "`stabile ABI für Builds mit freien Threads <whatsnew315-abi3t>`."
 
-#: ../../whatsnew/3.15.rst:76
+#: ../../whatsnew/3.15.rst:74
 msgid ""
 "The library changes include a new :ref:`profiling package <whatsnew315-"
 "profiling-package>` with :ref:`Tachyon <whatsnew315-sampling-profiler>`, a "
@@ -90,7 +80,7 @@ msgstr ""
 "üblichen Abkündigungen und Entfernungen und Verbesserungen bei "
 "Benutzerfreundlichkeit und Korrektheit."
 
-#: ../../whatsnew/3.15.rst:84
+#: ../../whatsnew/3.15.rst:82
 msgid ""
 "This article doesn't attempt to provide a complete specification of all new "
 "features, but instead gives a convenient overview. For full details refer to "
@@ -109,7 +99,7 @@ msgstr ""
 "jeweiligen neuen Feature. Beachte aber, dass PEPs in der Regel nicht mehr "
 "aktualisiert werden, sobald ein Feature vollständig implementiert ist."
 
-#: ../../whatsnew/3.15.rst:94
+#: ../../whatsnew/3.15.rst:92
 msgid ""
 "See `Porting to Python 3.15`_ for guidance on upgrading from earlier "
 "versions of Python."
@@ -117,16 +107,16 @@ msgstr ""
 "Unter `Porting to Python 3.15`_ findest du Hinweise zum Upgrade von früheren "
 "Python-Versionen."
 
-#: ../../whatsnew/3.15.rst:101
+#: ../../whatsnew/3.15.rst:99
 msgid "Interpreter improvements:"
 msgstr "Verbesserungen am Interpreter:"
 
-#: ../../whatsnew/3.15.rst:103
+#: ../../whatsnew/3.15.rst:101
 msgid ":pep:`661`: :ref:`Add sentinel built-in type <whatsnew315-sentinel>`"
 msgstr ""
 ":pep:`661`: :ref:`Neuer integrierter Typ sentinel <whatsnew315-sentinel>`"
 
-#: ../../whatsnew/3.15.rst:105
+#: ../../whatsnew/3.15.rst:103
 msgid ""
 ":pep:`686`: :ref:`Python now uses UTF-8 as the default encoding <whatsnew315-"
 "utf8-default>`"
@@ -134,7 +124,7 @@ msgstr ""
 ":pep:`686`: :ref:`Python verwendet jetzt standardmäßig UTF-8 als Kodierung "
 "<whatsnew315-utf8-default>`"
 
-#: ../../whatsnew/3.15.rst:107
+#: ../../whatsnew/3.15.rst:105
 msgid ""
 ":pep:`798`: :ref:`Unpacking in comprehensions <whatsnew315-unpacking-in-"
 "comprehensions>`"
@@ -142,7 +132,7 @@ msgstr ""
 ":pep:`798`: :ref:`Entpacken in Comprehensions <whatsnew315-unpacking-in-"
 "comprehensions>`"
 
-#: ../../whatsnew/3.15.rst:109
+#: ../../whatsnew/3.15.rst:107
 msgid ""
 ":pep:`810`: :ref:`Explicit lazy imports for faster startup times "
 "<whatsnew315-lazy-imports>`"
@@ -150,13 +140,13 @@ msgstr ""
 ":pep:`810`: :ref:`Explizite Lazy Imports für schnellere Startzeiten "
 "<whatsnew315-lazy-imports>`"
 
-#: ../../whatsnew/3.15.rst:111
+#: ../../whatsnew/3.15.rst:109
 msgid ""
 ":pep:`814`: :ref:`Add frozendict built-in type <whatsnew315-frozendict>`"
 msgstr ""
 ":pep:`814`: :ref:`Neuer integrierter Typ frozendict <whatsnew315-frozendict>`"
 
-#: ../../whatsnew/3.15.rst:113
+#: ../../whatsnew/3.15.rst:111
 msgid ""
 ":pep:`829`: :ref:`Package startup configuration files <whatsnew315-startup-"
 "files>`"
@@ -164,7 +154,7 @@ msgstr ""
 ":pep:`829`: :ref:`Startkonfigurationsdateien für Pakete <whatsnew315-startup-"
 "files>`"
 
-#: ../../whatsnew/3.15.rst:114
+#: ../../whatsnew/3.15.rst:112
 msgid ""
 ":ref:`The experimental JIT compiler has been significantly upgraded "
 "<whatsnew315-jit>`"
@@ -172,16 +162,16 @@ msgstr ""
 ":ref:`Der experimentelle JIT-Compiler wurde erheblich verbessert "
 "<whatsnew315-jit>`"
 
-#: ../../whatsnew/3.15.rst:115
+#: ../../whatsnew/3.15.rst:113
 msgid ":ref:`Improved error messages <whatsnew315-improved-error-messages>`"
 msgstr ""
 ":ref:`Verbesserte Fehlermeldungen <whatsnew315-improved-error-messages>`"
 
-#: ../../whatsnew/3.15.rst:117
+#: ../../whatsnew/3.15.rst:115
 msgid "Significant improvements in the standard library:"
 msgstr "Wesentliche Verbesserungen in der Standardbibliothek:"
 
-#: ../../whatsnew/3.15.rst:119
+#: ../../whatsnew/3.15.rst:117
 msgid ""
 ":pep:`799`: :ref:`A dedicated profiling package for organizing Python "
 "profiling tools <whatsnew315-profiling-package>`"
@@ -189,7 +179,7 @@ msgstr ""
 ":pep:`799`: :ref:`Ein eigenes Profiling-Paket zur Organisation der Python-"
 "Profiling-Werkzeuge <whatsnew315-profiling-package>`"
 
-#: ../../whatsnew/3.15.rst:121
+#: ../../whatsnew/3.15.rst:119
 msgid ""
 ":pep:`799`: :ref:`Tachyon: High-frequency statistical sampling profiler "
 "<whatsnew315-sampling-profiler>`"
@@ -197,29 +187,29 @@ msgstr ""
 ":pep:`799`: :ref:`Tachyon: Hochfrequenter statistischer Sampling-Profiler "
 "<whatsnew315-sampling-profiler>`"
 
-#: ../../whatsnew/3.15.rst:123
+#: ../../whatsnew/3.15.rst:121
 msgid ":ref:`More color <whatsnew315-more-color>`"
 msgstr ":ref:`Mehr Farbe <whatsnew315-more-color>`"
 
-#: ../../whatsnew/3.15.rst:125
+#: ../../whatsnew/3.15.rst:123
 msgid "New typing features:"
 msgstr "Neue Typing-Features:"
 
-#: ../../whatsnew/3.15.rst:127
+#: ../../whatsnew/3.15.rst:125
 msgid ""
 ":pep:`728`: :ref:`TypedDict with typed extra items <whatsnew315-typeddict>`"
 msgstr ""
 ":pep:`728`: :ref:`TypedDict mit typisierten zusätzlichen Einträgen "
 "<whatsnew315-typeddict>`"
 
-#: ../../whatsnew/3.15.rst:128
+#: ../../whatsnew/3.15.rst:126
 msgid ""
 ":pep:`747`: :ref:`Annotating type forms with TypeForm <whatsnew315-typeform>`"
 msgstr ""
 ":pep:`747`: :ref:`Annotieren von Typformen mit TypeForm <whatsnew315-"
 "typeform>`"
 
-#: ../../whatsnew/3.15.rst:130
+#: ../../whatsnew/3.15.rst:128
 msgid ""
 ":pep:`800`: :ref:`Disjoint bases in the type system <whatsnew315-disjoint-"
 "base>`"
@@ -227,11 +217,11 @@ msgstr ""
 ":pep:`800`: :ref:`Disjunkte Basisklassen im Typsystem <whatsnew315-disjoint-"
 "base>`"
 
-#: ../../whatsnew/3.15.rst:132
+#: ../../whatsnew/3.15.rst:130
 msgid "C API improvements:"
 msgstr "Verbesserungen der C-API:"
 
-#: ../../whatsnew/3.15.rst:134
+#: ../../whatsnew/3.15.rst:132
 msgid ""
 ":pep:`782`: :ref:`A new PyBytesWriter C API to create a Python bytes object "
 "<whatsnew315-pybyteswriter>`"
@@ -239,7 +229,7 @@ msgstr ""
 ":pep:`782`: :ref:`Eine neue C-API PyBytesWriter zum Erzeugen eines Python-"
 "bytes-Objekts <whatsnew315-pybyteswriter>`"
 
-#: ../../whatsnew/3.15.rst:136
+#: ../../whatsnew/3.15.rst:134
 msgid ""
 ":pep:`788`: :ref:`Protection against finalization in the C API <whatsnew315-"
 "c-api-interpreter-finalization>`"
@@ -247,7 +237,7 @@ msgstr ""
 ":pep:`788`: :ref:`Schutz vor der Finalisierung in der C-API <whatsnew315-c-"
 "api-interpreter-finalization>`"
 
-#: ../../whatsnew/3.15.rst:137
+#: ../../whatsnew/3.15.rst:135
 msgid ""
 ":pep:`803`, :pep:`820 <820>`, :pep:`793 <793>`: :ref:`Stable ABI for free-"
 "threaded builds <whatsnew315-abi3t>` and related C API"
@@ -255,11 +245,11 @@ msgstr ""
 ":pep:`803`, :pep:`820 <820>`, :pep:`793 <793>`: :ref:`Stabile ABI für Builds "
 "mit freien Threads <whatsnew315-abi3t>` und zugehörige C-API"
 
-#: ../../whatsnew/3.15.rst:141
+#: ../../whatsnew/3.15.rst:139
 msgid "Build changes:"
 msgstr "Änderungen am Build:"
 
-#: ../../whatsnew/3.15.rst:143
+#: ../../whatsnew/3.15.rst:141
 msgid ""
 ":pep:`831`: :ref:`Frame pointers are enabled by default for improved system-"
 "level observability <whatsnew315-frame-pointers>`"
@@ -267,11 +257,11 @@ msgstr ""
 ":pep:`831`: :ref:`Frame-Pointer sind standardmäßig aktiviert, um die "
 "Beobachtbarkeit auf Systemebene zu verbessern <whatsnew315-frame-pointers>`"
 
-#: ../../whatsnew/3.15.rst:146
+#: ../../whatsnew/3.15.rst:144
 msgid "Release changes:"
 msgstr "Änderungen an den Releases:"
 
-#: ../../whatsnew/3.15.rst:148
+#: ../../whatsnew/3.15.rst:146
 msgid ""
 ":ref:`The official Windows 64-bit binaries now use the tail-calling "
 "interpreter <whatsnew315-windows-tail-calling-interpreter>`"
@@ -279,15 +269,20 @@ msgstr ""
 ":ref:`Die offiziellen 64-Bit-Binärdateien für Windows verwenden jetzt den "
 "Tail-Calling-Interpreter <whatsnew315-windows-tail-calling-interpreter>`"
 
-#: ../../whatsnew/3.15.rst:153 ../../whatsnew/3.15.rst:2493
+#: ../../whatsnew/3.15.rst:148
+msgid ""
+"The official macOS binaries now install free-threading support by default"
+msgstr ""
+
+#: ../../whatsnew/3.15.rst:152 ../../whatsnew/3.15.rst:2495
 msgid "New features"
 msgstr "Neue Features"
 
-#: ../../whatsnew/3.15.rst:158
+#: ../../whatsnew/3.15.rst:157
 msgid ":pep:`810`: Explicit lazy imports"
 msgstr ":pep:`810`: Explizite Lazy Imports"
 
-#: ../../whatsnew/3.15.rst:160
+#: ../../whatsnew/3.15.rst:159
 msgid ""
 "Large Python applications often suffer from slow startup times. A "
 "significant contributor to this problem is the import system: when a module "
@@ -304,7 +299,7 @@ msgstr ""
 "dauern, selbst wenn der größte Teil des importierten Codes während eines "
 "bestimmten Laufs nie tatsächlich verwendet wird."
 
-#: ../../whatsnew/3.15.rst:167
+#: ../../whatsnew/3.15.rst:166
 msgid ""
 "Developers have worked around this by moving imports inside functions, "
 "using :mod:`importlib` to load modules on demand, or restructuring code to "
@@ -319,7 +314,7 @@ msgstr ""
 "Import-Anweisungen über die gesamte Codebasis und erfordern Disziplin, um "
 "konsequent angewendet zu werden."
 
-#: ../../whatsnew/3.15.rst:173
+#: ../../whatsnew/3.15.rst:172
 msgid ""
 "Python now provides a cleaner solution through explicit :keyword:`lazy` "
 "imports using the new ``lazy`` soft keyword. When you mark an import as "
@@ -335,7 +330,7 @@ msgstr ""
 "organisatorischen Vorteil, alle Importe am Anfang der Datei zu deklarieren, "
 "zahlst die Ladekosten aber nur für Module, die du tatsächlich verwendest."
 
-#: ../../whatsnew/3.15.rst:180
+#: ../../whatsnew/3.15.rst:179
 msgid ""
 "The ``lazy`` keyword works with both ``import`` and ``from ... import`` "
 "statements. When you write ``lazy import heavy_module``, Python does not "
@@ -350,15 +345,16 @@ msgstr ""
 "Moduls geschieht transparent, sobald du zum ersten Mal auf den Namen "
 "zugreifst:"
 
-#: ../../whatsnew/3.15.rst:186
+#: ../../whatsnew/3.15.rst:185
+#, fuzzy
 msgid ""
 "lazy import json\n"
 "lazy from pathlib import Path\n"
 "\n"
-"print(\"Starting up...\")  # json and pathlib not loaded yet\n"
+"print(\"Starting up...\")  # json and pathlib are not fully imported yet\n"
 "\n"
-"data = json.loads('{\"key\": \"value\"}')  # json loads here\n"
-"p = Path(\".\")  # pathlib loads here"
+"data = json.loads('{\"key\": \"value\"}')  # json gets fully imported here\n"
+"p = Path(\".\")  # pathlib gets fully imported here"
 msgstr ""
 "lazy import json\n"
 "lazy from pathlib import Path\n"
@@ -368,7 +364,7 @@ msgstr ""
 "data = json.loads('{\"key\": \"value\"}')  # json loads here\n"
 "p = Path(\".\")  # pathlib loads here"
 
-#: ../../whatsnew/3.15.rst:196
+#: ../../whatsnew/3.15.rst:195
 msgid ""
 "This mechanism is particularly useful for applications that import many "
 "modules at the top level but may only use a subset of them in any given run. "
@@ -381,7 +377,7 @@ msgstr ""
 "verringert die Startlatenz, ohne dass Code umstrukturiert oder bedingte "
 "Importe über die gesamte Codebasis verteilt werden müssen."
 
-#: ../../whatsnew/3.15.rst:201
+#: ../../whatsnew/3.15.rst:200
 msgid ""
 "In the case where loading a lazily imported module fails (for example, if "
 "the module does not exist), Python raises the exception at the point of "
@@ -396,7 +392,7 @@ msgstr ""
 "die ursprüngliche Import-Anweisung, sodass sich der Fehler einfach "
 "diagnostizieren und debuggen lässt."
 
-#: ../../whatsnew/3.15.rst:207
+#: ../../whatsnew/3.15.rst:206
 msgid ""
 "For cases where you want to enable lazy loading globally without modifying "
 "source code, Python provides the :option:`-X lazy_imports <-X>` command-line "
@@ -414,7 +410,7 @@ msgstr ""
 "Quellcode. Mit den Funktionen :func:`sys.set_lazy_imports` und :func:`sys."
 "get_lazy_imports` lässt sich dieser Modus zur Laufzeit ändern und abfragen."
 
-#: ../../whatsnew/3.15.rst:215
+#: ../../whatsnew/3.15.rst:214
 msgid ""
 "For more selective control, :func:`sys.set_lazy_imports_filter` accepts a "
 "callable that determines whether a specific module should be loaded lazily. "
@@ -435,7 +431,7 @@ msgstr ""
 "eigenen Anwendung lazy sind, während Abhängigkeiten von Drittanbietern "
 "sofort geladen werden:"
 
-#: ../../whatsnew/3.15.rst:224
+#: ../../whatsnew/3.15.rst:223
 msgid ""
 "import sys\n"
 "\n"
@@ -457,7 +453,7 @@ msgstr ""
 "import myapp.slow_module  # lazy (matches filter)\n"
 "import json               # eager (does not match filter)"
 
-#: ../../whatsnew/3.15.rst:236
+#: ../../whatsnew/3.15.rst:235
 msgid ""
 "The proxy type itself is available as :class:`types.LazyImportType` for code "
 "that needs to detect lazy imports programmatically."
@@ -465,7 +461,7 @@ msgstr ""
 "Der Proxy-Typ selbst steht als :class:`types.LazyImportType` für Code zur "
 "Verfügung, der Lazy Imports programmatisch erkennen muss."
 
-#: ../../whatsnew/3.15.rst:239
+#: ../../whatsnew/3.15.rst:238
 msgid ""
 "There are some restrictions on where the ``lazy`` keyword can be used. Lazy "
 "imports are only permitted at module scope; using ``lazy`` inside a "
@@ -482,7 +478,7 @@ msgstr ""
 "import *`` und ``lazy from __future__ import ...`` lösen beide einen :exc:"
 "`SyntaxError` aus)."
 
-#: ../../whatsnew/3.15.rst:246
+#: ../../whatsnew/3.15.rst:245
 msgid ""
 "For code that cannot use the ``lazy`` keyword directly (for example, when "
 "supporting Python versions older than 3.15 while still using lazy imports on "
@@ -499,7 +495,7 @@ msgstr ""
 "werden dann als lazy behandelt, mit derselben Semantik wie beim "
 "Schlüsselwort ``lazy``::"
 
-#: ../../whatsnew/3.15.rst:253
+#: ../../whatsnew/3.15.rst:252
 msgid ""
 "__lazy_modules__ = [\"json\", \"pathlib\"]\n"
 "\n"
@@ -511,21 +507,21 @@ msgstr ""
 "import json     # lazy\n"
 "import os       # still eager"
 
-#: ../../whatsnew/3.15.rst:258
+#: ../../whatsnew/3.15.rst:257
 msgid ""
 "(Contributed by Pablo Galindo Salgado and Dino Viehland in :gh:`142349`.)"
 msgstr ""
 "(Beigetragen von Pablo Galindo Salgado und Dino Viehland in :gh:`142349`.)"
 
-#: ../../whatsnew/3.15.rst:260
+#: ../../whatsnew/3.15.rst:259
 msgid ":pep:`810` for the full specification and rationale."
 msgstr ":pep:`810` enthält die vollständige Spezifikation und Begründung."
 
-#: ../../whatsnew/3.15.rst:266
+#: ../../whatsnew/3.15.rst:265
 msgid ":pep:`814`: Add frozendict built-in type"
 msgstr ":pep:`814`: Neuer integrierter Typ frozendict"
 
-#: ../../whatsnew/3.15.rst:268
+#: ../../whatsnew/3.15.rst:267
 msgid ""
 "A new :term:`immutable` type, :class:`frozendict`, is added to the :mod:"
 "`builtins` module. It does not allow modification after creation. A :class:`!"
@@ -542,11 +538,11 @@ msgstr ""
 "Ein :class:`!frozendict` behält die Einfügereihenfolge bei, beim Vergleich "
 "wird die Reihenfolge jedoch nicht berücksichtigt."
 
-#: ../../whatsnew/3.15.rst:274
+#: ../../whatsnew/3.15.rst:273
 msgid "For example::"
 msgstr "Zum Beispiel::"
 
-#: ../../whatsnew/3.15.rst:276
+#: ../../whatsnew/3.15.rst:275
 msgid ""
 ">>> a = frozendict(x=1, y=2)\n"
 ">>> a\n"
@@ -578,7 +574,7 @@ msgstr ""
 ">>> a == b\n"
 "True"
 
-#: ../../whatsnew/3.15.rst:291
+#: ../../whatsnew/3.15.rst:290
 msgid ""
 "The following standard library modules have been updated to accept :class:`!"
 "frozendict`: :mod:`copy`, :mod:`decimal`, :mod:`json`, :mod:`marshal`, :mod:"
@@ -590,7 +586,7 @@ msgstr ""
 "mod:`marshal`, :mod:`plistlib` (nur für die Serialisierung), :mod:`pickle`, :"
 "mod:`pprint` und :mod:`xml.etree.ElementTree`."
 
-#: ../../whatsnew/3.15.rst:296
+#: ../../whatsnew/3.15.rst:295
 msgid ""
 ":func:`eval` and :func:`exec` accept :class:`!frozendict` for *globals*, "
 "and :func:`type` and :meth:`str.maketrans` accept :class:`!frozendict` for "
@@ -600,7 +596,7 @@ msgstr ""
 "*globals*, und :func:`type` sowie :meth:`str.maketrans` akzeptieren :class:`!"
 "frozendict` für *dict*."
 
-#: ../../whatsnew/3.15.rst:299
+#: ../../whatsnew/3.15.rst:298
 msgid ""
 "Code checking for :class:`dict` type using ``isinstance(arg, dict)`` can be "
 "updated to ``isinstance(arg, (dict, frozendict))`` to accept also the :class:"
@@ -613,19 +609,19 @@ msgstr ""
 "collections.abc.Mapping)``, um auch andere Mapping-Typen wie :class:`~types."
 "MappingProxyType` zu akzeptieren."
 
-#: ../../whatsnew/3.15.rst:304
+#: ../../whatsnew/3.15.rst:303
 msgid "(Contributed by Victor Stinner and Donghee Na in :gh:`141510`.)"
 msgstr "(Beigetragen von Victor Stinner und Donghee Na in :gh:`141510`.)"
 
-#: ../../whatsnew/3.15.rst:306
+#: ../../whatsnew/3.15.rst:305
 msgid ":pep:`814` for the full specification and rationale."
 msgstr ":pep:`814` enthält die vollständige Spezifikation und Begründung."
 
-#: ../../whatsnew/3.15.rst:312
+#: ../../whatsnew/3.15.rst:311
 msgid ":pep:`661`: Add sentinel built-in type"
 msgstr ":pep:`661`: Neuer integrierter Typ sentinel"
 
-#: ../../whatsnew/3.15.rst:314
+#: ../../whatsnew/3.15.rst:313
 msgid ""
 "A new :class:`sentinel` type is added to the :mod:`builtins` module for "
 "creating unique sentinel values with a concise representation.  Sentinel "
@@ -640,7 +636,7 @@ msgstr ""
 "sich mit pickle serialisieren, wenn sie über Modul und Namen importierbar "
 "sind."
 
-#: ../../whatsnew/3.15.rst:320
+#: ../../whatsnew/3.15.rst:319
 msgid ""
 "(Contributed by Jelle Zijlstra in :gh:`148829`; PEP 661 written by Tal "
 "Einat.)"
@@ -648,15 +644,15 @@ msgstr ""
 "(Beigetragen von Jelle Zijlstra in :gh:`148829`; PEP 661 verfasst von Tal "
 "Einat.)"
 
-#: ../../whatsnew/3.15.rst:322
+#: ../../whatsnew/3.15.rst:321
 msgid ":pep:`661` for further details."
 msgstr ":pep:`661` enthält weitere Details."
 
-#: ../../whatsnew/3.15.rst:328
+#: ../../whatsnew/3.15.rst:327
 msgid ":pep:`799`: A dedicated profiling package"
 msgstr ":pep:`799`: Ein eigenes Profiling-Paket"
 
-#: ../../whatsnew/3.15.rst:330
+#: ../../whatsnew/3.15.rst:329
 msgid ""
 "A new :mod:`profiling` module has been added to organize Python's built-in "
 "profiling tools under a single, coherent namespace. This module contains:"
@@ -665,7 +661,7 @@ msgstr ""
 "Profiling-Werkzeuge von Python unter einem einzigen, kohärenten Namensraum "
 "zusammenzufassen. Dieses Modul enthält:"
 
-#: ../../whatsnew/3.15.rst:333
+#: ../../whatsnew/3.15.rst:332
 msgid ""
 ":mod:`profiling.tracing`: deterministic function-call tracing (relocated "
 "from ``cProfile``)."
@@ -673,7 +669,7 @@ msgstr ""
 ":mod:`profiling.tracing`: deterministisches Tracing von Funktionsaufrufen "
 "(verschoben aus ``cProfile``)."
 
-#: ../../whatsnew/3.15.rst:335
+#: ../../whatsnew/3.15.rst:334
 msgid ""
 ":mod:`profiling.sampling`: a new statistical sampling profiler (named "
 "Tachyon)."
@@ -681,7 +677,7 @@ msgstr ""
 ":mod:`profiling.sampling`: ein neuer statistischer Sampling-Profiler (namens "
 "Tachyon)."
 
-#: ../../whatsnew/3.15.rst:337
+#: ../../whatsnew/3.15.rst:336
 msgid ""
 "The ``cProfile`` module remains as an alias for backwards compatibility. "
 "The :mod:`profile` module is deprecated and will be removed in Python 3.17."
@@ -690,24 +686,24 @@ msgstr ""
 "Alias erhalten. Das Modul :mod:`profile` ist veraltet und wird in Python "
 "3.17 entfernt."
 
-#: ../../whatsnew/3.15.rst:340
+#: ../../whatsnew/3.15.rst:339
 msgid "(Contributed by Pablo Galindo and László Kiss Kollár in :gh:`138122`.)"
 msgstr ""
 "(Beigetragen von Pablo Galindo und László Kiss Kollár in :gh:`138122`.)"
 
-#: ../../whatsnew/3.15.rst:342
+#: ../../whatsnew/3.15.rst:341
 msgid ":pep:`799` for further details."
 msgstr ":pep:`799` enthält weitere Details."
 
-#: ../../whatsnew/3.15.rst:348
+#: ../../whatsnew/3.15.rst:347
 msgid "Tachyon: High-frequency statistical sampling profiler"
 msgstr "Tachyon: Hochfrequenter statistischer Sampling-Profiler"
 
-#: ../../whatsnew/3.15.rst:350
+#: ../../whatsnew/3.15.rst:349
 msgid "Tachyon profiler logo"
 msgstr "Logo des Tachyon-Profilers"
 
-#: ../../whatsnew/3.15.rst:356
+#: ../../whatsnew/3.15.rst:355
 msgid ""
 "A new statistical sampling profiler (Tachyon) has been added as :mod:"
 "`profiling.sampling`. This profiler enables low-overhead performance "
@@ -719,7 +715,7 @@ msgstr ""
 "Performance-Analyse laufender Python-Prozesse mit geringem Overhead, ohne "
 "dass Code geändert oder der Prozess neu gestartet werden muss."
 
-#: ../../whatsnew/3.15.rst:360
+#: ../../whatsnew/3.15.rst:359
 msgid ""
 "Unlike deterministic profilers (such as :mod:`profiling.tracing`) that "
 "instrument every function call, the sampling profiler periodically captures "
@@ -742,11 +738,11 @@ msgstr ""
 "Produktivsystemen, in denen herkömmliche Profiling-Ansätze zu stark "
 "eingreifen würden."
 
-#: ../../whatsnew/3.15.rst:369
+#: ../../whatsnew/3.15.rst:368
 msgid "Key features include:"
 msgstr "Zu den wichtigsten Features gehören:"
 
-#: ../../whatsnew/3.15.rst:371
+#: ../../whatsnew/3.15.rst:370
 msgid ""
 "**Zero-overhead profiling**: Attach to any running Python process without "
 "affecting its performance. Ideal for production debugging where you can't "
@@ -757,7 +753,7 @@ msgstr ""
 "Produktion, wenn du es dir nicht leisten kannst, deine Anwendung neu zu "
 "starten oder zu verlangsamen."
 
-#: ../../whatsnew/3.15.rst:375
+#: ../../whatsnew/3.15.rst:374
 msgid ""
 "**No code modification required**: Profile existing applications without "
 "restart. Simply point the profiler at a running process by PID and start "
@@ -767,11 +763,11 @@ msgstr ""
 "Neustart. Richte den Profiler einfach über die PID auf einen laufenden "
 "Prozess und beginne mit dem Sammeln von Daten."
 
-#: ../../whatsnew/3.15.rst:378
+#: ../../whatsnew/3.15.rst:377
 msgid "**Flexible target modes**:"
 msgstr "**Flexible Zielmodi**:"
 
-#: ../../whatsnew/3.15.rst:380
+#: ../../whatsnew/3.15.rst:379
 msgid ""
 "Profile running processes by PID (``attach``) - attach to already-running "
 "applications"
@@ -779,7 +775,7 @@ msgstr ""
 "Laufende Prozesse über die PID profilen (``attach``) - an bereits laufende "
 "Anwendungen anhängen"
 
-#: ../../whatsnew/3.15.rst:381
+#: ../../whatsnew/3.15.rst:380
 msgid ""
 "Run and profile scripts directly (``run``) - profile from the very start of "
 "execution"
@@ -787,7 +783,7 @@ msgstr ""
 "Skripte direkt ausführen und profilen (``run``) - Profiling ab dem "
 "allerersten Moment der Ausführung"
 
-#: ../../whatsnew/3.15.rst:382
+#: ../../whatsnew/3.15.rst:381
 msgid ""
 "Execute and profile modules (``run -m``) - profile packages run as ``python -"
 "m module``"
@@ -795,7 +791,7 @@ msgstr ""
 "Module ausführen und profilen (``run -m``) - Pakete profilen, die als "
 "``python -m module`` ausgeführt werden"
 
-#: ../../whatsnew/3.15.rst:383
+#: ../../whatsnew/3.15.rst:382
 msgid ""
 "Capture a one-shot snapshot of a running process (``dump``) - print a "
 "traceback-style stack of every thread (or all asyncio tasks with ``--async-"
@@ -806,7 +802,7 @@ msgstr ""
 "asyncio-Tasks mit ``--async-aware``). Nützlich, um hängende Prozesse zu "
 "untersuchen."
 
-#: ../../whatsnew/3.15.rst:387
+#: ../../whatsnew/3.15.rst:386
 msgid ""
 "**Multiple profiling modes**: Choose what to measure based on your "
 "performance investigation:"
@@ -814,7 +810,7 @@ msgstr ""
 "**Mehrere Profiling-Modi**: Wähle je nach Performance-Untersuchung aus, was "
 "gemessen werden soll:"
 
-#: ../../whatsnew/3.15.rst:389
+#: ../../whatsnew/3.15.rst:388
 msgid ""
 "**Wall-clock time** (``--mode wall``, default): Measures real elapsed time "
 "including I/O, network waits, and blocking operations. Use this to "
@@ -826,7 +822,7 @@ msgstr ""
 "blockierender Operationen. Verwende diesen Modus, um zu verstehen, wo dein "
 "Programm reale Zeit verbringt, auch beim Warten auf externe Ressourcen."
 
-#: ../../whatsnew/3.15.rst:392
+#: ../../whatsnew/3.15.rst:391
 msgid ""
 "**CPU time** (``--mode cpu``): Measures only active CPU execution time, "
 "excluding I/O waits and blocking. Use this to identify CPU-bound bottlenecks "
@@ -836,7 +832,7 @@ msgstr ""
 "ohne I/O-Wartezeiten und Blockierungen. Verwende diesen Modus, um CPU-"
 "gebundene Engpässe zu finden und Rechenarbeit zu optimieren."
 
-#: ../../whatsnew/3.15.rst:394
+#: ../../whatsnew/3.15.rst:393
 msgid ""
 "**GIL-holding time** (``--mode gil``): Measures time spent holding Python's "
 "Global Interpreter Lock. Use this to identify which threads dominate GIL "
@@ -846,7 +842,7 @@ msgstr ""
 "Interpreter Lock gehalten wird. Verwende diesen Modus, um herauszufinden, "
 "welche Threads die GIL-Nutzung in Multithread-Anwendungen dominieren."
 
-#: ../../whatsnew/3.15.rst:396
+#: ../../whatsnew/3.15.rst:395
 msgid ""
 "**Exception handling time** (``--mode exception``): Captures samples only "
 "from threads with an active exception. Use this to analyze exception "
@@ -856,7 +852,7 @@ msgstr ""
 "von Threads mit einer aktiven Ausnahme. Verwende diesen Modus, um den "
 "Overhead der Ausnahmebehandlung zu analysieren."
 
-#: ../../whatsnew/3.15.rst:399
+#: ../../whatsnew/3.15.rst:398
 msgid ""
 "**Thread-aware profiling**: Option to profile all threads (``-a``) or just "
 "the main thread, essential for understanding multi-threaded application "
@@ -866,7 +862,7 @@ msgstr ""
 "Haupt-Thread zu profilen – unverzichtbar, um das Verhalten von Multithread-"
 "Anwendungen zu verstehen."
 
-#: ../../whatsnew/3.15.rst:402
+#: ../../whatsnew/3.15.rst:401
 msgid ""
 "**Multiple output formats**: Choose the visualization that best fits your "
 "workflow:"
@@ -874,7 +870,7 @@ msgstr ""
 "**Mehrere Ausgabeformate**: Wähle die Visualisierung, die am besten zu "
 "deinem Workflow passt:"
 
-#: ../../whatsnew/3.15.rst:404
+#: ../../whatsnew/3.15.rst:403
 msgid ""
 "``--pstats``: Detailed tabular statistics compatible with :mod:`pstats`. "
 "Shows function-level timing with direct and cumulative samples. Best for "
@@ -885,7 +881,7 @@ msgstr ""
 "Samples. Am besten geeignet für detaillierte Analysen und die Integration "
 "mit bestehenden Python-Profiling-Werkzeugen."
 
-#: ../../whatsnew/3.15.rst:407
+#: ../../whatsnew/3.15.rst:406
 msgid ""
 "``--collapsed``: Generates collapsed stack traces (one line per stack). This "
 "format is specifically designed for creating flame graphs with external "
@@ -896,7 +892,7 @@ msgstr ""
 "Werkzeugen wie den FlameGraph-Skripten von Brendan Gregg oder speedscope zu "
 "erstellen."
 
-#: ../../whatsnew/3.15.rst:410
+#: ../../whatsnew/3.15.rst:409
 msgid ""
 "``--flamegraph``: Generates a self-contained interactive HTML flame graph "
 "using D3.js. Opens directly in your browser for immediate visual analysis. "
@@ -909,7 +905,7 @@ msgstr ""
 "die verbrauchte Zeit darstellt. So lassen sich Engpässe auf einen Blick "
 "erkennen."
 
-#: ../../whatsnew/3.15.rst:413
+#: ../../whatsnew/3.15.rst:412
 msgid ""
 "``--gecko``: Generates Gecko Profiler format compatible with `Firefox "
 "Profiler <https://profiler.firefox.com>`__. Upload the output to Firefox "
@@ -921,7 +917,7 @@ msgstr ""
 "Profiler hoch, um erweiterte zeitleistenbasierte Analysen mit Features wie "
 "Stack-Charts, Markern und Netzwerkaktivität durchzuführen."
 
-#: ../../whatsnew/3.15.rst:416
+#: ../../whatsnew/3.15.rst:415
 msgid ""
 "``--heatmap``: Generates an interactive HTML heatmap visualization with line-"
 "level sample counts. Creates a directory with per-file heatmaps showing "
@@ -931,7 +927,7 @@ msgstr ""
 "Zeile. Legt ein Verzeichnis mit Heatmaps pro Datei an, die genau zeigen, wo "
 "auf Quellcodeebene Zeit verbraucht wird."
 
-#: ../../whatsnew/3.15.rst:420
+#: ../../whatsnew/3.15.rst:419
 msgid ""
 "**Live interactive mode**: Real-time TUI profiler with a top-like interface "
 "(``--live``). Monitor performance as your application runs with interactive "
@@ -941,7 +937,7 @@ msgstr ""
 "ähnlich wie top (``--live``). Beobachte die Performance, während deine "
 "Anwendung läuft, mit interaktivem Sortieren und Filtern."
 
-#: ../../whatsnew/3.15.rst:423
+#: ../../whatsnew/3.15.rst:422
 msgid ""
 "**Async-aware profiling**: Profile async/await code with task-based stack "
 "reconstruction (``--async-aware``). See which coroutines are consuming time, "
@@ -952,7 +948,7 @@ msgstr ""
 "Koroutinen Zeit verbrauchen, mit Optionen, nur laufende Tasks oder alle "
 "Tasks einschließlich wartender anzuzeigen."
 
-#: ../../whatsnew/3.15.rst:427
+#: ../../whatsnew/3.15.rst:426
 msgid ""
 "**Opcode-level profiling**: Gather bytecode opcode information for "
 "instruction-level profiling (``--opcodes``). Shows which bytecode "
@@ -964,7 +960,7 @@ msgstr ""
 "Instruktionen ausgeführt werden, einschließlich der Spezialisierungen des "
 "adaptiven Interpreters."
 
-#: ../../whatsnew/3.15.rst:431
+#: ../../whatsnew/3.15.rst:430
 msgid ""
 "See :mod:`profiling.sampling` for the complete documentation, including all "
 "available output formats, profiling modes, and configuration options."
@@ -973,7 +969,7 @@ msgstr ""
 "Profiling-Modi und Konfigurationsoptionen findest du unter :mod:`profiling."
 "sampling`."
 
-#: ../../whatsnew/3.15.rst:434
+#: ../../whatsnew/3.15.rst:433
 msgid ""
 "(Contributed by Pablo Galindo and László Kiss Kollár in :gh:`135953` and :gh:"
 "`138122`.)"
@@ -981,11 +977,11 @@ msgstr ""
 "(Beigetragen von Pablo Galindo und László Kiss Kollár in :gh:`135953` und :"
 "gh:`138122`.)"
 
-#: ../../whatsnew/3.15.rst:440
+#: ../../whatsnew/3.15.rst:439
 msgid ":pep:`831`: Frame pointers enabled by default"
 msgstr ":pep:`831`: Frame-Pointer standardmäßig aktiviert"
 
-#: ../../whatsnew/3.15.rst:442
+#: ../../whatsnew/3.15.rst:441
 msgid ""
 "CPython is now built with frame pointers by default on platforms that "
 "support them.  This uses the compiler flags ``-fno-omit-frame-pointer`` and "
@@ -999,7 +995,7 @@ msgstr ""
 "Stack-Unwinding für System-Profiler, Debugger, Werkzeuge zur Absturzanalyse "
 "und eBPF-basierte Observability-Werkzeuge schneller und zuverlässiger wird."
 
-#: ../../whatsnew/3.15.rst:448
+#: ../../whatsnew/3.15.rst:447
 msgid ""
 "The flags are exposed through :mod:`sysconfig`, so extension modules built "
 "by tools that consume Python's build configuration inherit frame pointers by "
@@ -1014,7 +1010,7 @@ msgstr ""
 "benötigt eine lückenlose Kette von Frame-Pointern durch den Interpreter, "
 "Erweiterungsmodule, einbettende Anwendungen und native Bibliotheken."
 
-#: ../../whatsnew/3.15.rst:456
+#: ../../whatsnew/3.15.rst:455
 msgid ""
 "Third-party build backends and native build systems should preserve these "
 "flags when they consume Python's :mod:`sysconfig` values.  Build systems "
@@ -1031,7 +1027,7 @@ msgstr ""
 "Komponente, die ohne Frame-Pointer gebaut wurde, kann das Stack-Unwinding "
 "für den gesamten Python-Prozess unterbrechen."
 
-#: ../../whatsnew/3.15.rst:463
+#: ../../whatsnew/3.15.rst:462
 msgid ""
 "(Contributed by Pablo Galindo Salgado and Savannah Ostrowski in :gh:"
 "`149201`; PEP 831 written by Pablo Galindo Salgado, Ken Jin, Savannah "
@@ -1041,15 +1037,15 @@ msgstr ""
 "`149201`; PEP 831 verfasst von Pablo Galindo Salgado, Ken Jin, Savannah "
 "Ostrowski und Diego Russo.)"
 
-#: ../../whatsnew/3.15.rst:467
+#: ../../whatsnew/3.15.rst:466
 msgid ":pep:`831` for further details."
 msgstr ":pep:`831` enthält weitere Details."
 
-#: ../../whatsnew/3.15.rst:473
+#: ../../whatsnew/3.15.rst:472
 msgid ":pep:`798`: Unpacking in comprehensions"
 msgstr ":pep:`798`: Entpacken in Comprehensions"
 
-#: ../../whatsnew/3.15.rst:475
+#: ../../whatsnew/3.15.rst:474
 msgid ""
 "List, set, and dictionary comprehensions, as well as generator expressions, "
 "now support unpacking with ``*`` and ``**``.  This extends the unpacking "
@@ -1067,7 +1063,7 @@ msgstr ""
 "eine direkte Alternative zu verschachtelten Comprehensions, :func:`itertools."
 "chain` und :meth:`itertools.chain.from_iterable`. Zum Beispiel::"
 
-#: ../../whatsnew/3.15.rst:483
+#: ../../whatsnew/3.15.rst:482
 msgid ""
 ">>> lists = [[1, 2], [3, 4], [5]]\n"
 ">>> [*L for L in lists]  # equivalent to [x for L in lists for x in L]\n"
@@ -1095,7 +1091,7 @@ msgstr ""
 "items()}\n"
 "{'a': 3, 'b': 2}"
 
-#: ../../whatsnew/3.15.rst:495
+#: ../../whatsnew/3.15.rst:494
 msgid ""
 "Generator expressions can similarly use unpacking to yield values from "
 "multiple iterables::"
@@ -1103,7 +1099,7 @@ msgstr ""
 "Generator-Ausdrücke können das Entpacken auf ähnliche Weise nutzen, um Werte "
 "aus mehreren iterierbaren Objekten zu liefern::"
 
-#: ../../whatsnew/3.15.rst:498
+#: ../../whatsnew/3.15.rst:497
 msgid ""
 ">>> gen = (*L for L in lists)  # equivalent to (x for L in lists for x in "
 "L)\n"
@@ -1115,7 +1111,7 @@ msgstr ""
 ">>> list(gen)\n"
 "[1, 2, 3, 4, 5]"
 
-#: ../../whatsnew/3.15.rst:502
+#: ../../whatsnew/3.15.rst:501
 msgid ""
 "This change also extends to asynchronous generator expressions, such that, "
 "for example, ``(*a async for a in agen())`` is equivalent to ``(x async for "
@@ -1125,19 +1121,19 @@ msgstr ""
 "Beispiel ``(*a async for a in agen())`` gleichwertig zu ``(x async for a in "
 "agen() for x in a)``."
 
-#: ../../whatsnew/3.15.rst:506
+#: ../../whatsnew/3.15.rst:505
 msgid "(Contributed by Adam Hartz in :gh:`143055`.)"
 msgstr "(Beigetragen von Adam Hartz in :gh:`143055`.)"
 
-#: ../../whatsnew/3.15.rst:508
+#: ../../whatsnew/3.15.rst:507
 msgid ":pep:`798` for further details."
 msgstr ":pep:`798` enthält weitere Details."
 
-#: ../../whatsnew/3.15.rst:514
+#: ../../whatsnew/3.15.rst:513
 msgid ":pep:`829`: Package startup configuration files"
 msgstr ":pep:`829`: Startkonfigurationsdateien für Pakete"
 
-#: ../../whatsnew/3.15.rst:516
+#: ../../whatsnew/3.15.rst:515
 msgid ""
 "Loaded by the :mod:`site` module when ``-S`` is not given, :ref:`.pth files "
 "<site-pth-files>` can contain lines that both extend :data:`sys.path` and "
@@ -1152,7 +1148,7 @@ msgstr ""
 "Funktionalität kann problematisch sein, da schwer nachzuvollziehen ist, was "
 "genau beim Start von Python ausgeführt wird."
 
-#: ../../whatsnew/3.15.rst:522
+#: ../../whatsnew/3.15.rst:521
 msgid ""
 "As a step towards improving the ability to audit pre-start executable code, "
 "Python 3.15 introduces :ref:`.start files <site-start-files>` which contain "
@@ -1167,7 +1163,7 @@ msgstr ""
 "Objekt ist. Beim Start von Python wird das aufrufbare Objekt gesucht und "
 "ohne Argumente aufgerufen."
 
-#: ../../whatsnew/3.15.rst:528
+#: ../../whatsnew/3.15.rst:527
 msgid ""
 "``import`` lines in :file:`.pth` files are silently deprecated.  When a "
 "matching :file:`.start` file is found, ``import`` lines in :file:`.pth` "
@@ -1180,7 +1176,7 @@ msgstr ""
 "die :data:`sys.path` erweitern, ändert sich in Dateien vom Typ :file:`.pth` "
 "nichts."
 
-#: ../../whatsnew/3.15.rst:533
+#: ../../whatsnew/3.15.rst:532
 msgid ""
 "The :mod:`site` module also provides :class:`site.StartupState` to batch "
 "startup processing for multiple site directories, ensuring all static path "
@@ -1205,15 +1201,15 @@ msgstr ""
 "addsitepackages` steuern und am Ende einmal :meth:`~site.StartupState."
 "process` aufrufen."
 
-#: ../../whatsnew/3.15.rst:544
+#: ../../whatsnew/3.15.rst:543
 msgid "(Contributed by Barry Warsaw in :gh:`148641` and :gh:`150228`.)"
 msgstr "(Beigetragen von Barry Warsaw in :gh:`148641` und :gh:`150228`.)"
 
-#: ../../whatsnew/3.15.rst:550
+#: ../../whatsnew/3.15.rst:549
 msgid ":pep:`803`: Stable ABI for free-threaded builds"
 msgstr ":pep:`803`: Stabile ABI für Builds mit freien Threads"
 
-#: ../../whatsnew/3.15.rst:552
+#: ../../whatsnew/3.15.rst:551
 msgid ""
 "C extensions that target the :ref:`Stable ABI <stable-abi>` can now be "
 "compiled for the new *Stable ABI for Free-Threaded Builds* (also known as "
@@ -1228,7 +1224,7 @@ msgstr ""
 "erfordert in der Regel einige nicht triviale Änderungen am Quellcode, und "
 "zwar:"
 
-#: ../../whatsnew/3.15.rst:559
+#: ../../whatsnew/3.15.rst:558
 msgid ""
 "Switching to API introduced in :pep:`697` (Python 3.12), such as negative :c:"
 "member:`~PyType_Spec.basicsize` and :c:func:`PyObject_GetTypeData`, rather "
@@ -1239,7 +1235,7 @@ msgstr ""
 "`PyObject_GetTypeData`, statt :c:type:`PyObject` zum Teil der Instanz-"
 "Struktur zu machen, und"
 
-#: ../../whatsnew/3.15.rst:563
+#: ../../whatsnew/3.15.rst:562
 msgid ""
 "Switching from a ``PyInit_`` function to a new export hook, :c:func:"
 "`PyModExport_* <PyModExport_modulename>`, introduced for this purpose in :"
@@ -1250,7 +1246,7 @@ msgstr ""
 "eingeführt wurde, mit einer neuen Struktur :c:type:`PySlot`, die in :pep:"
 "`820` eingeführt wurde."
 
-#: ../../whatsnew/3.15.rst:568
+#: ../../whatsnew/3.15.rst:567
 msgid ""
 "Note that Stable ABI does not offer all the functionality that CPython has "
 "to offer. Extensions that cannot switch to ``abi3t`` should continue to "
@@ -1262,15 +1258,16 @@ msgstr ""
 "können, sollten weiterhin getrennt für die bestehende stabile ABI (``abi3``) "
 "und die versionsspezifische ABI für freie Threads (``cp315t``) gebaut werden."
 
-#: ../../whatsnew/3.15.rst:574
+#: ../../whatsnew/3.15.rst:573
+#, fuzzy
 msgid ""
 "Stable ABI for Free-Threaded Builds should typically be selected in a build "
-"tool (such as, for example, Setuptools, meson-python, scikit-build-core, or "
-"Maturin). At the time of writing, these tools do **not** support ``abi3t``. "
-"If this is the case for your tool, compile for ``cp315t`` separately. If not "
-"using a build tool -- or when writing such a tool -- you can select "
-"``abi3t`` by setting the macro :c:macro:`!Py_TARGET_ABI3T` as discussed in :"
-"ref:`abi3-compiling`."
+"tool. Tools with ``abi3t`` support include meson-python, scikit-build-core, "
+"and Maturin; see :ref:`abi3t-migration-build` for links to their "
+"documentation on ``abi3t`` builds. If your build tool does not support "
+"``abi3t``, compile for ``cp315t`` separately. If not using a build tool -- "
+"or when writing such a tool -- you can select ``abi3t`` by setting the "
+"macro :c:macro:`!Py_TARGET_ABI3T` as discussed in :ref:`abi3-compiling`."
 msgstr ""
 "Die stabile ABI für Builds mit freien Threads sollte normalerweise in einem "
 "Build-Werkzeug ausgewählt werden (zum Beispiel Setuptools, meson-python, "
@@ -1281,23 +1278,23 @@ msgstr ""
 "``abi3t`` auswählen, indem du das Makro :c:macro:`!Py_TARGET_ABI3T` setzt, "
 "wie in :ref:`abi3-compiling` beschrieben."
 
-#: ../../whatsnew/3.15.rst:583
+#: ../../whatsnew/3.15.rst:582
 msgid ""
 "A practical :ref:`migration guide <abi3t-migration-howto>` for switching to "
-"``abi3t`` is available."
+"``abi3t`` is available. The community-maintained `Python Free-Threading "
+"Guide <https://py-free-threading.github.io/abi3t/>`__ provides examples of "
+"building and testing ``abi3t`` wheels."
 msgstr ""
-"Ein praktischer :ref:`Migrationsleitfaden <abi3t-migration-howto>` für den "
-"Umstieg auf ``abi3t`` ist verfügbar."
 
-#: ../../whatsnew/3.15.rst:586
+#: ../../whatsnew/3.15.rst:588
 msgid ":pep:`803` for further details."
 msgstr ":pep:`803` enthält weitere Details."
 
-#: ../../whatsnew/3.15.rst:592
+#: ../../whatsnew/3.15.rst:594
 msgid ":pep:`788`: Protecting the C API from interpreter finalization"
 msgstr ":pep:`788`: Schutz der C-API vor der Finalisierung des Interpreters"
 
-#: ../../whatsnew/3.15.rst:594
+#: ../../whatsnew/3.15.rst:596
 msgid ""
 "In the C API, :term:`interpreter finalization <interpreter shutdown>` can be "
 "problematic for many extensions, because :term:`attaching <attached thread "
@@ -1316,11 +1313,11 @@ msgstr ""
 "Abstürzen, wenn ein Thread einen Interpreter löscht, während ein anderer "
 "Thread gleichzeitig versucht, sich an ihn anzuhängen."
 
-#: ../../whatsnew/3.15.rst:602
+#: ../../whatsnew/3.15.rst:604
 msgid "There are now several new suites of APIs to circumvent these problems:"
 msgstr "Es gibt jetzt mehrere neue API-Gruppen, um diese Probleme zu umgehen:"
 
-#: ../../whatsnew/3.15.rst:604
+#: ../../whatsnew/3.15.rst:606
 msgid ""
 ":ref:`Interpreter guards <interpreter-guards>`, which prevent an interpreter "
 "from finalizing."
@@ -1328,7 +1325,7 @@ msgstr ""
 ":ref:`Interpreter-Guards <interpreter-guards>`, die verhindern, dass ein "
 "Interpreter finalisiert wird."
 
-#: ../../whatsnew/3.15.rst:606
+#: ../../whatsnew/3.15.rst:608
 msgid ""
 ":ref:`Interpreter views <interpreter-views>`, which allow thread-safe access "
 "to an interpreter that may be concurrently finalizing or deleted."
@@ -1337,7 +1334,7 @@ msgstr ""
 "Zugriff auf einen Interpreter ermöglichen, der möglicherweise gleichzeitig "
 "finalisiert oder gelöscht wird."
 
-#: ../../whatsnew/3.15.rst:608
+#: ../../whatsnew/3.15.rst:610
 msgid ""
 ":ref:`New APIs <c-api-attach-detach>` to automatically attach and detach "
 "thread states that come with built-in protection against finalization."
@@ -1346,7 +1343,7 @@ msgstr ""
 "von Thread-Zuständen, die einen integrierten Schutz vor der Finalisierung "
 "mitbringen."
 
-#: ../../whatsnew/3.15.rst:611
+#: ../../whatsnew/3.15.rst:613
 msgid ""
 "In addition, APIs in the ``PyGILState`` family (most notably :c:func:"
 "`PyGILState_Ensure` and :c:func:`PyGILState_Release`) have been :term:`soft "
@@ -1361,19 +1358,19 @@ msgstr ""
 "Python-Versionen wird es keine neuen APIs der Familie ``PyGILState`` mehr "
 "geben."
 
-#: ../../whatsnew/3.15.rst:617
+#: ../../whatsnew/3.15.rst:619
 msgid "(Contributed by Peter Bierma in :gh:`149101`.)"
 msgstr "(Beigetragen von Peter Bierma in :gh:`149101`.)"
 
-#: ../../whatsnew/3.15.rst:619
+#: ../../whatsnew/3.15.rst:621
 msgid ":pep:`788` for further details."
 msgstr ":pep:`788` enthält weitere Details."
 
-#: ../../whatsnew/3.15.rst:625
+#: ../../whatsnew/3.15.rst:627
 msgid "Improved error messages"
 msgstr "Verbesserte Fehlermeldungen"
 
-#: ../../whatsnew/3.15.rst:627
+#: ../../whatsnew/3.15.rst:629
 msgid ""
 "The interpreter now provides more helpful suggestions in :exc:"
 "`AttributeError` exceptions when accessing an attribute on an object that "
@@ -1385,7 +1382,7 @@ msgstr ""
 "Objekts zugegriffen wird, ein ähnliches Attribut aber über eines seiner "
 "Member verfügbar ist."
 
-#: ../../whatsnew/3.15.rst:631
+#: ../../whatsnew/3.15.rst:633
 msgid ""
 "For example, if the object has an attribute that itself exposes the "
 "requested name, the error message will suggest accessing it via that inner "
@@ -1395,7 +1392,7 @@ msgstr ""
 "Namen bereitstellt, schlägt die Fehlermeldung vor, über dieses innere "
 "Attribut darauf zuzugreifen:"
 
-#: ../../whatsnew/3.15.rst:634
+#: ../../whatsnew/3.15.rst:636
 msgid ""
 "from dataclasses import dataclass\n"
 "from math import pi\n"
@@ -1435,12 +1432,12 @@ msgstr ""
 "container = Container(circle)\n"
 "print(container.area)"
 
-#: ../../whatsnew/3.15.rst:655
+#: ../../whatsnew/3.15.rst:657
 msgid "Running this code now produces a clearer suggestion:"
 msgstr ""
 "Wenn du diesen Code ausführst, erhältst du jetzt einen klareren Vorschlag:"
 
-#: ../../whatsnew/3.15.rst:657
+#: ../../whatsnew/3.15.rst:659
 msgid ""
 "Traceback (most recent call last):\n"
 "  File \"example.py\", line 18, in <module>\n"
@@ -1456,7 +1453,7 @@ msgstr ""
 "AttributeError: 'Container' object has no attribute 'area'. Did you mean '."
 "inner.area' instead of '.area'?"
 
-#: ../../whatsnew/3.15.rst:665
+#: ../../whatsnew/3.15.rst:667
 msgid ""
 "When an :exc:`AttributeError` on a builtin type has no close match via "
 "Levenshtein distance, the error message now checks a static table of common "
@@ -1468,7 +1465,7 @@ msgstr ""
 "jetzt eine statische Tabelle gängiger Methodennamen aus anderen Sprachen "
 "(JavaScript, Java, Ruby, C#) und schlägt die Python-Entsprechung vor:"
 
-#: ../../whatsnew/3.15.rst:670
+#: ../../whatsnew/3.15.rst:672
 msgid ""
 ">>> [1, 2, 3].push(4)\n"
 "Traceback (most recent call last):\n"
@@ -1494,7 +1491,7 @@ msgstr ""
 "AttributeError: 'str' object has no attribute 'toUpperCase'. Did you mean '."
 "upper'?"
 
-#: ../../whatsnew/3.15.rst:682
+#: ../../whatsnew/3.15.rst:684
 msgid ""
 "When the Python equivalent is a language construct rather than a method, the "
 "hint describes the construct directly:"
@@ -1502,7 +1499,7 @@ msgstr ""
 "Wenn die Python-Entsprechung ein Sprachkonstrukt statt einer Methode ist, "
 "beschreibt der Hinweis das Konstrukt direkt:"
 
-#: ../../whatsnew/3.15.rst:685
+#: ../../whatsnew/3.15.rst:687
 msgid ""
 ">>> {}.put(\"a\", 1)\n"
 "Traceback (most recent call last):\n"
@@ -1514,7 +1511,7 @@ msgstr ""
 "...\n"
 "AttributeError: 'dict' object has no attribute 'put'. Use d[k] = v."
 
-#: ../../whatsnew/3.15.rst:692
+#: ../../whatsnew/3.15.rst:694
 msgid ""
 "When a mutable method is called on an immutable type, the hint suggests the "
 "mutable counterpart:"
@@ -1522,7 +1519,7 @@ msgstr ""
 "Wenn auf einem unveränderlichen Typ eine verändernde Methode aufgerufen "
 "wird, schlägt der Hinweis das veränderliche Gegenstück vor:"
 
-#: ../../whatsnew/3.15.rst:695
+#: ../../whatsnew/3.15.rst:697
 msgid ""
 ">>> (1, 2, 3).append(4)\n"
 "Traceback (most recent call last):\n"
@@ -1536,15 +1533,15 @@ msgstr ""
 "AttributeError: 'tuple' object has no attribute 'append'. Did you mean to "
 "use a 'list' object?"
 
-#: ../../whatsnew/3.15.rst:702
+#: ../../whatsnew/3.15.rst:704
 msgid "These hints also work for subclasses of builtin types."
 msgstr "Diese Hinweise funktionieren auch für Unterklassen integrierter Typen."
 
-#: ../../whatsnew/3.15.rst:704
+#: ../../whatsnew/3.15.rst:706
 msgid "(Contributed by Matt Van Horn in :gh:`146406`.)"
 msgstr "(Beigetragen von Matt Van Horn in :gh:`146406`.)"
 
-#: ../../whatsnew/3.15.rst:706
+#: ../../whatsnew/3.15.rst:708
 msgid ""
 "The interpreter now tries to provide a suggestion when :func:`delattr` fails "
 "due to a missing attribute. When an attribute name that closely resembles an "
@@ -1557,7 +1554,7 @@ msgstr ""
 "Interpreter in der Fehlermeldung den korrekten Attributnamen vor. Zum "
 "Beispiel:"
 
-#: ../../whatsnew/3.15.rst:712
+#: ../../whatsnew/3.15.rst:714
 msgid ""
 ">>> class A:\n"
 "...     pass\n"
@@ -1577,12 +1574,12 @@ msgstr ""
 "...\n"
 "AttributeError: 'A' object has no attribute 'abcdf'. Did you mean: 'abcde'?"
 
-#: ../../whatsnew/3.15.rst:723
+#: ../../whatsnew/3.15.rst:725
 msgid "(Contributed by Nikita Sobolev and Pranjal Prajapati in :gh:`136588`.)"
 msgstr ""
 "(Beigetragen von Nikita Sobolev und Pranjal Prajapati in :gh:`136588`.)"
 
-#: ../../whatsnew/3.15.rst:725
+#: ../../whatsnew/3.15.rst:727
 msgid ""
 "Several error messages incorrectly using the term \"argument\" have been "
 "corrected. (Contributed by Stan Ulbrych in :gh:`133382`.)"
@@ -1590,11 +1587,11 @@ msgstr ""
 "Mehrere Fehlermeldungen, die den Begriff „argument“ falsch verwendeten, "
 "wurden korrigiert. (Beigetragen von Stan Ulbrych in :gh:`133382`.)"
 
-#: ../../whatsnew/3.15.rst:730
+#: ../../whatsnew/3.15.rst:732
 msgid "Other language changes"
 msgstr "Weitere Sprachänderungen"
 
-#: ../../whatsnew/3.15.rst:734
+#: ../../whatsnew/3.15.rst:736
 msgid ""
 "Python now uses UTF-8_ as the default encoding, independent of the system's "
 "environment. This means that I/O operations without an explicit encoding, "
@@ -1611,7 +1608,7 @@ msgstr ""
 "nahezu jeder Webseite im Internet, in vielen gängigen Dateiformaten, "
 "Programmiersprachen und mehr."
 
-#: ../../whatsnew/3.15.rst:741
+#: ../../whatsnew/3.15.rst:743
 msgid ""
 "This only applies when no ``encoding`` argument is given. For best "
 "compatibility between versions of Python, ensure that an explicit "
@@ -1628,7 +1625,7 @@ msgstr ""
 "verwendet die Kodierung des aktuellen Gebietsschemas und wird seit Python "
 "3.10 unterstützt."
 
-#: ../../whatsnew/3.15.rst:748
+#: ../../whatsnew/3.15.rst:750
 msgid ""
 "To retain the previous behaviour, Python's UTF-8 mode may be disabled with "
 "the :envvar:`PYTHONUTF8=0 <PYTHONUTF8>` environment variable or the :option:"
@@ -1638,18 +1635,18 @@ msgstr ""
 "mit der Umgebungsvariable :envvar:`PYTHONUTF8=0 <PYTHONUTF8>` oder der "
 "Kommandozeilenoption :option:`-X utf8=0 <-X>` deaktiviert werden."
 
-#: ../../whatsnew/3.15.rst:752
+#: ../../whatsnew/3.15.rst:754
 msgid ""
 "(Contributed by Adam Turner in :gh:`133711`; PEP 686 written by Inada Naoki.)"
 msgstr ""
 "(Beigetragen von Adam Turner in :gh:`133711`; PEP 686 verfasst von Inada "
 "Naoki.)"
 
-#: ../../whatsnew/3.15.rst:754
+#: ../../whatsnew/3.15.rst:756
 msgid ":pep:`686` for further details."
 msgstr ":pep:`686` enthält weitere Details."
 
-#: ../../whatsnew/3.15.rst:761
+#: ../../whatsnew/3.15.rst:763
 msgid ""
 "The interpreter help (such as ``python --help``) is now in color. This can "
 "be controlled by :ref:`environment variables <using-on-controlling-color>`. "
@@ -1659,7 +1656,7 @@ msgstr ""
 "lässt sich über :ref:`Umgebungsvariablen <using-on-controlling-color>` "
 "steuern. (Beigetragen von Hugo van Kemenade in :gh:`148766`.)"
 
-#: ../../whatsnew/3.15.rst:768
+#: ../../whatsnew/3.15.rst:770
 msgid ""
 "Unraisable exceptions are now highlighted with color by default. This can be "
 "controlled by :ref:`environment variables <using-on-controlling-color>`. "
@@ -1670,7 +1667,7 @@ msgstr ""
 "`Umgebungsvariablen <using-on-controlling-color>` steuern. (Beigetragen von "
 "Peter Bierma in :gh:`134170`.)"
 
-#: ../../whatsnew/3.15.rst:774
+#: ../../whatsnew/3.15.rst:776
 msgid ""
 "More color in :ref:`argparse <whatsnew315-color-argparse>`, :ref:`ast "
 "<whatsnew315-color-ast>`, :ref:`calendar <whatsnew315-color-calendar>`, :ref:"
@@ -1697,7 +1694,7 @@ msgstr ""
 "sampling, random, regrtest, sqlite3, timeit, tokenize, trace, unittest, "
 "uuid, zipapp, zipfile)."
 
-#: ../../whatsnew/3.15.rst:791
+#: ../../whatsnew/3.15.rst:793
 msgid ""
 "The :meth:`~object.__repr__` of :class:`ImportError` and :class:"
 "`ModuleNotFoundError` now shows \"name\" and \"path\" as ``name=<name>`` and "
@@ -1711,7 +1708,7 @@ msgstr ""
 "Schlüsselwortargumente übergeben wurden. (Beigetragen von Serhiy Storchaka, "
 "Oleg Iarygin und Yoav Nir in :gh:`74185`.)"
 
-#: ../../whatsnew/3.15.rst:796
+#: ../../whatsnew/3.15.rst:798
 msgid ""
 "The :attr:`~object.__dict__` and :attr:`!__weakref__` descriptors now use a "
 "single descriptor instance per interpreter, shared across all types that "
@@ -1724,7 +1721,7 @@ msgstr ""
 "von Klassen und hilft, Referenzzyklen zu vermeiden. (Beigetragen von Petr "
 "Viktorin in :gh:`135228`.)"
 
-#: ../../whatsnew/3.15.rst:802
+#: ../../whatsnew/3.15.rst:804
 msgid ""
 "The :option:`-W` option and the :envvar:`PYTHONWARNINGS` environment "
 "variable can now specify regular expressions instead of literal strings to "
@@ -1738,7 +1735,7 @@ msgstr ""
 "Feld mit einem Schrägstrich (``/``) beginnt und endet. (Beigetragen von "
 "Serhiy Storchaka in :gh:`134716`.)"
 
-#: ../../whatsnew/3.15.rst:808
+#: ../../whatsnew/3.15.rst:810
 msgid ""
 "Functions that take timestamp or timeout arguments now accept any real "
 "numbers (such as :class:`~decimal.Decimal` and :class:`~fractions."
@@ -1751,7 +1748,7 @@ msgstr ""
 "Gleitkommazahlen, wobei sich die Genauigkeit dadurch nicht verbessert. "
 "(Beigetragen von Serhiy Storchaka in :gh:`67795`.)"
 
-#: ../../whatsnew/3.15.rst:815
+#: ../../whatsnew/3.15.rst:817
 msgid ""
 "Added :meth:`bytearray.take_bytes(n=None, /) <bytearray.take_bytes>` to take "
 "bytes out of a :class:`bytearray` without copying. This enables optimizing "
@@ -1768,29 +1765,29 @@ msgstr ""
 "Dekodieren und Komprimieren. Gängige Codemuster, die sich mit :func:"
 "`~bytearray.take_bytes` optimieren lassen, sind unten aufgeführt."
 
-#: ../../whatsnew/3.15.rst:822
+#: ../../whatsnew/3.15.rst:824
 msgid "Suggested optimizing refactors"
 msgstr "Vorgeschlagene Refactorings zur Optimierung"
 
-#: ../../whatsnew/3.15.rst:825
+#: ../../whatsnew/3.15.rst:827
 msgid "Description"
 msgstr "Beschreibung"
 
-#: ../../whatsnew/3.15.rst:826
+#: ../../whatsnew/3.15.rst:828
 msgid "Old"
 msgstr "Alt"
 
-#: ../../whatsnew/3.15.rst:827
+#: ../../whatsnew/3.15.rst:829
 msgid "New"
 msgstr "Neu"
 
-#: ../../whatsnew/3.15.rst:829
+#: ../../whatsnew/3.15.rst:831
 msgid "Return :class:`bytes` after working with :class:`bytearray`"
 msgstr ""
 ":class:`bytes` zurückgeben, nachdem mit einem :class:`bytearray` gearbeitet "
 "wurde"
 
-#: ../../whatsnew/3.15.rst:830
+#: ../../whatsnew/3.15.rst:832
 msgid ""
 "def read() -> bytes:\n"
 "    buffer = bytearray(1024)\n"
@@ -1802,7 +1799,7 @@ msgstr ""
 "    ...\n"
 "    return bytes(buffer)"
 
-#: ../../whatsnew/3.15.rst:837
+#: ../../whatsnew/3.15.rst:839
 msgid ""
 "def read() -> bytes:\n"
 "    buffer = bytearray(1024)\n"
@@ -1814,11 +1811,11 @@ msgstr ""
 "    ...\n"
 "    return buffer.take_bytes()"
 
-#: ../../whatsnew/3.15.rst:844
+#: ../../whatsnew/3.15.rst:846
 msgid "Empty a buffer getting the bytes"
 msgstr "Einen Puffer leeren und dabei die Bytes erhalten"
 
-#: ../../whatsnew/3.15.rst:845
+#: ../../whatsnew/3.15.rst:847
 msgid ""
 "buffer = bytearray(1024)\n"
 "...\n"
@@ -1830,7 +1827,7 @@ msgstr ""
 "data = bytes(buffer)\n"
 "buffer.clear()"
 
-#: ../../whatsnew/3.15.rst:852
+#: ../../whatsnew/3.15.rst:854
 msgid ""
 "buffer = bytearray(1024)\n"
 "...\n"
@@ -1840,11 +1837,11 @@ msgstr ""
 "...\n"
 "data = buffer.take_bytes()"
 
-#: ../../whatsnew/3.15.rst:858
+#: ../../whatsnew/3.15.rst:860
 msgid "Split a buffer at a specific separator"
 msgstr "Einen Puffer an einem bestimmten Trennzeichen aufteilen"
 
-#: ../../whatsnew/3.15.rst:859
+#: ../../whatsnew/3.15.rst:861
 msgid ""
 "buffer = bytearray(b'abc\\ndef')\n"
 "n = buffer.find(b'\\n')\n"
@@ -1860,7 +1857,7 @@ msgstr ""
 "assert data == b'abc\\n'\n"
 "assert buffer == bytearray(b'def')"
 
-#: ../../whatsnew/3.15.rst:868
+#: ../../whatsnew/3.15.rst:870
 msgid ""
 "buffer = bytearray(b'abc\\ndef')\n"
 "n = buffer.find(b'\\n')\n"
@@ -1870,13 +1867,13 @@ msgstr ""
 "n = buffer.find(b'\\n')\n"
 "data = buffer.take_bytes(n + 1)"
 
-#: ../../whatsnew/3.15.rst:874
+#: ../../whatsnew/3.15.rst:876
 msgid "Split a buffer at a specific separator; discard after the separator"
 msgstr ""
 "Einen Puffer an einem bestimmten Trennzeichen aufteilen, den Rest nach dem "
 "Trennzeichen verwerfen"
 
-#: ../../whatsnew/3.15.rst:875
+#: ../../whatsnew/3.15.rst:877
 msgid ""
 "buffer = bytearray(b'abc\\ndef')\n"
 "n = buffer.find(b'\\n')\n"
@@ -1892,7 +1889,7 @@ msgstr ""
 "assert data == b'abc'\n"
 "assert len(buffer) == 0"
 
-#: ../../whatsnew/3.15.rst:884
+#: ../../whatsnew/3.15.rst:886
 msgid ""
 "buffer = bytearray(b'abc\\ndef')\n"
 "n = buffer.find(b'\\n')\n"
@@ -1904,11 +1901,11 @@ msgstr ""
 "buffer.resize(n)\n"
 "data = buffer.take_bytes()"
 
-#: ../../whatsnew/3.15.rst:891
+#: ../../whatsnew/3.15.rst:893
 msgid "(Contributed by Cody Maloney in :gh:`139871`.)"
 msgstr "(Beigetragen von Cody Maloney in :gh:`139871`.)"
 
-#: ../../whatsnew/3.15.rst:893
+#: ../../whatsnew/3.15.rst:895
 msgid ""
 "Many functions related to compiling or parsing Python code, such as :func:"
 "`compile`, :func:`ast.parse`, :func:`symtable.symtable`, and :func:"
@@ -1924,7 +1921,7 @@ msgstr ""
 "zu :ref:`filtern <warning-filter>`. (Beigetragen von Serhiy Storchaka in :gh:"
 "`135801`.)"
 
-#: ../../whatsnew/3.15.rst:900
+#: ../../whatsnew/3.15.rst:902
 msgid ""
 "Allowed defining the *__dict__* and *__weakref__* :ref:`__slots__ <slots>` "
 "for any class. (Contributed by Serhiy Storchaka in :gh:`41779`.)"
@@ -1933,7 +1930,7 @@ msgstr ""
 "`__slots__ <slots>` definiert werden. (Beigetragen von Serhiy Storchaka in :"
 "gh:`41779`.)"
 
-#: ../../whatsnew/3.15.rst:904
+#: ../../whatsnew/3.15.rst:906
 msgid ""
 "Allowed defining any :ref:`__slots__ <slots>` for a class derived from :"
 "class:`tuple` (including classes created by :func:`collections.namedtuple`). "
@@ -1944,7 +1941,7 @@ msgstr ""
 "`collections.namedtuple` erzeugten Klassen). (Beigetragen von Serhiy "
 "Storchaka in :gh:`41779`.)"
 
-#: ../../whatsnew/3.15.rst:908
+#: ../../whatsnew/3.15.rst:910
 msgid ""
 "The :class:`slice` type now supports subscription, making it a :term:"
 "`generic type`. (Contributed by James Hilton-Balfe in :gh:`128335`.)"
@@ -1953,7 +1950,7 @@ msgstr ""
 "ein :term:`generischer Typ <generic type>`. (Beigetragen von James Hilton-"
 "Balfe in :gh:`128335`.)"
 
-#: ../../whatsnew/3.15.rst:912
+#: ../../whatsnew/3.15.rst:914
 msgid ""
 "The class :class:`memoryview` now supports the :c:expr:`float complex` and :"
 "c:expr:`double complex` C types: formatting characters ``'Zf'`` and ``'Zd'`` "
@@ -1965,7 +1962,7 @@ msgstr ""
 "beziehungsweise ``'Zd'``. (Beigetragen von Victor Stinner in :gh:`146151` "
 "und :gh:`148675`.)"
 
-#: ../../whatsnew/3.15.rst:917
+#: ../../whatsnew/3.15.rst:919
 msgid ""
 "Allow the *count* argument of :meth:`bytes.replace` to be a keyword. "
 "(Contributed by Stan Ulbrych in :gh:`147856`.)"
@@ -1974,7 +1971,7 @@ msgstr ""
 "Schlüsselwortargument übergeben werden. (Beigetragen von Stan Ulbrych in :gh:"
 "`147856`.)"
 
-#: ../../whatsnew/3.15.rst:920
+#: ../../whatsnew/3.15.rst:922
 msgid ""
 "Unary plus is now accepted in :keyword:`match` literal patterns, mirroring "
 "the existing support for unary minus. (Contributed by Bartosz Sławecki in :"
@@ -1984,7 +1981,7 @@ msgstr ""
 "analog zur bestehenden Unterstützung für das unäre Minus. (Beigetragen von "
 "Bartosz Sławecki in :gh:`145239`.)"
 
-#: ../../whatsnew/3.15.rst:924
+#: ../../whatsnew/3.15.rst:926
 msgid ""
 "The import system now acquires per-module locks in hierarchical order "
 "(parent packages before their submodules). This fixes a long-standing "
@@ -1999,7 +1996,7 @@ msgstr ""
 "gegenseitig blockieren konnten, wenn ``pkg/sub/__init__.py`` das Modul ``pkg."
 "sub.mod`` importiert. (Beigetragen von Gregory P. Smith in :gh:`83065`.)"
 
-#: ../../whatsnew/3.15.rst:931
+#: ../../whatsnew/3.15.rst:933
 msgid ""
 "File names of Stable ABI extensions that use the ``.so`` suffix may now "
 "include a multiarch tuple, for example, ``foo.abi3-x86-64-linux-gnu.so``. "
@@ -2016,7 +2013,7 @@ msgstr ""
 "Erweiterungen bereits möglich ist. (Beigetragen von Stefano Rivera in :gh:"
 "`122931`.)"
 
-#: ../../whatsnew/3.15.rst:938
+#: ../../whatsnew/3.15.rst:940
 msgid ""
 "The ``__cached__`` attribute on modules, which was deprecated since version "
 "3.13, is no longer set or taken into consideration by the import system or "
@@ -2028,7 +2025,7 @@ msgstr ""
 "berücksichtigt. Verwende stattdessen :attr:`__spec__.cached <importlib."
 "machinery.ModuleSpec.cached>`. (Beigetragen von Brett Cannon in :gh:`97879`.)"
 
-#: ../../whatsnew/3.15.rst:944
+#: ../../whatsnew/3.15.rst:946
 msgid ""
 "Note that the :attr:`~module.__loader__` and :attr:`~module.__package__` "
 "attributes are also deprecated and scheduled for removal."
@@ -2036,11 +2033,11 @@ msgstr ""
 "Beachte, dass die Attribute :attr:`~module.__loader__` und :attr:`~module."
 "__package__` ebenfalls veraltet sind und entfernt werden sollen."
 
-#: ../../whatsnew/3.15.rst:949
+#: ../../whatsnew/3.15.rst:951
 msgid "Default interactive shell"
 msgstr "Interaktive Standard-Shell"
 
-#: ../../whatsnew/3.15.rst:953
+#: ../../whatsnew/3.15.rst:955
 msgid ""
 "Tab completions are now colored by object kind, based on :pypi:"
 "`fancycompleter`. Set :envvar:`PYTHON_BASIC_COMPLETER` to fall back to :mod:"
@@ -2055,7 +2052,7 @@ msgstr ""
 "color>` steuern. (Beigetragen von Antonio Cuni und Pablo Galindo in :gh:"
 "`130472`.)"
 
-#: ../../whatsnew/3.15.rst:960
+#: ../../whatsnew/3.15.rst:962
 msgid ""
 "Tab completion now suggests module attributes in ``from ... import`` "
 "statements. Attributes can only be suggested once the module is imported, "
@@ -2070,15 +2067,15 @@ msgstr ""
 "anbietet, sie zu importieren, wenn :kbd:`Tab` ein zweites Mal gedrückt wird. "
 "(Beigetragen von Loïc Simon und Pablo Galindo in :gh:`140870`.)"
 
-#: ../../whatsnew/3.15.rst:969
+#: ../../whatsnew/3.15.rst:971
 msgid "New modules"
 msgstr "Neue Module"
 
-#: ../../whatsnew/3.15.rst:972
+#: ../../whatsnew/3.15.rst:974
 msgid "math.integer"
 msgstr "math.integer"
 
-#: ../../whatsnew/3.15.rst:974
+#: ../../whatsnew/3.15.rst:976
 msgid ""
 "This module provides access to the mathematical functions for integer "
 "arguments (:pep:`791`). (Contributed by Serhiy Storchaka in :gh:`81313`.)"
@@ -2087,15 +2084,15 @@ msgstr ""
 "ganzzahlige Argumente (:pep:`791`). (Beigetragen von Serhiy Storchaka in :gh:"
 "`81313`.)"
 
-#: ../../whatsnew/3.15.rst:980
+#: ../../whatsnew/3.15.rst:982
 msgid "Improved modules"
 msgstr "Verbesserte Module"
 
-#: ../../whatsnew/3.15.rst:983
+#: ../../whatsnew/3.15.rst:985
 msgid "argparse"
 msgstr "argparse"
 
-#: ../../whatsnew/3.15.rst:985
+#: ../../whatsnew/3.15.rst:987
 msgid ""
 "The :class:`~argparse.BooleanOptionalAction` action now supports single-dash "
 "long options and alternate prefix characters. (Contributed by Serhiy "
@@ -2105,7 +2102,7 @@ msgstr ""
 "Optionen mit einfachem Bindestrich und alternative Präfixzeichen. "
 "(Beigetragen von Serhiy Storchaka in :gh:`138525`.)"
 
-#: ../../whatsnew/3.15.rst:989
+#: ../../whatsnew/3.15.rst:991
 msgid ""
 "Changed the *suggest_on_error* parameter of :class:`argparse.ArgumentParser` "
 "to default to ``True``. This enables suggestions for mistyped arguments by "
@@ -2116,7 +2113,7 @@ msgstr ""
 "für falsch geschriebene Argumente angezeigt. (Beigetragen von Jakob Schluse "
 "in :gh:`140450`.)"
 
-#: ../../whatsnew/3.15.rst:995
+#: ../../whatsnew/3.15.rst:997
 msgid ""
 "Added backtick markup support in :class:`~argparse.ArgumentParser` "
 "description and epilog text to highlight inline code when color output is "
@@ -2127,7 +2124,7 @@ msgstr ""
 "die farbige Ausgabe aktiviert ist. (Beigetragen von Savannah Ostrowski in :"
 "gh:`142390`.)"
 
-#: ../../whatsnew/3.15.rst:999
+#: ../../whatsnew/3.15.rst:1001
 msgid ""
 "Extended backtick markup to argument ``help`` text and added support for "
 "double backticks (RST inline-literal style). (Contributed by Hugo van "
@@ -2137,11 +2134,11 @@ msgstr ""
 "erweitert, und doppelte Backticks (im Stil von RST-Inline-Literalen) werden "
 "jetzt unterstützt. (Beigetragen von Hugo van Kemenade in :gh:`149375`.)"
 
-#: ../../whatsnew/3.15.rst:1005
+#: ../../whatsnew/3.15.rst:1007
 msgid "array"
 msgstr "array"
 
-#: ../../whatsnew/3.15.rst:1007
+#: ../../whatsnew/3.15.rst:1009
 msgid ""
 "Support the :c:expr:`float complex` and :c:expr:`double complex` C types: "
 "formatting characters ``'Zf'`` and ``'Zd'`` respectively. (Contributed by "
@@ -2151,7 +2148,7 @@ msgstr ""
 "complex` mit den Formatzeichen ``'Zf'`` beziehungsweise ``'Zd'``. "
 "(Beigetragen von Victor Stinner in :gh:`146151` und :gh:`148675`.)"
 
-#: ../../whatsnew/3.15.rst:1011
+#: ../../whatsnew/3.15.rst:1013
 msgid ""
 "Support half-floats (16-bit IEEE 754 binary interchange format): formatting "
 "character ``'e'``. (Contributed by Sergey B Kirpichev in :gh:`146238`.)"
@@ -2160,7 +2157,7 @@ msgstr ""
 "Austauschformat nach IEEE 754) mit dem Formatzeichen ``'e'``. (Beigetragen "
 "von Sergey B Kirpichev in :gh:`146238`.)"
 
-#: ../../whatsnew/3.15.rst:1015
+#: ../../whatsnew/3.15.rst:1017
 msgid ""
 "The :data:`array.typecodes` type changed from :class:`str` to :class:`tuple` "
 "to support type codes longer than 1 character (``Zf`` and ``Zd``). "
@@ -2170,11 +2167,11 @@ msgstr ""
 "geändert, um Typcodes zu unterstützen, die länger als ein Zeichen sind "
 "(``Zf`` und ``Zd``). (Beigetragen von Victor Stinner in :gh:`148675`.)"
 
-#: ../../whatsnew/3.15.rst:1021 ../../whatsnew/3.15.rst:2128
+#: ../../whatsnew/3.15.rst:1023 ../../whatsnew/3.15.rst:2130
 msgid "ast"
 msgstr "ast"
 
-#: ../../whatsnew/3.15.rst:1025
+#: ../../whatsnew/3.15.rst:1027
 msgid ""
 "Add *color* parameter to :func:`~ast.dump`. If ``True``, the returned string "
 "is syntax highlighted using ANSI escape sequences. If ``False`` (the "
@@ -2186,7 +2183,7 @@ msgstr ""
 "hervorgehoben. Bei ``False`` (Standard) ist die farbige Ausgabe immer "
 "deaktiviert. (Beigetragen von Stan Ulbrych in :gh:`148981`.)"
 
-#: ../../whatsnew/3.15.rst:1031
+#: ../../whatsnew/3.15.rst:1033
 msgid ""
 "The :ref:`command-line <ast-cli>` output is now syntax highlighted by "
 "default. This can be :ref:`controlled using environment variables <using-on-"
@@ -2197,11 +2194,11 @@ msgstr ""
 "steuern <using-on-controlling-color>`. (Beigetragen von Stan Ulbrych in :gh:"
 "`148981`.)"
 
-#: ../../whatsnew/3.15.rst:1037
+#: ../../whatsnew/3.15.rst:1039
 msgid "asyncio"
 msgstr "asyncio"
 
-#: ../../whatsnew/3.15.rst:1039
+#: ../../whatsnew/3.15.rst:1041
 msgid ""
 "Added :meth:`TaskGroup.cancel <asyncio.TaskGroup.cancel>` to allow early "
 "termination of a task group, for instance, when the goal of the tasks has "
@@ -2217,11 +2214,11 @@ msgstr ""
 "eigene Ausnahme auslöst, die dann beim Verlassen der Task-Gruppe unterdrückt "
 "wird. (Beigetragen von John Belmonte in :gh:`127214`.)"
 
-#: ../../whatsnew/3.15.rst:1048
+#: ../../whatsnew/3.15.rst:1050
 msgid "base64"
 msgstr "base64"
 
-#: ../../whatsnew/3.15.rst:1050
+#: ../../whatsnew/3.15.rst:1052
 msgid ""
 "Added the *pad* parameter in :func:`~base64.z85encode`. (Contributed by "
 "Hauke Dämpfling in :gh:`143103`.)"
@@ -2229,7 +2226,7 @@ msgstr ""
 "Parameter *pad* in :func:`~base64.z85encode` hinzugefügt. (Beigetragen von "
 "Hauke Dämpfling in :gh:`143103`.)"
 
-#: ../../whatsnew/3.15.rst:1053
+#: ../../whatsnew/3.15.rst:1055
 msgid ""
 "Added the *padded* parameter in :func:`~base64.b32encode`, :func:`~base64."
 "b32decode`, :func:`~base64.b32hexencode`, :func:`~base64.b32hexdecode`, :"
@@ -2243,7 +2240,7 @@ msgstr ""
 "und :func:`~base64.urlsafe_b64decode` hinzugefügt. (Beigetragen von Serhiy "
 "Storchaka in :gh:`73613`.)"
 
-#: ../../whatsnew/3.15.rst:1060
+#: ../../whatsnew/3.15.rst:1062
 msgid ""
 "Added the *wrapcol* parameter in :func:`~base64.b16encode`, :func:`~base64."
 "b32encode`, :func:`~base64.b32hexencode`, :func:`~base64.b64encode`, :func:"
@@ -2255,7 +2252,7 @@ msgstr ""
 "`~base64.b85encode` und :func:`~base64.z85encode` hinzugefügt. (Beigetragen "
 "von Serhiy Storchaka in :gh:`143214` und :gh:`146431`.)"
 
-#: ../../whatsnew/3.15.rst:1066
+#: ../../whatsnew/3.15.rst:1068
 msgid ""
 "Added the *ignorechars* parameter in :func:`~base64.b16decode`, :func:"
 "`~base64.b32decode`, :func:`~base64.b32hexdecode`, :func:`~base64."
@@ -2267,7 +2264,7 @@ msgstr ""
 "`~base64.b85decode` und :func:`~base64.z85decode` hinzugefügt. (Beigetragen "
 "von Serhiy Storchaka in :gh:`144001` und :gh:`146431`.)"
 
-#: ../../whatsnew/3.15.rst:1072
+#: ../../whatsnew/3.15.rst:1074
 msgid ""
 "Added the *canonical* parameter in :func:`~base64.b32decode`, :func:`~base64."
 "b32hexdecode`, :func:`~base64.b64decode`, :func:`~base64.a85decode`, :func:"
@@ -2282,39 +2279,39 @@ msgstr ""
 "kanonischen Formen abzulehnen. (Beigetragen von Gregory P. Smith in :gh:"
 "`146311`.)"
 
-#: ../../whatsnew/3.15.rst:1083
+#: ../../whatsnew/3.15.rst:1085
 msgid "binascii"
 msgstr "binascii"
 
-#: ../../whatsnew/3.15.rst:1085
+#: ../../whatsnew/3.15.rst:1087
 msgid "Added functions for Base32 encoding:"
 msgstr "Funktionen für die Base32-Kodierung hinzugefügt:"
 
-#: ../../whatsnew/3.15.rst:1087
+#: ../../whatsnew/3.15.rst:1089
 msgid ":func:`~binascii.b2a_base32` and :func:`~binascii.a2b_base32`"
 msgstr ":func:`~binascii.b2a_base32` und :func:`~binascii.a2b_base32`"
 
-#: ../../whatsnew/3.15.rst:1089
+#: ../../whatsnew/3.15.rst:1091
 msgid "(Contributed by James Seo in :gh:`146192`.)"
 msgstr "(Beigetragen von James Seo in :gh:`146192`.)"
 
-#: ../../whatsnew/3.15.rst:1091
+#: ../../whatsnew/3.15.rst:1093
 msgid "Added functions for Ascii85, Base85, and Z85 encoding:"
 msgstr "Funktionen für die Kodierungen Ascii85, Base85 und Z85 hinzugefügt:"
 
-#: ../../whatsnew/3.15.rst:1093
+#: ../../whatsnew/3.15.rst:1095
 msgid ":func:`~binascii.b2a_ascii85` and :func:`~binascii.a2b_ascii85`"
 msgstr ":func:`~binascii.b2a_ascii85` und :func:`~binascii.a2b_ascii85`"
 
-#: ../../whatsnew/3.15.rst:1094
+#: ../../whatsnew/3.15.rst:1096
 msgid ":func:`~binascii.b2a_base85` and :func:`~binascii.a2b_base85`"
 msgstr ":func:`~binascii.b2a_base85` und :func:`~binascii.a2b_base85`"
 
-#: ../../whatsnew/3.15.rst:1096
+#: ../../whatsnew/3.15.rst:1098
 msgid "(Contributed by James Seo and Serhiy Storchaka in :gh:`101178`.)"
 msgstr "(Beigetragen von James Seo und Serhiy Storchaka in :gh:`101178`.)"
 
-#: ../../whatsnew/3.15.rst:1098
+#: ../../whatsnew/3.15.rst:1100
 msgid ""
 "Added the *padded* parameter in :func:`~binascii.b2a_base32`, :func:"
 "`~binascii.a2b_base32`, :func:`~binascii.b2a_base64`, and :func:`~binascii."
@@ -2324,7 +2321,7 @@ msgstr ""
 "a2b_base32`, :func:`~binascii.b2a_base64` und :func:`~binascii.a2b_base64` "
 "hinzugefügt. (Beigetragen von Serhiy Storchaka in :gh:`73613`.)"
 
-#: ../../whatsnew/3.15.rst:1103
+#: ../../whatsnew/3.15.rst:1105
 msgid ""
 "Added the *wrapcol* parameter in :func:`~binascii.b2a_base64`. (Contributed "
 "by Serhiy Storchaka in :gh:`143214`.)"
@@ -2332,7 +2329,7 @@ msgstr ""
 "Parameter *wrapcol* in :func:`~binascii.b2a_base64` hinzugefügt. "
 "(Beigetragen von Serhiy Storchaka in :gh:`143214`.)"
 
-#: ../../whatsnew/3.15.rst:1106
+#: ../../whatsnew/3.15.rst:1108
 msgid ""
 "Added the *alphabet* parameter in :func:`~binascii.b2a_base64` and :func:"
 "`~binascii.a2b_base64`. (Contributed by Serhiy Storchaka in :gh:`145980`.)"
@@ -2340,7 +2337,7 @@ msgstr ""
 "Parameter *alphabet* in :func:`~binascii.b2a_base64` und :func:`~binascii."
 "a2b_base64` hinzugefügt. (Beigetragen von Serhiy Storchaka in :gh:`145980`.)"
 
-#: ../../whatsnew/3.15.rst:1110
+#: ../../whatsnew/3.15.rst:1112
 msgid ""
 "Added the *ignorechars* parameter in :func:`~binascii.a2b_hex`, :func:"
 "`~binascii.unhexlify`, and :func:`~binascii.a2b_base64`. (Contributed by "
@@ -2350,7 +2347,7 @@ msgstr ""
 "unhexlify` und :func:`~binascii.a2b_base64` hinzugefügt. (Beigetragen von "
 "Serhiy Storchaka in :gh:`144001` und :gh:`146431`.)"
 
-#: ../../whatsnew/3.15.rst:1114
+#: ../../whatsnew/3.15.rst:1116
 msgid ""
 "Added the *canonical* parameter in :func:`~binascii.a2b_base64`, to reject "
 "encodings with non-zero padding bits. (Contributed by Gregory P. Smith in :"
@@ -2360,11 +2357,11 @@ msgstr ""
 "Kodierungen mit von null verschiedenen Füllbits abzulehnen. (Beigetragen von "
 "Gregory P. Smith in :gh:`146311`.)"
 
-#: ../../whatsnew/3.15.rst:1120
+#: ../../whatsnew/3.15.rst:1122
 msgid "calendar"
 msgstr "calendar"
 
-#: ../../whatsnew/3.15.rst:1124
+#: ../../whatsnew/3.15.rst:1126
 msgid ""
 ":mod:`calendar`'s :ref:`command-line <calendar-cli>` text output has more "
 "color. This can be controlled with :ref:`environment variables <using-on-"
@@ -2375,7 +2372,7 @@ msgstr ""
 "<using-on-controlling-color>` steuern. (Beigetragen von Hugo van Kemenade "
 "in :gh:`148352`.)"
 
-#: ../../whatsnew/3.15.rst:1129
+#: ../../whatsnew/3.15.rst:1131
 msgid ""
 "The :mod:`calendar`'s :ref:`command-line <calendar-cli>` HTML output now "
 "accepts the year-month option: ``python -m calendar -t html 2009 06``. "
@@ -2385,7 +2382,7 @@ msgstr ""
 "cli>` akzeptiert jetzt die Angabe von Jahr und Monat: ``python -m calendar -"
 "t html 2009 06``. (Beigetragen von Pål Grønås Drange in :gh:`140212`.)"
 
-#: ../../whatsnew/3.15.rst:1133
+#: ../../whatsnew/3.15.rst:1135
 msgid ""
 "Calendar pages generated by the :class:`calendar.HTMLCalendar` class now "
 "support dark mode and have been migrated to the HTML5 standard for improved "
@@ -2397,11 +2394,11 @@ msgstr ""
 "Barrierefreiheit auf den HTML5-Standard umgestellt. (Beigetragen von Jiahao "
 "Li und Hugo van Kemenade in :gh:`137634`.)"
 
-#: ../../whatsnew/3.15.rst:1139
+#: ../../whatsnew/3.15.rst:1141
 msgid "collections"
 msgstr "collections"
 
-#: ../../whatsnew/3.15.rst:1141
+#: ../../whatsnew/3.15.rst:1143
 msgid ""
 "Added :meth:`!collections.Counter.__xor__` and :meth:`!collections.Counter."
 "__ixor__` to compute the symmetric difference between :class:`~collections."
@@ -2412,11 +2409,11 @@ msgstr ""
 "Objekten vom Typ :class:`~collections.Counter` zu berechnen. (Beigetragen "
 "von Raymond Hettinger in :gh:`138682`.)"
 
-#: ../../whatsnew/3.15.rst:1148
+#: ../../whatsnew/3.15.rst:1150
 msgid "concurrent.futures"
 msgstr "concurrent.futures"
 
-#: ../../whatsnew/3.15.rst:1150
+#: ../../whatsnew/3.15.rst:1152
 msgid ""
 "Improved error reporting when a child process in a :class:`concurrent."
 "futures.ProcessPoolExecutor` terminates abruptly. The resulting traceback "
@@ -2428,11 +2425,11 @@ msgstr ""
 "resultierende Traceback nennt jetzt die PID und den Exit-Code des beendeten "
 "Prozesses. (Beigetragen von Jonathan Berg in :gh:`139486`.)"
 
-#: ../../whatsnew/3.15.rst:1158
+#: ../../whatsnew/3.15.rst:1160
 msgid "contextlib"
 msgstr "contextlib"
 
-#: ../../whatsnew/3.15.rst:1160
+#: ../../whatsnew/3.15.rst:1162
 msgid ""
 "Added support for arbitrary descriptors :meth:`!__enter__`, :meth:`!"
 "__exit__`, :meth:`!__aenter__`, and :meth:`!__aexit__` in :class:"
@@ -2446,7 +2443,7 @@ msgstr ""
 "Konsistenz mit den Anweisungen :keyword:`with` und :keyword:`async with`. "
 "(Beigetragen von Serhiy Storchaka in :gh:`144386`.)"
 
-#: ../../whatsnew/3.15.rst:1166
+#: ../../whatsnew/3.15.rst:1168
 msgid ""
 ":class:`~contextlib.ContextDecorator` and :class:`~contextlib."
 "AsyncContextDecorator` (and therefore :func:`~contextlib.contextmanager` "
@@ -2466,11 +2463,11 @@ msgstr ""
 "verlassen, sobald das Generator- oder Koroutinenobjekt erzeugt wurde. "
 "(Beigetragen von Alex Grönholm und Gregory P. Smith in :gh:`125862`.)"
 
-#: ../../whatsnew/3.15.rst:1177 ../../whatsnew/3.15.rst:2147
+#: ../../whatsnew/3.15.rst:1179 ../../whatsnew/3.15.rst:2149
 msgid "ctypes"
 msgstr "ctypes"
 
-#: ../../whatsnew/3.15.rst:1179
+#: ../../whatsnew/3.15.rst:1181
 msgid ""
 "Change the :py:attr:`~ctypes._SimpleCData._type_` of :class:`~ctypes."
 "c_float_complex`, :class:`~ctypes.c_double_complex` and :class:`~ctypes."
@@ -2484,11 +2481,11 @@ msgstr ""
 "``D`` und ``G`` zu ``Zf``, ``Zd`` und ``Zg`` geändert. (Beigetragen von "
 "Victor Stinner in :gh:`148675`.)"
 
-#: ../../whatsnew/3.15.rst:1187
+#: ../../whatsnew/3.15.rst:1189
 msgid "dataclasses"
 msgstr "dataclasses"
 
-#: ../../whatsnew/3.15.rst:1189
+#: ../../whatsnew/3.15.rst:1191
 msgid ""
 "Annotations for generated ``__init__`` methods no longer include internal "
 "type names. (Contributed by David Ellis in :gh:`137530`.)"
@@ -2496,11 +2493,11 @@ msgstr ""
 "Annotationen für generierte Methoden ``__init__`` enthalten keine internen "
 "Typnamen mehr. (Beigetragen von David Ellis in :gh:`137530`.)"
 
-#: ../../whatsnew/3.15.rst:1195
+#: ../../whatsnew/3.15.rst:1197
 msgid "dbm"
 msgstr "dbm"
 
-#: ../../whatsnew/3.15.rst:1197
+#: ../../whatsnew/3.15.rst:1199
 msgid ""
 "Added new :meth:`!reorganize` methods to :mod:`dbm.dumb` and :mod:`dbm."
 "sqlite3` to recover unused free space previously occupied by deleted "
@@ -2511,11 +2508,11 @@ msgstr ""
 "von gelöschten Einträgen belegt war. (Beigetragen von Andrea Oliveri in :gh:"
 "`134004`.)"
 
-#: ../../whatsnew/3.15.rst:1203
+#: ../../whatsnew/3.15.rst:1205
 msgid "difflib"
 msgstr "difflib"
 
-#: ../../whatsnew/3.15.rst:1207
+#: ../../whatsnew/3.15.rst:1209
 msgid ""
 "Introduced the optional *color* parameter to :func:`difflib.unified_diff`, "
 "enabling color output similar to :program:`git diff`. This can be controlled "
@@ -2527,7 +2524,7 @@ msgstr ""
 "Dies lässt sich über :ref:`Umgebungsvariablen <using-on-controlling-color>` "
 "steuern. (Beigetragen von Douglas Thor in :gh:`133725`.)"
 
-#: ../../whatsnew/3.15.rst:1213
+#: ../../whatsnew/3.15.rst:1215
 msgid ""
 "Improved the styling of HTML diff pages generated by the :class:`difflib."
 "HtmlDiff` class, and migrated the output to the HTML5 standard. (Contributed "
@@ -2537,11 +2534,11 @@ msgstr ""
 "Seiten wurde verbessert und die Ausgabe auf den HTML5-Standard umgestellt. "
 "(Beigetragen von Jiahao Li in :gh:`134580`.)"
 
-#: ../../whatsnew/3.15.rst:1219
+#: ../../whatsnew/3.15.rst:1221
 msgid "email"
 msgstr "email"
 
-#: ../../whatsnew/3.15.rst:1221
+#: ../../whatsnew/3.15.rst:1223
 msgid ""
 "Email generators now raise an error when an :class:`.EmailMessage` cannot be "
 "accurately flattened due to a non-ASCII email address (mailbox) in an "
@@ -2557,11 +2554,11 @@ msgstr ""
 "beschrieben. (Beigetragen von R David Murray und Mike Edmunds in :gh:"
 "`122540`.)"
 
-#: ../../whatsnew/3.15.rst:1229
+#: ../../whatsnew/3.15.rst:1231
 msgid "faulthandler"
 msgstr "faulthandler"
 
-#: ../../whatsnew/3.15.rst:1231
+#: ../../whatsnew/3.15.rst:1233
 msgid ""
 "Added the *max_threads* parameter in :func:`faulthandler.enable`, :func:"
 "`faulthandler.dump_traceback`, :func:`faulthandler.dump_traceback_later`, "
@@ -2573,11 +2570,11 @@ msgstr ""
 "`faulthandler.register` hinzugefügt. (Beigetragen von Eric Froemling in :gh:"
 "`149085`.)"
 
-#: ../../whatsnew/3.15.rst:1238
+#: ../../whatsnew/3.15.rst:1240
 msgid "functools"
 msgstr "functools"
 
-#: ../../whatsnew/3.15.rst:1240
+#: ../../whatsnew/3.15.rst:1242
 msgid ""
 ":func:`~functools.singledispatchmethod` now supports non-:term:`descriptor` "
 "callables. (Contributed by Serhiy Storchaka in :gh:`140873`.)"
@@ -2586,7 +2583,7 @@ msgstr ""
 "Objekte, die keine :term:`Deskriptoren <descriptor>` sind. (Beigetragen von "
 "Serhiy Storchaka in :gh:`140873`.)"
 
-#: ../../whatsnew/3.15.rst:1244
+#: ../../whatsnew/3.15.rst:1246
 msgid ""
 ":func:`~functools.singledispatchmethod` now dispatches on the second "
 "argument if it wraps a regular method and is called as a class attribute. "
@@ -2597,11 +2594,11 @@ msgstr ""
 "als Klassenattribut aufgerufen wird. (Beigetragen von Bartosz Sławecki in :"
 "gh:`143535`.)"
 
-#: ../../whatsnew/3.15.rst:1250
+#: ../../whatsnew/3.15.rst:1252
 msgid "gc"
 msgstr "gc"
 
-#: ../../whatsnew/3.15.rst:1252
+#: ../../whatsnew/3.15.rst:1254
 msgid ""
 "Python 3.14.0-3.14.4 shipped with a new incremental garbage collector. "
 "However, due to a number of `reports <https://github.com/python/cpython/"
@@ -2618,11 +2615,11 @@ msgstr ""
 "sowie in Python 3.15 verwendet. (Beigetragen von Sergey Miryanov in :gh:"
 "`148726`.)"
 
-#: ../../whatsnew/3.15.rst:1262
+#: ../../whatsnew/3.15.rst:1264
 msgid "hashlib"
 msgstr "hashlib"
 
-#: ../../whatsnew/3.15.rst:1264
+#: ../../whatsnew/3.15.rst:1266
 msgid ""
 "Ensure that hash functions guaranteed to be always *available* exist as "
 "attributes of :mod:`hashlib` even if they will not work at runtime due to "
@@ -2638,11 +2635,11 @@ msgstr ""
 "ist und Python ohne MD5-Unterstützung gebaut wurde. (Beigetragen von "
 "Bénédikt Tran in :gh:`136929`.)"
 
-#: ../../whatsnew/3.15.rst:1273
+#: ../../whatsnew/3.15.rst:1275
 msgid "http.client"
 msgstr "http.client"
 
-#: ../../whatsnew/3.15.rst:1275
+#: ../../whatsnew/3.15.rst:1277
 msgid ""
 "A new *max_response_headers* keyword-only parameter has been added to :class:"
 "`~http.client.HTTPConnection` and :class:`~http.client.HTTPSConnection` "
@@ -2656,11 +2653,11 @@ msgstr ""
 "standardmäßige Höchstzahl zulässiger Antwort-Header. (Beigetragen von "
 "Alexander Enrique Urieles Nieto in :gh:`131724`.)"
 
-#: ../../whatsnew/3.15.rst:1283 ../../whatsnew/3.15.rst:2173
+#: ../../whatsnew/3.15.rst:1285 ../../whatsnew/3.15.rst:2175
 msgid "http.server"
 msgstr "http.server"
 
-#: ../../whatsnew/3.15.rst:1287
+#: ../../whatsnew/3.15.rst:1289
 msgid ""
 "The logging of :mod:`~http.server.BaseHTTPRequestHandler`, as used by the :"
 "ref:`command-line interface <http-server-cli>`, is colored by default. This "
@@ -2673,7 +2670,7 @@ msgstr ""
 "on-controlling-color>` steuern. (Beigetragen von Hugo van Kemenade in :gh:"
 "`146292`.)"
 
-#: ../../whatsnew/3.15.rst:1294
+#: ../../whatsnew/3.15.rst:1296
 msgid ""
 "Added :attr:`~http.server.SimpleHTTPRequestHandler.default_content_type` and "
 "the :option:`--content-type <http.server --content-type>` command-line "
@@ -2687,7 +2684,7 @@ msgstr ""
 "unbekannter Endung anpassen zu können. (Beigetragen von John Comeau und Hugo "
 "van Kemenade in :gh:`113471`.)"
 
-#: ../../whatsnew/3.15.rst:1300
+#: ../../whatsnew/3.15.rst:1302
 msgid ""
 "Add a new ``extra_response_headers`` keyword argument to :class:`~http."
 "server.SimpleHTTPRequestHandler` to support custom headers in HTTP "
@@ -2697,7 +2694,7 @@ msgstr ""
 "server.SimpleHTTPRequestHandler`, um eigene Header in HTTP-Antworten zu "
 "unterstützen. (Beigetragen von Anton I. Sipos in :gh:`135057`.)"
 
-#: ../../whatsnew/3.15.rst:1305
+#: ../../whatsnew/3.15.rst:1307
 msgid ""
 "Add a :option:`-H/--header <http.server --header>` option to the :program:"
 "`python -m http.server` command-line interface to support custom headers in "
@@ -2708,11 +2705,11 @@ msgstr ""
 "Header in HTTP-Antworten zu unterstützen. (Beigetragen von Anton I. Sipos "
 "in :gh:`135057`.)"
 
-#: ../../whatsnew/3.15.rst:1311
+#: ../../whatsnew/3.15.rst:1313
 msgid "importlib.metadata"
 msgstr "importlib.metadata"
 
-#: ../../whatsnew/3.15.rst:1313
+#: ../../whatsnew/3.15.rst:1315
 msgid ""
 "Previously, when accessing a distribution metadata directory not containing "
 "a metadata file, ``metadata()`` and ``Distribution.metadata`` would return "
@@ -2730,11 +2727,11 @@ msgstr ""
 "github.com/python/importlib_metadata/issues/493>`_, die Begründung zu den "
 "Kompatibilitätsbedenken in :gh:`143387`. (Beigetragen von Jason R. Coombs.)"
 
-#: ../../whatsnew/3.15.rst:1324
+#: ../../whatsnew/3.15.rst:1326
 msgid "inspect"
 msgstr "inspect"
 
-#: ../../whatsnew/3.15.rst:1326
+#: ../../whatsnew/3.15.rst:1328
 msgid ""
 "Add parameters *inherit_class_doc* and *fallback_to_class_doc* for :func:"
 "`~inspect.getdoc`. (Contributed by Serhiy Storchaka in :gh:`132686`.)"
@@ -2743,11 +2740,11 @@ msgstr ""
 "`~inspect.getdoc` hinzugefügt. (Beigetragen von Serhiy Storchaka in :gh:"
 "`132686`.)"
 
-#: ../../whatsnew/3.15.rst:1332
+#: ../../whatsnew/3.15.rst:1334
 msgid "json"
 msgstr "json"
 
-#: ../../whatsnew/3.15.rst:1334
+#: ../../whatsnew/3.15.rst:1336
 msgid ""
 "Add the *array_hook* parameter to :func:`~json.load` and :func:`~json.loads` "
 "functions: allow a callback for JSON literal array types to customize Python "
@@ -2764,11 +2761,11 @@ msgstr ""
 "Python-Struktur, die die JSON-Daten darstellt. (Beigetragen von Joao S. O. "
 "Bueno in :gh:`146440`.)"
 
-#: ../../whatsnew/3.15.rst:1344
+#: ../../whatsnew/3.15.rst:1346
 msgid "locale"
 msgstr "locale"
 
-#: ../../whatsnew/3.15.rst:1346
+#: ../../whatsnew/3.15.rst:1348
 msgid ""
 ":func:`~locale.setlocale` now supports language codes with ``@``-modifiers. "
 "``@``-modifiers are no longer silently removed in :func:`~locale.getlocale`, "
@@ -2780,7 +2777,7 @@ msgstr ""
 "getlocale` nicht mehr stillschweigend entfernt, sondern in den Sprachcode "
 "aufgenommen. (Beigetragen von Serhiy Storchaka in :gh:`137729`.)"
 
-#: ../../whatsnew/3.15.rst:1351
+#: ../../whatsnew/3.15.rst:1353
 msgid ""
 "Undeprecate the :func:`locale.getdefaultlocale` function. (Contributed by "
 "Victor Stinner in :gh:`130796`.)"
@@ -2788,11 +2785,11 @@ msgstr ""
 "Die Funktion :func:`locale.getdefaultlocale` ist nicht mehr veraltet. "
 "(Beigetragen von Victor Stinner in :gh:`130796`.)"
 
-#: ../../whatsnew/3.15.rst:1356
+#: ../../whatsnew/3.15.rst:1358
 msgid "math"
 msgstr "math"
 
-#: ../../whatsnew/3.15.rst:1358
+#: ../../whatsnew/3.15.rst:1360
 msgid ""
 "Add :func:`math.isnormal` and :func:`math.issubnormal` functions. "
 "(Contributed by Sergey B Kirpichev in :gh:`132908`.)"
@@ -2800,7 +2797,7 @@ msgstr ""
 "Funktionen :func:`math.isnormal` und :func:`math.issubnormal` hinzugefügt. "
 "(Beigetragen von Sergey B Kirpichev in :gh:`132908`.)"
 
-#: ../../whatsnew/3.15.rst:1361
+#: ../../whatsnew/3.15.rst:1363
 msgid ""
 "Add :func:`math.fmax`, :func:`math.fmin` and :func:`math.signbit` functions. "
 "(Contributed by Bénédikt Tran in :gh:`135853`.)"
@@ -2808,11 +2805,11 @@ msgstr ""
 "Funktionen :func:`math.fmax`, :func:`math.fmin` und :func:`math.signbit` "
 "hinzugefügt. (Beigetragen von Bénédikt Tran in :gh:`135853`.)"
 
-#: ../../whatsnew/3.15.rst:1366
+#: ../../whatsnew/3.15.rst:1368
 msgid "mimetypes"
 msgstr "mimetypes"
 
-#: ../../whatsnew/3.15.rst:1368
+#: ../../whatsnew/3.15.rst:1370
 msgid ""
 "Add more MIME types. (Contributed by Benedikt Johannes, Charlie Lin, "
 "Foolbar, Gil Forcada and John Franey in :gh:`144217`, :gh:`145720`, :gh:"
@@ -2824,7 +2821,7 @@ msgstr ""
 "`140937`, :gh:`139959`, :gh:`145698`, :gh:`145718`, :gh:`145918` und :gh:"
 "`144213`.)"
 
-#: ../../whatsnew/3.15.rst:1374
+#: ../../whatsnew/3.15.rst:1376
 msgid ""
 "Rename ``application/x-texinfo`` to ``application/texinfo``. (Contributed by "
 "Charlie Lin in :gh:`140165`.)"
@@ -2832,7 +2829,7 @@ msgstr ""
 "``application/x-texinfo`` in ``application/texinfo`` umbenannt. (Beigetragen "
 "von Charlie Lin in :gh:`140165`.)"
 
-#: ../../whatsnew/3.15.rst:1377
+#: ../../whatsnew/3.15.rst:1379
 msgid ""
 "Changed the MIME type for ``.ai`` files to ``application/pdf``. (Contributed "
 "by Stan Ulbrych in :gh:`141239`.)"
@@ -2840,11 +2837,11 @@ msgstr ""
 "Der MIME-Typ für Dateien mit der Endung ``.ai`` wurde zu ``application/pdf`` "
 "geändert. (Beigetragen von Stan Ulbrych in :gh:`141239`.)"
 
-#: ../../whatsnew/3.15.rst:1382
+#: ../../whatsnew/3.15.rst:1384
 msgid "mmap"
 msgstr "mmap"
 
-#: ../../whatsnew/3.15.rst:1384
+#: ../../whatsnew/3.15.rst:1386
 msgid ""
 ":class:`mmap.mmap` now has a *trackfd* parameter on Windows; if it is "
 "``False``, the file handle corresponding to *fileno* will not be duplicated. "
@@ -2854,7 +2851,7 @@ msgstr ""
 "``False``, wird das zu *fileno* gehörende Datei-Handle nicht dupliziert. "
 "(Beigetragen von Serhiy Storchaka in :gh:`78502`.)"
 
-#: ../../whatsnew/3.15.rst:1389
+#: ../../whatsnew/3.15.rst:1391
 msgid ""
 "Added the :meth:`mmap.mmap.set_name` method to annotate an anonymous memory "
 "mapping if Linux kernel supports :manpage:`PR_SET_VMA_ANON_NAME "
@@ -2866,11 +2863,11 @@ msgstr ""
 "`PR_SET_VMA_ANON_NAME <PR_SET_VMA(2const)>` unterstützt (Linux 5.17 oder "
 "neuer). (Beigetragen von Donghee Na in :gh:`142419`.)"
 
-#: ../../whatsnew/3.15.rst:1396
+#: ../../whatsnew/3.15.rst:1398
 msgid "os"
 msgstr "os"
 
-#: ../../whatsnew/3.15.rst:1398
+#: ../../whatsnew/3.15.rst:1400
 msgid ""
 "Add :func:`os.statx` on Linux kernel versions 4.11 and later with glibc "
 "versions 2.28 and later. (Contributed by Jeffrey Bosboom and Victor Stinner "
@@ -2880,7 +2877,7 @@ msgstr ""
 "hinzugefügt. (Beigetragen von Jeffrey Bosboom und Victor Stinner in :gh:"
 "`83714`.)"
 
-#: ../../whatsnew/3.15.rst:1402
+#: ../../whatsnew/3.15.rst:1404
 msgid ""
 ":func:`os.makedirs` function now has a *parent_mode* parameter that allows "
 "specifying the mode for intermediate directories. This can be used to match "
@@ -2893,11 +2890,11 @@ msgstr ""
 "3.6 und früher nachbilden. (Beigetragen von Zackery Spytz und Gregory P. "
 "Smith in :gh:`86533`.)"
 
-#: ../../whatsnew/3.15.rst:1408
+#: ../../whatsnew/3.15.rst:1410
 msgid "os.path"
 msgstr "os.path"
 
-#: ../../whatsnew/3.15.rst:1410
+#: ../../whatsnew/3.15.rst:1412
 msgid ""
 "Add support of the all-but-last mode in :func:`~os.path.realpath`. "
 "(Contributed by Serhiy Storchaka in :gh:`71189`.)"
@@ -2905,7 +2902,7 @@ msgstr ""
 "Unterstützung für den Modus „alle außer der letzten“ in :func:`~os.path."
 "realpath` hinzugefügt. (Beigetragen von Serhiy Storchaka in :gh:`71189`.)"
 
-#: ../../whatsnew/3.15.rst:1413
+#: ../../whatsnew/3.15.rst:1415
 msgid ""
 "The *strict* parameter to :func:`os.path.realpath` accepts a new value, :"
 "data:`os.path.ALLOW_MISSING`. If used, errors other than :exc:"
@@ -2919,11 +2916,11 @@ msgstr ""
 "fehlen, enthält aber keine symbolischen Links. (Beigetragen von Petr "
 "Viktorin für :cve:`2025-4517`.)"
 
-#: ../../whatsnew/3.15.rst:1421 ../../whatsnew/3.15.rst:2201
+#: ../../whatsnew/3.15.rst:1423 ../../whatsnew/3.15.rst:2203
 msgid "pathlib"
 msgstr "pathlib"
 
-#: ../../whatsnew/3.15.rst:1423
+#: ../../whatsnew/3.15.rst:1425
 msgid ""
 ":meth:`pathlib.Path.mkdir` now has a *parent_mode* parameter that allows "
 "specifying the mode for intermediate directories when ``parents=True``. "
@@ -2933,11 +2930,11 @@ msgstr ""
 "sich bei ``parents=True`` der Modus für Zwischenverzeichnisse festlegen "
 "lässt. (Beigetragen von Gregory P. Smith in :gh:`86533`.)"
 
-#: ../../whatsnew/3.15.rst:1429
+#: ../../whatsnew/3.15.rst:1431
 msgid "pdb"
 msgstr "pdb"
 
-#: ../../whatsnew/3.15.rst:1431
+#: ../../whatsnew/3.15.rst:1433
 msgid ""
 "Use the new interactive shell as the default input shell for :mod:`pdb`. "
 "(Contributed by Tian Gao in :gh:`145379`.)"
@@ -2945,11 +2942,11 @@ msgstr ""
 "Die neue interaktive Shell wird jetzt als Standard-Eingabeshell für :mod:"
 "`pdb` verwendet. (Beigetragen von Tian Gao in :gh:`145379`.)"
 
-#: ../../whatsnew/3.15.rst:1436
+#: ../../whatsnew/3.15.rst:1438
 msgid "pickle"
 msgstr "pickle"
 
-#: ../../whatsnew/3.15.rst:1438
+#: ../../whatsnew/3.15.rst:1440
 msgid ""
 "Add support for pickling private methods and nested classes. (Contributed by "
 "Zackery Spytz and Serhiy Storchaka in :gh:`77188`.)"
@@ -2958,11 +2955,11 @@ msgstr ""
 "hinzugefügt. (Beigetragen von Zackery Spytz und Serhiy Storchaka in :gh:"
 "`77188`.)"
 
-#: ../../whatsnew/3.15.rst:1443
+#: ../../whatsnew/3.15.rst:1445
 msgid "pickletools"
 msgstr "pickletools"
 
-#: ../../whatsnew/3.15.rst:1447
+#: ../../whatsnew/3.15.rst:1449
 msgid ""
 "The output of the :mod:`pickletools` command-line interface is colored by "
 "default. This can be controlled with :ref:`environment variables <using-on-"
@@ -2973,11 +2970,11 @@ msgstr ""
 "on-controlling-color>` steuern. (Beigetragen von Hugo van Kemenade in :gh:"
 "`149026`.)"
 
-#: ../../whatsnew/3.15.rst:1454
+#: ../../whatsnew/3.15.rst:1456
 msgid "pprint"
 msgstr "pprint"
 
-#: ../../whatsnew/3.15.rst:1456
+#: ../../whatsnew/3.15.rst:1458
 msgid ""
 "Add an *expand* keyword argument for :func:`pprint.pprint`, :func:`pprint."
 "pformat`, :func:`pprint.pp`. If true, the output will be formatted similar "
@@ -2990,7 +2987,7 @@ msgstr ""
 "(Beigetragen von Stefan Todoran, Semyon Moroz und Hugo van Kemenade in :gh:"
 "`112632`.)"
 
-#: ../../whatsnew/3.15.rst:1463
+#: ../../whatsnew/3.15.rst:1465
 msgid ""
 "Add t-string support to :mod:`pprint`. (Contributed by Loïc Simon and Hugo "
 "van Kemenade in :gh:`134551`.)"
@@ -2998,11 +2995,11 @@ msgstr ""
 "Unterstützung für T-Strings in :mod:`pprint` hinzugefügt. (Beigetragen von "
 "Loïc Simon und Hugo van Kemenade in :gh:`134551`.)"
 
-#: ../../whatsnew/3.15.rst:1468
+#: ../../whatsnew/3.15.rst:1470
 msgid "re"
 msgstr "re"
 
-#: ../../whatsnew/3.15.rst:1470
+#: ../../whatsnew/3.15.rst:1472
 msgid ""
 ":func:`re.prefixmatch` and a corresponding :meth:`re.Pattern.prefixmatch` "
 "have been added as alternate, more explicit names for the existing and now :"
@@ -3023,11 +3020,11 @@ msgstr ""
 "in Python schon immer *search* heißt. (Beigetragen von Gregory P. Smith in :"
 "gh:`86519`.)"
 
-#: ../../whatsnew/3.15.rst:1482
+#: ../../whatsnew/3.15.rst:1484
 msgid "resource"
 msgstr "resource"
 
-#: ../../whatsnew/3.15.rst:1484
+#: ../../whatsnew/3.15.rst:1486
 msgid ""
 "Add new constants: :data:`~resource.RLIMIT_NTHR`, :data:`~resource."
 "RLIMIT_UMTXP`, :data:`~resource.RLIMIT_THREADS`, :data:`~resource."
@@ -3039,11 +3036,11 @@ msgstr ""
 "RLIM_SAVED_CUR` und :data:`~resource.RLIM_SAVED_MAX`. (Beigetragen von "
 "Serhiy Storchaka in :gh:`137512`.)"
 
-#: ../../whatsnew/3.15.rst:1491
+#: ../../whatsnew/3.15.rst:1493
 msgid "shelve"
 msgstr "shelve"
 
-#: ../../whatsnew/3.15.rst:1493
+#: ../../whatsnew/3.15.rst:1495
 msgid ""
 "Added new :meth:`!reorganize` method to :mod:`shelve` used to recover unused "
 "free space previously occupied by deleted entries. (Contributed by Andrea "
@@ -3053,7 +3050,7 @@ msgstr ""
 "ungenutzten freien Speicherplatz zurückzugewinnen, der zuvor von gelöschten "
 "Einträgen belegt war. (Beigetragen von Andrea Oliveri in :gh:`134004`.)"
 
-#: ../../whatsnew/3.15.rst:1497
+#: ../../whatsnew/3.15.rst:1499
 msgid ""
 "Add support for custom serialization and deserialization functions in the :"
 "mod:`shelve` module. (Contributed by Furkan Onder in :gh:`99631`.)"
@@ -3062,11 +3059,11 @@ msgstr ""
 "Modul :mod:`shelve` hinzugefügt. (Beigetragen von Furkan Onder in :gh:"
 "`99631`.)"
 
-#: ../../whatsnew/3.15.rst:1503
+#: ../../whatsnew/3.15.rst:1505
 msgid "socket"
 msgstr "socket"
 
-#: ../../whatsnew/3.15.rst:1505
+#: ../../whatsnew/3.15.rst:1507
 msgid ""
 "Add constants for the ISO-TP CAN protocol. (Contributed by Patrick Menschel "
 "and Stefan Tatschner in :gh:`86819`.)"
@@ -3074,18 +3071,18 @@ msgstr ""
 "Konstanten für das CAN-Protokoll ISO-TP hinzugefügt. (Beigetragen von "
 "Patrick Menschel und Stefan Tatschner in :gh:`86819`.)"
 
-#: ../../whatsnew/3.15.rst:1510
+#: ../../whatsnew/3.15.rst:1512
 msgid "sqlite3"
 msgstr "sqlite3"
 
-#: ../../whatsnew/3.15.rst:1512
+#: ../../whatsnew/3.15.rst:1514
 msgid ""
 "The :ref:`command-line interface <sqlite3-cli>` has several new features:"
 msgstr ""
 "Die :ref:`Kommandozeilenschnittstelle <sqlite3-cli>` hat mehrere neue "
 "Features:"
 
-#: ../../whatsnew/3.15.rst:1514
+#: ../../whatsnew/3.15.rst:1516
 msgid ""
 "SQL keyword completion on :kbd:`Tab`. (Contributed by Long Tan in :gh:"
 "`133393`.)"
@@ -3093,7 +3090,7 @@ msgstr ""
 "Vervollständigung von SQL-Schlüsselwörtern mit :kbd:`Tab`. (Beigetragen von "
 "Long Tan in :gh:`133393`.)"
 
-#: ../../whatsnew/3.15.rst:1519
+#: ../../whatsnew/3.15.rst:1521
 msgid ""
 "Prompts, error messages, and help text are now colored. This is enabled by "
 "default, see :ref:`using-on-controlling-color` for details. (Contributed by "
@@ -3104,7 +3101,7 @@ msgstr ""
 "controlling-color`. (Beigetragen von Stan Ulbrych und Łukasz Langa in :gh:"
 "`133461`.)"
 
-#: ../../whatsnew/3.15.rst:1524
+#: ../../whatsnew/3.15.rst:1526
 msgid ""
 "Table, index, trigger, view, column, function, and schema completion on :kbd:"
 "`Tab`. (Contributed by Long Tan in :gh:`136101`.)"
@@ -3113,11 +3110,11 @@ msgstr ""
 "Funktionen und Schemas mit :kbd:`Tab`. (Beigetragen von Long Tan in :gh:"
 "`136101`.)"
 
-#: ../../whatsnew/3.15.rst:1529
+#: ../../whatsnew/3.15.rst:1531
 msgid "ssl"
 msgstr "ssl"
 
-#: ../../whatsnew/3.15.rst:1531
+#: ../../whatsnew/3.15.rst:1533
 msgid ""
 "Indicate through :data:`ssl.HAS_PSK_TLS13` whether the :mod:`ssl` module "
 "supports \"External PSKs\" in TLSv1.3, as described in :rfc:`9258`. "
@@ -3127,13 +3124,13 @@ msgstr ""
 "„External PSKs“ in TLSv1.3 unterstützt, wie in :rfc:`9258` beschrieben. "
 "(Beigetragen von Will Childs-Klein in :gh:`133624`.)"
 
-#: ../../whatsnew/3.15.rst:1535
+#: ../../whatsnew/3.15.rst:1537
 msgid "Added new methods for managing groups used for SSL key agreement:"
 msgstr ""
 "Neue Methoden zur Verwaltung der Gruppen für die SSL-Schlüsselvereinbarung "
 "hinzugefügt:"
 
-#: ../../whatsnew/3.15.rst:1537
+#: ../../whatsnew/3.15.rst:1539
 msgid ""
 ":meth:`ssl.SSLContext.set_groups` sets the groups allowed for doing key "
 "agreement, extending the previous :meth:`ssl.SSLContext.set_ecdh_curve` "
@@ -3149,7 +3146,7 @@ msgstr ""
 "Quanten-Gruppen. Mit dieser Methode lässt sich außerdem steuern, welche Key "
 "Shares im TLS-Handshake gesendet werden."
 
-#: ../../whatsnew/3.15.rst:1544
+#: ../../whatsnew/3.15.rst:1546
 msgid ""
 ":meth:`ssl.SSLSocket.group` returns the group selected for doing key "
 "agreement on the current connection after the TLS handshake completes. This "
@@ -3159,7 +3156,7 @@ msgstr ""
 "TLS-Handshakes für die Schlüsselvereinbarung auf der aktuellen Verbindung "
 "ausgewählt wurde. Dieser Aufruf erfordert OpenSSL 3.2 oder neuer."
 
-#: ../../whatsnew/3.15.rst:1547
+#: ../../whatsnew/3.15.rst:1549
 msgid ""
 ":meth:`ssl.SSLContext.get_groups` returns a list of all available key "
 "agreement groups compatible with the minimum and maximum TLS versions "
@@ -3170,11 +3167,11 @@ msgstr ""
 "eingestellten minimalen und maximalen TLS-Version kompatibel sind. Dieser "
 "Aufruf erfordert OpenSSL 3.5 oder neuer."
 
-#: ../../whatsnew/3.15.rst:1551
+#: ../../whatsnew/3.15.rst:1553
 msgid "(Contributed by Ron Frederick in :gh:`136306`.)"
 msgstr "(Beigetragen von Ron Frederick in :gh:`136306`.)"
 
-#: ../../whatsnew/3.15.rst:1553
+#: ../../whatsnew/3.15.rst:1555
 msgid ""
 "Added a new method :meth:`ssl.SSLContext.set_ciphersuites` for setting TLS "
 "1.3 ciphers. For TLS 1.2 or earlier, :meth:`ssl.SSLContext.set_ciphers` "
@@ -3189,11 +3186,11 @@ msgstr ""
 "der TLS-Version ab, die beim Verbindungsaufbau ausgehandelt wird. "
 "(Beigetragen von Ron Frederick in :gh:`137197`.)"
 
-#: ../../whatsnew/3.15.rst:1560
+#: ../../whatsnew/3.15.rst:1562
 msgid "Added new methods for managing signature algorithms:"
 msgstr "Neue Methoden zur Verwaltung von Signaturalgorithmen hinzugefügt:"
 
-#: ../../whatsnew/3.15.rst:1562
+#: ../../whatsnew/3.15.rst:1564
 msgid ""
 ":func:`ssl.get_sigalgs` returns a list of all available TLS signature "
 "algorithms. This call requires OpenSSL 3.4 or later."
@@ -3201,7 +3198,7 @@ msgstr ""
 ":func:`ssl.get_sigalgs` gibt eine Liste aller verfügbaren TLS-"
 "Signaturalgorithmen zurück. Dieser Aufruf erfordert OpenSSL 3.4 oder neuer."
 
-#: ../../whatsnew/3.15.rst:1564
+#: ../../whatsnew/3.15.rst:1566
 msgid ""
 ":meth:`ssl.SSLContext.set_client_sigalgs` sets the signature algorithms "
 "allowed for certificate-based client authentication."
@@ -3209,7 +3206,7 @@ msgstr ""
 ":meth:`ssl.SSLContext.set_client_sigalgs` legt die Signaturalgorithmen fest, "
 "die für die zertifikatsbasierte Client-Authentifizierung zulässig sind."
 
-#: ../../whatsnew/3.15.rst:1566
+#: ../../whatsnew/3.15.rst:1568
 msgid ""
 ":meth:`ssl.SSLContext.set_server_sigalgs` sets the signature algorithms "
 "allowed for the server to complete the TLS handshake."
@@ -3217,7 +3214,7 @@ msgstr ""
 ":meth:`ssl.SSLContext.set_server_sigalgs` legt die Signaturalgorithmen fest, "
 "die der Server zum Abschluss des TLS-Handshakes verwenden darf."
 
-#: ../../whatsnew/3.15.rst:1568
+#: ../../whatsnew/3.15.rst:1570
 msgid ""
 ":meth:`ssl.SSLSocket.client_sigalg` returns the signature algorithm selected "
 "for client authentication on the current connection. This call requires "
@@ -3227,7 +3224,7 @@ msgstr ""
 "für die Client-Authentifizierung auf der aktuellen Verbindung ausgewählt "
 "wurde. Dieser Aufruf erfordert OpenSSL 3.5 oder neuer."
 
-#: ../../whatsnew/3.15.rst:1571
+#: ../../whatsnew/3.15.rst:1573
 msgid ""
 ":meth:`ssl.SSLSocket.server_sigalg` returns the signature algorithm selected "
 "for the server to complete the TLS handshake on the current connection. This "
@@ -3237,15 +3234,15 @@ msgstr ""
 "für den Server zum Abschluss des TLS-Handshakes auf der aktuellen Verbindung "
 "ausgewählt wurde. Dieser Aufruf erfordert OpenSSL 3.5 oder neuer."
 
-#: ../../whatsnew/3.15.rst:1575
+#: ../../whatsnew/3.15.rst:1577
 msgid "(Contributed by Ron Frederick in :gh:`138252`.)"
 msgstr "(Beigetragen von Ron Frederick in :gh:`138252`.)"
 
-#: ../../whatsnew/3.15.rst:1579
+#: ../../whatsnew/3.15.rst:1581
 msgid "subprocess"
 msgstr "subprocess"
 
-#: ../../whatsnew/3.15.rst:1581
+#: ../../whatsnew/3.15.rst:1583
 msgid ""
 ":meth:`subprocess.Popen.wait`: when ``timeout`` is not ``None`` and the "
 "platform supports it, an efficient event-driven mechanism is used to wait "
@@ -3255,11 +3252,11 @@ msgstr ""
 "Plattform es unterstützt, wird ein effizienter ereignisgesteuerter "
 "Mechanismus verwendet, um auf das Prozessende zu warten:"
 
-#: ../../whatsnew/3.15.rst:1585
+#: ../../whatsnew/3.15.rst:1587
 msgid "Linux >= 5.3 uses :func:`os.pidfd_open` + :func:`select.poll`."
 msgstr "Linux >= 5.3 verwendet :func:`os.pidfd_open` + :func:`select.poll`."
 
-#: ../../whatsnew/3.15.rst:1586
+#: ../../whatsnew/3.15.rst:1588
 msgid ""
 "macOS and other BSD variants use :func:`select.kqueue` + ``KQ_FILTER_PROC`` "
 "+ ``KQ_NOTE_EXIT``."
@@ -3267,11 +3264,11 @@ msgstr ""
 "macOS und andere BSD-Varianten verwenden :func:`select.kqueue` + "
 "``KQ_FILTER_PROC`` + ``KQ_NOTE_EXIT``."
 
-#: ../../whatsnew/3.15.rst:1587
+#: ../../whatsnew/3.15.rst:1589
 msgid "Windows keeps using ``WaitForSingleObject`` (unchanged)."
 msgstr "Windows verwendet weiterhin ``WaitForSingleObject`` (unverändert)."
 
-#: ../../whatsnew/3.15.rst:1589
+#: ../../whatsnew/3.15.rst:1591
 msgid ""
 "If none of these mechanisms are available, the function falls back to the "
 "traditional busy loop (non-blocking call and short sleeps). (Contributed by "
@@ -3281,11 +3278,11 @@ msgstr ""
 "herkömmliche Busy-Loop zurück (nicht blockierender Aufruf und kurze Pausen). "
 "(Beigetragen von Giampaolo Rodola in :gh:`83069`.)"
 
-#: ../../whatsnew/3.15.rst:1595
+#: ../../whatsnew/3.15.rst:1597
 msgid "symtable"
 msgstr "symtable"
 
-#: ../../whatsnew/3.15.rst:1597
+#: ../../whatsnew/3.15.rst:1599
 msgid ""
 "Add :meth:`symtable.Function.get_cells` and :meth:`symtable.Symbol.is_cell` "
 "methods. (Contributed by Yashp002 in :gh:`143504`.)"
@@ -3293,11 +3290,11 @@ msgstr ""
 "Methoden :meth:`symtable.Function.get_cells` und :meth:`symtable.Symbol."
 "is_cell` hinzugefügt. (Beigetragen von Yashp002 in :gh:`143504`.)"
 
-#: ../../whatsnew/3.15.rst:1602
+#: ../../whatsnew/3.15.rst:1604
 msgid "sys"
 msgstr "sys"
 
-#: ../../whatsnew/3.15.rst:1604
+#: ../../whatsnew/3.15.rst:1606
 msgid ""
 "Add :data:`sys.abi_info` namespace to improve access to ABI information. "
 "(Contributed by Klaus Zimmermann in :gh:`137476`.)"
@@ -3306,11 +3303,11 @@ msgstr ""
 "Informationen zu verbessern. (Beigetragen von Klaus Zimmermann in :gh:"
 "`137476`.)"
 
-#: ../../whatsnew/3.15.rst:1609
+#: ../../whatsnew/3.15.rst:1611
 msgid "sys.monitoring"
 msgstr "sys.monitoring"
 
-#: ../../whatsnew/3.15.rst:1611
+#: ../../whatsnew/3.15.rst:1613
 msgid ""
 "The :ref:`other events <monitoring-event-global>` (:monitoring-event:"
 "`PY_THROW`, :monitoring-event:`PY_UNWIND`, :monitoring-event:`RAISE`, :"
@@ -3330,11 +3327,11 @@ msgstr ""
 "statt wie in früheren Versionen einen :exc:`ValueError` auszulösen. "
 "(Beigetragen von Gabriele N. Tornetta in :gh:`146182`.)"
 
-#: ../../whatsnew/3.15.rst:1622
+#: ../../whatsnew/3.15.rst:1624
 msgid "tarfile"
 msgstr "tarfile"
 
-#: ../../whatsnew/3.15.rst:1624
+#: ../../whatsnew/3.15.rst:1626
 msgid ""
 ":func:`~tarfile.data_filter` now normalizes symbolic link targets in order "
 "to avoid path traversal attacks. (Contributed by Petr Viktorin in :gh:"
@@ -3344,7 +3341,7 @@ msgstr ""
 "Links, um Path-Traversal-Angriffe zu verhindern. (Beigetragen von Petr "
 "Viktorin in :gh:`127987` und :cve:`2025-4138`.)"
 
-#: ../../whatsnew/3.15.rst:1628
+#: ../../whatsnew/3.15.rst:1630
 msgid ""
 ":func:`~tarfile.TarFile.extractall` now skips fixing up directory attributes "
 "when a directory was removed or replaced by another kind of file. "
@@ -3355,7 +3352,7 @@ msgstr ""
 "Dateiart ersetzt wurde. (Beigetragen von Petr Viktorin in :gh:`127987` und :"
 "cve:`2024-12718`.)"
 
-#: ../../whatsnew/3.15.rst:1632
+#: ../../whatsnew/3.15.rst:1634
 msgid ""
 ":func:`~tarfile.TarFile.extract` and :func:`~tarfile.TarFile.extractall` now "
 "(re-)apply the extraction filter when substituting a link (hard or symbolic) "
@@ -3371,7 +3368,7 @@ msgstr ""
 "Ausnahme :exc:`~tarfile.LinkFallbackError` ausgelöst. (Beigetragen von Petr "
 "Viktorin für :cve:`2025-4330` und :cve:`2024-12718`.)"
 
-#: ../../whatsnew/3.15.rst:1639
+#: ../../whatsnew/3.15.rst:1641
 msgid ""
 ":func:`~tarfile.TarFile.extract` and :func:`~tarfile.TarFile.extractall` no "
 "longer extract rejected members when :func:`~tarfile.TarFile.errorlevel` is "
@@ -3383,7 +3380,7 @@ msgstr ""
 "errorlevel` null ist. (Beigetragen von Matt Prodani und Petr Viktorin in :gh:"
 "`112887` und :cve:`2025-4435`.)"
 
-#: ../../whatsnew/3.15.rst:1645
+#: ../../whatsnew/3.15.rst:1647
 msgid ""
 ":func:`~tarfile.TarFile.extract` and :func:`~tarfile.TarFile.extractall` now "
 "replace slashes with backslashes in symlink targets on Windows to prevent "
@@ -3395,7 +3392,7 @@ msgstr ""
 "symbolischer Links, um das Erzeugen beschädigter Links zu verhindern. "
 "(Beigetragen von Christoph Walcher in :gh:`57911`.)"
 
-#: ../../whatsnew/3.15.rst:1650
+#: ../../whatsnew/3.15.rst:1652
 msgid ""
 ":func:`~tarfile.TarFile.gettarinfo` now replaces backslashes with slashes in "
 "symlink targets on Windows to conform to the tar format standard. "
@@ -3406,11 +3403,11 @@ msgstr ""
 "tar-Formats zu entsprechen. (Beigetragen von Daniele Nicolodi in :gh:"
 "`151669`.)"
 
-#: ../../whatsnew/3.15.rst:1656 ../../whatsnew/3.15.rst:2231
+#: ../../whatsnew/3.15.rst:1658 ../../whatsnew/3.15.rst:2233
 msgid "threading"
 msgstr "threading"
 
-#: ../../whatsnew/3.15.rst:1658
+#: ../../whatsnew/3.15.rst:1660
 msgid ""
 "Added :class:`~threading.serialize_iterator`, :func:`~threading."
 "synchronized_iterator`, and :func:`~threading.concurrent_tee` to support "
@@ -3422,11 +3419,11 @@ msgstr ""
 "hinzugefügt, um den nebenläufigen Zugriff auf Generatoren und Iteratoren zu "
 "unterstützen. (Beigetragen von Raymond Hettinger in :gh:`124397`.)"
 
-#: ../../whatsnew/3.15.rst:1666
+#: ../../whatsnew/3.15.rst:1668
 msgid "timeit"
 msgstr "timeit"
 
-#: ../../whatsnew/3.15.rst:1670
+#: ../../whatsnew/3.15.rst:1672
 msgid ""
 "The output of the :mod:`timeit` command-line interface is colored by "
 "default. This can be controlled with :ref:`environment variables <using-on-"
@@ -3437,7 +3434,7 @@ msgstr ""
 "on-controlling-color>` steuern. (Beigetragen von Hugo van Kemenade in :gh:"
 "`146609`.)"
 
-#: ../../whatsnew/3.15.rst:1675
+#: ../../whatsnew/3.15.rst:1677
 msgid ""
 "The command-line interface now colorizes error tracebacks by default. This "
 "can be controlled with :ref:`environment variables <using-on-controlling-"
@@ -3447,7 +3444,7 @@ msgstr ""
 "standardmäßig ein. Dies lässt sich über :ref:`Umgebungsvariablen <using-on-"
 "controlling-color>` steuern. (Beigetragen von Yi Hong in :gh:`139374`.)"
 
-#: ../../whatsnew/3.15.rst:1680
+#: ../../whatsnew/3.15.rst:1682
 msgid ""
 "Make the target time of :meth:`timeit.Timer.autorange` configurable and add "
 "``--target-time`` option to the command-line interface. (Contributed by "
@@ -3457,11 +3454,11 @@ msgstr ""
 "und die Kommandozeilenschnittstelle hat eine neue Option ``--target-time``. "
 "(Beigetragen von Alessandro Cucci und Miikka Koskinen in :gh:`80642`.)"
 
-#: ../../whatsnew/3.15.rst:1686
+#: ../../whatsnew/3.15.rst:1688
 msgid "tkinter"
 msgstr "tkinter"
 
-#: ../../whatsnew/3.15.rst:1688
+#: ../../whatsnew/3.15.rst:1690
 msgid ""
 "The :meth:`!tkinter.Text.search` method now supports two additional "
 "arguments: *nolinestop* which allows the search to continue across line "
@@ -3474,7 +3471,7 @@ msgstr ""
 "angegebenen Bereich beschränkt. (Beigetragen von Rihaan Meher in :gh:"
 "`130848`.)"
 
-#: ../../whatsnew/3.15.rst:1694
+#: ../../whatsnew/3.15.rst:1696
 msgid ""
 "A new method :meth:`!tkinter.Text.search_all` has been introduced. This "
 "method allows for searching for all matches of a pattern using Tcl's ``-"
@@ -3485,7 +3482,7 @@ msgstr ""
 "lassen sich über die Tcl-Optionen ``-all`` und ``-overlap`` alle Treffer "
 "eines Musters suchen. (Beigetragen von Rihaan Meher in :gh:`130848`.)"
 
-#: ../../whatsnew/3.15.rst:1699
+#: ../../whatsnew/3.15.rst:1701
 msgid ""
 "Added new methods :meth:`!pack_content`, :meth:`!place_content` and :meth:`!"
 "grid_content` which use Tk commands with new names (introduced in Tk 8.6) "
@@ -3498,7 +3495,7 @@ msgstr ""
 "veralteten Namen verwenden. (Beigetragen von Serhiy Storchaka in :gh:"
 "`143754`.)"
 
-#: ../../whatsnew/3.15.rst:1705
+#: ../../whatsnew/3.15.rst:1707
 msgid ""
 "Added :class:`!Event` attributes :attr:`!user_data` for Tk virtual events "
 "and :attr:`!detail` for ``Enter``, ``Leave``, ``FocusIn``, ``FocusOut``, and "
@@ -3510,11 +3507,11 @@ msgstr ""
 "``FocusIn``, ``FocusOut`` und ``ConfigureRequest``. (Beigetragen von "
 "Matthias Kievernagel und Serhiy Storchaka in :gh:`47655`.)"
 
-#: ../../whatsnew/3.15.rst:1712
+#: ../../whatsnew/3.15.rst:1714
 msgid "tokenize"
 msgstr "tokenize"
 
-#: ../../whatsnew/3.15.rst:1716
+#: ../../whatsnew/3.15.rst:1718
 msgid ""
 "The output of the :mod:`tokenize` :ref:`command-line interface <tokenize-"
 "cli>` is colored by default. This can be controlled with :ref:`environment "
@@ -3526,11 +3523,11 @@ msgstr ""
 "`Umgebungsvariablen <using-on-controlling-color>` steuern. (Beigetragen von "
 "Hugo van Kemenade in :gh:`148991`.)"
 
-#: ../../whatsnew/3.15.rst:1725
+#: ../../whatsnew/3.15.rst:1727
 msgid "tomllib"
 msgstr "tomllib"
 
-#: ../../whatsnew/3.15.rst:1727
+#: ../../whatsnew/3.15.rst:1729
 msgid ""
 "The :mod:`tomllib` module now supports TOML 1.1.0. This is a backwards "
 "compatible update, meaning that all valid TOML 1.0.0 documents are parsed "
@@ -3540,16 +3537,16 @@ msgstr ""
 "abwärtskompatible Aktualisierung, das heißt, alle gültigen TOML-1.0.0-"
 "Dokumente werden auf dieselbe Weise geparst."
 
-#: ../../whatsnew/3.15.rst:1731
+#: ../../whatsnew/3.15.rst:1733
 msgid "The changes, according to the `official TOML changelog`_, are:"
 msgstr "Laut dem `official TOML changelog`_ gibt es folgende Änderungen:"
 
-#: ../../whatsnew/3.15.rst:1733
+#: ../../whatsnew/3.15.rst:1735
 msgid "Allow newlines and trailing commas in inline tables."
 msgstr ""
 "Zeilenumbrüche und nachgestellte Kommas in Inline-Tabellen sind erlaubt."
 
-#: ../../whatsnew/3.15.rst:1735
+#: ../../whatsnew/3.15.rst:1737
 msgid ""
 "Previously an inline table had to be on a single line and couldn't end with "
 "a trailing comma. This is now relaxed so that the following is valid:"
@@ -3558,7 +3555,7 @@ msgstr ""
 "nicht mit einem nachgestellten Komma enden. Diese Einschränkung wurde "
 "gelockert, sodass Folgendes gültig ist:"
 
-#: ../../whatsnew/3.15.rst:1738
+#: ../../whatsnew/3.15.rst:1740
 msgid ""
 "tbl = {\n"
 "   key      = \"a string\",\n"
@@ -3574,7 +3571,7 @@ msgstr ""
 "   },\n"
 "}"
 
-#: ../../whatsnew/3.15.rst:1747
+#: ../../whatsnew/3.15.rst:1749
 msgid ""
 "Add ``\\xHH`` notation to basic strings for codepoints under 255, and the "
 "``\\e`` escape for the escape character:"
@@ -3582,7 +3579,7 @@ msgstr ""
 "Die Notation ``\\xHH`` für einfache Zeichenketten für Codepoints unter 255 "
 "und das Escape ``\\e`` für das Escape-Zeichen wurden hinzugefügt:"
 
-#: ../../whatsnew/3.15.rst:1750
+#: ../../whatsnew/3.15.rst:1752
 msgid ""
 "null = \"null byte: \\x00; letter a: \\x61\"\n"
 "csi = \"\\e[\""
@@ -3590,7 +3587,7 @@ msgstr ""
 "null = \"null byte: \\x00; letter a: \\x61\"\n"
 "csi = \"\\e[\""
 
-#: ../../whatsnew/3.15.rst:1755
+#: ../../whatsnew/3.15.rst:1757
 msgid ""
 "Seconds in datetime and time values are now optional. The following are now "
 "valid:"
@@ -3598,7 +3595,7 @@ msgstr ""
 "Sekunden in Datums-/Zeit- und Zeitwerten sind jetzt optional. Folgendes ist "
 "jetzt gültig:"
 
-#: ../../whatsnew/3.15.rst:1758
+#: ../../whatsnew/3.15.rst:1760
 msgid ""
 "dt = 2010-02-03 14:15\n"
 "t  = 14:15"
@@ -3606,15 +3603,15 @@ msgstr ""
 "dt = 2010-02-03 14:15\n"
 "t  = 14:15"
 
-#: ../../whatsnew/3.15.rst:1763
+#: ../../whatsnew/3.15.rst:1765
 msgid "(Contributed by Taneli Hukkinen in :gh:`142956`.)"
 msgstr "(Beigetragen von Taneli Hukkinen in :gh:`142956`.)"
 
-#: ../../whatsnew/3.15.rst:1769 ../../whatsnew/3.15.rst:2240
+#: ../../whatsnew/3.15.rst:1771 ../../whatsnew/3.15.rst:2242
 msgid "types"
 msgstr "types"
 
-#: ../../whatsnew/3.15.rst:1771
+#: ../../whatsnew/3.15.rst:1773
 msgid ""
 "Expose the write-through :func:`locals` proxy type as :class:`types."
 "FrameLocalsProxyType`. This represents the type of the :attr:`frame."
@@ -3626,11 +3623,11 @@ msgstr ""
 "`frame.f_locals` dar, wie in :pep:`667` beschrieben. (Beigetragen von Peter "
 "Bierma in :gh:`136492`.)"
 
-#: ../../whatsnew/3.15.rst:1779 ../../whatsnew/3.15.rst:2248
+#: ../../whatsnew/3.15.rst:1781 ../../whatsnew/3.15.rst:2250
 msgid "typing"
 msgstr "typing"
 
-#: ../../whatsnew/3.15.rst:1783
+#: ../../whatsnew/3.15.rst:1785
 msgid ""
 ":pep:`747`: Add :data:`~typing.TypeForm`, a new special form for annotating "
 "values that are themselves type expressions. ``TypeForm[T]`` means \"a type "
@@ -3645,7 +3642,7 @@ msgstr ""
 "``x`` zurück, was eine explizite Annotation von Typform-Werten ermöglicht, "
 "ohne das Verhalten zu ändern."
 
-#: ../../whatsnew/3.15.rst:1790
+#: ../../whatsnew/3.15.rst:1792
 msgid ""
 "This helps libraries that accept user-provided type expressions (for example "
 "``int``, ``str | None``, :class:`~typing.TypedDict` classes, or "
@@ -3655,7 +3652,7 @@ msgstr ""
 "(zum Beispiel ``int``, ``str | None``, Klassen vom Typ :class:`~typing."
 "TypedDict` oder ``list[int]``), präzise Signaturen bereitzustellen:"
 
-#: ../../whatsnew/3.15.rst:1794
+#: ../../whatsnew/3.15.rst:1796
 msgid ""
 "from typing import Any, TypeForm\n"
 "\n"
@@ -3665,11 +3662,11 @@ msgstr ""
 "\n"
 "def cast[T](typ: TypeForm[T], value: Any) -> T: ..."
 
-#: ../../whatsnew/3.15.rst:1800
+#: ../../whatsnew/3.15.rst:1802
 msgid "(Contributed by Jelle Zijlstra in :gh:`145033`.)"
 msgstr "(Beigetragen von Jelle Zijlstra in :gh:`145033`.)"
 
-#: ../../whatsnew/3.15.rst:1804
+#: ../../whatsnew/3.15.rst:1806
 msgid ""
 ":pep:`728`: Add support in :class:`~typing.TypedDict` for the *closed* and "
 "*extra_items* class arguments. A closed :class:`~typing.TypedDict` does not "
@@ -3685,7 +3682,7 @@ msgstr ""
 "``extra_items`` beliebige zusätzliche Einträge erlaubt, deren Werte vom "
 "angegebenen Typ sind. (Beigetragen von Angela Liss in :gh:`137840`.)"
 
-#: ../../whatsnew/3.15.rst:1811
+#: ../../whatsnew/3.15.rst:1813
 msgid ""
 "Code like ``class ExtraTypeVars(P1[S], Protocol[T, T2]): ...`` now raises a :"
 "exc:`TypeError`, because ``S`` is not listed in ``Protocol`` parameters. "
@@ -3696,7 +3693,7 @@ msgstr ""
 "``Protocol`` aufgeführt ist. (Beigetragen von Nikita Sobolev in :gh:"
 "`137191`.)"
 
-#: ../../whatsnew/3.15.rst:1815
+#: ../../whatsnew/3.15.rst:1817
 msgid ""
 "Code like ``class B2(A[T2], Protocol[T1, T2]): ...`` now correctly handles "
 "type parameters order: it is ``(T1, T2)``, not ``(T2, T1)`` as it was "
@@ -3708,7 +3705,7 @@ msgstr ""
 "nicht ``(T2, T1)``, wie sie zuvor zur Laufzeit fälschlicherweise abgeleitet "
 "wurde. (Beigetragen von Nikita Sobolev in :gh:`137191`.)"
 
-#: ../../whatsnew/3.15.rst:1822
+#: ../../whatsnew/3.15.rst:1824
 msgid ""
 ":pep:`800`: Add :deco:`typing.disjoint_base`, a new decorator marking a "
 "class as a disjoint base. This is an advanced feature primarily intended to "
@@ -3727,7 +3724,7 @@ msgstr ""
 "disjunkten Basen erben, die weder Eltern- noch Kindklassen von ``C`` sind. "
 "(Beigetragen von Jelle Zijlstra in :gh:`148639`.)"
 
-#: ../../whatsnew/3.15.rst:1829
+#: ../../whatsnew/3.15.rst:1831
 msgid ""
 ":class:`~typing.TypeVarTuple` now accepts ``bound``, ``covariant``, "
 "``contravariant``, and ``infer_variance`` keyword arguments, matching the "
@@ -3740,11 +3737,11 @@ msgstr ""
 "ParamSpec`. Die Semantik von ``bound`` bleibt in der Spezifikation "
 "undefiniert."
 
-#: ../../whatsnew/3.15.rst:1836
+#: ../../whatsnew/3.15.rst:1838
 msgid "unicodedata"
 msgstr "unicodedata"
 
-#: ../../whatsnew/3.15.rst:1838
+#: ../../whatsnew/3.15.rst:1840
 msgid ""
 "The Unicode database has been updated to Unicode 17.0.0. (Contributed by "
 "Benjamin Peterson in :gh:`138706`.)"
@@ -3752,7 +3749,7 @@ msgstr ""
 "Die Unicode-Datenbank wurde auf Unicode 17.0.0 aktualisiert. (Beigetragen "
 "von Benjamin Peterson in :gh:`138706`.)"
 
-#: ../../whatsnew/3.15.rst:1841
+#: ../../whatsnew/3.15.rst:1843
 msgid ""
 "Add :func:`unicodedata.isxidstart` and :func:`unicodedata.isxidcontinue` "
 "functions to check whether a character can start or continue a `Unicode "
@@ -3765,7 +3762,7 @@ msgstr ""
 "beginnen oder fortsetzen kann. (Beigetragen von Stan Ulbrych in :gh:"
 "`129117`.)"
 
-#: ../../whatsnew/3.15.rst:1846
+#: ../../whatsnew/3.15.rst:1848
 msgid ""
 "Add the :func:`~unicodedata.iter_graphemes` function to iterate over "
 "grapheme clusters according to rules defined in `Unicode Standard Annex #29, "
@@ -3785,7 +3782,7 @@ msgstr ""
 "eines Zeichens abzufragen. (Beigetragen von Serhiy Storchaka und Guillaume "
 "Sanchez in :gh:`74902`.)"
 
-#: ../../whatsnew/3.15.rst:1856
+#: ../../whatsnew/3.15.rst:1858
 msgid ""
 "Add :func:`~unicodedata.block` function to return the `Unicode block "
 "<https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/"
@@ -3797,11 +3794,11 @@ msgstr ""
 "core-spec/chapter-3/#G64189>`_ zurückgibt. (Beigetragen von Stan Ulbrych in :"
 "gh:`66802`.)"
 
-#: ../../whatsnew/3.15.rst:1863
+#: ../../whatsnew/3.15.rst:1865
 msgid "unittest"
 msgstr "unittest"
 
-#: ../../whatsnew/3.15.rst:1865
+#: ../../whatsnew/3.15.rst:1867
 msgid ""
 ":meth:`unittest.TestCase.assertLogs` will now accept a formatter to control "
 "how messages are formatted. (Contributed by Garry Cairns in :gh:`134567`.)"
@@ -3810,7 +3807,7 @@ msgstr ""
 "dem sich die Formatierung der Meldungen steuern lässt. (Beigetragen von "
 "Garry Cairns in :gh:`134567`.)"
 
-#: ../../whatsnew/3.15.rst:1869
+#: ../../whatsnew/3.15.rst:1871
 msgid ""
 ":meth:`unittest.TestCase.assertWarns` and :meth:`unittest.TestCase."
 "assertWarnsRegex` no longer swallow warnings that do not match the specified "
@@ -3823,11 +3820,11 @@ msgstr ""
 "Verschachtelte Kontextmanager werden jetzt unterstützt. (Beigetragen von "
 "Serhiy Storchaka in :gh:`143231`.)"
 
-#: ../../whatsnew/3.15.rst:1877
+#: ../../whatsnew/3.15.rst:1879
 msgid "urllib.parse"
 msgstr "urllib.parse"
 
-#: ../../whatsnew/3.15.rst:1879
+#: ../../whatsnew/3.15.rst:1881
 msgid ""
 "Add the *missing_as_none* parameter to :func:`~urllib.parse.urlsplit`, :func:"
 "`~urllib.parse.urlparse` and :func:`~urllib.parse.urldefrag` functions. Add "
@@ -3844,11 +3841,11 @@ msgstr ""
 "unterscheiden, und leere Komponenten bleiben erhalten. (Beigetragen von "
 "Serhiy Storchaka in :gh:`67041`.)"
 
-#: ../../whatsnew/3.15.rst:1889
+#: ../../whatsnew/3.15.rst:1891
 msgid "venv"
 msgstr "venv"
 
-#: ../../whatsnew/3.15.rst:1891
+#: ../../whatsnew/3.15.rst:1893
 msgid ""
 "On POSIX platforms, platlib directories will be created if needed when "
 "creating virtual environments, instead of using a ``lib64 -> lib`` symlink. "
@@ -3863,11 +3860,11 @@ msgstr ""
 "``lib`` ist, nicht mehr dasselbe Verzeichnis ``lib`` teilen. (Beigetragen "
 "von Rui Xi in :gh:`133951`.)"
 
-#: ../../whatsnew/3.15.rst:1900
+#: ../../whatsnew/3.15.rst:1902
 msgid "warnings"
 msgstr "warnings"
 
-#: ../../whatsnew/3.15.rst:1902
+#: ../../whatsnew/3.15.rst:1904
 msgid ""
 "Improve filtering by module in :func:`warnings.warn_explicit` if no *module* "
 "argument is passed. It now tests the module regular expression in the "
@@ -3884,11 +3881,11 @@ msgstr ""
 "__init__.py``, ``.py`` und unter Windows ``.pyw``). (Beigetragen von Serhiy "
 "Storchaka in :gh:`135801`.)"
 
-#: ../../whatsnew/3.15.rst:1912 ../../whatsnew/3.15.rst:2272
+#: ../../whatsnew/3.15.rst:1914 ../../whatsnew/3.15.rst:2274
 msgid "wave"
 msgstr "wave"
 
-#: ../../whatsnew/3.15.rst:1914
+#: ../../whatsnew/3.15.rst:1916
 msgid ""
 "Added support for IEEE floating-point WAVE audio "
 "(``WAVE_FORMAT_IEEE_FLOAT``) in :mod:`wave`."
@@ -3896,7 +3893,7 @@ msgstr ""
 "Unterstützung für WAVE-Audio im IEEE-Gleitkommaformat "
 "(``WAVE_FORMAT_IEEE_FLOAT``) in :mod:`wave` hinzugefügt."
 
-#: ../../whatsnew/3.15.rst:1917
+#: ../../whatsnew/3.15.rst:1919
 msgid ""
 "Added :meth:`wave.Wave_read.getformat`, :meth:`wave.Wave_write.getformat`, "
 "and :meth:`wave.Wave_write.setformat` for explicit frame format handling."
@@ -3905,7 +3902,7 @@ msgstr ""
 "meth:`wave.Wave_write.setformat` für die explizite Behandlung des Frame-"
 "Formats hinzugefügt."
 
-#: ../../whatsnew/3.15.rst:1920
+#: ../../whatsnew/3.15.rst:1922
 msgid ""
 ":meth:`wave.Wave_write.setparams` accepts both 7-item tuples including "
 "``format`` and 6-item tuples for backwards compatibility (defaulting to "
@@ -3915,7 +3912,7 @@ msgstr ""
 "einschließlich ``format`` als auch aus Gründen der Abwärtskompatibilität 6-"
 "elementige Tupel (mit ``WAVE_FORMAT_PCM`` als Standard)."
 
-#: ../../whatsnew/3.15.rst:1924
+#: ../../whatsnew/3.15.rst:1926
 msgid ""
 "``WAVE_FORMAT_IEEE_FLOAT`` output now includes a ``fact`` chunk, as required "
 "for non-PCM WAVE formats."
@@ -3923,15 +3920,15 @@ msgstr ""
 "Die Ausgabe mit ``WAVE_FORMAT_IEEE_FLOAT`` enthält jetzt einen Chunk "
 "``fact``, wie er für WAVE-Formate außer PCM erforderlich ist."
 
-#: ../../whatsnew/3.15.rst:1927
+#: ../../whatsnew/3.15.rst:1929
 msgid "(Contributed by Lionel Koenig and Michiel W. Beijen in :gh:`60729`.)"
 msgstr "(Beigetragen von Lionel Koenig und Michiel W. Beijen in :gh:`60729`.)"
 
-#: ../../whatsnew/3.15.rst:1931
+#: ../../whatsnew/3.15.rst:1933
 msgid "webbrowser"
 msgstr "webbrowser"
 
-#: ../../whatsnew/3.15.rst:1933
+#: ../../whatsnew/3.15.rst:1935
 msgid ""
 "On macOS, the new :class:`!webbrowser.MacOS` class opens URLs via :program:`/"
 "usr/bin/open` instead of constructing and executing AppleScript via :program:"
@@ -3952,11 +3949,11 @@ msgstr ""
 "Das verhindert Angriffe durch Einschleusen von Dateien. (Beigetragen von "
 "Jeff Lyon in :gh:`137586`.)"
 
-#: ../../whatsnew/3.15.rst:1945
+#: ../../whatsnew/3.15.rst:1947
 msgid "xml"
 msgstr "xml"
 
-#: ../../whatsnew/3.15.rst:1947
+#: ../../whatsnew/3.15.rst:1949
 msgid ""
 "Add the :func:`xml.is_valid_name` function to check whether a string can be "
 "used as an element or attribute name in XML. (Contributed by Serhiy "
@@ -3966,7 +3963,7 @@ msgstr ""
 "Zeichenkette als Element- oder Attributname in XML verwendet werden kann. "
 "(Beigetragen von Serhiy Storchaka in :gh:`139489`.)"
 
-#: ../../whatsnew/3.15.rst:1951
+#: ../../whatsnew/3.15.rst:1953
 msgid ""
 "Add the :func:`xml.is_valid_text` function to check whether a string can be "
 "used in an XML document. (Contributed by Serhiy Storchaka in :gh:`139489`.)"
@@ -3975,11 +3972,11 @@ msgstr ""
 "Zeichenkette in einem XML-Dokument verwendet werden kann. (Beigetragen von "
 "Serhiy Storchaka in :gh:`139489`.)"
 
-#: ../../whatsnew/3.15.rst:1957
+#: ../../whatsnew/3.15.rst:1959
 msgid "xml.parsers.expat"
 msgstr "xml.parsers.expat"
 
-#: ../../whatsnew/3.15.rst:1959
+#: ../../whatsnew/3.15.rst:1961
 msgid ""
 "Add :meth:`~xml.parsers.expat.xmlparser.SetAllocTrackerActivationThreshold` "
 "and :meth:`~xml.parsers.expat.xmlparser.SetAllocTrackerMaximumAmplification` "
@@ -3994,7 +3991,7 @@ msgstr ""
 "Speicherverbrauch innerhalb eines Expat-Parsers einzustellen. (Beigetragen "
 "von Bénédikt Tran in :gh:`90949`.)"
 
-#: ../../whatsnew/3.15.rst:1965
+#: ../../whatsnew/3.15.rst:1967
 msgid ""
 "Add :meth:`~xml.parsers.expat.xmlparser."
 "SetBillionLaughsAttackProtectionActivationThreshold` and :meth:`~xml.parsers."
@@ -4009,11 +4006,11 @@ msgstr ""
 "den Schutz vor Angriffen vom Typ `billion laughs`_ einzustellen. "
 "(Beigetragen von Bénédikt Tran in :gh:`90949`.)"
 
-#: ../../whatsnew/3.15.rst:1975
+#: ../../whatsnew/3.15.rst:1977
 msgid "zlib"
 msgstr "zlib"
 
-#: ../../whatsnew/3.15.rst:1977
+#: ../../whatsnew/3.15.rst:1979
 msgid ""
 "Allow combining two Adler-32 checksums via :func:`~zlib.adler32_combine`. "
 "(Contributed by Callum Attryde and Bénédikt Tran in :gh:`134635`.)"
@@ -4022,7 +4019,7 @@ msgstr ""
 "kombinieren. (Beigetragen von Callum Attryde und Bénédikt Tran in :gh:"
 "`134635`.)"
 
-#: ../../whatsnew/3.15.rst:1980
+#: ../../whatsnew/3.15.rst:1982
 msgid ""
 "Allow combining two CRC-32 checksums via :func:`~zlib.crc32_combine`. "
 "(Contributed by Bénédikt Tran in :gh:`134635`.)"
@@ -4030,11 +4027,11 @@ msgstr ""
 "Zwei CRC-32-Prüfsummen lassen sich jetzt mit :func:`~zlib.crc32_combine` "
 "kombinieren. (Beigetragen von Bénédikt Tran in :gh:`134635`.)"
 
-#: ../../whatsnew/3.15.rst:1987
+#: ../../whatsnew/3.15.rst:1989
 msgid "Optimizations"
 msgstr "Optimierungen"
 
-#: ../../whatsnew/3.15.rst:1989
+#: ../../whatsnew/3.15.rst:1991
 msgid ""
 "``mimalloc`` is now used as the default allocator for raw memory allocations "
 "such as via :c:func:`PyMem_RawMalloc` for better performance on :term:`free-"
@@ -4046,11 +4043,11 @@ msgstr ""
 "Performance in :term:`Builds mit freien Threads <free-threaded build>` zu "
 "verbessern. (Beigetragen von Kumar Aditya in :gh:`144914`.)"
 
-#: ../../whatsnew/3.15.rst:1996
+#: ../../whatsnew/3.15.rst:1998
 msgid "base64 & binascii"
 msgstr "base64 & binascii"
 
-#: ../../whatsnew/3.15.rst:1998
+#: ../../whatsnew/3.15.rst:2000
 msgid ""
 "CPython's underlying base64 implementation now encodes 2x faster and decodes "
 "3x faster thanks to simple CPU pipelining optimizations. (Contributed by "
@@ -4061,7 +4058,7 @@ msgstr ""
 "dekodiert dreimal so schnell. (Beigetragen von Gregory P. Smith und Serhiy "
 "Storchaka in :gh:`143262`.)"
 
-#: ../../whatsnew/3.15.rst:2002
+#: ../../whatsnew/3.15.rst:2004
 msgid ""
 "Implementation for Ascii85, Base85, and Z85 encoding has been rewritten in "
 "C. Encoding and decoding is now two orders of magnitude faster and consumes "
@@ -4073,7 +4070,7 @@ msgstr ""
 "schneller und verbrauchen zwei Größenordnungen weniger Speicher. "
 "(Beigetragen von James Seo und Serhiy Storchaka in :gh:`101178`.)"
 
-#: ../../whatsnew/3.15.rst:2007
+#: ../../whatsnew/3.15.rst:2009
 msgid ""
 "Implementation for Base32 has been rewritten in C. Encoding and decoding is "
 "now two orders of magnitude faster. (Contributed by James Seo in :gh:"
@@ -4083,11 +4080,11 @@ msgstr ""
 "Dekodieren sind jetzt um zwei Größenordnungen schneller. (Beigetragen von "
 "James Seo in :gh:`146192`.)"
 
-#: ../../whatsnew/3.15.rst:2013
+#: ../../whatsnew/3.15.rst:2015
 msgid "csv"
 msgstr "csv"
 
-#: ../../whatsnew/3.15.rst:2015
+#: ../../whatsnew/3.15.rst:2017
 msgid ""
 ":meth:`csv.Sniffer.sniff` delimiter detection is now up to 1.6x faster. "
 "(Contributed by Maurycy Pawłowski-Wieroński in :gh:`137628`.)"
@@ -4096,11 +4093,11 @@ msgstr ""
 "zu 1,6-mal schneller. (Beigetragen von Maurycy Pawłowski-Wieroński in :gh:"
 "`137628`.)"
 
-#: ../../whatsnew/3.15.rst:2022
+#: ../../whatsnew/3.15.rst:2024
 msgid "Upgraded experimental JIT compiler"
 msgstr "Verbesserter experimenteller JIT-Compiler"
 
-#: ../../whatsnew/3.15.rst:2024
+#: ../../whatsnew/3.15.rst:2026
 msgid ""
 "Results from the `pyperformance <https://github.com/python/pyperformance>`__ "
 "benchmark suite report a `7-8% <https://www.doesjitgobrrr.com/"
@@ -4125,35 +4122,35 @@ msgstr ""
 "Systemen von etwa 15 % Verlangsamung bis zu über 100 % Beschleunigung (vom "
 "Mikro-Benchmark ``unpack_sequence`` abgesehen)."
 
-#: ../../whatsnew/3.15.rst:2037
+#: ../../whatsnew/3.15.rst:2039
 msgid "The major upgrades to the JIT are:"
 msgstr "Die wichtigsten Verbesserungen am JIT sind:"
 
-#: ../../whatsnew/3.15.rst:2039 ../../whatsnew/3.15.rst:2047
+#: ../../whatsnew/3.15.rst:2041 ../../whatsnew/3.15.rst:2049
 msgid "LLVM 21 build-time dependency"
 msgstr "LLVM 21 als Abhängigkeit zur Build-Zeit"
 
-#: ../../whatsnew/3.15.rst:2040
+#: ../../whatsnew/3.15.rst:2042
 msgid "New tracing frontend"
 msgstr "Neues Tracing-Frontend"
 
-#: ../../whatsnew/3.15.rst:2041 ../../whatsnew/3.15.rst:2069
+#: ../../whatsnew/3.15.rst:2043 ../../whatsnew/3.15.rst:2071
 msgid "Basic register allocation in the JIT"
 msgstr "Einfache Registerzuteilung im JIT"
 
-#: ../../whatsnew/3.15.rst:2042 ../../whatsnew/3.15.rst:2077
+#: ../../whatsnew/3.15.rst:2044 ../../whatsnew/3.15.rst:2079
 msgid "More JIT optimizations"
 msgstr "Weitere JIT-Optimierungen"
 
-#: ../../whatsnew/3.15.rst:2043 ../../whatsnew/3.15.rst:2096
+#: ../../whatsnew/3.15.rst:2045 ../../whatsnew/3.15.rst:2098
 msgid "GDB and GNU ``backtrace()`` unwinding support"
 msgstr "Unterstützung für Unwinding mit GDB und GNU ``backtrace()``"
 
-#: ../../whatsnew/3.15.rst:2044 ../../whatsnew/3.15.rst:2107
+#: ../../whatsnew/3.15.rst:2046 ../../whatsnew/3.15.rst:2109
 msgid "Better machine code generation"
 msgstr "Bessere Generierung von Maschinencode"
 
-#: ../../whatsnew/3.15.rst:2048
+#: ../../whatsnew/3.15.rst:2050
 msgid ""
 "The JIT compiler now uses LLVM 21 for build-time stencil generation. As "
 "always, LLVM is only needed when building CPython with the JIT enabled; end "
@@ -4170,11 +4167,11 @@ msgstr ""
 "<https://github.com/python/cpython/blob/main/Tools/jit/README.md>`__. "
 "(Beigetragen von Savannah Ostrowski in :gh:`140973`.)"
 
-#: ../../whatsnew/3.15.rst:2057
+#: ../../whatsnew/3.15.rst:2059
 msgid "A new tracing frontend"
 msgstr "Ein neues Tracing-Frontend"
 
-#: ../../whatsnew/3.15.rst:2058
+#: ../../whatsnew/3.15.rst:2060
 msgid ""
 "The JIT compiler now supports significantly more bytecode operations and "
 "control flow than in Python 3.14, enabling speedups on a wider variety of "
@@ -4195,7 +4192,7 @@ msgstr ""
 "Implementierung zu schätzen. (Beigetragen von Ken Jin in :gh:`139109`. "
 "Unterstützung für Windows hinzugefügt von Mark Shannon in :gh:`141703`.)"
 
-#: ../../whatsnew/3.15.rst:2070
+#: ../../whatsnew/3.15.rst:2072
 msgid ""
 "A basic form of register allocation has been added to the JIT compiler's "
 "optimizer. This allows the JIT compiler to avoid certain stack operations "
@@ -4209,7 +4206,7 @@ msgstr ""
 "der JIT effizientere Traces erzeugen, weil Lese- und Schreibzugriffe auf den "
 "Speicher entfallen. (Beigetragen von Mark Shannon in :gh:`135379`.)"
 
-#: ../../whatsnew/3.15.rst:2078
+#: ../../whatsnew/3.15.rst:2080
 msgid ""
 "More `constant-propagation <https://en.wikipedia.org/wiki/"
 "Constant_folding>`__ is now performed. This means when the JIT compiler "
@@ -4223,7 +4220,7 @@ msgstr ""
 "vereinfachen. (Beigetragen von Ken Jin und Savannah Ostrowski in :gh:"
 "`132732`.)"
 
-#: ../../whatsnew/3.15.rst:2083
+#: ../../whatsnew/3.15.rst:2085
 msgid ""
 ":term:`Reference counts <reference count>` are avoided whenever it is safe "
 "to do so. This generally reduces the cost of most operations in Python. "
@@ -4237,7 +4234,7 @@ msgstr ""
 "Zhu, Savannah Ostrowski, Reiden Ong, Noam Cohen, Tomas Roun, PuQing, Cajetan "
 "Rodrigues und Sacul in :gh:`134584`.)"
 
-#: ../../whatsnew/3.15.rst:2088
+#: ../../whatsnew/3.15.rst:2090
 msgid ""
 "By tracking unique references to objects, the JIT optimizer can now "
 "eliminate reference count updates and perform in-place operations on ints "
@@ -4249,7 +4246,7 @@ msgstr ""
 "Operationen auf Ganzzahlen und Gleitkommazahlen durchführen. (Beigetragen "
 "von Reiden Ong und Pieter Eendebak in :gh:`143414` und :gh:`146306`.)"
 
-#: ../../whatsnew/3.15.rst:2092
+#: ../../whatsnew/3.15.rst:2094
 msgid ""
 "The JIT optimizer now supports significantly more operations than in 3.14. "
 "(Contributed by Kumar Aditya, Ken Jin, Jiahao Li, and Sacul in :gh:`131798`.)"
@@ -4257,7 +4254,7 @@ msgstr ""
 "Der JIT-Optimierer unterstützt jetzt deutlich mehr Operationen als in 3.14. "
 "(Beigetragen von Kumar Aditya, Ken Jin, Jiahao Li und Sacul in :gh:`131798`.)"
 
-#: ../../whatsnew/3.15.rst:2097
+#: ../../whatsnew/3.15.rst:2099
 msgid ""
 "The JIT compiler now publishes unwind information for generated machine code "
 "to the GDB interface on supported Linux ELF platforms. When libgcc frame "
@@ -4276,7 +4273,7 @@ msgstr ""
 "abwickeln, statt am generierten Code anzuhalten. (Beigetragen von Diego "
 "Russo und Pablo Galindo Salgado in :gh:`146071` und :gh:`149104`.)"
 
-#: ../../whatsnew/3.15.rst:2108
+#: ../../whatsnew/3.15.rst:2110
 msgid ""
 "The JIT compiler's machine code generator now produces better machine code "
 "for x86-64 and AArch64 macOS and Linux targets. In general, users should "
@@ -4295,11 +4292,11 @@ msgstr ""
 "Zusätzliche Optimierungen für AArch64 beigetragen von Mark Shannon und Diego "
 "Russo in :gh:`140683` und :gh:`142305`.)"
 
-#: ../../whatsnew/3.15.rst:2118
+#: ../../whatsnew/3.15.rst:2120
 msgid "Maintainability"
 msgstr "Wartbarkeit"
 
-#: ../../whatsnew/3.15.rst:2119
+#: ../../whatsnew/3.15.rst:2121
 msgid ""
 "The JIT optimizer's operations have been simplified. This was made possible "
 "by a refactoring of JIT data structures. (Contributed by Zhongtian Zheng in :"
@@ -4309,11 +4306,11 @@ msgstr ""
 "durch ein Refactoring der Datenstrukturen des JIT. (Beigetragen von "
 "Zhongtian Zheng in :gh:`148211` und Hai Zhu in :gh:`143421`.)"
 
-#: ../../whatsnew/3.15.rst:2125
+#: ../../whatsnew/3.15.rst:2127
 msgid "Removed"
 msgstr "Entfernt"
 
-#: ../../whatsnew/3.15.rst:2130
+#: ../../whatsnew/3.15.rst:2132
 msgid ""
 "The constructors of :ref:`AST nodes <ast_nodes>` now raise a :exc:"
 "`TypeError` when a required argument is omitted or when a keyword argument "
@@ -4329,11 +4326,11 @@ msgstr ""
 "`DeprecationWarning` ausgelöst. (Beigetragen von Brian Schubert und Jelle "
 "Zijlstra in :gh:`137600` und :gh:`105858`.)"
 
-#: ../../whatsnew/3.15.rst:2138
+#: ../../whatsnew/3.15.rst:2140
 msgid "collections.abc"
 msgstr "collections.abc"
 
-#: ../../whatsnew/3.15.rst:2140
+#: ../../whatsnew/3.15.rst:2142
 msgid ""
 ":class:`collections.abc.ByteString` has been removed from ``collections.abc."
 "__all__``. :class:`!collections.abc.ByteString` has been deprecated since "
@@ -4345,7 +4342,7 @@ msgstr ""
 "und soll in Python 3.17 entfernt werden. (Beigetragen von Alex Waygood in :"
 "gh:`118803`.)"
 
-#: ../../whatsnew/3.15.rst:2149
+#: ../../whatsnew/3.15.rst:2151
 msgid ""
 "Removed the undocumented function :func:`!ctypes.SetPointerType`, which has "
 "been deprecated since Python 3.13. (Contributed by Bénédikt Tran in :gh:"
@@ -4355,11 +4352,11 @@ msgstr ""
 "3.13 veraltet war, wurde entfernt. (Beigetragen von Bénédikt Tran in :gh:"
 "`133866`.)"
 
-#: ../../whatsnew/3.15.rst:2155
+#: ../../whatsnew/3.15.rst:2157
 msgid "datetime"
 msgstr "datetime"
 
-#: ../../whatsnew/3.15.rst:2157
+#: ../../whatsnew/3.15.rst:2159
 msgid ""
 ":meth:`~datetime.datetime.strptime` now raises :exc:`ValueError` when the "
 "format string contains ``%d`` (day of month) without a year directive. This "
@@ -4371,11 +4368,11 @@ msgstr ""
 "enthält. Dies war seit Python 3.13 veraltet. (Beigetragen von Stan Ulbrych "
 "und Gregory P. Smith in :gh:`70647`.)"
 
-#: ../../whatsnew/3.15.rst:2164
+#: ../../whatsnew/3.15.rst:2166
 msgid "glob"
 msgstr "glob"
 
-#: ../../whatsnew/3.15.rst:2166
+#: ../../whatsnew/3.15.rst:2168
 msgid ""
 "Removed the undocumented :func:`!glob.glob0` and :func:`!glob.glob1` "
 "functions, which have been deprecated since Python 3.13. Use :func:`glob."
@@ -4387,7 +4384,7 @@ msgstr ""
 "func:`glob.glob` und übergib ein Verzeichnis an dessen Argument *root_dir*. "
 "(Beigetragen von Barney Gale in :gh:`137466`.)"
 
-#: ../../whatsnew/3.15.rst:2175
+#: ../../whatsnew/3.15.rst:2177
 msgid ""
 "Removed the :class:`!CGIHTTPRequestHandler` class and the ``--cgi`` flag "
 "from the :program:`python -m http.server` command-line interface. They were "
@@ -4398,11 +4395,11 @@ msgstr ""
 "entfernt. Sie waren seit Python 3.13 veraltet. (Beigetragen von Bénédikt "
 "Tran in :gh:`133810`.)"
 
-#: ../../whatsnew/3.15.rst:2182
+#: ../../whatsnew/3.15.rst:2184
 msgid "importlib"
 msgstr "importlib"
 
-#: ../../whatsnew/3.15.rst:2184
+#: ../../whatsnew/3.15.rst:2186
 msgid ""
 "The ``load_module()`` methods of :class:`~importlib.abc.Loader` and its "
 "subclasses is removed. The import system will no longer call it when defined "
@@ -4416,11 +4413,11 @@ msgstr ""
 "zugunsten von :meth:`~importlib.abc.Loader.exec_module` veraltet. "
 "(Beigetragen von Brett Cannon in :gh:`97850`.)"
 
-#: ../../whatsnew/3.15.rst:2193
+#: ../../whatsnew/3.15.rst:2195
 msgid "importlib.resources"
 msgstr "importlib.resources"
 
-#: ../../whatsnew/3.15.rst:2195
+#: ../../whatsnew/3.15.rst:2197
 msgid ""
 "Removed deprecated ``package`` parameter from :func:`importlib.resources."
 "files` function. (Contributed by Semyon Moroz in :gh:`138044`.)"
@@ -4428,7 +4425,7 @@ msgstr ""
 "Den veralteten Parameter ``package`` der Funktion :func:`importlib.resources."
 "files` entfernt. (Beigetragen von Semyon Moroz in :gh:`138044`.)"
 
-#: ../../whatsnew/3.15.rst:2203
+#: ../../whatsnew/3.15.rst:2205
 msgid ""
 "Removed deprecated :meth:`!pathlib.PurePath.is_reserved`. Use :func:`os.path."
 "isreserved` to detect reserved paths on Windows. (Contributed by Nikita "
@@ -4438,11 +4435,11 @@ msgstr ""
 "`os.path.isreserved`, um reservierte Pfade unter Windows zu erkennen. "
 "(Beigetragen von Nikita Sobolev in :gh:`133875`.)"
 
-#: ../../whatsnew/3.15.rst:2209
+#: ../../whatsnew/3.15.rst:2211
 msgid "platform"
 msgstr "platform"
 
-#: ../../whatsnew/3.15.rst:2211
+#: ../../whatsnew/3.15.rst:2213
 msgid ""
 "Removed the :func:`!platform.java_ver` function, which was deprecated since "
 "Python 3.13. (Contributed by Alexey Makridenko in :gh:`133604`.)"
@@ -4450,11 +4447,11 @@ msgstr ""
 "Die Funktion :func:`!platform.java_ver`, die seit Python 3.13 veraltet war, "
 "wurde entfernt. (Beigetragen von Alexey Makridenko in :gh:`133604`.)"
 
-#: ../../whatsnew/3.15.rst:2217
+#: ../../whatsnew/3.15.rst:2219
 msgid "sre_*"
 msgstr "sre_*"
 
-#: ../../whatsnew/3.15.rst:2219
+#: ../../whatsnew/3.15.rst:2221
 msgid ""
 "Removed :mod:`!sre_compile`, :mod:`!sre_constants` and :mod:`!sre_parse` "
 "modules. (Contributed by Stan Ulbrych in :gh:`135994`.)"
@@ -4462,11 +4459,11 @@ msgstr ""
 "Die Module :mod:`!sre_compile`, :mod:`!sre_constants` und :mod:`!sre_parse` "
 "wurden entfernt. (Beigetragen von Stan Ulbrych in :gh:`135994`.)"
 
-#: ../../whatsnew/3.15.rst:2224
+#: ../../whatsnew/3.15.rst:2226
 msgid "sysconfig"
 msgstr "sysconfig"
 
-#: ../../whatsnew/3.15.rst:2226
+#: ../../whatsnew/3.15.rst:2228
 msgid ""
 "Removed the *check_home* parameter of :func:`sysconfig.is_python_build`. "
 "(Contributed by Filipe Laíns in :gh:`92897`.)"
@@ -4474,7 +4471,7 @@ msgstr ""
 "Den Parameter *check_home* von :func:`sysconfig.is_python_build` entfernt. "
 "(Beigetragen von Filipe Laíns in :gh:`92897`.)"
 
-#: ../../whatsnew/3.15.rst:2233
+#: ../../whatsnew/3.15.rst:2235
 msgid ""
 "Remove support for arbitrary positional or keyword arguments in the C "
 "implementation of :class:`~threading.RLock` objects. This was deprecated in "
@@ -4485,7 +4482,7 @@ msgstr ""
 "entfernt. Dies war seit Python 3.14 veraltet. (Beigetragen von Bénédikt Tran "
 "in :gh:`134087`.)"
 
-#: ../../whatsnew/3.15.rst:2242
+#: ../../whatsnew/3.15.rst:2244
 msgid ""
 "Removed :attr:`!codeobject.co_lnotab` from :class:`types.CodeType`, "
 "deprecated since Python 3.12 by :pep:`626`. (Contributed by Nikita Sobolev "
@@ -4495,7 +4492,7 @@ msgstr ""
 "war seit Python 3.12 durch :pep:`626` veraltet. (Beigetragen von Nikita "
 "Sobolev in :gh:`134690`.)"
 
-#: ../../whatsnew/3.15.rst:2250
+#: ../../whatsnew/3.15.rst:2252
 msgid ""
 ":class:`typing.ByteString` has been removed from ``typing.__all__``. :class:"
 "`!typing.ByteString` has been deprecated since Python 3.9, and is scheduled "
@@ -4505,7 +4502,7 @@ msgstr ""
 "typing.ByteString` ist seit Python 3.9 veraltet und soll in Python 3.17 "
 "entfernt werden. (Beigetragen von Alex Waygood in :gh:`118803`.)"
 
-#: ../../whatsnew/3.15.rst:2255
+#: ../../whatsnew/3.15.rst:2257
 msgid ""
 "The undocumented keyword argument syntax for creating :class:`~typing."
 "NamedTuple` classes (for example, ``Point = NamedTuple(\"Point\", x=int, "
@@ -4518,7 +4515,7 @@ msgstr ""
 "stattdessen die klassenbasierte oder die funktionale Syntax. (Beigetragen "
 "von Bénédikt Tran in :gh:`133817`.)"
 
-#: ../../whatsnew/3.15.rst:2261
+#: ../../whatsnew/3.15.rst:2263
 msgid ""
 "Using ``TD = TypedDict(\"TD\")`` or ``TD = TypedDict(\"TD\", None)`` to "
 "construct a :class:`~typing.TypedDict` type with zero fields is no longer "
@@ -4531,7 +4528,7 @@ msgstr ""
 "oder ``TD = TypedDict(\"TD\", {})``. (Beigetragen von Bénédikt Tran in :gh:"
 "`133823`.)"
 
-#: ../../whatsnew/3.15.rst:2267
+#: ../../whatsnew/3.15.rst:2269
 msgid ""
 "Deprecated :deco:`!typing.no_type_check_decorator` has been removed. "
 "(Contributed by Nikita Sobolev in :gh:`133601`.)"
@@ -4539,7 +4536,7 @@ msgstr ""
 "Der veraltete Dekorator :deco:`!typing.no_type_check_decorator` wurde "
 "entfernt. (Beigetragen von Nikita Sobolev in :gh:`133601`.)"
 
-#: ../../whatsnew/3.15.rst:2274
+#: ../../whatsnew/3.15.rst:2276
 msgid ""
 "Removed the ``getmark()``, ``setmark()`` and ``getmarkers()`` methods of "
 "the :class:`~wave.Wave_read` and :class:`~wave.Wave_write` classes, which "
@@ -4551,11 +4548,11 @@ msgstr ""
 "veraltet waren, wurden entfernt. (Beigetragen von Bénédikt Tran in :gh:"
 "`133873`.)"
 
-#: ../../whatsnew/3.15.rst:2281
+#: ../../whatsnew/3.15.rst:2283
 msgid "zipimport"
 msgstr "zipimport"
 
-#: ../../whatsnew/3.15.rst:2283
+#: ../../whatsnew/3.15.rst:2285
 msgid ""
 "Remove deprecated :meth:`!zipimport.zipimporter.load_module`. Use :meth:"
 "`zipimport.zipimporter.exec_module` instead. (Contributed by Jiahao Li in :"
@@ -4565,20 +4562,20 @@ msgstr ""
 "stattdessen :meth:`zipimport.zipimporter.exec_module`. (Beigetragen von "
 "Jiahao Li in :gh:`133656`.)"
 
-#: ../../whatsnew/3.15.rst:2289
+#: ../../whatsnew/3.15.rst:2291
 msgid "Deprecated"
 msgstr "Als veraltet markiert"
 
-#: ../../whatsnew/3.15.rst:2292
+#: ../../whatsnew/3.15.rst:2294
 msgid "New deprecations"
 msgstr "Neu als veraltet markiert"
 
-#: ../../whatsnew/3.15.rst:2294
+#: ../../whatsnew/3.15.rst:2296
 #: ../../deprecations/pending-removal-in-3.20.rst:52
 msgid ":mod:`ast`:"
 msgstr ":mod:`ast`:"
 
-#: ../../whatsnew/3.15.rst:2296
+#: ../../whatsnew/3.15.rst:2298
 #: ../../deprecations/pending-removal-in-3.20.rst:54
 msgid ""
 "Creating instances of abstract AST nodes (such as :class:`ast.AST` or :class:"
@@ -4588,15 +4585,15 @@ msgstr ""
 "oder :class:`!ast.expr`) ist veraltet und wird in Python 3.20 einen Fehler "
 "auslösen."
 
-#: ../../whatsnew/3.15.rst:2299
+#: ../../whatsnew/3.15.rst:2301
 msgid "(Contributed by Brian Schubert in :gh:`116021`.)"
 msgstr "(Beigetragen von Brian Schubert in :gh:`116021`.)"
 
-#: ../../whatsnew/3.15.rst:2301
+#: ../../whatsnew/3.15.rst:2303
 msgid ":mod:`base64`:"
 msgstr ":mod:`base64`:"
 
-#: ../../whatsnew/3.15.rst:2303
+#: ../../whatsnew/3.15.rst:2305
 msgid ""
 "Accepting the ``+`` and ``/`` characters with an alternative alphabet in :"
 "func:`~base64.b64decode` and :func:`~base64.urlsafe_b64decode` is now "
@@ -4610,11 +4607,11 @@ msgstr ""
 "und werden im nicht strikten Modus verworfen. (Beigetragen von Serhiy "
 "Storchaka in :gh:`125346`.)"
 
-#: ../../whatsnew/3.15.rst:2310
+#: ../../whatsnew/3.15.rst:2312
 msgid "CLI:"
 msgstr "Kommandozeile:"
 
-#: ../../whatsnew/3.15.rst:2312
+#: ../../whatsnew/3.15.rst:2314
 msgid ""
 "Deprecate :option:`-b` and :option:`!-bb` command-line options and schedule "
 "them to become no-ops in Python 3.17. These were primarily helpers for the "
@@ -4627,16 +4624,16 @@ msgstr ""
 "keine :exc:`BytesWarning` mehr ausgelöst. Verwende stattdessen einen "
 "Typprüfer."
 
-#: ../../whatsnew/3.15.rst:2318
+#: ../../whatsnew/3.15.rst:2320
 msgid "(Contributed by Nikita Sobolev in :gh:`136355`.)"
 msgstr "(Beigetragen von Nikita Sobolev in :gh:`136355`.)"
 
-#: ../../whatsnew/3.15.rst:2320
+#: ../../whatsnew/3.15.rst:2322
 #: ../../deprecations/pending-removal-in-3.17.rst:12
 msgid ":mod:`collections.abc`:"
 msgstr ":mod:`collections.abc`:"
 
-#: ../../whatsnew/3.15.rst:2322 ../../whatsnew/3.15.rst:2413
+#: ../../whatsnew/3.15.rst:2324 ../../whatsnew/3.15.rst:2415
 msgid ""
 "The following statements now cause ``DeprecationWarning``\\ s to be emitted "
 "at runtime:"
@@ -4644,15 +4641,15 @@ msgstr ""
 "Die folgenden Anweisungen lösen jetzt zur Laufzeit ``DeprecationWarning`` "
 "aus:"
 
-#: ../../whatsnew/3.15.rst:2325
+#: ../../whatsnew/3.15.rst:2327
 msgid "``from collections.abc import ByteString``"
 msgstr "``from collections.abc import ByteString``"
 
-#: ../../whatsnew/3.15.rst:2326
+#: ../../whatsnew/3.15.rst:2328
 msgid "``import collections.abc; collections.abc.ByteString``."
 msgstr "``import collections.abc; collections.abc.ByteString``."
 
-#: ../../whatsnew/3.15.rst:2328
+#: ../../whatsnew/3.15.rst:2330
 msgid ""
 "``DeprecationWarning``\\ s were already emitted if :class:`collections.abc."
 "ByteString` was subclassed or used as the second argument to :func:"
@@ -4667,12 +4664,12 @@ msgstr ""
 "mod:`!collections.abc` abgerufen wurde. (Beigetragen von Alex Waygood in :gh:"
 "`118803`.)"
 
-#: ../../whatsnew/3.15.rst:2336
+#: ../../whatsnew/3.15.rst:2338
 #: ../../deprecations/pending-removal-in-3.19.rst:10
 msgid ":mod:`hashlib`:"
 msgstr ":mod:`hashlib`:"
 
-#: ../../whatsnew/3.15.rst:2338
+#: ../../whatsnew/3.15.rst:2340
 msgid ""
 "In hash function constructors such as :func:`~hashlib.new` or the direct "
 "hash-named constructors such as :func:`~hashlib.md5` and :func:`~hashlib."
@@ -4686,7 +4683,7 @@ msgstr ""
 "in verschiedenen Implementierungen von :mod:`hashlib` auch als "
 "Schlüsselwortargument namens ``data=`` oder ``string=`` übergeben werden."
 
-#: ../../whatsnew/3.15.rst:2344
+#: ../../whatsnew/3.15.rst:2346
 msgid ""
 "Support for the ``string`` keyword argument name is now deprecated and is "
 "slated for removal in Python 3.19. Prefer passing the initial data as a "
@@ -4696,16 +4693,16 @@ msgstr ""
 "und soll in Python 3.19 entfernt werden. Übergib die Anfangsdaten für die "
 "größtmögliche Abwärtskompatibilität am besten als Positionsargument."
 
-#: ../../whatsnew/3.15.rst:2348
+#: ../../whatsnew/3.15.rst:2350
 msgid "(Contributed by Bénédikt Tran in :gh:`134978`.)"
 msgstr "(Beigetragen von Bénédikt Tran in :gh:`134978`.)"
 
-#: ../../whatsnew/3.15.rst:2351
+#: ../../whatsnew/3.15.rst:2353
 #: ../../deprecations/pending-removal-in-3.19.rst:26
 msgid ":mod:`http.cookies`:"
 msgstr ":mod:`http.cookies`:"
 
-#: ../../whatsnew/3.15.rst:2353
+#: ../../whatsnew/3.15.rst:2355
 msgid ""
 ":meth:`Morsel.js_output <http.cookies.Morsel.js_output>` and :meth:"
 "`BaseCookie.js_output <http.cookies.BaseCookie.js_output>` are deprecated "
@@ -4719,12 +4716,12 @@ msgstr ""
 "<http.cookies.Morsel.output>` oder :meth:`BaseCookie.output <http.cookies."
 "BaseCookie.output>`. (Beigetragen von kishorhange111 in :gh:`148849`.)"
 
-#: ../../whatsnew/3.15.rst:2361
+#: ../../whatsnew/3.15.rst:2363
 #: ../../deprecations/pending-removal-in-3.19.rst:34
 msgid ":mod:`imaplib`:"
 msgstr ":mod:`imaplib`:"
 
-#: ../../whatsnew/3.15.rst:2363
+#: ../../whatsnew/3.15.rst:2365
 msgid ""
 "Altering :attr:`IMAP4.file <imaplib.IMAP4.file>` is now deprecated and "
 "slated for removal in Python 3.19. This property is now unused and changing "
@@ -4736,12 +4733,12 @@ msgstr ""
 "verwendet, und das Ändern ihres Werts schließt die aktuelle Datei *nicht* "
 "explizit. (Beigetragen von Bénédikt Tran in :gh:`142307`.)"
 
-#: ../../whatsnew/3.15.rst:2369
+#: ../../whatsnew/3.15.rst:2371
 #: ../../deprecations/pending-removal-in-3.17.rst:40
 msgid ":mod:`profile`:"
 msgstr ":mod:`profile`:"
 
-#: ../../whatsnew/3.15.rst:2371
+#: ../../whatsnew/3.15.rst:2373
 #: ../../deprecations/pending-removal-in-3.17.rst:42
 msgid ""
 "The :mod:`!profile` module is deprecated and will be removed in Python 3.17. "
@@ -4754,11 +4751,11 @@ msgstr ""
 "bietet. Details findest du in :pep:`799`. (Beigetragen von Pablo Galindo und "
 "László Kiss Kollár in :gh:`138122`.)"
 
-#: ../../whatsnew/3.15.rst:2377
+#: ../../whatsnew/3.15.rst:2379
 msgid ":mod:`re`:"
 msgstr ":mod:`re`:"
 
-#: ../../whatsnew/3.15.rst:2379 ../../deprecations/soft-deprecations.rst:6
+#: ../../whatsnew/3.15.rst:2381 ../../deprecations/soft-deprecations.rst:6
 msgid ""
 ":func:`re.match` and :meth:`re.Pattern.match` are now :term:`soft "
 "deprecated` in favor of the new :func:`re.prefixmatch` and :meth:`re.Pattern."
@@ -4777,7 +4774,7 @@ msgstr ""
 "reguläre Ausdrücke der meisten anderen Sprachen verwenden eine API namens "
 "*match* für das, was in Python schon immer *search* heißt."
 
-#: ../../whatsnew/3.15.rst:2388 ../../deprecations/soft-deprecations.rst:15
+#: ../../whatsnew/3.15.rst:2390 ../../deprecations/soft-deprecations.rst:15
 msgid ""
 "We **do not** plan to remove the older :func:`!match` name, as it has been "
 "used in code for over 30 years. Code supporting older versions of Python "
@@ -4790,7 +4787,7 @@ msgstr ""
 "neuer Code :func:`!prefixmatch` bevorzugen sollte. Siehe :ref:`prefixmatch-"
 "vs-match`."
 
-#: ../../whatsnew/3.15.rst:2393 ../../deprecations/soft-deprecations.rst:20
+#: ../../whatsnew/3.15.rst:2395 ../../deprecations/soft-deprecations.rst:20
 msgid ""
 "(Contributed by Gregory P. Smith in :gh:`86519` and Hugo van Kemenade in :gh:"
 "`148100`.)"
@@ -4798,11 +4795,11 @@ msgstr ""
 "(Beigetragen von Gregory P. Smith in :gh:`86519` und Hugo van Kemenade in :"
 "gh:`148100`.)"
 
-#: ../../whatsnew/3.15.rst:2397
+#: ../../whatsnew/3.15.rst:2399
 msgid ":mod:`struct`:"
 msgstr ":mod:`struct`:"
 
-#: ../../whatsnew/3.15.rst:2399
+#: ../../whatsnew/3.15.rst:2401
 msgid ""
 "Calling ``Struct.__new__()`` without a required argument is now deprecated "
 "and will be removed in Python 3.20.  Calling the :meth:`~object.__init__` "
@@ -4814,14 +4811,14 @@ msgstr ""
 "meth:`~object.__init__` auf einem bereits initialisierten Objekt :class:"
 "`~struct.Struct` ist veraltet und wird in Python 3.20 entfernt."
 
-#: ../../whatsnew/3.15.rst:2404
+#: ../../whatsnew/3.15.rst:2406
 #: ../../deprecations/pending-removal-in-3.20.rst:9
 msgid ""
 "(Contributed by Sergey B Kirpichev and Serhiy Storchaka in :gh:`143715`.)"
 msgstr ""
 "(Beigetragen von Sergey B Kirpichev und Serhiy Storchaka in :gh:`143715`.)"
 
-#: ../../whatsnew/3.15.rst:2406
+#: ../../whatsnew/3.15.rst:2408
 msgid ""
 "The ``'F'`` and ``'D'`` type codes are now :term:`soft deprecated` in favor "
 "of the two-letter forms ``'Zf'`` and ``'Zd'``. (Contributed by Sergey B "
@@ -4831,21 +4828,21 @@ msgstr ""
 "deprecated>` zugunsten der zweibuchstabigen Formen ``'Zf'`` und ``'Zd'``. "
 "(Beigetragen von Sergey B Kirpichev in :gh:`121249`.)"
 
-#: ../../whatsnew/3.15.rst:2411
+#: ../../whatsnew/3.15.rst:2413
 #: ../../deprecations/pending-removal-in-3.17.rst:52
 #: ../../deprecations/pending-removal-in-3.20.rst:57
 msgid ":mod:`typing`:"
 msgstr ":mod:`typing`:"
 
-#: ../../whatsnew/3.15.rst:2416
+#: ../../whatsnew/3.15.rst:2418
 msgid "``from typing import ByteString``"
 msgstr "``from typing import ByteString``"
 
-#: ../../whatsnew/3.15.rst:2417
+#: ../../whatsnew/3.15.rst:2419
 msgid "``import typing; typing.ByteString``."
 msgstr "``import typing; typing.ByteString``."
 
-#: ../../whatsnew/3.15.rst:2419
+#: ../../whatsnew/3.15.rst:2421
 msgid ""
 "``DeprecationWarning``\\ s were already emitted if :class:`typing."
 "ByteString` was subclassed or used as the second argument to :func:"
@@ -4860,7 +4857,7 @@ msgstr ""
 "mod:`!typing` abgerufen wurde. (Beigetragen von Alex Waygood in :gh:"
 "`118803`.)"
 
-#: ../../whatsnew/3.15.rst:2425
+#: ../../whatsnew/3.15.rst:2427
 #: ../../deprecations/pending-removal-in-3.20.rst:59
 msgid ""
 "It is deprecated to call :func:`isinstance` and :func:`issubclass` checks on "
@@ -4874,17 +4871,17 @@ msgstr ""
 "Protokollklasse erben. In Python 3.20 wird dies einen :exc:`TypeError` "
 "auslösen."
 
-#: ../../whatsnew/3.15.rst:2430
+#: ../../whatsnew/3.15.rst:2432
 #: ../../deprecations/pending-removal-in-3.20.rst:64
 msgid "(Contributed by Bartosz Sławecki in :gh:`132604`.)"
 msgstr "(Beigetragen von Bartosz Sławecki in :gh:`132604`.)"
 
-#: ../../whatsnew/3.15.rst:2433
+#: ../../whatsnew/3.15.rst:2435
 #: ../../deprecations/pending-removal-in-3.17.rst:47
 msgid ":mod:`webbrowser`:"
 msgstr ":mod:`webbrowser`:"
 
-#: ../../whatsnew/3.15.rst:2435
+#: ../../whatsnew/3.15.rst:2437
 msgid ""
 ":class:`!webbrowser.MacOSXOSAScript` is deprecated in favour of :class:`!"
 "webbrowser.MacOS` and scheduled for removal in Python 3.17. (Contributed by "
@@ -4894,11 +4891,11 @@ msgstr ""
 "MacOS` veraltet und soll in Python 3.17 entfernt werden. (Beigetragen von "
 "Jeff Lyon in :gh:`137586`.)"
 
-#: ../../whatsnew/3.15.rst:2439
+#: ../../whatsnew/3.15.rst:2441
 msgid "``__version__``:"
 msgstr "``__version__``:"
 
-#: ../../whatsnew/3.15.rst:2441
+#: ../../whatsnew/3.15.rst:2443
 #: ../../deprecations/pending-removal-in-3.20.rst:11
 msgid ""
 "The ``__version__``, ``version`` and ``VERSION`` attributes have been "
@@ -4909,127 +4906,127 @@ msgstr ""
 "Modulen der Standardbibliothek veraltet und werden in Python 3.20 entfernt. "
 "Verwende stattdessen :py:data:`sys.version_info`."
 
-#: ../../whatsnew/3.15.rst:2445
+#: ../../whatsnew/3.15.rst:2447
 #: ../../deprecations/pending-removal-in-3.20.rst:15
 msgid ":mod:`argparse`"
 msgstr ":mod:`argparse`"
 
-#: ../../whatsnew/3.15.rst:2446
+#: ../../whatsnew/3.15.rst:2448
 #: ../../deprecations/pending-removal-in-3.20.rst:16
 msgid ":mod:`csv`"
 msgstr ":mod:`csv`"
 
-#: ../../whatsnew/3.15.rst:2447
+#: ../../whatsnew/3.15.rst:2449
 #: ../../deprecations/pending-removal-in-3.20.rst:17
 msgid ":mod:`ctypes`"
 msgstr ":mod:`ctypes`"
 
-#: ../../whatsnew/3.15.rst:2448
+#: ../../whatsnew/3.15.rst:2450
 #: ../../deprecations/pending-removal-in-3.20.rst:18
 msgid ":mod:`!ctypes.macholib`"
 msgstr ":mod:`!ctypes.macholib`"
 
-#: ../../whatsnew/3.15.rst:2449
+#: ../../whatsnew/3.15.rst:2451
 #: ../../deprecations/pending-removal-in-3.20.rst:19
 msgid ":mod:`decimal` (use :data:`decimal.SPEC_VERSION` instead)"
 msgstr ":mod:`decimal` (stattdessen :data:`decimal.SPEC_VERSION` verwenden)"
 
-#: ../../whatsnew/3.15.rst:2450
+#: ../../whatsnew/3.15.rst:2452
 #: ../../deprecations/pending-removal-in-3.20.rst:20
 msgid ":mod:`http.server`"
 msgstr ":mod:`http.server`"
 
-#: ../../whatsnew/3.15.rst:2451
+#: ../../whatsnew/3.15.rst:2453
 #: ../../deprecations/pending-removal-in-3.20.rst:21
 msgid ":mod:`imaplib`"
 msgstr ":mod:`imaplib`"
 
-#: ../../whatsnew/3.15.rst:2452
+#: ../../whatsnew/3.15.rst:2454
 #: ../../deprecations/pending-removal-in-3.20.rst:22
 msgid ":mod:`ipaddress`"
 msgstr ":mod:`ipaddress`"
 
-#: ../../whatsnew/3.15.rst:2453
+#: ../../whatsnew/3.15.rst:2455
 #: ../../deprecations/pending-removal-in-3.20.rst:23
 msgid ":mod:`json`"
 msgstr ":mod:`json`"
 
-#: ../../whatsnew/3.15.rst:2454
+#: ../../whatsnew/3.15.rst:2456
 #: ../../deprecations/pending-removal-in-3.20.rst:24
 msgid ":mod:`logging` (``__date__`` also deprecated)"
 msgstr ":mod:`logging` (``__date__`` ist ebenfalls veraltet)"
 
-#: ../../whatsnew/3.15.rst:2455
+#: ../../whatsnew/3.15.rst:2457
 #: ../../deprecations/pending-removal-in-3.20.rst:25
 msgid ":mod:`optparse`"
 msgstr ":mod:`optparse`"
 
-#: ../../whatsnew/3.15.rst:2456
+#: ../../whatsnew/3.15.rst:2458
 #: ../../deprecations/pending-removal-in-3.20.rst:26
 msgid ":mod:`pickle`"
 msgstr ":mod:`pickle`"
 
-#: ../../whatsnew/3.15.rst:2457
+#: ../../whatsnew/3.15.rst:2459
 #: ../../deprecations/pending-removal-in-3.20.rst:27
 msgid ":mod:`platform`"
 msgstr ":mod:`platform`"
 
-#: ../../whatsnew/3.15.rst:2458
+#: ../../whatsnew/3.15.rst:2460
 #: ../../deprecations/pending-removal-in-3.20.rst:28
 msgid ":mod:`re`"
 msgstr ":mod:`re`"
 
-#: ../../whatsnew/3.15.rst:2459
+#: ../../whatsnew/3.15.rst:2461
 #: ../../deprecations/pending-removal-in-3.20.rst:29
 msgid ":mod:`socketserver`"
 msgstr ":mod:`socketserver`"
 
-#: ../../whatsnew/3.15.rst:2460
+#: ../../whatsnew/3.15.rst:2462
 #: ../../deprecations/pending-removal-in-3.20.rst:30
 msgid ":mod:`tabnanny`"
 msgstr ":mod:`tabnanny`"
 
-#: ../../whatsnew/3.15.rst:2461
+#: ../../whatsnew/3.15.rst:2463
 #: ../../deprecations/pending-removal-in-3.20.rst:31
 msgid ":mod:`tarfile`"
 msgstr ":mod:`tarfile`"
 
-#: ../../whatsnew/3.15.rst:2462
+#: ../../whatsnew/3.15.rst:2464
 #: ../../deprecations/pending-removal-in-3.20.rst:32
 msgid ":mod:`tkinter.font`"
 msgstr ":mod:`tkinter.font`"
 
-#: ../../whatsnew/3.15.rst:2463
+#: ../../whatsnew/3.15.rst:2465
 #: ../../deprecations/pending-removal-in-3.20.rst:33
 msgid ":mod:`tkinter.ttk`"
 msgstr ":mod:`tkinter.ttk`"
 
-#: ../../whatsnew/3.15.rst:2464
+#: ../../whatsnew/3.15.rst:2466
 #: ../../deprecations/pending-removal-in-3.20.rst:34
 msgid ":mod:`wsgiref.simple_server`"
 msgstr ":mod:`wsgiref.simple_server`"
 
-#: ../../whatsnew/3.15.rst:2465
+#: ../../whatsnew/3.15.rst:2467
 #: ../../deprecations/pending-removal-in-3.20.rst:35
 msgid ":mod:`xml.etree.ElementTree`"
 msgstr ":mod:`xml.etree.ElementTree`"
 
-#: ../../whatsnew/3.15.rst:2466
+#: ../../whatsnew/3.15.rst:2468
 #: ../../deprecations/pending-removal-in-3.20.rst:36
 msgid ":mod:`!xml.sax.expatreader`"
 msgstr ":mod:`!xml.sax.expatreader`"
 
-#: ../../whatsnew/3.15.rst:2467
+#: ../../whatsnew/3.15.rst:2469
 #: ../../deprecations/pending-removal-in-3.20.rst:37
 msgid ":mod:`xml.sax.handler`"
 msgstr ":mod:`xml.sax.handler`"
 
-#: ../../whatsnew/3.15.rst:2468
+#: ../../whatsnew/3.15.rst:2470
 #: ../../deprecations/pending-removal-in-3.20.rst:38
 msgid ":mod:`zlib`"
 msgstr ":mod:`zlib`"
 
-#: ../../whatsnew/3.15.rst:2470
+#: ../../whatsnew/3.15.rst:2472
 #: ../../deprecations/pending-removal-in-3.20.rst:40
 msgid "(Contributed by Hugo van Kemenade and Stan Ulbrych in :gh:`76007`.)"
 msgstr "(Beigetragen von Hugo van Kemenade und Stan Ulbrych in :gh:`76007`.)"
@@ -6054,11 +6051,11 @@ msgstr ""
 "zweibuchstabigen Formen ``'Zf'`` und ``'Zd'``. (Beigetragen von Sergey B "
 "Kirpichev in :gh:`121249`.)"
 
-#: ../../whatsnew/3.15.rst:2490
+#: ../../whatsnew/3.15.rst:2492
 msgid "C API changes"
 msgstr "Änderungen an der C-API"
 
-#: ../../whatsnew/3.15.rst:2495
+#: ../../whatsnew/3.15.rst:2497
 msgid ""
 "Add :c:func:`PyArg_ParseArray` and :c:func:`PyArg_ParseArrayAndKeywords` "
 "functions to parse arguments of functions using the :c:macro:`METH_FASTCALL` "
@@ -6069,36 +6066,36 @@ msgstr ""
 "der Aufrufkonvention :c:macro:`METH_FASTCALL` zu parsen. (Beigetragen von "
 "Victor Stinner in :gh:`144175`.)"
 
-#: ../../whatsnew/3.15.rst:2500
+#: ../../whatsnew/3.15.rst:2502
 msgid "Add the following functions for the new :class:`frozendict` type:"
 msgstr ""
 "Die folgenden Funktionen für den neuen Typ :class:`frozendict` hinzugefügt:"
 
-#: ../../whatsnew/3.15.rst:2502
+#: ../../whatsnew/3.15.rst:2504
 msgid ":c:func:`PyAnyDict_Check`"
 msgstr ":c:func:`PyAnyDict_Check`"
 
-#: ../../whatsnew/3.15.rst:2503
+#: ../../whatsnew/3.15.rst:2505
 msgid ":c:func:`PyAnyDict_CheckExact`"
 msgstr ":c:func:`PyAnyDict_CheckExact`"
 
-#: ../../whatsnew/3.15.rst:2504
+#: ../../whatsnew/3.15.rst:2506
 msgid ":c:func:`PyFrozenDict_Check`"
 msgstr ":c:func:`PyFrozenDict_Check`"
 
-#: ../../whatsnew/3.15.rst:2505
+#: ../../whatsnew/3.15.rst:2507
 msgid ":c:func:`PyFrozenDict_CheckExact`"
 msgstr ":c:func:`PyFrozenDict_CheckExact`"
 
-#: ../../whatsnew/3.15.rst:2506
+#: ../../whatsnew/3.15.rst:2508
 msgid ":c:func:`PyFrozenDict_New`"
 msgstr ":c:func:`PyFrozenDict_New`"
 
-#: ../../whatsnew/3.15.rst:2508
+#: ../../whatsnew/3.15.rst:2510
 msgid "(Contributed by Victor Stinner in :gh:`141510`.)"
 msgstr "(Beigetragen von Victor Stinner in :gh:`141510`.)"
 
-#: ../../whatsnew/3.15.rst:2510
+#: ../../whatsnew/3.15.rst:2512
 msgid ""
 "Add :c:func:`PyObject_CallFinalizerFromDealloc` function to the limited C "
 "API. (Contributed by Victor Stinner in :gh:`146063`.)"
@@ -6106,7 +6103,7 @@ msgstr ""
 "Funktion :c:func:`PyObject_CallFinalizerFromDealloc` zur eingeschränkten C-"
 "API hinzugefügt. (Beigetragen von Victor Stinner in :gh:`146063`.)"
 
-#: ../../whatsnew/3.15.rst:2514
+#: ../../whatsnew/3.15.rst:2516
 msgid ""
 "Add :c:func:`PySys_GetAttr`, :c:func:`PySys_GetAttrString`, :c:func:"
 "`PySys_GetOptionalAttr`, and :c:func:`PySys_GetOptionalAttrString` functions "
@@ -6118,7 +6115,7 @@ msgstr ""
 "für :c:func:`PySys_GetObject` hinzugefügt. (Beigetragen von Serhiy Storchaka "
 "in :gh:`108512`.)"
 
-#: ../../whatsnew/3.15.rst:2519
+#: ../../whatsnew/3.15.rst:2521
 msgid ""
 "Add :c:func:`PyUnstable_Unicode_GET_CACHED_HASH` to get the cached hash of a "
 "string. See the documentation for caveats. (Contributed by Petr Viktorin in :"
@@ -6129,7 +6126,7 @@ msgstr ""
 "sind in der Dokumentation beschrieben. (Beigetragen von Petr Viktorin in :gh:"
 "`131510`.)"
 
-#: ../../whatsnew/3.15.rst:2523
+#: ../../whatsnew/3.15.rst:2525
 msgid ""
 "Add API for checking an extension module's ABI compatibility: :c:data:"
 "`Py_mod_abi`, :c:func:`PyABIInfo_Check`, and :c:macro:`PyABIInfo_VAR`. "
@@ -6139,7 +6136,7 @@ msgstr ""
 "hinzugefügt: :c:data:`Py_mod_abi`, :c:func:`PyABIInfo_Check` und :c:macro:"
 "`PyABIInfo_VAR`. (Beigetragen von Petr Viktorin in :gh:`137210`.)"
 
-#: ../../whatsnew/3.15.rst:2530
+#: ../../whatsnew/3.15.rst:2532
 msgid ""
 "Implement :pep:`782`, the :ref:`PyBytesWriter API <pybyteswriter>`. Add "
 "functions:"
@@ -6147,59 +6144,59 @@ msgstr ""
 ":pep:`782`, die :ref:`PyBytesWriter-API <pybyteswriter>`, implementiert. "
 "Neue Funktionen:"
 
-#: ../../whatsnew/3.15.rst:2533
+#: ../../whatsnew/3.15.rst:2535
 msgid ":c:func:`PyBytesWriter_Create`"
 msgstr ":c:func:`PyBytesWriter_Create`"
 
-#: ../../whatsnew/3.15.rst:2534
+#: ../../whatsnew/3.15.rst:2536
 msgid ":c:func:`PyBytesWriter_Discard`"
 msgstr ":c:func:`PyBytesWriter_Discard`"
 
-#: ../../whatsnew/3.15.rst:2535
+#: ../../whatsnew/3.15.rst:2537
 msgid ":c:func:`PyBytesWriter_Finish`"
 msgstr ":c:func:`PyBytesWriter_Finish`"
 
-#: ../../whatsnew/3.15.rst:2536
+#: ../../whatsnew/3.15.rst:2538
 msgid ":c:func:`PyBytesWriter_FinishWithPointer`"
 msgstr ":c:func:`PyBytesWriter_FinishWithPointer`"
 
-#: ../../whatsnew/3.15.rst:2537
+#: ../../whatsnew/3.15.rst:2539
 msgid ":c:func:`PyBytesWriter_FinishWithSize`"
 msgstr ":c:func:`PyBytesWriter_FinishWithSize`"
 
-#: ../../whatsnew/3.15.rst:2538
+#: ../../whatsnew/3.15.rst:2540
 msgid ":c:func:`PyBytesWriter_Format`"
 msgstr ":c:func:`PyBytesWriter_Format`"
 
-#: ../../whatsnew/3.15.rst:2539
+#: ../../whatsnew/3.15.rst:2541
 msgid ":c:func:`PyBytesWriter_GetData`"
 msgstr ":c:func:`PyBytesWriter_GetData`"
 
-#: ../../whatsnew/3.15.rst:2540
+#: ../../whatsnew/3.15.rst:2542
 msgid ":c:func:`PyBytesWriter_GetSize`"
 msgstr ":c:func:`PyBytesWriter_GetSize`"
 
-#: ../../whatsnew/3.15.rst:2541
+#: ../../whatsnew/3.15.rst:2543
 msgid ":c:func:`PyBytesWriter_Grow`"
 msgstr ":c:func:`PyBytesWriter_Grow`"
 
-#: ../../whatsnew/3.15.rst:2542
+#: ../../whatsnew/3.15.rst:2544
 msgid ":c:func:`PyBytesWriter_GrowAndUpdatePointer`"
 msgstr ":c:func:`PyBytesWriter_GrowAndUpdatePointer`"
 
-#: ../../whatsnew/3.15.rst:2543
+#: ../../whatsnew/3.15.rst:2545
 msgid ":c:func:`PyBytesWriter_Resize`"
 msgstr ":c:func:`PyBytesWriter_Resize`"
 
-#: ../../whatsnew/3.15.rst:2544
+#: ../../whatsnew/3.15.rst:2546
 msgid ":c:func:`PyBytesWriter_WriteBytes`"
 msgstr ":c:func:`PyBytesWriter_WriteBytes`"
 
-#: ../../whatsnew/3.15.rst:2546
+#: ../../whatsnew/3.15.rst:2548
 msgid "(Contributed by Victor Stinner in :gh:`129813`.)"
 msgstr "(Beigetragen von Victor Stinner in :gh:`129813`.)"
 
-#: ../../whatsnew/3.15.rst:2548
+#: ../../whatsnew/3.15.rst:2550
 msgid ""
 ":c:type:`PyCriticalSection` and related functions are added to the Stable "
 "ABI. (Contributed by Petr Viktorin in :gh:`149225`.)"
@@ -6207,7 +6204,7 @@ msgstr ""
 ":c:type:`PyCriticalSection` und zugehörige Funktionen wurden zur stabilen "
 "ABI hinzugefügt. (Beigetragen von Petr Viktorin in :gh:`149225`.)"
 
-#: ../../whatsnew/3.15.rst:2552
+#: ../../whatsnew/3.15.rst:2554
 msgid ""
 "Add a new :c:func:`PyImport_CreateModuleFromInitfunc` C API for creating a "
 "module from a *spec* and *initfunc*. (Contributed by Itamar Oren in :gh:"
@@ -6217,7 +6214,7 @@ msgstr ""
 "Moduls aus *spec* und *initfunc* hinzugefügt. (Beigetragen von Itamar Oren "
 "in :gh:`116146`.)"
 
-#: ../../whatsnew/3.15.rst:2556
+#: ../../whatsnew/3.15.rst:2558
 msgid ""
 "Add :c:func:`PyTuple_FromArray` to create a :class:`tuple` from an array. "
 "(Contributed by Victor Stinner in :gh:`111489`.)"
@@ -6225,7 +6222,7 @@ msgstr ""
 ":c:func:`PyTuple_FromArray` hinzugefügt, um ein :class:`tuple` aus einem "
 "Array zu erzeugen. (Beigetragen von Victor Stinner in :gh:`111489`.)"
 
-#: ../../whatsnew/3.15.rst:2559
+#: ../../whatsnew/3.15.rst:2561
 msgid ""
 "Add a new module export hook, :c:func:`PyModExport_* "
 "<PyModExport_modulename>`."
@@ -6233,11 +6230,11 @@ msgstr ""
 "Neuen Export-Hook für Module hinzugefügt: :c:func:`PyModExport_* "
 "<PyModExport_modulename>`."
 
-#: ../../whatsnew/3.15.rst:2562
+#: ../../whatsnew/3.15.rst:2564
 msgid "(Contributed by Petr Viktorin in :pep:`793` and :gh:`140550`.)"
 msgstr "(Beigetragen von Petr Viktorin in :pep:`793` und :gh:`140550`.)"
 
-#: ../../whatsnew/3.15.rst:2564
+#: ../../whatsnew/3.15.rst:2566
 msgid ""
 "Add functions that are guaranteed to be safe for use in :c:member:"
 "`~PyTypeObject.tp_traverse` handlers: :c:func:"
@@ -6257,7 +6254,7 @@ msgstr ""
 "func:`PyType_GetModuleByToken_DuringGC`. (Beigetragen von Petr Viktorin in :"
 "gh:`145925`.)"
 
-#: ../../whatsnew/3.15.rst:2575
+#: ../../whatsnew/3.15.rst:2577
 msgid ""
 "Add :c:func:`PyObject_Dump` to dump an object to ``stderr``. It should only "
 "be used for debugging. (Contributed by Victor Stinner in :gh:`141070`.)"
@@ -6266,7 +6263,7 @@ msgstr ""
 "auszugeben. Sie sollte nur zum Debuggen verwendet werden. (Beigetragen von "
 "Victor Stinner in :gh:`141070`.)"
 
-#: ../../whatsnew/3.15.rst:2579
+#: ../../whatsnew/3.15.rst:2581
 msgid ""
 "Implement :pep:`820`: ``PySlot`` -- Unified slot system for the C API. See :"
 "ref:`capi-slots` for documentation."
@@ -6274,19 +6271,19 @@ msgstr ""
 ":pep:`820` implementiert: ``PySlot`` -- Einheitliches Slot-System für die C-"
 "API. Die Dokumentation findest du unter :ref:`capi-slots`."
 
-#: ../../whatsnew/3.15.rst:2582
+#: ../../whatsnew/3.15.rst:2584
 msgid "This adds:"
 msgstr "Dies fügt hinzu:"
 
-#: ../../whatsnew/3.15.rst:2584
+#: ../../whatsnew/3.15.rst:2586
 msgid "The :c:type:`PySlot` struct;"
 msgstr "Die Struktur :c:type:`PySlot`;"
 
-#: ../../whatsnew/3.15.rst:2585
+#: ../../whatsnew/3.15.rst:2587
 msgid "the :c:func:`PyType_FromSlots` function;"
 msgstr "die Funktion :c:func:`PyType_FromSlots`;"
 
-#: ../../whatsnew/3.15.rst:2586
+#: ../../whatsnew/3.15.rst:2588
 msgid ""
 "new slot IDs: :c:macro:`Py_slot_end`, :c:macro:`Py_slot_invalid`; :c:macro:"
 "`Py_slot_subslots`, :c:macro:`Py_tp_slots`, :c:macro:`Py_mod_slots`; :c:"
@@ -6300,7 +6297,7 @@ msgstr ""
 "`Py_tp_extra_basicsize`, :c:macro:`Py_tp_itemsize`, :c:macro:`Py_tp_flags`, :"
 "c:macro:`Py_tp_metaclass`, :c:macro:`Py_tp_module`;"
 
-#: ../../whatsnew/3.15.rst:2593
+#: ../../whatsnew/3.15.rst:2595
 msgid ""
 "convenience macros: :c:macro:`PySlot_DATA`, :c:macro:`PySlot_FUNC`, :c:macro:"
 "`PySlot_SIZE`, :c:macro:`PySlot_INT64`, :c:macro:`PySlot_UINT64`, :c:macro:"
@@ -6312,7 +6309,7 @@ msgstr ""
 "`PySlot_STATIC_DATA`, :c:macro:`PySlot_END`, :c:macro:`PySlot_PTR`, :c:macro:"
 "`PySlot_PTR_STATIC`."
 
-#: ../../whatsnew/3.15.rst:2598
+#: ../../whatsnew/3.15.rst:2600
 msgid ""
 "The :c:func:`PyModule_FromSlotsAndSpec` function and ``PyModExport`` :ref:"
 "`module export hook <extension-export-hook>` also use the new :c:type:`!"
@@ -6322,40 +6319,40 @@ msgstr ""
 "ref:`Export-Hook für Module <extension-export-hook>` verwenden ebenfalls die "
 "neue Struktur :c:type:`!PySlot`."
 
-#: ../../whatsnew/3.15.rst:2602
+#: ../../whatsnew/3.15.rst:2604
 msgid "The following functions are :term:`soft deprecated`:"
 msgstr ""
 "Die folgenden Funktionen sind :term:`sanft abgekündigt <soft deprecated>`:"
 
-#: ../../whatsnew/3.15.rst:2604
+#: ../../whatsnew/3.15.rst:2606
 msgid ":c:func:`PyType_FromSpec`"
 msgstr ":c:func:`PyType_FromSpec`"
 
-#: ../../whatsnew/3.15.rst:2605
+#: ../../whatsnew/3.15.rst:2607
 msgid ":c:func:`PyType_FromSpecWithBases`"
 msgstr ":c:func:`PyType_FromSpecWithBases`"
 
-#: ../../whatsnew/3.15.rst:2606
+#: ../../whatsnew/3.15.rst:2608
 msgid ":c:func:`PyType_FromModuleAndSpec`"
 msgstr ":c:func:`PyType_FromModuleAndSpec`"
 
-#: ../../whatsnew/3.15.rst:2607
+#: ../../whatsnew/3.15.rst:2609
 msgid ":c:func:`PyType_FromMetaclass`"
 msgstr ":c:func:`PyType_FromMetaclass`"
 
-#: ../../whatsnew/3.15.rst:2608
+#: ../../whatsnew/3.15.rst:2610
 msgid ":c:func:`PyModule_FromDefAndSpec`"
 msgstr ":c:func:`PyModule_FromDefAndSpec`"
 
-#: ../../whatsnew/3.15.rst:2609
+#: ../../whatsnew/3.15.rst:2611
 msgid ":c:func:`PyModule_FromDefAndSpec2`"
 msgstr ":c:func:`PyModule_FromDefAndSpec2`"
 
-#: ../../whatsnew/3.15.rst:2610
+#: ../../whatsnew/3.15.rst:2612
 msgid ":c:func:`PyModule_ExecDef`"
 msgstr ":c:func:`PyModule_ExecDef`"
 
-#: ../../whatsnew/3.15.rst:2612
+#: ../../whatsnew/3.15.rst:2614
 msgid ""
 "The slots :c:macro:`Py_tp_bases` and :c:macro:`Py_tp_base` are now "
 "equivalent: they can be set either to a single type or a tuple of types. "
@@ -6367,11 +6364,11 @@ msgstr ""
 "von Typen gesetzt werden. Der Slot :c:macro:`Py_tp_bases` wird bevorzugt. "
 "Der andere wird ignoriert, wenn beide angegeben sind."
 
-#: ../../whatsnew/3.15.rst:2617
+#: ../../whatsnew/3.15.rst:2619
 msgid "(Contributed by Petr Viktorin in :gh:`149044`.)"
 msgstr "(Beigetragen von Petr Viktorin in :gh:`149044`.)"
 
-#: ../../whatsnew/3.15.rst:2619
+#: ../../whatsnew/3.15.rst:2621
 msgid ""
 "Add :c:func:`PyUnstable_ThreadState_SetStackProtection` and :c:func:"
 "`PyUnstable_ThreadState_ResetStackProtection` functions to set the stack "
@@ -6383,7 +6380,7 @@ msgstr ""
 "Basisadresse und die Größe des Stackschutzes eines Python-Thread-Zustands "
 "festzulegen. (Beigetragen von Victor Stinner in :gh:`139653`.)"
 
-#: ../../whatsnew/3.15.rst:2625
+#: ../../whatsnew/3.15.rst:2627
 msgid ""
 "Add :c:func:`PyUnstable_SetImmortal` C API function to mark objects as :term:"
 "`immortal`. (Contributed by Kumar Aditya in :gh:`143300`.)"
@@ -6392,7 +6389,7 @@ msgstr ""
 "term:`unsterblich <immortal>` zu markieren. (Beigetragen von Kumar Aditya "
 "in :gh:`143300`.)"
 
-#: ../../whatsnew/3.15.rst:2628
+#: ../../whatsnew/3.15.rst:2630
 msgid ""
 "Restore private provisional ``_Py_InitializeMain()`` function removed in "
 "Python 3.14. (Contributed by Victor Stinner in :gh:`142417`.)"
@@ -6401,7 +6398,7 @@ msgstr ""
 "3.14 entfernt worden war, wurde wiederhergestellt. (Beigetragen von Victor "
 "Stinner in :gh:`142417`.)"
 
-#: ../../whatsnew/3.15.rst:2632
+#: ../../whatsnew/3.15.rst:2634
 msgid ""
 "Add :c:func:`PyUnstable_DumpTraceback` and :c:func:"
 "`PyUnstable_DumpTracebackThreads` functions to output Python stacktraces. "
@@ -6411,11 +6408,11 @@ msgstr ""
 "`PyUnstable_DumpTracebackThreads` hinzugefügt, um Python-Stacktraces "
 "auszugeben. (Beigetragen von Alex Malyshev in :gh:`145559`.)"
 
-#: ../../whatsnew/3.15.rst:2638
+#: ../../whatsnew/3.15.rst:2640
 msgid "Changed C APIs"
 msgstr "Geänderte C-APIs"
 
-#: ../../whatsnew/3.15.rst:2640
+#: ../../whatsnew/3.15.rst:2642
 msgid ""
 "If the :c:macro:`Py_TPFLAGS_MANAGED_DICT` or :c:macro:"
 "`Py_TPFLAGS_MANAGED_WEAKREF` flag is set then :c:macro:`Py_TPFLAGS_HAVE_GC` "
@@ -6426,7 +6423,7 @@ msgstr ""
 "`Py_TPFLAGS_HAVE_GC` gesetzt sein. (Beigetragen von Sergey Miryanov in :gh:"
 "`134786`.)"
 
-#: ../../whatsnew/3.15.rst:2644
+#: ../../whatsnew/3.15.rst:2646
 msgid ""
 ":c:macro:`PyDateTime_IMPORT` is now thread safe. Code that directly checks "
 "``PyDateTimeAPI`` for ``NULL`` should be updated to call :c:macro:"
@@ -6437,22 +6434,22 @@ msgstr ""
 "er stattdessen :c:macro:`PyDateTime_IMPORT` aufruft. (Beigetragen von Kumar "
 "Aditya in :gh:`141563`.)"
 
-#: ../../whatsnew/3.15.rst:2650
+#: ../../whatsnew/3.15.rst:2652
 msgid "Removed C APIs"
 msgstr "Entfernte C-APIs"
 
-#: ../../whatsnew/3.15.rst:2652
+#: ../../whatsnew/3.15.rst:2654
 msgid "Remove deprecated ``PyUnicode`` functions:"
 msgstr "Veraltete Funktionen von ``PyUnicode`` entfernt:"
 
-#: ../../whatsnew/3.15.rst:2654
+#: ../../whatsnew/3.15.rst:2656
 msgid ""
 ":c:func:`!PyUnicode_AsDecodedObject`: Use :c:func:`PyCodec_Decode` instead."
 msgstr ""
 ":c:func:`!PyUnicode_AsDecodedObject`: Verwende stattdessen :c:func:"
 "`PyCodec_Decode`."
 
-#: ../../whatsnew/3.15.rst:2656
+#: ../../whatsnew/3.15.rst:2658
 msgid ""
 ":c:func:`!PyUnicode_AsDecodedUnicode`: Use :c:func:`PyCodec_Decode` instead; "
 "note that some codecs (for example, \"base64\") may return a type other "
@@ -6462,14 +6459,14 @@ msgstr ""
 "`PyCodec_Decode`. Beachte, dass manche Codecs (zum Beispiel „base64“) einen "
 "anderen Typ als :class:`str` zurückgeben können, etwa :class:`bytes`."
 
-#: ../../whatsnew/3.15.rst:2659
+#: ../../whatsnew/3.15.rst:2661
 msgid ""
 ":c:func:`!PyUnicode_AsEncodedObject`: Use :c:func:`PyCodec_Encode` instead."
 msgstr ""
 ":c:func:`!PyUnicode_AsEncodedObject`: Verwende stattdessen :c:func:"
 "`PyCodec_Encode`."
 
-#: ../../whatsnew/3.15.rst:2661
+#: ../../whatsnew/3.15.rst:2663
 msgid ""
 ":c:func:`!PyUnicode_AsEncodedUnicode`: Use :c:func:`PyCodec_Encode` instead; "
 "note that some codecs (for example, \"base64\") may return a type other "
@@ -6479,11 +6476,11 @@ msgstr ""
 "`PyCodec_Encode`. Beachte, dass manche Codecs (zum Beispiel „base64“) einen "
 "anderen Typ als :class:`bytes` zurückgeben können, etwa :class:`str`."
 
-#: ../../whatsnew/3.15.rst:2665
+#: ../../whatsnew/3.15.rst:2667
 msgid "(Contributed by Stan Ulbrych in :gh:`133612`.)"
 msgstr "(Beigetragen von Stan Ulbrych in :gh:`133612`.)"
 
-#: ../../whatsnew/3.15.rst:2667
+#: ../../whatsnew/3.15.rst:2669
 msgid ""
 ":c:func:`!PyImport_ImportModuleNoBlock`: deprecated alias of :c:func:"
 "`PyImport_ImportModule`. (Contributed by Bénédikt Tran in :gh:`133644`.)"
@@ -6491,7 +6488,7 @@ msgstr ""
 ":c:func:`!PyImport_ImportModuleNoBlock`: veralteter Alias von :c:func:"
 "`PyImport_ImportModule`. (Beigetragen von Bénédikt Tran in :gh:`133644`.)"
 
-#: ../../whatsnew/3.15.rst:2671
+#: ../../whatsnew/3.15.rst:2673
 msgid ""
 ":c:func:`!PyWeakref_GetObject` and :c:macro:`!PyWeakref_GET_OBJECT`: use :c:"
 "func:`PyWeakref_GetRef` instead. The |pythoncapi_compat_project| can be used "
@@ -6504,7 +6501,7 @@ msgstr ""
 "Python 3.12 und älter nutzen. (Beigetragen von Bénédikt Tran in :gh:"
 "`133644`.)"
 
-#: ../../whatsnew/3.15.rst:2676
+#: ../../whatsnew/3.15.rst:2678
 msgid ""
 "Remove deprecated :c:func:`!PySys_ResetWarnOptions`. Clear :data:`sys."
 "warnoptions` and :data:`!warnings.filters` instead."
@@ -6512,11 +6509,11 @@ msgstr ""
 "Das veraltete :c:func:`!PySys_ResetWarnOptions` entfernt. Leere stattdessen :"
 "data:`sys.warnoptions` und :data:`!warnings.filters`."
 
-#: ../../whatsnew/3.15.rst:2679
+#: ../../whatsnew/3.15.rst:2681
 msgid "(Contributed by Nikita Sobolev in :gh:`138886`.)"
 msgstr "(Beigetragen von Nikita Sobolev in :gh:`138886`.)"
 
-#: ../../whatsnew/3.15.rst:2681
+#: ../../whatsnew/3.15.rst:2683
 msgid ""
 "The following functions are removed in favor of :c:func:`PyConfig_Get`. The |"
 "pythoncapi_compat_project| can be used to get :c:func:`!PyConfig_Get` on "
@@ -6526,11 +6523,11 @@ msgstr ""
 "entfernt. Mit dem |pythoncapi_compat_project| lässt sich :c:func:`!"
 "PyConfig_Get` unter Python 3.13 und älter nutzen."
 
-#: ../../whatsnew/3.15.rst:2685
+#: ../../whatsnew/3.15.rst:2687
 msgid "Python initialization functions:"
 msgstr "Funktionen zur Initialisierung von Python:"
 
-#: ../../whatsnew/3.15.rst:2687
+#: ../../whatsnew/3.15.rst:2689
 msgid ""
 ":c:func:`!Py_GetExecPrefix`: use :c:func:`PyConfig_Get(\"base_exec_prefix\") "
 "<PyConfig_Get>` (:data:`sys.base_exec_prefix`) instead. Use :c:func:"
@@ -6543,7 +6540,7 @@ msgstr ""
 "<PyConfig_Get>` (:data:`sys.exec_prefix`), wenn :ref:`virtuelle Umgebungen "
 "<venv-def>` berücksichtigt werden müssen."
 
-#: ../../whatsnew/3.15.rst:2693
+#: ../../whatsnew/3.15.rst:2695
 msgid ""
 ":c:func:`!Py_GetPath`: use :c:func:`PyConfig_Get(\"module_search_paths\") "
 "<PyConfig_Get>` (:data:`sys.path`) instead."
@@ -6551,7 +6548,7 @@ msgstr ""
 ":c:func:`!Py_GetPath`: Verwende stattdessen :c:func:"
 "`PyConfig_Get(\"module_search_paths\") <PyConfig_Get>` (:data:`sys.path`)."
 
-#: ../../whatsnew/3.15.rst:2696
+#: ../../whatsnew/3.15.rst:2698
 msgid ""
 ":c:func:`!Py_GetPrefix`: use :c:func:`PyConfig_Get(\"base_prefix\") "
 "<PyConfig_Get>` (:data:`sys.base_prefix`) instead. Use :c:func:"
@@ -6564,7 +6561,7 @@ msgstr ""
 "prefix`), wenn :ref:`virtuelle Umgebungen <venv-def>` berücksichtigt werden "
 "müssen."
 
-#: ../../whatsnew/3.15.rst:2702
+#: ../../whatsnew/3.15.rst:2704
 msgid ""
 ":c:func:`!Py_GetProgramFullPath`: use :c:func:`PyConfig_Get(\"executable\") "
 "<PyConfig_Get>` (:data:`sys.executable`) instead."
@@ -6572,7 +6569,7 @@ msgstr ""
 ":c:func:`!Py_GetProgramFullPath`: Verwende stattdessen :c:func:"
 "`PyConfig_Get(\"executable\") <PyConfig_Get>` (:data:`sys.executable`)."
 
-#: ../../whatsnew/3.15.rst:2705
+#: ../../whatsnew/3.15.rst:2707
 msgid ""
 ":c:func:`!Py_GetProgramName`: use :c:func:`PyConfig_Get(\"executable\") "
 "<PyConfig_Get>` (:data:`sys.executable`) instead."
@@ -6580,7 +6577,7 @@ msgstr ""
 ":c:func:`!Py_GetProgramName`: Verwende stattdessen :c:func:"
 "`PyConfig_Get(\"executable\") <PyConfig_Get>` (:data:`sys.executable`)."
 
-#: ../../whatsnew/3.15.rst:2708
+#: ../../whatsnew/3.15.rst:2710
 msgid ""
 ":c:func:`!Py_GetPythonHome`: use :c:func:`PyConfig_Get(\"home\") "
 "<PyConfig_Get>` or the :envvar:`PYTHONHOME` environment variable instead."
@@ -6589,15 +6586,15 @@ msgstr ""
 "`PyConfig_Get(\"home\") <PyConfig_Get>` oder die Umgebungsvariable :envvar:"
 "`PYTHONHOME`."
 
-#: ../../whatsnew/3.15.rst:2712
+#: ../../whatsnew/3.15.rst:2714
 msgid "(Contributed by Bénédikt Tran in :gh:`133644`.)"
 msgstr "(Beigetragen von Bénédikt Tran in :gh:`133644`.)"
 
-#: ../../whatsnew/3.15.rst:2720
+#: ../../whatsnew/3.15.rst:2722
 msgid "Deprecated C APIs"
 msgstr "Veraltete C-APIs"
 
-#: ../../whatsnew/3.15.rst:2722
+#: ../../whatsnew/3.15.rst:2724
 msgid ""
 "Deprecate :pep:`456` support for providing an external definition of the "
 "string hashing scheme. Removal is scheduled for Python 3.19."
@@ -6606,7 +6603,7 @@ msgstr ""
 "Verfahrens für Zeichenketten ist veraltet. Die Entfernung ist für Python "
 "3.19 geplant."
 
-#: ../../whatsnew/3.15.rst:2725
+#: ../../whatsnew/3.15.rst:2727
 msgid ""
 "Previously, embedders could define :c:macro:`Py_HASH_ALGORITHM` to be "
 "``Py_HASH_EXTERNAL`` to indicate that the hashing scheme was provided "
@@ -6618,11 +6615,11 @@ msgstr ""
 "bereitgestellt wird. Diese Funktion war jedoch undokumentiert, ungetestet "
 "und wurde höchstwahrscheinlich nicht verwendet."
 
-#: ../../whatsnew/3.15.rst:2730
+#: ../../whatsnew/3.15.rst:2732
 msgid "(Contributed by Bénédikt Tran in :gh:`141226`.)"
 msgstr "(Beigetragen von Bénédikt Tran in :gh:`141226`.)"
 
-#: ../../whatsnew/3.15.rst:2732
+#: ../../whatsnew/3.15.rst:2734
 msgid ""
 "For unsigned integer formats in :c:func:`PyArg_ParseTuple`, accepting Python "
 "integers with value that is larger than the maximal value for the C type or "
@@ -6636,7 +6633,7 @@ msgstr ""
 "vorzeichenbehafteten Ganzzahltyps gleicher Größe ist. (Beigetragen von "
 "Serhiy Storchaka in :gh:`132629`.)"
 
-#: ../../whatsnew/3.15.rst:2738
+#: ../../whatsnew/3.15.rst:2740
 msgid ""
 ":c:func:`PyBytes_FromStringAndSize(NULL, len) <PyBytes_FromStringAndSize>` "
 "and :c:func:`_PyBytes_Resize` are :term:`soft deprecated`, use the :c:type:"
@@ -6647,7 +6644,7 @@ msgstr ""
 "deprecated>`. Verwende stattdessen die API :c:type:`PyBytesWriter`. "
 "(Beigetragen von Victor Stinner in :gh:`129813`.)"
 
-#: ../../whatsnew/3.15.rst:2743
+#: ../../whatsnew/3.15.rst:2745
 msgid ""
 ":c:func:`!_PyObject_CallMethodId`, :c:func:`!_PyObject_GetAttrId` and :c:"
 "func:`!_PyUnicode_FromId` are deprecated since Python 3.15 and will be "
@@ -6663,7 +6660,7 @@ msgstr ""
 "zwischen und rufe dann :c:func:`PyObject_CallMethod` oder :c:func:"
 "`PyObject_GetAttr` auf. (Beigetragen von Victor Stinner in :gh:`141049`.)"
 
-#: ../../whatsnew/3.15.rst:2750
+#: ../../whatsnew/3.15.rst:2752
 msgid ""
 "Deprecate :c:member:`~PyComplexObject.cval` field of the :c:type:"
 "`PyComplexObject` type. Use :c:func:`PyComplex_AsCComplex` and :c:func:"
@@ -6677,7 +6674,7 @@ msgstr ""
 "Darstellung :c:type:`Py_complex` bzw. aus ihr zu konvertieren. (Beigetragen "
 "von Sergey B Kirpichev in :gh:`128813`.)"
 
-#: ../../whatsnew/3.15.rst:2757
+#: ../../whatsnew/3.15.rst:2759
 msgid ""
 "Functions :c:func:`_Py_c_sum`, :c:func:`_Py_c_diff`, :c:func:`_Py_c_neg`, :c:"
 "func:`_Py_c_prod`, :c:func:`_Py_c_quot`, :c:func:`_Py_c_pow` and :c:func:"
@@ -6689,7 +6686,7 @@ msgstr ""
 "und :c:func:`_Py_c_abs` sind :term:`sanft abgekündigt <soft deprecated>`. "
 "(Beigetragen von Sergey B Kirpichev in :gh:`128813`.)"
 
-#: ../../whatsnew/3.15.rst:2762
+#: ../../whatsnew/3.15.rst:2764
 msgid ""
 ":c:member:`~PyConfig.bytes_warning` is deprecated since Python 3.15 and will "
 "be removed in Python 3.17. (Contributed by Nikita Sobolev in :gh:`136355`.)"
@@ -6697,7 +6694,7 @@ msgstr ""
 ":c:member:`~PyConfig.bytes_warning` ist seit Python 3.15 veraltet und wird "
 "in Python 3.17 entfernt. (Beigetragen von Nikita Sobolev in :gh:`136355`.)"
 
-#: ../../whatsnew/3.15.rst:2766
+#: ../../whatsnew/3.15.rst:2768
 msgid ""
 ":c:macro:`!Py_INFINITY` macro is :term:`soft deprecated`, use the C11 "
 "standard ``<math.h>`` :c:macro:`!INFINITY` instead. (Contributed by Sergey B "
@@ -6707,19 +6704,19 @@ msgstr ""
 "deprecated>`. Verwende stattdessen das ``<math.h>`` :c:macro:`!INFINITY` des "
 "C11-Standards. (Beigetragen von Sergey B Kirpichev in :gh:`141004`.)"
 
-#: ../../whatsnew/3.15.rst:2770
+#: ../../whatsnew/3.15.rst:2772
 msgid "The following macros are :term:`soft deprecated`:"
 msgstr "Die folgenden Makros sind :term:`sanft abgekündigt <soft deprecated>`:"
 
-#: ../../whatsnew/3.15.rst:2772
+#: ../../whatsnew/3.15.rst:2774
 msgid ":c:macro:`Py_ALIGNED`: Prefer ``alignas`` instead."
 msgstr ":c:macro:`Py_ALIGNED`: Verwende stattdessen ``alignas``."
 
-#: ../../whatsnew/3.15.rst:2773
+#: ../../whatsnew/3.15.rst:2775
 msgid ":c:macro:`PY_FORMAT_SIZE_T`: Use ``\"z\"`` directly."
 msgstr ":c:macro:`PY_FORMAT_SIZE_T`: Verwende direkt ``\"z\"``."
 
-#: ../../whatsnew/3.15.rst:2774
+#: ../../whatsnew/3.15.rst:2776
 msgid ""
 ":c:macro:`Py_LL` and :c:macro:`Py_ULL`: Use standard suffixes, ``LL`` and "
 "``ULL``."
@@ -6727,7 +6724,7 @@ msgstr ""
 ":c:macro:`Py_LL` und :c:macro:`Py_ULL`: Verwende die Standardsuffixe ``LL`` "
 "und ``ULL``."
 
-#: ../../whatsnew/3.15.rst:2776
+#: ../../whatsnew/3.15.rst:2778
 msgid ""
 ":c:macro:`PY_LONG_LONG`, :c:macro:`PY_LLONG_MIN`, :c:macro:`PY_LLONG_MAX`, :"
 "c:macro:`PY_ULLONG_MAX`, :c:macro:`PY_INT32_T`, :c:macro:`PY_UINT32_T`, :c:"
@@ -6739,15 +6736,15 @@ msgstr ""
 "macro:`PY_INT64_T`, :c:macro:`PY_UINT64_T`, :c:macro:`PY_SIZE_MAX`: Verwende "
 "die Typen und Grenzwerte von C99."
 
-#: ../../whatsnew/3.15.rst:2780
+#: ../../whatsnew/3.15.rst:2782
 msgid ":c:macro:`Py_UNICODE_SIZE`: Use ``sizeof(wchar_t)`` directly."
 msgstr ":c:macro:`Py_UNICODE_SIZE`: Verwende direkt ``sizeof(wchar_t)``."
 
-#: ../../whatsnew/3.15.rst:2781
+#: ../../whatsnew/3.15.rst:2783
 msgid ":c:macro:`Py_VA_COPY`: Use ``va_copy`` directly."
 msgstr ":c:macro:`Py_VA_COPY`: Verwende direkt ``va_copy``."
 
-#: ../../whatsnew/3.15.rst:2783
+#: ../../whatsnew/3.15.rst:2785
 msgid ""
 "The macro :c:macro:`Py_UNICODE_WIDE`, which was scheduled for removal, is :"
 "term:`soft deprecated` instead."
@@ -6755,11 +6752,11 @@ msgstr ""
 "Das Makro :c:macro:`Py_UNICODE_WIDE`, dessen Entfernung geplant war, ist "
 "stattdessen :term:`sanft abgekündigt <soft deprecated>`."
 
-#: ../../whatsnew/3.15.rst:2786
+#: ../../whatsnew/3.15.rst:2788
 msgid "(Contributed by Petr Viktorin in :gh:`146175`.)"
 msgstr "(Beigetragen von Petr Viktorin in :gh:`146175`.)"
 
-#: ../../whatsnew/3.15.rst:2788
+#: ../../whatsnew/3.15.rst:2790
 msgid ""
 ":c:macro:`!Py_MATH_El` and :c:macro:`!Py_MATH_PIl` are deprecated since "
 "Python 3.15 and will be removed in Python 3.20. (Contributed by Sergey B "
@@ -6769,11 +6766,11 @@ msgstr ""
 "veraltet und werden in Python 3.20 entfernt. (Beigetragen von Sergey B "
 "Kirpichev in :gh:`141004`.)"
 
-#: ../../whatsnew/3.15.rst:2797
+#: ../../whatsnew/3.15.rst:2799
 msgid "Build changes"
 msgstr "Änderungen am Build"
 
-#: ../../whatsnew/3.15.rst:2799
+#: ../../whatsnew/3.15.rst:2801
 msgid ""
 "Removed implicit fallback to the bundled copy of the ``libmpdec`` library. "
 "Now this should be explicitly enabled with :option:`--with-system-libmpdec` "
@@ -6786,7 +6783,7 @@ msgstr ""
 "system-libmpdec` angegeben wird. (Beigetragen von Sergey B Kirpichev in :gh:"
 "`115119`.)"
 
-#: ../../whatsnew/3.15.rst:2804
+#: ../../whatsnew/3.15.rst:2806
 msgid ""
 "The new configure option :option:`--with-missing-stdlib-config=FILE` allows "
 "distributors to pass a `JSON <https://www.json.org/json-en.html>`_ "
@@ -6801,7 +6798,7 @@ msgstr ""
 "separat paketiert sind. (Beigetragen von Stan Ulbrych und Petr Viktorin in :"
 "gh:`139707`.)"
 
-#: ../../whatsnew/3.15.rst:2810
+#: ../../whatsnew/3.15.rst:2812
 msgid ""
 "The new configure option :option:`--with-pymalloc-hugepages` enables huge "
 "page support for :ref:`pymalloc <pymalloc>` arenas. When enabled, arena size "
@@ -6822,7 +6819,7 @@ msgstr ""
 "`PYTHON_PYMALLOC_HUGEPAGES` auf ``1`` gesetzt wird. (Beigetragen von Pablo "
 "Galindo Salgado in :gh:`144319`.)"
 
-#: ../../whatsnew/3.15.rst:2819
+#: ../../whatsnew/3.15.rst:2821
 msgid ""
 "Annotating anonymous mmap usage is now supported if the Linux kernel "
 "supports :manpage:`PR_SET_VMA_ANON_NAME <PR_SET_VMA(2const)>` (Linux 5.17 or "
@@ -6838,7 +6835,7 @@ msgstr ""
 "dev <-X>` gestartet oder im :ref:`Debug-Modus <debug-build>` gebaut wurde. "
 "(Beigetragen von Donghee Na in :gh:`141770`.)"
 
-#: ../../whatsnew/3.15.rst:2826
+#: ../../whatsnew/3.15.rst:2828
 msgid ""
 "CPython is now built with frame pointers enabled by default (:pep:`831`). "
 "Pass :option:`--without-frame-pointers` to opt out."
@@ -6846,7 +6843,7 @@ msgstr ""
 "CPython wird jetzt standardmäßig mit aktivierten Frame-Pointern gebaut (:pep:"
 "`831`). Übergib :option:`--without-frame-pointers`, um dies abzuschalten."
 
-#: ../../whatsnew/3.15.rst:2829
+#: ../../whatsnew/3.15.rst:2831
 msgid ""
 "Authors of C extensions and native libraries built with custom build systems "
 "should ensure the unwind chain is intact. This is usually done by adding ``-"
@@ -6859,7 +6856,7 @@ msgstr ""
 "Flags zu ``CFLAGS`` hinzu. Die konkreten Flags, die Python verwendet, "
 "findest du in der Dokumentation zu :option:`--without-frame-pointers`."
 
-#: ../../whatsnew/3.15.rst:2835
+#: ../../whatsnew/3.15.rst:2837
 msgid ""
 "(Contributed by Pablo Galindo Salgado and Savannah Ostrowski in :gh:"
 "`149201`.)"
@@ -6867,7 +6864,7 @@ msgstr ""
 "(Beigetragen von Pablo Galindo Salgado und Savannah Ostrowski in :gh:"
 "`149201`.)"
 
-#: ../../whatsnew/3.15.rst:2839
+#: ../../whatsnew/3.15.rst:2841
 msgid ""
 "64-bit builds using Visual Studio 2026 (MSVC 18) may now use the new :ref:"
 "`tail-calling interpreter <whatsnew314-tail-call-interpreter>`. Results on "
@@ -6896,11 +6893,11 @@ msgstr ""
 "`143068`. Besonderer Dank an Steve Dower und das MSVC-Team einschließlich "
 "Hulon Jenkins.)"
 
-#: ../../whatsnew/3.15.rst:2856
+#: ../../whatsnew/3.15.rst:2858
 msgid "Porting to Python 3.15"
 msgstr "Portierung auf Python 3.15"
 
-#: ../../whatsnew/3.15.rst:2858
+#: ../../whatsnew/3.15.rst:2860
 msgid ""
 "This section lists previously described changes and other bugfixes that may "
 "require changes to your code."
@@ -6908,11 +6905,11 @@ msgstr ""
 "Dieser Abschnitt listet bereits beschriebene Änderungen und weitere "
 "Fehlerbehebungen auf, die Änderungen an deinem Code erfordern können."
 
-#: ../../whatsnew/3.15.rst:2861
+#: ../../whatsnew/3.15.rst:2863
 msgid ":class:`sqlite3.Connection` APIs have been cleaned up."
 msgstr "Die APIs von :class:`sqlite3.Connection` wurden bereinigt."
 
-#: ../../whatsnew/3.15.rst:2863
+#: ../../whatsnew/3.15.rst:2865
 msgid ""
 "All parameters of :func:`sqlite3.connect` except *database* are now keyword-"
 "only."
@@ -6920,7 +6917,7 @@ msgstr ""
 "Alle Parameter von :func:`sqlite3.connect` außer *database* sind jetzt reine "
 "Schlüsselwortparameter."
 
-#: ../../whatsnew/3.15.rst:2864
+#: ../../whatsnew/3.15.rst:2866
 msgid ""
 "The first three parameters of methods :meth:`~sqlite3.Connection."
 "create_function` and :meth:`~sqlite3.Connection.create_aggregate` are now "
@@ -6930,7 +6927,7 @@ msgstr ""
 "create_function` und :meth:`~sqlite3.Connection.create_aggregate` sind jetzt "
 "reine Positionsparameter."
 
-#: ../../whatsnew/3.15.rst:2866
+#: ../../whatsnew/3.15.rst:2868
 msgid ""
 "The first parameter of methods :meth:`~sqlite3.Connection.set_authorizer`, :"
 "meth:`~sqlite3.Connection.set_progress_handler` and :meth:`~sqlite3."
@@ -6941,11 +6938,11 @@ msgstr ""
 "`~sqlite3.Connection.set_trace_callback` ist jetzt ein reiner "
 "Positionsparameter."
 
-#: ../../whatsnew/3.15.rst:2870
+#: ../../whatsnew/3.15.rst:2872
 msgid "(Contributed by Serhiy Storchaka in :gh:`133595`.)"
 msgstr "(Beigetragen von Serhiy Storchaka in :gh:`133595`.)"
 
-#: ../../whatsnew/3.15.rst:2872
+#: ../../whatsnew/3.15.rst:2874
 msgid ""
 ":data:`resource.RLIM_INFINITY` is now always positive. Passing a negative "
 "integer value that corresponded to its old value (such as ``-1`` or ``-3``, "
@@ -6959,7 +6956,7 @@ msgstr ""
 "`resource.prlimit` ist jetzt veraltet. (Beigetragen von Serhiy Storchaka in :"
 "gh:`137044`.)"
 
-#: ../../whatsnew/3.15.rst:2878
+#: ../../whatsnew/3.15.rst:2880
 msgid ""
 ":meth:`mmap.mmap.resize` has been removed on platforms that don't support "
 "the underlying syscall, instead of raising a :exc:`SystemError`. "
@@ -6969,7 +6966,7 @@ msgstr ""
 "Systemaufruf nicht unterstützen, entfernt, statt einen :exc:`SystemError` "
 "auszulösen. (Beigetragen von An Long in :gh:`138205`.)"
 
-#: ../../whatsnew/3.15.rst:2882
+#: ../../whatsnew/3.15.rst:2884
 msgid ""
 "A resource warning is now emitted for an unclosed :func:`xml.etree."
 "ElementTree.iterparse` iterator if it opened a file. Use its :meth:`!close` "
@@ -6982,7 +6979,7 @@ msgstr ""
 "func:`contextlib.closing`, um ihn zu schließen. (Beigetragen von Osama "
 "Abdelkader und Serhiy Storchaka in :gh:`140601`.)"
 
-#: ../../whatsnew/3.15.rst:2888
+#: ../../whatsnew/3.15.rst:2890
 msgid ""
 "If a short option and a single-dash long option are passed to :meth:"
 "`argparse.ArgumentParser.add_argument`, *dest* is now inferred from the "
@@ -6998,7 +6995,7 @@ msgstr ""
 "``'f'``. Übergib ein explizites Argument *dest*, um das alte Verhalten "
 "beizubehalten. (Beigetragen von Serhiy Storchaka in :gh:`138697`.)"
 
-#: ../../whatsnew/3.15.rst:2895
+#: ../../whatsnew/3.15.rst:2897
 msgid ""
 "Padding of input no longer required in :func:`base64.urlsafe_b64decode`. "
 "Pass a new argument ``padded=True`` or use :func:`base64.b64decode` with "
@@ -7011,7 +7008,7 @@ msgstr ""
 "auch mit älteren Python-Versionen), um Padding vorauszusetzen. (Beigetragen "
 "von Serhiy Storchaka in :gh:`73613`.)"
 
-#: ../../whatsnew/3.15.rst:2901
+#: ../../whatsnew/3.15.rst:2903
 msgid ""
 "Since :meth:`unittest.TestCase.assertWarns` and :meth:`unittest.TestCase."
 "assertWarnsRegex` no longer swallow warnings that do not match the specified "
@@ -7027,6 +7024,34 @@ msgstr ""
 "Warnungsfilter, um sie zu unterdrücken, oder zusätzliche :meth:`!"
 "assertWarns*`, um sie abzufangen und zu prüfen. (Beigetragen von Serhiy "
 "Storchaka in :gh:`143231`.)"
+
+#~ msgid ""
+#~ "This article explains the new features in Python 3.15, compared to 3.14."
+#~ msgstr ""
+#~ "Dieser Artikel erläutert die neuen Features in Python 3.15 im Vergleich "
+#~ "zu 3.14."
+
+#~ msgid "For full details, see the :ref:`changelog <changelog>`."
+#~ msgstr ""
+#~ "Ausführliche Informationen findest du im :ref:`Changelog <changelog>`."
+
+#~ msgid ""
+#~ "Prerelease users should be aware that this document is currently in draft "
+#~ "form. It will be updated substantially as Python 3.15 moves towards "
+#~ "release, so it's worth checking back even after reading earlier versions."
+#~ msgstr ""
+#~ "Wenn du eine Vorabversion verwendest, beachte bitte, dass sich dieses "
+#~ "Dokument derzeit im Entwurfsstadium befindet. Es wird auf dem Weg zur "
+#~ "Veröffentlichung von Python 3.15 noch wesentlich überarbeitet, daher "
+#~ "lohnt es sich, auch nach dem Lesen früherer Fassungen erneut "
+#~ "hineinzuschauen."
+
+#~ msgid ""
+#~ "A practical :ref:`migration guide <abi3t-migration-howto>` for switching "
+#~ "to ``abi3t`` is available."
+#~ msgstr ""
+#~ "Ein praktischer :ref:`Migrationsleitfaden <abi3t-migration-howto>` für "
+#~ "den Umstieg auf ``abi3t`` ist verfügbar."
 
 #~ msgid "These results are not yet final."
 #~ msgstr "Diese Ergebnisse sind noch nicht endgültig."
