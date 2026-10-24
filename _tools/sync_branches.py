@@ -21,11 +21,11 @@ aus der Quelle wieder gefuellt.
 
 Aufruf (im Repo, das ZIEL muss ausgecheckt sein):
 
-    python tools/sync_branches.py --von 3.15            # Trockenlauf
-    python tools/sync_branches.py --von 3.15 --apply
-    python tools/sync_branches.py --von 3.15 --leere-ziele --apply
-    python tools/sync_branches.py --von 3.15 --nur reference,library
-    python tools/sync_branches.py --von 3.15 -o konflikte.md
+    python _tools/sync_branches.py --von 3.15            # Trockenlauf
+    python _tools/sync_branches.py --von 3.15 --apply
+    python _tools/sync_branches.py --von 3.15 --leere-ziele --apply
+    python _tools/sync_branches.py --von 3.15 --nur reference,library
+    python _tools/sync_branches.py --von 3.15 -o konflikte.md
 
 Ohne --apply wird nichts geschrieben. Konflikte werden nie automatisch
 entschieden -- sie landen im Bericht und gehoeren von Hand geprueft.

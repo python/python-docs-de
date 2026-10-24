@@ -14,17 +14,17 @@
 # Branch), nicht abgefragt.
 #
 # Nutzung:
-#   ./pre_push_check.sh                    		# fragt interaktiv beide Stufen ab
-#   ./pre_push_check.sh --quick            		# nur Stufe 1, keine Nachfrage
-#   ./pre_push_check.sh --full             		# Stufe 1 + 2, keine Nachfrage
-#   ./pre_push_check.sh --full --version 3.15   # Stufe 2 mit expliziter Version
+#   ./_tools/pre_push_check.sh                    		# fragt interaktiv beide Stufen ab
+#   ./_tools/pre_push_check.sh --quick            		# nur Stufe 1, keine Nachfrage
+#   ./_tools/pre_push_check.sh --full             		# Stufe 1 + 2, keine Nachfrage
+#   ./_tools/pre_push_check.sh --full --version 3.15   # Stufe 2 mit expliziter Version
 
 set -uo pipefail
 
-REPO_ROOT="${REPO_ROOT:-$(pwd)}"
+REPO_ROOT="${REPO_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 CPYTHON_ROOT="${CPYTHON_ROOT:-/Volumes/Dev_SSD/GitHub}"
-CHECK_ROLES_PY="${CHECK_ROLES_PY:-$REPO_ROOT/check_roles.py}"
-CHECK_MARKUP_PY="${CHECK_MARKUP_PY:-$REPO_ROOT/tools/check_markup.py}"
+CHECK_ROLES_PY="${CHECK_ROLES_PY:-$REPO_ROOT/_tools/check_roles.py}"
+CHECK_MARKUP_PY="${CHECK_MARKUP_PY:-$REPO_ROOT/_tools/check_markup.py}"
 EXCLUDE_DIRS=(".venv" ".git" "cpython-src")
 
 BRANCH="$(git -C "$REPO_ROOT" branch --show-current 2>/dev/null)"

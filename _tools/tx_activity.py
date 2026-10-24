@@ -15,20 +15,20 @@ Herkunft (Feld "origin" der API):
     API      ueber die API gesetzt
 
 Aufruf (im Repo, im Branch, dessen Projekt gemeint ist):
-    python tools/tx_activity.py --probe          # erst die API-Form klaeren
-    python tools/tx_activity.py --bestand        # was wuerde ein Force-Push loeschen?
-    python tools/tx_activity.py                  # letzte 7 Tage
-    python tools/tx_activity.py --tage 1
-    python tools/tx_activity.py --ohne-upload    # eigene Pushes ausblenden
-    python tools/tx_activity.py --csv aktivitaet.csv
-    python tools/tx_activity.py --pause 1.0      # langsamer, wenn gedrosselt
-    python tools/tx_activity.py --ab library--os # Lauf fortsetzen
-    python tools/tx_activity.py --alle           # ohne Vorauswahl (langsam)
+    python _tools/tx_activity.py --probe          # erst die API-Form klaeren
+    python _tools/tx_activity.py --bestand        # was wuerde ein Force-Push loeschen?
+    python _tools/tx_activity.py                  # letzte 7 Tage
+    python _tools/tx_activity.py --tage 1
+    python _tools/tx_activity.py --ohne-upload    # eigene Pushes ausblenden
+    python _tools/tx_activity.py --csv aktivitaet.csv
+    python _tools/tx_activity.py --pause 1.0      # langsamer, wenn gedrosselt
+    python _tools/tx_activity.py --ab library--os # Lauf fortsetzen
+    python _tools/tx_activity.py --alle           # ohne Vorauswahl (langsam)
 
 Vorauswahl: die Sammelstatistik resource_language_stats nennt in vier
 Anfragen, welche Ressourcen ueberhaupt angefasst wurden. Nur die werden
 danach einzeln abgefragt -- sonst waeren es 553 Anfragen.
-    python tools/tx_activity.py --debug          # Rohdatensatz zum Pruefen
+    python _tools/tx_activity.py --debug          # Rohdatensatz zum Pruefen
 
 Transifex drosselt am Gateway. Bei 429/503 wird laenger gewartet und
 danach abgebrochen statt die restlichen Ressourcen gegen dieselbe Wand

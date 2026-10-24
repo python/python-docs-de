@@ -57,12 +57,12 @@ Das Skript aendert nichts. Es meldet nur, wo etwas zu tun ist -- die
 Korrekturen sind oft Ermessensfragen und gehoeren von Hand entschieden.
 
 Aufruf:
-    python tools/check_markup.py                      # ganzes Repo
-    python tools/check_markup.py reference library    # nur diese Pfade
-    python tools/check_markup.py --art code,klammer   # nur diese Fehlerarten
-    python tools/check_markup.py --max 5              # je Art hoechstens 5 Beispiele
-    python tools/check_markup.py -o bericht.md        # Markdown-Bericht schreiben
-    python tools/check_markup.py --nur-zahlen         # nur die Zusammenfassung
+    python _tools/check_markup.py                      # ganzes Repo
+    python _tools/check_markup.py reference library    # nur diese Pfade
+    python _tools/check_markup.py --art code,klammer   # nur diese Fehlerarten
+    python _tools/check_markup.py --max 5              # je Art hoechstens 5 Beispiele
+    python _tools/check_markup.py -o bericht.md        # Markdown-Bericht schreiben
+    python _tools/check_markup.py --nur-zahlen         # nur die Zusammenfassung
 
 Rueckgabewert: 0 wenn nichts gefunden wurde, sonst 1 -- damit laesst sich das
 Skript in pre_push_check.sh und in die CI einhaengen.

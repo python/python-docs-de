@@ -8,10 +8,10 @@ lokalen msgstr gegenueber. Ausgegeben werden nur die Abweichungen.
 Der Token kommt aus TX_TOKEN oder aus ~/.transifexrc.
 
 Aufruf (im Repo, im Branch, dessen Projekt gemeint ist):
-    python tools/tx_diff.py --tage 7 -o bericht.md
-    python tools/tx_diff.py --benutzer JystBreisgau --tage 14 -o jyst.md
-    python tools/tx_diff.py --ressource reference--datamodel -o datamodel.md
-    python tools/tx_diff.py --tage 7 --voll -o bericht.md   # ungekuerzte Texte
+    python _tools/tx_diff.py --tage 7 -o bericht.md
+    python _tools/tx_diff.py --benutzer JystBreisgau --tage 14 -o jyst.md
+    python _tools/tx_diff.py --ressource reference--datamodel -o datamodel.md
+    python _tools/tx_diff.py --tage 7 --voll -o bericht.md   # ungekuerzte Texte
 
 Es wird nur gelesen; weder Transifex noch die lokalen Dateien werden
 veraendert.

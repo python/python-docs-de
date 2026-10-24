@@ -16,11 +16,11 @@ mit der forcierten Kombination, die wir beim Abgleich benutzen:
       --skip                     bricht nicht ab, wenn eine Ressource zickt
 
 Aufruf:
-    python tools/tx_push.py                  # geaenderte Dateien vorschlagen
-    python tools/tx_push.py --alle           # alle Dateien aus .tx/config
-    python tools/tx_push.py howto            # nach Pfad filtern
-    python tools/tx_push.py library/csv.po
-    python tools/tx_push.py --dry-run howto  # nur zeigen, nicht pushen
+    python _tools/tx_push.py                  # geaenderte Dateien vorschlagen
+    python _tools/tx_push.py --alle           # alle Dateien aus .tx/config
+    python _tools/tx_push.py howto            # nach Pfad filtern
+    python _tools/tx_push.py library/csv.po
+    python _tools/tx_push.py --dry-run howto  # nur zeigen, nicht pushen
 """
 
 import argparse
