@@ -133,9 +133,9 @@ msgstr ""
 
 #: ../../library/tkinter.dnd.rst:61
 msgid ""
-"Factory function for the drag-and-drop process. Return "
-"the :class:`DndHandler` instance managing the drag, or ``None`` if a drag "
-"could not be started."
+"Factory function for the drag-and-drop process. Return the :class:"
+"`DndHandler` instance managing the drag, or ``None`` if a drag could not be "
+"started."
 msgstr ""
 "Factory-Funktion für den Drag-and-drop-Vorgang. Gibt die :class:`DndHandler`-"
 "Instanz zurück, die das Ziehen verwaltet, oder ``None``, wenn kein Ziehen "

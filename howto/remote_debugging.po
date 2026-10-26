@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 03:11+0000\n"
+"POT-Creation-Date: 2026-10-26 03:10+0000\n"
 "PO-Revision-Date: 2026-10-15 06:00+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -58,7 +58,8 @@ msgstr ""
 "bevor du den Interpreter startest."
 
 #: ../../howto/remote_debugging.rst:19
-msgid "Use the :option:`-X disable_remote_debug` command-line option."
+#, fuzzy
+msgid "Use the :option:`-X disable-remote-debug` command-line option."
 msgstr "Verwende die Befehlszeilenoption :option:`-X disable_remote_debug`."
 
 #: ../../howto/remote_debugging.rst:20
@@ -1694,9 +1695,10 @@ msgid "When to use ``PYTHON_DISABLE_REMOTE_DEBUG``"
 msgstr "Wann man ``PYTHON_DISABLE_REMOTE_DEBUG`` verwenden sollte"
 
 #: ../../howto/remote_debugging.rst:719
+#, fuzzy
 msgid ""
 "The environment variable :envvar:`PYTHON_DISABLE_REMOTE_DEBUG` (and the "
-"equivalent :option:`-X disable_remote_debug` flag) allows operators to "
+"equivalent :option:`-X disable-remote-debug` flag) allows operators to "
 "disable the in-process side of the protocol as a **defence-in-depth** "
 "measure.  This may be useful in hardened or sandboxed deployment "
 "environments where no debugging or profiling of the process is expected and "
