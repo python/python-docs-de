@@ -172,8 +172,8 @@ msgid ""
 "and two more."
 msgstr ""
 "Instanzen der Klasse :class:`!Class` beschreiben Klassen, die durch class-"
-"Anweisungen definiert sind. Sie haben dieselben Attribute "
-"wie :class:`Functions <Function>` und zwei weitere."
+"Anweisungen definiert sind. Sie haben dieselben Attribute wie :class:"
+"`Functions <Function>` und zwei weitere."
 
 #: ../../library/pyclbr.rst:123
 msgid "Name of the file in which the class is defined."

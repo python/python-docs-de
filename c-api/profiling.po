@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 03:11+0000\n"
+"POT-Creation-Date: 2026-10-26 03:10+0000\n"
 "PO-Revision-Date: 2026-09-23 06:17+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -305,4 +305,21 @@ msgid ""
 "data pointer that was registered when :c:func:`PyRefTracer_SetTracer` was "
 "called. If no tracer was registered this function will return NULL and will "
 "set the **data** pointer to NULL."
+msgstr ""
+
+#: ../../c-api/profiling.rst:243
+msgid "Performance statistics"
+msgstr ""
+
+#: ../../c-api/profiling.rst:247
+msgid ""
+"Largest micro-operation identifier for which CPython allocates performance "
+"statistics counters. Available only in builds configured with :option:`--"
+"enable-pystats`."
+msgstr ""
+
+#: ../../c-api/profiling.rst:251
+msgid ""
+"This constant is intended for internal use only and is not useful to "
+"extension modules."
 msgstr ""
