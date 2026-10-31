@@ -13,6 +13,10 @@ __pycache__/
 # Kompilierte Kataloge (werden beim Build erzeugt)
 *.mo
 
+# Hilfs-Checkout des englischen Originals
+# (legt der Workflow sync-check.yml an, gehoert nicht ins Repo)
+cpython-src/
+
 # Lokale Berichte unserer Werkzeuge
 markup_bericht.md
 branch_diff.md
