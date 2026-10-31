@@ -2554,8 +2554,8 @@ msgid ""
 "An :term:`!iterable` of parameters to bind with the placeholders in *sql*. "
 "See :ref:`sqlite3-placeholders`."
 msgstr ""
-"Ein :term:`!iterable` mit Parametern, die an die Platzhalter in "
-"*sql* gebunden werden. Siehe :ref:`sqlite3-placeholders`."
+"Ein :term:`!iterable` mit Parametern, die an die Platzhalter in *sql* "
+"gebunden werden. Siehe :ref:`sqlite3-placeholders`."
 
 #: ../../library/sqlite3.rst:1536
 msgid ""

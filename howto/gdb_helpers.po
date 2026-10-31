@@ -249,8 +249,8 @@ msgid ""
 "When the extension is loaded, it provides two main features: pretty printers "
 "for Python values, and additional commands."
 msgstr ""
-"Ist die Erweiterung geladen, bietet sie zwei wesentliche Dinge: "
-"Pretty-Printing für Python-Werte und zusätzliche Befehle."
+"Ist die Erweiterung geladen, bietet sie zwei wesentliche Dinge: Pretty-"
+"Printing für Python-Werte und zusätzliche Befehle."
 
 #: ../../howto/gdb_helpers.rst:121
 msgid "Pretty-printers"
