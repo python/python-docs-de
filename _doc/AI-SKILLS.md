@@ -84,6 +84,12 @@ und nicht betroffen.
 - Bei `:term:` und `:ref:` mit deutschem Anzeigetext immer das Ziel
   angeben: `:term:`Sequenz <sequence>``. Der Bezeichner in spitzen
   Klammern bleibt zwingend englisch
+- Ein `!` am Anfang des Rolleninhalts schaltet den Querverweis ab, der
+  Text wird nur angezeigt: `:term:`!sequence``, `:class:`!dict``. Der
+  Inhalt bleibt trotzdem unverändert englisch, auch wenn er wie
+  Fließtext aussieht und kein Ziel existiert, auf das Rücksicht zu
+  nehmen wäre. `check_roles.py` vergleicht den Rolleninhalt und meldet
+  jede Übersetzung als Inkonsistenz
 - `:dfn:` ist kein Querverweis — der Text wird übersetzt, ein Ziel ist
   weder nötig noch erlaubt
 - Keine zusätzliche Backtick- oder Stern-Klammer um eine Rolle:
@@ -99,8 +105,13 @@ und nicht betroffen.
   ``Literale`` aus dem Original bleiben erhalten und werden nicht durch
   deutsche Anführungszeichen ersetzt
 - Codeblöcke bleiben buchstabengetreu, übersetzt werden höchstens die
-  Kommentarzeilen. Nie übersetzt werden Schlüsselwörter,
-  Interpreter-Ausgaben und String-Literale, auf die sich eine Ausgabe bezieht
+  Kommentarzeilen — also Zeilen, die mit `#` beginnen. Nie übersetzt
+  werden Schlüsselwörter, Interpreter-Ausgaben und String-Literale, auf
+  die sich eine Ausgabe bezieht
+- Docstrings (`"""..."""`) und Zeichenketten in `print(...)` sind Code,
+  keine Kommentare, und bleiben deshalb englisch. Sie sehen wie
+  Fließtext aus, gehören aber zum lauffähigen Beispiel;
+  `check_markup.py` meldet jede Änderung daran als Fehlerart `code`
 - Platzhalter wie `%s`, `{0}` oder `<TRANSLATION_REPO_>` bleiben unverändert
 - `#, fuzzy` nach dem Übersetzen entfernen
 
