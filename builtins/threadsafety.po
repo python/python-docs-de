@@ -822,8 +822,8 @@ msgid ""
 "other operand is a :class:`set`, :class:`frozenset`, or :class:`dict`."
 msgstr ""
 ":meth:`set.update` und :meth:`set.union` sperren beide Objekte nur dann, "
-"wenn der andere Operand ein :class:`set`, :class:`frozenset` oder "
-":class:`dict` ist."
+"wenn der andere Operand ein :class:`set`, :class:`frozenset` "
+"oder :class:`dict` ist."
 
 #: ../../builtins/threadsafety.rst:412
 msgid ""
@@ -850,8 +850,8 @@ msgid ""
 ":meth:`set.difference_update` and :meth:`set.intersection_update` try to "
 "lock all objects one-by-one."
 msgstr ""
-":meth:`set.difference_update` und :meth:`set.intersection_update` "
-"versuchen, alle Objekte nacheinander zu sperren."
+":meth:`set.difference_update` und :meth:`set.intersection_update` versuchen, "
+"alle Objekte nacheinander zu sperren."
 
 #: ../../builtins/threadsafety.rst:422
 msgid ""

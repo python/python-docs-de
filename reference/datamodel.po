@@ -2490,8 +2490,8 @@ msgstr ""
 "Das genaue Format ist ein Implementierungsdetail und kann sich zwischen "
 "Python-Versionen ändern. Für den unterstützten Zugriff auf Zeilen- und "
 "Positionsangaben verwende :meth:`~codeobject.co_lines` "
-"und :meth:`~codeobject.co_positions`. Um eine veränderte Kopie eines "
-"Code-Objekts zu erzeugen, verwende :meth:`~codeobject.replace`."
+"und :meth:`~codeobject.co_positions`. Um eine veränderte Kopie eines Code-"
+"Objekts zu erzeugen, verwende :meth:`~codeobject.replace`."
 
 #: ../../reference/datamodel.rst:1572
 msgid "The required stack size of the code object"

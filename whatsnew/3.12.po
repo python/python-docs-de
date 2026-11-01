@@ -6045,9 +6045,9 @@ msgid ""
 "to correctly track reference counts and allocated blocks"
 msgstr ""
 "``sys.getunicodeinternedsize`` gibt die Gesamtzahl der Unicode-Objekte "
-"zurück, die interniert wurden. Das wird jetzt gebraucht, damit "
-":file:`refleak.py` Referenzzähler und angeforderte Speicherblöcke richtig "
-"verfolgen kann"
+"zurück, die interniert wurden. Das wird jetzt gebraucht, "
+"damit :file:`refleak.py` Referenzzähler und angeforderte Speicherblöcke "
+"richtig verfolgen kann"
 
 #: ../../whatsnew/3.12.rst:2008
 msgid "(Contributed by Eddie Elizondo in :gh:`84436`.)"

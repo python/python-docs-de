@@ -1092,8 +1092,8 @@ msgstr ""
 "Gib den Winkel der Linie von der Position der Turtle zu (x,y) zurück. Ist "
 "*y* ``None``, muss *x* ein Koordinatenpaar sein, ein :class:`Vec2D` – zum "
 "Beispiel wie von :func:`pos` zurückgegeben – oder eine andere Turtle. Der "
-"Winkel wird von der Startausrichtung der Turtle aus gemessen, die vom "
-"Turtle-Modus abhängt, siehe :func:`mode`."
+"Winkel wird von der Startausrichtung der Turtle aus gemessen, die vom Turtle-"
+"Modus abhängt, siehe :func:`mode`."
 
 #: ../../library/turtle.rst:681
 msgid ""

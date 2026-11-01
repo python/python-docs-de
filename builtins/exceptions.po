@@ -667,8 +667,9 @@ msgid ""
 "strerror_r`; under Windows, :c:func:`!FormatMessage` is used."
 msgstr ""
 "Die entsprechende Fehlermeldung, wie sie vom Betriebssystem bereitgestellt "
-"wird. Unter POSIX wird sie über die C-Funktionen :c:func:`!strerror` oder "
-":c:func:`!strerror_r` ermittelt, unter Windows über :c:func:`!FormatMessage`."
+"wird. Unter POSIX wird sie über die C-Funktionen :c:func:`!strerror` "
+"oder :c:func:`!strerror_r` ermittelt, unter Windows über :c:func:`!"
+"FormatMessage`."
 
 #: ../../builtins/exceptions.rst:404
 msgid ""

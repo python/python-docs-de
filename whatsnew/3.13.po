@@ -7446,8 +7446,8 @@ msgid ""
 "<PyUnicodeWriter_WriteASCII>`."
 msgstr ""
 ":c:func:`!_PyUnicodeWriter_WriteASCIIString`: ersetze "
-"``_PyUnicodeWriter_WriteASCIIString(&writer, str, size)`` durch "
-":c:func:`PyUnicodeWriter_WriteASCII(writer, str, size) "
+"``_PyUnicodeWriter_WriteASCIIString(&writer, str, size)`` "
+"durch :c:func:`PyUnicodeWriter_WriteASCII(writer, str, size) "
 "<PyUnicodeWriter_WriteASCII>`."
 
 #: ../../deprecations/c-api-pending-removal-in-3.18.rst:36
@@ -7461,8 +7461,8 @@ msgstr ""
 ":c:func:`!_PyUnicodeWriter_WriteLatin1String`: ersetze "
 "``_PyUnicodeWriter_WriteLatin1String(&writer, str, size)``, indem du die "
 "Zeichenkette mit :c:func:`PyUnicode_DecodeLatin1` dekodierst, das Ergebnis "
-"mit :c:func:`PyUnicodeWriter_WriteStr` schreibst und es mit "
-":c:func:`Py_DECREF` freigibst."
+"mit :c:func:`PyUnicodeWriter_WriteStr` schreibst und es "
+"mit :c:func:`Py_DECREF` freigibst."
 
 #: ../../deprecations/c-api-pending-removal-in-3.18.rst:41
 msgid ":c:func:`!_PyUnicodeWriter_Prepare`: (no replacement)."
