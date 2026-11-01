@@ -87,15 +87,43 @@ if $RUN_QUICK; then
         # Die CI formatiert nach jedem Push automatisch mit powrap und
         # committet das Ergebnis. Wer lokal nicht formatiert, bekommt beim
         # naechsten Rebase Konflikte in genau diesen Zeilen. Deshalb hier.
-        vorher=$(git -C "$REPO_ROOT" diff --name-only -- '*.po' | wc -l | tr -d ' ')
-        powrap -m 2>/dev/null
-        nachher=$(git -C "$REPO_ROOT" diff --name-only -- '*.po' | wc -l | tr -d ' ')
-        if [[ "$vorher" != "$nachher" ]]; then
-            echo "powrap hat weitere Dateien umbrochen -- bitte mit committen."
-        else
-            echo "OK -- Umbruch war bereits sauber."
-        fi
-        pass=$((pass + 1))
+        #
+        # '--check' schreibt nichts, sondern liefert nur den Status:
+        #   0 = nichts zu tun, 1 = wuerde umbrechen,
+        #   2 = Datei(en) nicht formatierbar, 127 = msgcat fehlt.
+        # Der frueher benutzte Vergleich der Anzahl geaenderter Dateien war
+        # blind: eine bereits geaenderte Datei bleibt in der Liste, egal ob
+        # powrap sie anfasst -- der Check meldete dann immer "sauber".
+        powrap --check -q -m -C "$REPO_ROOT" >/dev/null 2>&1
+        powrap_status=$?
+        case $powrap_status in
+            0)
+                echo "OK -- Umbruch ist sauber."
+                pass=$((pass + 1))
+                ;;
+            1)
+                echo "Umbruch nicht sauber -- powrap formatiert jetzt ..."
+                powrap -q -m -C "$REPO_ROOT"
+                echo "Diese Dateien bitte mit committen:"
+                git -C "$REPO_ROOT" diff --name-only -- '*.po' \
+                    | sed 's/^/    /'
+                pass=$((pass + 1))
+                ;;
+            2)
+                echo "FEHLER: powrap konnte Dateien nicht formatieren."
+                powrap -d -q -m -C "$REPO_ROOT" 2>&1 | sed 's/^/    /'
+                fail=$((fail + 1))
+                ;;
+            127)
+                echo "msgcat nicht gefunden -- gehoert zu gettext"
+                echo "(brew install gettext). Schritt uebersprungen."
+                skip=$((skip + 1))
+                ;;
+            *)
+                echo "powrap endete mit unerwartetem Code $powrap_status."
+                fail=$((fail + 1))
+                ;;
+        esac
     fi
 
     log_section "1b/5  msgfmt --check (Syntax)"
@@ -213,6 +241,15 @@ if $RUN_FULL; then
             echo "Hinweis: rsvg-convert fehlt und Homebrew wurde nicht gefunden."
         fi
     fi
+
+    # Immer frisch bauen, so wie die CI. 'make html' baut sonst
+    # inkrementell und haelt in seiner Umgebungsdatei unter Doc/build/
+    # alte Werte fest -- zum Beispiel die Argumentnamen von
+    # audit-event-Direktiven, die upstream umbenannt wurden. Das sieht dann
+    # lokal wie ein Uebersetzungsfehler aus und ist keiner.
+    echo "Raeume Sphinx-Cache auf (make clean) ..."
+    (cd "$CPYTHON_SRC/Doc" && make clean) \
+        || echo "Hinweis: 'make clean' fehlgeschlagen -- Build ist inkrementell."
 
     LOCALE_DIR="$CPYTHON_SRC/Doc/locales/de/LC_MESSAGES"
     echo "Verknuepfe aktuellen Uebersetzungsstand ($BRANCH) nach $LOCALE_DIR ..."
