@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
-"PO-Revision-Date: 2026-10-16 09:30+0200\n"
+"PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: @sba72\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -3689,7 +3689,6 @@ msgid "urllib"
 msgstr "urllib"
 
 #: ../../whatsnew/3.13.rst:1805
-#, fuzzy
 msgid ""
 "Remove the *cafile*, *capath*, and *cadefault* parameters of "
 "the :func:`urllib.request.urlopen` function, deprecated in Python 3.6. Use "
@@ -3699,15 +3698,15 @@ msgid ""
 "the operating system's trusted certificate authority (CA) certificates. "
 "(Contributed by Victor Stinner in :gh:`105382`.)"
 msgstr ""
-"Die Parameter *cafile*, *capath* und *cadefault* der "
-"Funktion :func:`urllib.request.urlopen` sind entfernt. Sie waren in Python "
-"3.6 als veraltet markiert. Verwende stattdessen den Parameter *context* mit "
-"einer :class:`~ssl.SSLContext`-Instanz. Mit der "
-"Funktion :meth:`ssl.SSLContext.load_cert_chain` lassen sich bestimmte "
-"Zertifikate laden. Alternativ lässt man :func:`ssl.create_default_context` "
-"die vom Betriebssystem als vertrauenswürdig eingestuften Zertifikate der "
-"Zertifizierungsstellen (CA) auswählen. (Beigetragen von Victor Stinner "
-"in :gh:`105382`.)"
+"Die Parameter *cafile*, *capath* und *cadefault* der Funktion "
+":func:`urllib.request.urlopen` sind entfernt. Sie waren in Python 3.6 als "
+"veraltet markiert. Verwende stattdessen den Parameter *context* mit einer "
+":class:`~ssl.SSLContext`-Instanz. Mit der Methode "
+":meth:`ssl.SSLContext.load_verify_locations` lassen sich bestimmte "
+"CA-Zertifikate laden. Alternativ lässt man "
+":func:`ssl.create_default_context` die vom Betriebssystem als "
+"vertrauenswürdig eingestuften Zertifikate der Zertifizierungsstellen (CA) "
+"auswählen. (Beigetragen von Victor Stinner in :gh:`105382`.)"
 
 #: ../../whatsnew/3.13.rst:1816
 msgid "webbrowser"
@@ -6660,13 +6659,12 @@ msgstr ""
 "stattdessen :c:member:`PyConfig.xoptions`."
 
 #: ../../whatsnew/3.13.rst:2434
-#, fuzzy
 msgid ""
 ":c:func:`!PySys_HasWarnOptions`: Use :c:member:`PyConfig.warnoptions` "
 "instead."
 msgstr ""
-":c:func:`!PySys_HasWarnOptions`: Verwende "
-"stattdessen :c:member:`PyConfig.xoptions`."
+":c:func:`!PySys_HasWarnOptions`: Verwende stattdessen "
+":c:member:`PyConfig.warnoptions`."
 
 #: ../../whatsnew/3.13.rst:2436
 msgid ""
@@ -6727,12 +6725,11 @@ msgid ":c:func:`PyEval_SaveThread` and :c:func:`PyEval_RestoreThread`;"
 msgstr ":c:func:`PyEval_SaveThread` und :c:func:`PyEval_RestoreThread`,"
 
 #: ../../whatsnew/3.13.rst:2456
-#, fuzzy
 msgid ""
 "low-level :c:func:`PyEval_AcquireThread` and :c:func:`PyEval_ReleaseThread`;"
 msgstr ""
-"die tief liegenden :c:func:`PyEval_AcquireThread` "
-"und :c:func:`PyEval_RestoreThread`"
+"die tief liegenden :c:func:`PyEval_AcquireThread` und "
+":c:func:`PyEval_ReleaseThread`;"
 
 #: ../../whatsnew/3.13.rst:2457
 msgid "or :c:func:`PyGILState_Ensure` and :c:func:`PyGILState_Release`."
@@ -7983,7 +7980,6 @@ msgid "A ``tp_dealloc`` function that has the old macros, such as::"
 msgstr "Eine ``tp_dealloc``-Funktion mit den alten Makros, etwa::"
 
 #: ../../whatsnew/3.13.rst:2728
-#, fuzzy
 msgid ""
 "static void\n"
 "mytype_dealloc(mytype *p)\n"
@@ -8000,7 +7996,7 @@ msgstr ""
 "    PyObject_GC_UnTrack(p);\n"
 "    Py_TRASHCAN_SAFE_BEGIN(p);\n"
 "    ...\n"
-"    Py_TRASHCAN_SAFE_END\n"
+"    Py_TRASHCAN_SAFE_END(p)\n"
 "}"
 
 #: ../../whatsnew/3.13.rst:2737
@@ -8076,7 +8072,6 @@ msgstr ""
 "der Funktion."
 
 #: ../../whatsnew/3.13.rst:2771
-#, fuzzy
 msgid ""
 "Calling :c:func:`PyFrame_GetLocals` in an :term:`optimized scope` now "
 "returns a write-through proxy rather than a snapshot that gets updated at "
@@ -8087,9 +8082,8 @@ msgstr ""
 "<optimized scope>` aufzurufen gibt jetzt einen durchschreibenden "
 "Stellvertreter zurück statt einer Momentaufnahme, die zu ungenau "
 "festgelegten Zeitpunkten aktualisiert wird. Ist eine Momentaufnahme "
-"gewünscht, muss sie ausdrücklich erzeugt werden (etwa "
-"mit :c:func:`PyDict_Copy`) oder über einen Aufruf der neuen "
-"API :c:func:`PyEval_GetFrameLocals`."
+"gewünscht, muss sie ausdrücklich erzeugt werden oder über einen Aufruf der "
+"neuen API :c:func:`PyEval_GetFrameLocals`."
 
 #: ../../whatsnew/3.13.rst:2777
 msgid ""

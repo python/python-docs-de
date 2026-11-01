@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
-"PO-Revision-Date: 2026-10-16 09:30+0200\n"
+"PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -3499,14 +3499,13 @@ msgstr ""
 "Brett Cannon in :issue:`26131`.)"
 
 #: ../../whatsnew/3.10.rst:1651
-#, fuzzy
 msgid ""
 ":meth:`!zipimport.zipimporter.load_module` has been deprecated in preference "
 "for :meth:`~zipimport.zipimporter.exec_module`. (Contributed by Brett Cannon "
 "in :issue:`26131`.)"
 msgstr ""
-":meth:`!zimport.zipimporter.load_module` ist zugunsten "
-"von :meth:`~zipimport.zipimporter.exec_module` als veraltet markiert. "
+":meth:`!zipimport.zipimporter.load_module` ist zugunsten von "
+":meth:`~zipimport.zipimporter.exec_module` als veraltet markiert. "
 "(Beigetragen von Brett Cannon in :issue:`26131`.)"
 
 #: ../../whatsnew/3.10.rst:1655
@@ -3633,18 +3632,17 @@ msgstr ""
 "entfallen. (Beigetragen von Brett Cannon in :issue:`42137`.)"
 
 #: ../../whatsnew/3.10.rst:1713
-#, fuzzy
 msgid ""
 ":meth:`!importlib.abc.Loader.module_repr`, :meth:`!"
 "importlib.machinery.FrozenImporter.module_repr`, and :meth:`!"
 "importlib.machinery.BuiltinImporter.module_repr` are deprecated and slated "
 "for removal in Python 3.12. (Contributed by Brett Cannon in :issue:`42136`.)"
 msgstr ""
-":meth:`!importlib.abc.Loader.module_repr`, :meth:`!"
-"importlib.machinery.FrozenLoader.module_repr` und :meth:`!"
-"importlib.machinery.BuiltinLoader.module_repr` sind als veraltet markiert "
-"und sollen in Python 3.12 entfernt werden. (Beigetragen von Brett Cannon "
-"in :issue:`42136`.)"
+":meth:`!importlib.abc.Loader.module_repr`, "
+":meth:`!importlib.machinery.FrozenImporter.module_repr` und "
+":meth:`!importlib.machinery.BuiltinImporter.module_repr` sind als veraltet "
+"markiert und sollen in Python 3.12 entfernt werden. (Beigetragen von Brett "
+"Cannon in :issue:`42136`.)"
 
 #: ../../whatsnew/3.10.rst:1719
 msgid ""
@@ -4200,7 +4198,6 @@ msgstr ""
 "Fehlerbehandlung sind weggelassen.) ::"
 
 #: ../../whatsnew/3.10.rst:1967
-#, fuzzy
 msgid ""
 "io_module = PyImport_ImportModule(\"io\");\n"
 "fileobject = PyObject_CallMethod(io_module, \"open\", \"ss\", filename, "
@@ -4210,7 +4207,7 @@ msgid ""
 "source_buf = PyBytes_AsString(source_bytes_object);\n"
 "code = Py_CompileString(source_buf, filename, Py_file_input);"
 msgstr ""
-"io_module = Import_ImportModule(\"io\");\n"
+"io_module = PyImport_ImportModule(\"io\");\n"
 "fileobject = PyObject_CallMethod(io_module, \"open\", \"ss\", filename, "
 "\"rb\");\n"
 "source_bytes_object = PyObject_CallMethod(fileobject, \"read\", \"\");\n"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
-"PO-Revision-Date: 2026-10-10 19:30+0200\n"
+"PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -101,9 +101,8 @@ msgid "`Chaquopy <https://chaquo.com/chaquopy>`__"
 msgstr "`Chaquopy <https://chaquo.com/chaquopy>`__"
 
 #: ../../using/android.rst:36
-#, fuzzy
 msgid "`Flet <https://flet.dev/>`__"
-msgstr "`Termux <https://termux.dev/en/>`__"
+msgstr "`Flet <https://flet.dev/>`__"
 
 #: ../../using/android.rst:37
 msgid ""

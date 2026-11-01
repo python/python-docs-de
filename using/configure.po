@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
-"PO-Revision-Date: 2026-10-10 19:30+0200\n"
+"PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -218,7 +218,7 @@ msgstr "`OpenSSL <https://openssl-library.org/>`_"
 
 #: ../../using/configure.rst:97
 msgid "[6]_"
-msgstr ""
+msgstr "[6]_"
 
 #: ../../using/configure.rst:98
 msgid ":mod:`ssl`, :mod:`hashlib` [5]_"
@@ -327,6 +327,14 @@ msgid ""
 "that offer an API compatible with OpenSSL 1.1.1 or later may work, but are "
 "not officially supported."
 msgstr ""
+"OpenSSL 1.1.1 ist die kleinste Version, gegen die sich bauen lässt, die "
+"Reihe hat aber ihr Lebensende erreicht und bekommt keine öffentlichen "
+"Sicherheitskorrekturen mehr. Verwende die neueste Fehlerkorrekturausgabe "
+"einer derzeit unterstützten LTS-Reihe (siehe die `OpenSSL-Roadmap "
+"<https://openssl-library.org/roadmap/index.html>`__) oder das Paket deines "
+"Betriebssystems, sofern verfügbar. Andere Bibliotheken, die eine zu OpenSSL "
+"1.1.1 oder neuer verträgliche API bieten, funktionieren möglicherweise, "
+"werden aber nicht offiziell unterstützt."
 
 #: ../../using/configure.rst:135
 msgid ""
@@ -533,9 +541,8 @@ msgid "By default, the digit size is 30."
 msgstr "Standardmäßig beträgt die Zifferngröße 30."
 
 #: ../../using/configure.rst:243
-#, fuzzy
 msgid "Define :c:macro:`PYLONG_BITS_IN_DIGIT` to ``15`` or ``30``."
-msgstr "Setzt ``PYLONG_BITS_IN_DIGIT`` auf ``15`` oder ``30``."
+msgstr "Setzt :c:macro:`PYLONG_BITS_IN_DIGIT` auf ``15`` oder ``30``."
 
 #: ../../using/configure.rst:245
 msgid "See :data:`sys.int_info.bits_per_digit <sys.int_info>`."
@@ -1635,15 +1642,17 @@ msgstr ""
 "Dokumentationszeichenketten sind davon nicht betroffen."
 
 #: ../../using/configure.rst:869
-#, fuzzy
 msgid "Don't define the :c:macro:`WITH_DOC_STRINGS` macro."
-msgstr "Definiert das Makro ``WITH_DOC_STRINGS`` nicht."
+msgstr "Definiert das Makro :c:macro:`WITH_DOC_STRINGS` nicht."
 
 #: ../../using/configure.rst:873
 msgid ""
 "Define this macro to include static documentation strings in the build. It "
 "is defined by default, unless :option:`--without-doc-strings` is used."
 msgstr ""
+"Definiere dieses Makro, um statische Dokumentationszeichenketten in den "
+"Build aufzunehmen. Es ist standardmäßig definiert, sofern nicht "
+":option:`--without-doc-strings` verwendet wird."
 
 #: ../../using/configure.rst:876
 msgid "See the ``PyDoc_STRVAR()`` macro."
@@ -1951,6 +1960,10 @@ msgid ""
 "not built with MSan, so either build all dependencies with MSan or disable "
 "the extension modules that use them in :file:`Modules/Setup.local`."
 msgstr ""
+"MSan meldet Fehlalarme für Speicher, den Bibliotheken initialisiert haben, "
+"die nicht mit MSan gebaut wurden. Baue deshalb entweder alle Abhängigkeiten "
+"mit MSan oder schalte die Erweiterungsmodule ab, die sie verwenden, in "
+":file:`Modules/Setup.local`."
 
 #: ../../using/configure.rst:1031
 msgid ""

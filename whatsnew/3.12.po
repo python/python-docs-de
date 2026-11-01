@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
-"PO-Revision-Date: 2026-10-16 09:30+0200\n"
+"PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: Swen Bachmann <142266608+sba72@users.noreply.github.com>\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -6000,11 +6000,12 @@ msgstr ""
 "Änderungen an der C-API:"
 
 #: ../../whatsnew/3.12.rst:1995
-#, fuzzy
 msgid ""
 "``_Py_IMMORTAL_REFCNT``: The reference count that defines an object as "
 "immortal."
-msgstr "``_Py_IMMORTAL_REFCNT``: Der Referenzzähler, der ein Objekt"
+msgstr ""
+"``_Py_IMMORTAL_REFCNT``: Der Referenzzähler, der ein Objekt als unsterblich "
+"festlegt."
 
 #: ../../whatsnew/3.12.rst:1997
 msgid ""
@@ -6022,13 +6023,12 @@ msgstr ""
 "``_Py_IMMORTAL_REFCNT``, wenn es mit ``Py_BUILD_CORE`` verwendet wird."
 
 #: ../../whatsnew/3.12.rst:2000
-#, fuzzy
 msgid ""
 "``SSTATE_INTERNED_IMMORTAL`` An identifier for interned unicode objects that "
 "are immortal."
 msgstr ""
-"``SSTATE_INTERNED_IMMORTAL`` eine Kennzeichnung für internierte Unicode-"
-"Objekte,"
+"``SSTATE_INTERNED_IMMORTAL`` eine Kennzeichnung für internierte "
+"Unicode-Objekte, die unsterblich sind."
 
 #: ../../whatsnew/3.12.rst:2002
 msgid ""

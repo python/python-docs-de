@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
-"PO-Revision-Date: 2025-09-16 00:02+0000\n"
+"PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -51,7 +51,6 @@ msgstr ""
 "vorhandenen Werkzeuge Python nicht direkt bereitstellen können."
 
 #: ../../using/windows.rst:26
-#, fuzzy
 msgid ""
 "To obtain Python from the CPython team, use the Python install manager. This "
 "is a standalone tool that makes Python available as global commands on your "
@@ -67,7 +66,6 @@ msgstr ""
 "herunterladen."
 
 #: ../../using/windows.rst:32
-#, fuzzy
 msgid ""
 "Once you have installed the Python install manager, the global ``python`` "
 "command can be used from any terminal to launch your current latest version "
@@ -97,7 +95,6 @@ msgstr ""
 "mit ``python -m venv <env path>`` an."
 
 #: ../../using/windows.rst:43
-#, fuzzy
 msgid ""
 "If the ``python`` or ``py`` commands do not seem to be working, see "
 "the :ref:`Troubleshooting <pymanager-troubleshoot>` section below. There are "
@@ -157,7 +154,6 @@ msgstr ""
 "Öffne danach ein Terminal und gib ``python`` ein, um loszulegen."
 
 #: ../../using/windows.rst:76
-#, fuzzy
 msgid ""
 "To install the file downloaded from python.org, either double-click and "
 "select \"Install\", or run ``Add-AppxPackage <path to MSIX>`` in Windows "
@@ -183,7 +179,6 @@ msgstr ""
 "nicht funktionieren."
 
 #: ../../using/windows.rst:85
-#, fuzzy
 msgid ""
 "When you first install a runtime, you will likely be prompted to add a "
 "directory to your :envvar:`PATH`. This is optional, if you prefer to use the "
@@ -197,9 +192,9 @@ msgstr ""
 "Wenn du die erste Runtime installierst, wirst du wahrscheinlich "
 "aufgefordert, ein Verzeichnis zu :envvar:`PATH` hinzuzufügen. Das ist "
 "freiwillig, sofern du lieber den Befehl ``py`` verwendest, wird aber jenen "
-"angeboten, die die ganze Reihe der Aliasnamen (etwa ``python3.14.exe``) zur "
-"Verfügung haben möchten. Das Verzeichnis ist "
-"standardmäßig :file:`%LocalAppData%\\\\Python\\\\bin`, kann aber "
+"angeboten, die die ganze Reihe der Aliasnamen (etwa "
+"|python_x_dot_y_exe_literal|) zur Verfügung haben möchten. Das Verzeichnis "
+"ist standardmäßig :file:`%LocalAppData%\\\\Python\\\\bin`, kann aber "
 "administrativ angepasst werden. Klicke auf Start und suche nach "
 "„Umgebungsvariablen für dieses Konto bearbeiten“, um zu der "
 "Systemeinstellungsseite zu kommen, auf der du den Pfad hinzufügst."
@@ -225,7 +220,6 @@ msgstr ""
 "erhalten."
 
 #: ../../using/windows.rst:100
-#, fuzzy
 msgid ""
 "If you are not able to install an MSIX in your context, for example, you are "
 "using automated deployment software that does not support it, or are "
@@ -364,12 +358,11 @@ msgstr ""
 "offizielle Veröffentlichung verweist und mit ``3`` beginnt."
 
 #: ../../using/windows.rst:161
-#, fuzzy
 msgid ""
 "$> py -V:|version| ...\n"
 "$> py -V:3-arm64 ..."
 msgstr ""
-"$> py -V:3.14 ...\n"
+"$> py -V:|version| ...\n"
 "$> py -V:3-arm64 ..."
 
 #: ../../using/windows.rst:164
@@ -514,7 +507,6 @@ msgstr ""
 "Bereich einzuschränken."
 
 #: ../../using/windows.rst:232
-#, fuzzy
 msgid ""
 "A range of formats are supported, and can be passed as the ``--"
 "format=<FMT>`` or ``-f <FMT>`` option. Formats include ``table`` (a user-"
@@ -569,12 +561,10 @@ msgstr ""
 "install <TAG>`` installieren würde."
 
 #: ../../using/windows.rst:255
-#, fuzzy
 msgid "$> py list --online |version|"
-msgstr "$> py list --online 3.14"
+msgstr "$> py list --online |version|"
 
 #: ../../using/windows.rst:257
-#, fuzzy
 msgid ""
 "For compatibility with the old launcher, the ``--list``, ``--list-paths``, "
 "``-0`` and ``-0p`` commands (for example, ``py -0p``) are retained. They do "
@@ -614,6 +604,9 @@ msgid ""
 "is recommended and provides the standard CPython runtime. Tags without any "
 "prefix are treated as ``PythonCore\\<TAG>``."
 msgstr ""
+"CPython veröffentlicht mehrere Runtime-Varianten. Für die meisten Benutzer "
+"wird ``PythonCore`` empfohlen, das die übliche CPython-Runtime "
+"bereitstellt. Tags ohne Präfix werden als ``PythonCore\\<TAG>`` behandelt."
 
 #: ../../using/windows.rst:277
 msgid ""
@@ -621,6 +614,9 @@ msgid ""
 "and debugging symbols. It is intended for contributors or users who need "
 "these additional files for testing or debugging Python."
 msgstr ""
+"``PythonTest`` enthält die übliche Runtime samt Testsammlung und "
+"Debugging-Symbolen. Es ist für Mitwirkende oder Benutzer gedacht, die diese "
+"zusätzlichen Dateien zum Testen oder Debuggen von Python brauchen."
 
 #: ../../using/windows.rst:281
 msgid ""
@@ -628,25 +624,30 @@ msgid ""
 "that bundle Python rather than for interactive use. It would normally be "
 "used with the ``--target`` option described below."
 msgstr ""
+"``PythonEmbed`` bietet eine minimale einbettbare Distribution für "
+"Anwendungen, die Python mitliefern, und nicht für die interaktive "
+"Verwendung. Normalerweise wird sie mit der weiter unten beschriebenen "
+"Option ``--target`` verwendet."
 
 #: ../../using/windows.rst:285
 msgid "To see the available runtime variants, run::"
-msgstr ""
+msgstr "Um die verfügbaren Runtime-Varianten zu sehen, führe aus::"
 
 #: ../../using/windows.rst:287
-#, fuzzy
 msgid "py list --online"
-msgstr "$> py list --online 3.14"
+msgstr "py list --online"
 
 #: ../../using/windows.rst:289
 msgid ""
 "To install a specific variant, include it in the tag passed to ``py "
 "install``:"
 msgstr ""
+"Um eine bestimmte Variante zu installieren, nimm sie in das Tag auf, das du "
+"``py install`` übergibst:"
 
 #: ../../using/windows.rst:294
 msgid "py install PythonTest\\\\\\ |version|"
-msgstr ""
+msgstr "py install PythonTest\\\\\\ |version|"
 
 #: ../../using/windows.rst:296
 msgid ""
@@ -693,7 +694,6 @@ msgstr ""
 "Installationen verändert."
 
 #: ../../using/windows.rst:313
-#, fuzzy
 msgid ""
 "Passing ``--refresh`` will update all registrations for installed runtimes. "
 "This will recreate Start menu shortcuts, registry keys, and global aliases "
@@ -703,10 +703,10 @@ msgid ""
 msgstr ""
 "Mit ``--refresh`` werden alle Registrierungen der installierten Runtimes "
 "aktualisiert. Dabei werden Startmenü-Verknüpfungen, Registrierungsschlüssel "
-"und globale Aliasnamen (etwa ``python3.14.exe`` oder solche für installierte "
-"Skripte) neu erzeugt. Bei der Installation einer Runtime geschieht das "
-"automatisch, nach dem Installieren von Paketen kann es aber nötig sein, es "
-"von Hand anzustoßen."
+"und globale Aliasnamen (etwa |python_x_dot_y_exe_literal| oder solche für "
+"installierte Skripte) neu erzeugt. Bei der Installation einer Runtime "
+"geschieht das automatisch, nach dem Installieren von Paketen kann es aber "
+"nötig sein, es von Hand anzustoßen."
 
 #: ../../using/windows.rst:319
 msgid ""
@@ -905,7 +905,6 @@ msgstr ""
 "oder überschriebene Installationen Einstellungen anders auflösen können."
 
 #: ../../using/windows.rst:418
-#, fuzzy
 msgid ""
 "A global configuration file may be configured by an :ref:`administrator "
 "<pymanager-admin-config>` and would be read first. The user configuration "
@@ -916,10 +915,11 @@ msgid ""
 "or the ``--config`` command line option (but not both). These locations may "
 "be modified by administrative customization options listed later."
 msgstr ""
-"Eine globale Konfigurationsdatei kann von der Administration eingerichtet "
-"werden und wird zuerst gelesen. Die Benutzerkonfigurationsdatei liegt "
-"unter :file:`%AppData%\\\\Python\\\\pymanager.json` (beachte, dass dieser "
-"Ort unter ``Roaming`` liegt, nicht unter ``Local``) und wird als nächste "
+"Eine globale Konfigurationsdatei kann von der :ref:`Administration "
+"<pymanager-admin-config>` eingerichtet werden und wird zuerst gelesen. Die "
+"Benutzerkonfigurationsdatei liegt unter "
+":file:`%AppData%\\\\Python\\\\pymanager.json` (beachte, dass dieser Ort "
+"unter ``Roaming`` liegt, nicht unter ``Local``) und wird als nächste "
 "gelesen, wobei sie Einstellungen aus früheren Dateien überschreibt. Eine "
 "weitere Konfigurationsdatei lässt sich über die Umgebungsvariable "
 "``PYTHON_MANAGER_CONFIG`` oder die Befehlszeilenoption ``--config`` angeben "
@@ -976,18 +976,18 @@ msgid "``PYTHON_MANAGER_DEFAULT_PLATFORM``"
 msgstr "``PYTHON_MANAGER_DEFAULT_PLATFORM``"
 
 #: ../../using/windows.rst:453
-#, fuzzy
 msgid ""
 "The preferred default platform to launch or install. This is treated as a "
 "suffix to the specified tag, such that |py_v_x_dot_y_literal| would prefer "
 "an install for |x_dot_y_64_literal| if it exists (and ``default_platform`` "
 "is ``-64``), but will use |x_dot_y_literal| if no tagged install exists."
 msgstr ""
-"Die bevorzugte Standardplattform zum Starten oder Installieren. Sie wird als "
-"Suffix zum angegebenen Tag behandelt, sodass ``py -V:3.14`` eine "
-"Installation für ``3.14-64`` bevorzugen würde, falls sie vorhanden ist (und "
-"``default_platform`` den Wert ``-64`` hat), aber ``3.14`` verwendet, wenn es "
-"keine so gekennzeichnete Installation gibt."
+"Die bevorzugte Standardplattform zum Starten oder Installieren. Sie wird "
+"als Suffix zum angegebenen Tag behandelt, sodass |py_v_x_dot_y_literal| "
+"eine Installation für |x_dot_y_64_literal| bevorzugen würde, falls sie "
+"vorhanden ist (und ``default_platform`` den Wert ``-64`` hat), aber "
+"|x_dot_y_literal| verwendet, wenn es keine so gekennzeichnete Installation "
+"gibt."
 
 #: ../../using/windows.rst:459
 msgid "``logs_dir``"
@@ -1174,17 +1174,16 @@ msgid "``global_dir``"
 msgstr "``global_dir``"
 
 #: ../../using/windows.rst:529
-#, fuzzy
 msgid ""
 "Specify the directory where global commands (such as |"
 "python_x_dot_y_exe_literal| and ``pip.exe``) are stored. This directory "
 "should be added to your :envvar:`PATH` to make the commands available from "
 "your terminal."
 msgstr ""
-"Legt das Verzeichnis fest, in dem globale Befehle (etwa ``python3.14.exe`` "
-"und ``pip.exe``) abgelegt werden. Dieses Verzeichnis sollte zu "
-"deinem :envvar:`PATH` hinzugefügt werden, damit die Befehle im Terminal "
-"verfügbar sind."
+"Legt das Verzeichnis fest, in dem globale Befehle (etwa "
+"|python_x_dot_y_exe_literal| und ``pip.exe``) abgelegt werden. Dieses "
+"Verzeichnis sollte zu deinem :envvar:`PATH` hinzugefügt werden, damit die "
+"Befehle im Terminal verfügbar sind."
 
 #: ../../using/windows.rst:534
 msgid "``download_dir``"
@@ -1213,7 +1212,6 @@ msgid "Shebang lines"
 msgstr "Shebang-Zeilen"
 
 #: ../../using/windows.rst:549
-#, fuzzy
 msgid ""
 "If the first line of a script file starts with ``#!``, it is known as a "
 "\"shebang\" line.  Linux and other Unix-like operating systems have native "
@@ -1326,7 +1324,6 @@ msgstr ""
 "``shebang_can_run_anything`` abschalten."
 
 #: ../../using/windows.rst:594
-#, fuzzy
 msgid ""
 "Shebang lines that do not match any of the patterns are treated as *Windows* "
 "executable paths that are absolute or relative to the directory containing "
@@ -1601,7 +1598,6 @@ msgstr ""
 "Bereitstellungswerkzeugs zu werfen."
 
 #: ../../using/windows.rst:725
-#, fuzzy
 msgid ""
 "Regardless of the install method, users will still need to install their own "
 "copies of Python itself, as there is no way to trigger those installs "
@@ -1770,7 +1766,6 @@ msgid "``install.enable_shortcut_kinds``"
 msgstr "``install.enable_shortcut_kinds``"
 
 #: ../../using/windows.rst:803
-#, fuzzy
 msgid ""
 "Comma-separated list of shortcut kinds to allow (for example, "
 "``\"pep514,start\"``). Enabled shortcuts may still be disabled by "
@@ -1785,7 +1780,6 @@ msgid "``install.disable_shortcut_kinds``"
 msgstr "``install.disable_shortcut_kinds``"
 
 #: ../../using/windows.rst:808
-#, fuzzy
 msgid ""
 "Comma-separated list of shortcut kinds to exclude (for example, "
 "``\"pep514,start\"``). Disabled shortcuts are not reactivated by "
@@ -1894,18 +1888,16 @@ msgstr ""
 "installieren, indem Tags mit dem Suffix ``t`` angegeben werden."
 
 #: ../../using/windows.rst:858
-#, fuzzy
 msgid ""
 "$> py install |version|\\ t\n"
 "$> py install |version|\\ t-arm64\n"
 "$> py install |version|\\ t-32"
 msgstr ""
-"$> py install 3.14t\n"
-"$> py install 3.14t-arm64\n"
-"$> py install 3.14t-32"
+"$> py install |version|\\ t\n"
+"$> py install |version|\\ t-arm64\n"
+"$> py install |version|\\ t-32"
 
 #: ../../using/windows.rst:862
-#, fuzzy
 msgid ""
 "This will install and register as normal. If you have no other runtimes "
 "installed, then ``python`` will launch this one. Otherwise, you will need to "
@@ -1915,9 +1907,9 @@ msgid ""
 msgstr ""
 "Damit wird wie üblich installiert und registriert. Wenn du keine anderen "
 "Runtimes installiert hast, startet ``python`` diese. Andernfalls musst du "
-"``py -V:3.14t ...`` verwenden oder, wenn du das Verzeichnis der globalen "
-"Aliasnamen zu deiner Umgebungsvariablen :envvar:`PATH` hinzugefügt hast, die "
-"Befehle ``python3.14t.exe``."
+"|py_v_x_dot_y_t_literal| verwenden oder, wenn du das Verzeichnis der "
+"globalen Aliasnamen zu deiner Umgebungsvariablen :envvar:`PATH` hinzugefügt "
+"hast, die Befehle |python_x_dot_y_t_exe_literal|."
 
 #: ../../using/windows.rst:871
 msgid "Index signatures"
@@ -1958,7 +1950,6 @@ msgstr ""
 "Index ignoriert."
 
 #: ../../using/windows.rst:888
-#, fuzzy
 msgid ""
 "As well as requiring a valid signature, the ``required_root_subject`` and "
 "``required_publisher_subject`` settings can further restrict acceptable "
@@ -1974,7 +1965,7 @@ msgstr ""
 "Jedes in der Konfiguration angegebene Attribut muss mit dem Attribut im "
 "Zertifikat übereinstimmen (zusätzliche Attribute im Zertifikat werden "
 "ignoriert). Übliche Attribute sind ``CN=`` für den Common Name, ``O=`` für "
-"die Organisationseinheit und ``C=`` für das Land des Herausgebers."
+"die Organisation und ``C=`` für das Land des Herausgebers."
 
 #: ../../using/windows.rst:896
 msgid ""
@@ -2200,7 +2191,6 @@ msgid "Troubleshooting"
 msgstr "Fehlersuche"
 
 #: ../../using/windows.rst:998
-#, fuzzy
 msgid ""
 "If your Python install manager does not seem to be working correctly, work "
 "through these tests and fixes to see if it helps. If not, report an issue at "
@@ -2495,12 +2485,10 @@ msgstr ""
 "install`` mit der Option ``--target``:"
 
 #: ../../using/windows.rst:1152
-#, fuzzy
 msgid "$> py install |version|-embed --target=<directory>"
-msgstr "$> py install 3.14-embed --target=<directory>"
+msgstr "$> py install |version|-embed --target=<directory>"
 
 #: ../../using/windows.rst:1154
-#, fuzzy
 msgid ""
 "When extracted, the embedded distribution is (almost) fully isolated from "
 "the user's system, including environment variables, system registry "
@@ -2514,9 +2502,10 @@ msgstr ""
 "vom System des Benutzers abgeschottet, auch von Umgebungsvariablen, "
 "Einstellungen der Systemregistrierung und installierten Paketen. Die "
 "Standardbibliothek liegt als vorkompilierte und optimierte ``.pyc``-Dateien "
-"in einem ZIP bei, und ``python3.dll``, ``python313.dll``, ``python.exe`` "
-"sowie ``pythonw.exe`` sind alle enthalten. Tcl/tk (samt allem, was darauf "
-"aufbaut, etwa Idle), pip und die Python-Dokumentation sind nicht enthalten."
+"in einem ZIP bei, und ``python3.dll``, |python_xy_dll_literal|, "
+"``python.exe`` sowie ``pythonw.exe`` sind alle enthalten. Tcl/Tk (samt "
+"allem, was darauf aufbaut, etwa IDLE), pip und die Python-Dokumentation "
+"sind nicht enthalten."
 
 #: ../../using/windows.rst:1161
 msgid ""
@@ -2643,7 +2632,6 @@ msgstr ""
 "Python-Interpreter bereitzustellen."
 
 #: ../../using/windows.rst:1212
-#, fuzzy
 msgid ""
 "As with the application use, packages can be installed to any location as "
 "there is an opportunity to specify search paths before initializing the "
@@ -2750,7 +2738,6 @@ msgstr ""
 "wenn sie Dateien zwischen Builds nicht aufbewahren."
 
 #: ../../using/windows.rst:1264
-#, fuzzy
 msgid ""
 "Alongside the ``tools`` directory is a ``build\\native`` directory. This "
 "contains an MSBuild properties file ``python.props`` that can be used in a C+"
@@ -2764,7 +2751,6 @@ msgstr ""
 "Headerdateien und Importbibliotheken."
 
 #: ../../using/windows.rst:1269
-#, fuzzy
 msgid ""
 "The package information pages on nuget.org are `www.nuget.org/packages/"
 "python <https://www.nuget.org/packages/python>`_ for the 64-bit version, "
@@ -2772,18 +2758,18 @@ msgid ""
 "pythonx86>`_ for the 32-bit version, and `www.nuget.org/packages/pythonarm64 "
 "<https://www.nuget.org/packages/pythonarm64>`_ for the ARM64 version."
 msgstr ""
-"Die Paketinformationsseiten auf nuget.org sind `www.nuget.org/packages/"
-"python <https://www.nuget.org/packages/python>`_ für die 64-Bit-Version, "
-"`www.nuget.org/packages/pythonx86 <https://www.nuget.org/packages/"
-"pythonx86>`_ für die 32-Bit-Version und `www.nuget.org/packages/pythonarm64 "
-"<https://www.nuget.org/packages/pythonarm64>`_ für die ARM64-Version"
+"Die Paketinformationsseiten auf nuget.org sind "
+"`www.nuget.org/packages/python <https://www.nuget.org/packages/python>`_ "
+"für die 64-Bit-Version, `www.nuget.org/packages/pythonx86 "
+"<https://www.nuget.org/packages/pythonx86>`_ für die 32-Bit-Version und "
+"`www.nuget.org/packages/pythonarm64 "
+"<https://www.nuget.org/packages/pythonarm64>`_ für die ARM64-Version."
 
 #: ../../using/windows.rst:1277
 msgid "Free-threaded packages"
 msgstr "Free-Threading-Pakete"
 
 #: ../../using/windows.rst:1281
-#, fuzzy
 msgid ""
 "Packages containing free-threaded binaries are named `python-freethreaded "
 "<https://www.nuget.org/packages/python-freethreaded>`_ for the 64-bit "
@@ -2793,14 +2779,15 @@ msgid ""
 "version. These packages contain both the |python_x_dot_y_t_exe_literal| and "
 "``python.exe`` entry points, both of which run free-threaded."
 msgstr ""
-"Pakete mit Free-Threading-Binärdateien heißen `python-freethreaded <https://"
-"www.nuget.org/packages/python-freethreaded>`_ für die 64-Bit-Version, "
-"`pythonx86-freethreaded <https://www.nuget.org/packages/pythonx86-"
-"freethreaded>`_ für die 32-Bit-Version und `pythonarm64-freethreaded "
-"<https://www.nuget.org/packages/pythonarm64-freethreaded>`_ für die ARM64-"
-"Version. Diese Pakete enthalten sowohl den Einsprungpunkt "
-"``python3.13t.exe`` als auch ``python.exe``, die beide im Free-Threading-"
-"Betrieb laufen."
+"Pakete mit Free-Threading-Binärdateien heißen `python-freethreaded "
+"<https://www.nuget.org/packages/python-freethreaded>`_ für die "
+"64-Bit-Version, `pythonx86-freethreaded "
+"<https://www.nuget.org/packages/pythonx86-freethreaded>`_ für die "
+"32-Bit-Version und `pythonarm64-freethreaded "
+"<https://www.nuget.org/packages/pythonarm64-freethreaded>`_ für die "
+"ARM64-Version. Diese Pakete enthalten sowohl den Einsprungpunkt "
+"|python_x_dot_y_t_exe_literal| als auch ``python.exe``, die beide im "
+"Free-Threading-Betrieb laufen."
 
 #: ../../using/windows.rst:1292
 msgid "Alternative bundles"
@@ -2886,7 +2873,6 @@ msgid "Supported Windows versions"
 msgstr "Unterstützte Windows-Versionen"
 
 #: ../../using/windows.rst:1322
-#, fuzzy
 msgid ""
 "As specified in :pep:`11`, a Python release only supports a Windows platform "
 "while Microsoft considers the platform under extended support. This means "
@@ -3067,7 +3053,6 @@ msgstr ""
 "entspricht."
 
 #: ../../using/windows.rst:1407
-#, fuzzy
 msgid ""
 "If the environment variable :envvar:`PYTHONPATH` exists, as described "
 "in :ref:`using-on-envvars`, its entries are added next.  Note that on "
@@ -3098,7 +3083,6 @@ msgstr ""
 "Installationsprogramme nur HKLM verwenden, HKCU ist daher meist leer.)"
 
 #: ../../using/windows.rst:1419
-#, fuzzy
 msgid ""
 "If the environment variable :envvar:`PYTHONHOME` is set, it is assumed as "
 "\"Python Home\".  Otherwise, the path of the main Python executable is used "
@@ -3118,7 +3102,6 @@ msgstr ""
 "gespeicherten PythonPath gebildet."
 
 #: ../../using/windows.rst:1427
-#, fuzzy
 msgid ""
 "If the Python Home cannot be located, no :envvar:`PYTHONPATH` is specified "
 "in the environment, and no registry entries can be found, a default path "
@@ -3165,7 +3148,6 @@ msgstr ""
 "Registrierung werden immer gelesen."
 
 #: ../../using/windows.rst:1445
-#, fuzzy
 msgid ""
 "When Python is hosted in another .exe (for example, in a different directory "
 "or embedded via COM), the \"Python Home\" will not be deduced, so the core "
@@ -3178,7 +3160,6 @@ msgstr ""
 "„Anwendungspfade“ in der Registrierung werden immer gelesen."
 
 #: ../../using/windows.rst:1449
-#, fuzzy
 msgid ""
 "If Python can't find its home and there are no registry values (frozen .exe, "
 "some very strange installation setup) you get a path with some default, but "
@@ -3209,13 +3190,12 @@ msgstr ""
 "sofern dort nicht ``import site`` steht."
 
 #: ../../using/windows.rst:1461
-#, fuzzy
 msgid ""
 "If you are loading :file:`python3.dll` or |python_xy_dll_literal| in your "
 "own executable, explicitly set :c:member:`PyConfig.module_search_paths` "
 "before :c:func:`Py_InitializeFromConfig`."
 msgstr ""
-"Wenn du :file:`python3.dll` oder :file:`python37.dll` in deiner eigenen "
+"Wenn du :file:`python3.dll` oder |python_xy_dll_literal| in deiner eigenen "
 "ausführbaren Datei lädst, setze :c:member:`PyConfig.module_search_paths` "
 "ausdrücklich vor :c:func:`Py_InitializeFromConfig`."
 
@@ -3259,7 +3239,6 @@ msgstr ""
 "site-packages des Benutzers anfällig sein können."
 
 #: ../../using/windows.rst:1482
-#, fuzzy
 msgid ""
 "Add ``._pth`` file support and remove ``applocal`` option from "
 "``pyvenv.cfg``."

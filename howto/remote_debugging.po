@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
-"PO-Revision-Date: 2026-10-15 06:00+0200\n"
+"PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -58,9 +58,9 @@ msgstr ""
 "bevor du den Interpreter startest."
 
 #: ../../howto/remote_debugging.rst:19
-#, fuzzy
 msgid "Use the :option:`-X disable-remote-debug` command-line option."
-msgstr "Verwende die Befehlszeilenoption :option:`-X disable_remote_debug`."
+msgstr ""
+"Verwende die Befehlszeilenoption :option:`-X disable-remote-debug`."
 
 #: ../../howto/remote_debugging.rst:20
 msgid "Compile Python with the :option:`--without-remote-debug` build flag."
@@ -1695,7 +1695,6 @@ msgid "When to use ``PYTHON_DISABLE_REMOTE_DEBUG``"
 msgstr "Wann man ``PYTHON_DISABLE_REMOTE_DEBUG`` verwenden sollte"
 
 #: ../../howto/remote_debugging.rst:719
-#, fuzzy
 msgid ""
 "The environment variable :envvar:`PYTHON_DISABLE_REMOTE_DEBUG` (and the "
 "equivalent :option:`-X disable-remote-debug` flag) allows operators to "
@@ -1706,13 +1705,13 @@ msgid ""
 "checks already prevent unprivileged access."
 msgstr ""
 "Die Umgebungsvariable :envvar:`PYTHON_DISABLE_REMOTE_DEBUG` (und das "
-"gleichwertige Flag :option:`-X disable_remote_debug`) erlaubt es Betreibern, "
-"die prozessinterne Seite des Protokolls als Maßnahme der **mehrschichtigen "
-"Verteidigung** abzuschalten. Das kann in gehärteten oder abgeschotteten "
-"Betriebsumgebungen nützlich sein, in denen kein Debuggen oder Profilieren "
-"des Prozesses erwartet wird und das Verkleinern der Angriffsfläche Vorrang "
-"hat – auch wenn die Rechteprüfungen auf Betriebssystemebene unberechtigten "
-"Zugriff schon verhindern."
+"gleichwertige Flag :option:`-X disable-remote-debug`) erlaubt es "
+"Betreibern, die prozessinterne Seite des Protokolls als Maßnahme der "
+"**mehrschichtigen Verteidigung** abzuschalten. Das kann in gehärteten oder "
+"abgeschotteten Betriebsumgebungen nützlich sein, in denen kein Debuggen "
+"oder Profilieren des Prozesses erwartet wird und das Verkleinern der "
+"Angriffsfläche Vorrang hat – auch wenn die Rechteprüfungen auf "
+"Betriebssystemebene unberechtigten Zugriff schon verhindern."
 
 #: ../../howto/remote_debugging.rst:727
 msgid ""

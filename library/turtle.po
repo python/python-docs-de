@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
-"PO-Revision-Date: 2025-09-16 00:02+0000\n"
+"PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -41,6 +41,8 @@ msgstr ""
 #: ../../library/turtle.rst:32
 msgid "A yellow starburst of thin spikes with a red outline, drawn by turtle."
 msgstr ""
+"Ein gelber Strahlenstern aus dünnen Zacken mit rotem Umriss, von der Turtle "
+"gezeichnet."
 
 #: ../../library/turtle.rst:36
 msgid ""
@@ -58,7 +60,6 @@ msgstr ""
 "Uhrzeigersinn."
 
 #: ../../library/turtle.rst:42
-#, fuzzy
 msgid ""
 "Turtle graphics is an implementation of `the drawing tools introduced in "
 "Logo <https://en.wikipedia.org/wiki/Turtle_(robot)>`__ in 1967. It was "
@@ -68,7 +69,7 @@ msgid ""
 "external libraries."
 msgstr ""
 "Turtle-Grafik ist eine Umsetzung `der Zeichenwerkzeuge, die 1967 in Logo "
-"eingeführt wurden <https://en.wikipedia.org/wiki/Turtle_(robot)>`_. Sie "
+"eingeführt wurden <https://en.wikipedia.org/wiki/Turtle_(robot)>`__. Sie "
 "entstand als Lehrmittel, und ihre unmittelbare, sichtbare Rückmeldung macht "
 "sie zu einem wirksamen Mittel, damit Lernende mit Programmierkonzepten in "
 "Berührung kommen. Außerdem ist sie eine bequeme Möglichkeit, einfache "
@@ -93,7 +94,6 @@ msgstr ""
 "dieses Modul definiert."
 
 #: ../../library/turtle.rst:53
-#, fuzzy
 msgid ":ref:`turtle-howtos` detail how to handle specific tasks."
 msgstr ""
 ":ref:`turtle-howtos` beschreibt im Detail, wie bestimmte Aufgaben zu lösen "
@@ -162,17 +162,20 @@ msgstr ""
 msgid ""
 "Nothing appears yet. To open the turtle window, make the turtle visible::"
 msgstr ""
+"Noch erscheint nichts. Um das Turtle-Fenster zu öffnen, mache die Turtle "
+"sichtbar::"
 
 #: ../../library/turtle.rst:90
-#, fuzzy
 msgid "showturtle()"
-msgstr ">>> turtle.showturtle()"
+msgstr "showturtle()"
 
 #: ../../library/turtle.rst:92
 msgid ""
 "A new window opens, with the turtle in the middle, shown as an arrow heading "
 "East."
 msgstr ""
+"Ein neues Fenster öffnet sich, mit der Turtle in der Mitte, dargestellt als "
+"Pfeil, der nach Osten zeigt."
 
 #: ../../library/turtle.rst:97
 msgid "Basic drawing"
@@ -187,13 +190,11 @@ msgid "forward(100)"
 msgstr "forward(100)"
 
 #: ../../library/turtle.rst:103
-#, fuzzy
 msgid ""
 "You should see a line drawn by the turtle, heading East. Change the "
 "direction of the turtle, so that it turns 120 degrees left (anti-clockwise)::"
 msgstr ""
-"Du solltest (höchstwahrscheinlich in einem neuen Fenster auf deinem "
-"Bildschirm) eine von der Turtle gezeichnete Linie sehen, die nach Osten "
+"Du solltest eine von der Turtle gezeichnete Linie sehen, die nach Osten "
 "zeigt. Ändere die Richtung der Turtle, sodass sie sich um 120 Grad nach "
 "links dreht (gegen den Uhrzeigersinn)::"
 
@@ -224,7 +225,6 @@ msgstr ""
 "Richtungen zeigt, während du sie steuerst."
 
 #: ../../library/turtle.rst:118
-#, fuzzy
 msgid ""
 "Experiment with those commands, and also with ``backward()`` and "
 "``right()``. Many commands also have shorter aliases, such as ``fd()`` "
@@ -405,9 +405,8 @@ msgid "Reference"
 msgstr "Referenz"
 
 #: ../../library/turtle.rst:210
-#, fuzzy
 msgid "Turtle methods and functions"
-msgstr "Turtle-Methoden"
+msgstr "Turtle-Methoden und -Funktionen"
 
 #: ../../library/turtle.rst:212
 msgid ""
@@ -462,7 +461,6 @@ msgstr ""
 "(-50.00,0.00)"
 
 #: ../../library/turtle.rst:247
-#, fuzzy
 msgid ""
 "Move the turtle backward by *distance*, opposite to the direction the turtle "
 "is headed. The turtle's heading does not change."
@@ -485,16 +483,15 @@ msgstr ""
 "(-30.00,0.00)"
 
 #: ../../library/turtle.rst:271
-#, fuzzy
 msgid ""
 "Turn the turtle right by the specified *angle*. The angle is measured in "
 "degrees by default; the unit can be changed with :func:`degrees` "
 "or :func:`radians`. How the heading is measured depends on the turtle mode, "
 "see :func:`mode`."
 msgstr ""
-"Drehe die Turtle um *angle* Einheiten nach rechts. (Die Einheit ist "
-"standardmäßig Grad, kann aber über die Funktionen :func:`degrees` "
-"und :func:`radians` festgelegt werden.) Die Winkelausrichtung hängt vom "
+"Drehe die Turtle um den angegebenen *angle* nach rechts. Der Winkel wird "
+"standardmäßig in Grad gemessen, die Einheit lässt sich mit :func:`degrees` "
+"oder :func:`radians` ändern. Wie die Ausrichtung gemessen wird, hängt vom "
 "Turtle-Modus ab, siehe :func:`mode`."
 
 #: ../../library/turtle.rst:282
@@ -512,16 +509,15 @@ msgstr ""
 "337.0"
 
 #: ../../library/turtle.rst:297
-#, fuzzy
 msgid ""
 "Turn the turtle left by the specified *angle*. The angle is measured in "
 "degrees by default; the unit can be changed with :func:`degrees` "
 "or :func:`radians`. How the heading is measured depends on the turtle mode, "
 "see :func:`mode`."
 msgstr ""
-"Drehe die Turtle um *angle* Einheiten nach links. (Die Einheit ist "
-"standardmäßig Grad, kann aber über die Funktionen :func:`degrees` "
-"und :func:`radians` festgelegt werden.) Die Winkelausrichtung hängt vom "
+"Drehe die Turtle um den angegebenen *angle* nach links. Der Winkel wird "
+"standardmäßig in Grad gemessen, die Einheit lässt sich mit :func:`degrees` "
+"oder :func:`radians` ändern. Wie die Ausrichtung gemessen wird, hängt vom "
 "Turtle-Modus ab, siehe :func:`mode`."
 
 #: ../../library/turtle.rst:308
@@ -550,15 +546,16 @@ msgid "a number or ``None``"
 msgstr "eine Zahl oder ``None``"
 
 #: ../../library/turtle.rst:325
-#, fuzzy
 msgid ""
 "Move the turtle to an absolute position. If *y* is ``None``, *x* must be a "
 "pair of coordinates or a :class:`Vec2D`, for example as returned "
 "by :func:`pos`. If the pen is down, a line is drawn. The turtle's heading "
 "does not change."
 msgstr ""
-"Wenn *y* ``None`` ist, muss *x* ein Koordinatenpaar oder ein :class:`Vec2D` "
-"sein (z. B. wie von :func:`pos` zurückgegeben)."
+"Bewege die Turtle an eine absolute Position. Ist *y* ``None``, muss *x* ein "
+"Koordinatenpaar oder ein :class:`Vec2D` sein, zum Beispiel wie von "
+":func:`pos` zurückgegeben. Ist der Stift unten, wird eine Linie gezeichnet. "
+"Die Ausrichtung der Turtle ändert sich nicht."
 
 #: ../../library/turtle.rst:336
 msgid ""
@@ -598,6 +595,10 @@ msgid ""
 "Unlike :func:`goto`, no line is drawn. If *x* or *y* is not given, that "
 "coordinate is kept as it is. The turtle's heading does not change."
 msgstr ""
+"Versetze die Turtle unmittelbar an eine absolute Position. Anders als bei "
+":func:`goto` wird keine Linie gezeichnet. Wird *x* oder *y* nicht "
+"angegeben, bleibt diese Koordinate unverändert. Die Ausrichtung der Turtle "
+"ändert sich nicht."
 
 #: ../../library/turtle.rst:363
 msgid ""
@@ -606,6 +607,11 @@ msgid ""
 "Pass ``fill_gap=True`` to keep filling one shape instead. The teleport then "
 "counts as an edge of the shape, as it would with :func:`goto`."
 msgstr ""
+"Füllt die Turtle gerade eine Form, wird die bisher gezeichnete Form vor dem "
+"Versetzen abgeschlossen und gefüllt, und das Füllen beginnt an der neuen "
+"Position erneut. Übergib ``fill_gap=True``, um stattdessen eine einzige "
+"Form weiterzufüllen. Das Versetzen zählt dann als Kante der Form, so wie es "
+"bei :func:`goto` wäre."
 
 #: ../../library/turtle.rst:374
 msgid ""
@@ -636,10 +642,9 @@ msgstr ""
 "(20.00,30.00)"
 
 #: ../../library/turtle.rst:397
-#, fuzzy
 msgid "Set the turtle's x coordinate to *x*. The y coordinate is unchanged."
 msgstr ""
-"Setze die erste Koordinate der Turtle auf *x*, die zweite Koordinate bleibt "
+"Setze die x-Koordinate der Turtle auf *x*. Die y-Koordinate bleibt "
 "unverändert."
 
 #: ../../library/turtle.rst:405
@@ -657,10 +662,9 @@ msgstr ""
 "(10.00,240.00)"
 
 #: ../../library/turtle.rst:419
-#, fuzzy
 msgid "Set the turtle's y coordinate to *y*. The x coordinate is unchanged."
 msgstr ""
-"Setze die zweite Koordinate der Turtle auf *y*, die erste Koordinate bleibt "
+"Setze die y-Koordinate der Turtle auf *y*. Die x-Koordinate bleibt "
 "unverändert."
 
 #: ../../library/turtle.rst:427
@@ -678,7 +682,6 @@ msgstr ""
 "(0.00,-10.00)"
 
 #: ../../library/turtle.rst:442
-#, fuzzy
 msgid ""
 "Set the turtle's heading to *to_angle*. Here are some common directions in "
 "degrees:"
@@ -737,15 +740,14 @@ msgstr ""
 "90.0"
 
 #: ../../library/turtle.rst:464
-#, fuzzy
 msgid ""
 "Move the turtle to the origin, coordinates (0,0). The turtle's heading is "
 "set to its start orientation, which depends on the turtle mode, "
 "see :func:`mode`."
 msgstr ""
-"Bewege die Turtle zum Ursprung – Koordinaten (0,0) – und setze ihre "
-"Ausrichtung auf die Startausrichtung (die vom Modus abhängt, "
-"siehe :func:`mode`)."
+"Bewege die Turtle zum Ursprung, Koordinaten (0,0). Die Ausrichtung der "
+"Turtle wird auf ihre Startausrichtung gesetzt, die vom Turtle-Modus "
+"abhängt, siehe :func:`mode`."
 
 #: ../../library/turtle.rst:475
 msgid ""
@@ -774,7 +776,6 @@ msgid "an integer or ``None``"
 msgstr "eine Ganzzahl oder ``None``"
 
 #: ../../library/turtle.rst:495
-#, fuzzy
 msgid ""
 "Draw a circle with the given *radius*. The center is *radius* units left of "
 "the turtle; *extent*, an angle, determines which part of the circle is "
@@ -793,7 +794,6 @@ msgstr ""
 "geändert."
 
 #: ../../library/turtle.rst:503
-#, fuzzy
 msgid ""
 "As the circle is approximated by an inscribed regular polygon, *steps* "
 "determines the number of steps to use. If not given, it will be calculated "
@@ -839,9 +839,8 @@ msgstr ""
 "180.0"
 
 #: ../../library/turtle.rst:533
-#, fuzzy
 msgid "a positive integer or ``None``"
-msgstr "eine Ganzzahl oder ``None``"
+msgstr "eine positive Ganzzahl oder ``None``"
 
 #: ../../library/turtle.rst:534
 msgid "a colorstring or a numeric color tuple"
@@ -985,9 +984,8 @@ msgstr ""
 "...     turtle.undo()"
 
 #: ../../library/turtle.rst:624
-#, fuzzy
 msgid "an integer, a string or ``None``"
-msgstr "eine Ganzzahl oder ``None``"
+msgstr "eine Ganzzahl, eine Zeichenkette oder ``None``"
 
 #: ../../library/turtle.rst:626
 msgid ""
@@ -996,43 +994,45 @@ msgid ""
 "If *speed* is a number greater than 10 or smaller than 0.5, the speed is set "
 "to 0. You can also use these names instead of numbers:"
 msgstr ""
+"Gib die Geschwindigkeit der Turtle zurück oder setze sie. Wird *speed* "
+"nicht angegeben, wird die aktuelle Geschwindigkeit zurückgegeben. "
+"Andernfalls wird die Geschwindigkeit der Turtle auf eine Ganzzahl von 0 bis "
+"10 gesetzt. Ist *speed* eine Zahl größer als 10 oder kleiner als 0,5, wird "
+"die Geschwindigkeit auf 0 gesetzt. Du kannst auch diese Namen anstelle von "
+"Zahlen verwenden:"
 
 #: ../../library/turtle.rst:631
-#, fuzzy
 msgid "\"fastest\": 0"
-msgstr "\"fastest\":  0"
+msgstr "\"fastest\": 0"
 
 #: ../../library/turtle.rst:632
-#, fuzzy
 msgid "\"fast\": 10"
-msgstr "\"fast\":  10"
+msgstr "\"fast\": 10"
 
 #: ../../library/turtle.rst:633
-#, fuzzy
 msgid "\"normal\": 6"
-msgstr "\"normal\":  6"
+msgstr "\"normal\": 6"
 
 #: ../../library/turtle.rst:634
-#, fuzzy
 msgid "\"slow\": 3"
-msgstr "\"slow\":  3"
+msgstr "\"slow\": 3"
 
 #: ../../library/turtle.rst:635
-#, fuzzy
 msgid "\"slowest\": 1"
-msgstr "\"slowest\":  1"
+msgstr "\"slowest\": 1"
 
 #: ../../library/turtle.rst:637
-#, fuzzy
 msgid ""
 "Speeds from 1 to 10 give increasingly faster animation of line drawing and "
 "turtle turning. A speed of 0 means that no animation takes "
 "place: :func:`forward` and :func:`back` make the turtle jump, and "
 "likewise :func:`left` and :func:`right` make the turtle turn instantly."
 msgstr ""
-"Achtung: *speed* = 0 bedeutet, dass *keine* Animation stattfindet. forward/"
-"back lässt die Turtle springen, und ebenso lassen left/right die Turtle "
-"sofort drehen."
+"Geschwindigkeiten von 1 bis 10 ergeben eine zunehmend schnellere Animation "
+"beim Zeichnen von Linien und beim Drehen der Turtle. Eine Geschwindigkeit "
+"von 0 bedeutet, dass keine Animation stattfindet: :func:`forward` und "
+":func:`back` lassen die Turtle springen, und ebenso lassen :func:`left` und "
+":func:`right` die Turtle sofort drehen."
 
 #: ../../library/turtle.rst:642
 msgid ""
@@ -1059,11 +1059,9 @@ msgid "Tell Turtle's state"
 msgstr "Zustand der Turtle abfragen"
 
 #: ../../library/turtle.rst:661
-#, fuzzy
 msgid "Return the turtle's current location (x,y) as a :class:`Vec2D` vector."
 msgstr ""
-"Gib die aktuelle Position der Turtle (x,y) (als :class:`Vec2D`-Vektor) "
-"zurück."
+"Gib die aktuelle Position der Turtle (x,y) als :class:`Vec2D`-Vektor zurück."
 
 #: ../../library/turtle.rst:663
 msgid ""
@@ -1150,13 +1148,12 @@ msgstr ""
 "86.60254"
 
 #: ../../library/turtle.rst:723
-#, fuzzy
 msgid ""
 "Return the turtle's current heading. The value depends on the turtle mode, "
 "see :func:`mode`."
 msgstr ""
-"Gibt die aktuelle Ausrichtung der Turtle zurück (der Wert hängt vom Turtle-"
-"Modus ab, siehe :func:`mode`)."
+"Gib die aktuelle Ausrichtung der Turtle zurück. Der Wert hängt vom "
+"Turtle-Modus ab, siehe :func:`mode`."
 
 #: ../../library/turtle.rst:726
 msgid ""
@@ -1171,14 +1168,14 @@ msgstr ""
 "67.0"
 
 #: ../../library/turtle.rst:740
-#, fuzzy
 msgid ""
 "Return the distance from the turtle to (x,y) in turtle step units. If *y* is "
 "``None``, *x* must be a pair of coordinates, a :class:`Vec2D`, for example "
 "as returned by :func:`pos`, or another turtle."
 msgstr ""
-"Wenn *y* ``None`` ist, muss *x* ein Koordinatenpaar oder ein :class:`Vec2D` "
-"sein (z. B. wie von :func:`pos` zurückgegeben)."
+"Gib den Abstand von der Turtle zu (x,y) in Turtle-Schritteinheiten zurück. "
+"Ist *y* ``None``, muss *x* ein Koordinatenpaar sein, ein :class:`Vec2D` – "
+"zum Beispiel wie von :func:`pos` zurückgegeben – oder eine andere Turtle."
 
 #: ../../library/turtle.rst:744
 msgid ""
@@ -1207,13 +1204,12 @@ msgid "Settings for measurement"
 msgstr "Einstellungen für Messungen"
 
 #: ../../library/turtle.rst:765
-#, fuzzy
 msgid ""
 "Set the angle measurement units to degrees. The number of degrees in a full "
 "circle is set to *fullcircle*, which defaults to 360."
 msgstr ""
-"Setze die Winkelmesseinheiten, d. h. setze die Anzahl der \"Grad\" für einen "
-"vollen Kreis. Der Standardwert ist 360 Grad."
+"Setze die Winkelmesseinheiten auf Grad. Die Anzahl der Grad für einen "
+"vollen Kreis wird auf *fullcircle* gesetzt, standardmäßig 360."
 
 #: ../../library/turtle.rst:768
 msgid ""
@@ -1278,29 +1274,27 @@ msgstr "Zeichenzustand"
 #: ../../library/turtle.rst:819
 msgid "Lower the pen. The turtle draws a line when it moves."
 msgstr ""
+"Senke den Stift. Die Turtle zeichnet eine Linie, wenn sie sich bewegt."
 
 #: ../../library/turtle.rst:826
-#, fuzzy
 msgid "Lift the pen. The turtle does not draw when it moves."
-msgstr "Hebe den Stift -- zeichnet nicht beim Bewegen."
+msgstr "Hebe den Stift. Die Turtle zeichnet nicht, wenn sie sich bewegt."
 
 #: ../../library/turtle.rst:832 ../../library/turtle.rst:1249
 #: ../../library/turtle.rst:1250 ../../library/turtle.rst:1251
-#, fuzzy
 msgid "a positive number or ``None``"
-msgstr "eine Zahl oder ``None``"
+msgstr "eine positive Zahl oder ``None``"
 
 #: ../../library/turtle.rst:834
-#, fuzzy
 msgid ""
 "Return or set the line thickness. If *width* is not given, return the "
 "current pensize. If resizemode is set to \"auto\" and the turtle shape is a "
 "polygon, that polygon is drawn with the same line thickness."
 msgstr ""
-"Setze die Liniendicke auf *width* oder gib sie zurück. Ist resizemode auf "
-"\"auto\" gesetzt und die Form der Turtle ein Polygon, wird dieses Polygon "
-"mit derselben Liniendicke gezeichnet. Wird kein Argument angegeben, wird die "
-"aktuelle Stiftgröße zurückgegeben."
+"Gib die Liniendicke zurück oder setze sie. Wird *width* nicht angegeben, "
+"wird die aktuelle Stiftgröße zurückgegeben. Ist resizemode auf \"auto\" "
+"gesetzt und die Form der Turtle ein Polygon, wird dieses Polygon mit "
+"derselben Liniendicke gezeichnet."
 
 #: ../../library/turtle.rst:838
 msgid ""
@@ -1416,7 +1410,6 @@ msgstr ""
 "[('fillcolor', 'green'), ('outline', 1), ('pencolor', 'red')]"
 
 #: ../../library/turtle.rst:891
-#, fuzzy
 msgid "Return ``True`` if the pen is down, ``False`` if it's up."
 msgstr ""
 "Gib ``True`` zurück, wenn der Stift unten ist, ``False``, wenn er oben ist."
@@ -1455,23 +1448,22 @@ msgid "``pencolor()``"
 msgstr "``pencolor()``"
 
 #: ../../library/turtle.rst:916
-#, fuzzy
 msgid ""
 "Return the current pencolor as color specification string or as a tuple (see "
 "example).  May be used as input to "
 "another :func:`color`, :func:`pencolor`, :func:`fillcolor` "
 "or :func:`bgcolor` call."
 msgstr ""
-"Gib die aktuelle Stiftfarbe als Farbangabe-String oder als Tupel zurück "
-"(siehe Beispiel). Kann als Eingabe für einen weiteren color/pencolor/"
-"fillcolor/bgcolor-Aufruf verwendet werden."
+"Gib die aktuelle Stiftfarbe als Farbangabe-Zeichenkette oder als Tupel "
+"zurück (siehe Beispiel). Kann als Eingabe für einen weiteren Aufruf von "
+":func:`color`, :func:`pencolor`, :func:`fillcolor` oder :func:`bgcolor` "
+"verwendet werden."
 
 #: ../../library/turtle.rst:921
 msgid "``pencolor(colorstring)``"
 msgstr "``pencolor(colorstring)``"
 
 #: ../../library/turtle.rst:922
-#, fuzzy
 msgid ""
 "Set the pencolor to *colorstring*, which is a Tk color specification string, "
 "such as ``\"red\"``, ``\"yellow\"``, or ``\"#33cc8c\"``."
@@ -1484,7 +1476,6 @@ msgid "``pencolor((r, g, b))``"
 msgstr "``pencolor((r, g, b))``"
 
 #: ../../library/turtle.rst:926
-#, fuzzy
 msgid ""
 "Set the pencolor to the RGB color represented by the tuple of *r*, *g*, and "
 "*b*. Each of *r*, *g*, and *b* must be between 0 and colormode, where "
@@ -1500,7 +1491,6 @@ msgid "``pencolor(r, g, b)``"
 msgstr "``pencolor(r, g, b)``"
 
 #: ../../library/turtle.rst:931
-#, fuzzy
 msgid ""
 "Set the pencolor to the RGB color represented by *r*, *g*, and *b*. Each of "
 "*r*, *g*, and *b* must be between 0 and colormode."
@@ -1509,7 +1499,6 @@ msgstr ""
 "Jeder der Werte *r*, *g* und *b* muss im Bereich 0..colormode liegen."
 
 #: ../../library/turtle.rst:934
-#, fuzzy
 msgid ""
 "If the turtle shape is a polygon, the outline of that polygon is drawn with "
 "the newly set pencolor."
@@ -1564,23 +1553,22 @@ msgid "``fillcolor()``"
 msgstr "``fillcolor()``"
 
 #: ../../library/turtle.rst:968
-#, fuzzy
 msgid ""
 "Return the current fillcolor as color specification string, possibly in "
 "tuple format (see example).  May be used as input to "
 "another :func:`color`, :func:`pencolor`, :func:`fillcolor` "
 "or :func:`bgcolor` call."
 msgstr ""
-"Gib die aktuelle Füllfarbe als Farbangabe-String zurück, möglicherweise im "
-"Tupel-Format (siehe Beispiel). Kann als Eingabe für einen weiteren color/"
-"pencolor/fillcolor/bgcolor-Aufruf verwendet werden."
+"Gib die aktuelle Füllfarbe als Farbangabe-Zeichenkette zurück, "
+"möglicherweise im Tupel-Format (siehe Beispiel). Kann als Eingabe für einen "
+"weiteren Aufruf von :func:`color`, :func:`pencolor`, :func:`fillcolor` oder "
+":func:`bgcolor` verwendet werden."
 
 #: ../../library/turtle.rst:973
 msgid "``fillcolor(colorstring)``"
 msgstr "``fillcolor(colorstring)``"
 
 #: ../../library/turtle.rst:974
-#, fuzzy
 msgid ""
 "Set the fillcolor to *colorstring*, which is a Tk color specification "
 "string, such as ``\"red\"``, ``\"yellow\"``, or ``\"#33cc8c\"``."
@@ -1593,7 +1581,6 @@ msgid "``fillcolor((r, g, b))``"
 msgstr "``fillcolor((r, g, b))``"
 
 #: ../../library/turtle.rst:978
-#, fuzzy
 msgid ""
 "Set the fillcolor to the RGB color represented by the tuple of *r*, *g*, and "
 "*b*. Each of *r*, *g*, and *b* must be between 0 and colormode, where "
@@ -1609,7 +1596,6 @@ msgid "``fillcolor(r, g, b)``"
 msgstr "``fillcolor(r, g, b)``"
 
 #: ../../library/turtle.rst:983
-#, fuzzy
 msgid ""
 "Set the fillcolor to the RGB color represented by *r*, *g*, and *b*. Each of "
 "*r*, *g*, and *b* must be between 0 and colormode."
@@ -1618,7 +1604,6 @@ msgstr ""
 "Jeder der Werte *r*, *g* und *b* muss im Bereich 0..colormode liegen."
 
 #: ../../library/turtle.rst:986
-#, fuzzy
 msgid ""
 "If the turtle shape is a polygon, the interior of that polygon is drawn with "
 "the newly set fillcolor."
@@ -1653,12 +1638,10 @@ msgstr ""
 "(255.0, 255.0, 255.0)"
 
 #: ../../library/turtle.rst:1010
-#, fuzzy
 msgid "Return or set the pencolor and fillcolor."
 msgstr "Gib die Stiftfarbe und die Füllfarbe zurück oder setze sie."
 
 #: ../../library/turtle.rst:1012
-#, fuzzy
 msgid ""
 "Several input formats are allowed. They use 0 to 3 arguments as follows:"
 msgstr ""
@@ -1684,7 +1667,6 @@ msgid "``color(colorstring)``, ``color((r,g,b))``, ``color(r,g,b)``"
 msgstr "``color(colorstring)``, ``color((r,g,b))``, ``color(r,g,b)``"
 
 #: ../../library/turtle.rst:1021
-#, fuzzy
 msgid ""
 "Inputs as in :func:`pencolor`. Set both the pencolor and the fillcolor to "
 "the given value."
@@ -1707,7 +1689,6 @@ msgstr ""
 "analog, wenn das andere Eingabeformat verwendet wird."
 
 #: ../../library/turtle.rst:1028
-#, fuzzy
 msgid ""
 "If the turtle shape is a polygon, the outline and interior of that polygon "
 "are drawn with the newly set colors."
@@ -1740,11 +1721,9 @@ msgid "Filling"
 msgstr "Füllen"
 
 #: ../../library/turtle.rst:1056
-#, fuzzy
 msgid "Return ``True`` if the turtle is filling, ``False`` otherwise."
 msgstr ""
-"Gib ``True`` zurück, wenn die Turtle sichtbar ist, ``False``, wenn sie "
-"versteckt ist."
+"Gib ``True`` zurück, wenn die Turtle gerade füllt, andernfalls ``False``."
 
 #: ../../library/turtle.rst:1058
 msgid ""
@@ -1824,13 +1803,12 @@ msgid "More drawing control"
 msgstr "Mehr Zeichenkontrolle"
 
 #: ../../library/turtle.rst:1120
-#, fuzzy
 msgid ""
 "Delete the turtle's drawings and re-center the turtle. The turtle's settings "
 "are restored to their default values."
 msgstr ""
-"Lösche die Zeichnungen der Turtle vom Bildschirm, zentriere die Turtle neu "
-"und setze die Variablen auf ihre Standardwerte zurück."
+"Lösche die Zeichnungen der Turtle und zentriere die Turtle neu. Die "
+"Einstellungen der Turtle werden auf ihre Standardwerte zurückgesetzt."
 
 #: ../../library/turtle.rst:1123
 msgid ""
@@ -1859,13 +1837,12 @@ msgstr ""
 "0.0"
 
 #: ../../library/turtle.rst:1141
-#, fuzzy
 msgid ""
 "Delete the turtle's drawings from the screen. The state and position of the "
 "turtle as well as the drawings of other turtles are not affected."
 msgstr ""
-"Lösche die Zeichnungen der Turtle vom Bildschirm, zentriere die Turtle neu "
-"und setze die Variablen auf ihre Standardwerte zurück."
+"Lösche die Zeichnungen der Turtle vom Bildschirm. Zustand und Position der "
+"Turtle sowie die Zeichnungen anderer Turtles bleiben davon unberührt."
 
 #: ../../library/turtle.rst:1147
 msgid "object to be written to the TurtleScreen"
@@ -1914,13 +1891,14 @@ msgstr "Sichtbarkeit"
 #: ../../library/turtle.rst:1173
 msgid "Make the turtle invisible. If the pen is down, movement still draws."
 msgstr ""
+"Mache die Turtle unsichtbar. Ist der Stift unten, zeichnet eine Bewegung "
+"weiterhin."
 
 #: ../../library/turtle.rst:1179
 msgid "Make the turtle visible."
 msgstr "Mache die Turtle sichtbar."
 
 #: ../../library/turtle.rst:1184
-#, fuzzy
 msgid "Return ``True`` if the turtle is visible, ``False`` if it's hidden."
 msgstr ""
 "Gib ``True`` zurück, wenn die Turtle sichtbar ist, ``False``, wenn sie "
@@ -1948,12 +1926,10 @@ msgstr "Erscheinungsbild"
 
 #: ../../library/turtle.rst:1202 ../../library/turtle.rst:1222
 #: ../../library/turtle.rst:1960
-#, fuzzy
 msgid "a string or ``None``"
-msgstr "eine Ganzzahl oder ``None``"
+msgstr "eine Zeichenkette oder ``None``"
 
 #: ../../library/turtle.rst:1204
-#, fuzzy
 msgid ""
 "Set the turtle shape to the named shape. If *name* is not given, return the "
 "name of the current shape. The shape must exist in "
@@ -1962,12 +1938,12 @@ msgid ""
 "\"triangle\" and \"classic\". To add shapes, see the :class:`Screen` "
 "method :func:`register_shape`."
 msgstr ""
-"Setze die Form der Turtle auf die Form mit dem angegebenen *name*, oder, "
-"falls kein Name angegeben ist, gib den Namen der aktuellen Form zurück. Die "
-"Form mit *name* muss im Formen-Dictionary des TurtleScreen vorhanden sein. "
-"Anfangs stehen folgende Polygonformen zur Verfügung: \"arrow\", \"turtle\", "
-"\"circle\", \"square\", \"triangle\", \"classic\". Um mehr über den Umgang "
-"mit Formen zu erfahren, siehe die Screen-Methode :func:`register_shape`."
+"Setze die Form der Turtle auf die Form mit dem angegebenen Namen. Wird "
+"*name* nicht angegeben, wird der Name der aktuellen Form zurückgegeben. Die "
+"Form muss im Formen-Dictionary des :class:`TurtleScreen` vorhanden sein. "
+"Anfangs gibt es die folgenden Formen: \"arrow\", \"turtle\", \"circle\", "
+"\"square\", \"triangle\" und \"classic\". Um Formen hinzuzufügen, siehe die "
+":class:`Screen`-Methode :func:`register_shape`."
 
 #: ../../library/turtle.rst:1210
 msgid ""
@@ -1984,37 +1960,33 @@ msgstr ""
 "'turtle'"
 
 #: ../../library/turtle.rst:1224
-#, fuzzy
 msgid ""
 "Set the resizemode to \"auto\", \"user\" or \"noresize\". If *rmode* is not "
 "given, return the current resizemode. The different resizemodes have the "
 "following effects:"
 msgstr ""
-"Setze resizemode auf einen der Werte: \"auto\", \"user\", \"noresize\". Wird "
-"*rmode* nicht angegeben, wird der aktuelle resizemode zurückgegeben. Die "
+"Setze resizemode auf \"auto\", \"user\" oder \"noresize\". Wird *rmode* "
+"nicht angegeben, wird der aktuelle resizemode zurückgegeben. Die "
 "verschiedenen resizemodes haben folgende Auswirkungen:"
 
 #: ../../library/turtle.rst:1228
-#, fuzzy
 msgid ""
 "\"auto\": the turtle is resized according to the value of :func:`pensize`."
 msgstr ""
-"\"auto\": passt das Erscheinungsbild der Turtle entsprechend dem Wert von "
-"pensize an."
+"\"auto\": Die Größe der Turtle richtet sich nach dem Wert von "
+":func:`pensize`."
 
 #: ../../library/turtle.rst:1229
-#, fuzzy
 msgid ""
 "\"user\": the turtle is resized according to the stretch factors and outline "
 "width, which are set by :func:`shapesize`."
 msgstr ""
-"\"user\": passt das Erscheinungsbild der Turtle gemäß den Werten von "
-"stretchfactor und outlinewidth (outline) an, die durch :func:`shapesize` "
-"gesetzt werden."
+"\"user\": Die Größe der Turtle richtet sich nach den Streckfaktoren und der "
+"Umrissbreite, die :func:`shapesize` setzt."
 
 #: ../../library/turtle.rst:1231
 msgid "\"noresize\": the turtle is not resized."
-msgstr ""
+msgstr "\"noresize\": Die Größe der Turtle wird nicht verändert."
 
 #: ../../library/turtle.rst:1233
 msgid ""
@@ -2045,22 +2017,25 @@ msgid ""
 "\"user\", so that the turtle is displayed stretched according to its stretch "
 "factors:"
 msgstr ""
+"Gib die Streckfaktoren und die Umrissbreite der Turtle zurück oder setze "
+"sie. Werden keine Argumente angegeben, werden die aktuellen Werte "
+"zurückgegeben. Andernfalls wird resizemode auf \"user\" gesetzt, sodass die "
+"Turtle entsprechend ihren Streckfaktoren gestreckt dargestellt wird:"
 
 #: ../../library/turtle.rst:1258
 msgid "*stretch_wid*: the stretch factor perpendicular to the turtle's heading"
 msgstr ""
+"*stretch_wid*: der Streckfaktor senkrecht zur Ausrichtung der Turtle"
 
 #: ../../library/turtle.rst:1259
-#, fuzzy
 msgid ""
 "*stretch_len*: the stretch factor in the direction of the turtle's heading"
 msgstr ""
-"Bewege die Turtle um die angegebene *distance* vorwärts, in die Richtung, in "
-"die die Turtle blickt."
+"*stretch_len*: der Streckfaktor in Richtung der Ausrichtung der Turtle"
 
 #: ../../library/turtle.rst:1261
 msgid "*outline*: the width of the shape's outline"
-msgstr ""
+msgstr "*outline*: die Breite des Umrisses der Form"
 
 #: ../../library/turtle.rst:1263
 msgid ""
@@ -2068,6 +2043,9 @@ msgid ""
 "changing its length. If only *stretch_wid* is given, *stretch_len* is set to "
 "the same value."
 msgstr ""
+"``shapesize(2, 1)`` macht die Turtle zum Beispiel doppelt so breit, ohne "
+"ihre Länge zu ändern. Wird nur *stretch_wid* angegeben, wird *stretch_len* "
+"auf denselben Wert gesetzt."
 
 #: ../../library/turtle.rst:1267
 msgid ""
@@ -2253,19 +2231,16 @@ msgid "Using events"
 msgstr "Ereignisse verwenden"
 
 #: ../../library/turtle.rst:1393 ../../library/turtle.rst:1866
-#, fuzzy
 msgid "a function with two arguments or ``None``"
-msgstr "eine Funktion ohne Argumente oder ``None``"
+msgstr "eine Funktion mit zwei Argumenten oder ``None``"
 
 #: ../../library/turtle.rst:1394 ../../library/turtle.rst:1867
-#, fuzzy
 msgid "an integer"
-msgstr "eine Ganzzahl oder ``None``"
+msgstr "eine Ganzzahl"
 
 #: ../../library/turtle.rst:1395 ../../library/turtle.rst:1868
-#, fuzzy
 msgid "a boolean or ``None``"
-msgstr "eine Zahl oder ``None``"
+msgstr "ein Wahrheitswert oder ``None``"
 
 #: ../../library/turtle.rst:1397
 msgid ""
@@ -2276,6 +2251,12 @@ msgid ""
 "added, otherwise it replaces a former binding. Example for the anonymous "
 "turtle, that is, the procedural way:"
 msgstr ""
+"Binde *fun* an Mausklick-Ereignisse auf dieser Turtle. *fun* wird mit den "
+"Koordinaten des angeklickten Punktes auf der Leinwand aufgerufen. Ist *fun* "
+"``None``, werden bestehende Bindungen entfernt. *btn* ist die Nummer der "
+"Maustaste und ist standardmäßig 1, die linke Maustaste. Ist *add* ``True``, "
+"wird eine neue Bindung hinzugefügt, andernfalls ersetzt sie eine frühere "
+"Bindung. Beispiel für die anonyme Turtle, also der prozedurale Weg:"
 
 #: ../../library/turtle.rst:1404
 msgid ""
@@ -2396,7 +2377,6 @@ msgstr ""
 "...     turtle.forward(100)"
 
 #: ../../library/turtle.rst:1483
-#, fuzzy
 msgid ""
 "Start recording the vertices of a polygon. The current turtle position is "
 "the first vertex of the polygon."
@@ -2405,7 +2385,6 @@ msgstr ""
 "Position der Turtle ist der erste Eckpunkt des Polygons."
 
 #: ../../library/turtle.rst:1489
-#, fuzzy
 msgid ""
 "Stop recording the vertices of a polygon. The current turtle position is the "
 "last vertex of the polygon. This will be connected with the first vertex."
@@ -2443,7 +2422,6 @@ msgstr ""
 ">>> register_shape(\"myFavouriteShape\", p)"
 
 #: ../../library/turtle.rst:1514
-#, fuzzy
 msgid ""
 "Create and return a clone of the turtle. The clone has the same position, "
 "heading and turtle properties."
@@ -2460,15 +2438,16 @@ msgstr ""
 ">>> marco = leonel.clone()"
 
 #: ../../library/turtle.rst:1527
-#, fuzzy
 msgid "Return the Turtle object itself."
-msgstr "Gib die x-Koordinate der Turtle zurück."
+msgstr "Gib das Turtle-Objekt selbst zurück."
 
 #: ../../library/turtle.rst:1529
 msgid ""
 "Call ``getturtle()`` to get the turtle used by functions such "
 "as :func:`forward` and :func:`left`:"
 msgstr ""
+"Rufe ``getturtle()`` auf, um die Turtle zu bekommen, die Funktionen wie "
+":func:`forward` und :func:`left` verwenden:"
 
 #: ../../library/turtle.rst:1532
 msgid ""
@@ -2503,7 +2482,6 @@ msgstr ""
 ">>> ts.bgcolor(\"pink\")"
 
 #: ../../library/turtle.rst:1559
-#, fuzzy
 msgid ""
 "Set or disable the undo buffer. If *size* is an integer, an empty undo "
 "buffer of the given size is installed. *size* is the maximum number of "
@@ -2521,7 +2499,6 @@ msgid ">>> turtle.setundobuffer(42)"
 msgstr ">>> turtle.setundobuffer(42)"
 
 #: ../../library/turtle.rst:1572
-#, fuzzy
 msgid "Return the number of entries in the undo buffer."
 msgstr "Gib die Anzahl der Einträge im Undo-Puffer zurück."
 
@@ -2535,7 +2512,7 @@ msgstr ""
 
 #: ../../library/turtle.rst:1585
 msgid "Screen methods and functions"
-msgstr ""
+msgstr "Screen-Methoden und -Funktionen"
 
 #: ../../library/turtle.rst:1587
 msgid ""
@@ -2558,16 +2535,16 @@ msgid "``bgcolor()``"
 msgstr "``bgcolor()``"
 
 #: ../../library/turtle.rst:1609
-#, fuzzy
 msgid ""
 "Return the current background color as a color specification string or as a "
 "tuple (see example).  May be used as input to "
 "another :func:`color`, :func:`pencolor`, :func:`fillcolor` "
 "or :func:`bgcolor` call."
 msgstr ""
-"Gib die aktuelle Hintergrundfarbe als Farbangabe-String oder als Tupel "
-"zurück (siehe Beispiel). Kann als Eingabe für einen weiteren color/pencolor/"
-"fillcolor/bgcolor-Aufruf verwendet werden."
+"Gib die aktuelle Hintergrundfarbe als Farbangabe-Zeichenkette oder als "
+"Tupel zurück (siehe Beispiel). Kann als Eingabe für einen weiteren Aufruf "
+"von :func:`color`, :func:`pencolor`, :func:`fillcolor` oder :func:`bgcolor` "
+"verwendet werden."
 
 #: ../../library/turtle.rst:1614
 msgid "``bgcolor(colorstring)``"
@@ -2586,7 +2563,6 @@ msgid "``bgcolor((r, g, b))``"
 msgstr "``bgcolor((r, g, b))``"
 
 #: ../../library/turtle.rst:1619
-#, fuzzy
 msgid ""
 "Set the background color to the RGB color represented by the tuple of *r*, "
 "*g*, and *b*. Each of *r*, *g*, and *b* must be between 0 and colormode, "
@@ -2602,7 +2578,6 @@ msgid "``bgcolor(r, g, b)``"
 msgstr "``bgcolor(r, g, b)``"
 
 #: ../../library/turtle.rst:1625
-#, fuzzy
 msgid ""
 "Set the background color to the RGB color represented by *r*, *g*, and *b*. "
 "Each of *r*, *g*, and *b* must be between 0 and colormode."
@@ -2692,7 +2667,6 @@ msgstr ""
 "die von der Turtle-Methode ``reset`` abgeleitet ist."
 
 #: ../../library/turtle.rst:1683
-#, fuzzy
 msgid "Reset all turtles on the screen to their initial state."
 msgstr "Setze alle Turtles auf dem Screen auf ihren Ausgangszustand zurück."
 
@@ -2751,6 +2725,13 @@ msgid ""
 "drawings are redrawn according to the new coordinates. In user-defined "
 "coordinate systems, angles may appear distorted, see :func:`mode`."
 msgstr ""
+"Richte ein benutzerdefiniertes Koordinatensystem ein. *llx* und *lly* sind "
+"die x- und die y-Koordinate der linken unteren Ecke der Leinwand. *urx* und "
+"*ury* sind die x- und die y-Koordinate der rechten oberen Ecke. Wechselt "
+"nötigenfalls in den Modus \"world\", was ein Zurücksetzen auslöst. Ist der "
+"Modus \"world\" schon aktiv, werden alle Zeichnungen gemäß den neuen "
+"Koordinaten neu gezeichnet. In benutzerdefinierten Koordinatensystemen "
+"können Winkel verzerrt erscheinen, siehe :func:`mode`."
 
 #: ../../library/turtle.rst:1724
 msgid ""
@@ -2775,16 +2756,17 @@ msgid "Animation control"
 msgstr "Animationskontrolle"
 
 #: ../../library/turtle.rst:1749
-#, fuzzy
 msgid ""
 "Temporarily turn off turtle animation. The code inside the :keyword:`with` "
 "block is not animated. Once the block is exited, the drawing appears. This "
 "is useful for drawing complex shapes where even the fastest speed setting is "
 "too slow."
 msgstr ""
-"Deaktiviere die Turtle-Animation vorübergehend. Der Code, der innerhalb des "
-"``no_animation``-Blocks geschrieben wird, wird nicht animiert, sobald der "
-"Codeblock verlassen wird, erscheint die Zeichnung."
+"Schalte die Turtle-Animation vorübergehend ab. Der Code innerhalb des "
+":keyword:`with`-Blocks wird nicht animiert. Sobald der Block verlassen "
+"wird, erscheint die Zeichnung. Das ist nützlich, um aufwendige Formen zu "
+"zeichnen, bei denen selbst die schnellste Geschwindigkeitseinstellung zu "
+"langsam ist."
 
 #: ../../library/turtle.rst:1754
 msgid ""
@@ -2800,20 +2782,18 @@ msgstr ""
 
 #: ../../library/turtle.rst:1767 ../../library/turtle.rst:1785
 #: ../../library/turtle.rst:1786
-#, fuzzy
 msgid "a nonnegative integer or ``None``"
-msgstr "eine Ganzzahl oder ``None``"
+msgstr "eine nichtnegative Ganzzahl oder ``None``"
 
 #: ../../library/turtle.rst:1769
-#, fuzzy
 msgid ""
 "Return or set the drawing delay in milliseconds. This is approximately the "
 "time interval between two consecutive canvas updates. The longer the drawing "
 "delay, the slower the animation."
 msgstr ""
-"Setze oder gib die Zeichen-*delay* in Millisekunden zurück. (Dies ist "
+"Gib die Zeichenverzögerung in Millisekunden zurück oder setze sie. Das ist "
 "ungefähr das Zeitintervall zwischen zwei aufeinanderfolgenden "
-"Aktualisierungen der Zeichenfläche.) Je länger die Zeichen-delay, desto "
+"Aktualisierungen der Leinwand. Je länger die Zeichenverzögerung, desto "
 "langsamer die Animation."
 
 #: ../../library/turtle.rst:1773
@@ -2831,7 +2811,6 @@ msgstr ""
 "5"
 
 #: ../../library/turtle.rst:1788
-#, fuzzy
 msgid ""
 "Turn turtle animation on or off and set the drawing delay. If *n* is given, "
 "only every n-th regular screen update is performed, which can be used to "
@@ -2840,12 +2819,13 @@ msgid ""
 "given, it sets the drawing delay, see :func:`delay`. When called without "
 "arguments, return the current value of *n*."
 msgstr ""
-"Schalte die Turtle-Animation ein/aus und setze die Verzögerung für "
-"Zeichnungsaktualisierungen. Wird *n* angegeben, wird nur jede n-te reguläre "
-"Bildschirmaktualisierung tatsächlich durchgeführt. (Kann verwendet werden, "
-"um das Zeichnen komplexer Grafiken zu beschleunigen.) Wird ohne Argumente "
-"aufgerufen, wird der aktuell gespeicherte Wert von n zurückgegeben. Das "
-"zweite Argument setzt den Verzögerungswert (siehe :func:`delay`)."
+"Schalte die Turtle-Animation ein oder aus und setze die Zeichenverzögerung. "
+"Wird *n* angegeben, wird nur jede n-te gewöhnliche Bildschirmaktualisierung "
+"ausgeführt, womit sich das Zeichnen aufwendiger Grafiken beschleunigen "
+"lässt. Ist *n* 0, wird die Animation abgeschaltet und der Bildschirm nur "
+"noch durch einen Aufruf von :func:`update` aktualisiert. Wird *delay* "
+"angegeben, setzt es die Zeichenverzögerung, siehe :func:`delay`. Beim "
+"Aufruf ohne Argumente wird der aktuelle Wert von *n* zurückgegeben."
 
 #: ../../library/turtle.rst:1795
 msgid ""
@@ -2956,6 +2936,12 @@ msgid ""
 "defaults to 1, the left mouse button. If *add* is ``True``, a new binding is "
 "added, otherwise it replaces a former binding."
 msgstr ""
+"Binde *fun* an Mausklick-Ereignisse auf diesem Screen. *fun* wird mit den "
+"Koordinaten des angeklickten Punktes auf der Leinwand aufgerufen. Ist *fun* "
+"``None``, werden bestehende Bindungen entfernt. *btn* ist die Nummer der "
+"Maustaste und ist standardmäßig 1, die linke Maustaste. Ist *add* ``True``, "
+"wird eine neue Bindung hinzugefügt, andernfalls ersetzt sie eine frühere "
+"Bindung."
 
 #: ../../library/turtle.rst:1876
 msgid ""
@@ -3022,18 +3008,17 @@ msgstr ""
 ">>> running = False"
 
 #: ../../library/turtle.rst:1915
-#, fuzzy
 msgid ""
 "Start the event loop by calling Tkinter's :meth:`~tkinter.Misc.mainloop` "
 "method. Must be the last statement in a turtle graphics program. Must *not* "
 "be used if a script is run from within IDLE in -n mode (see :ref:`idle-no-"
 "subprocess`)."
 msgstr ""
-"Startet die Ereignisschleife – ruft die mainloop-Funktion von Tkinter auf. "
-"Muss die letzte Anweisung in einem Turtle-Grafikprogramm sein. Darf *nicht* "
-"verwendet werden, wenn ein Skript innerhalb von IDLE im -n-Modus (Kein "
-"Subprozess) ausgeführt wird – für die interaktive Verwendung von Turtle-"
-"Grafik. ::"
+"Starte die Ereignisschleife, indem die Methode "
+":meth:`~tkinter.Misc.mainloop` von Tkinter aufgerufen wird. Muss die letzte "
+"Anweisung in einem Turtle-Grafikprogramm sein. Darf *nicht* verwendet "
+"werden, wenn ein Skript innerhalb von IDLE im Modus -n ausgeführt wird "
+"(siehe :ref:`idle-no-subprocess`)."
 
 #: ../../library/turtle.rst:1922
 msgid "Input methods"
@@ -3043,28 +3028,25 @@ msgstr "Eingabemethoden"
 #: ../../library/turtle.rst:1938 ../../library/turtle.rst:1939
 #: ../../library/turtle.rst:2036 ../../library/turtle.rst:2170
 #: ../../library/turtle.rst:2226
-#, fuzzy
 msgid "a string"
-msgstr "Zeichenkette"
+msgstr "eine Zeichenkette"
 
 #: ../../library/turtle.rst:1929
-#, fuzzy
 msgid ""
 "Pop up a dialog window for input of a string. *title* is the title of the "
 "dialog window and *prompt* is a text describing what information to input. "
 "Return the string entered. If the dialog is canceled, return ``None``. ::"
 msgstr ""
-"Öffne ein Dialogfenster zur Eingabe einer Zeichenkette. Der Parameter title "
-"ist der Titel des Dialogfensters, prompt ist ein Text, der meist beschreibt, "
-"welche Information einzugeben ist. Gib die eingegebene Zeichenkette zurück. "
-"Wird der Dialog abgebrochen, wird ``None`` zurückgegeben. ::"
+"Öffne ein Dialogfenster zur Eingabe einer Zeichenkette. *title* ist der "
+"Titel des Dialogfensters, *prompt* ist ein Text, der beschreibt, welche "
+"Information einzugeben ist. Gib die eingegebene Zeichenkette zurück. Wird "
+"der Dialog abgebrochen, wird ``None`` zurückgegeben. ::"
 
 #: ../../library/turtle.rst:1933
 msgid ">>> screen.textinput(\"NIM\", \"Name of first player:\")"
 msgstr ">>> screen.textinput(\"NIM\", \"Name of first player:\")"
 
 #: ../../library/turtle.rst:1944
-#, fuzzy
 msgid ""
 "Pop up a dialog window for input of a number. *title* is the title of the "
 "dialog window and *prompt* is a text describing what numerical information "
@@ -3074,14 +3056,14 @@ msgid ""
 "dialog remains open for correction. Return the number entered. If the dialog "
 "is canceled, return ``None``. ::"
 msgstr ""
-"Öffne ein Dialogfenster zur Eingabe einer Zahl. title ist der Titel des "
-"Dialogfensters, prompt ist ein Text, der meist beschreibt, welche numerische "
-"Information einzugeben ist. default: Standardwert, minval: Mindestwert für "
-"die Eingabe, maxval: Höchstwert für die Eingabe. Die eingegebene Zahl muss "
-"im Bereich minval .. maxval liegen, falls diese angegeben sind. Ist das "
-"nicht der Fall, wird ein Hinweis ausgegeben und der Dialog bleibt zur "
-"Korrektur geöffnet. Gib die eingegebene Zahl zurück. Wird der Dialog "
-"abgebrochen, wird ``None`` zurückgegeben. ::"
+"Öffne ein Dialogfenster zur Eingabe einer Zahl. *title* ist der Titel des "
+"Dialogfensters, *prompt* ist ein Text, der beschreibt, welche Zahlenangabe "
+"einzugeben ist. *default* ist der Standardwert, *minval* und *maxval* sind "
+"der Mindest- und der Höchstwert für die Eingabe. Sind diese angegeben, muss "
+"die eingegebene Zahl zwischen *minval* und *maxval* liegen. Ist das nicht "
+"der Fall, wird ein Hinweis ausgegeben und der Dialog bleibt zur Korrektur "
+"geöffnet. Gib die eingegebene Zahl zurück. Wird der Dialog abgebrochen, "
+"wird ``None`` zurückgegeben. ::"
 
 #: ../../library/turtle.rst:1952
 msgid ""
@@ -3096,29 +3078,27 @@ msgid "Settings and special methods"
 msgstr "Einstellungen und spezielle Methoden"
 
 #: ../../library/turtle.rst:1962
-#, fuzzy
 msgid ""
 "Set the turtle mode and perform a reset. *mode* is one of the strings "
 "\"standard\", \"logo\" or \"world\". If *mode* is not given, return the "
 "current mode."
 msgstr ""
-"Setze den Turtle-Modus (\"standard\", \"logo\" oder \"world\") und führe ein "
-"Reset durch. Wird mode nicht angegeben, wird der aktuelle Modus "
-"zurückgegeben."
+"Setze den Turtle-Modus und führe ein Zurücksetzen durch. *mode* ist eine "
+"der Zeichenketten \"standard\", \"logo\" oder \"world\". Wird *mode* nicht "
+"angegeben, wird der aktuelle Modus zurückgegeben."
 
 #: ../../library/turtle.rst:1966
-#, fuzzy
 msgid ""
 "Mode \"standard\" is compatible with the old :mod:`!turtle` module. Mode "
 "\"logo\" is compatible with most Logo turtle graphics. Mode \"world\" uses "
 "user-defined world coordinates, see :func:`setworldcoordinates`. In this "
 "mode, angles appear distorted if the x and y units are not of equal length."
 msgstr ""
-"Der Modus \"standard\" ist kompatibel mit dem alten :mod:`!turtle`. Der "
-"Modus \"logo\" ist kompatibel mit den meisten Logo-Turtle-Grafiken. Der "
-"Modus \"world\" verwendet benutzerdefinierte \"world-Koordinaten\". "
-"**Achtung**: In diesem Modus erscheinen Winkel verzerrt, wenn das ``x/y``-"
-"Einheitsverhältnis nicht gleich 1 ist."
+"Der Modus \"standard\" ist mit dem alten Modul :mod:`!turtle` verträglich. "
+"Der Modus \"logo\" ist mit den meisten Logo-Turtle-Grafiken verträglich. "
+"Der Modus \"world\" verwendet benutzerdefinierte Weltkoordinaten, siehe "
+":func:`setworldcoordinates`. In diesem Modus erscheinen Winkel verzerrt, "
+"wenn die x- und die y-Einheit nicht gleich lang sind."
 
 #: ../../library/turtle.rst:1972
 msgid "Mode"
@@ -3157,24 +3137,23 @@ msgid "clockwise"
 msgstr "im Uhrzeigersinn"
 
 #: ../../library/turtle.rst:1978
-#, fuzzy
 msgid ""
 ">>> mode(\"logo\")  # resets turtle heading to north\n"
 ">>> mode()\n"
 "'logo'"
 msgstr ""
-">>> mode(\"logo\")   # resets turtle heading to north\n"
+">>> mode(\"logo\")  # resets turtle heading to north\n"
 ">>> mode()\n"
 "'logo'"
 
 #: ../../library/turtle.rst:1990
-#, fuzzy
 msgid ""
 "Return the colormode or set it to 1.0 or 255. After setting it, the *r*, *g* "
 "and *b* values of color triples have to be between 0 and *cmode*."
 msgstr ""
-"Gib den colormode zurück oder setze ihn auf 1.0 oder 255. Anschließend "
-"müssen die Werte *r*, *g*, *b* von Farb-Tripeln im Bereich 0..*cmode* liegen."
+"Gib den colormode zurück oder setze ihn auf 1.0 oder 255. Nach dem Setzen "
+"müssen die Werte *r*, *g* und *b* von Farbtripeln zwischen 0 und *cmode* "
+"liegen."
 
 #: ../../library/turtle.rst:1993
 msgid ""
@@ -3237,13 +3216,16 @@ msgstr ""
 msgid ""
 "a string, a tuple of pairs of numbers, a :class:`Shape` object or ``None``"
 msgstr ""
+"eine Zeichenkette, ein Tupel aus Zahlenpaaren, ein :class:`Shape`-Objekt "
+"oder ``None``"
 
 #: ../../library/turtle.rst:2040
-#, fuzzy
 msgid ""
 "Add a turtle shape to the TurtleScreen's shape list. It can be called in "
 "four different ways:"
-msgstr "Füge nun die Shape zur Formenliste des Screens hinzu und verwende sie:"
+msgstr ""
+"Füge der Formenliste des TurtleScreen eine Turtle-Form hinzu. Das lässt "
+"sich auf vier verschiedene Weisen aufrufen:"
 
 #: ../../library/turtle.rst:2043
 msgid ""
@@ -3291,14 +3273,14 @@ msgstr ""
 "zusammengesetzte Form."
 
 #: ../../library/turtle.rst:2064
-#, fuzzy
 msgid ""
 "Image shapes do not rotate when turning the turtle, so they do not display "
 "the heading of the turtle. To use a registered shape, call :func:`shape` "
 "with its name."
 msgstr ""
-"Bildformen drehen sich *nicht* mit, wenn die Turtle gedreht wird, sie zeigen "
-"also nicht die Ausrichtung der Turtle an!"
+"Bildformen drehen sich nicht mit, wenn die Turtle gedreht wird, sie zeigen "
+"also nicht die Ausrichtung der Turtle an. Um eine registrierte Form zu "
+"verwenden, rufe :func:`shape` mit ihrem Namen auf."
 
 #: ../../library/turtle.rst:2068
 msgid ""
@@ -3345,12 +3327,10 @@ msgstr ""
 "640"
 
 #: ../../library/turtle.rst:2104
-#, fuzzy
 msgid "Screen-only methods"
-msgstr "Turtle-Methoden"
+msgstr "Methoden, die es nur beim Screen gibt"
 
 #: ../../library/turtle.rst:2108
-#, fuzzy
 msgid "Close the turtle graphics window."
 msgstr "Schließe das Turtle-Grafikfenster."
 
@@ -3456,13 +3436,12 @@ msgstr ""
 ">>>              # sets window to 75% of screen by 50% of screen and centers"
 
 #: ../../library/turtle.rst:2172
-#, fuzzy
 msgid ""
 "Set the title of the turtle window to *titlestring*. The title is shown in "
 "the title bar of the turtle graphics window."
 msgstr ""
-"eine Zeichenkette, die in der Titelleiste des Turtle-Grafikfensters "
-"angezeigt wird"
+"Setze den Titel des Turtle-Fensters auf *titlestring*. Der Titel wird in "
+"der Titelleiste des Turtle-Grafikfensters angezeigt."
 
 #: ../../library/turtle.rst:2175
 msgid ">>> screen.title(\"Welcome to the turtle zoo!\")"
@@ -3516,6 +3495,10 @@ msgid ""
 "<screenspecific>`. Calling ``Screen()`` returns the single screen object. If "
 "it does not exist yet, it is created. Otherwise the existing one is returned."
 msgstr ""
+"Unterklasse von :class:`TurtleScreen`, mit :ref:`vier zusätzlichen Methoden "
+"<screenspecific>`. Ein Aufruf von ``Screen()`` gibt das einzige "
+"Screen-Objekt zurück. Existiert es noch nicht, wird es erzeugt. Andernfalls "
+"wird das vorhandene zurückgegeben."
 
 #: ../../library/turtle.rst:2218
 msgid ""
@@ -3535,7 +3518,7 @@ msgstr ""
 
 #: ../../library/turtle.rst:2227
 msgid "depends on *type_*"
-msgstr ""
+msgstr "hängt von *type_* ab"
 
 #: ../../library/turtle.rst:2229
 msgid ""
@@ -3545,20 +3528,24 @@ msgid ""
 "used internally), and for \"compound\" ``None``, as a compound shape is "
 "built up using the :meth:`addcomponent` method."
 msgstr ""
+"Datenstruktur, die Formen nachbildet. *type_* ist eine der Zeichenketten "
+"\"polygon\", \"image\" oder \"compound\". Was *data* sein muss, hängt von "
+"*type_* ab: bei \"polygon\" ein Tupel aus Koordinatenpaaren, bei \"image\" "
+"ein Bild (wird nur intern verwendet) und bei \"compound\" ``None``, weil "
+"eine zusammengesetzte Form über die Methode :meth:`addcomponent` aufgebaut "
+"wird."
 
 #: ../../library/turtle.rst:2237
-#, fuzzy
 msgid "a tuple of pairs of numbers"
-msgstr "ein Polygon, d.h. ein Tupel aus Zahlenpaaren"
+msgstr "ein Tupel aus Zahlenpaaren"
 
 #: ../../library/turtle.rst:2238
 msgid "a color"
-msgstr ""
+msgstr "eine Farbe"
 
 #: ../../library/turtle.rst:2239
-#, fuzzy
 msgid "a color or ``None``"
-msgstr "eine Zahl oder ``None``"
+msgstr "eine Farbe oder ``None``"
 
 #: ../../library/turtle.rst:2241
 msgid ""
@@ -3567,6 +3554,10 @@ msgid ""
 "and *outline* is the color of its outline. If *outline* is not given, *fill* "
 "is used for it as well."
 msgstr ""
+"Füge einer Form des Typs \"compound\" eine Komponente hinzu. *poly* ist ein "
+"Polygon, ein Tupel aus Zahlenpaaren. *fill* ist die Farbe, mit der das "
+"Polygon gefüllt wird, und *outline* ist die Farbe seines Umrisses. Wird "
+"*outline* nicht angegeben, wird dafür ebenfalls *fill* verwendet."
 
 #: ../../library/turtle.rst:2246
 msgid "Example:"
@@ -3665,7 +3656,6 @@ msgstr ""
 "Vorgehensweisen für Turtle."
 
 #: ../../library/turtle.rst:2307
-#, fuzzy
 msgid "How to automatically begin and end filling"
 msgstr "Füllen automatisch beginnen und beenden"
 
@@ -3719,9 +3709,8 @@ msgstr ""
 "forward(200)"
 
 #: ../../library/turtle.rst:2335
-#, fuzzy
 msgid "How to use compound shapes"
-msgstr "Zusammengesetzte Formen"
+msgstr "Zusammengesetzte Formen verwenden"
 
 #: ../../library/turtle.rst:2337
 msgid ""
@@ -3734,9 +3723,8 @@ msgstr ""
 "explizit verwenden, wie unten beschrieben:"
 
 #: ../../library/turtle.rst:2341
-#, fuzzy
 msgid "Create an empty :class:`Shape` object of type \"compound\"."
-msgstr "Erstelle ein leeres Shape-Objekt vom Typ \"compound\"."
+msgstr "Erstelle ein leeres :class:`Shape`-Objekt vom Typ \"compound\"."
 
 #: ../../library/turtle.rst:2342
 msgid ""
@@ -3777,7 +3765,6 @@ msgstr ""
 ">>> shape(\"myshape\")"
 
 #: ../../library/turtle.rst:2368
-#, fuzzy
 msgid "How to use the ``turtle`` module namespace"
 msgstr "Das ``turtle``-Modul im eigenen Namensraum verwenden"
 
@@ -3809,7 +3796,6 @@ msgstr ""
 "stattdessen zum Beispiel ``import turtle as t``.)"
 
 #: ../../library/turtle.rst:2385
-#, fuzzy
 msgid "How to use turtle graphics in a script"
 msgstr "Turtle-Grafik in einem Skript verwenden"
 
@@ -3865,7 +3851,6 @@ msgstr ""
 "des Turtle-Grafikfensters."
 
 #: ../../library/turtle.rst:2412
-#, fuzzy
 msgid "How to use object-oriented turtle graphics"
 msgstr "Objektorientierte Turtle-Grafik verwenden"
 
@@ -3951,9 +3936,8 @@ msgstr ""
 "t.screen.bgcolor(\"orange\")"
 
 #: ../../library/turtle.rst:2452
-#, fuzzy
 msgid "How to use :func:`!help`"
-msgstr "Wie man die Hilfe verwendet"
+msgstr "Wie man :func:`!help` verwendet"
 
 #: ../../library/turtle.rst:2454
 msgid ""

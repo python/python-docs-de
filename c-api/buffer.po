@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
-"PO-Revision-Date: 2026-09-23 08:00+0200\n"
+"PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -589,6 +589,8 @@ msgid ""
 "These values are available when compiling for the :ref:`Stable ABI <stable>` "
 "since version 3.11."
 msgstr ""
+"Diese Werte sind beim Kompilieren für die :ref:`Stable ABI <stable>` seit "
+"Version 3.11 verfügbar."
 
 #: ../../c-api/buffer.rst:299 ../../c-api/buffer.rst:342
 #: ../../c-api/buffer.rst:391

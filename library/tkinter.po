@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
-"PO-Revision-Date: 2025-09-16 00:01+0000\n"
+"PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
@@ -1716,14 +1716,15 @@ msgid "Tk option data types"
 msgstr "Datentypen von Tk-Optionen"
 
 #: ../../library/tkinter.rst:768
-#, fuzzy
 msgid ""
 "Many widget options documented in the reference accept values of a small "
 "number of common types, described here. The standard options and their types "
 "are described in the :manpage:`options(3tk)` manual page."
 msgstr ""
 "Viele in der Referenz dokumentierte Widget-Optionen nehmen Werte einiger "
-"weniger gängiger Typen an, die hier beschrieben werden."
+"weniger gängiger Typen an, die hier beschrieben werden. Die üblichen "
+"Optionen und ihre Typen sind in der Handbuchseite :manpage:`options(3tk)` "
+"beschrieben."
 
 #: ../../library/tkinter.rst:773
 msgid "anchor"
@@ -1739,6 +1740,13 @@ msgid ""
 "the grid geometry manager accepts a combination of the compass directions, "
 "such as ``\"nsew\"``, or an empty string."
 msgstr ""
+"Zulässige Werte sind Himmelsrichtungen: ``\"n\"``, ``\"ne\"``, ``\"e\"``, "
+"``\"se\"``, ``\"s\"``, ``\"sw\"``, ``\"w\"``, ``\"nw\"`` und außerdem "
+"``\"center\"``. Die Option *labelanchor* von :class:`LabelFrame` und "
+":class:`ttk.LabelFrame <tkinter.ttk.LabelFrame>` nimmt außerdem ``\"en\"``, "
+"``\"es\"``, ``\"wn\"`` und ``\"ws\"`` an. Die Option *sticky* des "
+"Gitter-Geometriemanagers nimmt eine Kombination der Himmelsrichtungen an, "
+"etwa ``\"nsew\"``, oder eine leere Zeichenkette."
 
 #: ../../library/tkinter.rst:782
 msgid "bitmap"
@@ -1776,16 +1784,23 @@ msgid ""
 "unambiguous prefix, such as ``\"t\"``, is enough. Any non-zero integer means "
 "true."
 msgstr ""
+"Du kannst die Ganzzahlen 0 oder 1, ``True`` oder ``False`` oder die "
+"Zeichenketten ``\"0\"``, ``\"1\"``, ``\"yes\"``, ``\"no\"``, ``\"true\"``, "
+"``\"false\"``, ``\"on\"`` oder ``\"off\"`` übergeben. Die Zeichenketten "
+"werden ohne Rücksicht auf Groß- und Kleinschreibung verglichen, und ein "
+"eindeutiges Präfix wie ``\"t\"`` genügt. Jede Ganzzahl ungleich null "
+"bedeutet wahr."
 
 #: ../../library/tkinter.rst:801
 msgid "callback"
 msgstr "callback"
 
 #: ../../library/tkinter.rst:802
-#, fuzzy
 msgid ""
 "This is any callable object. Most callbacks take no arguments.  For example::"
-msgstr "Das ist eine beliebige Python-Funktion ohne Argumente. Zum Beispiel::"
+msgstr ""
+"Das ist ein beliebiges aufrufbares Objekt. Die meisten Callbacks nehmen "
+"keine Argumente. Zum Beispiel::"
 
 #: ../../library/tkinter.rst:805
 msgid ""
@@ -1802,6 +1817,8 @@ msgid ""
 "Some options call it with arguments, such as the *command* option "
 "of :class:`Scale`, which is called with the new value."
 msgstr ""
+"Manche Optionen rufen es mit Argumenten auf, etwa die Option *command* von "
+":class:`Scale`, die mit dem neuen Wert aufgerufen wird."
 
 #: ../../library/tkinter.rst:813
 msgid "color"
@@ -1822,11 +1839,24 @@ msgid ""
 "page. :meth:`~tkinter.Misc.winfo_rgb` returns the red, green and blue "
 "components of a color."
 msgstr ""
+"Farben lassen sich als symbolische Namen angeben, etwa ``\"red\"`` oder "
+"``\"light blue\"``, oder als Zeichenketten, die RGB-Werte in Bereichen von "
+"4 Bit: ``\"#RGB\"``, 8 Bit: ``\"#RRGGBB\"``, 12 Bit: ``\"#RRRGGGBBB\"`` "
+"oder 16 Bit: ``\"#RRRRGGGGBBBB\"`` darstellen, wobei R, G und B hier für "
+"jede zulässige Hexadezimalziffer stehen. Tk bietet einen portablen Satz "
+"symbolischer Namen, der auf allen Plattformen verfügbar ist. Sie werden "
+"ohne Rücksicht auf Groß- und Kleinschreibung und Leerzeichen verglichen, "
+"deshalb sind ``\"light blue\"``, ``\"Light Blue\"`` und ``\"lightblue\"`` "
+"dieselbe Farbe. Die vollständige Liste der Namen, einschließlich der "
+"plattformspezifischen Namen der aktuellen Systemfarben (zum Beispiel "
+"``\"systemButtonFace\"`` unter Windows oder ``\"systemWindowBody\"`` unter "
+"macOS), steht in der Handbuchseite :manpage:`colors(3tk)`. "
+":meth:`~tkinter.Misc.winfo_rgb` gibt die Rot-, Grün- und Blauanteile einer "
+"Farbe zurück."
 
 #: ../../library/tkinter.rst:830
-#, fuzzy
 msgid "compound"
-msgstr "*compound*"
+msgstr "compound"
 
 #: ../../library/tkinter.rst:831
 msgid ""
@@ -1838,6 +1868,13 @@ msgid ""
 "right of the text). The themed widgets accept all these values, the classic "
 "widgets accept all except ``\"text\"`` and ``\"image\"``."
 msgstr ""
+"Legt fest, wie ein Bild und ein Text in einem Widget zusammen dargestellt "
+"werden. Zulässige Werte sind ``\"none\"`` (zeigt das Bild, sofern "
+"vorhanden, sonst den Text), ``\"text\"``, ``\"image\"``, ``\"center\"`` "
+"(zeigt den Text in der Mitte des Bildes) sowie ``\"top\"``, ``\"bottom\"``, "
+"``\"left\"``, ``\"right\"`` (zeigt das Bild über, unter, links oder rechts "
+"vom Text). Die Widgets mit Themenunterstützung nehmen alle diese Werte an, "
+"die klassischen Widgets alle außer ``\"text\"`` und ``\"image\"``."
 
 #: ../../library/tkinter.rst:841
 msgid "cursor"
@@ -1922,7 +1959,7 @@ msgstr ""
 
 #: ../../library/tkinter.rst:873
 msgid "orient"
-msgstr ""
+msgstr "orient"
 
 #: ../../library/tkinter.rst:874
 msgid "Legal values are ``\"horizontal\"`` and ``\"vertical\"``."
@@ -1930,7 +1967,7 @@ msgstr "Zulässige Werte sind ``\"horizontal\"`` und ``\"vertical\"``."
 
 #: ../../library/tkinter.rst:876
 msgid "padding"
-msgstr ""
+msgstr "padding"
 
 #: ../../library/tkinter.rst:877
 msgid ""
@@ -1940,6 +1977,12 @@ msgid ""
 "the right one to the left one, and the top one to the left one. It is only "
 "supported by the themed widgets."
 msgstr ""
+"Das ist ein zulässiger Abstand (siehe oben), der auf allen Seiten "
+"angewendet wird, oder eine Sequenz von bis zu vier Abständen, die den "
+"Innenabstand links, oben, rechts und unten angeben. Werden weniger als vier "
+"angegeben, übernimmt der untere Innenabstand den oberen, der rechte den "
+"linken und der obere den linken. Das unterstützen nur die Widgets mit "
+"Themenunterstützung."
 
 #: ../../library/tkinter.rst:885
 msgid "region"
@@ -1998,6 +2041,13 @@ msgid ""
 "which is manipulated with :meth:`ttk.Widget.state "
 "<tkinter.ttk.Widget.state>`."
 msgstr ""
+"Zulässige Werte sind ``\"normal\"``, ``\"disabled\"`` und, abhängig vom "
+"Widget, außerdem ``\"active\"``, ``\"hidden\"`` (für "
+":class:`Canvas`-Objekte) oder ``\"readonly\"`` (für :class:`Entry`, "
+":class:`Spinbox` und die Widgets mit Themenunterstützung). Die Widgets mit "
+"Themenunterstützung haben darüber hinaus einen allgemeineren Satz von "
+"Zuständen, der sich mit :meth:`ttk.Widget.state <tkinter.ttk.Widget.state>` "
+"beeinflussen lässt."
 
 #: ../../library/tkinter.rst:911
 msgid "wrap"
@@ -2009,6 +2059,9 @@ msgid ""
 "the :class:`Text` widget and its tags; for a tag an empty string means to "
 "use the widget's value."
 msgstr ""
+"Muss für das :class:`Text`-Widget und seine Tags eines von ``\"none\"``, "
+"``\"char\"`` oder ``\"word\"`` sein. Bei einem Tag bedeutet eine leere "
+"Zeichenkette, den Wert des Widgets zu verwenden."
 
 #: ../../library/tkinter.rst:919
 msgid "Bindings and events"
@@ -4120,16 +4173,17 @@ msgstr ""
 "ganzzahligen Wert verwende :meth:`winfo_pixels`."
 
 #: ../../library/tkinter.rst:2144
-#, fuzzy
 msgid ""
 "Return the geometry of the widget, in the form ``widthxheight+x+y``. All "
 "dimensions are in pixels. The position is relative to the parent widget; "
 "use :meth:`winfo_rootx` and :meth:`winfo_rooty` for the position on the "
 "screen. An offset can be negative; see :meth:`~Wm.geometry`."
 msgstr ""
-"Gibt die Geometrie des Widgets in der Form ``widthxheight+x+y`` zurück. Alle "
-"Maße sind in Pixeln. Ein Versatz kann negativ sein, "
-"siehe :meth:`~Wm.geometry`."
+"Gibt die Geometrie des Widgets in der Form ``widthxheight+x+y`` zurück. "
+"Alle Maße sind in Pixeln. Die Position ist relativ zum Eltern-Widget. Für "
+"die Position auf dem Bildschirm verwende :meth:`winfo_rootx` und "
+":meth:`winfo_rooty`. Ein Versatz kann negativ sein, siehe "
+":meth:`~Wm.geometry`."
 
 #: ../../library/tkinter.rst:2153
 msgid ""
@@ -6775,11 +6829,8 @@ msgstr ""
 "sie verwenden nur die Standard-Objektoptionen."
 
 #: ../../library/tkinter.rst:3786
-#, fuzzy
 msgid "Tk 8.6 added the *angle* option for ``text`` items."
-msgstr ""
-"Tk 8.6 hat die Option *angle* ergänzt, Tk 9.0 die Option *underline* für "
-"``text``-Objekte."
+msgstr "Tk 8.6 hat die Option *angle* für ``text``-Objekte ergänzt."
 
 #: ../../library/tkinter.rst:3792
 msgid ""
@@ -8896,7 +8947,6 @@ msgstr ""
 "Element der Scrollbar liegt."
 
 #: ../../library/tkinter.rst:5130
-#, fuzzy
 msgid ""
 "A :class:`!Spinbox` widget is an :class:`Entry`-like widget with a pair of "
 "up/down arrow buttons that let the user step through a range of values in "
@@ -8915,13 +8965,13 @@ msgstr ""
 "zusätzlich zum direkten Bearbeiten des Werts schrittweise durch einen "
 "Wertebereich blättern kann. Die Wertemenge kann ein Zahlenbereich sein, den "
 "die Optionen *from_*, *to* und *increment* angeben, oder eine ausdrückliche "
-"Liste von Zeichenketten, die die Option *values* angibt (die Vorrang vor dem "
-"Bereich hat). Bei jedem Betätigen eines Pfeils wird der Callback *command* "
-"aufgerufen, sofern vorhanden. Die Option *wrap* steuert, ob das Blättern "
-"über ein Ende des Bereichs hinaus zum anderen Ende springt, die Option "
-"*format* gibt an, wie Zahlenwerte formatiert werden, und die Option "
-"*validate* schaltet die Prüfung des eingegebenen Textes ein. Erbt "
-"von :class:`Widget` und :class:`XView`."
+"Liste von Zeichenketten, die die Option *values* angibt (die Vorrang vor "
+"dem Bereich hat). Bei jedem Betätigen eines Pfeils wird der Callback "
+"*command* aufgerufen, sofern vorhanden. Die Wahrheitswert-Option *wrap* "
+"steuert, ob das Blättern über ein Ende des Bereichs hinaus zum anderen Ende "
+"springt, die Option *format* gibt an, wie Zahlenwerte formatiert werden, "
+"und die Option *validate* schaltet die Prüfung des eingegebenen Textes ein. "
+"Erbt von :class:`Widget` und :class:`XView`."
 
 #: ../../library/tkinter.rst:5143
 msgid ""
@@ -9524,9 +9574,8 @@ msgstr ""
 "darunter abgesenkt) wird, für Hoch- und Tiefstellung."
 
 #: ../../library/tkinter.rst:5527
-#, fuzzy
 msgid "Whether to underline the text (a boolean)."
-msgstr "Ob der Text unterstrichen wird."
+msgstr "Ob der Text unterstrichen wird (ein Wahrheitswert)."
 
 #: ../../library/tkinter.rst:5529
 msgid "*underlinefg*"
@@ -9813,7 +9862,6 @@ msgstr ""
 "diese Methode nicht zur Verfügung."
 
 #: ../../library/tkinter.rst:5682
-#, fuzzy
 msgid ""
 "Embed a window (any widget) at *index*. The options, given in *cnf* and "
 "*kw*, include *window* (the widget to embed), *create* (a callback that "
@@ -9822,10 +9870,11 @@ msgid ""
 "*pady*. The embedded widget must be a descendant of the text widget's parent."
 msgstr ""
 "Bettet ein Fenster (ein beliebiges Widget) bei *index* ein. Zu den Optionen "
-"in *cnf* und *kw* gehören *window* (das einzubettende Widget), *create* (ein "
-"Callback, der das Widget bei Bedarf erzeugt), *align*, *stretch*, *padx* und "
-"*pady*. Das eingebettete Widget muss ein Nachfahre des Elternteils des Text-"
-"Widgets sein."
+"in *cnf* und *kw* gehören *window* (das einzubettende Widget), *create* "
+"(ein Callback, der das Widget bei Bedarf erzeugt), *align*, der "
+"Wahrheitswert *stretch* (ob das Widget senkrecht auf die Höhe der Zeile "
+"gestreckt wird), *padx* und *pady*. Das eingebettete Widget muss ein "
+"Nachfahre des Elternteils des Text-Widgets sein."
 
 #: ../../library/tkinter.rst:5691
 msgid ""
@@ -10960,7 +11009,6 @@ msgstr ""
 "auf dem Standard-Root."
 
 #: ../../library/tkinter.rst:6482
-#, fuzzy
 msgid ""
 "Convert the Tcl boolean string *s* (one of ``'1'``, ``'true'``, ``'yes'``, "
 "``'on'`` and similar, or their false counterparts) to a "
@@ -10969,7 +11017,7 @@ msgstr ""
 "Wandelt die Tcl-Wahrheitswert-Zeichenkette *s* (eine von ``'1'``, "
 "``'true'``, ``'yes'``, ``'on'`` und ähnlichen oder deren falsche "
 "Gegenstücke) in einen Python-:class:`bool` um. Löst bei einem ungültigen "
-"Wert :exc:`TclError` aus."
+"Wert :exc:`ValueError` aus."
 
 #: ../../library/tkinter.rst:6489
 msgid ""
