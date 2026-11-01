@@ -1719,9 +1719,8 @@ msgstr ""
 "mittels :func:`int`."
 
 #: ../../builtins/stdtypes.rst:899
-#, fuzzy
 msgid "Iteration-related types"
-msgstr "Iterator-Typen"
+msgstr "Typen rund um die Iteration"
 
 #: ../../builtins/stdtypes.rst:907
 msgid ""
@@ -1737,9 +1736,8 @@ msgstr ""
 "Iterationsmethoden immer."
 
 #: ../../builtins/stdtypes.rst:913
-#, fuzzy
 msgid "Iterables"
-msgstr "Literale"
+msgstr "Iterierbare Objekte"
 
 #: ../../builtins/stdtypes.rst:915
 msgid ""
@@ -1771,9 +1769,8 @@ msgstr ""
 "Objekte in der Python/C-API."
 
 #: ../../builtins/stdtypes.rst:934
-#, fuzzy
 msgid "Iterators"
-msgstr "Iterator"
+msgstr "Iteratoren"
 
 #: ../../builtins/stdtypes.rst:936
 msgid ""
@@ -1834,7 +1831,6 @@ msgstr ""
 "einhalten, gelten als fehlerhaft."
 
 #: ../../builtins/stdtypes.rst:968
-#, fuzzy
 msgid "Generator types"
 msgstr "Generator-Typen"
 
@@ -1912,7 +1908,6 @@ msgid ""
 msgstr ""
 
 #: ../../builtins/stdtypes.rst:1023
-#, fuzzy
 msgid "Generator iterators"
 msgstr "Generator-Typen"
 
@@ -7049,13 +7044,12 @@ msgstr ""
 "von *size* abgeschnitten."
 
 #: ../../builtins/stdtypes.rst:3783
-#, fuzzy
 msgid ""
 "If the :class:`bytearray` needs to grow, all new bytes will be set to null "
 "bytes."
 msgstr ""
 "Wenn das :class:`bytearray` vergrößert werden muss, werden alle neuen Bytes "
-"jenseits von *size* auf Nullbytes gesetzt."
+"auf Nullbytes gesetzt."
 
 #: ../../builtins/stdtypes.rst:3787
 msgid "This is equivalent to:"
@@ -9765,7 +9759,6 @@ msgstr ""
 "akzeptieren."
 
 #: ../../builtins/stdtypes.rst:5595
-#, fuzzy
 msgid ""
 "Note, the *elem* argument to "
 "the :meth:`~object.__contains__`, :meth:`~set.remove`, "
@@ -9774,9 +9767,8 @@ msgid ""
 msgstr ""
 "Beachte, dass das Argument *elem* für die "
 "Methoden :meth:`~object.__contains__`, :meth:`~set.remove` "
-"und :meth:`~set.discard` eine Menge sein kann. Um die Suche nach einem "
-"äquivalenten Frozenset zu unterstützen, wird aus *elem* vorübergehend ein "
-"solches erstellt."
+"und :meth:`~set.discard` eine Menge sein kann. In diesem Fall wird nach "
+"einem äquivalenten Frozenset gesucht."
 
 #: ../../builtins/stdtypes.rst:5599
 msgid ""
@@ -9854,11 +9846,9 @@ msgstr ""
 "'jack', 4127: 'sjoerd'}``"
 
 #: ../../builtins/stdtypes.rst:5647
-#, fuzzy
 msgid "Use a dict comprehension: ``{x: x ** 2 for x in range(10)}``"
 msgstr ""
-"Verwendung einer Dict-Comprehension: ``{}``, ``{x: x ** 2 for x in range(10)}"
-"``"
+"Verwendung einer Dict-Comprehension: ``{x: x ** 2 for x in range(10)}``"
 
 #: ../../builtins/stdtypes.rst:5648
 msgid ""
@@ -10258,14 +10248,13 @@ msgstr ""
 "die :ref:`Dokumentation zu View-Objekten <dict-views>`."
 
 #: ../../builtins/stdtypes.rst:5858
-#, fuzzy
 msgid ""
 "An equality comparison between two distinct ``dict.values()`` views will "
 "always return ``False``, even for views of the same dictionary::"
 msgstr ""
-"Ein Gleichheitsvergleich zwischen einem ``dict.values()``-View und einem "
-"anderen gibt immer ``False`` zurück. Dies gilt auch für den Vergleich von "
-"``dict.values()`` mit sich selbst::"
+"Ein Gleichheitsvergleich zwischen zwei verschiedenen "
+"``dict.values()``-Views gibt immer ``False`` zurück, auch bei Views "
+"desselben Dictionarys::"
 
 #: ../../builtins/stdtypes.rst:5861
 msgid ""
@@ -12971,34 +12960,29 @@ msgid "iteration over"
 msgstr "Iteration über"
 
 #: ../../builtins/stdtypes.rst:1019
-#, fuzzy
 msgid "generator"
 msgstr "Operator"
 
 #: ../../builtins/stdtypes.rst:1029 ../../builtins/stdtypes.rst:1098
 #: ../../builtins/stdtypes.rst:1139 ../../builtins/stdtypes.rst:1216
-#, fuzzy
 msgid "exception"
-msgstr "Beschreibung"
+msgstr "Ausnahme"
 
 #: ../../builtins/stdtypes.rst:1029
-#, fuzzy
 msgid "StopIteration"
-msgstr "Operation"
+msgstr "StopIteration"
 
 #: ../../builtins/stdtypes.rst:1098 ../../builtins/stdtypes.rst:1216
-#, fuzzy
 msgid "GeneratorExit"
-msgstr "Generator-Typen"
+msgstr "GeneratorExit"
 
 #: ../../builtins/stdtypes.rst:1129
 msgid "asynchronous-generator"
 msgstr ""
 
 #: ../../builtins/stdtypes.rst:1139
-#, fuzzy
 msgid "StopAsyncIteration"
-msgstr "Operation"
+msgstr "StopAsyncIteration"
 
 #: ../../builtins/stdtypes.rst:1276 ../../builtins/stdtypes.rst:5612
 msgid "len"

@@ -817,20 +817,21 @@ msgstr ""
 "Sie durchlaufen alle übergebenen Iterables und tun Folgendes:"
 
 #: ../../builtins/threadsafety.rst:410
-#, fuzzy
 msgid ""
 ":meth:`set.update` and :meth:`set.union` lock both objects only when the "
 "other operand is a :class:`set`, :class:`frozenset`, or :class:`dict`."
 msgstr ""
-"der andere Operand ein :class:`set`, :class:`frozenset` oder :class:`dict` "
-"ist."
+":meth:`set.update` und :meth:`set.union` sperren beide Objekte nur dann, "
+"wenn der andere Operand ein :class:`set`, :class:`frozenset` oder "
+":class:`dict` ist."
 
 #: ../../builtins/threadsafety.rst:412
-#, fuzzy
 msgid ""
 ":meth:`set.intersection` and :meth:`set.difference` always try to lock all "
 "objects."
-msgstr ":meth:`set.intersection` und :meth:`set.difference` versuchen immer,"
+msgstr ""
+":meth:`set.intersection` und :meth:`set.difference` versuchen immer, alle "
+"Objekte zu sperren."
 
 #: ../../builtins/threadsafety.rst:415
 msgid ":meth:`set.symmetric_difference` tries to lock both objects."
@@ -845,20 +846,20 @@ msgstr ""
 "untereinander ebenfalls in einigen Punkten:"
 
 #: ../../builtins/threadsafety.rst:420
-#, fuzzy
 msgid ""
 ":meth:`set.difference_update` and :meth:`set.intersection_update` try to "
 "lock all objects one-by-one."
 msgstr ""
-":meth:`set.difference_update` und :meth:`set.intersection_update` versuchen,"
+":meth:`set.difference_update` und :meth:`set.intersection_update` "
+"versuchen, alle Objekte nacheinander zu sperren."
 
 #: ../../builtins/threadsafety.rst:422
-#, fuzzy
 msgid ""
 ":meth:`set.symmetric_difference_update` only locks the arguments if it is of "
 "type :class:`set`, :class:`frozenset`, or :class:`dict`."
 msgstr ""
-":meth:`set.symmetric_difference_update` sperrt die Argumente nur, wenn sie"
+":meth:`set.symmetric_difference_update` sperrt die Argumente nur, wenn sie "
+"vom Typ :class:`set`, :class:`frozenset` oder :class:`dict` sind."
 
 #: ../../builtins/threadsafety.rst:425
 msgid "The following methods always try to lock both objects:"
