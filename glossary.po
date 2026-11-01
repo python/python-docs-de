@@ -1879,20 +1879,17 @@ msgstr ""
 "wird das GIL bei I/O-Operationen immer freigegeben."
 
 #: ../../glossary.rst:729
-#, fuzzy
 msgid ""
 "As of Python 3.13, the GIL can be disabled using the :option:`--disable-gil` "
 "build configuration. This feature enables improved performance for multi-"
 "threaded applications and makes it easier to use multi-core CPUs "
 "efficiently. For more details, see :pep:`703`."
 msgstr ""
-"Ab Python 3.13 kann der GIL mithilfe der Build-Konfiguration :option:`--"
-"disable-gil` deaktiviert werden. Nach dem Kompilieren von Python mit dieser "
-"Option muss der Code mit der Option :option:`-X gil=0 <-X>` ausgeführt "
-"werden oder nachdem die Umgebungsvariable :envvar:`PYTHON_GIL=0 "
-"<PYTHON_GIL>` gesetzt wurde. Diese Funktion ermöglicht eine verbesserte "
-"Leistung für Multithread-Anwendungen und erleichtert die effiziente Nutzung "
-"von Multi-Core-CPUs. Weitere Details findest du unter :pep:`703`."
+"Ab Python 3.13 kann der GIL mithilfe der Build-Konfiguration "
+":option:`--disable-gil` deaktiviert werden. Diese Funktion ermöglicht eine "
+"verbesserte Leistung für Multithread-Anwendungen und erleichtert die "
+"effiziente Nutzung von Multi-Core-CPUs. Weitere Details findest du "
+"unter :pep:`703`."
 
 #: ../../glossary.rst:734
 msgid ""

@@ -1402,13 +1402,12 @@ msgstr ""
 ":attr:`!__name__` ist der Name der Funktion. Siehe :attr:`function.__name__`."
 
 #: ../../reference/datamodel.rst:866
-#, fuzzy
 msgid ""
 ":attr:`!__self__` is the module object the function was defined in or "
 "``None`` if unavailable."
 msgstr ""
-"Der Name des Moduls, in dem die Funktion definiert wurde, oder „ ``None`` “, "
-"falls dieser nicht verfügbar ist."
+":attr:`!__self__` ist das Modulobjekt, in dem die Funktion definiert wurde, "
+"oder ``None``, wenn es nicht verfügbar ist."
 
 #: ../../reference/datamodel.rst:868
 msgid ""
@@ -2487,6 +2486,12 @@ msgid ""
 "position information. To create a modified copy of a code object, "
 "use :meth:`~codeobject.replace`."
 msgstr ""
+"Ein :class:`bytes`-Objekt mit kodierten Angaben zur Position im Quelltext. "
+"Das genaue Format ist ein Implementierungsdetail und kann sich zwischen "
+"Python-Versionen ändern. Für den unterstützten Zugriff auf Zeilen- und "
+"Positionsangaben verwende :meth:`~codeobject.co_lines` "
+"und :meth:`~codeobject.co_positions`. Um eine veränderte Kopie eines "
+"Code-Objekts zu erzeugen, verwende :meth:`~codeobject.replace`."
 
 #: ../../reference/datamodel.rst:1572
 msgid "The required stack size of the code object"
