@@ -1350,7 +1350,6 @@ msgstr ""
 "ausgelöst und abgefangen wurden, und zwar nach dem folgenden Muster:"
 
 #: ../../tutorial/errors.rst:610
-#, fuzzy
 msgid ""
 ">>> excs = []\n"
 ">>> for test in tests:\n"
@@ -1364,7 +1363,7 @@ msgid ""
 "..."
 msgstr ""
 ">>> excs = []\n"
-"... for test in tests:\n"
+">>> for test in tests:\n"
 "...     try:\n"
 "...         test.run()\n"
 "...     except Exception as e:\n"
