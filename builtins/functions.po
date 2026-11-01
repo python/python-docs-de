@@ -3530,7 +3530,7 @@ msgstr ""
 "zusätzliche Informationen – häufig einschließlich Name und Adresse des "
 "Objekts – enthält. Eine Klasse kann steuern, was diese Funktion für ihre "
 "Instanzen zurückgibt, indem sie eine :meth:`~object.__repr__`-Methode "
-"definiert.
+"definiert."
 
 #: ../../builtins/functions.rst:1792
 msgid "This class has a custom representation that can be evaluated::"
