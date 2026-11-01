@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-15 09:12+0000\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2025-09-16 00:00+0000\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
@@ -128,34 +128,24 @@ msgstr ""
 
 #: ../../c-api/call.rst:83
 msgid ""
-"*args* is a C array consisting of the positional arguments followed by the"
-msgstr ""
-
-#: ../../c-api/call.rst:84
-msgid ""
+"*args* is a C array consisting of the positional arguments followed by the "
 "values of the keyword arguments. This can be *NULL* if there are no "
 "arguments."
 msgstr ""
 
 #: ../../c-api/call.rst:86
-msgid "*nargsf* is the number of positional arguments plus possibly the"
-msgstr ""
-
-#: ../../c-api/call.rst:87
 msgid ""
-":c:macro:`PY_VECTORCALL_ARGUMENTS_OFFSET` flag. To get the actual number of "
-"positional arguments from *nargsf*, use :c:func:`PyVectorcall_NARGS`."
+"*nargsf* is the number of positional arguments plus possibly "
+"the :c:macro:`PY_VECTORCALL_ARGUMENTS_OFFSET` flag. To get the actual number "
+"of positional arguments from *nargsf*, use :c:func:`PyVectorcall_NARGS`."
 msgstr ""
 
 #: ../../c-api/call.rst:90
-msgid "*kwnames* is a tuple containing the names of the keyword arguments;"
-msgstr ""
-
-#: ../../c-api/call.rst:91
 msgid ""
-"in other words, the keys of the kwargs dict. These names must be strings "
-"(instances of ``str`` or a subclass) and they must be unique. If there are "
-"no keyword arguments, then *kwnames* can instead be *NULL*."
+"*kwnames* is a tuple containing the names of the keyword arguments; in other "
+"words, the keys of the kwargs dict. These names must be strings (instances "
+"of ``str`` or a subclass) and they must be unique. If there are no keyword "
+"arguments, then *kwnames* can instead be *NULL*."
 msgstr ""
 
 #: ../../c-api/call.rst:98

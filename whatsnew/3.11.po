@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-15 09:12+0000\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
@@ -484,7 +484,7 @@ msgstr ""
 
 #: ../../whatsnew/3.11.rst:364
 msgid ""
-"def run_query(sql: LiteralString) -> ...\n"
+"def run_query(sql: LiteralString) -> ...:\n"
 "    ...\n"
 "\n"
 "def caller(\n"
@@ -2930,7 +2930,7 @@ msgid ":meth:`!importlib.machinery.BuiltinImporter.find_module`"
 msgstr ""
 
 #: ../../whatsnew/3.11.rst:1907
-msgid ":meth:`!importlib.machinery.BuiltinLoader.module_repr`"
+msgid ":meth:`!importlib.machinery.BuiltinImporter.module_repr`"
 msgstr ""
 
 #: ../../whatsnew/3.11.rst:1908
@@ -2946,7 +2946,7 @@ msgid ":meth:`!importlib.machinery.FrozenImporter.find_module`"
 msgstr ""
 
 #: ../../whatsnew/3.11.rst:1911
-msgid ":meth:`!importlib.machinery.FrozenLoader.module_repr`"
+msgid ":meth:`!importlib.machinery.FrozenImporter.module_repr`"
 msgstr ""
 
 #: ../../whatsnew/3.11.rst:1912
@@ -3726,7 +3726,7 @@ msgid ""
 "    PyObject_GC_UnTrack(p);\n"
 "    Py_TRASHCAN_SAFE_BEGIN(p);\n"
 "    ...\n"
-"    Py_TRASHCAN_SAFE_END\n"
+"    Py_TRASHCAN_SAFE_END(p)\n"
 "}"
 msgstr ""
 

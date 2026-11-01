@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 03:11+0000\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2026-05-08 17:18+0000\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
 "Language: de\n"
@@ -152,23 +152,21 @@ msgid ""
 msgstr ""
 
 #: ../../library/tkinter.font.rst:96
-msgid "*ascent* - distance between baseline and highest point that a"
-msgstr ""
-
-#: ../../library/tkinter.font.rst:97 ../../library/tkinter.font.rst:100
-msgid "character of the font can occupy"
+msgid ""
+"*ascent* - distance between baseline and highest point that a character of "
+"the font can occupy"
 msgstr ""
 
 #: ../../library/tkinter.font.rst:99
-msgid "*descent* - distance between baseline and lowest point that a"
+msgid ""
+"*descent* - distance between baseline and lowest point that a character of "
+"the font can occupy"
 msgstr ""
 
 #: ../../library/tkinter.font.rst:102
-msgid "*linespace* - minimum vertical separation necessary between any two"
-msgstr ""
-
-#: ../../library/tkinter.font.rst:103
-msgid "characters of the font that ensures no vertical overlap between lines."
+msgid ""
+"*linespace* - minimum vertical separation necessary between any two "
+"characters of the font that ensures no vertical overlap between lines."
 msgstr ""
 
 #: ../../library/tkinter.font.rst:105
