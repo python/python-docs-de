@@ -3702,9 +3702,8 @@ msgid "``threading.Thread.setName`` => :attr:`threading.Thread.name`"
 msgstr "``threading.Thread.setName`` => :attr:`threading.Thread.name`"
 
 #: ../../whatsnew/3.10.rst:1745
-#, fuzzy
 msgid "``threading.Thread.getName`` => :attr:`threading.Thread.name`"
-msgstr "``threading.thread.getName`` => :attr:`threading.Thread.name`"
+msgstr "``threading.Thread.getName`` => :attr:`threading.Thread.name`"
 
 #: ../../whatsnew/3.10.rst:1747
 msgid "``threading.Thread.isDaemon`` => :attr:`threading.Thread.daemon`"

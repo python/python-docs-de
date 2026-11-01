@@ -561,7 +561,6 @@ msgstr ""
 "sein (z. B. wie von :func:`pos` zurückgegeben)."
 
 #: ../../library/turtle.rst:336
-#, fuzzy
 msgid ""
 ">>> tp = turtle.pos()\n"
 ">>> tp\n"
@@ -579,13 +578,13 @@ msgstr ""
 ">>> tp = turtle.pos()\n"
 ">>> tp\n"
 "(0.00,0.00)\n"
-">>> turtle.setpos(60,30)\n"
+">>> turtle.goto(60,30)\n"
 ">>> turtle.pos()\n"
 "(60.00,30.00)\n"
-">>> turtle.setpos((20,80))\n"
+">>> turtle.goto((20,80))\n"
 ">>> turtle.pos()\n"
 "(20.00,80.00)\n"
-">>> turtle.setpos(tp)\n"
+">>> turtle.goto(tp)\n"
 ">>> turtle.pos()\n"
 "(0.00,0.00)"
 
@@ -849,15 +848,15 @@ msgid "a colorstring or a numeric color tuple"
 msgstr "ein Farbstring oder ein numerisches Farb-Tupel"
 
 #: ../../library/turtle.rst:536
-#, fuzzy
 msgid ""
 "Draw a circular dot with diameter *size*, using *color*. If *size* is not "
 "given, the larger of ``pensize + 4`` and ``2 * pensize`` is used. If *color* "
 "is not given, the current pencolor is used."
 msgstr ""
 "Zeichne einen kreisförmigen Punkt mit dem Durchmesser *size* in der Farbe "
-"*color*. Wird *size* nicht angegeben, wird das Maximum aus ``pensize+4`` und "
-"``2*pensize`` verwendet."
+"*color*. Wird *size* nicht angegeben, wird das Maximum aus ``pensize + 4`` "
+"und ``2 * pensize`` verwendet. Wird *color* nicht angegeben, wird die "
+"aktuelle Stiftfarbe verwendet."
 
 #: ../../library/turtle.rst:540
 msgid ""
@@ -1083,7 +1082,6 @@ msgid "a number if *x* is a number, else ``None``"
 msgstr "eine Zahl, falls *x* eine Zahl ist, andernfalls ``None``"
 
 #: ../../library/turtle.rst:675
-#, fuzzy
 msgid ""
 "Return the angle of the line from the turtle's position to (x,y). If *y* is "
 "``None``, *x* must be a pair of coordinates, a :class:`Vec2D`, for example "
@@ -1091,10 +1089,11 @@ msgid ""
 "the turtle's start orientation, which depends on the turtle mode, "
 "see :func:`mode`."
 msgstr ""
-"Gib den Winkel zwischen der Linie von der Position der Turtle zu der durch "
-"(x,y), den Vektor oder die andere Turtle angegebenen Position zurück. Dies "
-"hängt von der Startausrichtung der Turtle ab, die wiederum vom Modus abhängt "
-"– \"standard\"/\"world\" oder \"logo\"."
+"Gib den Winkel der Linie von der Position der Turtle zu (x,y) zurück. Ist "
+"*y* ``None``, muss *x* ein Koordinatenpaar sein, ein :class:`Vec2D` – zum "
+"Beispiel wie von :func:`pos` zurückgegeben – oder eine andere Turtle. Der "
+"Winkel wird von der Startausrichtung der Turtle aus gemessen, die vom "
+"Turtle-Modus abhängt, siehe :func:`mode`."
 
 #: ../../library/turtle.rst:681
 msgid ""
@@ -1247,12 +1246,12 @@ msgstr ""
 "90.0"
 
 #: ../../library/turtle.rst:788
-#, fuzzy
 msgid ""
 "Set the angle measurement units to radians.  Equivalent to ``degrees(2 * "
 "math.pi)``."
 msgstr ""
-"Setze die Winkelmesseinheiten auf Radiant. Entspricht ``degrees(2*math.pi)``."
+"Setze die Winkelmesseinheiten auf Radiant. Entspricht ``degrees(2 * "
+"math.pi)``."
 
 #: ../../library/turtle.rst:791
 msgid ""
@@ -2453,13 +2452,12 @@ msgstr ""
 "und denselben Turtle-Eigenschaften zurück."
 
 #: ../../library/turtle.rst:1517
-#, fuzzy
 msgid ""
 ">>> leonel = Turtle()\n"
 ">>> marco = leonel.clone()"
 msgstr ""
-">>> mick = Turtle()\n"
-">>> joe = mick.clone()"
+">>> leonel = Turtle()\n"
+">>> marco = leonel.clone()"
 
 #: ../../library/turtle.rst:1527
 #, fuzzy
@@ -3575,14 +3573,13 @@ msgid "Example:"
 msgstr "Beispiel:"
 
 #: ../../library/turtle.rst:2248
-#, fuzzy
 msgid ""
 ">>> poly = ((0,0), (10,-5), (0,10), (-10,-5))\n"
 ">>> s = Shape(\"compound\")\n"
 ">>> s.addcomponent(poly, \"red\", \"blue\")\n"
 ">>> # ... add more components and then use register_shape()"
 msgstr ""
-">>> poly = ((0,0),(10,-5),(0,10),(-10,-5))\n"
+">>> poly = ((0,0), (10,-5), (0,10), (-10,-5))\n"
 ">>> s = Shape(\"compound\")\n"
 ">>> s.addcomponent(poly, \"red\", \"blue\")\n"
 ">>> # ... add more components and then use register_shape()"
@@ -3754,7 +3751,6 @@ msgid "For example:"
 msgstr "Zum Beispiel:"
 
 #: ../../library/turtle.rst:2347
-#, fuzzy
 msgid ""
 ">>> s = Shape(\"compound\")\n"
 ">>> poly1 = ((0,0), (10,-5), (0,10), (-10,-5))\n"
@@ -3763,9 +3759,9 @@ msgid ""
 ">>> s.addcomponent(poly2, \"blue\", \"red\")"
 msgstr ""
 ">>> s = Shape(\"compound\")\n"
-">>> poly1 = ((0,0),(10,-5),(0,10),(-10,-5))\n"
+">>> poly1 = ((0,0), (10,-5), (0,10), (-10,-5))\n"
 ">>> s.addcomponent(poly1, \"red\", \"blue\")\n"
-">>> poly2 = ((0,0),(10,-5),(-10,-5))\n"
+">>> poly2 = ((0,0), (10,-5), (-10,-5))\n"
 ">>> s.addcomponent(poly2, \"blue\", \"red\")"
 
 #: ../../library/turtle.rst:2356

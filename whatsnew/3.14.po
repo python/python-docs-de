@@ -813,7 +813,6 @@ msgstr ""
 "Funktion :func:`sys.remote_exec` umgesetzt. Zum Beispiel:"
 
 #: ../../whatsnew/3.14.rst:404
-#, fuzzy
 msgid ""
 "import os, sys\n"
 "from tempfile import NamedTemporaryFile\n"
@@ -826,7 +825,7 @@ msgid ""
 "print('Behold! An offering:')\n"
 "sys.remote_exec(1234, script_path)"
 msgstr ""
-"import sys\n"
+"import os, sys\n"
 "from tempfile import NamedTemporaryFile\n"
 "\n"
 "with NamedTemporaryFile(mode='w', suffix='.py', delete=False) as f:\n"
@@ -8303,7 +8302,6 @@ msgstr ""
 "<PyUnicodeWriter_WriteSubstring>`."
 
 #: ../../deprecations/c-api-pending-removal-in-3.18.rst:33
-#, fuzzy
 msgid ""
 ":c:func:`!_PyUnicodeWriter_WriteASCIIString`: replace "
 "``_PyUnicodeWriter_WriteASCIIString(&writer, str, size)`` "
@@ -8311,12 +8309,11 @@ msgid ""
 "<PyUnicodeWriter_WriteASCII>`."
 msgstr ""
 ":c:func:`!_PyUnicodeWriter_WriteASCIIString`: ersetze "
-"``_PyUnicodeWriter_WriteASCIIString(&writer, str)`` "
-"durch :c:func:`PyUnicodeWriter_WriteASCII(writer, str) "
+"``_PyUnicodeWriter_WriteASCIIString(&writer, str, size)`` durch "
+":c:func:`PyUnicodeWriter_WriteASCII(writer, str, size) "
 "<PyUnicodeWriter_WriteASCII>`."
 
 #: ../../deprecations/c-api-pending-removal-in-3.18.rst:36
-#, fuzzy
 msgid ""
 ":c:func:`!_PyUnicodeWriter_WriteLatin1String`: replace "
 "``_PyUnicodeWriter_WriteLatin1String(&writer, str, size)`` by decoding the "
@@ -8325,9 +8322,10 @@ msgid ""
 "with :c:func:`Py_DECREF`."
 msgstr ""
 ":c:func:`!_PyUnicodeWriter_WriteLatin1String`: ersetze "
-"``_PyUnicodeWriter_WriteLatin1String(&writer, str)`` "
-"durch :c:func:`PyUnicodeWriter_WriteUTF8(writer, str) "
-"<PyUnicodeWriter_WriteUTF8>`."
+"``_PyUnicodeWriter_WriteLatin1String(&writer, str, size)``, indem du die "
+"Zeichenkette mit :c:func:`PyUnicode_DecodeLatin1` dekodierst, das Ergebnis "
+"mit :c:func:`PyUnicodeWriter_WriteStr` schreibst und es mit "
+":c:func:`Py_DECREF` freigibst."
 
 #: ../../deprecations/c-api-pending-removal-in-3.18.rst:41
 msgid ":c:func:`!_PyUnicodeWriter_Prepare`: (no replacement)."

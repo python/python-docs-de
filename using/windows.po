@@ -667,7 +667,6 @@ msgstr ""
 "vorhandene Installation entfernt, um sie durch die angegebene zu ersetzen."
 
 #: ../../using/windows.rst:303
-#, fuzzy
 msgid ""
 "Passing ``--update`` will replace existing installs if the new version is "
 "newer. Otherwise, they will be left. If no tags are provided with ``--"
@@ -678,11 +677,13 @@ msgid ""
 "unaffected."
 msgstr ""
 "Mit ``--update`` werden vorhandene Installationen ersetzt, sofern die neue "
-"Version neuer ist. Andernfalls bleiben sie unverändert. Werden zu ``--"
-"update`` keine Tags angegeben, werden alle vom Python Install Manager "
-"verwalteten Installationen aktualisiert, für die neuere Versionen vorliegen. "
-"Aktualisierungen entfernen alle Änderungen an der Installation, auch global "
-"installierte Pakete. Virtuelle Umgebungen funktionieren jedoch weiter."
+"Version neuer ist. Andernfalls bleiben sie unverändert. Werden zu "
+"``--update`` keine Tags angegeben, werden alle vom Python Install Manager "
+"verwalteten Installationen aktualisiert, für die neuere Versionen "
+"vorliegen. Aktualisierungen entfernen alle Änderungen an der Installation, "
+"auch global installierte Pakete, lassen aber die Verzeichnisse "
+"``site-packages`` und ``Scripts`` unverändert. Virtuelle Umgebungen sind "
+"ebenfalls nicht betroffen."
 
 #: ../../using/windows.rst:310
 msgid ""

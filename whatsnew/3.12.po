@@ -6014,11 +6014,12 @@ msgstr ""
 "Unsterblichkeit hat."
 
 #: ../../whatsnew/3.12.rst:1998
-#, fuzzy
 msgid ""
 "``PyObject_HEAD_INIT`` This will now initialize reference count to "
 "``_Py_IMMORTAL_REFCNT`` when used with ``Py_BUILD_CORE``."
-msgstr "``PyObject_HEAD_INIT`` setzt den Referenzzähler jetzt auf"
+msgstr ""
+"``PyObject_HEAD_INIT`` setzt den Referenzzähler jetzt auf "
+"``_Py_IMMORTAL_REFCNT``, wenn es mit ``Py_BUILD_CORE`` verwendet wird."
 
 #: ../../whatsnew/3.12.rst:2000
 #, fuzzy
@@ -6030,24 +6031,23 @@ msgstr ""
 "Objekte,"
 
 #: ../../whatsnew/3.12.rst:2002
-#, fuzzy
 msgid ""
 "``SSTATE_INTERNED_IMMORTAL_STATIC`` An identifier for interned unicode "
 "objects that are immortal and static"
 msgstr ""
-"``SSTATE_INTERNED_IMMORTAL`` eine Kennzeichnung für internierte Unicode-"
-"Objekte,"
+"``SSTATE_INTERNED_IMMORTAL_STATIC`` eine Kennzeichnung für internierte "
+"Unicode-Objekte, die unsterblich und statisch sind"
 
 #: ../../whatsnew/3.12.rst:2004
-#, fuzzy
 msgid ""
 "``sys.getunicodeinternedsize`` This returns the total number of unicode "
 "objects that have been interned. This is now needed for :file:`refleak.py` "
 "to correctly track reference counts and allocated blocks"
 msgstr ""
-"zurück, die interniert wurden. Das wird jetzt gebraucht, "
-"damit :file:`refleak.py` Referenzzähler und angeforderte Speicherblöcke "
-"richtig verfolgen kann"
+"``sys.getunicodeinternedsize`` gibt die Gesamtzahl der Unicode-Objekte "
+"zurück, die interniert wurden. Das wird jetzt gebraucht, damit "
+":file:`refleak.py` Referenzzähler und angeforderte Speicherblöcke richtig "
+"verfolgen kann"
 
 #: ../../whatsnew/3.12.rst:2008
 msgid "(Contributed by Eddie Elizondo in :gh:`84436`.)"

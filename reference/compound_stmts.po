@@ -3416,7 +3416,6 @@ msgstr ""
 "Deklarationen::"
 
 #: ../../reference/compound_stmts.rst:1850
-#, fuzzy
 msgid ""
 "def overly_generic[\n"
 "   SimpleTypeVar,\n"
@@ -3435,9 +3434,9 @@ msgid ""
 msgstr ""
 "def overly_generic[\n"
 "   SimpleTypeVar,\n"
-"   TypeVarWithDefault = int,\n"
 "   TypeVarWithBound: int,\n"
 "   TypeVarWithConstraints: (str, bytes),\n"
+"   TypeVarWithDefault = int,\n"
 "   *SimpleTypeVarTuple = (int, float),\n"
 "   **SimpleParamSpec = (str, bytearray),\n"
 "](\n"

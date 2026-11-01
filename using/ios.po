@@ -75,7 +75,6 @@ msgstr ""
 "über den iOS App Store vertrieben werden kann."
 
 #: ../../using/ios.rst:27
-#, fuzzy
 msgid ""
 "If you're looking to experiment for the first time with writing an iOS app "
 "in Python, projects such as `BeeWare <https://beeware.org>`__, `Kivy "
@@ -85,11 +84,12 @@ msgid ""
 "with the Python code itself."
 msgstr ""
 "Wenn du zum ersten Mal damit experimentieren möchtest, eine iOS-App in "
-"Python zu schreiben, bieten dir Projekte wie `BeeWare <https://"
-"beeware.org>`__ und `Kivy <https://kivy.org>`__ eine deutlich zugänglichere "
-"Nutzererfahrung. Diese Projekte übernehmen die Komplexität, die mit dem Zum-"
-"Laufen-Bringen eines iOS-Projekts verbunden ist, sodass du dich nur um den "
-"eigentlichen Python-Code kümmern musst."
+"Python zu schreiben, bieten dir Projekte wie `BeeWare "
+"<https://beeware.org>`__, `Kivy <https://kivy.org>`__ und `Flet "
+"<https://flet.dev/>`__ eine deutlich zugänglichere Nutzererfahrung. Diese "
+"Projekte übernehmen die Komplexität, die mit dem Zum-Laufen-Bringen eines "
+"iOS-Projekts verbunden ist, sodass du dich nur um den eigentlichen "
+"Python-Code kümmern musst."
 
 #: ../../using/ios.rst:35
 msgid "Python at runtime on iOS"

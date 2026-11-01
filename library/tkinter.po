@@ -1745,7 +1745,6 @@ msgid "bitmap"
 msgstr "bitmap"
 
 #: ../../library/tkinter.rst:783
-#, fuzzy
 msgid ""
 "There are ten built-in, named bitmaps: ``'error'``, ``'gray12'``, "
 "``'gray25'``, ``'gray50'``, ``'gray75'``, ``'hourglass'``, ``'info'``, "
@@ -1758,9 +1757,13 @@ msgid ""
 msgstr ""
 "Es gibt zehn integrierte, benannte Bitmaps: ``'error'``, ``'gray12'``, "
 "``'gray25'``, ``'gray50'``, ``'gray75'``, ``'hourglass'``, ``'info'``, "
-"``'questhead'``, ``'question'``, ``'warning'``. Um einen X-Bitmap-Dateinamen "
-"anzugeben, nenne den vollständigen Pfad zur Datei mit vorangestelltem ``@``, "
-"etwa ``\"@/usr/contrib/bitmap/gumby.bit\"``."
+"``'questhead'``, ``'question'``, ``'warning'``. Unter macOS sind außerdem "
+"diese Bitmaps verfügbar: ``'application'``, ``'accessory'``, ``'folder'``, "
+"``'pfolder'``, ``'trash'``, ``'floppy'``, ``'ramdisk'``, ``'cdrom'``, "
+"``'preferences'``, ``'querydoc'``, ``'stop'``, ``'note'`` und "
+"``'caution'``. Um einen X-Bitmap-Dateinamen anzugeben, nenne den "
+"vollständigen Pfad zur Datei mit vorangestelltem ``@``, etwa "
+"``\"@/usr/contrib/bitmap/gumby.bit\"``."
 
 #: ../../library/tkinter.rst:793
 msgid "boolean"
@@ -1889,7 +1892,6 @@ msgid "font"
 msgstr "font"
 
 #: ../../library/tkinter.rst:861
-#, fuzzy
 msgid ""
 "Tk uses a font description such as ``{courier 10 bold}``; in :mod:`!tkinter` "
 "this is most naturally passed as a tuple of ``(family, size, *styles)`` (or "
@@ -1899,11 +1901,13 @@ msgid ""
 "a :class:`tkinter.font.Font` instance, or, on X11, an XLFD font name can be "
 "used as well."
 msgstr ""
-"Tk verwendet eine Schriftbeschreibung wie ``{courier 10 bold}``. In :mod:`!"
-"tkinter` übergibt man sie am natürlichsten als Tupel ``(family, size, "
-"*styles)`` (oder als die gleichwertige Zeichenkette ``\"Courier 10 "
+"Tk verwendet eine Schriftbeschreibung wie ``{courier 10 bold}``. In "
+":mod:`!tkinter` übergibt man sie am natürlichsten als Tupel ``(family, "
+"size, *styles)`` (oder als die gleichwertige Zeichenkette ``\"Courier 10 "
 "bold\"``). Schriftgrößen mit positiven Zahlen werden in Punkt gemessen, "
-"Größen mit negativen Zahlen in Pixeln."
+"Größen mit negativen Zahlen in Pixeln. Auch der Name einer benannten "
+"Schrift wie ``\"TkDefaultFont\"``, eine :class:`tkinter.font.Font`-Instanz "
+"oder, unter X11, ein XLFD-Schriftname lässt sich verwenden."
 
 #: ../../library/tkinter.rst:870
 msgid "justify"
@@ -1922,11 +1926,8 @@ msgid "orient"
 msgstr ""
 
 #: ../../library/tkinter.rst:874
-#, fuzzy
 msgid "Legal values are ``\"horizontal\"`` and ``\"vertical\"``."
-msgstr ""
-"Zulässige Werte sind die Zeichenketten ``\"left\"``, ``\"center\"`` und "
-"``\"right\"``."
+msgstr "Zulässige Werte sind ``\"horizontal\"`` und ``\"vertical\"``."
 
 #: ../../library/tkinter.rst:876
 msgid "padding"
@@ -1946,7 +1947,6 @@ msgid "region"
 msgstr "region"
 
 #: ../../library/tkinter.rst:886
-#, fuzzy
 msgid ""
 "Used for the *scrollregion* option of :class:`Canvas`. This is a string with "
 "four space-delimited elements, each of which is a legal distance (see "
@@ -1954,10 +1954,12 @@ msgid ""
 "``(2, 3, 4, 5)``, ``\"3i 2i 4.5i 2i\"`` and ``\"3c 2c 4c 10.43c\"`` are all "
 "legal regions."
 msgstr ""
-"Das ist eine Zeichenkette mit vier durch Leerzeichen getrennten Elementen, "
-"von denen jedes ein zulässiger Abstand ist (siehe oben). Zum Beispiel sind "
-"``\"2 3 4 5\"``, ``\"3i 2i 4.5i 2i\"`` und ``\"3c 2c 4c 10.43c\"`` alles "
-"zulässige Regionen."
+"Wird für die Option *scrollregion* von :class:`Canvas` verwendet. Das ist "
+"eine Zeichenkette mit vier durch Leerzeichen getrennten Elementen, von "
+"denen jedes ein zulässiger Abstand ist (siehe oben), oder eine Sequenz aus "
+"vier solchen Elementen. Zum Beispiel sind ``\"2 3 4 5\"``, ``(2, 3, 4, "
+"5)``, ``\"3i 2i 4.5i 2i\"`` und ``\"3c 2c 4c 10.43c\"`` alles zulässige "
+"Regionen."
 
 #: ../../library/tkinter.rst:893
 msgid "relief"
@@ -2614,7 +2616,6 @@ msgstr ""
 "Gibt eine Liste der Namen aller Konfigurationsoptionen dieses Widgets zurück."
 
 #: ../../library/tkinter.rst:1161
-#, fuzzy
 msgid ""
 "Interpret the string *s* as a Tcl boolean and return the "
 "corresponding :class:`bool`. Tcl accepts values such as ``'1'``, ``'0'``, "
@@ -2623,8 +2624,9 @@ msgid ""
 msgstr ""
 "Deutet die Zeichenkette *s* als Tcl-Wahrheitswert und gibt den "
 "entsprechenden :class:`bool` zurück. Tcl akzeptiert Werte wie ``'1'``, "
-"``'0'``, ``'yes'``, ``'no'``, ``'true'`` und ``'false'``. "
-"Löst :exc:`ValueError` aus, wenn *s* kein gültiger Wahrheitswert ist."
+"``'0'``, ``'yes'``, ``'no'``, ``'true'``, ``'false'``, ``'on'`` und "
+"``'off'``. Löst :exc:`ValueError` aus, wenn *s* kein gültiger Wahrheitswert "
+"ist."
 
 #: ../../library/tkinter.rst:1169
 msgid ""
@@ -5823,7 +5825,6 @@ msgstr ""
 "und 1."
 
 #: ../../library/tkinter.rst:3327
-#, fuzzy
 msgid ""
 "Shift the view left or right by *number* units. *what* is either ``'units'`` "
 "or ``'pages'``; a negative *number* scrolls left and a positive one scrolls "
@@ -5832,7 +5833,9 @@ msgid ""
 msgstr ""
 "Verschiebt den Ausschnitt um *number* Einheiten nach links oder rechts. "
 "*what* ist entweder ``'units'`` oder ``'pages'``. Ein negatives *number* "
-"blättert nach links, ein positives nach rechts."
+"blättert nach links, ein positives nach rechts. Das :class:`Text`-Widget "
+"nimmt außerdem ``'pixels'`` an, dann darf *number* ein Bildschirmabstand "
+"wie ``'1i'`` sein."
 
 #: ../../library/tkinter.rst:3336
 msgid ""
@@ -5873,16 +5876,17 @@ msgstr ""
 "1."
 
 #: ../../library/tkinter.rst:3359
-#, fuzzy
 msgid ""
 "Shift the view up or down by *number* units. *what* is either ``'units'`` or "
 "``'pages'``; a negative *number* scrolls up and a positive one scrolls down. "
 "The :class:`Text` widget accepts also ``'pixels'``, and then *number* can be "
 "a screen distance, such as ``'1i'``."
 msgstr ""
-"Verschiebt den Ausschnitt um *number* Einheiten nach oben oder unten. *what* "
-"ist entweder ``'units'`` oder ``'pages'``. Ein negatives *number* blättert "
-"nach oben, ein positives nach unten."
+"Verschiebt den Ausschnitt um *number* Einheiten nach oben oder unten. "
+"*what* ist entweder ``'units'`` oder ``'pages'``. Ein negatives *number* "
+"blättert nach oben, ein positives nach unten. Das :class:`Text`-Widget "
+"nimmt außerdem ``'pixels'`` an, dann darf *number* ein Bildschirmabstand "
+"wie ``'1i'`` sein."
 
 #: ../../library/tkinter.rst:3368
 msgid ""

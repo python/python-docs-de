@@ -348,9 +348,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/argparse.rst:221
-#, fuzzy
 msgid "``description``"
-msgstr "Beschreibung"
+msgstr "``description``"
 
 #: ../../library/argparse.rst:223
 msgid ""
@@ -1460,9 +1459,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/argparse.rst:1014
-#, fuzzy
 msgid "``default``"
-msgstr "Standard"
+msgstr "``default``"
 
 #: ../../library/argparse.rst:1016
 msgid ""
@@ -1569,9 +1567,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/argparse.rst:1084
-#, fuzzy
 msgid "``type``"
-msgstr "Typ"
+msgstr "``type``"
 
 #: ../../library/argparse.rst:1086
 msgid ""
@@ -1778,9 +1775,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/argparse.rst:1232
-#, fuzzy
 msgid "``help``"
-msgstr "help"
+msgstr "``help``"
 
 #: ../../library/argparse.rst:1234
 msgid ""

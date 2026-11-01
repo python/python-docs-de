@@ -501,7 +501,6 @@ msgid "Module export hook"
 msgstr "Export-Haken des Moduls"
 
 #: ../../howto/abi3t-migration.rst:233
-#, fuzzy
 msgid ""
 "Unless you've done this step already, your extension module defines "
 "a :ref:`module initialization function <extension-pyinit>` "
@@ -512,9 +511,10 @@ msgid ""
 msgstr ""
 "Sofern du diesen Schritt nicht schon erledigt hast, definiert dein "
 "Erweiterungsmodul eine :ref:`Initialisierungsfunktion <extension-pyinit>` "
-"namens :samp:`PyInit_{<module_name>}`. Du musst sie auf einen :ref:`Export-"
-"Haken <extension-export-hook>` portieren, :samp:`PyModExport_{<module name>}"
-"` – eine Funktionalität, die in CPython 3.15 mit :pep:`793` ergänzt wurde."
+"namens :samp:`PyInit_{<modname>}` (wobei ``modname`` der Name deines Moduls "
+"ist). Du musst sie auf einen :ref:`Export-Haken <extension-export-hook>` "
+"portieren, :samp:`PyModExport_{<modname>}` – eine Funktionalität, die in "
+"CPython 3.15 mit :pep:`793` ergänzt wurde."
 
 #: ../../howto/abi3t-migration.rst:240
 msgid ""

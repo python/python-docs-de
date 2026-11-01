@@ -242,7 +242,6 @@ msgid "Functions"
 msgstr "Funktionen"
 
 #: ../../library/time.rst:127
-#, fuzzy
 msgid ""
 "Convert a tuple or :class:`struct_time` representing a time as returned "
 "by :func:`gmtime` or :func:`localtime` to a string of the following form: "
@@ -250,22 +249,21 @@ msgid ""
 "space padded if the day is a single digit, for example: ``'Wed Jun  9 "
 "04:26:40 1993'``."
 msgstr ""
-"Wandelt ein Tupel oder ein :class:`struct_time`, das eine Zeit so darstellt, "
-"wie :func:`gmtime` oder :func:`localtime` sie zurückgeben, in eine "
-"Zeichenkette der folgenden Form um: ``'Sun Jun 20 23:21:05 1993'``. Das "
-"Tagesfeld ist zwei Zeichen breit und wird bei einstelligem Tag mit einem "
-"Leerzeichen aufgefüllt, zum Beispiel: ``'Wed Jun  9 04:26:40 1993'``."
+"Wandelt ein Tupel oder ein :class:`struct_time`, das eine Zeit so "
+"darstellt, wie :func:`gmtime` oder :func:`localtime` sie zurückgeben, in "
+"eine Zeichenkette der folgenden Form um: ``'Sun Jun 20 23:21:05 1993'``. "
+"Das Tagesfeld ist zwei Zeichen breit und wird bei einstelligem Tag mit "
+"einem Leerzeichen aufgefüllt, zum Beispiel: ``'Wed Jun  9 04:26:40 1993'``."
 
 #: ../../library/time.rst:133
-#, fuzzy
 msgid ""
 "If *time_tuple* is not provided, the current time as returned "
 "by :func:`localtime` is used. Locale information is not used "
 "by :func:`asctime`."
 msgstr ""
-"Ist *t* nicht angegeben, wird die aktuelle Zeit verwendet, "
-"wie :func:`localtime` sie zurückgibt. :func:`asctime` verwendet keine "
-"Angaben aus dem Gebietsschema."
+"Ist *time_tuple* nicht angegeben, wird die aktuelle Zeit verwendet, wie "
+":func:`localtime` sie zurückgibt. :func:`asctime` verwendet keine Angaben "
+"aus dem Gebietsschema."
 
 #: ../../library/time.rst:139
 msgid ""
@@ -378,7 +376,6 @@ msgid "Similar to :func:`clock_settime` but set time with nanoseconds."
 msgstr "Wie :func:`clock_settime`, setzt die Zeit aber in Nanosekunden."
 
 #: ../../library/time.rst:220
-#, fuzzy
 msgid ""
 "Convert a time expressed in seconds since the epoch_ to a string of a form: "
 "``'Sun Jun 20 23:21:05 1993'`` representing local time. The day field is two "
@@ -392,17 +389,16 @@ msgstr ""
 "1993'``."
 
 #: ../../library/time.rst:225
-#, fuzzy
 msgid ""
 "If *seconds* is not provided or :const:`None`, the current time as returned "
 "by :func:`.time` is used. ``ctime(seconds)`` is equivalent to "
 "``asctime(localtime(seconds))``. Locale information is not used "
 "by :func:`ctime`."
 msgstr ""
-"Ist *secs* nicht angegeben oder :const:`None`, wird die aktuelle Zeit "
-"verwendet, wie :func:`.time` sie zurückgibt. ``ctime(secs)`` entspricht "
-"``asctime(localtime(secs))``. :func:`ctime` verwendet keine Angaben aus dem "
-"Gebietsschema."
+"Ist *seconds* nicht angegeben oder :const:`None`, wird die aktuelle Zeit "
+"verwendet, wie :func:`.time` sie zurückgibt. ``ctime(seconds)`` entspricht "
+"``asctime(localtime(seconds))``. :func:`ctime` verwendet keine Angaben aus "
+"dem Gebietsschema."
 
 #: ../../library/time.rst:230 ../../library/time.rst:268
 #: ../../library/time.rst:285 ../../library/time.rst:448
@@ -471,7 +467,6 @@ msgid "*resolution*: The resolution of the clock in seconds (:class:`float`)"
 msgstr "*resolution*: Die Auflösung der Uhr in Sekunden (:class:`float`)"
 
 #: ../../library/time.rst:261
-#, fuzzy
 msgid ""
 "Convert a time expressed in seconds since the epoch_ to "
 "a :class:`struct_time` in UTC in which the dst flag is always zero.  If "
@@ -480,24 +475,24 @@ msgid ""
 "a description of the :class:`struct_time` object. "
 "See :func:`calendar.timegm` for the inverse of this function."
 msgstr ""
-"Wandelt eine in Sekunden seit der Epoche (epoch_) angegebene Zeit in "
-"ein :class:`struct_time` in UTC um, bei dem das dst-Flag immer null ist. Ist "
-"*secs* nicht angegeben oder :const:`None`, wird die aktuelle Zeit verwendet, "
-"wie :func:`.time` sie zurückgibt. Bruchteile einer Sekunde werden nicht "
-"beachtet. Eine Beschreibung des :class:`struct_time`-Objekts steht weiter "
-"oben. Die Umkehrung dieser Funktion ist :func:`calendar.timegm`."
+"Wandelt eine in Sekunden seit der Epoche (epoch_) angegebene Zeit in ein "
+":class:`struct_time` in UTC um, bei dem das dst-Flag immer null ist. Ist "
+"*seconds* nicht angegeben oder :const:`None`, wird die aktuelle Zeit "
+"verwendet, wie :func:`.time` sie zurückgibt. Bruchteile einer Sekunde "
+"werden nicht beachtet. Eine Beschreibung des :class:`struct_time`-Objekts "
+"steht weiter oben. Die Umkehrung dieser Funktion ist "
+":func:`calendar.timegm`."
 
 #: ../../library/time.rst:274
-#, fuzzy
 msgid ""
 "Like :func:`gmtime` but converts to local time. If *seconds* is not provided "
 "or :const:`None`, the current time as returned by :func:`.time` is used. The "
 "dst flag is set to ``1`` when DST applies to the given time."
 msgstr ""
-"Wie :func:`gmtime`, rechnet aber in die Ortszeit um. Ist *secs* nicht "
-"angegeben oder :const:`None`, wird die aktuelle Zeit verwendet, "
-"wie :func:`.time` sie zurückgibt. Das dst-Flag wird auf ``1`` gesetzt, wenn "
-"für die angegebene Zeit die Sommerzeit gilt."
+"Wie :func:`gmtime`, rechnet aber in die Ortszeit um. Ist *seconds* nicht "
+"angegeben oder :const:`None`, wird die aktuelle Zeit verwendet, wie "
+":func:`.time` sie zurückgibt. Das dst-Flag wird auf ``1`` gesetzt, wenn für "
+"die angegebene Zeit die Sommerzeit gilt."
 
 #: ../../library/time.rst:279
 msgid ""
@@ -702,7 +697,6 @@ msgid "Windows implementation"
 msgstr "Windows-Implementierung"
 
 #: ../../library/time.rst:409
-#, fuzzy
 msgid ""
 "On Windows, if *seconds* is zero, the thread relinquishes the remainder of "
 "its time slice to any other thread that is ready to run. If there are no "
@@ -712,13 +706,14 @@ msgid ""
 "synchapi-createwaitabletimerexw>`_ which provides resolution of 100 "
 "nanoseconds. If *seconds* is zero, ``Sleep(0)`` is used."
 msgstr ""
-"Ist *secs* unter Windows null, gibt der Thread den Rest seiner Zeitscheibe "
-"an jeden anderen lauffähigen Thread ab. Gibt es keine anderen lauffähigen "
-"Threads, kehrt die Funktion sofort zurück, und der Thread läuft weiter. "
-"Unter Windows 10 und neuer verwendet die Implementierung einen "
-"`hochauflösenden Zeitgeber <https://learn.microsoft.com/windows/win32/api/"
-"synchapi/nf-synchapi-createwaitabletimerexw>`_, der eine Auflösung von 100 "
-"Nanosekunden bietet. Ist *secs* null, wird ``Sleep(0)`` verwendet."
+"Ist *seconds* unter Windows null, gibt der Thread den Rest seiner "
+"Zeitscheibe an jeden anderen lauffähigen Thread ab. Gibt es keine anderen "
+"lauffähigen Threads, kehrt die Funktion sofort zurück, und der Thread läuft "
+"weiter. Unter Windows 10 und neuer verwendet die Implementierung einen "
+"`hochauflösenden Zeitgeber "
+"<https://learn.microsoft.com/windows/win32/api/synchapi/nf-synchapi-createwa"
+"itabletimerexw>`_, der eine Auflösung von 100 Nanosekunden bietet. Ist "
+"*seconds* null, wird ``Sleep(0)`` verwendet."
 
 #: ../../library/time.rst:421
 msgid "Unix implementation"
@@ -755,22 +750,20 @@ msgstr ""
 "stattdessen :func:`os.sched_yield`."
 
 #: ../../library/time.rst:433
-#, fuzzy
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``time.sleep`` with argument "
 "``seconds``."
 msgstr ""
-"Löst ein :ref:`Auditing-Ereignis <auditing>` ``time.sleep`` mit dem Argument "
-"``secs`` aus."
+"Löst ein :ref:`Auditing-Ereignis <auditing>` ``time.sleep`` mit dem "
+"Argument ``seconds`` aus."
 
 #: ../../library/time.rst:435
-#, fuzzy
 msgid ""
 "The function now sleeps at least *seconds* even if the sleep is interrupted "
 "by a signal, except if the signal handler raises an exception "
 "(see :pep:`475` for the rationale)."
 msgstr ""
-"Die Funktion schläft jetzt mindestens *secs*, auch wenn das Schlafen von "
+"Die Funktion schläft jetzt mindestens *seconds*, auch wenn das Schlafen von "
 "einem Signal unterbrochen wird, außer wenn der Signalhandler eine Ausnahme "
 "auslöst (die Begründung steht in :pep:`475`)."
 
@@ -788,7 +781,6 @@ msgid "Raises an auditing event."
 msgstr "Löst ein Auditing-Ereignis aus."
 
 #: ../../library/time.rst:456
-#, fuzzy
 msgid ""
 "Convert a tuple or :class:`struct_time` representing a time as returned "
 "by :func:`gmtime` or :func:`localtime` to a string as specified by the "
@@ -797,12 +789,13 @@ msgid ""
 "string.  :exc:`ValueError` is raised if any field in *time_tuple* is outside "
 "of the allowed range."
 msgstr ""
-"Wandelt ein Tupel oder ein :class:`struct_time`, das eine Zeit so darstellt, "
-"wie :func:`gmtime` oder :func:`localtime` sie zurückgeben, in eine "
-"Zeichenkette um, wie das Argument *format* sie angibt. Ist *t* nicht "
-"angegeben, wird die aktuelle Zeit verwendet, wie :func:`localtime` sie "
-"zurückgibt. *format* muss eine Zeichenkette sein. Liegt ein Feld in *t* "
-"außerhalb des zulässigen Bereichs, wird :exc:`ValueError` ausgelöst."
+"Wandelt ein Tupel oder ein :class:`struct_time`, das eine Zeit so "
+"darstellt, wie :func:`gmtime` oder :func:`localtime` sie zurückgeben, in "
+"eine Zeichenkette um, wie das Argument *format* sie angibt. Ist "
+"*time_tuple* nicht angegeben, wird die aktuelle Zeit verwendet, wie "
+":func:`localtime` sie zurückgibt. *format* muss eine Zeichenkette sein. "
+"Liegt ein Feld in *time_tuple* außerhalb des zulässigen Bereichs, wird "
+":exc:`ValueError` ausgelöst."
 
 #: ../../library/time.rst:462
 msgid ""
@@ -888,9 +881,8 @@ msgid "``%f``"
 msgstr "``%f``"
 
 #: ../../library/time.rst:488
-#, fuzzy
 msgid "Microseconds as a decimal number [000000,999999]."
-msgstr "Mikrosekunden als Dezimalzahl"
+msgstr "Mikrosekunden als Dezimalzahl [000000,999999]."
 
 #: ../../library/time.rst:488
 msgid "\\(1)"

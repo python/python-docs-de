@@ -1305,14 +1305,14 @@ msgstr ""
 "bilden die Eigenschaften von Generatorausdrücken nach:"
 
 #: ../../howto/functional.rst:630
-#, fuzzy
 msgid ""
 ":func:`map(f, iterA, iterB, ...) <map>` returns an iterator over the "
 "sequence ``f(iterA[0], iterB[0]), f(iterA[1], iterB[1]), f(iterA[2], "
 "iterB[2]), ...``."
 msgstr ""
-":func:`map(f, iterA, iterB, ...) <map>` gibt einen Iterator über die Sequenz "
-"zurück"
+":func:`map(f, iterA, iterB, ...) <map>` gibt einen Iterator über die "
+"Sequenz ``f(iterA[0], iterB[0]), f(iterA[1], iterB[1]), f(iterA[2], "
+"iterB[2]), ...`` zurück."
 
 #: ../../howto/functional.rst:641
 msgid "You can of course achieve the same effect with a list comprehension."
