@@ -247,9 +247,11 @@ if $RUN_FULL; then
     # alte Werte fest -- zum Beispiel die Argumentnamen von
     # audit-event-Direktiven, die upstream umbenannt wurden. Das sieht dann
     # lokal wie ein Uebersetzungsfehler aus und ist keiner.
-    echo "Raeume Sphinx-Cache auf (make clean) ..."
-    (cd "$CPYTHON_SRC/Doc" && make clean) \
-        || echo "Hinweis: 'make clean' fehlgeschlagen -- Build ist inkrementell."
+    #
+    # Nicht 'make clean' verwenden: das loescht in CPythons Doc-Makefile
+    # auch ./venv, das oben gerade gebaut wurde.
+    echo "Raeume Sphinx-Cache auf (Doc/build) ..."
+    rm -rf "$CPYTHON_SRC/Doc/build"
 
     LOCALE_DIR="$CPYTHON_SRC/Doc/locales/de/LC_MESSAGES"
     echo "Verknuepfe aktuellen Uebersetzungsstand ($BRANCH) nach $LOCALE_DIR ..."
