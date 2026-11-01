@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-14 20:17+0000\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2026-10-18 00:20+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -190,26 +190,26 @@ msgstr ""
 "zurückgegeben. Zu den Optionen gehören:"
 
 #: ../../library/tkinter.font.rst:96
-msgid "*ascent* - distance between baseline and highest point that a"
+#, fuzzy
+msgid ""
+"*ascent* - distance between baseline and highest point that a character of "
+"the font can occupy"
 msgstr ""
 "*ascent* - Abstand zwischen der Grundlinie und dem höchsten Punkt, den ein"
 
-#: ../../library/tkinter.font.rst:97 ../../library/tkinter.font.rst:100
-msgid "character of the font can occupy"
-msgstr "Zeichen der Schriftart einnehmen kann"
-
 #: ../../library/tkinter.font.rst:99
-msgid "*descent* - distance between baseline and lowest point that a"
+#, fuzzy
+msgid ""
+"*descent* - distance between baseline and lowest point that a character of "
+"the font can occupy"
 msgstr ""
 "*descent* - Abstand zwischen der Grundlinie und dem tiefsten Punkt, den ein"
 
 #: ../../library/tkinter.font.rst:102
-msgid "*linespace* - minimum vertical separation necessary between any two"
-msgstr ""
-"*linespace* - mindestens nötiger senkrechter Abstand zwischen zwei beliebigen"
-
-#: ../../library/tkinter.font.rst:103
-msgid "characters of the font that ensures no vertical overlap between lines."
+#, fuzzy
+msgid ""
+"*linespace* - minimum vertical separation necessary between any two "
+"characters of the font that ensures no vertical overlap between lines."
 msgstr ""
 "Zeichen der Schriftart, der senkrechte Überlappung zwischen Zeilen "
 "ausschließt."
@@ -240,3 +240,11 @@ msgstr ""
 #: ../../library/tkinter.font.rst:121
 msgid "The *root* parameter was added."
 msgstr "Der Parameter *root* wurde hinzugefügt."
+
+#~ msgid "character of the font can occupy"
+#~ msgstr "Zeichen der Schriftart einnehmen kann"
+
+#~ msgid "*linespace* - minimum vertical separation necessary between any two"
+#~ msgstr ""
+#~ "*linespace* - mindestens nötiger senkrechter Abstand zwischen zwei "
+#~ "beliebigen"

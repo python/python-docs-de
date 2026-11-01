@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-22 12:07+0200\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2026-10-16 09:30+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -3499,8 +3499,9 @@ msgstr ""
 "Brett Cannon in :issue:`26131`.)"
 
 #: ../../whatsnew/3.10.rst:1651
+#, fuzzy
 msgid ""
-":meth:`!zimport.zipimporter.load_module` has been deprecated in preference "
+":meth:`!zipimport.zipimporter.load_module` has been deprecated in preference "
 "for :meth:`~zipimport.zipimporter.exec_module`. (Contributed by Brett Cannon "
 "in :issue:`26131`.)"
 msgstr ""
@@ -3632,11 +3633,12 @@ msgstr ""
 "entfallen. (Beigetragen von Brett Cannon in :issue:`42137`.)"
 
 #: ../../whatsnew/3.10.rst:1713
+#, fuzzy
 msgid ""
 ":meth:`!importlib.abc.Loader.module_repr`, :meth:`!"
-"importlib.machinery.FrozenLoader.module_repr`, and :meth:`!"
-"importlib.machinery.BuiltinLoader.module_repr` are deprecated and slated for "
-"removal in Python 3.12. (Contributed by Brett Cannon in :issue:`42136`.)"
+"importlib.machinery.FrozenImporter.module_repr`, and :meth:`!"
+"importlib.machinery.BuiltinImporter.module_repr` are deprecated and slated "
+"for removal in Python 3.12. (Contributed by Brett Cannon in :issue:`42136`.)"
 msgstr ""
 ":meth:`!importlib.abc.Loader.module_repr`, :meth:`!"
 "importlib.machinery.FrozenLoader.module_repr` und :meth:`!"
@@ -3700,7 +3702,8 @@ msgid "``threading.Thread.setName`` => :attr:`threading.Thread.name`"
 msgstr "``threading.Thread.setName`` => :attr:`threading.Thread.name`"
 
 #: ../../whatsnew/3.10.rst:1745
-msgid "``threading.thread.getName`` => :attr:`threading.Thread.name`"
+#, fuzzy
+msgid "``threading.Thread.getName`` => :attr:`threading.Thread.name`"
 msgstr "``threading.thread.getName`` => :attr:`threading.Thread.name`"
 
 #: ../../whatsnew/3.10.rst:1747
@@ -4198,8 +4201,9 @@ msgstr ""
 "Fehlerbehandlung sind weggelassen.) ::"
 
 #: ../../whatsnew/3.10.rst:1967
+#, fuzzy
 msgid ""
-"io_module = Import_ImportModule(\"io\");\n"
+"io_module = PyImport_ImportModule(\"io\");\n"
 "fileobject = PyObject_CallMethod(io_module, \"open\", \"ss\", filename, "
 "\"rb\");\n"
 "source_bytes_object = PyObject_CallMethod(fileobject, \"read\", \"\");\n"

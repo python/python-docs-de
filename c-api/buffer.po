@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-23 06:17+0000\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2026-09-23 08:00+0200\n"
 "Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -583,57 +583,76 @@ msgstr ""
 "absteigender Reihenfolge ihrer Komplexität aufgeführt. Beachte, dass jedes "
 "Flag alle Bits der darunter liegenden Flags enthält."
 
-#: ../../c-api/buffer.rst:290 ../../c-api/buffer.rst:314
-#: ../../c-api/buffer.rst:339
+#: ../../c-api/buffer.rst:289 ../../c-api/buffer.rst:332
+#: ../../c-api/buffer.rst:381
+msgid ""
+"These values are available when compiling for the :ref:`Stable ABI <stable>` "
+"since version 3.11."
+msgstr ""
+
+#: ../../c-api/buffer.rst:299 ../../c-api/buffer.rst:342
+#: ../../c-api/buffer.rst:391
 msgid "Request"
 msgstr "Anfrage"
 
-#: ../../c-api/buffer.rst:290 ../../c-api/buffer.rst:314
-#: ../../c-api/buffer.rst:339
+#: ../../c-api/buffer.rst:300 ../../c-api/buffer.rst:343
+#: ../../c-api/buffer.rst:392
 msgid "shape"
 msgstr "Form"
 
-#: ../../c-api/buffer.rst:290 ../../c-api/buffer.rst:314
-#: ../../c-api/buffer.rst:339
+#: ../../c-api/buffer.rst:301 ../../c-api/buffer.rst:344
+#: ../../c-api/buffer.rst:393
 msgid "strides"
 msgstr "Schritte"
 
-#: ../../c-api/buffer.rst:290 ../../c-api/buffer.rst:314
-#: ../../c-api/buffer.rst:339
+#: ../../c-api/buffer.rst:302 ../../c-api/buffer.rst:345
+#: ../../c-api/buffer.rst:394
 msgid "suboffsets"
 msgstr "Teilversätze"
 
-#: ../../c-api/buffer.rst:292 ../../c-api/buffer.rst:294
-#: ../../c-api/buffer.rst:296 ../../c-api/buffer.rst:316
-#: ../../c-api/buffer.rst:318 ../../c-api/buffer.rst:320
-#: ../../c-api/buffer.rst:322 ../../c-api/buffer.rst:341
-#: ../../c-api/buffer.rst:343 ../../c-api/buffer.rst:345
-#: ../../c-api/buffer.rst:347 ../../c-api/buffer.rst:349
-#: ../../c-api/buffer.rst:351 ../../c-api/buffer.rst:353
-#: ../../c-api/buffer.rst:355
+#: ../../c-api/buffer.rst:304 ../../c-api/buffer.rst:305
+#: ../../c-api/buffer.rst:308 ../../c-api/buffer.rst:309
+#: ../../c-api/buffer.rst:312 ../../c-api/buffer.rst:348
+#: ../../c-api/buffer.rst:349 ../../c-api/buffer.rst:353
+#: ../../c-api/buffer.rst:354 ../../c-api/buffer.rst:358
+#: ../../c-api/buffer.rst:359 ../../c-api/buffer.rst:363
+#: ../../c-api/buffer.rst:399 ../../c-api/buffer.rst:400
+#: ../../c-api/buffer.rst:404 ../../c-api/buffer.rst:406
+#: ../../c-api/buffer.rst:407 ../../c-api/buffer.rst:411
+#: ../../c-api/buffer.rst:413 ../../c-api/buffer.rst:414
+#: ../../c-api/buffer.rst:418 ../../c-api/buffer.rst:420
+#: ../../c-api/buffer.rst:421 ../../c-api/buffer.rst:425
+#: ../../c-api/buffer.rst:427 ../../c-api/buffer.rst:428
+#: ../../c-api/buffer.rst:434 ../../c-api/buffer.rst:435
+#: ../../c-api/buffer.rst:441 ../../c-api/buffer.rst:448
 msgid "yes"
 msgstr "ja"
 
-#: ../../c-api/buffer.rst:292 ../../c-api/buffer.rst:341
-#: ../../c-api/buffer.rst:343
+#: ../../c-api/buffer.rst:306 ../../c-api/buffer.rst:401
+#: ../../c-api/buffer.rst:408
 msgid "if needed"
 msgstr "falls nötig"
 
-#: ../../c-api/buffer.rst:294 ../../c-api/buffer.rst:296
-#: ../../c-api/buffer.rst:298 ../../c-api/buffer.rst:316
-#: ../../c-api/buffer.rst:318 ../../c-api/buffer.rst:320
-#: ../../c-api/buffer.rst:322 ../../c-api/buffer.rst:345
-#: ../../c-api/buffer.rst:347 ../../c-api/buffer.rst:349
-#: ../../c-api/buffer.rst:351 ../../c-api/buffer.rst:353
-#: ../../c-api/buffer.rst:355
+#: ../../c-api/buffer.rst:310 ../../c-api/buffer.rst:313
+#: ../../c-api/buffer.rst:314 ../../c-api/buffer.rst:316
+#: ../../c-api/buffer.rst:317 ../../c-api/buffer.rst:318
+#: ../../c-api/buffer.rst:350 ../../c-api/buffer.rst:355
+#: ../../c-api/buffer.rst:360 ../../c-api/buffer.rst:364
+#: ../../c-api/buffer.rst:365 ../../c-api/buffer.rst:415
+#: ../../c-api/buffer.rst:422 ../../c-api/buffer.rst:429
+#: ../../c-api/buffer.rst:432 ../../c-api/buffer.rst:436
+#: ../../c-api/buffer.rst:439 ../../c-api/buffer.rst:442
+#: ../../c-api/buffer.rst:443 ../../c-api/buffer.rst:446
+#: ../../c-api/buffer.rst:449 ../../c-api/buffer.rst:450
+#: ../../c-api/buffer.rst:453
 msgid "NULL"
 msgstr "NULL"
 
-#: ../../c-api/buffer.rst:305
+#: ../../c-api/buffer.rst:324
 msgid "contiguity requests"
 msgstr "Anträge auf zusammenhängende Grundstücke"
 
-#: ../../c-api/buffer.rst:307
+#: ../../c-api/buffer.rst:326
 msgid ""
 "C or Fortran :term:`contiguity <contiguous>` can be explicitly requested, "
 "with and without stride information. Without stride information, the buffer "
@@ -643,32 +662,32 @@ msgstr ""
 "ausdrücklich angefordert werden, mit oder ohne Stride-Angabe. Ohne Stride-"
 "Angabe muss der Puffer C-zusammenhängend sein."
 
-#: ../../c-api/buffer.rst:314 ../../c-api/buffer.rst:339
+#: ../../c-api/buffer.rst:346 ../../c-api/buffer.rst:395
 msgid "contig"
 msgstr "Contig"
 
-#: ../../c-api/buffer.rst:316 ../../c-api/buffer.rst:322
-#: ../../c-api/buffer.rst:353 ../../c-api/buffer.rst:355
+#: ../../c-api/buffer.rst:351 ../../c-api/buffer.rst:366
+#: ../../c-api/buffer.rst:444 ../../c-api/buffer.rst:451
 msgid "C"
 msgstr "C"
 
-#: ../../c-api/buffer.rst:318
+#: ../../c-api/buffer.rst:356
 msgid "F"
 msgstr "F"
 
-#: ../../c-api/buffer.rst:320
+#: ../../c-api/buffer.rst:361
 msgid "C or F"
 msgstr "C oder F"
 
-#: ../../c-api/buffer.rst:322
+#: ../../c-api/buffer.rst:362
 msgid ":c:macro:`PyBUF_ND`"
 msgstr ":c:macro:`PyBUF_ND`"
 
-#: ../../c-api/buffer.rst:327
+#: ../../c-api/buffer.rst:370
 msgid "compound requests"
 msgstr "zusammengesetzte Anfragen"
 
-#: ../../c-api/buffer.rst:329
+#: ../../c-api/buffer.rst:372
 msgid ""
 "All possible requests are fully defined by some combination of the flags in "
 "the previous section. For convenience, the buffer protocol provides "
@@ -679,7 +698,7 @@ msgstr ""
 "das Pufferprotokoll häufig verwendete Kombinationen als einzelne Flags zur "
 "Verfügung."
 
-#: ../../c-api/buffer.rst:333
+#: ../../c-api/buffer.rst:376
 msgid ""
 "In the following table *U* stands for undefined contiguity. The consumer "
 "would have to call :c:func:`PyBuffer_IsContiguous` to determine contiguity."
@@ -688,39 +707,39 @@ msgstr ""
 "Verbraucher müsste die Funktion „ :c:func:`PyBuffer_IsContiguous` "
 "“ aufrufen, um die Kontiguität zu ermitteln."
 
-#: ../../c-api/buffer.rst:339
+#: ../../c-api/buffer.rst:396
 msgid "readonly"
 msgstr "schreibgeschützt"
 
-#: ../../c-api/buffer.rst:339
+#: ../../c-api/buffer.rst:397
 msgid "format"
 msgstr "Format"
 
-#: ../../c-api/buffer.rst:341 ../../c-api/buffer.rst:343
-#: ../../c-api/buffer.rst:345 ../../c-api/buffer.rst:347
-#: ../../c-api/buffer.rst:349 ../../c-api/buffer.rst:351
+#: ../../c-api/buffer.rst:402 ../../c-api/buffer.rst:409
+#: ../../c-api/buffer.rst:416 ../../c-api/buffer.rst:423
+#: ../../c-api/buffer.rst:430 ../../c-api/buffer.rst:437
 msgid "U"
 msgstr "U"
 
-#: ../../c-api/buffer.rst:341 ../../c-api/buffer.rst:345
-#: ../../c-api/buffer.rst:349 ../../c-api/buffer.rst:353
+#: ../../c-api/buffer.rst:403 ../../c-api/buffer.rst:417
+#: ../../c-api/buffer.rst:431 ../../c-api/buffer.rst:445
 msgid "0"
 msgstr "0"
 
-#: ../../c-api/buffer.rst:343 ../../c-api/buffer.rst:347
-#: ../../c-api/buffer.rst:351 ../../c-api/buffer.rst:355
+#: ../../c-api/buffer.rst:410 ../../c-api/buffer.rst:424
+#: ../../c-api/buffer.rst:438 ../../c-api/buffer.rst:452
 msgid "1 or 0"
 msgstr "1 oder 0"
 
-#: ../../c-api/buffer.rst:360
+#: ../../c-api/buffer.rst:457
 msgid "Complex arrays"
 msgstr "Komplexe Arrays"
 
-#: ../../c-api/buffer.rst:363
+#: ../../c-api/buffer.rst:460
 msgid "NumPy-style: shape and strides"
 msgstr "NumPy-Stil: Form und Schritte"
 
-#: ../../c-api/buffer.rst:365
+#: ../../c-api/buffer.rst:462
 msgid ""
 "The logical structure of NumPy-style arrays is defined "
 "by :c:member:`~Py_buffer.itemsize`, :c:member:`~Py_buffer.ndim`, :c:member:`~Py_buffer.shape` "
@@ -730,7 +749,7 @@ msgstr ""
 "durch :c:member:`~Py_buffer.itemsize`, :c:member:`~Py_buffer.ndim`, :c:member:`~Py_buffer.shape` "
 "und :c:member:`~Py_buffer.strides` definiert."
 
-#: ../../c-api/buffer.rst:368
+#: ../../c-api/buffer.rst:465
 msgid ""
 "If ``ndim == 0``, the memory location pointed to "
 "by :c:member:`~Py_buffer.buf` is interpreted as a scalar of "
@@ -744,7 +763,7 @@ msgstr ""
 "sowohl :c:member:`~Py_buffer.shape` als auch :c:member:`~Py_buffer.strides` "
 "``NULL`` ."
 
-#: ../../c-api/buffer.rst:372
+#: ../../c-api/buffer.rst:469
 msgid ""
 "If :c:member:`~Py_buffer.strides` is ``NULL``, the array is interpreted as a "
 "standard n-dimensional C-array. Otherwise, the consumer must access an n-"
@@ -755,7 +774,7 @@ msgstr ""
 "Andernfalls muss der Verbraucher wie folgt auf ein n-dimensionales Array "
 "zugreifen:"
 
-#: ../../c-api/buffer.rst:376
+#: ../../c-api/buffer.rst:473
 msgid ""
 "ptr = (char *)buf + indices[0] * strides[0] + ... + indices[n-1] * "
 "strides[n-1];\n"
@@ -765,7 +784,7 @@ msgstr ""
 "strides[n-1];\n"
 "item = *((typeof(item) *)ptr);"
 
-#: ../../c-api/buffer.rst:382
+#: ../../c-api/buffer.rst:479
 msgid ""
 "As noted above, :c:member:`~Py_buffer.buf` can point to any location within "
 "the actual memory block. An exporter can check the validity of a buffer with "
@@ -775,7 +794,7 @@ msgstr ""
 "Stelle innerhalb des eigentlichen Speicherblocks verweisen. Ein Exporter "
 "kann die Gültigkeit eines Puffers mit dieser Funktion überprüfen:"
 
-#: ../../c-api/buffer.rst:386
+#: ../../c-api/buffer.rst:483
 msgid ""
 "def verify_structure(memlen, itemsize, ndim, shape, strides, offset):\n"
 "    \"\"\"Verify that the parameters represent a valid array within\n"
@@ -829,11 +848,11 @@ msgstr ""
 "\n"
 "    return 0 <= offset+imin and offset+imax+itemsize <= memlen"
 
-#: ../../c-api/buffer.rst:416
+#: ../../c-api/buffer.rst:513
 msgid "PIL-style: shape, strides and suboffsets"
 msgstr "PIL-Stil: Form, Schritte und Teilversätze"
 
-#: ../../c-api/buffer.rst:418
+#: ../../c-api/buffer.rst:515
 msgid ""
 "In addition to the regular items, PIL-style arrays can contain pointers that "
 "must be followed in order to get to the next element in a dimension. For "
@@ -852,7 +871,7 @@ msgstr ""
 "eingebettet werden und auf zwei Arrays vom Typ ``char x[2][3]`` verweisen, "
 "die sich an beliebiger Stelle im Speicher befinden können."
 
-#: ../../c-api/buffer.rst:427
+#: ../../c-api/buffer.rst:524
 msgid ""
 "Here is a function that returns a pointer to the element in an N-D array "
 "pointed to by an N-dimensional index when there are both non-``NULL`` "
@@ -862,7 +881,7 @@ msgstr ""
 "dimensionalen Array zurückgibt, auf das ein N-dimensionaler Index verweist, "
 "wenn sowohl nicht-``NULL`` e Schritte als auch Teilversätze vorhanden sind::"
 
-#: ../../c-api/buffer.rst:431
+#: ../../c-api/buffer.rst:528
 msgid ""
 "void *get_item_pointer(int ndim, void *buf, Py_ssize_t *strides,\n"
 "                       Py_ssize_t *suboffsets, Py_ssize_t *indices) {\n"
@@ -890,11 +909,11 @@ msgstr ""
 "    return (void*)pointer;\n"
 "}"
 
-#: ../../c-api/buffer.rst:446
+#: ../../c-api/buffer.rst:543
 msgid "Buffer-related functions"
 msgstr "Funktionen im Zusammenhang mit Puffern"
 
-#: ../../c-api/buffer.rst:450
+#: ../../c-api/buffer.rst:547
 msgid ""
 "Return ``1`` if *obj* supports the buffer interface otherwise ``0``.  When "
 "``1`` is returned, it doesn't guarantee that :c:func:`PyObject_GetBuffer` "
@@ -905,7 +924,7 @@ msgstr ""
 "garantiert, dass „ :c:func:`PyObject_GetBuffer` “ erfolgreich ist. Diese "
 "Funktion ist immer erfolgreich."
 
-#: ../../c-api/buffer.rst:457
+#: ../../c-api/buffer.rst:554
 msgid ""
 "Send a request to *exporter* to fill in *view* as specified by  *flags*. If "
 "the exporter cannot provide a buffer of the exact type, it MUST "
@@ -916,7 +935,7 @@ msgstr ""
 "bereitstellen kann, MUSS er eine Ausnahme vom Typ „ :exc:`BufferError` "
 "“ auslösen, ``view->obj`` auf „ ``NULL`` “ setzen und „ ``-1`` “ zurückgeben."
 
-#: ../../c-api/buffer.rst:462
+#: ../../c-api/buffer.rst:559
 msgid ""
 "On success, fill in *view*, set ``view->obj`` to a new reference to "
 "*exporter* and return 0. In the case of chained buffer providers that "
@@ -929,7 +948,7 @@ msgstr ""
 "*exporter* auf dieses Objekt verweisen (siehe :ref:`Buffer Object Structures "
 "<buffer-structs>`)."
 
-#: ../../c-api/buffer.rst:467
+#: ../../c-api/buffer.rst:564
 msgid ""
 "Successful calls to :c:func:`PyObject_GetBuffer` must be paired with calls "
 "to :c:func:`PyBuffer_Release`, similar to :c:func:`malloc` "
@@ -942,7 +961,7 @@ msgstr ""
 "Puffer verarbeitet hat, muss daher „ :c:func:`PyBuffer_Release` “ genau "
 "einmal aufgerufen werden."
 
-#: ../../c-api/buffer.rst:475
+#: ../../c-api/buffer.rst:572
 msgid ""
 "Release the buffer *view* and release the :term:`strong reference` (i.e. "
 "decrement the reference count) to the view's supporting object, ``view-"
@@ -955,7 +974,7 @@ msgstr ""
 "werden, wenn der Puffer nicht mehr verwendet wird, da es andernfalls zu "
 "Referenzlecks kommen kann."
 
-#: ../../c-api/buffer.rst:480
+#: ../../c-api/buffer.rst:577
 msgid ""
 "It is an error to call this function on a buffer that was not obtained "
 "via :c:func:`PyObject_GetBuffer`."
@@ -963,7 +982,7 @@ msgstr ""
 "Es ist ein Fehler, diese Funktion für einen Puffer aufzurufen, der nicht "
 "über „ :c:func:`PyObject_GetBuffer` “ abgerufen wurde."
 
-#: ../../c-api/buffer.rst:486
+#: ../../c-api/buffer.rst:583
 msgid ""
 "Return the implied :c:member:`~Py_buffer.itemsize` "
 "from :c:member:`~Py_buffer.format`. On error, raise an exception and return "
@@ -973,7 +992,7 @@ msgstr ""
 "„ :c:member:`~Py_buffer.format` “ zurück. Bei einem Fehler wird eine "
 "Ausnahme ausgelöst und -1 zurückgegeben."
 
-#: ../../c-api/buffer.rst:494
+#: ../../c-api/buffer.rst:591
 msgid ""
 "Return ``1`` if the memory defined by the *view* is C-style (*order* is "
 "``'C'``) or Fortran-style (*order* is ``'F'``) :term:`contiguous` or either "
@@ -986,7 +1005,7 @@ msgstr ""
 "gibt die Funktion „ ``0`` “ zurück. Diese Funktion läuft immer erfolgreich "
 "ab."
 
-#: ../../c-api/buffer.rst:501
+#: ../../c-api/buffer.rst:598
 msgid ""
 "Get the memory area pointed to by the *indices* inside the given *view*. "
 "*indices* must point to an array of ``view->ndim`` indices."
@@ -995,7 +1014,7 @@ msgstr ""
 "*view* verweisen. *indices* muss auf ein Array von ``view->ndim``-Indizes "
 "verweisen."
 
-#: ../../c-api/buffer.rst:507
+#: ../../c-api/buffer.rst:604
 msgid ""
 "Copy contiguous *len* bytes from *buf* to *view*. *order* can be ``'C'`` or "
 "``'F'`` or ``'A'`` (for C-style or Fortran-style ordering or either one). "
@@ -1006,7 +1025,7 @@ msgstr ""
 "Stil oder für eine von beiden). Bei Erfolg wird ``0`` zurückgegeben, bei "
 "einem Fehler ``-1``."
 
-#: ../../c-api/buffer.rst:515
+#: ../../c-api/buffer.rst:612
 msgid ""
 "Copy *len* bytes from *src* to its contiguous representation in *buf*. "
 "*order* can be ``'C'`` or ``'F'`` or ``'A'`` (for C-style or Fortran-style "
@@ -1017,11 +1036,11 @@ msgstr ""
 "Reihenfolge im C- oder Fortran-Stil bzw. eine beliebige davon). Bei Erfolg "
 "wird „ ``0`` “ zurückgegeben, bei einem Fehler „ ``-1`` “."
 
-#: ../../c-api/buffer.rst:519
+#: ../../c-api/buffer.rst:616
 msgid "This function fails if *len* != *src->len*."
 msgstr "Diese Funktion schlägt fehl, wenn *len* != *src->len* ist."
 
-#: ../../c-api/buffer.rst:524
+#: ../../c-api/buffer.rst:621
 msgid ""
 "Copy data from *src* to *dest* buffer. Can convert between C-style and or "
 "Fortran-style buffers."
@@ -1029,11 +1048,11 @@ msgstr ""
 "Kopiert Daten aus dem *src*-Puffer in den *dest*-Puffer. Ermöglicht die "
 "Konvertierung zwischen Puffern im C-Stil und im Fortran-Stil."
 
-#: ../../c-api/buffer.rst:527
+#: ../../c-api/buffer.rst:624
 msgid "``0`` is returned on success, ``-1`` on error."
 msgstr "``0`` wird bei Erfolg zurückgegeben, bei einem Fehler „ ``-1`` “."
 
-#: ../../c-api/buffer.rst:531
+#: ../../c-api/buffer.rst:628
 msgid ""
 "Fill the *strides* array with byte-strides of a :term:`contiguous` (C-style "
 "if *order* is ``'C'`` or Fortran-style if *order* is ``'F'``) array of the "
@@ -1044,7 +1063,7 @@ msgstr ""
 "wenn *order* auf „ ``'F'`` “ gesetzt ist) mit der angegebenen Form und der "
 "angegebenen Anzahl von Bytes pro Element."
 
-#: ../../c-api/buffer.rst:538
+#: ../../c-api/buffer.rst:635
 msgid ""
 "Handle buffer requests for an exporter that wants to expose *buf* of size "
 "*len* with writability set according to *readonly*. *buf* is interpreted as "
@@ -1054,7 +1073,7 @@ msgstr ""
 "*len* bereitstellen möchte, wobei die Schreibbarkeit entsprechend *readonly* "
 "festgelegt ist. *buf* wird als Folge von Bytes ohne Vorzeichen interpretiert."
 
-#: ../../c-api/buffer.rst:542
+#: ../../c-api/buffer.rst:639
 msgid ""
 "The *flags* argument indicates the request type. This function always fills "
 "in *view* as specified by flags, unless *buf* has been designated as read-"
@@ -1065,7 +1084,7 @@ msgstr ""
 "*buf* wurde als schreibgeschützt gekennzeichnet und in *flags* ist "
 "„ :c:macro:`PyBUF_WRITABLE` “ gesetzt."
 
-#: ../../c-api/buffer.rst:546
+#: ../../c-api/buffer.rst:643
 msgid ""
 "On success, set ``view->obj`` to a new reference to *exporter* and return 0. "
 "Otherwise, raise :exc:`BufferError`, set ``view->obj`` to ``NULL`` and "
@@ -1075,7 +1094,7 @@ msgstr ""
 "gesetzt und 0 zurückgegeben. Andernfalls wird ein :exc:`BufferError` "
 "ausgelöst, ``view->obj`` auf ``NULL`` gesetzt und ``-1`` zurückgegeben;"
 
-#: ../../c-api/buffer.rst:550
+#: ../../c-api/buffer.rst:647
 msgid ""
 "If this function is used as part of a :ref:`getbufferproc <buffer-structs>`, "
 "*exporter* MUST be set to the exporting object and *flags* must be passed "
@@ -1106,14 +1125,14 @@ msgstr "Pufferobjekt"
 msgid "PyBufferProcs (C type)"
 msgstr "PyBufferProcs (Typ C)"
 
-#: ../../c-api/buffer.rst:302
+#: ../../c-api/buffer.rst:321
 msgid "contiguous"
 msgstr "zusammenhängend"
 
-#: ../../c-api/buffer.rst:302
+#: ../../c-api/buffer.rst:321
 msgid "C-contiguous"
 msgstr "C-zusammenhängend"
 
-#: ../../c-api/buffer.rst:302
+#: ../../c-api/buffer.rst:321
 msgid "Fortran contiguous"
 msgstr "Fortran-kontigu"

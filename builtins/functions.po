@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-23 06:17+0000\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2026-08-16 00:01+0000\n"
 "Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -546,8 +546,8 @@ msgstr ""
 "Siehe auch :func:`enum.bin`, um negative Werte als Zweierkomplement "
 "darzustellen."
 
-#: ../../builtins/functions.rst:145 ../../builtins/functions.rst:990
-#: ../../builtins/functions.rst:1374
+#: ../../builtins/functions.rst:145 ../../builtins/functions.rst:1007
+#: ../../builtins/functions.rst:1391
 msgid "See also :func:`format` for more information."
 msgstr "Weitere Informationen findest du unter :func:`format`."
 
@@ -569,7 +569,7 @@ msgstr ""
 "weiter unterteilt werden. Ihre einzigen Instanzen sind ``False`` und "
 "``True`` (siehe :ref:`typebool`)."
 
-#: ../../builtins/functions.rst:160 ../../builtins/functions.rst:840
+#: ../../builtins/functions.rst:160 ../../builtins/functions.rst:857
 msgid "The parameter is now positional-only."
 msgstr "Der Parameter ist jetzt rein positionsgebunden."
 
@@ -872,12 +872,16 @@ msgstr ""
 "gelesen wurde (häufig wird ``'<string>'`` verwendet)."
 
 #: ../../builtins/functions.rst:312
+#, fuzzy
 msgid ""
 "The *mode* argument specifies what kind of code must be compiled; it can be "
 "``'exec'`` if *source* consists of a sequence of statements, ``'eval'`` if "
 "it consists of a single expression, or ``'single'`` if it consists of a "
 "single interactive statement (in the latter case, expression statements that "
-"evaluate to something other than ``None`` will be printed)."
+"evaluate to something other than ``None`` will be printed). It can also be "
+"``'func_type'`` if *source* consists of a function type signature, for "
+"example ``(int) -> str``; see :func:`ast.parse` for more information. This "
+"mode requires passing :data:`ast.PyCF_ONLY_AST` in *flags*."
 msgstr ""
 "Das Argument *mode* legt fest, welche Art von Code kompiliert werden soll. "
 "Es kann ``'exec'`` sein, wenn *source* aus einer Folge von Anweisungen "
@@ -886,7 +890,7 @@ msgstr ""
 "letzteren Fall werden Ausdrucksanweisungen, die einen anderen Wert als "
 "``None`` ergeben, ausgegeben)."
 
-#: ../../builtins/functions.rst:318
+#: ../../builtins/functions.rst:322
 msgid ""
 "The optional arguments *flags* and *dont_inherit* control "
 "which :ref:`compiler options <ast-compiler-flags>` should be activated and "
@@ -912,7 +916,7 @@ msgstr ""
 "(future-Funktionen und Compiler-Optionen) des umgebenden Codes werden "
 "ignoriert."
 
-#: ../../builtins/functions.rst:329
+#: ../../builtins/functions.rst:333
 msgid ""
 "Compiler options and future statements are specified by bits which can be "
 "bitwise ORed together to specify multiple options. The bitfield required to "
@@ -930,7 +934,7 @@ msgstr ""
 "finden. :ref:`Compiler-Flags <ast-compiler-flags>` sind im Modul :mod:`ast` "
 "unter dem Präfix ``PyCF_`` zu finden."
 
-#: ../../builtins/functions.rst:337
+#: ../../builtins/functions.rst:341
 msgid ""
 "The argument *optimize* specifies the optimization level of the compiler; "
 "the default value of ``-1`` selects the optimization level of the "
@@ -945,7 +949,7 @@ msgstr ""
 "entfernt, ``__debug__`` ist falsch) oder ``2`` (auch Docstrings werden "
 "entfernt)."
 
-#: ../../builtins/functions.rst:343
+#: ../../builtins/functions.rst:347
 msgid ""
 "The optional argument *module* specifies the module name. It is needed to "
 "unambiguous :ref:`filter <warning-filter>` syntax warnings by module name."
@@ -954,15 +958,18 @@ msgstr ""
 "Syntax-Warnungen anhand des Modulnamens eindeutig zu :ref:`filtern <warning-"
 "filter>` zu können."
 
-#: ../../builtins/functions.rst:347
+#: ../../builtins/functions.rst:351
 msgid ""
-"This function raises :exc:`SyntaxError` or :exc:`ValueError` if the compiled "
-"source is invalid."
+"This function raises :exc:`SyntaxError` if the compiled source is invalid, "
+"including a *source* containing a null character or that cannot be "
+"decoded; :exc:`ValueError` if *mode* or *flags* is invalid, or if a string "
+"*source* contains surrogate characters; :exc:`MemoryError` "
+"or :exc:`RecursionError` if *source* is too complex to parse or compile, for "
+"example an expression with many thousands of nested operators; "
+"and :exc:`OverflowError` if *source* is too large."
 msgstr ""
-"Diese Funktion löst :exc:`SyntaxError` oder :exc:`ValueError` aus, wenn die "
-"kompilierte Quelle ungültig ist."
 
-#: ../../builtins/functions.rst:350
+#: ../../builtins/functions.rst:360
 msgid ""
 "If you want to parse Python code into its AST representation, "
 "see :func:`ast.parse`."
@@ -970,7 +977,7 @@ msgstr ""
 "Wenn du Python-Code in seine AST-Darstellung parsen möchtest, "
 "siehe :func:`ast.parse`."
 
-#: ../../builtins/functions.rst:353 ../../builtins/functions.rst:355
+#: ../../builtins/functions.rst:363 ../../builtins/functions.rst:365
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``compile`` with arguments "
 "``source`` and ``filename``. This event may also be raised by implicit "
@@ -980,7 +987,7 @@ msgstr ""
 "Argumenten ``source`` und ``filename`` aus. Dieses Ereignis kann auch durch "
 "implizite Kompilierung ausgelöst werden."
 
-#: ../../builtins/functions.rst:361
+#: ../../builtins/functions.rst:371
 msgid ""
 "When compiling a string with multi-line code in ``'single'`` or ``'eval'`` "
 "mode, input must be terminated by at least one newline character.  This is "
@@ -992,7 +999,7 @@ msgstr ""
 "Zeilenumbruchzeichen enden. Dies dient dazu, die Erkennung unvollständiger "
 "und vollständiger Anweisungen im Modul :mod:`code` zu ​​erleichtern."
 
-#: ../../builtins/functions.rst:368
+#: ../../builtins/functions.rst:378
 msgid ""
 "It is possible to crash the Python interpreter with a sufficiently large/"
 "complex string when compiling to an AST object due to stack depth "
@@ -1002,7 +1009,7 @@ msgstr ""
 "mit einem hinreichend großen oder komplexen String zum Absturz zu bringen – "
 "bedingt durch die Beschränkungen der Stack-Tiefe im AST-Compiler von Python."
 
-#: ../../builtins/functions.rst:372
+#: ../../builtins/functions.rst:382
 msgid ""
 "Allowed use of Windows and Mac newlines.  Also, input in ``'exec'`` mode "
 "does not have to end in a newline anymore.  Added the *optimize* parameter."
@@ -1011,7 +1018,7 @@ msgstr ""
 "muss die Eingabe im Modus ``'exec'`` nicht mehr mit einem Zeilenumbruch "
 "enden. Der Parameter *optimize* wurde hinzugefügt."
 
-#: ../../builtins/functions.rst:376
+#: ../../builtins/functions.rst:386
 msgid ""
 "Previously, :exc:`TypeError` was raised when null bytes were encountered in "
 "*source*."
@@ -1019,7 +1026,7 @@ msgstr ""
 "Früher wurde ein :exc:`TypeError` ausgelöst, wenn in *source* Null-Bytes "
 "auftraten."
 
-#: ../../builtins/functions.rst:380
+#: ../../builtins/functions.rst:390
 msgid ""
 "``ast.PyCF_ALLOW_TOP_LEVEL_AWAIT`` can now be passed in flags to enable "
 "support for top-level ``await``, ``async for``, and ``async with``."
@@ -1028,11 +1035,24 @@ msgstr ""
 "um die Unterstützung für ``await``, ``async for`` und ``async with`` auf "
 "oberster Ebene zu aktivieren."
 
-#: ../../builtins/functions.rst:384
+#: ../../builtins/functions.rst:394
+msgid "Added support for ``mode='func_type'``."
+msgstr ""
+
+#: ../../builtins/functions.rst:397
+#, fuzzy
+msgid ""
+":exc:`SyntaxError` is raised instead of :exc:`ValueError` when null bytes "
+"are encountered in *source*."
+msgstr ""
+"Früher wurde ein :exc:`TypeError` ausgelöst, wenn in *source* Null-Bytes "
+"auftraten."
+
+#: ../../builtins/functions.rst:401
 msgid "Added the *module* parameter."
 msgstr "Der Parameter *module* wurde hinzugefügt."
 
-#: ../../builtins/functions.rst:392
+#: ../../builtins/functions.rst:409
 msgid ""
 "Convert a single string or number to a complex number, or create a complex "
 "number from real and imaginary parts."
@@ -1040,12 +1060,12 @@ msgstr ""
 "Wandelst du eine einzelne Zeichenkette oder Zahl in eine komplexe Zahl um "
 "oder erstelle eine komplexe Zahl aus Real- und Imaginärteil."
 
-#: ../../builtins/functions.rst:395 ../../builtins/functions.rst:783
-#: ../../builtins/functions.rst:1046
+#: ../../builtins/functions.rst:412 ../../builtins/functions.rst:800
+#: ../../builtins/functions.rst:1063
 msgid "Examples:"
 msgstr "Beispiele:"
 
-#: ../../builtins/functions.rst:397
+#: ../../builtins/functions.rst:414
 msgid ""
 ">>> complex('+1.23')\n"
 "(1.23+0j)\n"
@@ -1081,7 +1101,7 @@ msgstr ""
 ">>> complex(-1.23, 4.5)\n"
 "(-1.23+4.5j)"
 
-#: ../../builtins/functions.rst:416
+#: ../../builtins/functions.rst:433
 msgid ""
 "If the argument is a string, it must contain either a real part (in the same "
 "format as for :func:`float`) or an imaginary part (in the same format but "
@@ -1110,7 +1130,7 @@ msgstr ""
 "Produktionsregel :token:`~float:complexvalue` in der folgenden Grammatik "
 "entsprechen:"
 
-#: ../../builtins/functions.rst:435
+#: ../../builtins/functions.rst:452
 msgid ""
 "If the argument is a number, the constructor serves as a numeric conversion "
 "like :class:`int` and :class:`float`. For a general Python object ``x``, "
@@ -1126,7 +1146,7 @@ msgstr ""
 "auf :meth:`~object.__float__` zurückgegriffen. Ist :meth:`!__float__` nicht "
 "definiert, wird auf :meth:`~object.__index__` zurückgegriffen."
 
-#: ../../builtins/functions.rst:444
+#: ../../builtins/functions.rst:461
 msgid ""
 "If two arguments are provided or keyword arguments are used, each argument "
 "may be any numeric type (including complex). If both arguments are real "
@@ -1145,7 +1165,7 @@ msgstr ""
 "``real.imag+imag.real`` zurückgegeben. Ist eines der Argumente eine reelle "
 "Zahl, wird in den obigen Ausdrücken nur deren Realteil verwendet."
 
-#: ../../builtins/functions.rst:454
+#: ../../builtins/functions.rst:471
 msgid ""
 "See also :meth:`complex.from_number` which only accepts a single numeric "
 "argument."
@@ -1153,22 +1173,22 @@ msgstr ""
 "Siehe auch :meth:`complex.from_number`, das nur ein einzelnes numerisches "
 "Argument akzeptiert."
 
-#: ../../builtins/functions.rst:456
+#: ../../builtins/functions.rst:473
 msgid "If all arguments are omitted, returns ``0j``."
 msgstr "Wenn keine Argumente angegeben werden, wird ``0j`` zurückgegeben."
 
-#: ../../builtins/functions.rst:458
+#: ../../builtins/functions.rst:475
 msgid "The complex type is described in :ref:`typesnumeric`."
 msgstr "Der komplexe Typ wird unter :ref:`typesnumeric` beschrieben."
 
-#: ../../builtins/functions.rst:460 ../../builtins/functions.rst:837
-#: ../../builtins/functions.rst:1094
+#: ../../builtins/functions.rst:477 ../../builtins/functions.rst:854
+#: ../../builtins/functions.rst:1111
 msgid "Grouping digits with underscores as in code literals is allowed."
 msgstr ""
 "Die Gruppierung von Ziffern mittels Unterstrichen, wie bei Code-Literalen, "
 "ist zulässig."
 
-#: ../../builtins/functions.rst:463
+#: ../../builtins/functions.rst:480
 msgid ""
 "Falls back to :meth:`~object.__index__` if :meth:`~object.__complex__` "
 "and :meth:`~object.__float__` are not defined."
@@ -1176,7 +1196,7 @@ msgstr ""
 "Fällt auf :meth:`~object.__index__` zurück, wenn :meth:`~object.__complex__` "
 "und :meth:`~object.__float__` nicht definiert sind."
 
-#: ../../builtins/functions.rst:467
+#: ../../builtins/functions.rst:484
 msgid ""
 "Passing a complex number as the *real* or *imag* argument is now deprecated; "
 "it should only be passed as a single positional argument."
@@ -1185,7 +1205,7 @@ msgstr ""
 "veraltet;sie sollte nur noch als einzelnes Positionsargument übergeben "
 "werden."
 
-#: ../../builtins/functions.rst:474
+#: ../../builtins/functions.rst:491
 msgid ""
 "This is a relative of :func:`setattr`.  The arguments are an object and a "
 "string.  The string must be the name of one of the object's attributes.  The "
@@ -1200,7 +1220,7 @@ msgstr ""
 "der Anweisung ``del x.foobar``. *name* muss kein Python-Bezeichner sein "
 "(siehe :func:`setattr`)."
 
-#: ../../builtins/functions.rst:487
+#: ../../builtins/functions.rst:504
 msgid ""
 "Create a new dictionary.  The :class:`dict` object is the dictionary class. "
 "See also :ref:`typesmapping` for documentation about this class."
@@ -1209,7 +1229,7 @@ msgstr ""
 "Klasse. Siehe auch :ref:`typesmapping` für die Dokumentation zu dieser "
 "Klasse."
 
-#: ../../builtins/functions.rst:490
+#: ../../builtins/functions.rst:507
 msgid ""
 "For other containers see the built-"
 "in :class:`frozendict`, :class:`list`, :class:`set`, and :class:`tuple` "
@@ -1219,7 +1239,7 @@ msgstr ""
 "Klassen :class:`frozendict`, :class:`list`, :class:`set` und :class:`tuple` "
 "sowie das Modul :mod:`collections`."
 
-#: ../../builtins/functions.rst:497
+#: ../../builtins/functions.rst:514
 msgid ""
 "Without arguments, return the list of names in the current local scope.  "
 "With an argument, attempt to return a list of valid attributes for that "
@@ -1229,7 +1249,7 @@ msgstr ""
 "Gültigkeitsbereich zurückgegeben. Mit einem Argument wird versucht, eine "
 "Liste der gültigen Attribute für dieses Objekt zurückzugeben."
 
-#: ../../builtins/functions.rst:500
+#: ../../builtins/functions.rst:517
 msgid ""
 "If the object has a method named :meth:`~object.__dir__`, this method will "
 "be called and must return the list of attributes. This allows objects that "
@@ -1244,7 +1264,7 @@ msgstr ""
 "implementieren, die Art und Weise anzupassen, wie :func:`dir` ihre Attribute "
 "auflistet."
 
-#: ../../builtins/functions.rst:507
+#: ../../builtins/functions.rst:524
 msgid ""
 "If the object does not provide :meth:`~object.__dir__`, the function tries "
 "its best to gather information from the object's :attr:`~object.__dict__` "
@@ -1259,7 +1279,7 @@ msgstr ""
 "zwangsläufig vollständig und kann ungenau sein, wenn das Objekt über eine "
 "benutzerdefinierte :func:`~object.__getattr__`-Methode verfügt."
 
-#: ../../builtins/functions.rst:513
+#: ../../builtins/functions.rst:530
 msgid ""
 "The default :func:`dir` mechanism behaves differently with different types "
 "of objects, as it attempts to produce the most relevant, rather than "
@@ -1269,7 +1289,7 @@ msgstr ""
 "Objekttypen unterschiedlich, da er versucht, die relevantesten – und nicht "
 "etwa die vollständigen – Informationen zu liefern:"
 
-#: ../../builtins/functions.rst:517
+#: ../../builtins/functions.rst:534
 msgid ""
 "If the object is a module object, the list contains the names of the "
 "module's attributes."
@@ -1277,7 +1297,7 @@ msgstr ""
 "Wenn es sich bei dem Objekt um ein Modulobjekt handelt, enthält die Liste "
 "die Namen der Attribute des Moduls."
 
-#: ../../builtins/functions.rst:520
+#: ../../builtins/functions.rst:537
 msgid ""
 "If the object is a type or class object, the list contains the names of its "
 "attributes, and recursively of the attributes of its bases."
@@ -1286,7 +1306,7 @@ msgstr ""
 "die Liste die Namen seiner Attribute sowie – rekursiv – die Namen der "
 "Attribute seiner Basisklassen."
 
-#: ../../builtins/functions.rst:523
+#: ../../builtins/functions.rst:540
 msgid ""
 "Otherwise, the list contains the object's attributes' names, the names of "
 "its class's attributes, and recursively of the attributes of its class's "
@@ -1296,11 +1316,11 @@ msgstr ""
 "der Attribute seiner Klasse sowie – rekursiv – die Namen der Attribute der "
 "Basisklassen seiner Klasse."
 
-#: ../../builtins/functions.rst:527
+#: ../../builtins/functions.rst:544
 msgid "The resulting list is sorted alphabetically.  For example:"
 msgstr "Die resultierende Liste ist alphabetisch sortiert. Zum Beispiel:"
 
-#: ../../builtins/functions.rst:547
+#: ../../builtins/functions.rst:564
 msgid ""
 "Because :func:`dir` is supplied primarily as a convenience for use at an "
 "interactive prompt, it tries to supply an interesting set of names more than "
@@ -1316,7 +1336,7 @@ msgstr ""
 "Attribute nicht in der Ergebnisliste enthalten, wenn das Argument eine "
 "Klasse ist."
 
-#: ../../builtins/functions.rst:557
+#: ../../builtins/functions.rst:574
 msgid ""
 "Take two (non-complex) numbers as arguments and return a pair of numbers "
 "consisting of their quotient and remainder when using integer division.  "
@@ -1337,7 +1357,7 @@ msgstr ""
 "% b`` ungleich null, so hat es dasselbe Vorzeichen wie *b*, und es gilt ``0 "
 "<= abs(a % b) < abs(b)``."
 
-#: ../../builtins/functions.rst:569
+#: ../../builtins/functions.rst:586
 msgid ""
 "Return an enumerate object. *iterable* must be a sequence, "
 "an :term:`iterator`, or some other object which supports iteration. "
@@ -1352,11 +1372,11 @@ msgstr ""
 "Zähler (beginnend bei *start*, standardmäßig 0) und die durch Iteration über "
 "*iterable* erhaltenen Werte enthält."
 
-#: ../../builtins/functions.rst:581
+#: ../../builtins/functions.rst:598
 msgid "Equivalent to::"
 msgstr "Gleichbedeutend mit::"
 
-#: ../../builtins/functions.rst:583
+#: ../../builtins/functions.rst:600
 msgid ""
 "def enumerate(iterable, start=0):\n"
 "    n = start\n"
@@ -1374,15 +1394,15 @@ msgstr ""
 msgid "Parameters"
 msgstr "Parameter"
 
-#: ../../builtins/functions.rst:593
+#: ../../builtins/functions.rst:610
 msgid "A Python expression."
 msgstr "Ein Python Ausdruck"
 
-#: ../../builtins/functions.rst:597
+#: ../../builtins/functions.rst:614
 msgid "The global namespace (default: ``None``)."
 msgstr "Der globale Namensraum (default: ``None``)."
 
-#: ../../builtins/functions.rst:601
+#: ../../builtins/functions.rst:618
 msgid "The local namespace (default: ``None``)."
 msgstr "Der lokale Namensraum (default: ``None``)."
 
@@ -1390,7 +1410,7 @@ msgstr "Der lokale Namensraum (default: ``None``)."
 msgid "Returns"
 msgstr "Rückgaben"
 
-#: ../../builtins/functions.rst:605
+#: ../../builtins/functions.rst:622
 msgid "The result of the evaluated expression."
 msgstr "Das Ergebnis des ausgewerteten Ausdrucks."
 
@@ -1398,11 +1418,11 @@ msgstr "Das Ergebnis des ausgewerteten Ausdrucks."
 msgid "raises"
 msgstr "Meldung"
 
-#: ../../builtins/functions.rst:606
+#: ../../builtins/functions.rst:623
 msgid "Syntax errors are reported as exceptions."
 msgstr "Syntaxfehler werden als Ausnahmen gemeldet."
 
-#: ../../builtins/functions.rst:610 ../../builtins/functions.rst:680
+#: ../../builtins/functions.rst:627 ../../builtins/functions.rst:697
 msgid ""
 "This function executes arbitrary code. Calling it with untrusted user-"
 "supplied input will lead to security vulnerabilities."
@@ -1410,7 +1430,7 @@ msgstr ""
 "Diese Funktion führt beliebigen Code aus. Der Aufruf mit nicht "
 "vertrauenswürdigen, benutzerdefinierten Eingaben führt zu Sicherheitslücken."
 
-#: ../../builtins/functions.rst:613
+#: ../../builtins/functions.rst:630
 msgid ""
 "The *source* argument is parsed and evaluated as a Python expression "
 "(technically speaking, an :ref:`expression list <exprlists>`) using the "
@@ -1446,11 +1466,11 @@ msgstr ""
 "bereits im Gültigkeitsbereich referenziert werden, der :func:`eval` aufruft "
 "(z. B. über eine :keyword:`nonlocal`-Anweisung)."
 
-#: ../../builtins/functions.rst:631
+#: ../../builtins/functions.rst:648
 msgid "Example:"
 msgstr "Beispiel:"
 
-#: ../../builtins/functions.rst:640
+#: ../../builtins/functions.rst:657
 msgid ""
 "This function can also be used to execute arbitrary code objects (such as "
 "those created by :func:`compile`).  In this case, pass a code object instead "
@@ -1463,7 +1483,7 @@ msgstr ""
 "Objekt mit ``'exec'`` als *mode*-Argument kompiliert wurde, ist der "
 "Rückgabewert von :func:`eval` ``None``."
 
-#: ../../builtins/functions.rst:645
+#: ../../builtins/functions.rst:662
 msgid ""
 "Hints: dynamic execution of statements is supported by the :func:`exec` "
 "function.  The :func:`globals` and :func:`locals` functions return the "
@@ -1476,7 +1496,7 @@ msgstr ""
 "Dictionary zurück. Dies kann nützlich sein, um sie an :func:`eval` "
 "oder :func:`exec` weiterzugeben."
 
-#: ../../builtins/functions.rst:650
+#: ../../builtins/functions.rst:667
 msgid ""
 "If the given source is a string, then leading and trailing spaces and tabs "
 "are stripped."
@@ -1484,7 +1504,7 @@ msgstr ""
 "Wenn die angegebene Quelle eine Zeichenkette ist, werden führende und "
 "nachstehende Leerzeichen sowie Tabulatoren entfernt."
 
-#: ../../builtins/functions.rst:653
+#: ../../builtins/functions.rst:670
 msgid ""
 "See :func:`ast.literal_eval` for a function to evaluate strings with "
 "expressions containing only literals."
@@ -1492,8 +1512,8 @@ msgstr ""
 "Siehe :func:`ast.literal_eval` für eine Funktion, um Zeichenketten mit "
 "Ausdrücken auszuwerten, die nur Literale enthalten."
 
-#: ../../builtins/functions.rst:656 ../../builtins/functions.rst:658
-#: ../../builtins/functions.rst:723 ../../builtins/functions.rst:725
+#: ../../builtins/functions.rst:673 ../../builtins/functions.rst:675
+#: ../../builtins/functions.rst:740 ../../builtins/functions.rst:742
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``exec`` with the code object as "
 "the argument. Code compilation events may also be raised."
@@ -1502,13 +1522,13 @@ msgstr ""
 "Argument aus. Es können auch Ereignisse zur Code-Kompilierung ausgelöst "
 "werden."
 
-#: ../../builtins/functions.rst:663 ../../builtins/functions.rst:745
+#: ../../builtins/functions.rst:680 ../../builtins/functions.rst:762
 msgid "The *globals* and *locals* arguments can now be passed as keywords."
 msgstr ""
 "Die Argumente *globals* und *locals* können nun als Schlüsselwortargumente "
 "übergeben werden."
 
-#: ../../builtins/functions.rst:667 ../../builtins/functions.rst:749
+#: ../../builtins/functions.rst:684 ../../builtins/functions.rst:766
 msgid ""
 "The semantics of the default *locals* namespace have been adjusted as "
 "described for the :func:`locals` builtin."
@@ -1516,11 +1536,11 @@ msgstr ""
 "Die Semantik des Standard-Namensraums für lokale Variablen (*locals*) wurde "
 "wie für die integrierte Funktion :func:`locals` beschrieben angepasst."
 
-#: ../../builtins/functions.rst:672 ../../builtins/functions.rst:754
+#: ../../builtins/functions.rst:689 ../../builtins/functions.rst:771
 msgid "*globals* can now be a :class:`frozendict`."
 msgstr "*globals* kann jetzt ein :class:`frozendict` sein."
 
-#: ../../builtins/functions.rst:683
+#: ../../builtins/functions.rst:700
 msgid ""
 "This function supports dynamic execution of Python code. *source* must be "
 "either a string or a code object.  If it is a string, the string is parsed "
@@ -1544,7 +1564,7 @@ msgstr ""
 "übergebenen Codes nicht außerhalb von Funktionsdefinitionen verwendet werden "
 "dürfen. Der Rückgabewert ist ``None``."
 
-#: ../../builtins/functions.rst:694
+#: ../../builtins/functions.rst:711
 msgid ""
 "In all cases, if the optional parts are omitted, the code is executed in the "
 "current scope.  If only *globals* is provided, it must be a dictionary (and "
@@ -1564,7 +1584,7 @@ msgstr ""
 "sein. Beachte, dass auf Modulebene globale und lokale Variablen dasselbe "
 "Dictionary darstellen."
 
-#: ../../builtins/functions.rst:704
+#: ../../builtins/functions.rst:721
 msgid ""
 "When ``exec`` gets two separate objects as *globals* and *locals*, the code "
 "will be executed as if it were embedded in a class definition. This means "
@@ -1579,7 +1599,7 @@ msgstr ""
 "wurden (da diese Variablen der „obersten Ebene“ in einer Klassendefinition "
 "als Klassenvariablen behandelt werden)."
 
-#: ../../builtins/functions.rst:710
+#: ../../builtins/functions.rst:727
 msgid ""
 "If the *globals* dictionary does not contain a value for the key "
 "``__builtins__``, a reference to the dictionary of the built-in "
@@ -1596,10 +1616,11 @@ msgstr ""
 "Sicherheitsmechanismus: Der ausgeführte Code kann weiterhin auf alle "
 "Builtins zugreifen."
 
-#: ../../builtins/functions.rst:717
+#: ../../builtins/functions.rst:734
+#, fuzzy
 msgid ""
 "The *closure* argument specifies a closure--a tuple of cellvars. It's only "
-"valid when the *object* is a code object containing :term:`free (closure) "
+"valid when *source* is a code object containing :term:`free (closure) "
 "variables <closure variable>`. The length of the tuple must exactly match "
 "the length of the code object's :attr:`~codeobject.co_freevars` attribute."
 msgstr ""
@@ -1609,7 +1630,7 @@ msgstr ""
 "des Tupels muss exakt der Länge des "
 "Attributs :attr:`~codeobject.co_freevars` des Code-Objekts entsprechen."
 
-#: ../../builtins/functions.rst:730
+#: ../../builtins/functions.rst:747
 msgid ""
 "The built-in functions :func:`globals` and :func:`locals` return the current "
 "global and local namespace, respectively, which may be useful to pass around "
@@ -1620,7 +1641,7 @@ msgstr ""
 "nützlich sein, um sie als zweites und drittes Argument an :func:`exec` zu "
 "übergeben."
 
-#: ../../builtins/functions.rst:736
+#: ../../builtins/functions.rst:753
 msgid ""
 "The default *locals* act as described for function :func:`locals` below. "
 "Pass an explicit *locals* dictionary if you need to see effects of the code "
@@ -1631,11 +1652,11 @@ msgstr ""
 "Auswirkungen des Codes auf die *locals* sehen möchten, nachdem die "
 "Funktion :func:`exec` zurückgekehrt ist."
 
-#: ../../builtins/functions.rst:740
+#: ../../builtins/functions.rst:757
 msgid "Added the *closure* parameter."
 msgstr "Der Parameter *closure* wurde hinzugefügt."
 
-#: ../../builtins/functions.rst:759
+#: ../../builtins/functions.rst:776
 msgid ""
 "Construct an iterator from those elements of *iterable* for which *function* "
 "is true.  *iterable* may be either a sequence, a container which supports "
@@ -1648,7 +1669,7 @@ msgstr ""
 "``None``, so wird die Identitätsfunktion angenommen. Das heißt, alle "
 "Elemente von *iterable*, die „falsch“ sind, werden entfernt."
 
-#: ../../builtins/functions.rst:765
+#: ../../builtins/functions.rst:782
 msgid ""
 "Note that ``filter(function, iterable)`` is equivalent to the generator "
 "expression ``(item for item in iterable if function(item))`` if function is "
@@ -1660,7 +1681,7 @@ msgstr ""
 "nicht ``None`` ist, und ``(item for item in iterable if item)``, wenn "
 "``function`` ``None`` ist."
 
-#: ../../builtins/functions.rst:770
+#: ../../builtins/functions.rst:787
 msgid ""
 "See :func:`itertools.filterfalse` for the complementary function that "
 "returns elements of *iterable* for which *function* is false."
@@ -1668,13 +1689,13 @@ msgstr ""
 "Siehe :func:`itertools.filterfalse` für die komplementäre Funktion, die "
 "Elemente von *iterable* zurückgibt, für die *function* falsch ist."
 
-#: ../../builtins/functions.rst:781
+#: ../../builtins/functions.rst:798
 msgid "Return a floating-point number constructed from a number or a string."
 msgstr ""
 "Gibt eine Gleitkommazahl zurück, die aus einer Zahl oder einer Zeichenkette "
 "erstellt wurde."
 
-#: ../../builtins/functions.rst:785
+#: ../../builtins/functions.rst:802
 msgid ""
 ">>> float('+1.23')\n"
 "1.23\n"
@@ -1698,7 +1719,7 @@ msgstr ""
 ">>> float('-Infinity')\n"
 "-inf"
 
-#: ../../builtins/functions.rst:798
+#: ../../builtins/functions.rst:815
 msgid ""
 "If the argument is a string, it should contain a decimal number, optionally "
 "preceded by a sign, and optionally embedded in whitespace.  The optional "
@@ -1718,7 +1739,7 @@ msgstr ""
 "Leerzeichen – der Produktionsregel :token:`~float:floatvalue` in der "
 "folgenden Grammatik entsprechen:"
 
-#: ../../builtins/functions.rst:819
+#: ../../builtins/functions.rst:836
 msgid ""
 "Case is not significant, so, for example, \"inf\", \"Inf\", \"INFINITY\", "
 "and \"iNfINity\" are all acceptable spellings for positive infinity."
@@ -1727,7 +1748,7 @@ msgstr ""
 "„Inf“, „INFINITY“ und „iNfINity“ allesamt zulässige Schreibweisen für "
 "positive Unendlichkeit."
 
-#: ../../builtins/functions.rst:822
+#: ../../builtins/functions.rst:839
 msgid ""
 "Otherwise, if the argument is an integer or a floating-point number, a "
 "floating-point number with the same value (within Python's floating-point "
@@ -1740,7 +1761,7 @@ msgstr ""
 "außerhalb des Wertebereichs eines Python-Floats, wird "
 "ein :exc:`OverflowError` ausgelöst."
 
-#: ../../builtins/functions.rst:827
+#: ../../builtins/functions.rst:844
 msgid ""
 "For a general Python object ``x``, ``float(x)`` delegates to "
 "``x.__float__()``.  If :meth:`~object.__float__` is not defined then it "
@@ -1750,22 +1771,22 @@ msgstr ""
 "``x.__float__()``. Wenn :meth:`~object.__float__` nicht definiert ist, fällt "
 "es zurück zu :meth:`~object.__index__`."
 
-#: ../../builtins/functions.rst:831
+#: ../../builtins/functions.rst:848
 msgid ""
 "See also :meth:`float.from_number` which only accepts a numeric argument."
 msgstr ""
 "Siehe auch :meth:`float.from_number`, das nur ein numerisches Argument "
 "akzeptiert."
 
-#: ../../builtins/functions.rst:833
+#: ../../builtins/functions.rst:850
 msgid "If no argument is given, ``0.0`` is returned."
 msgstr "Wenn kein Argument angegeben wird, wird ``0.0`` zurückgegeben."
 
-#: ../../builtins/functions.rst:835
+#: ../../builtins/functions.rst:852
 msgid "The float type is described in :ref:`typesnumeric`."
 msgstr "Der Typ „float“ wird in :ref:`typesnumeric` beschrieben."
 
-#: ../../builtins/functions.rst:843
+#: ../../builtins/functions.rst:860
 msgid ""
 "Falls back to :meth:`~object.__index__` if :meth:`~object.__float__` is not "
 "defined."
@@ -1773,7 +1794,7 @@ msgstr ""
 "Fällt auf :meth:`~object.__index__` zurück, wenn :meth:`~object.__float__` "
 "nicht definiert ist."
 
-#: ../../builtins/functions.rst:853
+#: ../../builtins/functions.rst:870
 msgid ""
 "Convert a *value* to a \"formatted\" representation, as controlled by "
 "*format_spec*.  The interpretation of *format_spec* will depend on the type "
@@ -1785,7 +1806,7 @@ msgstr ""
 "des Arguments *Wert* ab. Es gibt jedoch eine Standard-Formatierungssyntax, "
 "die von den meisten integrierten Typen verwendet wird: :ref:`formatspec`."
 
-#: ../../builtins/functions.rst:858
+#: ../../builtins/functions.rst:875
 msgid ""
 "The default *format_spec* is an empty string which usually gives the same "
 "effect as calling :func:`str(value) <str>`."
@@ -1793,7 +1814,7 @@ msgstr ""
 "Die Standard *format_spec* ist eine leere Zeichenkette, was normalerweise "
 "denselben Effekt hat wie der Aufruf von :func:`str(value) <str>`."
 
-#: ../../builtins/functions.rst:861
+#: ../../builtins/functions.rst:878
 msgid ""
 "A call to ``format(value, format_spec)`` is translated to "
 "``type(value).__format__(value, format_spec)`` which bypasses the instance "
@@ -1810,7 +1831,7 @@ msgstr ""
 "oder wenn entweder *format_spec* oder der Rückgabewert keine Zeichenkette "
 "ist."
 
-#: ../../builtins/functions.rst:868
+#: ../../builtins/functions.rst:885
 msgid ""
 "``object().__format__(format_spec)`` raises :exc:`TypeError` if "
 "*format_spec* is not an empty string."
@@ -1818,7 +1839,7 @@ msgstr ""
 "``object().__format__(format_spec)`` löst :exc:`TypeError` aus, wenn "
 "*format_spec* keine leere Zeichenkette ist."
 
-#: ../../builtins/functions.rst:879
+#: ../../builtins/functions.rst:896
 msgid ""
 "Create a new frozen dictionary.  The :class:`frozendict` object is a built-"
 "in class. See also :ref:`typesmapping` for documentation about this class."
@@ -1827,7 +1848,7 @@ msgstr ""
 "Objekt :class:`frozendict` ist eine integrierte Klasse. Siehe "
 "auch :ref:`typesmapping` für die Dokumentation zu dieser Klasse."
 
-#: ../../builtins/functions.rst:882
+#: ../../builtins/functions.rst:899
 msgid ""
 "For other containers see the built-"
 "in :class:`dict`, :class:`list`, :class:`set`, and :class:`tuple` classes, "
@@ -1837,7 +1858,7 @@ msgstr ""
 "Klassen :class:`dict`, :class:`list`, :class:`set` und :class:`tuple` sowie "
 "das Modul :mod:`collections`."
 
-#: ../../builtins/functions.rst:892
+#: ../../builtins/functions.rst:909
 msgid ""
 "Return a new :class:`frozenset` object, optionally with elements taken from "
 "*iterable*.  :class:`frozenset` is a built-in class.  See also :ref:`types-"
@@ -1847,7 +1868,7 @@ msgstr ""
 "*iterable*. :class:`frozenset` ist eine integrierte Klasse. Siehe "
 "auch :ref:`types-set` für die Dokumentation zu dieser Klasse."
 
-#: ../../builtins/functions.rst:896
+#: ../../builtins/functions.rst:913
 msgid ""
 "For other containers see the built-"
 "in :class:`set`, :class:`list`, :class:`tuple`, and :class:`dict` classes, "
@@ -1857,7 +1878,7 @@ msgstr ""
 "Klassen :class:`set`, :class:`list`, :class:`tuple` und :class:`dict` sowie "
 "das Modul :mod:`collections`."
 
-#: ../../builtins/functions.rst:904
+#: ../../builtins/functions.rst:921
 msgid ""
 "Return the value of the named attribute of *object*.  *name* must be a "
 "string. If the string is the name of one of the object's attributes, the "
@@ -1874,7 +1895,7 @@ msgstr ""
 "wird ein :exc:`AttributeError` ausgelöst. *name* muss kein Python-Bezeichner "
 "sein (siehe :func:`setattr`)."
 
-#: ../../builtins/functions.rst:913
+#: ../../builtins/functions.rst:930
 msgid ""
 "Since :ref:`private name mangling <private-name-mangling>` happens at "
 "compilation time, one must manually mangle a private attribute's (attributes "
@@ -1886,7 +1907,7 @@ msgstr ""
 "führenden Unterstrichen) manuell umgewandelt werden, um es "
 "mittels :func:`getattr` abrufen zu können."
 
-#: ../../builtins/functions.rst:921
+#: ../../builtins/functions.rst:938
 msgid ""
 "Return the dictionary implementing the current module namespace. For code "
 "within functions, this is set when the function is defined and remains the "
@@ -1897,7 +1918,7 @@ msgstr ""
 "Definition der Funktion festgelegt und bleibt unverändert, unabhängig davon, "
 "von wo aus die Funktion aufgerufen wird."
 
-#: ../../builtins/functions.rst:928
+#: ../../builtins/functions.rst:945
 msgid ""
 "The arguments are an object and a string.  The result is ``True`` if the "
 "string is the name of one of the object's attributes, ``False`` if not. "
@@ -1910,7 +1931,7 @@ msgstr ""
 "aufgerufen und geprüft wird, ob ein :exc:`AttributeError` ausgelöst wird "
 "oder nicht.)"
 
-#: ../../builtins/functions.rst:936
+#: ../../builtins/functions.rst:953
 msgid ""
 "Return the hash value of the object (if it has one).  Hash values are "
 "integers.  They are used to quickly compare dictionary keys during a "
@@ -1923,7 +1944,7 @@ msgstr ""
 "haben denselben Hash-Wert (selbst wenn sie unterschiedlichen Typs sind, wie "
 "es bei 1 und 1.0 der Fall ist)."
 
-#: ../../builtins/functions.rst:943
+#: ../../builtins/functions.rst:960
 msgid ""
 "For objects with custom :meth:`~object.__hash__` methods, note "
 "that :func:`hash` truncates the return value based on the bit width of the "
@@ -1933,7 +1954,7 @@ msgstr ""
 "Methoden, dass :func:`hash` den Rückgabewert basierend auf der Bitbreite des "
 "Host-Rechners abschneidet."
 
-#: ../../builtins/functions.rst:950
+#: ../../builtins/functions.rst:967
 msgid ""
 "Invoke the built-in help system.  (This function is intended for interactive "
 "use.)  If no argument is given, the interactive help system starts on the "
@@ -1951,7 +1972,7 @@ msgstr ""
 "ausgegeben. Wenn das Argument ein anderes Objekt ist, wird eine Hilfeseite "
 "zu diesem Objekt generiert."
 
-#: ../../builtins/functions.rst:957
+#: ../../builtins/functions.rst:974
 msgid ""
 "Note that if a slash(/) appears in the parameter list of a function when "
 "invoking :func:`help`, it means that the parameters prior to the slash are "
@@ -1964,14 +1985,14 @@ msgstr ""
 "findest du unter :ref:`dem FAQ-Eintrag zu reinen Positionsparametern <faq-"
 "positional-only-arguments>`."
 
-#: ../../builtins/functions.rst:962
+#: ../../builtins/functions.rst:979
 msgid ""
 "This function is added to the built-in namespace by the :mod:`site` module."
 msgstr ""
 "Diese Funktion wird vom Modul :mod:`site` dem integrierten Namensraum "
 "hinzugefügt."
 
-#: ../../builtins/functions.rst:964
+#: ../../builtins/functions.rst:981
 msgid ""
 "Changes to :mod:`pydoc` and :mod:`inspect` mean that the reported signatures "
 "for callables are now more comprehensive and consistent."
@@ -1980,7 +2001,7 @@ msgstr ""
 "aufrufbare Objekte (Callables) gemeldeten Signaturen nun umfassender und "
 "konsistenter sind."
 
-#: ../../builtins/functions.rst:971
+#: ../../builtins/functions.rst:988
 msgid ""
 "Convert an integer number to a lowercase hexadecimal string prefixed with "
 "\"0x\". If *integer* is not a Python :class:`int` object, it has to define "
@@ -1991,7 +2012,7 @@ msgstr ""
 "Typ :class:`int` ist, muss es eine :meth:`~object.__index__`-Methode "
 "definieren, die eine Ganzzahl zurückgibt. Einige Beispiele:"
 
-#: ../../builtins/functions.rst:980
+#: ../../builtins/functions.rst:997
 msgid ""
 "If you want to convert an integer number to an uppercase or lower "
 "hexadecimal string with prefix or not, you can use either of the following "
@@ -2001,7 +2022,7 @@ msgstr ""
 "Kleinbuchstaben umwandeln möchtest – wahlweise mit oder ohne Präfix –, "
 "kannst du eine der folgenden Methoden verwenden:"
 
-#: ../../builtins/functions.rst:992
+#: ../../builtins/functions.rst:1009
 msgid ""
 "See also :func:`int` for converting a hexadecimal string to an integer using "
 "a base of 16."
@@ -2009,7 +2030,7 @@ msgstr ""
 "Siehe auch :func:`int` für die Umwandlung einer Hexadezimalzeichenkette in "
 "eine Ganzzahl unter Verwendung der Basis 16."
 
-#: ../../builtins/functions.rst:997
+#: ../../builtins/functions.rst:1014
 msgid ""
 "To obtain a hexadecimal string representation for a float, use "
 "the :meth:`float.hex` method."
@@ -2017,7 +2038,7 @@ msgstr ""
 "Um eine hexadezimale String-Darstellung für einen Float-Wert zu erhalten, "
 "verwende die Methode :meth:`float.hex`."
 
-#: ../../builtins/functions.rst:1003
+#: ../../builtins/functions.rst:1020
 msgid ""
 "Return the \"identity\" of an object.  This is an integer which is "
 "guaranteed to be unique and constant for this object during its lifetime. "
@@ -2029,11 +2050,11 @@ msgstr ""
 "bleibt. Zwei Objekte, deren Lebensdauern sich nicht überschneiden, können "
 "denselben :func:`id`-Wert haben."
 
-#: ../../builtins/functions.rst:1008
+#: ../../builtins/functions.rst:1025
 msgid "This is the address of the object in memory."
 msgstr "Dies ist die Adresse des Objekts im Speicher."
 
-#: ../../builtins/functions.rst:1010
+#: ../../builtins/functions.rst:1027
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``builtins.id`` with argument "
 "``id``."
@@ -2041,7 +2062,7 @@ msgstr ""
 "Löst ein :ref:`Audit-Ereignis <auditing>` ``builtins.id`` mit dem Argument "
 "``id`` aus."
 
-#: ../../builtins/functions.rst:1016
+#: ../../builtins/functions.rst:1033
 msgid ""
 "If the *prompt* argument is present, it is written to standard output "
 "without a trailing newline.  The function then reads a line from input, "
@@ -2055,7 +2076,7 @@ msgstr ""
 "zurück. Beim Erreichen des Dateiendes (EOF) wird :exc:`EOFError` ausgelöst. "
 "Beispiel::"
 
-#: ../../builtins/functions.rst:1021
+#: ../../builtins/functions.rst:1038
 msgid ""
 ">>> s = input('--> ')\n"
 "--> Monty Python's Flying Circus\n"
@@ -2067,7 +2088,7 @@ msgstr ""
 ">>> s\n"
 "\"Monty Python's Flying Circus\""
 
-#: ../../builtins/functions.rst:1026
+#: ../../builtins/functions.rst:1043
 msgid ""
 "If the :mod:`readline` module was loaded, then :func:`input` will use it to "
 "provide elaborate line editing and history features."
@@ -2076,7 +2097,7 @@ msgstr ""
 "umfangreiche Funktionen zur Zeilenbearbeitung und Historienverwaltung "
 "bereitzustellen."
 
-#: ../../builtins/functions.rst:1029 ../../builtins/functions.rst:1031
+#: ../../builtins/functions.rst:1046 ../../builtins/functions.rst:1048
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``builtins.input`` with argument "
 "``prompt`` before reading input"
@@ -2084,7 +2105,7 @@ msgstr ""
 "Löst ein :ref:`Audit-Ereignis <auditing>` ``builtins.input`` mit dem "
 "Argument ``prompt`` aus, bevor die Eingabe gelesen wird"
 
-#: ../../builtins/functions.rst:1034 ../../builtins/functions.rst:1036
+#: ../../builtins/functions.rst:1051 ../../builtins/functions.rst:1053
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``builtins.input/result`` with "
 "the result after successfully reading input."
@@ -2092,7 +2113,7 @@ msgstr ""
 "Löst ein :ref:`Audit-Ereignis <auditing>` ``builtins.input/result`` mit dem "
 "Ergebnis nach erfolgreichem Einlesen der Eingabe aus."
 
-#: ../../builtins/functions.rst:1043
+#: ../../builtins/functions.rst:1060
 msgid ""
 "Return an integer object constructed from a number or a string, or return "
 "``0`` if no arguments are given."
@@ -2100,7 +2121,7 @@ msgstr ""
 "Gibt ein Integer-Objekt zurück, das aus einer Zahl oder einer Zeichenkette "
 "erstellt wurde, oder gibt ``0`` zurück, wenn keine Argumente angegeben sind."
 
-#: ../../builtins/functions.rst:1048
+#: ../../builtins/functions.rst:1065
 msgid ""
 ">>> int(123.45)\n"
 "123\n"
@@ -2128,7 +2149,7 @@ msgstr ""
 ">>> int('01110011', base=2)\n"
 "115"
 
-#: ../../builtins/functions.rst:1063
+#: ../../builtins/functions.rst:1080
 msgid ""
 "If the argument defines :meth:`~object.__int__`, ``int(x)`` returns "
 "``x.__int__()``.  If the argument defines :meth:`~object.__index__`, it "
@@ -2140,7 +2161,7 @@ msgstr ""
 "definiert, gibt es ``x.__index__()`` zurück. Bei Gleitkommazahlen erfolgt "
 "dabei eine Rundung in Richtung Null."
 
-#: ../../builtins/functions.rst:1068
+#: ../../builtins/functions.rst:1085
 msgid ""
 "If the argument is not a number or if *base* is given, then it must be a "
 "string, :class:`bytes`, or :class:`bytearray` instance representing an "
@@ -2155,7 +2176,7 @@ msgstr ""
 "dazwischen), sie kann führende Nullen haben, von Whitespace umgeben sein und "
 "einzelne Unterstriche zwischen den Ziffern eingestreut haben."
 
-#: ../../builtins/functions.rst:1074
+#: ../../builtins/functions.rst:1091
 msgid ""
 "A base-n integer string contains digits, each representing a value from 0 to "
 "n-1. The values 0--9 can be represented by any Unicode decimal digit. The "
@@ -2182,11 +2203,11 @@ msgstr ""
 "führenden Nullen zulässig: ``int('010', 0)`` ist ungültig, während "
 "``int('010')`` und ``int('010', 8)`` zulässig sind."
 
-#: ../../builtins/functions.rst:1085
+#: ../../builtins/functions.rst:1102
 msgid "The integer type is described in :ref:`typesnumeric`."
 msgstr "Der Ganzzahltyp wird in :ref:`typesnumeric` beschrieben."
 
-#: ../../builtins/functions.rst:1087
+#: ../../builtins/functions.rst:1104
 msgid ""
 "If *base* is not an instance of :class:`int` and the *base* object has "
 "a :meth:`base.__index__ <object.__index__>` method, that method is called to "
@@ -2199,11 +2220,11 @@ msgstr ""
 "Versionen wurde :meth:`base.__int__ <object.__int__>` anstelle "
 "von :meth:`base.__index__ <object.__index__>` verwendet."
 
-#: ../../builtins/functions.rst:1097
+#: ../../builtins/functions.rst:1114
 msgid "The first parameter is now positional-only."
 msgstr "Der erste Parameter ist nun rein positional."
 
-#: ../../builtins/functions.rst:1100
+#: ../../builtins/functions.rst:1117
 msgid ""
 "Falls back to :meth:`~object.__index__` if :meth:`~object.__int__` is not "
 "defined."
@@ -2211,7 +2232,7 @@ msgstr ""
 "Greift auf :meth:`~object.__index__` zurück, wenn :meth:`~object.__int__` "
 "nicht definiert ist."
 
-#: ../../builtins/functions.rst:1103
+#: ../../builtins/functions.rst:1120
 msgid ""
 ":class:`int` string inputs and string representations can be limited to help "
 "avoid denial of service attacks. A :exc:`ValueError` is raised when the "
@@ -2228,13 +2249,13 @@ msgstr ""
 "überschreiten würde. Siehe die Dokumentation zur :ref:`Längenbegrenzung bei "
 "der Umwandlung von Ganzzahlen in Zeichenketten <int_max_str_digits>`."
 
-#: ../../builtins/functions.rst:1111
+#: ../../builtins/functions.rst:1128
 msgid ""
 ":func:`int` no longer delegates to the :meth:`~object.__trunc__` method."
 msgstr ""
 ":func:`int` delegiert nicht mehr an die Methode :meth:`~object.__trunc__`."
 
-#: ../../builtins/functions.rst:1116
+#: ../../builtins/functions.rst:1133
 msgid ""
 "Return ``True`` if the *object* argument is an instance of the *classinfo* "
 "argument, or of a (direct, indirect, or :term:`virtual <abstract base "
@@ -2258,11 +2279,11 @@ msgstr ""
 "Ausnahme wird für einen ungültigen Typ möglicherweise nicht ausgelöst, wenn "
 "eine frühere Überprüfung erfolgreich ist."
 
-#: ../../builtins/functions.rst:1127 ../../builtins/functions.rst:1141
+#: ../../builtins/functions.rst:1144 ../../builtins/functions.rst:1158
 msgid "*classinfo* can be a :ref:`types-union`."
 msgstr "*classinfo* kann eine :ref:`types-union` sein."
 
-#: ../../builtins/functions.rst:1133
+#: ../../builtins/functions.rst:1150
 msgid ""
 "Return ``True`` if *cls* is a subclass (direct, indirect, or :term:`virtual "
 "<abstract base class>`) of *classinfo*.  A class is considered a subclass of "
@@ -2279,7 +2300,7 @@ msgstr ""
 "wenn *cls* eine Unterklasse eines beliebigen Eintrags in *classinfo* ist. In "
 "jedem anderen Fall wird eine Ausnahme vom Typ :exc:`TypeError` ausgelöst."
 
-#: ../../builtins/functions.rst:1148
+#: ../../builtins/functions.rst:1165
 msgid ""
 "Return an :term:`iterator` object.  The first argument is interpreted very "
 "differently depending on the presence of the second argument. Without a "
@@ -2309,11 +2330,11 @@ msgstr ""
 "Entspricht der Rückgabewert *sentinel*, so wird :exc:`StopIteration` "
 "ausgelöst, andernfalls wird der Wert zurückgegeben."
 
-#: ../../builtins/functions.rst:1162
+#: ../../builtins/functions.rst:1179
 msgid "See also :ref:`typeiter`."
 msgstr "Siehe auch :ref:`typeiter`."
 
-#: ../../builtins/functions.rst:1164
+#: ../../builtins/functions.rst:1181
 msgid ""
 "One useful application of the second form of :func:`iter` is to build a "
 "block-reader. For example, reading fixed-width blocks from a binary database "
@@ -2323,7 +2344,7 @@ msgstr ""
 "Erstellung eines Block-Readers. Zum Beispiel das Lesen von Blöcken fester "
 "Größe aus einer binären Datenbankdatei bis zum Erreichen des Dateiende::"
 
-#: ../../builtins/functions.rst:1168
+#: ../../builtins/functions.rst:1185
 msgid ""
 "from functools import partial\n"
 "with open('mydata.db', 'rb') as f:\n"
@@ -2335,7 +2356,7 @@ msgstr ""
 "    for block in iter(partial(f.read, 64), b''):\n"
 "        process_block(block)"
 
-#: ../../builtins/functions.rst:1176
+#: ../../builtins/functions.rst:1193
 msgid ""
 "Return the length (the number of items) of an object.  The argument may be a "
 "sequence (such as a string, bytes, tuple, list, or range) or a collection "
@@ -2346,7 +2367,7 @@ msgstr ""
 "ein Range-Objekt) oder eine Collection (wie etwa ein Dictionary, ein Set "
 "oder ein Frozen Set) sein."
 
-#: ../../builtins/functions.rst:1182
+#: ../../builtins/functions.rst:1199
 msgid ""
 "``len`` raises :exc:`OverflowError` on lengths larger "
 "than :data:`sys.maxsize`, such as :class:`range(2 ** 100) <range>`."
@@ -2355,7 +2376,7 @@ msgstr ""
 "eine :exc:`OverflowError`-Ausnahme aus.Z. B. :class:`range(2 ** 100) "
 "<range>`."
 
-#: ../../builtins/functions.rst:1190
+#: ../../builtins/functions.rst:1207
 msgid ""
 "Rather than being a function, :class:`list` is actually a mutable sequence "
 "type, as documented in :ref:`typesseq-list` and :ref:`typesseq`."
@@ -2364,7 +2385,7 @@ msgstr ""
 "veränderbarer Sequenztyp, wie in :ref:`typesseq-list` und :ref:`typesseq` "
 "dokumentiert."
 
-#: ../../builtins/functions.rst:1196
+#: ../../builtins/functions.rst:1213
 msgid ""
 "Return a mapping object representing the current local symbol table, with "
 "variable names as the keys, and their currently bound references as the "
@@ -2374,7 +2395,7 @@ msgstr ""
 "repräsentiert, wobei die Variablennamen als Schlüssel und die aktuell daran "
 "gebundenen Referenzen als Werte dienen."
 
-#: ../../builtins/functions.rst:1200
+#: ../../builtins/functions.rst:1217
 msgid ""
 "At module scope, as well as when using :func:`exec` or :func:`eval` with a "
 "single namespace, this function returns the same namespace "
@@ -2384,7 +2405,7 @@ msgstr ""
 "mit einem einzigen Namensraum gibt diese Funktion denselben Namensraum "
 "zurück wie :func:`globals`."
 
-#: ../../builtins/functions.rst:1204
+#: ../../builtins/functions.rst:1221
 msgid ""
 "At class scope, it returns the namespace that will be passed to the "
 "metaclass constructor."
@@ -2392,7 +2413,7 @@ msgstr ""
 "Auf Klassenebene gibt es den Namensraum zurück, der an den Metaklassen-"
 "Konstruktor übergeben wird."
 
-#: ../../builtins/functions.rst:1207
+#: ../../builtins/functions.rst:1224
 msgid ""
 "When using ``exec()`` or ``eval()`` with separate local and global "
 "arguments, it returns the local namespace passed in to the function call."
@@ -2401,7 +2422,7 @@ msgstr ""
 "globalen Argumenten wird der lokale Namensraum zurückgegeben, der an den "
 "Funktionsaufruf übergeben wurde."
 
-#: ../../builtins/functions.rst:1210
+#: ../../builtins/functions.rst:1227
 msgid ""
 "In all of the above cases, each call to ``locals()`` in a given frame of "
 "execution will return the *same* mapping object. Changes made through the "
@@ -2418,7 +2439,7 @@ msgstr ""
 "Löschen lokaler Variablen unmittelbar auf den Inhalt des zurückgegebenen "
 "Mapping-Objekts aus."
 
-#: ../../builtins/functions.rst:1217
+#: ../../builtins/functions.rst:1234
 msgid ""
 "In an :term:`optimized scope` (including functions, generators, and "
 "coroutines), each call to ``locals()`` instead returns a fresh dictionary "
@@ -2440,7 +2461,7 @@ msgstr ""
 "Variablen und nonlocal-Zellreferenzen *keine* Auswirkungen auf den Inhalt "
 "zuvor zurückgegebener Dictionaries."
 
-#: ../../builtins/functions.rst:1226
+#: ../../builtins/functions.rst:1243
 msgid ""
 "Calling ``locals()`` as part of a comprehension in a function, generator, or "
 "coroutine is equivalent to calling it in the containing scope, except that "
@@ -2456,7 +2477,7 @@ msgstr ""
 "Gültigkeitsbereichen verhält es sich so, als würde die Listen-Abstraktion "
 "(comprehension) als verschachtelte Funktion ausgeführt."
 
-#: ../../builtins/functions.rst:1232
+#: ../../builtins/functions.rst:1249
 msgid ""
 "Calling ``locals()`` as part of a generator expression is equivalent to "
 "calling it in a nested generator function."
@@ -2465,7 +2486,7 @@ msgstr ""
 "gleichbedeutend mit dem Aufruf innerhalb einer verschachtelten "
 "Generatorfunktion."
 
-#: ../../builtins/functions.rst:1235
+#: ../../builtins/functions.rst:1252
 msgid ""
 "The behaviour of ``locals()`` in a comprehension has been updated as "
 "described in :pep:`709`."
@@ -2473,7 +2494,7 @@ msgstr ""
 "Das Verhalten von ``locals()`` in einer Listen-Abstraktion (comprehension) "
 "wurde wie in :pep:`709` beschrieben aktualisiert."
 
-#: ../../builtins/functions.rst:1239
+#: ../../builtins/functions.rst:1256
 msgid ""
 "As part of :pep:`667`, the semantics of mutating the mapping objects "
 "returned from this function are now defined. The behavior "
@@ -2488,7 +2509,7 @@ msgstr ""
 "Verhalten in anderen Gültigkeitsbereichen gegenüber früheren Versionen "
 "unverändert."
 
-#: ../../builtins/functions.rst:1249
+#: ../../builtins/functions.rst:1266
 msgid ""
 "Return an iterator that applies *function* to every item of *iterable*, "
 "yielding the results.  If additional *iterables* arguments are passed, "
@@ -2510,11 +2531,11 @@ msgstr ""
 "die Funktion bereits als Argument-Tupel vorliegen, "
 "siehe :func:`itertools.starmap`."
 
-#: ../../builtins/functions.rst:1258
+#: ../../builtins/functions.rst:1275
 msgid "Added the *strict* parameter."
 msgstr "Den Parameter *strict* hinzugefügt."
 
-#: ../../builtins/functions.rst:1266
+#: ../../builtins/functions.rst:1283
 msgid ""
 "Return the largest item in an iterable or the largest of two or more "
 "arguments."
@@ -2522,7 +2543,7 @@ msgstr ""
 "Gibt das größte Element eines iterierbaren Objekts oder das größte von zwei "
 "oder mehr Argumenten zurück."
 
-#: ../../builtins/functions.rst:1269
+#: ../../builtins/functions.rst:1286
 msgid ""
 "If one positional argument is provided, it should be an :term:`iterable`. "
 "The largest item in the iterable is returned.  If two or more positional "
@@ -2533,7 +2554,7 @@ msgstr ""
 "zurückgegeben. Werden zwei oder mehr Positionsargumente übergeben, so wird "
 "das größte der Positionsargumente zurückgegeben."
 
-#: ../../builtins/functions.rst:1274 ../../builtins/functions.rst:1312
+#: ../../builtins/functions.rst:1291 ../../builtins/functions.rst:1329
 msgid ""
 "There are two optional keyword-only arguments. The *key* argument specifies "
 "a one-argument ordering function like that used for :meth:`list.sort`. The "
@@ -2548,7 +2569,7 @@ msgstr ""
 "übergebene Iterable leer ist. Ist das Iterable leer und wird kein *default*-"
 "Wert angegeben, so wird ein :exc:`ValueError` ausgelöst."
 
-#: ../../builtins/functions.rst:1280
+#: ../../builtins/functions.rst:1297
 msgid ""
 "If multiple items are maximal, the function returns the first one "
 "encountered.  This is consistent with other sort-stability preserving tools "
@@ -2560,17 +2581,17 @@ msgstr ""
 "Sortierstabilität bewahren, wie etwa ``sorted(iterable, key=keyfunc, "
 "reverse=True)[0]`` und ``heapq.nlargest(1, iterable, key=keyfunc)``."
 
-#: ../../builtins/functions.rst:1285 ../../builtins/functions.rst:1323
+#: ../../builtins/functions.rst:1302 ../../builtins/functions.rst:1340
 msgid "Added the *default* keyword-only parameter."
 msgstr ""
 "Der *default*-Parameter (nur als Keyword-Argument verwendbar) wurde "
 "hinzugefügt."
 
-#: ../../builtins/functions.rst:1288 ../../builtins/functions.rst:1326
+#: ../../builtins/functions.rst:1305 ../../builtins/functions.rst:1343
 msgid "The *key* can be ``None``."
 msgstr "Der *Schlüssel* kann ``None`` sein."
 
-#: ../../builtins/functions.rst:1296
+#: ../../builtins/functions.rst:1313
 msgid ""
 "Return a \"memory view\" object created from the given argument.  "
 "See :ref:`typememoryview` for more information."
@@ -2578,7 +2599,7 @@ msgstr ""
 "Gibt ein aus dem angegebenen Argument erstelltes „memory-View“-Objekt "
 "zurück. Siehe :ref:`typememoryview` für weitere Informationen."
 
-#: ../../builtins/functions.rst:1304
+#: ../../builtins/functions.rst:1321
 msgid ""
 "Return the smallest item in an iterable or the smallest of two or more "
 "arguments."
@@ -2586,7 +2607,7 @@ msgstr ""
 "Gibt das kleinste Element eines iterierbaren Objekts oder das kleinste von "
 "zwei oder mehr Argumenten zurück."
 
-#: ../../builtins/functions.rst:1307
+#: ../../builtins/functions.rst:1324
 msgid ""
 "If one positional argument is provided, it should be an :term:`iterable`. "
 "The smallest item in the iterable is returned.  If two or more positional "
@@ -2597,7 +2618,7 @@ msgstr ""
 "wird zurückgegeben. Werden zwei oder mehr Positionsargumente übergeben, so "
 "wird das kleinste der Positionsargumente zurückgegeben."
 
-#: ../../builtins/functions.rst:1318
+#: ../../builtins/functions.rst:1335
 msgid ""
 "If multiple items are minimal, the function returns the first one "
 "encountered.  This is consistent with other sort-stability preserving tools "
@@ -2609,7 +2630,7 @@ msgstr ""
 "die die Sortierstabilität wahren, wie etwa ``sorted(iterable, key=keyfunc)"
 "[0]`` und ``heapq.nsmallest(1, iterable, key=keyfunc)``."
 
-#: ../../builtins/functions.rst:1333
+#: ../../builtins/functions.rst:1350
 msgid ""
 "Retrieve the next item from the :term:`iterator` by calling "
 "its :meth:`~iterator.__next__` method.  If *default* is given, it is "
@@ -2622,7 +2643,7 @@ msgstr ""
 "Iterator :term:`erschöpft <exhausted>` ist. Andernfalls "
 "wird :exc:`StopIteration` ausgelöst."
 
-#: ../../builtins/functions.rst:1340
+#: ../../builtins/functions.rst:1357
 msgid ""
 "This is the ultimate base class of all other classes. It has methods that "
 "are common to all instances of Python classes. When the constructor is "
@@ -2634,7 +2655,7 @@ msgstr ""
 "des Konstruktors wird ein neues, eigenschaftsloses Objekt zurückgegeben. Der "
 "Konstruktor akzeptiert keine Argumente."
 
-#: ../../builtins/functions.rst:1347
+#: ../../builtins/functions.rst:1364
 msgid ""
 ":class:`object` instances do *not* have :attr:`~object.__dict__` attributes, "
 "so you can't assign arbitrary attributes to an instance of :class:`object`."
@@ -2643,7 +2664,7 @@ msgstr ""
 "Attribute. Daher kannst du einer Instanz von :class:`object` keine "
 "beliebigen Attribute zuweisen."
 
-#: ../../builtins/functions.rst:1354
+#: ../../builtins/functions.rst:1371
 msgid ""
 "Convert an integer number to an octal string prefixed with \"0o\".  The "
 "result is a valid Python expression. If *integer* is not a "
@@ -2655,7 +2676,7 @@ msgstr ""
 "Python :class:`int` Objekt ist, muss es eine :meth:`~object.__index__`-"
 "Methode definieren, die eine Ganzzahl zurückgibt. Zum Beispiel:"
 
-#: ../../builtins/functions.rst:1364
+#: ../../builtins/functions.rst:1381
 msgid ""
 "If you want to convert an integer number to an octal string either with the "
 "prefix \"0o\" or not, you can use either of the following ways."
@@ -2664,7 +2685,7 @@ msgstr ""
 "Oktalzeichenkette umwandeln möchtest, kannst du eine der folgenden "
 "Möglichkeiten nutzen."
 
-#: ../../builtins/functions.rst:1381
+#: ../../builtins/functions.rst:1398
 msgid ""
 "Open *file* and return a corresponding :term:`file object`.  If the file "
 "cannot be opened, an :exc:`OSError` is raised. See :ref:`tut-files` for more "
@@ -2675,7 +2696,7 @@ msgstr ""
 "ausgelöst. Weitere Beispiele für die Verwendung dieser Funktion findest du "
 "unter :ref:`tut-files`."
 
-#: ../../builtins/functions.rst:1385
+#: ../../builtins/functions.rst:1402
 msgid ""
 "*file* is a :term:`path-like object` giving the pathname (absolute or "
 "relative to the current working directory) of the file to be opened or an "
@@ -2690,7 +2711,7 @@ msgstr ""
 "angegeben, so wird dieser geschlossen, wenn das zurückgegebene E/A-Objekt "
 "geschlossen wird, es sei denn, *closefd* ist auf ``False`` gesetzt.)"
 
-#: ../../builtins/functions.rst:1391
+#: ../../builtins/functions.rst:1408
 msgid ""
 "*mode* is an optional string that specifies the mode in which the file is "
 "opened.  It defaults to ``'r'`` which means open for reading in text mode. "
@@ -2716,75 +2737,75 @@ msgstr ""
 "der aktuellen Locale zu ermitteln. (Verwende für das Lesen und Schreiben von "
 "Rohbytes den Binärmodus und lass *encoding* weg.) Die verfügbaren Modi sind:"
 
-#: ../../builtins/functions.rst:1409
+#: ../../builtins/functions.rst:1426
 msgid "Character"
 msgstr "Zeichen"
 
-#: ../../builtins/functions.rst:1409
+#: ../../builtins/functions.rst:1426
 msgid "Meaning"
 msgstr "<Bedeutung"
 
-#: ../../builtins/functions.rst:1411
+#: ../../builtins/functions.rst:1428
 msgid "``'r'``"
 msgstr "``'r'``"
 
-#: ../../builtins/functions.rst:1411
+#: ../../builtins/functions.rst:1428
 msgid "open for reading (default)"
 msgstr "zum Lesen öffnen (Standardwert)"
 
-#: ../../builtins/functions.rst:1412
+#: ../../builtins/functions.rst:1429
 msgid "``'w'``"
 msgstr "``'w'``"
 
-#: ../../builtins/functions.rst:1412
+#: ../../builtins/functions.rst:1429
 msgid "open for writing, truncating the file first"
 msgstr ""
 "zum Schreiben öffnen und die Datei dabei zunächst auf die Länge Null kürzen"
 
-#: ../../builtins/functions.rst:1413
+#: ../../builtins/functions.rst:1430
 msgid "``'x'``"
 msgstr "``'x'``"
 
-#: ../../builtins/functions.rst:1413
+#: ../../builtins/functions.rst:1430
 msgid "open for exclusive creation, failing if the file already exists"
 msgstr ""
 "zum exklusiven Erstellen öffnen, schlägt fehl, wenn die Datei bereits "
 "existiert"
 
-#: ../../builtins/functions.rst:1414
+#: ../../builtins/functions.rst:1431
 msgid "``'a'``"
 msgstr "``'a'``"
 
-#: ../../builtins/functions.rst:1414
+#: ../../builtins/functions.rst:1431
 msgid "open for writing, appending to the end of file if it exists"
 msgstr ""
 "zum Schreiben öffnen, an das Ende der Datei anhängen, falls diese existiert"
 
-#: ../../builtins/functions.rst:1415
+#: ../../builtins/functions.rst:1432
 msgid "``'b'``"
 msgstr "``'b'``"
 
-#: ../../builtins/functions.rst:1415 ../../builtins/functions.rst:1533
+#: ../../builtins/functions.rst:1432 ../../builtins/functions.rst:1550
 msgid "binary mode"
 msgstr "Binärmodus"
 
-#: ../../builtins/functions.rst:1416
+#: ../../builtins/functions.rst:1433
 msgid "``'t'``"
 msgstr "``'t'``"
 
-#: ../../builtins/functions.rst:1416
+#: ../../builtins/functions.rst:1433
 msgid "text mode (default)"
 msgstr "Textmodus (default)"
 
-#: ../../builtins/functions.rst:1417
+#: ../../builtins/functions.rst:1434
 msgid "``'+'``"
 msgstr "``'+'``"
 
-#: ../../builtins/functions.rst:1417
+#: ../../builtins/functions.rst:1434
 msgid "open for updating (reading and writing)"
 msgstr "zum Aktualisieren öffnen (Lesen und Schreiben)"
 
-#: ../../builtins/functions.rst:1420
+#: ../../builtins/functions.rst:1437
 msgid ""
 "The default mode is ``'r'`` (open for reading text, a synonym of ``'rt'``). "
 "Modes ``'w+'`` and ``'w+b'`` open and truncate the file.  Modes ``'r+'`` and "
@@ -2794,7 +2815,7 @@ msgstr ""
 "``'rt'``). Die Modi ``'w+'`` und ``'w+b'`` öffnen und kürzen die Datei. Die "
 "Modi ``'r+'`` und ``'r+b'`` öffnen die Datei ohne Kürzung."
 
-#: ../../builtins/functions.rst:1424
+#: ../../builtins/functions.rst:1441
 msgid ""
 "As mentioned in the :ref:`io-overview`, Python distinguishes between binary "
 "and text I/O.  Files opened in binary mode (including ``'b'`` in the *mode* "
@@ -2813,7 +2834,7 @@ msgstr ""
 "Standardkodierung oder – falls angegeben – mit dem spezifizierten *encoding* "
 "dekodiert wurden."
 
-#: ../../builtins/functions.rst:1434
+#: ../../builtins/functions.rst:1451
 msgid ""
 "Python doesn't depend on the underlying operating system's notion of text "
 "files; all the processing is done by Python itself, and is therefore "
@@ -2823,7 +2844,7 @@ msgstr ""
 "von Textdateien abhängig. Die gesamte Verarbeitung erfolgt durch Python "
 "selbst und ist daher plattformunabhängig."
 
-#: ../../builtins/functions.rst:1438
+#: ../../builtins/functions.rst:1455
 msgid ""
 "*buffering* is an optional integer used to set the buffering policy.  Pass 0 "
 "to switch buffering off (only allowed in binary mode), 1 to select line "
@@ -2847,7 +2868,7 @@ msgstr ""
 "kein *buffering*-Argument angegeben wird, funktioniert die Standard-"
 "Pufferungsstrategie wie folgt:"
 
-#: ../../builtins/functions.rst:1448
+#: ../../builtins/functions.rst:1465
 msgid ""
 "Binary files are buffered in fixed-size chunks; the size of the buffer is "
 "``max(min(blocksize, 8 MiB), DEFAULT_BUFFER_SIZE)`` when the device block "
@@ -2859,7 +2880,7 @@ msgstr ""
 "Blockgröße des Geräts verfügbar ist. Auf den meisten Systemen ist der Puffer "
 "typischerweise 128 Kilobyte groß."
 
-#: ../../builtins/functions.rst:1453
+#: ../../builtins/functions.rst:1470
 msgid ""
 "\"Interactive\" text files (files for which :meth:`~io.IOBase.isatty` "
 "returns ``True``) use line buffering.  Other text files use the policy "
@@ -2869,7 +2890,7 @@ msgstr ""
 "``True`` zurückgibt) verwenden Zeilenpufferung. Andere Textdateien verwenden "
 "das für Binärdateien beschriebene Verfahren."
 
-#: ../../builtins/functions.rst:1457
+#: ../../builtins/functions.rst:1474
 msgid ""
 "*encoding* is the name of the encoding used to decode or encode the file. "
 "This should only be used in text mode.  The default encoding is UTF-8; "
@@ -2889,7 +2910,7 @@ msgstr ""
 "ausdrücklich an. Eine Liste der unterstützten Kodierungen findest du im "
 "Modul :mod:`codecs`."
 
-#: ../../builtins/functions.rst:1465
+#: ../../builtins/functions.rst:1482
 msgid ""
 "*errors* is an optional string that specifies how encoding and decoding "
 "errors are to be handled—this cannot be used in binary mode. A variety of "
@@ -2904,7 +2925,7 @@ msgstr ""
 "mit :func:`codecs.register_error` registriert wurde. Die Standardnamen "
 "findest du unter :ref:`error-handlers`."
 
-#: ../../builtins/functions.rst:1477
+#: ../../builtins/functions.rst:1494
 msgid ""
 "*newline* determines how to parse newline characters from the stream. It can "
 "be ``None``, ``''``, ``'\\n'``, ``'\\r'``, and ``'\\r\\n'``.  It works as "
@@ -2914,7 +2935,7 @@ msgstr ""
 "werden. Es kann die Werte ``None``, ``''``, ``'\\n'``, ``'\\r'`` oder "
 "``'\\r\\n'`` annehmen. Die Funktionsweise ist wie folgt:"
 
-#: ../../builtins/functions.rst:1481
+#: ../../builtins/functions.rst:1498
 msgid ""
 "When reading input from the stream, if *newline* is ``None``, universal "
 "newlines mode is enabled.  Lines in the input can end in ``'\\n'``, "
@@ -2934,7 +2955,7 @@ msgstr ""
 "Werten werden Eingabezeilen ausschließlich durch die angegebene Zeichenkette "
 "begrenzt, und das Zeilenende wird unverändert an den Aufrufer zurückgegeben."
 
-#: ../../builtins/functions.rst:1489
+#: ../../builtins/functions.rst:1506
 msgid ""
 "When writing output to the stream, if *newline* is ``None``, any ``'\\n'`` "
 "characters written are translated to the system default line "
@@ -2949,7 +2970,7 @@ msgstr ""
 "der anderen zulässigen Werte an, werden alle geschriebenen ``'\\n'``-Zeichen "
 "in die angegebene Zeichenkette umgewandelt."
 
-#: ../../builtins/functions.rst:1495
+#: ../../builtins/functions.rst:1512
 msgid ""
 "If *closefd* is ``False`` and a file descriptor rather than a filename was "
 "given, the underlying file descriptor will be kept open when the file is "
@@ -2962,7 +2983,7 @@ msgstr ""
 "*closefd* auf ``True`` (dem Standardwert) stehen. Andernfalls wird ein "
 "Fehler ausgelöst."
 
-#: ../../builtins/functions.rst:1500
+#: ../../builtins/functions.rst:1517
 msgid ""
 "A custom opener can be used by passing a callable as *opener*. The "
 "underlying file descriptor for the file object is then obtained by calling "
@@ -2977,11 +2998,11 @@ msgstr ""
 "(die Übergabe von :mod:`os.open` als *opener* führt zu einer Funktionalität, "
 "die der Übergabe von ``None`` ähnelt)."
 
-#: ../../builtins/functions.rst:1506
+#: ../../builtins/functions.rst:1523
 msgid "The newly created file is :ref:`non-inheritable <fd_inheritance>`."
 msgstr "Die neu erstellte Datei ist :ref:`nicht vererbbar <fd_inheritance>`."
 
-#: ../../builtins/functions.rst:1508
+#: ../../builtins/functions.rst:1525
 msgid ""
 "The following example uses the :ref:`dir_fd <dir_fd>` parameter of "
 "the :func:`os.open` function to open a file relative to a given directory::"
@@ -2990,7 +3011,7 @@ msgstr ""
 "Funktion :func:`os.open`, um eine Datei relativ zu einem bestimmten "
 "Verzeichnis zu öffnen::"
 
-#: ../../builtins/functions.rst:1511
+#: ../../builtins/functions.rst:1528
 msgid ""
 ">>> import os\n"
 ">>> dir_fd = os.open('somedir', os.O_RDONLY)\n"
@@ -3012,7 +3033,7 @@ msgstr ""
 "...\n"
 ">>> os.close(dir_fd)  # don't leak a file descriptor"
 
-#: ../../builtins/functions.rst:1521
+#: ../../builtins/functions.rst:1538
 msgid ""
 "The type of :term:`file object` returned by the :func:`open` function "
 "depends on the mode.  When :func:`open` is used to open a file in a text "
@@ -3040,7 +3061,7 @@ msgstr ""
 "Rohdatenstrom (Raw Stream) zurückgegeben – eine Unterklasse "
 "von :class:`io.RawIOBase`, nämlich :class:`io.FileIO`."
 
-#: ../../builtins/functions.rst:1542
+#: ../../builtins/functions.rst:1559
 msgid ""
 "See also the file handling modules, such as :mod:`fileinput`, :mod:`io` "
 "(where :func:`open` is "
@@ -3050,7 +3071,7 @@ msgstr ""
 "(wo :func:`open` definiert ist), :mod:`os`, :mod:`os.path`, :mod:`tempfile` "
 "und :mod:`shutil`."
 
-#: ../../builtins/functions.rst:1546
+#: ../../builtins/functions.rst:1563
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``open`` with arguments ``path``, "
 "``mode``, ``flags``."
@@ -3058,7 +3079,7 @@ msgstr ""
 "Löst ein :ref:`Audit-Ereignis <auditing>` ``open`` mit den Argumenten "
 "``path``, ``mode`` und ``flags`` aus."
 
-#: ../../builtins/functions.rst:1548
+#: ../../builtins/functions.rst:1565
 msgid ""
 "The ``mode`` and ``flags`` arguments may have been modified or inferred from "
 "the original call."
@@ -3066,21 +3087,21 @@ msgstr ""
 "Die Argumente ``mode`` und ``flags`` wurden möglicherweise modifiziert oder "
 "aus dem ursprünglichen Aufruf abgeleitet."
 
-#: ../../builtins/functions.rst:1553
+#: ../../builtins/functions.rst:1570
 msgid "The *opener* parameter was added."
 msgstr "Der Parameter *opener* wurde hinzugefügt."
 
-#: ../../builtins/functions.rst:1554
+#: ../../builtins/functions.rst:1571
 msgid "The ``'x'`` mode was added."
 msgstr "Der Modus ``'x'`` wurde hinzugefügt."
 
-#: ../../builtins/functions.rst:1555
+#: ../../builtins/functions.rst:1572
 msgid ":exc:`IOError` used to be raised, it is now an alias of :exc:`OSError`."
 msgstr ""
 "Früher wurde :exc:`IOError` ausgelöst. Mittlerweile ist es ein Alias ​​"
 "für :exc:`OSError`."
 
-#: ../../builtins/functions.rst:1556
+#: ../../builtins/functions.rst:1573
 msgid ""
 ":exc:`FileExistsError` is now raised if the file opened in exclusive "
 "creation mode (``'x'``) already exists."
@@ -3088,11 +3109,11 @@ msgstr ""
 "Ein :exc:`FileExistsError` wird nun ausgelöst, wenn die im exklusiven "
 "Erstellungsmodus (``'x'``) geöffnete Datei bereits existiert."
 
-#: ../../builtins/functions.rst:1561
+#: ../../builtins/functions.rst:1578
 msgid "The file is now non-inheritable."
 msgstr "Die Datei ist nun nicht mehr vererbbar."
 
-#: ../../builtins/functions.rst:1565
+#: ../../builtins/functions.rst:1582
 msgid ""
 "If the system call is interrupted and the signal handler does not raise an "
 "exception, the function now retries the system call instead of raising "
@@ -3103,17 +3124,17 @@ msgstr ""
 "eine :exc:`InterruptedError`-Ausnahme auszulösen (siehe :pep:`475` für die "
 "Begründung)."
 
-#: ../../builtins/functions.rst:1568
+#: ../../builtins/functions.rst:1585
 msgid "The ``'namereplace'`` error handler was added."
 msgstr "Der Fehlerbehandlungsmechanismus ``'namereplace'`` wurde hinzugefügt."
 
-#: ../../builtins/functions.rst:1572
+#: ../../builtins/functions.rst:1589
 msgid "Support added to accept objects implementing :class:`os.PathLike`."
 msgstr ""
 "Unterstützung für Objekte hinzugefügt, die :class:`os.PathLike` "
 "implementieren."
 
-#: ../../builtins/functions.rst:1573
+#: ../../builtins/functions.rst:1590
 msgid ""
 "On Windows, opening a console buffer may return a subclass "
 "of :class:`io.RawIOBase` other than :class:`io.FileIO`."
@@ -3122,11 +3143,11 @@ msgstr ""
 "von :class:`io.RawIOBase` zurückgeben, bei der es sich nicht "
 "um :class:`io.FileIO` handelt."
 
-#: ../../builtins/functions.rst:1576
+#: ../../builtins/functions.rst:1593
 msgid "The ``'U'`` mode has been removed."
 msgstr "Der Modus ``'U'`` wurde entfernt."
 
-#: ../../builtins/functions.rst:1579
+#: ../../builtins/functions.rst:1596
 msgid ""
 "UTF-8 is now the default encoding, instead of the platform-dependent locale "
 "encoding (:pep:`686`)."
@@ -3134,11 +3155,11 @@ msgstr ""
 "UTF-8 ist jetzt die Standardkodierung anstelle der plattformabhängigen "
 "Locale-Kodierung (:pep:`686`)."
 
-#: ../../builtins/functions.rst:1585
+#: ../../builtins/functions.rst:1602
 msgid "Return the ordinal value of a character."
 msgstr "Gibt den Ordinalwert eines Zeichens zurück."
 
-#: ../../builtins/functions.rst:1587
+#: ../../builtins/functions.rst:1604
 msgid ""
 "If the argument is a one-character string, return the Unicode code point of "
 "that character.  For example, ``ord('a')`` returns the integer ``97`` and "
@@ -3150,7 +3171,7 @@ msgstr ""
 "die Ganzzahl ``97`` und ``ord('€')`` (Euro-Zeichen) liefert ``8364``. Dies "
 "ist die Umkehrfunktion zu :func:`chr`."
 
-#: ../../builtins/functions.rst:1592
+#: ../../builtins/functions.rst:1609
 msgid ""
 "If the argument is a :class:`bytes` or :class:`bytearray` object of length "
 "1, return its single byte value. For example, ``ord(b'a')`` returns the "
@@ -3160,7 +3181,7 @@ msgstr ""
 "Länge 1 ist, wird dessen einzelner Bytewert zurückgegeben. Beispielsweise "
 "gibt ``ord(b'a')`` die Ganzzahl ``97`` zurück."
 
-#: ../../builtins/functions.rst:1599
+#: ../../builtins/functions.rst:1616
 msgid ""
 "Return *base* to the power *exp*; if *mod* is present, return *base* to the "
 "power *exp*, modulo *mod* (computed more efficiently than ``pow(base, exp) % "
@@ -3172,7 +3193,7 @@ msgstr ""
 "mod``). Die Form mit zwei Argumenten ``pow(base, exp)`` entspricht der "
 "Verwendung des Potenzoperators: ``base**exp``."
 
-#: ../../builtins/functions.rst:1604
+#: ../../builtins/functions.rst:1621
 msgid ""
 "When arguments are builtin numeric types with mixed operand types, the "
 "coercion rules for binary arithmetic operators apply.  For :class:`int` "
@@ -3200,7 +3221,7 @@ msgstr ""
 "oder :class:`float`) und der Exponent ganzzahlig, so wird ein float-Ergebnis "
 "geliefert. So ergibt ``pow(-9, 2.0)`` beispielsweise ``81.0``."
 
-#: ../../builtins/functions.rst:1616
+#: ../../builtins/functions.rst:1633
 msgid ""
 "For :class:`int` operands *base* and *exp*, if *mod* is present, *mod* must "
 "also be of integer type and *mod* must be nonzero. If *mod* is present and "
@@ -3214,13 +3235,13 @@ msgstr ""
 "sein. In diesem Fall wird ``pow(inv_base, -exp, mod)`` zurückgegeben, wobei "
 "*inv_base* das Inverse von *base* modulo *mod* ist."
 
-#: ../../builtins/functions.rst:1622
+#: ../../builtins/functions.rst:1639
 msgid "Here's an example of computing an inverse for ``38`` modulo ``97``::"
 msgstr ""
 "Hier ist ein Beispiel für die Berechnung des Inversen von ``38`` modulo "
 "``97``::"
 
-#: ../../builtins/functions.rst:1624
+#: ../../builtins/functions.rst:1641
 msgid ""
 ">>> pow(38, -1, mod=97)\n"
 "23\n"
@@ -3232,7 +3253,7 @@ msgstr ""
 ">>> 23 * 38 % 97 == 1\n"
 "True"
 
-#: ../../builtins/functions.rst:1629
+#: ../../builtins/functions.rst:1646
 msgid ""
 "For :class:`int` operands, the three-argument form of ``pow`` now allows the "
 "second argument to be negative, permitting computation of modular inverses."
@@ -3241,14 +3262,14 @@ msgstr ""
 "nun ein negatives zweites Argument, was die Berechnung modularer Inverser "
 "ermöglicht."
 
-#: ../../builtins/functions.rst:1634
+#: ../../builtins/functions.rst:1651
 msgid ""
 "Allow keyword arguments.  Formerly, only positional arguments were supported."
 msgstr ""
 "Erlaube Schlüsselwortargumente. Zuvor wurden nur Positionsargumente "
 "unterstützt."
 
-#: ../../builtins/functions.rst:1641
+#: ../../builtins/functions.rst:1658
 msgid ""
 "Print *objects* to the text stream *file*, separated by *sep* and followed "
 "by *end*.  *sep*, *end*, *file*, and *flush*, if present, must be given as "
@@ -3258,7 +3279,7 @@ msgstr ""
 "und gefolgt von *end*. *sep*, *end*, *file* und *flush* müssen, sofern "
 "angegeben, als Schlüsselwortargumente übergeben werden."
 
-#: ../../builtins/functions.rst:1645
+#: ../../builtins/functions.rst:1662
 msgid ""
 "All non-keyword arguments are converted to strings like :func:`str` does and "
 "written to the stream, separated by *sep* and followed by *end*.  Both *sep* "
@@ -3273,7 +3294,7 @@ msgstr ""
 "bedeutet, dass die Standardwerte verwendet werden. Werden keine *objects* "
 "angegeben, schreibt :func:`print` lediglich *end*."
 
-#: ../../builtins/functions.rst:1651
+#: ../../builtins/functions.rst:1668
 msgid ""
 "The *file* argument must be an object with a ``write(string)`` method; if it "
 "is not present or ``None``, :data:`sys.stdout` will be used.  Since printed "
@@ -3286,7 +3307,7 @@ msgstr ""
 "werden, kann :func:`print` nicht mit Dateiobjekten im Binärmodus verwendet "
 "werden. Verwende für diese stattdessen ``file.write(...)``."
 
-#: ../../builtins/functions.rst:1656
+#: ../../builtins/functions.rst:1673
 msgid ""
 "Output buffering is usually determined by *file*. However, if *flush* is "
 "true, the stream is forcibly flushed."
@@ -3294,15 +3315,15 @@ msgstr ""
 "Die Ausgabepufferung wird normalerweise durch *file* bestimmt. Wenn *flush* "
 "jedoch auf „true“ gesetzt ist, wird der Stream zwangsweise geleert."
 
-#: ../../builtins/functions.rst:1660
+#: ../../builtins/functions.rst:1677
 msgid "Added the *flush* keyword argument."
 msgstr "Das Keyword-Argument *flush* wurde hinzugefügt."
 
-#: ../../builtins/functions.rst:1666
+#: ../../builtins/functions.rst:1683
 msgid "Return a property attribute."
 msgstr "Gibt ein Eigenschaftsattribut zurück."
 
-#: ../../builtins/functions.rst:1668
+#: ../../builtins/functions.rst:1685
 msgid ""
 "*fget* is a function for getting an attribute value.  *fset* is a function "
 "for setting an attribute value. *fdel* is a function for deleting an "
@@ -3313,13 +3334,13 @@ msgstr ""
 "Löschen eines Attributwerts. Und *doc* erstellt einen Docstring für das "
 "Attribut."
 
-#: ../../builtins/functions.rst:1672
+#: ../../builtins/functions.rst:1689
 msgid "A typical use is to define a managed attribute ``x``::"
 msgstr ""
 "Eine typische Verwendung ist die Definition eines verwalteten Attributs "
 "``x``::"
 
-#: ../../builtins/functions.rst:1674
+#: ../../builtins/functions.rst:1691
 msgid ""
 "class C:\n"
 "    def __init__(self):\n"
@@ -3351,7 +3372,7 @@ msgstr ""
 "\n"
 "    x = property(getx, setx, delx, \"I'm the 'x' property.\")"
 
-#: ../../builtins/functions.rst:1689
+#: ../../builtins/functions.rst:1706
 msgid ""
 "If *c* is an instance of *C*, ``c.x`` will invoke the getter, ``c.x = "
 "value`` will invoke the setter, and ``del c.x`` the deleter."
@@ -3359,7 +3380,7 @@ msgstr ""
 "Wenn *c* eine Instanz von *C* ist, ruft ``c.x`` den Empfänger (getter) auf, "
 "``c.x = value`` den Einsetzer (setter) und ``del c.x`` den Löscher (deleter)."
 
-#: ../../builtins/functions.rst:1692
+#: ../../builtins/functions.rst:1709
 msgid ""
 "If given, *doc* will be the docstring of the property attribute. Otherwise, "
 "the property will copy *fget*'s docstring (if it exists).  This makes it "
@@ -3371,7 +3392,7 @@ msgstr ""
 "vorhanden). Dies ermöglicht es, mit :deco:`property` als :term:`Dekorator "
 "<decorator>` auf einfache Weise Nur-Lese-Properties zu erstellen::"
 
-#: ../../builtins/functions.rst:1696
+#: ../../builtins/functions.rst:1713
 msgid ""
 "class Parrot:\n"
 "    def __init__(self):\n"
@@ -3391,7 +3412,7 @@ msgstr ""
 "        \"\"\"Get the current voltage.\"\"\"\n"
 "        return self._voltage"
 
-#: ../../builtins/functions.rst:1705
+#: ../../builtins/functions.rst:1722
 msgid ""
 "The ``@property`` decorator turns the :meth:`!voltage` method into a "
 "\"getter\" for a read-only attribute with the same name, and it sets the "
@@ -3401,7 +3422,7 @@ msgstr ""
 "„Empfänger“ für ein gleichnamiges Attribut mit Lesezugriff um und setzt den "
 "Docstring für *voltage* auf „Hole die aktuelle Spannung.“"
 
-#: ../../builtins/functions.rst:1713
+#: ../../builtins/functions.rst:1730
 msgid ""
 "A property object has ``getter``, ``setter``, and ``deleter`` methods usable "
 "as decorators that create a copy of the property with the corresponding "
@@ -3414,7 +3435,7 @@ msgstr ""
 "dekorierte Funktion gesetzt ist. Dies lässt sich am besten anhand eines "
 "Beispiels erläutern:"
 
-#: ../../builtins/functions.rst:1718
+#: ../../builtins/functions.rst:1735
 msgid ""
 "class C:\n"
 "    def __init__(self):\n"
@@ -3450,7 +3471,7 @@ msgstr ""
 "    def x(self):\n"
 "        del self._x"
 
-#: ../../builtins/functions.rst:1737
+#: ../../builtins/functions.rst:1754
 msgid ""
 "This code is exactly equivalent to the first example.  Be sure to give the "
 "additional functions the same name as the original property (``x`` in this "
@@ -3460,7 +3481,7 @@ msgstr ""
 "den zusätzlichen Funktionen denselben Namen zu geben wie der ursprünglichen "
 "Eigenschaft (in diesem Fall ``x``)."
 
-#: ../../builtins/functions.rst:1741
+#: ../../builtins/functions.rst:1758
 msgid ""
 "The returned property object also has the attributes ``fget``, ``fset``, and "
 "``fdel`` corresponding to the constructor arguments."
@@ -3468,11 +3489,11 @@ msgstr ""
 "Das zurückgegebene Property-Objekt verfügt zudem über die Attribute "
 "``fget``, ``fset`` und ``fdel``, die den Konstruktorargumenten entsprechen."
 
-#: ../../builtins/functions.rst:1744
+#: ../../builtins/functions.rst:1761
 msgid "The docstrings of property objects are now writeable."
 msgstr "Die Docstrings von Property-Objekten sind jetzt beschreibbar."
 
-#: ../../builtins/functions.rst:1749
+#: ../../builtins/functions.rst:1766
 msgid ""
 "Attribute holding the name of the property. The name of the property can be "
 "changed at runtime."
@@ -3480,7 +3501,7 @@ msgstr ""
 "Attribut, das den Namen der Eigenschaft enthält. Der Name der Eigenschaft "
 "kann zur Laufzeit geändert werden."
 
-#: ../../builtins/functions.rst:1760
+#: ../../builtins/functions.rst:1777
 msgid ""
 "Rather than being a function, :class:`range` is actually an immutable "
 "sequence type, as documented in :ref:`typesseq-range` and :ref:`typesseq`."
@@ -3489,7 +3510,8 @@ msgstr ""
 "unveränderlicher Sequenztyp, wie in :ref:`typesseq-range` "
 "und :ref:`typesseq` dokumentiert."
 
-#: ../../builtins/functions.rst:1766
+#: ../../builtins/functions.rst:1783
+#, fuzzy
 msgid ""
 "Return a string containing a printable representation of an object.  For "
 "many types, this function makes an attempt to return a string that would "
@@ -3498,8 +3520,7 @@ msgid ""
 "name of the type of the object together with additional information often "
 "including the name and address of the object.  A class can control what this "
 "function returns for its instances by defining a :meth:`~object.__repr__` "
-"method. If :func:`sys.displayhook` is not accessible, this function will "
-"raise :exc:`RuntimeError`."
+"method."
 msgstr ""
 "Gibt eine Zeichenkette zurück, die eine druckbare Darstellung eines Objekts "
 "enthält. Bei vielen Typen versucht diese Funktion, eine Zeichenkette "
@@ -3512,13 +3533,13 @@ msgstr ""
 "definiert. Ist :func:`sys.displayhook` nicht verfügbar, löst diese Funktion "
 "einen :exc:`RuntimeError` aus."
 
-#: ../../builtins/functions.rst:1777
+#: ../../builtins/functions.rst:1792
 msgid "This class has a custom representation that can be evaluated::"
 msgstr ""
 "Diese Klasse verfügt über eine benutzerdefinierte Darstellung, die "
 "ausgewertet werden kann::"
 
-#: ../../builtins/functions.rst:1779
+#: ../../builtins/functions.rst:1794
 msgid ""
 "class Person:\n"
 "   def __init__(self, name, age):\n"
@@ -3536,7 +3557,7 @@ msgstr ""
 "   def __repr__(self):\n"
 "      return f\"Person({self.name!r}, {self.age!r})\""
 
-#: ../../builtins/functions.rst:1790
+#: ../../builtins/functions.rst:1805
 msgid ""
 "Return a reverse :term:`iterator`.  The argument must be an object which has "
 "a :meth:`~object.__reversed__` method or supports the sequence protocol "
@@ -3549,7 +3570,7 @@ msgstr ""
 "und die :meth:`~object.__getitem__`-Methode mit ganzzahligen Argumenten "
 "beginnend bei ``0``)."
 
-#: ../../builtins/functions.rst:1798
+#: ../../builtins/functions.rst:1813
 msgid ""
 "Return *number* rounded to *ndigits* precision after the decimal point.  If "
 "*ndigits* is omitted or is ``None``, it returns the nearest integer to its "
@@ -3559,7 +3580,7 @@ msgstr ""
 "weggelassen wird oder ``None`` ist, wird die dem Eingabewert nächstgelegene "
 "Ganzzahl zurückgegeben."
 
-#: ../../builtins/functions.rst:1802
+#: ../../builtins/functions.rst:1817
 msgid ""
 "For the built-in types supporting :func:`round`, values are rounded to the "
 "closest multiple of 10 to the power minus *ndigits*; if two multiples are "
@@ -3578,7 +3599,7 @@ msgstr ""
 "eine Ganzzahl, wenn *ndigits* weggelassen wird oder ``None`` ist. "
 "Andernfalls hat der Rückgabewert denselben Typ wie *number*."
 
-#: ../../builtins/functions.rst:1811
+#: ../../builtins/functions.rst:1826
 msgid ""
 "For a general Python object ``number``, ``round`` delegates to "
 "``number.__round__``."
@@ -3586,7 +3607,7 @@ msgstr ""
 "Bei einem allgemeinen Python-Objekt ``number`` delegiert ``round`` an "
 "``number.__round__``."
 
-#: ../../builtins/functions.rst:1816
+#: ../../builtins/functions.rst:1831
 msgid ""
 "The behavior of :func:`round` for floats can be surprising: for example, "
 "``round(2.675, 2)`` gives ``2.67`` instead of the expected ``2.68``. This is "
@@ -3600,7 +3621,7 @@ msgstr ""
 "meisten Dezimalbrüche nicht exakt als Gleitkommazahl dargestellt werden "
 "können. Weitere Informationen findest du unter :ref:`tut-fp-issues`."
 
-#: ../../builtins/functions.rst:1827
+#: ../../builtins/functions.rst:1842
 msgid ""
 "Return a new :class:`set` object, optionally with elements taken from "
 "*iterable*.  :class:`set` is a built-in class.  See also :ref:`types-set` "
@@ -3610,7 +3631,7 @@ msgstr ""
 "*iterable*. :class:`set` ist eine integrierte Klasse. Siehe auch :ref:`types-"
 "set` für die Dokumentation zu dieser Klasse."
 
-#: ../../builtins/functions.rst:1831
+#: ../../builtins/functions.rst:1846
 msgid ""
 "For other containers see the built-"
 "in :class:`frozenset`, :class:`list`, :class:`tuple`, and :class:`dict` "
@@ -3620,7 +3641,7 @@ msgstr ""
 "Klassen :class:`frozenset`, :class:`list`, :class:`tuple` und :class:`dict` "
 "sowie das Modul :mod:`collections`."
 
-#: ../../builtins/functions.rst:1838
+#: ../../builtins/functions.rst:1853
 msgid ""
 "This is the counterpart of :func:`getattr`.  The arguments are an object, a "
 "string, and an arbitrary value.  The string may name an existing attribute "
@@ -3635,7 +3656,7 @@ msgstr ""
 "beispielsweise ``setattr(x, 'foobar', 123)`` der Anweisung ``x.foobar = "
 "123``."
 
-#: ../../builtins/functions.rst:1844
+#: ../../builtins/functions.rst:1859
 msgid ""
 "*name* need not be a Python identifier as defined in :ref:`identifiers` "
 "unless the object chooses to enforce that, for example in a "
@@ -3650,7 +3671,7 @@ msgstr ""
 "ist, kann nicht über die Punktnotation angesprochen werden, ist jedoch "
 "über :func:`getattr` usw. zugänglich."
 
-#: ../../builtins/functions.rst:1852
+#: ../../builtins/functions.rst:1867
 msgid ""
 "Since :ref:`private name mangling <private-name-mangling>` happens at "
 "compilation time, one must manually mangle a private attribute's (attributes "
@@ -3661,7 +3682,7 @@ msgstr ""
 "führenden Unterstrichen) manuell umgewandelt werden, um es "
 "mittels :func:`setattr` zu setzen."
 
-#: ../../builtins/functions.rst:1860
+#: ../../builtins/functions.rst:1875
 msgid ""
 "Return a new unique sentinel object.  *name* must be a :class:`str`, and is "
 "used by default as the returned object's representation::"
@@ -3670,7 +3691,7 @@ msgstr ""
 "ein :class:`str` sein und wird standardmäßig als Repräsentation des "
 "zurückgegebenen Objekts verwendet::"
 
-#: ../../builtins/functions.rst:1863
+#: ../../builtins/functions.rst:1878
 msgid ""
 ">>> MISSING = sentinel(\"MISSING\")\n"
 ">>> MISSING\n"
@@ -3680,7 +3701,7 @@ msgstr ""
 ">>> MISSING\n"
 "MISSING"
 
-#: ../../builtins/functions.rst:1867
+#: ../../builtins/functions.rst:1882
 msgid ""
 "The optional *repr* argument can be used to specify a different "
 "representation::"
@@ -3688,7 +3709,7 @@ msgstr ""
 "Das optionale Argument *repr* kann verwendet werden, um eine andere "
 "Darstellung anzugeben::"
 
-#: ../../builtins/functions.rst:1869
+#: ../../builtins/functions.rst:1884
 msgid ""
 ">>> MISSING = sentinel(\"MISSING\", repr=\"<MISSING>\")\n"
 ">>> MISSING\n"
@@ -3698,7 +3719,7 @@ msgstr ""
 ">>> MISSING\n"
 "<MISSING>"
 
-#: ../../builtins/functions.rst:1873
+#: ../../builtins/functions.rst:1888
 msgid ""
 "Sentinel objects are truthy and compare equal only to themselves.  They are "
 "intended to be compared with the :keyword:`is` operator."
@@ -3707,17 +3728,17 @@ msgstr ""
 "sind nur mit sich selbst gleich. Sie sind dafür vorgesehen, mit dem "
 "Operator :keyword:`is` verglichen zu werden."
 
-#: ../../builtins/functions.rst:1876
+#: ../../builtins/functions.rst:1891
 msgid "``sentinel`` does not support subclassing."
 msgstr "``sentinel`` unterstützt kein Subclassing."
 
-#: ../../builtins/functions.rst:1878
+#: ../../builtins/functions.rst:1893
 msgid "Shallow and deep copies of a sentinel object return the object itself."
 msgstr ""
 "Flache und tiefe Kopien eines Sentinel-Objekts geben das Objekt selbst "
 "zurück."
 
-#: ../../builtins/functions.rst:1880
+#: ../../builtins/functions.rst:1895
 msgid ""
 "Sentinels are conventionally assigned to a variable with a matching name. "
 "Sentinels defined in this way can be used in :term:`type hints <type hint>`::"
@@ -3726,7 +3747,7 @@ msgstr ""
 "zugewiesen. Auf diese Weise definierte Sentinels können in :term:`Type Hints "
 "<type hint>` verwendet werden::"
 
-#: ../../builtins/functions.rst:1883
+#: ../../builtins/functions.rst:1898
 msgid ""
 "MISSING = sentinel(\"MISSING\")\n"
 "\n"
@@ -3738,7 +3759,7 @@ msgstr ""
 "def next_value(default: int | MISSING = MISSING):\n"
 "    ..."
 
-#: ../../builtins/functions.rst:1888
+#: ../../builtins/functions.rst:1903
 msgid ""
 "Sentinel objects support the :ref:`| <bitwise>` operator for use in type "
 "expressions."
@@ -3746,7 +3767,7 @@ msgstr ""
 "Sentinel-Objekte unterstützen den Operator :ref:`| <bitwise>` zur Verwendung "
 "in Typ-Ausdrücken."
 
-#: ../../builtins/functions.rst:1890
+#: ../../builtins/functions.rst:1905
 msgid ""
 ":mod:`Pickling <pickle>` is supported for sentinel objects that are placed "
 "in the global scope of a module under a name matching the sentinel's name, "
@@ -3764,7 +3785,7 @@ msgstr ""
 "Gültigkeitsbereich definiert sind, sind nicht picklebar. Die Identität des "
 "Sentinels bleibt nach dem Pickling erhalten::"
 
-#: ../../builtins/functions.rst:1897
+#: ../../builtins/functions.rst:1912
 msgid ""
 "import pickle\n"
 "\n"
@@ -3788,15 +3809,15 @@ msgstr ""
 "\n"
 "assert pickle.loads(pickle.dumps(Cls.PICKLABLE)) is Cls.PICKLABLE"
 
-#: ../../builtins/functions.rst:1908
+#: ../../builtins/functions.rst:1923
 msgid "Sentinel objects have the following attributes:"
 msgstr "Sentinel-Objekte haben die folgenden Attribute:"
 
-#: ../../builtins/functions.rst:1912
+#: ../../builtins/functions.rst:1927
 msgid "The sentinel's name."
 msgstr "Der Name des Sentinels."
 
-#: ../../builtins/functions.rst:1916
+#: ../../builtins/functions.rst:1931
 msgid ""
 "The name of the module where the sentinel was created. This attribute is "
 "writable."
@@ -3804,7 +3825,7 @@ msgstr ""
 "Der Name des Moduls, in dem das Sentinel erstellt wurde. Dieses Attribut ist "
 "beschreibbar."
 
-#: ../../builtins/functions.rst:1924
+#: ../../builtins/functions.rst:1939
 msgid ""
 "Return a :term:`slice` object representing the set of indices specified by "
 "``range(start, stop, step)``.  The *start* and *step* arguments default to "
@@ -3814,7 +3835,7 @@ msgstr ""
 "step)`` festgelegte Menge an Indizes repräsentiert. Die Argumente *start* "
 "und *step* haben standardmäßig den Wert ``None``."
 
-#: ../../builtins/functions.rst:1928
+#: ../../builtins/functions.rst:1943
 msgid ""
 "Slice objects are also generated when :ref:`slicing syntax <slicings>` is "
 "used.  For example: ``a[start:stop:step]`` or ``a[start:stop, i]``."
@@ -3823,7 +3844,7 @@ msgstr ""
 "verwendet wird. Zum Beispiel: ``a[start:stop:step]`` oder ``a[start:stop, "
 "i]``."
 
-#: ../../builtins/functions.rst:1931
+#: ../../builtins/functions.rst:1946
 msgid ""
 "See :func:`itertools.islice` for an alternate version that returns "
 "an :term:`iterator`."
@@ -3831,7 +3852,7 @@ msgstr ""
 "Siehe :func:`itertools.islice` für eine alternative Version, die "
 "einen :term:`Iterator <iterator>` zurückgibt."
 
-#: ../../builtins/functions.rst:1938
+#: ../../builtins/functions.rst:1953
 msgid ""
 "These read-only attributes are set to the argument values (or their "
 "default).  They have no other explicit functionality; however, they are used "
@@ -3841,7 +3862,7 @@ msgstr ""
 "Standardwerte) gesetzt. Sie haben keine weitere explizite Funktionalität, "
 "werden jedoch von NumPy und anderen Drittanbieter-Paketen verwendet."
 
-#: ../../builtins/functions.rst:1942
+#: ../../builtins/functions.rst:1957
 msgid ""
 "Slice objects are now :term:`hashable` "
 "(provided :attr:`~slice.start`, :attr:`~slice.stop`, and :attr:`~slice.step` "
@@ -3851,18 +3872,18 @@ msgstr ""
 "(sofern :attr:`~slice.start`, :attr:`~slice.stop` und :attr:`~slice.step` "
 "hashbar sind)."
 
-#: ../../builtins/functions.rst:1948
+#: ../../builtins/functions.rst:1963
 msgid "Return a new sorted list from the items in *iterable*."
 msgstr "Gibt eine neue sortierte Liste der Elemente aus *iterable* zurück."
 
-#: ../../builtins/functions.rst:1950
+#: ../../builtins/functions.rst:1965
 msgid ""
 "Has two optional arguments which must be specified as keyword arguments."
 msgstr ""
 "Verfügt über zwei optionale Argumente, die als Schlüsselwortargumente "
 "angegeben werden müssen."
 
-#: ../../builtins/functions.rst:1952
+#: ../../builtins/functions.rst:1967
 msgid ""
 "*key* specifies a function of one argument that is used to extract a "
 "comparison key from each element in *iterable* (for example, "
@@ -3874,7 +3895,7 @@ msgstr ""
 "Beispiel ``key=str.lower``). Der Standardwert ist ``None`` (die Elemente "
 "werden direkt verglichen)."
 
-#: ../../builtins/functions.rst:1956
+#: ../../builtins/functions.rst:1971
 msgid ""
 "*reverse* is a boolean value.  If set to ``True``, then the list elements "
 "are sorted as if each comparison were reversed."
@@ -3882,7 +3903,7 @@ msgstr ""
 "*reverse* ist ein boolescher Wert. Wenn er auf ``True`` gesetzt ist, werden "
 "die Listenelemente so sortiert, als ob jeder Vergleich umgekehrt würde."
 
-#: ../../builtins/functions.rst:1959
+#: ../../builtins/functions.rst:1974
 msgid ""
 "Use :func:`functools.cmp_to_key` to convert an old-style *cmp* function to a "
 "*key* function."
@@ -3890,7 +3911,7 @@ msgstr ""
 "Verwende :func:`functools.cmp_to_key`, um eine veraltete *cmp*-Funktion in "
 "eine *key*-Funktion umzuwandeln."
 
-#: ../../builtins/functions.rst:1962
+#: ../../builtins/functions.rst:1977
 msgid ""
 "The built-in :func:`sorted` function is guaranteed to be stable. A sort is "
 "stable if it guarantees not to change the relative order of elements that "
@@ -3903,7 +3924,7 @@ msgstr ""
 "in mehreren Durchläufen (zum Beispiel Sortierung nach Abteilung und "
 "anschließend nach Gehaltsgruppe)."
 
-#: ../../builtins/functions.rst:1967
+#: ../../builtins/functions.rst:1982
 msgid ""
 "The sort algorithm uses only ``<`` comparisons between items.  While "
 "defining an :meth:`~object.__lt__` method will suffice for sorting, :PEP:`8` "
@@ -3924,18 +3945,18 @@ msgstr ""
 "Verwirrung bei gemischten Typvergleichen zu vermeiden, die die gespiegelte "
 "Methode :meth:`~object.__gt__` aufrufen können."
 
-#: ../../builtins/functions.rst:1976
+#: ../../builtins/functions.rst:1991
 msgid ""
 "For sorting examples and a brief sorting tutorial, see :ref:`sortinghowto`."
 msgstr ""
 "Beispiele und eine kurze Anleitung zum Sortieren findest du "
 "unter :ref:`sortinghowto`."
 
-#: ../../builtins/functions.rst:1980
+#: ../../builtins/functions.rst:1995
 msgid "Transform a method into a static method."
 msgstr "Wandelt eine Methode in eine statische Methode um."
 
-#: ../../builtins/functions.rst:1982
+#: ../../builtins/functions.rst:1997
 msgid ""
 "A static method does not receive an implicit first argument. To declare a "
 "static method, use this idiom::"
@@ -3943,7 +3964,7 @@ msgstr ""
 "Eine statische Methode erhält kein implizites erstes Argument. Um eine "
 "statische Methode zu deklarieren, verwende dieses Idiom::"
 
-#: ../../builtins/functions.rst:1985
+#: ../../builtins/functions.rst:2000
 msgid ""
 "class C:\n"
 "    @staticmethod\n"
@@ -3953,7 +3974,7 @@ msgstr ""
 "    @staticmethod\n"
 "    def f(arg1, arg2, argN): ..."
 
-#: ../../builtins/functions.rst:1989
+#: ../../builtins/functions.rst:2004
 msgid ""
 "The ``@staticmethod`` form is a function :term:`decorator` -- "
 "see :ref:`function` for details."
@@ -3961,7 +3982,7 @@ msgstr ""
 "Die Form ``@staticmethod`` ist ein Funktions-:term:`Dekorator <decorator>` – "
 "siehe :ref:`function` für Einzelheiten."
 
-#: ../../builtins/functions.rst:1992
+#: ../../builtins/functions.rst:2007
 msgid ""
 "A static method can be called either on the class (such as ``C.f()``) or on "
 "an instance (such as ``C().f()``). Moreover, the static "
@@ -3973,7 +3994,7 @@ msgstr ""
 "der :term:`Deskriptor <descriptor>` der statischen Methode selbst aufrufbar, "
 "sodass er in der Klassendefinition verwendet werden kann (z. B. ``f()``)."
 
-#: ../../builtins/functions.rst:1997
+#: ../../builtins/functions.rst:2012
 msgid ""
 "Static methods in Python are similar to those found in Java or C++. Also, "
 "see :deco:`classmethod` for a variant that is useful for creating alternate "
@@ -3983,7 +4004,7 @@ msgstr ""
 "das :deco:`classmethod`, eine Variante, die sich zum Erstellen alternativer "
 "Klassenkonstruktoren eignet."
 
-#: ../../builtins/functions.rst:2001
+#: ../../builtins/functions.rst:2016
 msgid ""
 "Like all decorators, it is also possible to call ``staticmethod`` as a "
 "regular function and do something with its result.  This is needed in some "
@@ -3998,7 +4019,7 @@ msgstr ""
 "Instanzmethode vermeiden möchte. Für solche Fälle verwendet man folgendes "
 "Idiom::"
 
-#: ../../builtins/functions.rst:2007
+#: ../../builtins/functions.rst:2022
 msgid ""
 "def regular_function():\n"
 "    ...\n"
@@ -4012,12 +4033,12 @@ msgstr ""
 "class C:\n"
 "    method = staticmethod(regular_function)"
 
-#: ../../builtins/functions.rst:2013
+#: ../../builtins/functions.rst:2028
 msgid "For more information on static methods, see :ref:`types`."
 msgstr ""
 "Weitere Informationen zu statischen Methoden findest du unter :ref:`types`."
 
-#: ../../builtins/functions.rst:2015
+#: ../../builtins/functions.rst:2030
 msgid ""
 "Static methods now inherit the method attributes "
 "(:attr:`~function.__module__`, :attr:`~function.__name__`, :attr:`~function.__qualname__`, :attr:`~function.__doc__` "
@@ -4029,14 +4050,14 @@ msgstr ""
 "und :attr:`~function.__annotations__`), verfügen über ein neues "
 "``__wrapped__``-Attribut und sind nun wie reguläre Funktionen aufrufbar."
 
-#: ../../builtins/functions.rst:2033
+#: ../../builtins/functions.rst:2048
 msgid ""
 "Return a :class:`str` version of *object*.  See :func:`str` for details."
 msgstr ""
 "Gibt eine :class:`str`-Version von *object* zurück. Siehe :func:`str` für "
 "Details."
 
-#: ../../builtins/functions.rst:2035
+#: ../../builtins/functions.rst:2050
 msgid ""
 "``str`` is the built-in string :term:`class`.  For general information about "
 "strings, see :ref:`textseq`."
@@ -4044,7 +4065,7 @@ msgstr ""
 "``str`` ist die integrierte Zeichenketten-:term:`Klasse <class>`. Allgemeine "
 "Informationen zu Zeichenketten findest du unter :ref:`textseq`."
 
-#: ../../builtins/functions.rst:2041
+#: ../../builtins/functions.rst:2056
 msgid ""
 "Sums *start* and the items of an *iterable* from left to right and returns "
 "the total.  The *iterable*'s items are normally numbers, and the start value "
@@ -4054,7 +4075,7 @@ msgstr ""
 "auf und gibt die Gesamtsumme zurück. Die Elemente des *Iterables* sind "
 "normalerweise Zahlen, und der Startwert darf kein String sein."
 
-#: ../../builtins/functions.rst:2045
+#: ../../builtins/functions.rst:2060
 msgid ""
 "For some use cases, there are good alternatives to :func:`sum`. The "
 "preferred, fast way to concatenate a sequence of strings is by calling "
@@ -4069,11 +4090,11 @@ msgstr ""
 "Verketten einer Reihe von Iterables empfiehlt sich die Verwendung "
 "von :func:`itertools.chain`."
 
-#: ../../builtins/functions.rst:2051
+#: ../../builtins/functions.rst:2066
 msgid "The *start* parameter can be specified as a keyword argument."
 msgstr "Der Parameter *start* kann als Schlüsselwortargument angegeben werden."
 
-#: ../../builtins/functions.rst:2054
+#: ../../builtins/functions.rst:2069
 msgid ""
 "Summation of floats switched to an algorithm that gives higher accuracy and "
 "better commutativity on most builds."
@@ -4082,7 +4103,7 @@ msgstr ""
 "der bei den meisten Builds eine höhere Genauigkeit und eine bessere "
 "Kommutativität bietet."
 
-#: ../../builtins/functions.rst:2057
+#: ../../builtins/functions.rst:2072
 msgid ""
 "Added specialization for summation of complexes, using same algorithm as for "
 "summation of floats."
@@ -4090,7 +4111,7 @@ msgstr ""
 "Spezialisierung für die Summation komplexer Zahlen hinzugefügt. Dabei wird "
 "derselbe Algorithmus wie für die Summation von Gleitkommazahlen verwendet."
 
-#: ../../builtins/functions.rst:2065
+#: ../../builtins/functions.rst:2080
 msgid ""
 "Return a proxy object that delegates method calls to a parent or sibling "
 "class of *type*.  This is useful for accessing inherited methods that have "
@@ -4100,7 +4121,7 @@ msgstr ""
 "Geschwisterklasse von *type* delegiert. Dies ist nützlich für den Zugriff "
 "auf geerbte Methoden, die in einer Klasse überschrieben wurden."
 
-#: ../../builtins/functions.rst:2069
+#: ../../builtins/functions.rst:2084
 msgid ""
 "The *object_or_type* determines the :term:`method resolution order` to be "
 "searched.  The search starts from the class right after the *type*."
@@ -4109,7 +4130,7 @@ msgstr ""
 "<method resolution order>` (method resolution order), die durchsucht werden "
 "soll. Die Suche beginnt bei der Klasse, die direkt auf den *type* folgt."
 
-#: ../../builtins/functions.rst:2073
+#: ../../builtins/functions.rst:2088
 msgid ""
 "For example, if :attr:`~type.__mro__` of *object_or_type* is ``D -> B -> C "
 "-> A -> object`` and the value of *type* is ``B``, then :func:`super` "
@@ -4119,7 +4140,7 @@ msgstr ""
 "-> A -> object`` lautet und der Wert von *type* ``B`` ist, dann "
 "durchsucht :func:`super` ``C -> A -> object``."
 
-#: ../../builtins/functions.rst:2077
+#: ../../builtins/functions.rst:2092
 msgid ""
 "The :attr:`~type.__mro__` attribute of the class corresponding to "
 "*object_or_type* lists the method resolution search order used by "
@@ -4132,7 +4153,7 @@ msgstr ""
 "Attribut ist dynamisch und kann sich ändern, wann immer die "
 "Vererbungshierarchie aktualisiert wird."
 
-#: ../../builtins/functions.rst:2082
+#: ../../builtins/functions.rst:2097
 msgid ""
 "If the second argument is omitted, the super object returned is unbound.  If "
 "the second argument is an object, ``isinstance(obj, type)`` must be true.  "
@@ -4144,14 +4165,15 @@ msgstr ""
 "type)`` wahr sein. Ist das zweite Argument ein Typ, muss ``issubclass(type2, "
 "type)`` wahr sein (dies ist nützlich für Klassenmethoden)."
 
-#: ../../builtins/functions.rst:2087
+#: ../../builtins/functions.rst:2102
+#, fuzzy
 msgid ""
 "When called directly within an ordinary method of a class, both arguments "
 "may be omitted (\"zero-argument :func:`!super`\"). In this case, *type* will "
-"be the enclosing class, and *obj* will be the first argument of the "
-"immediately enclosing function (typically ``self``). (This means that zero-"
+"be the enclosing class, and *object_or_type* will be the first argument of "
+"the immediately enclosing function (typically ``self``). Zero-"
 "argument :func:`!super` will not work as expected within nested functions, "
-"including generator expressions, which implicitly create nested functions.)"
+"including generator expressions, which implicitly create nested functions."
 msgstr ""
 "Wenn der Aufruf direkt innerhalb einer gewöhnlichen Methode einer Klasse "
 "erfolgt, können beide Argumente weggelassen werden („:func:`!super` ohne "
@@ -4162,7 +4184,7 @@ msgstr ""
 "implizit verschachtelte Funktionen erzeugen – nicht wie erwartet "
 "funktioniert.)"
 
-#: ../../builtins/functions.rst:2094
+#: ../../builtins/functions.rst:2109
 msgid ""
 "There are two typical use cases for *super*.  In a class hierarchy with "
 "single inheritance, *super* can be used to refer to parent classes without "
@@ -4175,7 +4197,7 @@ msgstr ""
 "Code wartungsfreundlicher wird. Diese Verwendung entspricht weitgehend der "
 "Verwendung von *super* in anderen Programmiersprachen."
 
-#: ../../builtins/functions.rst:2099
+#: ../../builtins/functions.rst:2114
 msgid ""
 "The second use case is to support cooperative multiple inheritance in a "
 "dynamic execution environment.  This use case is unique to Python and is not "
@@ -4199,13 +4221,13 @@ msgstr ""
 "Geschwisterklassen einbeziehen kann, die vor der Laufzeit noch unbekannt "
 "sind)."
 
-#: ../../builtins/functions.rst:2109
+#: ../../builtins/functions.rst:2124
 msgid "For both use cases, a typical superclass call looks like this::"
 msgstr ""
 "Für beide Anwendungsfälle sieht ein typischer Aufruf der Superklasse "
 "folgendermaßen aus:"
 
-#: ../../builtins/functions.rst:2111
+#: ../../builtins/functions.rst:2126
 msgid ""
 "class C(B):\n"
 "    def method(self, arg):\n"
@@ -4217,7 +4239,7 @@ msgstr ""
 "        super().method(arg)    # Dies bewirkt dasselbe wie:\n"
 "                               # super(C, self).method(arg)"
 
-#: ../../builtins/functions.rst:2116
+#: ../../builtins/functions.rst:2131
 msgid ""
 "In addition to method lookups, :func:`super` also works for attribute "
 "lookups.  One possible use case for this is calling :term:`descriptors "
@@ -4228,7 +4250,7 @@ msgstr ""
 "von :term:`Deskriptoren <descriptor>` in einer Eltern- oder "
 "Geschwisterklasse."
 
-#: ../../builtins/functions.rst:2120
+#: ../../builtins/functions.rst:2135
 msgid ""
 "Note that :func:`super` is implemented as part of the binding process for "
 "explicit dotted attribute lookups such as ``super().__getitem__(name)``. It "
@@ -4246,7 +4268,7 @@ msgstr ""
 "Anweisungen oder Operatoren, wie beispielsweise ``super()[name]``, nicht "
 "definiert."
 
-#: ../../builtins/functions.rst:2128
+#: ../../builtins/functions.rst:2143
 msgid ""
 "Also note that, aside from the zero argument form, :func:`super` is not "
 "limited to use inside methods.  The two argument form specifies the "
@@ -4263,7 +4285,7 @@ msgstr ""
 "erforderlichen Details ergänzt, um die gerade definierte Klasse korrekt zu "
 "ermitteln und bei gewöhnlichen Methoden auf die aktuelle Instanz zuzugreifen."
 
-#: ../../builtins/functions.rst:2135
+#: ../../builtins/functions.rst:2150
 msgid ""
 "For practical suggestions on how to design cooperative classes "
 "using :func:`super`, see `guide to using super() <https://"
@@ -4273,7 +4295,7 @@ msgstr ""
 "von :func:`super` findest du im `Leitfaden zur Verwendung von super() "
 "<https://rhettinger.wordpress.com/2011/05/26/super-considered-super/>`_."
 
-#: ../../builtins/functions.rst:2139
+#: ../../builtins/functions.rst:2154
 msgid ""
 ":class:`super` objects are now :mod:`pickleable <pickle>` "
 "and  :mod:`copyable <copy>`."
@@ -4281,7 +4303,7 @@ msgstr ""
 ":class:`super`-Objekte sind jetzt :mod:`picklebar <pickle>` "
 "und :mod:`kopierbar <copy>`."
 
-#: ../../builtins/functions.rst:2148
+#: ../../builtins/functions.rst:2163
 msgid ""
 "Rather than being a function, :class:`tuple` is actually an immutable "
 "sequence type, as documented in :ref:`typesseq-tuple` and :ref:`typesseq`."
@@ -4290,7 +4312,7 @@ msgstr ""
 "unveränderlicher Sequenztyp, wie in :ref:`typesseq-tuple` "
 "und :ref:`typesseq` dokumentiert."
 
-#: ../../builtins/functions.rst:2157
+#: ../../builtins/functions.rst:2172
 msgid ""
 "With one argument, return the type of an *object*.  The return value is a "
 "type object and generally the same object as returned "
@@ -4300,7 +4322,7 @@ msgstr ""
 "ein Typobjekt und im Allgemeinen dasselbe Objekt, das "
 "von :attr:`object.__class__` zurückgegeben wird."
 
-#: ../../builtins/functions.rst:2161
+#: ../../builtins/functions.rst:2176
 msgid ""
 "The :func:`isinstance` built-in function is recommended for testing the type "
 "of an object, because it takes subclasses into account."
@@ -4308,7 +4330,7 @@ msgstr ""
 "Die integrierte Funktion :func:`isinstance` wird empfohlen, um den Typ eines "
 "Objekts zu überprüfen, da sie Unterklassen berücksichtigt."
 
-#: ../../builtins/functions.rst:2164
+#: ../../builtins/functions.rst:2179
 msgid ""
 "With three arguments, return a new type object.  This is essentially a "
 "dynamic form of the :keyword:`class` statement. The *name* string is the "
@@ -4331,11 +4353,11 @@ msgstr ""
 "werden, bevor es zum Attribut :attr:`~type.__dict__` wird. Die folgenden "
 "beiden Anweisungen erzeugen identische :class:`!type`-Objekte:"
 
-#: ../../builtins/functions.rst:2179
+#: ../../builtins/functions.rst:2194
 msgid "See also:"
 msgstr "Siehe auch:"
 
-#: ../../builtins/functions.rst:2181
+#: ../../builtins/functions.rst:2196
 msgid ""
 ":ref:`Documentation on attributes and methods on classes <class-attrs-and-"
 "methods>`."
@@ -4343,11 +4365,11 @@ msgstr ""
 ":ref:`Dokumentation zu Attributen und Methoden von Klassen <class-attrs-and-"
 "methods>`."
 
-#: ../../builtins/functions.rst:2182
+#: ../../builtins/functions.rst:2197
 msgid ":ref:`bltin-type-objects`"
 msgstr ":ref:`bltin-type-objects`"
 
-#: ../../builtins/functions.rst:2184
+#: ../../builtins/functions.rst:2199
 msgid ""
 "Keyword arguments provided to the three argument form are passed to the "
 "appropriate metaclass machinery (usually :meth:`~object.__init_subclass__`) "
@@ -4360,7 +4382,7 @@ msgstr ""
 "dieselbe Weise, wie dies bei Schlüsselwörtern in einer Klassendefinition "
 "(abgesehen von *metaclass*) der Fall wäre."
 
-#: ../../builtins/functions.rst:2189
+#: ../../builtins/functions.rst:2204
 msgid ""
 "Unlike a :keyword:`class` statement, the three argument form does not call "
 "the metaclass ``__prepare__`` method (see :ref:`prepare`).  "
@@ -4372,11 +4394,11 @@ msgstr ""
 "(siehe :ref:`prepare`). Verwende :func:`types.new_class`, um eine Klasse "
 "dynamisch unter Verwendung der passenden Metaklasse zu erstellen."
 
-#: ../../builtins/functions.rst:2194
+#: ../../builtins/functions.rst:2209
 msgid "See also :ref:`class-customization`."
 msgstr "Siehe auch :ref:`class-customization`."
 
-#: ../../builtins/functions.rst:2196
+#: ../../builtins/functions.rst:2211
 msgid ""
 "Subclasses of :class:`!type` which don't override ``type.__new__`` may no "
 "longer use the one-argument form to get the type of an object."
@@ -4385,11 +4407,11 @@ msgstr ""
 "dürfen nicht mehr die Form mit einem Argument verwenden, um den Typ eines "
 "Objekts zu ermitteln."
 
-#: ../../builtins/functions.rst:2202
+#: ../../builtins/functions.rst:2217
 msgid "*dict* can now be a :class:`frozendict`."
 msgstr "*dict* kann jetzt ein :class:`frozendict` sein."
 
-#: ../../builtins/functions.rst:2207
+#: ../../builtins/functions.rst:2222
 msgid ""
 "Return the :attr:`~object.__dict__` attribute for a module, class, instance, "
 "or any other object with a :attr:`!__dict__` attribute."
@@ -4398,7 +4420,7 @@ msgstr ""
 "Instanz oder ein beliebiges anderes Objekt mit einem :attr:`!__dict__`-"
 "Attribut zurück."
 
-#: ../../builtins/functions.rst:2210
+#: ../../builtins/functions.rst:2225
 msgid ""
 "Objects such as modules and instances have an "
 "updateable :attr:`~object.__dict__` attribute; however, other objects may "
@@ -4412,11 +4434,11 @@ msgstr ""
 "(Klassen verwenden beispielsweise ein :class:`types.MappingProxyType`, um "
 "direkte Aktualisierungen des Dictionarys zu verhindern)."
 
-#: ../../builtins/functions.rst:2215
+#: ../../builtins/functions.rst:2230
 msgid "Without an argument, :func:`vars` acts like :func:`locals`."
 msgstr "Ohne Argument verhält sich :func:`vars` wie :func:`locals`."
 
-#: ../../builtins/functions.rst:2217
+#: ../../builtins/functions.rst:2232
 msgid ""
 "A :exc:`TypeError` exception is raised if an object is specified but it "
 "doesn't have a :attr:`~object.__dict__` attribute (for example, if its class "
@@ -4426,7 +4448,7 @@ msgstr ""
 "wird, das kein :attr:`~object.__dict__`-Attribut besitzt (zum Beispiel, wenn "
 "seine Klasse das :attr:`~object.__slots__`-Attribut definiert)."
 
-#: ../../builtins/functions.rst:2223
+#: ../../builtins/functions.rst:2238
 msgid ""
 "The result of calling this function without an argument has been updated as "
 "described for the :func:`locals` builtin."
@@ -4434,7 +4456,7 @@ msgstr ""
 "Das Ergebnis des Aufrufs dieser Funktion ohne Argument wurde wie für die "
 "integrierte Funktion :func:`locals` beschrieben aktualisiert."
 
-#: ../../builtins/functions.rst:2229
+#: ../../builtins/functions.rst:2244
 msgid ""
 "Iterate over several iterables in parallel, producing tuples with an item "
 "from each one."
@@ -4442,11 +4464,11 @@ msgstr ""
 "Über mehrere Iterables parallel iterieren und dabei Tupel mit je einem "
 "Element aus jedem Iterable erzeugen."
 
-#: ../../builtins/functions.rst:2232
+#: ../../builtins/functions.rst:2247
 msgid "Example::"
 msgstr "Beispiel::"
 
-#: ../../builtins/functions.rst:2234
+#: ../../builtins/functions.rst:2249
 msgid ""
 ">>> for item in zip([1, 2, 3], ['sugar', 'spice', 'everything nice']):\n"
 "...     print(item)\n"
@@ -4462,7 +4484,7 @@ msgstr ""
 "(2, 'spice')\n"
 "(3, 'everything nice')"
 
-#: ../../builtins/functions.rst:2241
+#: ../../builtins/functions.rst:2256
 msgid ""
 "More formally: :func:`zip` returns an iterator of tuples, where the *i*-th "
 "tuple contains the *i*-th element from each of the argument iterables."
@@ -4471,7 +4493,7 @@ msgstr ""
 "zurück, wobei das *i*-te Tupel das *i*-te Element aus jedem der als Argument "
 "übergebenen Iterables enthält."
 
-#: ../../builtins/functions.rst:2244
+#: ../../builtins/functions.rst:2259
 msgid ""
 "Another way to think of :func:`zip` is that it turns rows into columns, and "
 "columns into rows.  This is similar to `transposing a matrix <https://"
@@ -4481,7 +4503,7 @@ msgstr ""
 "in Spalten und Spalten in Zeilen umwandelt. Dies ähnelt dem `Transponieren "
 "einer Matrix <https://en.wikipedia.org/wiki/Transpose>`_."
 
-#: ../../builtins/functions.rst:2248
+#: ../../builtins/functions.rst:2263
 msgid ""
 ":func:`zip` is lazy: The elements won't be processed until the iterable is "
 "iterated on, e.g. by a :keyword:`!for` loop or by wrapping in "
@@ -4491,7 +4513,7 @@ msgstr ""
 "wenn über das Iterable iteriert wird, z. B. mittels einer :keyword:`!for`-"
 "Schleife oder durch Umwandlung in eine :class:`list`."
 
-#: ../../builtins/functions.rst:2252
+#: ../../builtins/functions.rst:2267
 msgid ""
 "One thing to consider is that the iterables passed to :func:`zip` could have "
 "different lengths; sometimes by design, and sometimes because of a bug in "
@@ -4503,7 +4525,7 @@ msgstr ""
 "aufgrund eines Fehlers in dem Code, der diese Iterables erstellt hat. Python "
 "bietet drei verschiedene Ansätze für den Umgang mit diesem Problem:"
 
-#: ../../builtins/functions.rst:2257
+#: ../../builtins/functions.rst:2272
 msgid ""
 "By default, :func:`zip` stops when the shortest iterable "
 "is :term:`exhausted`. It will ignore the remaining items in the longer "
@@ -4514,7 +4536,7 @@ msgstr ""
 "Elemente in den längeren iterierbaren Objekten und begrenzt das Ergebnis auf "
 "die Länge des kürzesten::"
 
-#: ../../builtins/functions.rst:2261
+#: ../../builtins/functions.rst:2276
 msgid ""
 ">>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum']))\n"
 "[(0, 'fee'), (1, 'fi'), (2, 'fo')]"
@@ -4522,7 +4544,7 @@ msgstr ""
 ">>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum']))\n"
 "[(0, 'fee'), (1, 'fi'), (2, 'fo')]"
 
-#: ../../builtins/functions.rst:2264
+#: ../../builtins/functions.rst:2279
 msgid ""
 ":func:`zip` is often used in cases where the iterables are assumed to be of "
 "equal length.  In such cases, it's recommended to use the ``strict=True`` "
@@ -4533,7 +4555,7 @@ msgstr ""
 "die Verwendung der Option ``strict=True``. Die Ausgabe entspricht der von "
 "regulärem :func:`zip`::"
 
-#: ../../builtins/functions.rst:2268
+#: ../../builtins/functions.rst:2283
 msgid ""
 ">>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))\n"
 "[('a', 1), ('b', 2), ('c', 3)]"
@@ -4541,7 +4563,7 @@ msgstr ""
 ">>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))\n"
 "[('a', 1), ('b', 2), ('c', 3)]"
 
-#: ../../builtins/functions.rst:2271
+#: ../../builtins/functions.rst:2286
 msgid ""
 "Unlike the default behavior, it raises a :exc:`ValueError` if one iterable "
 "is :term:`exhausted` before the others:"
@@ -4549,7 +4571,7 @@ msgstr ""
 "Im Gegensatz zum Standardverhalten löst es einen :exc:`ValueError` aus, wenn "
 "ein iterierbares Objekt vor den anderen :term:`erschöpft <exhausted>` ist:"
 
-#: ../../builtins/functions.rst:2289
+#: ../../builtins/functions.rst:2304
 msgid ""
 "Without the ``strict=True`` argument, any bug that results in iterables of "
 "different lengths will be silenced, possibly manifesting as a hard-to-find "
@@ -4559,7 +4581,7 @@ msgstr ""
 "unterschiedlicher Länge führen, unterdrückt. Das kann sich als schwer zu "
 "findender Fehler an einer anderen Stelle des Programms äußern."
 
-#: ../../builtins/functions.rst:2293
+#: ../../builtins/functions.rst:2308
 msgid ""
 "Shorter iterables can be padded with a constant value to make all the "
 "iterables have the same length.  This is done "
@@ -4569,7 +4591,7 @@ msgstr ""
 "alle Iterables dieselbe Länge haben. Dies geschieht "
 "mit :func:`itertools.zip_longest`."
 
-#: ../../builtins/functions.rst:2297
+#: ../../builtins/functions.rst:2312
 msgid ""
 "Edge cases: With a single iterable argument, :func:`zip` returns an iterator "
 "of 1-tuples.  With no arguments, it returns an empty iterator."
@@ -4578,11 +4600,11 @@ msgstr ""
 "Iterator von 1-Tupeln zurück. Ohne Argumente gibt es einen leeren Iterator "
 "zurück."
 
-#: ../../builtins/functions.rst:2300
+#: ../../builtins/functions.rst:2315
 msgid "Tips and tricks:"
 msgstr "Tipps und Tricks:"
 
-#: ../../builtins/functions.rst:2302
+#: ../../builtins/functions.rst:2317
 msgid ""
 "The left-to-right evaluation order of the iterables is guaranteed. This "
 "makes possible an idiom for clustering a data series into n-length groups "
@@ -4597,7 +4619,7 @@ msgstr ""
 "jedes Ergebnis-Tupel die Resultate von ``n`` Aufrufen des Iterators enthält. "
 "Dies bewirkt eine Aufteilung der Eingabe in Abschnitte der Länge ``n``."
 
-#: ../../builtins/functions.rst:2308
+#: ../../builtins/functions.rst:2323
 msgid ""
 ":func:`zip` in conjunction with the ``*`` operator can be used to unzip a "
 "list::"
@@ -4605,7 +4627,7 @@ msgstr ""
 ":func:`zip` kann in Verbindung mit dem ``*``-Operator verwendet werden, um "
 "eine Liste zu entpacken::"
 
-#: ../../builtins/functions.rst:2311
+#: ../../builtins/functions.rst:2326
 msgid ""
 ">>> x = [1, 2, 3]\n"
 ">>> y = [4, 5, 6]\n"
@@ -4623,11 +4645,11 @@ msgstr ""
 ">>> x == list(x2) and y == list(y2)\n"
 "True"
 
-#: ../../builtins/functions.rst:2319
+#: ../../builtins/functions.rst:2334
 msgid "Added the ``strict`` argument."
 msgstr "Das Argument ``strict`` wurde hinzugefügt."
 
-#: ../../builtins/functions.rst:2331
+#: ../../builtins/functions.rst:2346
 msgid ""
 "This is an advanced function that is not needed in everyday Python "
 "programming, unlike :func:`importlib.import_module`."
@@ -4636,7 +4658,7 @@ msgstr ""
 "zu :func:`importlib.import_module` in der alltäglichen Python-Programmierung "
 "nicht benötigt wird."
 
-#: ../../builtins/functions.rst:2334
+#: ../../builtins/functions.rst:2349
 msgid ""
 "This function is invoked by the :keyword:`import` statement.  It can be "
 "replaced (by importing the :mod:`builtins` module and assigning to "
@@ -4657,7 +4679,7 @@ msgstr ""
 "von :func:`__import__` wird zugunsten von :func:`importlib.import_module` "
 "abgeraten."
 
-#: ../../builtins/functions.rst:2343
+#: ../../builtins/functions.rst:2358
 msgid ""
 "The function imports the module *name*, potentially using the given "
 "*globals* and *locals* to determine how to interpret the name in a package "
@@ -4675,13 +4697,13 @@ msgstr ""
 "lediglich dazu, den Paketkontext der :keyword:`import`-Anweisung zu "
 "bestimmen."
 
-#: ../../builtins/functions.rst:2350
+#: ../../builtins/functions.rst:2365
+#, fuzzy
 msgid ""
 "*level* specifies whether to use absolute or relative imports. ``0`` (the "
-"default) means only perform absolute imports.  Positive values for *level* "
-"indicate the number of parent directories to search relative to the "
-"directory of the module calling :func:`__import__` (see :pep:`328` for the "
-"details)."
+"default) means only perform absolute imports.  For relative imports, ``1`` "
+"refers to the current package, ``2`` to its parent package, and so on "
+"(see :pep:`328` for details)."
 msgstr ""
 "*level* gibt an, ob absolute oder relative Importe verwendet werden sollen. "
 "``0`` (der Standard) bedeutet, dass nur absolute Importe durchgeführt "
@@ -4690,7 +4712,7 @@ msgstr ""
 "das :func:`__import__` aufruft, durchsucht werden sollen (siehe :pep:`328` "
 "für die Details)."
 
-#: ../../builtins/functions.rst:2356
+#: ../../builtins/functions.rst:2370
 msgid ""
 "When the *name* variable is of the form ``package.module``, normally, the "
 "top-level package (the name up till the first dot) is returned, *not* the "
@@ -4703,7 +4725,7 @@ msgstr ""
 "*fromlist*-Argument angegeben, so wird das durch *name* bezeichnete Modul "
 "zurückgegeben."
 
-#: ../../builtins/functions.rst:2361
+#: ../../builtins/functions.rst:2375
 msgid ""
 "For example, the statement ``import spam`` results in bytecode resembling "
 "the following code::"
@@ -4711,19 +4733,19 @@ msgstr ""
 "Die Anweisung ``import spam`` führt beispielsweise zu Bytecode, der dem "
 "folgenden Code ähnelt::"
 
-#: ../../builtins/functions.rst:2364
+#: ../../builtins/functions.rst:2378
 msgid "spam = __import__('spam', globals(), locals(), [], 0)"
 msgstr "spam = __import__('spam', globals(), locals(), [], 0)"
 
-#: ../../builtins/functions.rst:2366
+#: ../../builtins/functions.rst:2380
 msgid "The statement ``import spam.ham`` results in this call::"
 msgstr "Die Anweisung ``import spam.ham`` führt zu diesem Aufruf::"
 
-#: ../../builtins/functions.rst:2368
+#: ../../builtins/functions.rst:2382
 msgid "spam = __import__('spam.ham', globals(), locals(), [], 0)"
 msgstr "spam = __import__('spam.ham', globals(), locals(), [], 0)"
 
-#: ../../builtins/functions.rst:2370
+#: ../../builtins/functions.rst:2384
 msgid ""
 "Note how :func:`__import__` returns the toplevel module here because this is "
 "the object that is bound to a name by the :keyword:`import` statement."
@@ -4732,7 +4754,7 @@ msgstr ""
 "zurückgibt, da dies das Objekt ist, das durch die :keyword:`import`-"
 "Anweisung an einen Namen gebunden wird."
 
-#: ../../builtins/functions.rst:2373
+#: ../../builtins/functions.rst:2387
 msgid ""
 "On the other hand, the statement ``from spam.ham import eggs, sausage as "
 "saus`` results in ::"
@@ -4740,7 +4762,7 @@ msgstr ""
 "Andererseits führt die Anweisung ``from spam.ham import eggs, sausage as "
 "saus`` zu ::"
 
-#: ../../builtins/functions.rst:2376
+#: ../../builtins/functions.rst:2390
 msgid ""
 "_temp = __import__('spam.ham', globals(), locals(), ['eggs', 'sausage'], 0)\n"
 "eggs = _temp.eggs\n"
@@ -4750,7 +4772,7 @@ msgstr ""
 "eggs = _temp.eggs\n"
 "saus = _temp.sausage"
 
-#: ../../builtins/functions.rst:2380
+#: ../../builtins/functions.rst:2394
 msgid ""
 "Here, the ``spam.ham`` module is returned from :func:`__import__`.  From "
 "this object, the names to import are retrieved and assigned to their "
@@ -4760,7 +4782,7 @@ msgstr ""
 "diesem Objekt werden die zu importierenden Namen abgerufen und den "
 "entsprechenden Namen zugewiesen."
 
-#: ../../builtins/functions.rst:2384
+#: ../../builtins/functions.rst:2398
 msgid ""
 "If you simply want to import a module (potentially within a package) by "
 "name, use :func:`importlib.import_module`."
@@ -4768,7 +4790,7 @@ msgstr ""
 "Wenn du ein Modul (möglicherweise innerhalb eines Pakets) einfach anhand "
 "seines Namens importieren möchten, verwende :func:`importlib.import_module`."
 
-#: ../../builtins/functions.rst:2387
+#: ../../builtins/functions.rst:2401
 msgid ""
 "Negative values for *level* are no longer supported (which also changes the "
 "default value to 0)."
@@ -4776,7 +4798,7 @@ msgstr ""
 "Negative Werte für *level* werden nicht mehr unterstützt (wodurch sich auch "
 "der Standardwert auf 0 ändert)."
 
-#: ../../builtins/functions.rst:2391
+#: ../../builtins/functions.rst:2405
 msgid ""
 "When the command line options :option:`-E` or :option:`-I` are being used, "
 "the environment variable :envvar:`PYTHONCASEOK` is now ignored."
@@ -4784,11 +4806,11 @@ msgstr ""
 "Wenn die Befehlszeilenoptionen :option:`-E` oder :option:`-I` verwendet "
 "werden, wird die Umgebungsvariable :envvar:`PYTHONCASEOK` nun ignoriert."
 
-#: ../../builtins/functions.rst:2396
+#: ../../builtins/functions.rst:2410
 msgid "Footnotes"
 msgstr "Fußnoten"
 
-#: ../../builtins/functions.rst:2397
+#: ../../builtins/functions.rst:2411
 msgid ""
 "Note that the parser only accepts the Unix-style end of line convention. If "
 "you are reading the code from a file, make sure to use newline conversion "
@@ -4803,109 +4825,116 @@ msgstr ""
 msgid "Boolean"
 msgstr "Boolescher Wert"
 
-#: ../../builtins/functions.rst:158 ../../builtins/functions.rst:2155
+#: ../../builtins/functions.rst:158 ../../builtins/functions.rst:2170
 msgid "type"
 msgstr "Typ"
 
-#: ../../builtins/functions.rst:674
+#: ../../builtins/functions.rst:691
 msgid "built-in function"
 msgstr "Integrierte Funktion"
 
-#: ../../builtins/functions.rst:674
+#: ../../builtins/functions.rst:691
 msgid "exec"
 msgstr "Ausführen"
 
-#: ../../builtins/functions.rst:777
+#: ../../builtins/functions.rst:794
 msgid "NaN"
 msgstr "Keine Nummer (NaN, Not a Number)"
 
-#: ../../builtins/functions.rst:777
+#: ../../builtins/functions.rst:794
 msgid "Infinity"
 msgstr "Unendlichkeit"
 
-#: ../../builtins/functions.rst:847
+#: ../../builtins/functions.rst:864
 msgid "__format__"
 msgstr "__format__"
 
-#: ../../builtins/functions.rst:847 ../../builtins/functions.rst:2023
+#: ../../builtins/functions.rst:864 ../../builtins/functions.rst:2038
 msgid "string"
 msgstr "Zeichenkette"
 
-#: ../../builtins/functions.rst:847
+#: ../../builtins/functions.rst:864
 msgid "format() (built-in function)"
 msgstr "format() (Integrierte Funktion)"
 
-#: ../../builtins/functions.rst:1376
+#: ../../builtins/functions.rst:1393
 msgid "file object"
 msgstr "Datei Objekt"
 
-#: ../../builtins/functions.rst:1376 ../../builtins/functions.rst:1472
+#: ../../builtins/functions.rst:1393 ../../builtins/functions.rst:1489
 msgid "open() built-in function"
 msgstr "open() Integrierte Funktion"
 
-#: ../../builtins/functions.rst:1405
+#: ../../builtins/functions.rst:1422
 msgid "file"
 msgstr "Datei"
 
-#: ../../builtins/functions.rst:1405
+#: ../../builtins/functions.rst:1422
 msgid "modes"
 msgstr "Modus / Modi"
 
-#: ../../builtins/functions.rst:1472
+#: ../../builtins/functions.rst:1489
 msgid "universal newlines"
 msgstr "Universal Neue Zeile"
 
-#: ../../builtins/functions.rst:1533
+#: ../../builtins/functions.rst:1550
 msgid "line-buffered I/O"
 msgstr "Zeilen gepufferte I/O"
 
-#: ../../builtins/functions.rst:1533
+#: ../../builtins/functions.rst:1550
 msgid "unbuffered I/O"
 msgstr "Ungepufferte I/O"
 
-#: ../../builtins/functions.rst:1533
+#: ../../builtins/functions.rst:1550
 msgid "buffer size, I/O"
 msgstr "Puffer Größe, I/O"
 
-#: ../../builtins/functions.rst:1533
+#: ../../builtins/functions.rst:1550
 msgid "I/O control"
 msgstr "I/O Kontrolle"
 
-#: ../../builtins/functions.rst:1533
+#: ../../builtins/functions.rst:1550
 msgid "buffering"
 msgstr "Puffern"
 
-#: ../../builtins/functions.rst:1533
+#: ../../builtins/functions.rst:1550
 msgid "text mode"
 msgstr "Text Modus"
 
-#: ../../builtins/functions.rst:1533 ../../builtins/functions.rst:2325
+#: ../../builtins/functions.rst:1550 ../../builtins/functions.rst:2340
 msgid "module"
 msgstr "Modul"
 
-#: ../../builtins/functions.rst:1533
+#: ../../builtins/functions.rst:1550
 msgid "sys"
 msgstr "sys"
 
-#: ../../builtins/functions.rst:2023
+#: ../../builtins/functions.rst:2038
 msgid "str() (built-in function)"
 msgstr "str() (Integrierte Funktion)"
 
-#: ../../builtins/functions.rst:2155
+#: ../../builtins/functions.rst:2170
 msgid "object"
 msgstr "Objekt"
 
-#: ../../builtins/functions.rst:2325
+#: ../../builtins/functions.rst:2340
 msgid "statement"
 msgstr "Ausdruck"
 
-#: ../../builtins/functions.rst:2325
+#: ../../builtins/functions.rst:2340
 msgid "import"
 msgstr "Import"
 
-#: ../../builtins/functions.rst:2325
+#: ../../builtins/functions.rst:2340
 msgid "builtins"
 msgstr "Integrierte Funktionen"
+
+#~ msgid ""
+#~ "This function raises :exc:`SyntaxError` or :exc:`ValueError` if the "
+#~ "compiled source is invalid."
+#~ msgstr ""
+#~ "Diese Funktion löst :exc:`SyntaxError` oder :exc:`ValueError` aus, wenn "
+#~ "die kompilierte Quelle ungültig ist."
 
 #~ msgid ""
 #~ "``'strict'`` to raise a :exc:`ValueError` exception if there is an "
