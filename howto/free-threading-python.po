@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-22 12:07+0200\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2026-10-15 06:00+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -181,15 +181,14 @@ msgid "Thread safety"
 msgstr "Threadsicherheit"
 
 #: ../../howto/free-threading-python.rst:78
+#, fuzzy
 msgid ""
 "The free-threaded build of CPython aims to provide similar thread-safety "
 "behavior at the Python level to the default GIL-enabled build.  Built-in "
 "types like :class:`dict`, :class:`list`, and :class:`set` use internal locks "
 "to protect against concurrent modifications in ways that behave similarly to "
-"the GIL.  However, Python has not historically guaranteed specific behavior "
-"for concurrent modifications to these built-in types, so this should be "
-"treated as a description of the current implementation, not a guarantee of "
-"current or future behavior."
+"the GIL.  See :ref:`threadsafety` for the guarantees provided by built-in "
+"types."
 msgstr ""
 "Der Free-Threaded-Build von CPython will auf Python-Ebene ein ähnliches "
 "Verhalten in Bezug auf Threadsicherheit bieten wie der Standard-Build mit "
@@ -201,7 +200,7 @@ msgstr ""
 "als Beschreibung der aktuellen Implementierung zu verstehen, nicht als "
 "Garantie für aktuelles oder künftiges Verhalten."
 
-#: ../../howto/free-threading-python.rst:89
+#: ../../howto/free-threading-python.rst:86
 msgid ""
 "It's recommended to use the :class:`threading.Lock` or other synchronization "
 "primitives instead of relying on the internal locks of built-in types, when "
@@ -211,22 +210,22 @@ msgstr ""
 "Synchronisationsprimitive zu verwenden, anstatt sich auf die internen "
 "Sperren der integrierten Typen zu verlassen."
 
-#: ../../howto/free-threading-python.rst:95
+#: ../../howto/free-threading-python.rst:92
 msgid "Known limitations"
 msgstr "Bekannte Einschränkungen"
 
-#: ../../howto/free-threading-python.rst:97
+#: ../../howto/free-threading-python.rst:94
 msgid ""
 "This section describes known limitations of the free-threaded CPython build."
 msgstr ""
 "Dieser Abschnitt beschreibt bekannte Einschränkungen des Free-Threaded-"
 "Builds von CPython."
 
-#: ../../howto/free-threading-python.rst:100
+#: ../../howto/free-threading-python.rst:97
 msgid "Immortalization"
 msgstr "Unsterblichkeit"
 
-#: ../../howto/free-threading-python.rst:102
+#: ../../howto/free-threading-python.rst:99
 msgid ""
 "In the free-threaded build, some objects are :term:`immortal`. Immortal "
 "objects are not deallocated and have reference counts that are never "
@@ -239,12 +238,12 @@ msgstr ""
 "vermieden, das eine effiziente Skalierung über mehrere Threads verhindern "
 "würde."
 
-#: ../../howto/free-threading-python.rst:107
+#: ../../howto/free-threading-python.rst:104
 msgid "As of the 3.14 release, immortalization is limited to:"
 msgstr ""
 "Mit der Veröffentlichung von 3.14 ist die Unsterblichkeit beschränkt auf:"
 
-#: ../../howto/free-threading-python.rst:109
+#: ../../howto/free-threading-python.rst:106
 msgid ""
 "Code constants: numeric literals, string literals, and tuple literals "
 "composed of other constants."
@@ -252,15 +251,15 @@ msgstr ""
 "Codekonstanten: Zahlenliterale, Zeichenkettenliterale und Tupelliterale, die "
 "aus anderen Konstanten bestehen."
 
-#: ../../howto/free-threading-python.rst:111
+#: ../../howto/free-threading-python.rst:108
 msgid "Strings interned by :func:`sys.intern`."
 msgstr "Zeichenketten, die mit :func:`sys.intern` interniert wurden."
 
-#: ../../howto/free-threading-python.rst:115
+#: ../../howto/free-threading-python.rst:112
 msgid "Frame objects"
 msgstr "Frame-Objekte"
 
-#: ../../howto/free-threading-python.rst:117
+#: ../../howto/free-threading-python.rst:114
 msgid ""
 "It is not safe to access :attr:`frame.f_locals` from a :ref:`frame <frame-"
 "objects>` object if that frame is currently executing in another thread, and "
@@ -270,11 +269,11 @@ msgstr ""
 "auf :attr:`frame.f_locals` zuzugreifen, wenn dieser Frame gerade in einem "
 "anderen Thread ausgeführt wird. Der Interpreter kann dabei abstürzen."
 
-#: ../../howto/free-threading-python.rst:123
+#: ../../howto/free-threading-python.rst:120
 msgid "Iterators"
 msgstr "Iteratoren"
 
-#: ../../howto/free-threading-python.rst:125
+#: ../../howto/free-threading-python.rst:122
 msgid ""
 "It is generally not thread-safe to access the same iterator object from "
 "multiple threads concurrently, and threads may see duplicate or missing "
@@ -284,11 +283,11 @@ msgstr ""
 "auf dasselbe Iteratorobjekt zuzugreifen. Die Threads können doppelte oder "
 "fehlende Elemente sehen."
 
-#: ../../howto/free-threading-python.rst:131
+#: ../../howto/free-threading-python.rst:128
 msgid "Single-threaded performance"
 msgstr "Leistung bei einem einzelnen Thread"
 
-#: ../../howto/free-threading-python.rst:133
+#: ../../howto/free-threading-python.rst:130
 msgid ""
 "The free-threaded build has additional overhead when executing Python code "
 "compared to the default GIL-enabled build.  The amount of overhead depends "
@@ -302,11 +301,11 @@ msgstr ""
 "In der Benchmark-Sammlung pyperformance reicht der durchschnittliche Aufwand "
 "von etwa 1 % auf macOS aarch64 bis zu 8 % auf x86-64-Linux-Systemen."
 
-#: ../../howto/free-threading-python.rst:141
+#: ../../howto/free-threading-python.rst:138
 msgid "Behavioral changes"
 msgstr "Verhaltensänderungen"
 
-#: ../../howto/free-threading-python.rst:143
+#: ../../howto/free-threading-python.rst:140
 msgid ""
 "This section describes CPython behavioural changes with the free-threaded "
 "build."
@@ -314,11 +313,11 @@ msgstr ""
 "Dieser Abschnitt beschreibt Verhaltensänderungen von CPython im Free-"
 "Threaded-Build."
 
-#: ../../howto/free-threading-python.rst:148
+#: ../../howto/free-threading-python.rst:145
 msgid "Context variables"
 msgstr "Kontextvariablen"
 
-#: ../../howto/free-threading-python.rst:150
+#: ../../howto/free-threading-python.rst:147
 msgid ""
 "In the free-threaded build, the "
 "flag :data:`~sys.flags.thread_inherit_context` is set to true by default "
@@ -336,11 +335,11 @@ msgstr ""
 "GIL ist das Flag standardmäßig falsch, sodass Threads mit einem "
 "leeren :class:`~contextvars.Context()` starten."
 
-#: ../../howto/free-threading-python.rst:160
+#: ../../howto/free-threading-python.rst:157
 msgid "Warning filters"
 msgstr "Warnungsfilter"
 
-#: ../../howto/free-threading-python.rst:162
+#: ../../howto/free-threading-python.rst:159
 msgid ""
 "In the free-threaded build, the "
 "flag :data:`~sys.flags.context_aware_warnings` is set to true by default.  "
@@ -359,11 +358,11 @@ msgstr ""
 "verändert :class:`~warnings.catch_warnings` die globale Filterliste, was "
 "nicht threadsicher ist. Näheres steht beim Modul :mod:`warnings`."
 
-#: ../../howto/free-threading-python.rst:171
+#: ../../howto/free-threading-python.rst:168
 msgid "Increased memory usage"
 msgstr "Höherer Speicherverbrauch"
 
-#: ../../howto/free-threading-python.rst:173
+#: ../../howto/free-threading-python.rst:170
 msgid ""
 "The free-threaded build will typically use more memory compared to the "
 "default build.  There are multiple reasons for this, mostly due to design "
@@ -373,11 +372,11 @@ msgstr ""
 "üblicherweise mehr Speicher. Dafür gibt es mehrere Gründe, die größtenteils "
 "auf Entwurfsentscheidungen zurückgehen."
 
-#: ../../howto/free-threading-python.rst:178
+#: ../../howto/free-threading-python.rst:175
 msgid "All interned strings are immortal"
 msgstr "Alle internierten Zeichenketten sind unsterblich"
 
-#: ../../howto/free-threading-python.rst:180
+#: ../../howto/free-threading-python.rst:177
 msgid ""
 "For modern Python versions (since version 2.3), interning a string (e.g. "
 "with :func:`sys.intern`) does not cause it to become immortal.  Instead, if "
@@ -393,12 +392,12 @@ msgstr ""
 "Threaded-Build ist das nicht so: Jede internierte Zeichenkette wird "
 "unsterblich und überlebt bis zum Herunterfahren des Interpreters."
 
-#: ../../howto/free-threading-python.rst:188
+#: ../../howto/free-threading-python.rst:185
 msgid "Non-GC objects have a larger object header"
 msgstr ""
 "Objekte außerhalb der Speicherbereinigung haben einen größeren Objektkopf"
 
-#: ../../howto/free-threading-python.rst:190
+#: ../../howto/free-threading-python.rst:187
 msgid ""
 "The free-threaded build uses a different :c:type:`PyObject` structure.  "
 "Instead of having the GC related information allocated before "
@@ -418,11 +417,11 @@ msgstr ""
 "sind in beiden Builds gleich groß, weil der Free-Threaded-Build für die "
 "Informationen zur Speicherbereinigung keinen zusätzlichen Platz braucht."
 
-#: ../../howto/free-threading-python.rst:200
+#: ../../howto/free-threading-python.rst:197
 msgid "QSBR can delay freeing of memory"
 msgstr "QSBR kann die Freigabe von Speicher verzögern"
 
-#: ../../howto/free-threading-python.rst:202
+#: ../../howto/free-threading-python.rst:199
 msgid ""
 "In order to safely implement lock-free data structures, a safe memory "
 "reclamation (SMR) scheme is used, known as quiescent state-based reclamation "
@@ -450,11 +449,11 @@ msgstr ""
 "möglicherweise nicht sofort an das Betriebssystem zurückgibt. Die Resident "
 "Set Size (RSS) des Prozesses sinkt dann also nicht."
 
-#: ../../howto/free-threading-python.rst:216
+#: ../../howto/free-threading-python.rst:213
 msgid "mimalloc allocator vs pymalloc"
 msgstr "Die Speicherverwaltung mimalloc gegenüber pymalloc"
 
-#: ../../howto/free-threading-python.rst:218
+#: ../../howto/free-threading-python.rst:215
 msgid ""
 "The default build will normally use the \"pymalloc\" memory allocator for "
 "small allocations (512 bytes or smaller).  The free-threaded build does not "
@@ -475,7 +474,7 @@ msgstr ""
 "Speicherverwaltung mimalloc schlägt sich in diesen Punkten ebenfalls recht "
 "gut, kann aber etwas mehr Aufwand mitbringen."
 
-#: ../../howto/free-threading-python.rst:227
+#: ../../howto/free-threading-python.rst:224
 msgid ""
 "In the free-threaded build, mimalloc manages memory in a number of separate "
 "heaps (currently four).  For example, all GC supporting objects are "
@@ -499,7 +498,7 @@ msgstr ""
 "Speicherblöcke einer Page und der Freigabe der Speicherpage selbst – "
 "entweder für neue Anforderungen oder zurück an das Betriebssystem."
 
-#: ../../howto/free-threading-python.rst:237
+#: ../../howto/free-threading-python.rst:234
 msgid ""
 "The mimalloc allocator also defers returning freed memory back to the OS.  "
 "You can reduce that delay by setting the environment variable :envvar:`!"
@@ -512,11 +511,11 @@ msgstr ""
 "setzt. Beachte, dass das die Leistung der Speicherverwaltung wahrscheinlich "
 "verschlechtert."
 
-#: ../../howto/free-threading-python.rst:244
+#: ../../howto/free-threading-python.rst:241
 msgid "Free-threaded reference counting can cause objects to live longer"
 msgstr "Referenzzählung mit freiem Threading kann Objekte länger leben lassen"
 
-#: ../../howto/free-threading-python.rst:246
+#: ../../howto/free-threading-python.rst:243
 msgid ""
 "In the default build, when an object's reference count reaches zero, it is "
 "normally deallocated.  The free-threaded build uses \"biased reference "
@@ -535,7 +534,7 @@ msgstr ""
 "Der eingereihte Zustand wird im Abschnitt „eval breaker“ des Bytecode-"
 "Auswerters aufgelöst."
 
-#: ../../howto/free-threading-python.rst:254
+#: ../../howto/free-threading-python.rst:251
 msgid ""
 "The free-threaded build also allows a different mode of reference counting, "
 "known as \"deferred reference counting\".  This mode is enabled by setting a "
@@ -548,27 +547,27 @@ msgstr ""
 "eingeschaltet. Für die folgenden Typen ist die aufgeschobene Referenzzählung "
 "eingeschaltet:"
 
-#: ../../howto/free-threading-python.rst:259
+#: ../../howto/free-threading-python.rst:256
 msgid "module objects"
 msgstr "Modulobjekte"
 
-#: ../../howto/free-threading-python.rst:260
+#: ../../howto/free-threading-python.rst:257
 msgid "module top-level functions"
 msgstr "Funktionen auf der obersten Ebene eines Moduls"
 
-#: ../../howto/free-threading-python.rst:261
+#: ../../howto/free-threading-python.rst:258
 msgid "class methods defined in the class scope"
 msgstr "Klassenmethoden, die im Klassenbereich definiert sind"
 
-#: ../../howto/free-threading-python.rst:262
+#: ../../howto/free-threading-python.rst:259
 msgid "descriptor objects"
 msgstr "Deskriptor-Objekte"
 
-#: ../../howto/free-threading-python.rst:263
+#: ../../howto/free-threading-python.rst:260
 msgid "thread-local objects, created by :class:`threading.local`"
 msgstr "thread-lokale Objekte, erzeugt mit :class:`threading.local`"
 
-#: ../../howto/free-threading-python.rst:265
+#: ../../howto/free-threading-python.rst:262
 msgid ""
 "When deferred reference counting is enabled, references from Python function "
 "stacks are not added to the reference count.  This scheme reduces the "
@@ -592,11 +591,11 @@ msgstr ""
 "Speicherbereinigung freigegeben werden und nicht, wie üblich, sobald ihr "
 "Referenzzähler null erreicht."
 
-#: ../../howto/free-threading-python.rst:276
+#: ../../howto/free-threading-python.rst:273
 msgid "Per-thread reference counting can delay freeing objects"
 msgstr "Referenzzählung pro Thread kann die Freigabe von Objekten verzögern"
 
-#: ../../howto/free-threading-python.rst:278
+#: ../../howto/free-threading-python.rst:275
 msgid ""
 "To avoid contention on the reference count fields of frequently shared "
 "objects, the free-threaded build also uses \"per-thread reference counting\" "
@@ -616,19 +615,19 @@ msgstr ""
 "durch Summieren der Zähler aller Threads. Die Referenzzählung pro Thread "
 "wird derzeit verwendet für:"
 
-#: ../../howto/free-threading-python.rst:286
+#: ../../howto/free-threading-python.rst:283
 msgid "heap type objects (classes created in Python)"
 msgstr "Haldentypobjekte (in Python erzeugte Klassen)"
 
-#: ../../howto/free-threading-python.rst:287
+#: ../../howto/free-threading-python.rst:284
 msgid "code objects"
 msgstr "Codeobjekte"
 
-#: ../../howto/free-threading-python.rst:288
+#: ../../howto/free-threading-python.rst:285
 msgid "the ``__dict__`` of module objects"
 msgstr "das ``__dict__`` von Modulobjekten"
 
-#: ../../howto/free-threading-python.rst:290
+#: ../../howto/free-threading-python.rst:287
 msgid ""
 "Because the per-thread counts must be merged back to the object before it "
 "can be deallocated, objects using per-thread reference counting are "

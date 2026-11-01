@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-14 20:17+0000\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2026-10-15 06:00+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -1305,17 +1305,14 @@ msgstr ""
 "bilden die Eigenschaften von Generatorausdrücken nach:"
 
 #: ../../howto/functional.rst:630
+#, fuzzy
 msgid ""
-":func:`map(f, iterA, iterB, ...) <map>` returns an iterator over the sequence"
+":func:`map(f, iterA, iterB, ...) <map>` returns an iterator over the "
+"sequence ``f(iterA[0], iterB[0]), f(iterA[1], iterB[1]), f(iterA[2], "
+"iterB[2]), ...``."
 msgstr ""
 ":func:`map(f, iterA, iterB, ...) <map>` gibt einen Iterator über die Sequenz "
 "zurück"
-
-#: ../../howto/functional.rst:631
-msgid ""
-"``f(iterA[0], iterB[0]), f(iterA[1], iterB[1]), f(iterA[2], iterB[2]), ...``."
-msgstr ""
-"``f(iterA[0], iterB[0]), f(iterA[1], iterB[1]), f(iterA[2], iterB[2]), ...``."
 
 #: ../../howto/functional.rst:641
 msgid "You can of course achieve the same effect with a list comprehension."
@@ -2701,6 +2698,13 @@ msgid ""
 msgstr ""
 ":pep:`342`: „Coroutines via Enhanced Generators“ beschreibt die neuen "
 "Generator-Eigenschaften in Python 2.5."
+
+#~ msgid ""
+#~ "``f(iterA[0], iterB[0]), f(iterA[1], iterB[1]), f(iterA[2], "
+#~ "iterB[2]), ...``."
+#~ msgstr ""
+#~ "``f(iterA[0], iterB[0]), f(iterA[1], iterB[1]), f(iterA[2], "
+#~ "iterB[2]), ...``."
 
 #~ msgid "Release"
 #~ msgstr "Release"

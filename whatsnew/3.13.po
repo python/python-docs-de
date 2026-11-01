@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-22 12:07+0200\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2026-10-16 09:30+0200\n"
 "Last-Translator: @sba72\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -3689,13 +3689,14 @@ msgid "urllib"
 msgstr "urllib"
 
 #: ../../whatsnew/3.13.rst:1805
+#, fuzzy
 msgid ""
 "Remove the *cafile*, *capath*, and *cadefault* parameters of "
 "the :func:`urllib.request.urlopen` function, deprecated in Python 3.6. Use "
 "the *context* parameter instead with an :class:`~ssl.SSLContext` instance. "
-"The :meth:`ssl.SSLContext.load_cert_chain` function can be used to load "
-"specific certificates, or let :func:`ssl.create_default_context` select the "
-"operating system's trusted certificate authority (CA) certificates. "
+"The :meth:`ssl.SSLContext.load_verify_locations` method can be used to load "
+"specific CA certificates, or let :func:`ssl.create_default_context` select "
+"the operating system's trusted certificate authority (CA) certificates. "
 "(Contributed by Victor Stinner in :gh:`105382`.)"
 msgstr ""
 "Die Parameter *cafile*, *capath* und *cadefault* der "
@@ -6659,8 +6660,10 @@ msgstr ""
 "stattdessen :c:member:`PyConfig.xoptions`."
 
 #: ../../whatsnew/3.13.rst:2434
+#, fuzzy
 msgid ""
-":c:func:`!PySys_HasWarnOptions`: Use :c:member:`PyConfig.xoptions` instead."
+":c:func:`!PySys_HasWarnOptions`: Use :c:member:`PyConfig.warnoptions` "
+"instead."
 msgstr ""
 ":c:func:`!PySys_HasWarnOptions`: Verwende "
 "stattdessen :c:member:`PyConfig.xoptions`."
@@ -6724,8 +6727,9 @@ msgid ":c:func:`PyEval_SaveThread` and :c:func:`PyEval_RestoreThread`;"
 msgstr ":c:func:`PyEval_SaveThread` und :c:func:`PyEval_RestoreThread`,"
 
 #: ../../whatsnew/3.13.rst:2456
+#, fuzzy
 msgid ""
-"low-level :c:func:`PyEval_AcquireThread` and :c:func:`PyEval_RestoreThread`;"
+"low-level :c:func:`PyEval_AcquireThread` and :c:func:`PyEval_ReleaseThread`;"
 msgstr ""
 "die tief liegenden :c:func:`PyEval_AcquireThread` "
 "und :c:func:`PyEval_RestoreThread`"
@@ -7435,10 +7439,11 @@ msgstr ""
 "<PyUnicodeWriter_WriteSubstring>`."
 
 #: ../../deprecations/c-api-pending-removal-in-3.18.rst:33
+#, fuzzy
 msgid ""
 ":c:func:`!_PyUnicodeWriter_WriteASCIIString`: replace "
-"``_PyUnicodeWriter_WriteASCIIString(&writer, str)`` "
-"with :c:func:`PyUnicodeWriter_WriteASCII(writer, str) "
+"``_PyUnicodeWriter_WriteASCIIString(&writer, str, size)`` "
+"with :c:func:`PyUnicodeWriter_WriteASCII(writer, str, size) "
 "<PyUnicodeWriter_WriteASCII>`."
 msgstr ""
 ":c:func:`!_PyUnicodeWriter_WriteASCIIString`: ersetze "
@@ -7447,34 +7452,36 @@ msgstr ""
 "<PyUnicodeWriter_WriteASCII>`."
 
 #: ../../deprecations/c-api-pending-removal-in-3.18.rst:36
+#, fuzzy
 msgid ""
 ":c:func:`!_PyUnicodeWriter_WriteLatin1String`: replace "
-"``_PyUnicodeWriter_WriteLatin1String(&writer, str)`` "
-"with :c:func:`PyUnicodeWriter_WriteUTF8(writer, str) "
-"<PyUnicodeWriter_WriteUTF8>`."
+"``_PyUnicodeWriter_WriteLatin1String(&writer, str, size)`` by decoding the "
+"string with :c:func:`PyUnicode_DecodeLatin1`, writing the result "
+"with :c:func:`PyUnicodeWriter_WriteStr`, and releasing the result "
+"with :c:func:`Py_DECREF`."
 msgstr ""
 ":c:func:`!_PyUnicodeWriter_WriteLatin1String`: ersetze "
 "``_PyUnicodeWriter_WriteLatin1String(&writer, str)`` "
 "durch :c:func:`PyUnicodeWriter_WriteUTF8(writer, str) "
 "<PyUnicodeWriter_WriteUTF8>`."
 
-#: ../../deprecations/c-api-pending-removal-in-3.18.rst:39
+#: ../../deprecations/c-api-pending-removal-in-3.18.rst:41
 msgid ":c:func:`!_PyUnicodeWriter_Prepare`: (no replacement)."
 msgstr ":c:func:`!_PyUnicodeWriter_Prepare`: (kein Ersatz)."
 
-#: ../../deprecations/c-api-pending-removal-in-3.18.rst:40
+#: ../../deprecations/c-api-pending-removal-in-3.18.rst:42
 msgid ":c:func:`!_PyUnicodeWriter_PrepareKind`: (no replacement)."
 msgstr ":c:func:`!_PyUnicodeWriter_PrepareKind`: (kein Ersatz)."
 
-#: ../../deprecations/c-api-pending-removal-in-3.18.rst:41
+#: ../../deprecations/c-api-pending-removal-in-3.18.rst:43
 msgid ":c:func:`!_Py_HashPointer`: use :c:func:`Py_HashPointer`."
 msgstr ":c:func:`!_Py_HashPointer`: verwende :c:func:`Py_HashPointer`."
 
-#: ../../deprecations/c-api-pending-removal-in-3.18.rst:42
+#: ../../deprecations/c-api-pending-removal-in-3.18.rst:44
 msgid ":c:func:`!_Py_fopen_obj`: use :c:func:`Py_fopen`."
 msgstr ":c:func:`!_Py_fopen_obj`: verwende :c:func:`Py_fopen`."
 
-#: ../../deprecations/c-api-pending-removal-in-3.18.rst:44
+#: ../../deprecations/c-api-pending-removal-in-3.18.rst:46
 msgid ""
 "The `pythoncapi-compat project <https://github.com/python/pythoncapi-compat/"
 ">`__ can be used to get these new public functions on Python 3.13 and older. "
@@ -7977,6 +7984,7 @@ msgid "A ``tp_dealloc`` function that has the old macros, such as::"
 msgstr "Eine ``tp_dealloc``-Funktion mit den alten Makros, etwa::"
 
 #: ../../whatsnew/3.13.rst:2728
+#, fuzzy
 msgid ""
 "static void\n"
 "mytype_dealloc(mytype *p)\n"
@@ -7984,7 +7992,7 @@ msgid ""
 "    PyObject_GC_UnTrack(p);\n"
 "    Py_TRASHCAN_SAFE_BEGIN(p);\n"
 "    ...\n"
-"    Py_TRASHCAN_SAFE_END\n"
+"    Py_TRASHCAN_SAFE_END(p)\n"
 "}"
 msgstr ""
 "static void\n"
@@ -8069,12 +8077,12 @@ msgstr ""
 "der Funktion."
 
 #: ../../whatsnew/3.13.rst:2771
+#, fuzzy
 msgid ""
 "Calling :c:func:`PyFrame_GetLocals` in an :term:`optimized scope` now "
 "returns a write-through proxy rather than a snapshot that gets updated at "
-"ill-specified times. If a snapshot is desired, it must be created explicitly "
-"(e.g. with :c:func:`PyDict_Copy`), or by calling the "
-"new :c:func:`PyEval_GetFrameLocals` API."
+"ill-specified times. If a snapshot is desired, it must be created "
+"explicitly, or by calling the new :c:func:`PyEval_GetFrameLocals` API."
 msgstr ""
 ":c:func:`PyFrame_GetLocals` in einem :term:`optimierten Geltungsbereich "
 "<optimized scope>` aufzurufen gibt jetzt einen durchschreibenden "
@@ -8084,7 +8092,7 @@ msgstr ""
 "mit :c:func:`PyDict_Copy`) oder über einen Aufruf der neuen "
 "API :c:func:`PyEval_GetFrameLocals`."
 
-#: ../../whatsnew/3.13.rst:2778
+#: ../../whatsnew/3.13.rst:2777
 msgid ""
 ":c:func:`!PyFrame_FastToLocals` and :c:func:`!PyFrame_FastToLocalsWithError` "
 "no longer have any effect. Calling these functions has been redundant since "
@@ -8094,7 +8102,7 @@ msgstr ""
 "haben keine Wirkung mehr. Diese Funktionen aufzurufen ist seit Python 3.11 "
 "überflüssig, als :c:func:`PyFrame_GetLocals` erstmals hinzukam."
 
-#: ../../whatsnew/3.13.rst:2783
+#: ../../whatsnew/3.13.rst:2782
 msgid ""
 ":c:func:`!PyFrame_LocalsToFast` no longer has any effect. Calling this "
 "function is redundant now that :c:func:`PyFrame_GetLocals` returns a write-"
@@ -8105,7 +8113,7 @@ msgstr ""
 "für :term:`optimierte Geltungsbereiche <optimized scope>` jetzt einen "
 "durchschreibenden Stellvertreter zurückgibt."
 
-#: ../../whatsnew/3.13.rst:2787
+#: ../../whatsnew/3.13.rst:2786
 msgid ""
 "Python 3.13 removed many private functions. Some of them can be replaced "
 "using these alternatives:"
@@ -8113,20 +8121,20 @@ msgstr ""
 "Python 3.13 hat viele private Funktionen entfernt. Einige davon lassen sich "
 "durch diese Alternativen ersetzen:"
 
-#: ../../whatsnew/3.13.rst:2790
+#: ../../whatsnew/3.13.rst:2789
 msgid "``_PyDict_Pop()``: :c:func:`PyDict_Pop` or :c:func:`PyDict_PopString`;"
 msgstr ""
 "``_PyDict_Pop()``: :c:func:`PyDict_Pop` oder :c:func:`PyDict_PopString`,"
 
-#: ../../whatsnew/3.13.rst:2791
+#: ../../whatsnew/3.13.rst:2790
 msgid "``_PyDict_GetItemWithError()``: :c:func:`PyDict_GetItemRef`;"
 msgstr "``_PyDict_GetItemWithError()``: :c:func:`PyDict_GetItemRef`,"
 
-#: ../../whatsnew/3.13.rst:2792
+#: ../../whatsnew/3.13.rst:2791
 msgid "``_PyErr_WriteUnraisableMsg()``:  :c:func:`PyErr_FormatUnraisable`;"
 msgstr "``_PyErr_WriteUnraisableMsg()``:  :c:func:`PyErr_FormatUnraisable`,"
 
-#: ../../whatsnew/3.13.rst:2793
+#: ../../whatsnew/3.13.rst:2792
 msgid ""
 "``_PyEval_SetTrace()``: :c:func:`PyEval_SetTrace` "
 "or :c:func:`PyEval_SetTraceAllThreads`;"
@@ -8134,39 +8142,39 @@ msgstr ""
 "``_PyEval_SetTrace()``: :c:func:`PyEval_SetTrace` "
 "oder :c:func:`PyEval_SetTraceAllThreads`,"
 
-#: ../../whatsnew/3.13.rst:2794
+#: ../../whatsnew/3.13.rst:2793
 msgid "``_PyList_Extend()``: :c:func:`PyList_Extend`;"
 msgstr "``_PyList_Extend()``: :c:func:`PyList_Extend`,"
 
-#: ../../whatsnew/3.13.rst:2795
+#: ../../whatsnew/3.13.rst:2794
 msgid "``_PyLong_AsInt()``: :c:func:`PyLong_AsInt`;"
 msgstr "``_PyLong_AsInt()``: :c:func:`PyLong_AsInt`,"
 
-#: ../../whatsnew/3.13.rst:2796
+#: ../../whatsnew/3.13.rst:2795
 msgid "``_PyMem_RawStrdup()``: ``strdup()``;"
 msgstr "``_PyMem_RawStrdup()``: ``strdup()``,"
 
-#: ../../whatsnew/3.13.rst:2797
+#: ../../whatsnew/3.13.rst:2796
 msgid "``_PyMem_Strdup()``: ``strdup()``;"
 msgstr "``_PyMem_Strdup()``: ``strdup()``,"
 
-#: ../../whatsnew/3.13.rst:2798
+#: ../../whatsnew/3.13.rst:2797
 msgid "``_PyObject_ClearManagedDict()``: :c:func:`PyObject_ClearManagedDict`;"
 msgstr "``_PyObject_ClearManagedDict()``: :c:func:`PyObject_ClearManagedDict`,"
 
-#: ../../whatsnew/3.13.rst:2799
+#: ../../whatsnew/3.13.rst:2798
 msgid "``_PyObject_VisitManagedDict()``: :c:func:`PyObject_VisitManagedDict`;"
 msgstr "``_PyObject_VisitManagedDict()``: :c:func:`PyObject_VisitManagedDict`,"
 
-#: ../../whatsnew/3.13.rst:2800
+#: ../../whatsnew/3.13.rst:2799
 msgid "``_PyThreadState_UncheckedGet()``: :c:func:`PyThreadState_GetUnchecked()`;"
 msgstr "``_PyThreadState_UncheckedGet()``: :c:func:`PyThreadState_GetUnchecked()`,"
 
-#: ../../whatsnew/3.13.rst:2801
+#: ../../whatsnew/3.13.rst:2800
 msgid "``_PyTime_AsSecondsDouble()``: :c:func:`PyTime_AsSecondsDouble`;"
 msgstr "``_PyTime_AsSecondsDouble()``: :c:func:`PyTime_AsSecondsDouble`,"
 
-#: ../../whatsnew/3.13.rst:2802
+#: ../../whatsnew/3.13.rst:2801
 msgid ""
 "``_PyTime_GetMonotonicClock()``: :c:func:`PyTime_Monotonic` "
 "or :c:func:`PyTime_MonotonicRaw`;"
@@ -8174,7 +8182,7 @@ msgstr ""
 "``_PyTime_GetMonotonicClock()``: :c:func:`PyTime_Monotonic` "
 "oder :c:func:`PyTime_MonotonicRaw`,"
 
-#: ../../whatsnew/3.13.rst:2803
+#: ../../whatsnew/3.13.rst:2802
 msgid ""
 "``_PyTime_GetPerfCounter()``: :c:func:`PyTime_PerfCounter` "
 "or :c:func:`PyTime_PerfCounterRaw`;"
@@ -8182,7 +8190,7 @@ msgstr ""
 "``_PyTime_GetPerfCounter()``: :c:func:`PyTime_PerfCounter` "
 "oder :c:func:`PyTime_PerfCounterRaw`,"
 
-#: ../../whatsnew/3.13.rst:2804
+#: ../../whatsnew/3.13.rst:2803
 msgid ""
 "``_PyTime_GetSystemClock()``: :c:func:`PyTime_Time` "
 "or :c:func:`PyTime_TimeRaw`;"
@@ -8190,27 +8198,27 @@ msgstr ""
 "``_PyTime_GetSystemClock()``: :c:func:`PyTime_Time` "
 "oder :c:func:`PyTime_TimeRaw`,"
 
-#: ../../whatsnew/3.13.rst:2805
+#: ../../whatsnew/3.13.rst:2804
 msgid "``_PyTime_MAX``: :c:var:`PyTime_MAX`;"
 msgstr "``_PyTime_MAX``: :c:var:`PyTime_MAX`,"
 
-#: ../../whatsnew/3.13.rst:2806
+#: ../../whatsnew/3.13.rst:2805
 msgid "``_PyTime_MIN``: :c:var:`PyTime_MIN`;"
 msgstr "``_PyTime_MIN``: :c:var:`PyTime_MIN`,"
 
-#: ../../whatsnew/3.13.rst:2807
+#: ../../whatsnew/3.13.rst:2806
 msgid "``_PyTime_t``: :c:type:`PyTime_t`;"
 msgstr "``_PyTime_t``: :c:type:`PyTime_t`,"
 
-#: ../../whatsnew/3.13.rst:2808
+#: ../../whatsnew/3.13.rst:2807
 msgid "``_Py_HashPointer()``: :c:func:`Py_HashPointer`;"
 msgstr "``_Py_HashPointer()``: :c:func:`Py_HashPointer`,"
 
-#: ../../whatsnew/3.13.rst:2809
+#: ../../whatsnew/3.13.rst:2808
 msgid "``_Py_IsFinalizing()``: :c:func:`Py_IsFinalizing`."
 msgstr "``_Py_IsFinalizing()``: :c:func:`Py_IsFinalizing`."
 
-#: ../../whatsnew/3.13.rst:2811
+#: ../../whatsnew/3.13.rst:2810
 msgid ""
 "The `pythoncapi-compat project`_ can be used to get most of these new "
 "functions on Python 3.12 and older."
@@ -8218,11 +8226,11 @@ msgstr ""
 "Mit dem `pythoncapi-compat project`_ lassen sich die meisten dieser neuen "
 "Funktionen auch unter Python 3.12 und älter nutzen."
 
-#: ../../whatsnew/3.13.rst:2815
+#: ../../whatsnew/3.13.rst:2814
 msgid "Regression Test Changes"
 msgstr "Änderungen an den Regressionstests"
 
-#: ../../whatsnew/3.13.rst:2817
+#: ../../whatsnew/3.13.rst:2816
 msgid ""
 "Python built with :file:`configure` :option:`--with-pydebug` now supports "
 "a :option:`-X presite=package.module <-X>` command-line option. If used, it "
