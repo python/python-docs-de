@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-05 16:53+0200\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
@@ -1588,11 +1588,8 @@ msgstr ""
 
 #: ../../whatsnew/2.2.rst:1084
 msgid ""
-"Use :c:func:`PyObject_GC_New` or :c:func:`PyObject_GC_NewVar` to allocate"
-msgstr ""
-
-#: ../../whatsnew/2.2.rst:1085
-msgid "objects, and :c:func:`PyObject_GC_Del` to deallocate them."
+"Use :c:func:`PyObject_GC_New` or :c:func:`PyObject_GC_NewVar` to allocate "
+"objects, and :c:func:`PyObject_GC_Del` to deallocate them."
 msgstr ""
 
 #: ../../whatsnew/2.2.rst:1087

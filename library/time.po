@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 03:11+0000\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2026-05-08 17:18+0000\n"
 "Last-Translator: Swen Bachmann, 2026\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
@@ -667,11 +667,7 @@ msgid "``%f``"
 msgstr ""
 
 #: ../../library/time.rst:474
-msgid "Microseconds as a decimal number"
-msgstr ""
-
-#: ../../library/time.rst:475
-msgid "[000000,999999]."
+msgid "Microseconds as a decimal number [000000,999999]."
 msgstr ""
 
 #: ../../library/time.rst:474
