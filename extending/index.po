@@ -3,23 +3,27 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# Translators:
+# Jyst Breisgau, 2026
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-14 20:17+0000\n"
+"POT-Creation-Date: 2026-10-19 19:33+0000\n"
 "PO-Revision-Date: 2025-09-16 00:00+0000\n"
+"Last-Translator: Jyst Breisgau, 2026\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../extending/index.rst:5
 msgid "Extending and Embedding the Python Interpreter"
-msgstr ""
+msgstr "Erweiterung und Einbettung des Python-Interpreters"
 
 #: ../../extending/index.rst:7
 msgid ""
@@ -33,6 +37,16 @@ msgid ""
 "be loaded dynamically (at run time) into the interpreter, if the underlying "
 "operating system supports this feature."
 msgstr ""
+"Dieses Dokument beschreibt, wie du Module in C oder C++ schreibst, die den "
+"Python-Interpreter um neue Module erweitern. Diese Module können das Gleiche "
+"tun wie Python-Code – Funktionen, Objekttypen und Methoden definieren –, "
+"aber auch mit nativen Bibliotheken interagieren oder mehr Geschwindigkeit "
+"erreichen, indem sie den Overhead eines Interpreters vermeiden. Das Dokument "
+"beschreibt außerdem, wie du den Python-Interpreter in eine andere Anwendung "
+"einbettest, um ihn als Erweiterungssprache zu nutzen. Schließlich wird "
+"gezeigt, wie du Erweiterungsmodule kompilierst und verknüpfst, damit sie "
+"dynamisch (zur Laufzeit) in den Interpreter geladen werden können, sofern "
+"das zugrunde liegende Betriebssystem das unterstützt."
 
 #: ../../extending/index.rst:17
 msgid ""
@@ -43,12 +57,21 @@ msgid ""
 "documents the modules (both built-in and written in Python) that give the "
 "language its wide application range."
 msgstr ""
+"Dieses Dokument setzt Grundkenntnisse in C und Python voraus. Eine "
+"informelle Einführung in Python findest du unter :ref:`tutorial-index`. "
+"Unter :ref:`reference-index` findest du eine formellere Definition der "
+"Sprache. Unter :ref:`builtins-index` werden die integrierten Funktionen und "
+"Objekttypen dokumentiert, und unter :ref:`library-index` werden die Module "
+"(sowohl integrierte als auch in Python geschriebene) beschrieben, die der "
+"Sprache ihr breites Anwendungsspektrum verleihen."
 
 #: ../../extending/index.rst:24
 msgid ""
-"For a detailed description of the whole Python/C API, see the "
-"separate :ref:`c-api-index`."
+"For a detailed description of the whole Python/C API, see the separate :ref:"
+"`c-api-index`."
 msgstr ""
+"Eine ausführliche Beschreibung der gesamten Python/C-API findest du in der "
+"separaten Dokumentation unter :ref:`c-api-index`."
 
 #: ../../extending/index.rst:27
 msgid ""
@@ -57,6 +80,11 @@ msgid ""
 "aspects of the Python run-time system.  The Python API is incorporated in a "
 "C source file by including the header ``\"Python.h\"``."
 msgstr ""
+"Zur Unterstützung von Erweiterungen definiert die C-API (Application "
+"Programming Interface) von Python eine Reihe von Funktionen, Makros und "
+"Variablen, die Zugriff auf die meisten Aspekte des Python-Laufzeitsystems "
+"bieten. Die Python-API wird durch Einbinden des Headers ``\"Python.h\"`` in "
+"eine C-Quelldatei integriert."
 
 #: ../../extending/index.rst:34
 msgid ""
@@ -70,10 +98,21 @@ msgid ""
 "with C code and are more portable between implementations of Python than "
 "writing and compiling a C extension module."
 msgstr ""
+"Die C-Erweiterungsschnittstelle ist spezifisch für CPython, und "
+"Erweiterungsmodule funktionieren nicht mit anderen Python-Implementierungen. "
+"In vielen Fällen ist es möglich, das Schreiben von C-Erweiterungen zu "
+"vermeiden und die Portabilität auf andere Implementierungen zu wahren. Wenn "
+"dein Anwendungsfall beispielsweise den Aufruf von C-Bibliotheksfunktionen "
+"oder Systemaufrufen umfasst, solltest du die Verwendung des Moduls :mod:"
+"`ctypes` oder der Bibliothek `cffi <https://cffi.readthedocs.io/>`_ in "
+"Betracht ziehen, anstatt eigenen C-Code zu schreiben. Diese Module "
+"ermöglichen es dir, Python-Code zur Anbindung an C-Code zu schreiben, und "
+"sind zwischen verschiedenen Python-Implementierungen portabler als das "
+"Schreiben und Kompilieren eines C-Erweiterungsmoduls."
 
 #: ../../extending/index.rst:59
 msgid "Recommended third party tools"
-msgstr ""
+msgstr "Empfohlene Werkzeuge von Drittanbietern"
 
 #: ../../extending/index.rst:61
 msgid ""
@@ -82,6 +121,11 @@ msgid ""
 "tools>` offer both simpler and more sophisticated approaches to creating C "
 "and C++ extensions for Python."
 msgstr ""
+"Dieses Dokument behandelt lediglich die grundlegenden Werkzeuge zur "
+"Erstellung von Erweiterungen, die als Teil dieser Version von CPython "
+"bereitgestellt werden. Einige :ref:`Werkzeuge von Drittanbietern <c-api-"
+"tools>` bieten sowohl einfachere als auch mächtigere Ansätze, um C- und C++-"
+"Erweiterungen für Python zu erstellen."
 
 #: ../../extending/index.rst:66
 msgid ""
@@ -90,10 +134,14 @@ msgid ""
 "a simple test case for a build tool or sample expected output of a code "
 "generator."
 msgstr ""
+"Dieses Dokument richtet sich zwar an Autoren von Erweiterungen, dürfte aber "
+"auch für die Autoren solcher Werkzeuge hilfreich sein. So kann etwa das "
+"Tutorial-Modul als einfacher Testfall für ein Bauwerkzeug oder als Beispiel "
+"für die erwartete Ausgabe eines Codegenerators dienen."
 
 #: ../../extending/index.rst:73
 msgid "C API Tutorial"
-msgstr ""
+msgstr "C-API-Tutorial"
 
 #: ../../extending/index.rst:75
 msgid ""
@@ -101,14 +149,17 @@ msgid ""
 "Python C API -- that is, using the basic tools provided as part of this "
 "version of CPython."
 msgstr ""
+"Dieses Tutorial beschreibt, wie du ein einfaches Modul in C oder C++ mit der "
+"Python-C-API schreibst – also mit den grundlegenden Werkzeugen, die als Teil "
+"dieser Version von CPython bereitgestellt werden."
 
 #: ../../extending/index.rst:80
 msgid ":ref:`first-extension-module`"
-msgstr ""
+msgstr ":ref:`first-extension-module`"
 
 #: ../../extending/index.rst:84
 msgid "Guides for intermediate topics"
-msgstr ""
+msgstr "Leitfäden zu fortgeschrittenen Themen"
 
 #: ../../extending/index.rst:86
 msgid ""
@@ -117,30 +168,34 @@ msgid ""
 "those tools, rather than being a recommended way to create your own C "
 "extensions."
 msgstr ""
+"Dieser Abschnitt des Leitfadens befasst sich damit, C- und C++-Erweiterungen "
+"ohne Werkzeuge von Drittanbietern zu erstellen. Er richtet sich in erster "
+"Linie an die Autoren dieser Werkzeuge und ist keine empfohlene "
+"Vorgehensweise für eigene C-Erweiterungen."
 
 #: ../../extending/index.rst:91
 msgid ":ref:`extending-intro`"
-msgstr ""
+msgstr ":ref:`extending-intro`"
 
 #: ../../extending/index.rst:92
 msgid ":ref:`defining-new-types`"
-msgstr ""
+msgstr ":ref:`defining-new-types`"
 
 #: ../../extending/index.rst:93
 msgid ":ref:`new-types-topics`"
-msgstr ""
+msgstr ":ref:`new-types-topics`"
 
 #: ../../extending/index.rst:94
 msgid ":ref:`building`"
-msgstr ""
+msgstr ":ref:`building`"
 
 #: ../../extending/index.rst:95
 msgid ":ref:`building-on-windows`"
-msgstr ""
+msgstr ":ref:`building-on-windows`"
 
 #: ../../extending/index.rst:98
 msgid "Embedding the CPython runtime in a larger application"
-msgstr ""
+msgstr "Die CPython-Laufzeitumgebung in eine größere Anwendung einbetten"
 
 #: ../../extending/index.rst:100
 msgid ""
@@ -149,7 +204,12 @@ msgid ""
 "CPython runtime inside a larger application. This section covers some of the "
 "details involved in doing that successfully."
 msgstr ""
+"Manchmal ist es wünschenswert, statt einer Erweiterung, die als "
+"Hauptanwendung innerhalb des Python-Interpreters läuft, die CPython-"
+"Laufzeitumgebung in eine größere Anwendung einzubetten. In diesem Abschnitt "
+"werden einige Details behandelt, die für eine erfolgreiche Umsetzung "
+"erforderlich sind."
 
 #: ../../extending/index.rst:105
 msgid ":ref:`embedding`"
-msgstr ""
+msgstr ":ref:`embedding`"

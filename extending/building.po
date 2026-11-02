@@ -3,37 +3,44 @@
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# Translators:
+# Jyst Breisgau, 2026
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-22 12:07+0200\n"
+"POT-Creation-Date: 2026-10-19 19:33+0000\n"
 "PO-Revision-Date: 2025-09-16 00:00+0000\n"
+"Last-Translator: Jyst Breisgau, 2026\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../extending/building.rst:7
 msgid "Building C and C++ Extensions"
-msgstr ""
+msgstr "C- und C++-Erweiterungen bauen"
 
 #: ../../extending/building.rst:9
 msgid ""
 "A C extension for CPython is a shared library (for example, a ``.so`` file "
 "on Linux, ``.pyd`` on Windows), which exports an *initialization function*."
 msgstr ""
+"Eine C-Erweiterung für CPython ist eine gemeinsam genutzte Bibliothek "
+"(beispielsweise eine ``.so``-Datei unter Linux oder eine ``.pyd``-Datei "
+"unter Windows), die eine *Initialisierungsfunktion* exportiert."
 
 #: ../../extending/building.rst:12
 msgid "See :ref:`extension-modules` for details."
-msgstr ""
+msgstr "Weitere Informationen findest du unter :ref:`extension-modules`."
 
 #: ../../extending/building.rst:21
 msgid "Building C and C++ Extensions with setuptools"
-msgstr ""
+msgstr "C- und C++-Erweiterungen mit setuptools bauen"
 
 #: ../../extending/building.rst:24
 msgid ""
@@ -42,9 +49,15 @@ msgid ""
 "is Setuptools, whose documentation can be found at https://"
 "setuptools.pypa.io/en/latest/setuptools.html."
 msgstr ""
+"Erweiterungsmodule zu bauen, zu paketieren und zu verteilen, geht am besten "
+"mit Werkzeugen von Drittanbietern und wird in diesem Dokument nicht "
+"behandelt. Ein geeignetes Werkzeug ist Setuptools, dessen Dokumentation "
+"unter https://setuptools.pypa.io/en/latest/setuptools.html zu finden ist."
 
 #: ../../extending/building.rst:29
 msgid ""
 "The :mod:`distutils` module, which was included in the standard library "
 "until Python 3.12, is now maintained as part of Setuptools."
 msgstr ""
+"Das Modul :mod:`distutils`, das bis Python 3.12 Teil der Standardbibliothek "
+"war, wird nun als Teil von Setuptools gepflegt."
