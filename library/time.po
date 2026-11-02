@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-01 00:10+0000\n"
+"POT-Creation-Date: 2026-11-02 03:06+0000\n"
 "PO-Revision-Date: 2026-10-23 22:10+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -1307,7 +1307,8 @@ msgid "5"
 msgstr "5"
 
 #: ../../library/time.rst:681
-msgid "range [0, 61]; see :ref:`Note (2) <leap-second>` in :func:`strftime`"
+#, fuzzy
+msgid "range [0, 61]; see :ref:`Note (3) <leap-second>` in :func:`strftime`"
 msgstr ""
 "Bereich [0, 61], siehe :ref:`Hinweis (2) <leap-second>` bei :func:`strftime`"
 
