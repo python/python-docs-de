@@ -4644,7 +4644,7 @@ msgstr ""
 "Eigenschaft \"Lm\", \"Lt\", \"Lu\", \"Ll\" oder \"Lo\" ist. Beachte, dass "
 "sich dies von der `Alphabetic-Eigenschaft unterscheidet, die in Abschnitt "
 "4.10 'Letters, Alphabetic, and Ideographic' des Unicode-Standards <https://"
-"www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-4/#G91002>`_ "
+"www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-4/#G91002>`__ "
 "definiert ist. Zum Beispiel:"
 
 #: ../../builtins/stdtypes.rst:2404
@@ -5083,7 +5083,7 @@ msgid ""
 msgstr ""
 "Der verwendete Algorithmus zur Kleinschreibung ist in `Abschnitt 3.13.2 "
 "'Default Case Conversion' des Unicode-Standards <https://www.unicode.org/"
-"versions/Unicode17.0.0/core-spec/chapter-3/#G33992>`__ beschrieben."
+"versions/Unicode17.0.0/core-spec/chapter-3/#G34078>`__ beschrieben."
 
 #: ../../builtins/stdtypes.rst:2672
 msgid ""
