@@ -33,6 +33,11 @@ als Gettext-Dateien (`.po`). Übersetzt wird ausschließlich der `msgstr`.
 - „canvas" → „Zeichenfläche"
 - „namespace package" → „Namespace-Paket"
 - „thread state" → „Thread-Zustand", „attached" dazu → „angehängt"
+- „code object" → „Code-Objekt" mit Bindestrich (im Repo 47 zu 24
+  gegenüber „Codeobjekt")
+- „auditing event" → „Auditing-Ereignis" (im Repo 21 zu 16 gegenüber
+  „Audit-Ereignis"). Steht „audit event" im Fließtext ohne Rolle, dann
+  „Audit-Ereignis". Glossar-Stichwort gibt es für keinen der beiden Begriffe
 - „lazy import" → „verzögerter Import"
 - „subscription expression" → „Indexausdruck"
 - „universal newlines" → „universelle Zeilenumbrüche"
