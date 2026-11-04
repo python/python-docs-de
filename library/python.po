@@ -1,16 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Translators:
+# Swen Bachmann, 2026
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
 "PO-Revision-Date: 2025-09-16 00:01+0000\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +21,7 @@ msgstr ""
 
 #: ../../library/python.rst:5
 msgid "Python Runtime Services"
-msgstr ""
+msgstr "Dienste der Python-Laufzeitumgebung"
 
 #: ../../library/python.rst:7
 msgid ""
@@ -27,9 +29,14 @@ msgid ""
 "related to the Python interpreter and its interaction with its environment.  "
 "Here's an overview:"
 msgstr ""
+"Die in diesem Kapitel beschriebenen Module bieten ein breites Spektrum an "
+"Diensten rund um den Python-Interpreter und sein Zusammenspiel mit seiner "
+"Umgebung. Hier ein Überblick:"
 
 #: ../../library/python.rst:33
 msgid ""
 "See the :mod:`concurrent.interpreters` module, which similarly exposes core "
 "runtime functionality."
 msgstr ""
+"Siehe das Modul :mod:`concurrent.interpreters`, das ebenfalls Kernfunktionen "
+"der Laufzeitumgebung zugänglich macht."
