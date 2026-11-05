@@ -196,9 +196,9 @@ msgid ""
 "``ioctl()`` requests for querying the tty window size.  Not defined on all "
 "platforms; :func:`tcgetwinsize` requires at least one of them."
 msgstr ""
-"``ioctl()``-Anfragen, mit denen sich die Fenstergröße des Terminals "
-"abfragen lässt. Nicht auf allen Plattformen festgelegt. "
-":func:`tcgetwinsize` braucht mindestens eine davon."
+"``ioctl()``-Anfragen, mit denen sich die Fenstergröße des Terminals abfragen "
+"lässt. Nicht auf allen Plattformen festgelegt. :func:`tcgetwinsize` braucht "
+"mindestens eine davon."
 
 #: ../../library/termios.rst:127
 msgid ""

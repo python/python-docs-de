@@ -60,8 +60,7 @@ msgstr ""
 
 #: ../../c-api/method.rst:37
 msgid "Return the function object associated with the instance method *im*."
-msgstr ""
-"Gibt das Funktionsobjekt zurück, das zur Instanzmethode *im* gehört."
+msgstr "Gibt das Funktionsobjekt zurück, das zur Instanzmethode *im* gehört."
 
 #: ../../c-api/method.rst:42
 msgid ""
@@ -98,9 +97,9 @@ msgid ""
 "Return true if *o* is a method object (has type :c:data:`PyMethod_Type`).  "
 "The parameter must not be ``NULL``.  This function always succeeds."
 msgstr ""
-"Gibt wahr zurück, wenn *o* ein Methodenobjekt ist (also den Typ "
-":c:data:`PyMethod_Type` hat). Der Parameter darf nicht ``NULL`` sein. Diese "
-"Funktion gelingt immer."
+"Gibt wahr zurück, wenn *o* ein Methodenobjekt ist (also den "
+"Typ :c:data:`PyMethod_Type` hat). Der Parameter darf nicht ``NULL`` sein. "
+"Diese Funktion gelingt immer."
 
 #: ../../c-api/method.rst:73
 msgid ""

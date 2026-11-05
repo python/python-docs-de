@@ -6027,8 +6027,8 @@ msgid ""
 "``SSTATE_INTERNED_IMMORTAL`` An identifier for interned unicode objects that "
 "are immortal."
 msgstr ""
-"``SSTATE_INTERNED_IMMORTAL`` eine Kennzeichnung für internierte "
-"Unicode-Objekte, die unsterblich sind."
+"``SSTATE_INTERNED_IMMORTAL`` eine Kennzeichnung für internierte Unicode-"
+"Objekte, die unsterblich sind."
 
 #: ../../whatsnew/3.12.rst:2002
 msgid ""
