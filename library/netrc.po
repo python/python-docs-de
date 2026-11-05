@@ -99,10 +99,9 @@ msgstr ""
 ":class:`~netrc.netrc` versucht es zuerst mit UTF-8, bevor die Kodierung der "
 "aktuellen Locale verwendet wird. Ein Eintrag in der netrc-Datei muss nicht "
 "mehr alle Tokens enthalten. Fehlende Tokens erhalten standardmäßig eine "
-"leere Zeichenkette als Wert. Alle Tokens und ihre Werte dürfen nun "
-"beliebige Zeichen enthalten, etwa Whitespace und Zeichen außerhalb von "
-"ASCII. Lautet der Anmeldename anonymous, wird die Sicherheitsprüfung nicht "
-"ausgelöst."
+"leere Zeichenkette als Wert. Alle Tokens und ihre Werte dürfen nun beliebige "
+"Zeichen enthalten, etwa Whitespace und Zeichen außerhalb von ASCII. Lautet "
+"der Anmeldename anonymous, wird die Sicherheitsprüfung nicht ausgelöst."
 
 #: ../../library/netrc.rst:50
 msgid ""

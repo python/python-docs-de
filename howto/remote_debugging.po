@@ -59,8 +59,7 @@ msgstr ""
 
 #: ../../howto/remote_debugging.rst:19
 msgid "Use the :option:`-X disable-remote-debug` command-line option."
-msgstr ""
-"Verwende die Befehlszeilenoption :option:`-X disable-remote-debug`."
+msgstr "Verwende die Befehlszeilenoption :option:`-X disable-remote-debug`."
 
 #: ../../howto/remote_debugging.rst:20
 msgid "Compile Python with the :option:`--without-remote-debug` build flag."
@@ -1705,13 +1704,13 @@ msgid ""
 "checks already prevent unprivileged access."
 msgstr ""
 "Die Umgebungsvariable :envvar:`PYTHON_DISABLE_REMOTE_DEBUG` (und das "
-"gleichwertige Flag :option:`-X disable-remote-debug`) erlaubt es "
-"Betreibern, die prozessinterne Seite des Protokolls als Maßnahme der "
-"**mehrschichtigen Verteidigung** abzuschalten. Das kann in gehärteten oder "
-"abgeschotteten Betriebsumgebungen nützlich sein, in denen kein Debuggen "
-"oder Profilieren des Prozesses erwartet wird und das Verkleinern der "
-"Angriffsfläche Vorrang hat – auch wenn die Rechteprüfungen auf "
-"Betriebssystemebene unberechtigten Zugriff schon verhindern."
+"gleichwertige Flag :option:`-X disable-remote-debug`) erlaubt es Betreibern, "
+"die prozessinterne Seite des Protokolls als Maßnahme der **mehrschichtigen "
+"Verteidigung** abzuschalten. Das kann in gehärteten oder abgeschotteten "
+"Betriebsumgebungen nützlich sein, in denen kein Debuggen oder Profilieren "
+"des Prozesses erwartet wird und das Verkleinern der Angriffsfläche Vorrang "
+"hat – auch wenn die Rechteprüfungen auf Betriebssystemebene unberechtigten "
+"Zugriff schon verhindern."
 
 #: ../../howto/remote_debugging.rst:727
 msgid ""

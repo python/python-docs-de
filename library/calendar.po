@@ -285,9 +285,9 @@ msgid ""
 "width of the date columns, which are centered. Depends on the first weekday "
 "as specified in the constructor or set by the :meth:`setfirstweekday` method."
 msgstr ""
-"Gibt eine einzelne Woche als Zeichenkette ohne Zeilenumbruch zurück. "
-"*width* legt die Breite der Datumsspalten fest, die zentriert werden. Hängt "
-"vom ersten Wochentag ab, wie er im Konstruktor angegeben oder mit der "
+"Gibt eine einzelne Woche als Zeichenkette ohne Zeilenumbruch zurück. *width* "
+"legt die Breite der Datumsspalten fest, die zentriert werden. Hängt vom "
+"ersten Wochentag ab, wie er im Konstruktor angegeben oder mit der "
 "Methode :meth:`setfirstweekday` gesetzt wurde."
 
 #: ../../library/calendar.rst:182
@@ -669,8 +669,8 @@ msgid ""
 "Prints the calendar for an entire year as returned "
 "by :func:`~calendar.calendar`."
 msgstr ""
-"Gibt den Kalender für ein ganzes Jahr aus, wie ihn "
-":func:`~calendar.calendar` zurückgibt."
+"Gibt den Kalender für ein ganzes Jahr aus, wie "
+"ihn :func:`~calendar.calendar` zurückgibt."
 
 #: ../../library/calendar.rst:441
 msgid ""
