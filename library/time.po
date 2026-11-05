@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-05 06:38+0000\n"
 "PO-Revision-Date: 2026-10-23 22:10+0200\n"
-"Last-Translator: python-doc bot, 2025\n"
+"Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -1307,10 +1307,9 @@ msgid "5"
 msgstr "5"
 
 #: ../../library/time.rst:681
-#, fuzzy
 msgid "range [0, 61]; see :ref:`Note (3) <leap-second>` in :func:`strftime`"
 msgstr ""
-"Bereich [0, 61], siehe :ref:`Hinweis (2) <leap-second>` bei :func:`strftime`"
+"Bereich [0, 61], siehe :ref:`Hinweis (3) <leap-second>` bei :func:`strftime`"
 
 #: ../../library/time.rst:683
 msgid "6"

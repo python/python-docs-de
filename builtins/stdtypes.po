@@ -4154,13 +4154,12 @@ msgstr ""
 "Modul :mod:`re`)."
 
 #: ../../builtins/stdtypes.rst:2131
-#, fuzzy
 msgid ""
 "Return a copy of the string with its first character capitalized and the "
 "rest lowercased. For example:"
 msgstr ""
 "Gibt eine Kopie des Strings zurück, bei der das erste Zeichen "
-"großgeschrieben und der Rest kleingeschrieben ist."
+"großgeschrieben und der Rest kleingeschrieben ist. Zum Beispiel:"
 
 #: ../../builtins/stdtypes.rst:2134
 msgid ""
@@ -4169,6 +4168,10 @@ msgid ""
 ">>> 'ǋemačka starts With a non-ASCII digraph'.capitalize()\n"
 "'ǋemačka starts with a non-ascii digraph'"
 msgstr ""
+">>> 'PYTHON IS AMAZING'.capitalize()\n"
+"'Python is amazing'\n"
+">>> 'ǋemačka starts With a non-ASCII digraph'.capitalize()\n"
+"'ǋemačka starts with a non-ascii digraph'"
 
 #: ../../builtins/stdtypes.rst:2141 ../../builtins/stdtypes.rst:2607
 msgid "See also :meth:`title`."

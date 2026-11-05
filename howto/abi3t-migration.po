@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-05 06:38+0000\n"
 "PO-Revision-Date: 2026-11-01 16:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -433,13 +433,12 @@ msgstr ""
 "<Python.h>``::"
 
 #: ../../howto/abi3t-migration.rst:190
-#, fuzzy
 msgid ""
 "#if Py_TARGET_ABI3T+0 < 0x30f0000\n"
 "#error \"abi3t define is not set!\"\n"
 "#endif"
 msgstr ""
-"#if Py_TARGET_ABI3T+0 <= 0x30f0000\n"
+"#if Py_TARGET_ABI3T+0 < 0x30f0000\n"
 "#error \"abi3t define is not set!\"\n"
 "#endif"
 
@@ -449,6 +448,9 @@ msgid ""
 "set\". (If you get no error at all, either the module is already ported or "
 "you're not compiling the code you changed.)"
 msgstr ""
+"Das sollte zu einer anderen Fehlermeldung führen als „``abi3t`` define is "
+"not set“. (Bekommst du überhaupt keinen Fehler, ist das Modul entweder schon "
+"portiert oder du kompilierst nicht den Code, den du geändert hast.)"
 
 #: ../../howto/abi3t-migration.rst:198
 msgid ""
@@ -744,7 +746,6 @@ msgstr ""
 "sein:"
 
 #: ../../howto/abi3t-migration.rst:350
-#, fuzzy
 msgid ""
 "static PyObject *create_module(PyObject *spec, PyModuleDef *def) { ... }\n"
 "static int my_first_module_exec(PyObject *module) { ... }\n"
@@ -766,16 +767,15 @@ msgstr ""
 "static PyModuleDef_Slot my_slots[] = {\n"
 "   {Py_mod_gil, Py_MOD_GIL_NOT_USED},\n"
 "   {Py_mod_multiple_interpreters, Py_MOD_PER_INTERPRETER_GIL_SUPPORTED},\n"
-"   {Py_mod_create, my_module_create},\n"
+"   {Py_mod_create, create_module},\n"
 "   {Py_mod_exec, my_first_module_exec},\n"
 "   {Py_mod_exec, my_second_module_exec},\n"
 "   {0, NULL}\n"
 "};"
 
 #: ../../howto/abi3t-migration.rst:367
-#, fuzzy
 msgid "``Py_mod_create``"
-msgstr "``py_mod_create``"
+msgstr "``Py_mod_create``"
 
 #: ../../howto/abi3t-migration.rst:370
 msgid ""
@@ -809,9 +809,8 @@ msgstr ""
 "zu definieren.)"
 
 #: ../../howto/abi3t-migration.rst:387
-#, fuzzy
 msgid "Multiple ``Py_mod_exec``"
-msgstr "Multiple ``py_mod_exec``"
+msgstr "Mehrere ``Py_mod_exec``"
 
 #: ../../howto/abi3t-migration.rst:389
 msgid ""
@@ -824,7 +823,6 @@ msgstr ""
 "die bestehenden Slots durch sie."
 
 #: ../../howto/abi3t-migration.rst:393
-#, fuzzy
 msgid ""
 "static int my_module_exec(PyObject *module) {\n"
 "   if (my_first_module_exec(module) < 0) return -1;\n"
@@ -843,6 +841,7 @@ msgstr ""
 "static int my_module_exec(PyObject *module) {\n"
 "   if (my_first_module_exec(module) < 0) return -1;\n"
 "   if (my_second_module_exec(module) < 0) return -1;\n"
+"   return 0;\n"
 "}\n"
 "\n"
 "static PyModuleDef_Slot my_slots[] = {\n"
@@ -876,7 +875,6 @@ msgstr ""
 "und :c:macro:`PySlot_FUNC` umstellst:"
 
 #: ../../howto/abi3t-migration.rst:420
-#, fuzzy
 msgid ""
 "static PySlot my_slot_array[] = {\n"
 "    ...\n"
@@ -892,8 +890,8 @@ msgstr ""
 "    ...\n"
 "    PySlot_DATA(Py_mod_gil, Py_MOD_GIL_NOT_USED),\n"
 "    PySlot_DATA(Py_mod_multiple_interpreters,\n"
-"         Py_MOD_PER_INTERPRETER_GIL_SUPPORTED)\n"
-"    PySlot_FUNC(Py_mod_create, my_module_create),\n"
+"         Py_MOD_PER_INTERPRETER_GIL_SUPPORTED),\n"
+"    PySlot_FUNC(Py_mod_create, create_module),\n"
 "    PySlot_FUNC(Py_mod_exec, my_module_exec),\n"
 "    PySlot_END\n"
 "};"
@@ -976,7 +974,6 @@ msgstr ""
 "Zeiger darauf:"
 
 #: ../../howto/abi3t-migration.rst:471
-#, fuzzy
 msgid ""
 "static PySlot my_slot_array[] = {\n"
 "   ...\n"
@@ -988,7 +985,7 @@ msgstr ""
 "   ...\n"
 "   PySlot_STATIC_DATA(Py_mod_token, &my_token),\n"
 "   PySlot_END\n"
-"}"
+"};"
 
 #: ../../howto/abi3t-migration.rst:481
 msgid "Then, switch from :c:func:`PyModule_GetDef` calls such as:"
@@ -1037,13 +1034,12 @@ msgstr ""
 "zu :c:func:`PyType_GetModuleByToken` (das eine starke Referenz zurückgibt):"
 
 #: ../../howto/abi3t-migration.rst:509
-#, fuzzy
 msgid ""
 "PyObject *module = PyType_GetModuleByToken(type, &my_token);\n"
 "/* handle error; use module */\n"
 "Py_XDECREF(module);"
 msgstr ""
-"PyObject *module = PyType_GetModuleByToken(type, my_token);\n"
+"PyObject *module = PyType_GetModuleByToken(type, &my_token);\n"
 "/* handle error; use module */\n"
 "Py_XDECREF(module);"
 
@@ -1332,7 +1328,6 @@ msgstr ""
 "eindeutiges statisches Token und verwende:"
 
 #: ../../howto/abi3t-migration.rst:656
-#, fuzzy
 msgid ""
 "PyTypeObject *cls;\n"
 "if (PyType_GetBaseByToken(Py_TYPE(obj), my_tp_token, &cls) < 0) {\n"
@@ -1341,11 +1336,12 @@ msgid ""
 "CustomObjectData *data = PyObject_GetTypeData(obj, cls);\n"
 "Py_DECREF(cls);"
 msgstr ""
-"PyTypeObject cls;\n"
+"PyTypeObject *cls;\n"
 "if (PyType_GetBaseByToken(Py_TYPE(obj), my_tp_token, &cls) < 0) {\n"
 "    /* handle error */\n"
 "}\n"
-"CustomObjectData *data = PyObject_GetTypeData(obj, cls);"
+"CustomObjectData *data = PyObject_GetTypeData(obj, cls);\n"
+"Py_DECREF(cls);"
 
 #: ../../howto/abi3t-migration.rst:666
 msgid ""

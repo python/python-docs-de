@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-05 06:38+0000\n"
 "PO-Revision-Date: 2026-11-01 16:00+0100\n"
-"Last-Translator: python-doc bot, 2025\n"
+"Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -2011,13 +2011,12 @@ msgstr ""
 "Diese Option bewirkt nichts, wenn ``--enable-shared`` nicht verwendet wird."
 
 #: ../../using/configure.rst:1068
-#, fuzzy
 msgid ""
 "The default (when ``--enable-shared`` is used) is to link the Python "
 "interpreter against the built shared library."
 msgstr ""
-"Standardmäßig wird (bei Verwendung von ``-enable-shared``) der Python-"
-"Interpreter gegen die gebaute gemeinsam genutzte Bibliothek gelinkt."
+"Standardmäßig wird (bei Verwendung von ``--enable-shared``) der "
+"Python-Interpreter gegen die gebaute gemeinsam genutzte Bibliothek gelinkt."
 
 #: ../../using/configure.rst:1075
 msgid "Libraries options"

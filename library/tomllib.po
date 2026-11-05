@@ -376,10 +376,9 @@ msgid "Integers"
 msgstr "Ganze Zahlen"
 
 #: ../../library/tomllib.rst:180
-#, fuzzy
 msgid "TOML recommends supporting integers in ``range(-2**63, 2**63)``."
 msgstr ""
-"TOML empfiehlt, ganze Zahlen im Bereich ``range(−2**63, 2**63)`` zu "
+"TOML empfiehlt, ganze Zahlen im Bereich ``range(-2**63, 2**63)`` zu "
 "unterstützen."
 
 #: ../../library/tomllib.rst:183
