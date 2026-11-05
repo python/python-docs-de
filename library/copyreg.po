@@ -1,7 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -9,7 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
 "PO-Revision-Date: 2025-09-16 00:01+0000\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,11 +21,11 @@ msgstr ""
 
 #: ../../library/copyreg.rst:2
 msgid ":mod:`!copyreg` --- Register :mod:`!pickle` support functions"
-msgstr ""
+msgstr ":mod:`!copyreg` --- Hilfsfunktionen für :mod:`!pickle` registrieren"
 
 #: ../../library/copyreg.rst:7
 msgid "**Source code:** :source:`Lib/copyreg.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/copyreg.py`"
 
 #: ../../library/copyreg.rst:15
 msgid ""
@@ -32,12 +35,20 @@ msgid ""
 "configuration information about object constructors which are not classes. "
 "Such constructors may be factory functions or class instances."
 msgstr ""
+"Das Modul :mod:`!copyreg` bietet eine Möglichkeit, Funktionen festzulegen, "
+"die beim Picklen bestimmter Objekte verwendet werden. Die "
+"Module :mod:`pickle` und :mod:`copy` greifen beim Picklen bzw. Kopieren "
+"dieser Objekte auf diese Funktionen zurück. Das Modul stellt "
+"Konfigurationsangaben zu Objektkonstruktoren bereit, die keine Klassen sind. "
+"Solche Konstruktoren können Factory-Funktionen oder Klasseninstanzen sein."
 
 #: ../../library/copyreg.rst:24
 msgid ""
 "Declares *object* to be a valid constructor.  If *object* is not callable "
 "(and hence not valid as a constructor), raises :exc:`TypeError`."
 msgstr ""
+"Erklärt *object* zu einem gültigen Konstruktor. Ist *object* nicht aufrufbar "
+"und damit als Konstruktor ungültig, wird :exc:`TypeError` ausgelöst."
 
 #: ../../library/copyreg.rst:30
 msgid ""
@@ -47,12 +58,19 @@ msgid ""
 "the :attr:`~pickle.Pickler.dispatch_table` for more details on the interface "
 "of *function*."
 msgstr ""
+"Legt fest, dass *function* als „Reduktionsfunktion“ für Objekte des Typs "
+"*type* verwendet werden soll. *function* muss entweder eine Zeichenkette "
+"oder ein Tupel mit zwei bis sechs Elementen zurückgeben. Näheres zur "
+"Schnittstelle von *function* findest du "
+"unter :attr:`~pickle.Pickler.dispatch_table`."
 
 #: ../../library/copyreg.rst:35
 msgid ""
 "The *constructor_ob* parameter is a legacy feature and is now ignored, but "
 "if passed it must be a callable."
 msgstr ""
+"Der Parameter *constructor_ob* stammt aus einer früheren Fassung und wird "
+"inzwischen ignoriert. Wird er dennoch übergeben, muss er aufrufbar sein."
 
 #: ../../library/copyreg.rst:38
 msgid ""
@@ -60,16 +78,21 @@ msgid ""
 "object or subclass of :class:`pickle.Pickler` can also be used for declaring "
 "reduction functions."
 msgstr ""
+"Beachte, dass sich Reduktionsfunktionen auch über das "
+"Attribut :attr:`~pickle.Pickler.dispatch_table` eines Pickler-Objekts oder "
+"einer Unterklasse von :class:`pickle.Pickler` festlegen lassen."
 
 #: ../../library/copyreg.rst:43
 msgid "Example"
-msgstr ""
+msgstr "Beispiel"
 
 #: ../../library/copyreg.rst:45
 msgid ""
 "The example below would like to show how to register a pickle function and "
 "how it will be used:"
 msgstr ""
+"Das folgende Beispiel zeigt, wie eine Pickle-Funktion registriert und "
+"anschließend verwendet wird:"
 
 #: ../../library/copyreg.rst:9
 msgid "module"
@@ -77,8 +100,8 @@ msgstr "Modul"
 
 #: ../../library/copyreg.rst:9
 msgid "pickle"
-msgstr ""
+msgstr "pickle"
 
 #: ../../library/copyreg.rst:9
 msgid "copy"
-msgstr ""
+msgstr "copy"
