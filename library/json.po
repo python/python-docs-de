@@ -1,4 +1,4 @@
-ls# German translation of the Python documentation.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 #
@@ -402,7 +402,7 @@ msgid ""
 "Default ``True``."
 msgstr ""
 "Bei ``False`` wird die Prüfung auf Zirkelbezüge bei Behältertypen "
-"übersprungen; ein Zirkelbezug führt dann zu einem :exc:`RecursionError` "
+"übersprungen. Ein Zirkelbezug führt dann zu einem :exc:`RecursionError` "
 "(oder Schlimmerem). Voreingestellt ``True``."
 
 #: ../../library/json.rst:199
@@ -440,7 +440,7 @@ msgstr ""
 "Bei einer positiven ganzen Zahl oder einer Zeichenkette werden die Elemente "
 "von JSON-Arrays und die Mitglieder von Objekten mit diesem Einzug "
 "ansprechend ausgegeben. Eine positive ganze Zahl rückt je Ebene um so viele "
-"Leerzeichen ein; eine Zeichenkette (etwa ``\"\\t\"``) wird für den Einzug "
+"Leerzeichen ein. Eine Zeichenkette (etwa ``\"\\t\"``) wird für den Einzug "
 "jeder Ebene verwendet. Bei null, einem negativen Wert oder ``\"\"`` (der "
 "leeren Zeichenkette) werden nur Zeilenumbrüche eingefügt. Bei ``None`` (der "
 "Voreinstellung) werden keine Zeilenumbrüche eingefügt."
@@ -491,7 +491,7 @@ msgstr ""
 "daher nach JSON und wieder zurück, muss das Ergebnis dem Ausgangswert nicht "
 "gleichen: ``loads(dumps(x)) != x``, wenn x Schlüssel hat, die keine "
 "Zeichenketten sind. *sort_keys* sortiert die Schlüssel, bevor sie in "
-"Zeichenketten umgewandelt werden; numerische Schlüssel werden also nach "
+"Zeichenketten umgewandelt werden. Numerische Schlüssel werden also nach "
 "ihrem Wert sortiert und nicht nach ihrer Zeichenkettendarstellung."
 
 #: ../../library/json.rst:253 ../../library/json.rst:554
@@ -757,7 +757,7 @@ msgstr "float"
 
 #: ../../library/json.rst:410 ../../library/json.rst:504
 msgid "true"
-msgstr "Wahr"
+msgstr "true"
 
 #: ../../library/json.rst:410 ../../library/json.rst:504
 msgid "True"
@@ -765,7 +765,7 @@ msgstr "True"
 
 #: ../../library/json.rst:412 ../../library/json.rst:506
 msgid "false"
-msgstr "Falsch"
+msgstr "false"
 
 #: ../../library/json.rst:412 ../../library/json.rst:506
 msgid "False"
@@ -773,7 +773,7 @@ msgstr "False"
 
 #: ../../library/json.rst:414 ../../library/json.rst:508
 msgid "null"
-msgstr "Null"
+msgstr "null"
 
 #: ../../library/json.rst:414 ../../library/json.rst:508
 msgid "None"
@@ -795,7 +795,7 @@ msgid ""
 "(e.g. to support `JSON-RPC <https://www.jsonrpc.org>`_ class hinting)."
 msgstr ""
 "*object_hook* ist eine optionale Funktion, die mit dem Ergebnis jedes "
-"dekodierten JSON-Objekts aufgerufen wird; ihr Rückgabewert wird anstelle des "
+"dekodierten JSON-Objekts aufgerufen wird. Ihr Rückgabewert wird anstelle des "
 "übergebenen :class:`dict` verwendet. Damit lassen sich eigene "
 "Deserialisierungen bereitstellen, etwa die Unterstützung der Klassenhinweise "
 "von `JSON-RPC <https://www.jsonrpc.org>`_."
@@ -1392,7 +1392,7 @@ msgstr ""
 "verlangte, dass der Wert auf der obersten Ebene eines JSON-Textes entweder "
 "ein JSON-Objekt oder ein JSON-Array ist (:class:`dict` oder :class:`list` in "
 "Python), und nicht null, ein Wahrheitswert, eine Zahl oder eine "
-"Zeichenkette. :rfc:`7159` hat diese Einschränkung aufgehoben; dieses Modul "
+"Zeichenkette. :rfc:`7159` hat diese Einschränkung aufgehoben. Dieses Modul "
 "setzt sie weder im Serialisierer noch im Deserialisierer um und hat das nie "
 "getan."
 
