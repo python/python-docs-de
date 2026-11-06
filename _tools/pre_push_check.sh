@@ -6,7 +6,9 @@
 #            falsche/fehlende/ueberzaehlige :ref:/:term:/:class:/... -Rollen,
 #            OHNE dass ein kompletter Sphinx-Build noetig ist) + Auszeichnungs-
 #            pruefung (ueberfluessige Backtick-Klammern, uebersetzte Code-
-#            bloecke, abweichende ``Literale``)
+#            bloecke, abweichende ``Literale``) + Zeichensetzung (Semikolon
+#            mit kleingeschriebener Fortsetzung, doppelter Satzabstand -- nur
+#            auf den gegenueber HEAD geaenderten Dateien)
 #   Stufe 2 (optional, ca. 10-20 Min. auf einem M1 Mac): echter Sphinx-Build
 #            wie in test-build.yml, fuer die letzte Sicherheit vor dem Push
 #
@@ -25,6 +27,7 @@ REPO_ROOT="${REPO_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 CPYTHON_ROOT="${CPYTHON_ROOT:-/Volumes/Dev_SSD/GitHub}"
 CHECK_ROLES_PY="${CHECK_ROLES_PY:-$REPO_ROOT/_tools/check_roles.py}"
 CHECK_MARKUP_PY="${CHECK_MARKUP_PY:-$REPO_ROOT/_tools/check_markup.py}"
+CHECK_SATZ_PY="${CHECK_SATZ_PY:-$REPO_ROOT/_tools/check_satzzeichen.py}"
 EXCLUDE_DIRS=(".venv" ".git" "cpython-src")
 
 BRANCH="$(git -C "$REPO_ROOT" branch --show-current 2>/dev/null)"
@@ -71,7 +74,8 @@ is_excluded() {
 
 if ! $NONINTERACTIVE; then
     echo
-    echo "Stufe 1: Schnellcheck (msgfmt + sphinx-lint + Rollen-Konsistenz) -- ca. 1 Minute."
+    echo "Stufe 1: Schnellcheck (msgfmt + sphinx-lint + Rollen-Konsistenz +
+             Auszeichnung + Zeichensetzung) -- ca. 1 Minute."
     read -r -p "Durchfuehren? [J/n]: " ans
     if [[ "$ans" == "n" || "$ans" == "N" ]]; then
         RUN_QUICK=false
@@ -79,7 +83,7 @@ if ! $NONINTERACTIVE; then
 fi
 
 if $RUN_QUICK; then
-    log_section "1a/5  powrap (Zeilenumbruch auf 80 Zeichen)"
+    log_section "1a/6  powrap (Zeilenumbruch auf 80 Zeichen)"
     if ! command -v powrap &>/dev/null; then
         echo "powrap nicht gefunden -- installiere mit: pip install powrap"
         skip=$((skip + 1))
@@ -126,7 +130,7 @@ if $RUN_QUICK; then
         esac
     fi
 
-    log_section "1b/5  msgfmt --check (Syntax)"
+    log_section "1b/6  msgfmt --check (Syntax)"
     if ! command -v msgfmt &>/dev/null; then
         echo "msgfmt nicht gefunden -- gehoert zu gettext (brew install gettext)."
         echo "Schritt uebersprungen."
@@ -154,7 +158,7 @@ if $RUN_QUICK; then
         fail=$((fail + 1))
     fi
 
-    log_section "1c/5  sphinx-lint (Backtick-/Rollen-Syntax)"
+    log_section "1c/6  sphinx-lint (Backtick-/Rollen-Syntax)"
     if ! command -v sphinx-lint &>/dev/null; then
         echo "sphinx-lint nicht gefunden -- installiere mit: pip install sphinx-lint"
         skip=$((skip + 1))
@@ -175,7 +179,7 @@ if $RUN_QUICK; then
         fi
     fi
 
-    log_section "1d/5  Rollen-Konsistenz (eigener Check, kein Build noetig)"
+    log_section "1d/6  Rollen-Konsistenz (eigener Check, kein Build noetig)"
     if [[ ! -f "$CHECK_ROLES_PY" ]]; then
         echo "check_roles.py nicht gefunden unter $CHECK_ROLES_PY -- Schritt uebersprungen."
         skip=$((skip + 1))
@@ -187,13 +191,29 @@ if $RUN_QUICK; then
         fi
     fi
 
-    log_section "1e/5  Auszeichnung (ueberfluessige Backticks, Codebloecke, Literale)"
+    log_section "1e/6  Auszeichnung (ueberfluessige Backticks, Codebloecke, Literale)"
     if [[ ! -f "$CHECK_MARKUP_PY" ]]; then
         echo "check_markup.py nicht gefunden unter $CHECK_MARKUP_PY -- Schritt uebersprungen."
         skip=$((skip + 1))
     else
         if python3 "$CHECK_MARKUP_PY" "$REPO_ROOT" \
                --exclude "$(IFS=,; echo "${EXCLUDE_DIRS[*]}")" --max 10; then
+            pass=$((pass + 1))
+        else
+            fail=$((fail + 1))
+        fi
+    fi
+
+    log_section "1f/6  Zeichensetzung (Semikolon, Satzabstand)"
+    if [[ ! -f "$CHECK_SATZ_PY" ]]; then
+        echo "check_satzzeichen.py nicht gefunden unter $CHECK_SATZ_PY -- Schritt uebersprungen."
+        skip=$((skip + 1))
+    else
+        # --nur-geaendert: nur Dateien, die git gegenueber HEAD als geaendert
+        # oder neu meldet. So blockieren neue Fehler den Push, ohne dass der
+        # Altbestand den Check dauerhaft rot haelt.
+        if python3 "$CHECK_SATZ_PY" "$REPO_ROOT" \
+               --exclude "$(IFS=,; echo "${EXCLUDE_DIRS[*]}")" --nur-geaendert; then
             pass=$((pass + 1))
         else
             fail=$((fail + 1))
