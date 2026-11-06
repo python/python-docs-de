@@ -37,6 +37,43 @@ Sprachen zur Verfügung.
   Ein Begriff muss nachschlagbar bleiben: Wer „Factory-Funktion" liest,
   findet beim Suchen etwas, wer „Fabrikfunktion" liest, nicht.
 
+## Zeichensetzung
+
+Das englische Original setzt Zeichen anders als das Deutsche. Drei Stellen,
+an denen fast jede Übersetzung zuerst stolpert:
+
+- **Semikolon.** Verbindet das Original zwei vollständige Hauptsätze mit
+  einem Semikolon, wird daraus im Deutschen ein Punkt mit Großschreibung –
+  oder ein Komma, wenn der Satz es trägt. Das Semikolon bleibt nur dort, wo
+  es gleichrangige Glieder einer Aufzählung trennt, etwa parallele
+  „dass"-Sätze. Aus „Specifies that exactly *m* copies of the previous RE
+  should be matched; fewer matches cause the entire RE not to match." wird
+  also „Gibt an, dass genau *m* Kopien des vorangehenden RE passen sollen.
+  Bei weniger Wiederholungen passt der gesamte RE nicht."
+- **Anführungszeichen.** Deutsch „…", nie um eine Rolle oder um Code herum.
+- **Satzabstand.** Ein Leerzeichen nach dem Punkt, nicht zwei – das Original
+  setzt oft zwei.
+- **„passen auf" braucht ein Subjekt.** Das englische „to match" steht oft
+  im Passiv oder als Veranlassung; im Deutschen wird daraus beides ungelenk.
+  Kein „wobei auf so viele Wiederholungen wie möglich gepasst wird" und kein
+  „Lässt den entstehenden RE auf … passen", wo der Satz ein Subjekt haben
+  kann: „Der entstehende RE passt auf …, und zwar auf so viele wie möglich."
+  Häuft sich „passen" in einem Eintrag, hilft nicht ein anderes Wort für
+  „match" – „erfassen" ist für *capture* vergeben, „finden" für *search* –,
+  sondern eine andere Satzform: „Voreingestellt sind das alle Zeichen außer
+  …", „deckt … ab", „ergibt eine Fundstelle". Die Veranlassung bleibt richtig,
+  wo ein Flag das Verhalten setzt: „Lässt ``\w`` nur auf ASCII passen."
+
+Wer mit dem Repo arbeitet, prüft eine Datei mit
+
+    python3 _tools/check_satzzeichen.py <datei>
+
+und behebt die Funde mit `--fix`. Wer über Transifex übersetzt und das Repo
+nicht hat, findet die Semikolon-Stellen auch mit
+`grep -n '; [a-zäöüß]' <datei>`; Treffer im PO-Kopf (`Content-Type:
+text/plain; charset=UTF-8`, `Plural-Forms`) und in wörtlich übernommenen
+Codeblöcken sind dabei Falschmeldungen.
+
 ## Begriffe
 
 | Englisch | Deutsch | Anmerkung |
@@ -64,6 +101,9 @@ Sprachen zur Verfügung.
 | lazy import | verzögerter Import | |
 | look and feel | Aussehen und Verhalten | |
 | main window | Hauptfenster | |
+| to match | passen auf | siehe „Zeichensetzung" zur Satzform |
+| a match | Fundstelle | das Ergebnis, nicht der Vorgang |
+| match object | Match-Objekt | |
 | namespace package | Namespace-Paket | nicht „Namensraum-Paket" |
 | net mask | Netzmaske | |
 | numeric tower | numerischer Turm | |
