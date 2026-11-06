@@ -13,6 +13,7 @@
 # Voraussetzungen:
 #   * tx-CLI installiert und im PATH
 #   * API-Token in ~/.transifexrc (NICHT im Repo, nicht in dieser Datei)
+#   * Bash ab 3.2, also auch die von macOS mitgelieferte /bin/bash
 #
 # Nutzung:
 #   ./_tools/tx_push_all.sh                     # alles ausser AUSNAHMEN
@@ -82,8 +83,13 @@ ausgenommen() {
     return 1
 }
 
-# Ressourcennamen aus den Abschnittskoepfen der .tx/config lesen
-mapfile -t ALLE < <(
+# Ressourcennamen aus den Abschnittskoepfen der .tx/config lesen.
+# Bewusst eine Leseschleife statt "mapfile": das gibt es erst ab Bash 4,
+# macOS liefert aber /bin/bash 3.2 aus.
+ALLE=()
+while IFS= read -r zeile; do
+    [ -n "$zeile" ] && ALLE+=("$zeile")
+done < <(
     grep -o "^\[o:$ORGA:p:$PROJEKT:r:[^]]*\]" "$CONFIG" \
         | sed "s/.*:r://; s/\]//"
 )
@@ -105,12 +111,22 @@ done
 
 echo "Ressourcen: ${#ALLE[@]} insgesamt, ${#ZU_PUSHEN[@]} werden gepusht,"
 echo "            ${#UEBERSPRUNGEN[@]} ausgenommen"
-for r in "${UEBERSPRUNGEN[@]}"; do
-    echo "            ausgenommen: $r"
-done
+if [ ${#UEBERSPRUNGEN[@]} -gt 0 ]; then
+    for r in "${UEBERSPRUNGEN[@]}"; do
+        echo "            ausgenommen: $r"
+    done
+fi
 
 if $NUR_LISTE; then
-    printf '%s\n' "${ZU_PUSHEN[@]}"
+    if [ ${#ZU_PUSHEN[@]} -gt 0 ]; then
+        printf '%s\n' "${ZU_PUSHEN[@]}"
+    fi
+    exit 0
+fi
+
+if [ ${#ZU_PUSHEN[@]} -eq 0 ]; then
+    echo
+    echo "Keine Ressource passt auf die Auswahl -- nichts zu tun."
     exit 0
 fi
 
