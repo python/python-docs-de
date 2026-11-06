@@ -14,6 +14,11 @@ als Gettext-Dateien (`.po`). Übersetzt wird ausschließlich der `msgstr`.
   „list comprehension" → „List Comprehension". So lauten die
   Glossar-Stichwörter, und das Glossar entscheidet
 - „string" → „Zeichenkette" (nicht „String" oder „Zeichenfolge")
+- „to match" → „passen auf", „a match" → „Fundstelle",
+  „match object" → „Match-Objekt". „erfassen" ist für *capture*
+  reserviert („erfassende Gruppe"), „finden" für *search* — beides
+  nicht als zweites Wort für *match* verwenden. Zur Satzform siehe
+  „Zeichensetzung"
 - „iterable" → „Iterable" (im Repo 66 zu 42 gegenüber „iterierbares Objekt")
 - „comprehension" → „Comprehension", nie „Kompression" oder „Abstraktion"
 - „display" (list/set/dict display) → „Display", nicht „Anzeige". Dafür
@@ -73,8 +78,20 @@ und nicht betroffen.
 - Deutsche Anführungszeichen „…", nie um Rollen oder Code herum
 - Kein Semikolon mit kleingeschriebener Fortsetzung. Stattdessen Komma,
   wenn der Satz es trägt, sonst Punkt und Großschreibung — auch dann,
-  wenn das englische Original ein Semikolon setzt
+  wenn das englische Original ein Semikolon setzt. Einzige Ausnahme:
+  gleichrangige Glieder einer Aufzählung, etwa parallele „dass"-Sätze.
+  Die Regel geht beim Übersetzen leicht unter, weil der PO-Zeilenumbruch
+  häufig genau zwischen Semikolon und Fortsetzung fällt — darum nach
+  jeder Datei `check_satzzeichen.py` laufen lassen (siehe unten)
 - Ein Leerzeichen nach dem Satzende, nicht zwei (das Original setzt oft zwei)
+- „passen auf" nie im Passiv („wobei auf … gepasst wird") und nicht als
+  Veranlassung, wo der Satz ein Subjekt haben kann („Lässt den
+  entstehenden RE auf … passen" → „Der entstehende RE passt auf …, und
+  zwar auf so viele wie möglich"). Häuft sich „passen", hilft eine andere
+  Satzform, nicht ein anderes Wort: „deckt … ab", „ergibt eine
+  Fundstelle", „Voreingestellt sind das …". Richtig bleibt die
+  Veranlassung, wo ein Flag das Verhalten setzt: „Lässt ``\w`` nur auf
+  ASCII passen"
 - Kein verwaistes schließendes Anführungszeichen am Satzende
 - Tippfehler im englischen Original werden im `msgstr` korrigiert, nicht
   nachgebildet. Für Code-Literale gilt das Gegenteil: buchstabengetreu
@@ -156,6 +173,24 @@ titel). Einzeln für eine Datei:
     msgfmt --check --check-format -o /dev/null <datei>
     sphinx-lint <datei>
     python3 tools/check_markup.py <datei>
+
+Die Zeichensetzungsregeln prüft `check_satzzeichen.py` (Schritt 1f):
+
+    python3 _tools/check_satzzeichen.py <datei>
+    python3 _tools/check_satzzeichen.py <datei> --fix
+
+Der Check überspringt den PO-Kopf, veraltete Einträge und alle Einträge,
+deren `msgstr` wörtlich dem `msgid` entspricht — also die unübersetzten
+Codeblöcke, in denen ein Semikolon dazugehört. Richtige Semikolons zwischen
+gleichrangigen Gliedern erkennt er an einem wiederholten einleitenden Wort
+(„…, dass A; dass B; und dass C") und lässt sie stehen; einen Eintrag, in dem
+beides vorkommt, meldet er, ändert ihn mit `--fix` aber nicht. Der doppelte
+Satzabstand wird gemeldet, zählt aber nur mit `--mit-abstand` als Fehler —
+im Altbestand stehen über 400 solche Stellen.
+
+In `pre_push_check.sh` läuft der Check mit `--nur-geaendert`, prüft also nur
+Dateien, die git gegenüber HEAD als geändert oder neu meldet. Neue Fehler
+blockieren damit den Push, der Altbestand hält den Check nicht dauerhaft rot.
 
 `powrap` nur mit `-m` auf geänderte Dateien anwenden. Auf eine Datei, die
 vorher nicht powrap-sauber war, erzeugt es hunderte Zeilen Fremddiff. Die CI
