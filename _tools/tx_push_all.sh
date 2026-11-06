@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 #
 # tx_push_all.sh -- Uebersetzungen Ressource fuer Ressource nach Transifex
-# schieben. Das Repo ist dabei die Quelle der Wahrheit: mit --force werden
-# auch Strings ueberschrieben, die in Transifex von Hand bearbeitet wurden
-# (ohne diesen Schalter laesst Transifex sie unangetastet, siehe
-# replace_edited_strings in .tx/config).
+# schieben. Das Repo ist dabei die Quelle der Wahrheit: ein Push mit
+# --translation ersetzt die dortigen Uebersetzungen durch unseren Stand.
+#
+# --force heisst NICHT "bearbeitete Strings ueberschreiben". Laut tx-Hilfe
+# umgeht es nur die Pruefung der Aenderungszeiten ("Push source files
+# without checking modification times"). Ohne den Schalter uebergeht tx
+# Dateien, die aelter sind als die Ressource im Server -- und genau das
+# trifft auf einen Teil unserer Dateien zu. Die Option
+# replace_edited_strings in .tx/config betrifft Quell-Strings, nicht
+# Uebersetzungen.
 #
 # Ein Aufruf pro Ressource statt eines grossen Pushes, damit ein einzelner
 # Fehlschlag den Rest nicht aufhaelt. Was fehlschlaegt, steht am Ende noch
@@ -143,7 +149,7 @@ I=0
 for r in "${ZU_PUSHEN[@]}"; do
     I=$((I + 1))
     printf '[%3d/%3d] %s ... ' "$I" "$N" "$r"
-    if tx push --translation --force --resource "$PROJEKT.$r" >/dev/null 2>&1; then
+    if tx push --translation --force "$PROJEKT.$r" >/dev/null 2>&1; then
         echo "ok"
         OK=$((OK + 1))
     else
@@ -161,6 +167,6 @@ if [[ ${#FEHLER[@]} -gt 0 ]]; then
     done
     echo
     echo "Einzeln wiederholen mit:"
-    echo "  tx push --translation --force --resource $PROJEKT.<name>"
+    echo "  tx push --translation --force $PROJEKT.<name>"
     exit 1
 fi
