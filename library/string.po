@@ -1640,7 +1640,7 @@ msgstr ""
 "Die hier beschriebene Funktionalität wurde in Python 2.4 eingeführt. Eine "
 "einfache Vorlage-Methode (Templating), die auf regulären Ausdrücken basiert. "
 "Sie ist älter als :meth:`str.format`, :ref:`formatierte "
-"Zeichenkettenliterale <f-strings>` und :ref:`Vorlage-Zeichenkettenliterale "
+"Zeichenkettenliterale <f-strings>` und :ref:`Template-String-Literale "
 "<template-strings>`."
 
 #: ../../library/string.rst:822
@@ -1650,10 +1650,10 @@ msgid ""
 "to  :class:`string.templatelib.Template` objects, found in "
 "the :mod:`string.templatelib` module."
 msgstr ""
-"Sie steht in keinem Zusammenhang mit Vorlage-Zeichenkettenliteralen (t-"
-"strings), die in Python 3.14 eingeführt wurden. Diese werden "
-"zu :class:`string.templatelib.Template`-Objekten ausgewertet, die sich im "
-"Modul :mod:`string.templatelib` befinden."
+"Sie steht in keinem Zusammenhang mit Template-String-Literalen (t-Strings), "
+"die in Python 3.14 eingeführt wurden. Diese werden zu "
+":class:`string.templatelib.Template`-Objekten ausgewertet, die sich im Modul "
+":mod:`string.templatelib` befinden."
 
 #: ../../library/string.rst:827
 msgid ""
