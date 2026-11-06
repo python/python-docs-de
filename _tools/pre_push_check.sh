@@ -260,10 +260,20 @@ if $RUN_FULL; then
     cp -r "$REPO_ROOT/." "$LOCALE_DIR/"
     rm -rf "$LOCALE_DIR/.git" "$LOCALE_DIR/.venv"
 
+    # Dieselben Optionen wie test-build.yml. i18n.inconsistent_references
+    # wird unterdrueckt: Sphinx meldet das, wenn ein uebersetzter benannter
+    # Verweis nicht mehr denselben Zielnamen traegt wie das Original. Die
+    # Sprungziele hakt Sphinx selbst positionsweise wieder richtig ein, die
+    # Warnung ist also gegenstandslos -- mit -W wuerde sie den Build
+    # abbrechen.
+    SPHINX_OPTS="--color -D language='de'"
+    SPHINX_OPTS+=" -D suppress_warnings=i18n.inconsistent_references"
+    SPHINX_OPTS+=" -W --keep-going"
+
     echo "Starte 'make html' mit -W --keep-going (wie CI) ..."
     BUILD_LOG=$(mktemp)
     (cd "$CPYTHON_SRC/Doc" && \
-        make -e SPHINXOPTS="--color -D language='de' -W --keep-going" html \
+        make -e SPHINXOPTS="$SPHINX_OPTS" html \
         > "$BUILD_LOG" 2>&1)
     build_status=$?
 
