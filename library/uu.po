@@ -1,16 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Translators:
+# <Swen Bachmann>, <2026>
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.15\n"
+"Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-22 12:07+0200\n"
-"PO-Revision-Date: 2025-09-16 00:02+0000\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"POT-Creation-Date: 2026-11-01 00:10+0000\n"
+"PO-Revision-Date: 2025-09-16 00:01+0000\n"
+"Last-Translator: <Swen Bachmann>\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +21,7 @@ msgstr ""
 
 #: ../../library/uu.rst:2
 msgid ":mod:`!uu` --- Encode and decode uuencode files"
-msgstr ""
+msgstr ":mod:`!uu` --- uuencode-Dateien kodieren und dekodieren"
 
 #: ../../library/uu.rst:10
 msgid ""
@@ -27,6 +29,10 @@ msgid ""
 "was :ref:`removed in Python 3.13 <whatsnew313-pep594>` after being "
 "deprecated in Python 3.11.  The removal was decided in :pep:`594`."
 msgstr ""
+"Dieses Modul ist nicht länger Teil der Python Standardbibliothek. Es wurde "
+"in :ref:`removed in Python 3.13 <whatsnew313-pep594>` entfernt, nachdem es "
+"in Python 3.11 als veraltet markiert wurde. Die Entfernung wurde "
+"in :pep:`594` entschieden."
 
 #: ../../library/uu.rst:14
 msgid ""
@@ -34,9 +40,14 @@ msgid ""
 "using :func:`codecs.encode` and :func:`codecs.decode`, specifying ``\"uu\"`` "
 "as the encoding."
 msgstr ""
+"Kodieren und Dekodieren im uu-Format lässt sich stattdessen "
+"mit :func:`codecs.encode` und :func:`codecs.decode` erreichen, indem "
+"``\"uu\"`` als Kodierung angegeben wird."
 
 #: ../../library/uu.rst:18
 msgid ""
 "The last version of Python that provided the :mod:`!uu` module was `Python "
 "3.12 <https://docs.python.org/3.12/library/uu.html>`_."
 msgstr ""
+"Die letzte Version von Python, die das Module :mod:`!uu` bereitgestellt hat, "
+"war `Python 3.12 <https://docs.python.org/3.12/library/uu.html>`_."
