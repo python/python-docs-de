@@ -1,4 +1,4 @@
-# German translation of the Python documentation.
+ls# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
 #
