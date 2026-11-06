@@ -1,8 +1,8 @@
 # Übersetzen über Transifex – typische Fehler und wie du sie vermeidest
 
-Der Transifex-Editor zeigt beim Übersetzen nur den sichtbaren Text. 
-Die reST-Syntax dahinter bleibt unsichtbar – und genau dort entstehen fast 
-alle Fehler, die wir beim Zurückholen ins Repository finden.
+Der Transifex-Editor zeigt allein den sichtbaren Text. 
+Die reST-Syntax dahinter bleibt unsichtbar, bei dem die  typischen
+Fehler entstehen.
 
 Dies ist eine Liste typischer Fehler bei den Testläufen. 
 Wer sie kennt, produziert Übersetzungen, die ohne Nacharbeit 
@@ -31,13 +31,12 @@ lässt die Rolle unverändert oder du nutzt die Form aus Punkt 1:
 
 Jede Rolle aus dem Original muss in der Übersetzung wieder auftauchen. Baust
 du den Satz um, verschiebt sich die Auszeichnung – verschwinden darf sie
-nicht. Ebenso wenig darf eine Rolle leer bleiben: `` :ref:`` `` ist kaputt.
+nicht. Auch darf eine Rolle nie leer bleiben: `` :ref:`` `` ist kaputt.
 
 ## 4. Konsequente Du-Form
 
-Deutsche Übersetzungen durchgängig im informellen „Du", nie im „Sie".
-Funktionsbeschreibungen in der dritten Person: „Gibt … zurück", nicht
-„Geben Sie … zurück".
+In der deutsche Übersetzungen nutzen wir durchgängig das informellen „Du", 
+nie im „Sie". DeepL übersetzt automatisch nur in „Sie".
 
 ## 5. reST-Fallen
 
@@ -58,7 +57,7 @@ Funktionsbeschreibungen in der dritten Person: „Gibt … zurück", nicht
 
 ## Vor dem Commit ins Repository
 
-Für jede aus Transifex geholte Datei:
+Jede aus Transifex geholte Datei ins offizielle Repo wird geprüft mit:
 
 ```
 python fix_roles.py --dry-run <datei>.po   # zeigt fehlende Sprungziele
