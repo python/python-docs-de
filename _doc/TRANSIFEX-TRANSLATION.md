@@ -1,4 +1,4 @@
-# Übersetzen über Transifex – typische Fehler und wie du sie vermeidest
+# Übersetzen über Transifex – typische Fehler
 
 Der Transifex-Editor zeigt allein den sichtbaren Text. 
 Die reST-Syntax dahinter bleibt unsichtbar, bei dem die  typischen
@@ -71,11 +71,11 @@ python check_roles.py <datei>.po           # Rollen gegen msgid
 `fix_roles.py` erledigt die Fälle aus Punkt 1 automatisch, sofern die
 Zuordnung eindeutig ist. Alles andere meldet es und bleibt für dich liegen.
 
-## Dateikopf
+## Dateikopf (Erfolgt noch durch den Maintainer beim Merge)
 
 Aus Transifex geladene Dateien bringen ein `#, fuzzy` im Kopfblock mit. Das
-muss weg, sonst werten `potodo` und die CI-Prüfungen die Datei als
-unvollständig. Der Kopf sieht so aus:
+muss angepasst werden, sonst werten `potodo` und die CI-Prüfungen die Datei
+als unvollständig. Der Kopf sieht so aus:
 
 ```
 # German translation of the Python documentation.
