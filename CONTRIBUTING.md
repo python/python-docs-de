@@ -3,7 +3,8 @@
 Willkommen!
 Dieses Repository enthält die deutsche Übersetzung der
 Python-Dokumentation. 
-[Generelles](https://devguide.python.org/documentation/translations/translating/)  
+- [Generelles](https://devguide.python.org/documentation/translations/translating/)  
+- [Dashboard zur Übersetzung im aktuellen Branch](https://translations.python.org)
 
 Format sind Gettext-Dateien (`.po`). Übersetzt wird ausschließlich der `msgstr`. 
 Das englische `msgid` bleibt unverändert.
