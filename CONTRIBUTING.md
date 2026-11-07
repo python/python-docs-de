@@ -75,6 +75,8 @@ Das Skript ruft `msgfmt` auf, du brauchst also **gettext**:
 
 ### 1. Fork und Branch
 
+Auf GitHub oben rechts **Fork**, dann im Terminal:
+
 ```
 git clone https://github.com/<dein-konto>/python-docs-de.git
 cd python-docs-de
@@ -82,18 +84,16 @@ git checkout 3.15
 git checkout -b uebersetzung-pathlib
 ```
 
-### 2. Übersetzen
+Alle weiteren Befehle in dieser Datei laufen in diesem Verzeichnis, also im
+Wurzelverzeichnis des Repositorys.
 
-Empfohlen ist **[Poedit](https://poedit.net/)**. Es zeigt `msgid` und
-`msgstr` nebeneinander, kennt die PO-Syntax und bricht Zeilen korrekt um.
+Für eine kleine Korrektur, kann direkt die Datei auf GitHub geöffnen werden, 
+Stift-Symbol -> ändern -> Pull Request.
+Die Prüfungen laufen dann in der CI. Für eine ganze Datei ist der
+Browser-Editor nicht geeignet, dafür fehlt ihm die PO-Unterstützung.
+Empfohlen ist z.B. **[Poedit](https://poedit.net/)**.
 
-Zwei Dinge, die jeder Editor richtig machen muss:
-
-- Genau **ein** Kopfblock (`msgid ""`) pro Datei, mit `charset=UTF-8`.
-- Keine zusätzlichen Kopfblöcke am Dateiende. Das PyCharm-Gettext-Plugin
-  hängt gelegentlich welche an.
-
-### 3. Prüfen
+### 2. Prüfen
 
 ```
 ./_tools/pre_push_check.sh --quick
@@ -113,11 +113,13 @@ Erst wenn das durchläuft, lohnt der Pull Request. `--full` hängt zusätzlich
 einen echten Sphinx-Build an (10–20 Minuten) – nötig nur bei größeren
 Änderungen.
 
-Voraussetzung: `gettext` (für `msgfmt`) und `sphinx-lint`.
+Voraussetzung neben gettext: `pip install sphinx-lint`. Sobald du in deinen
+Fork pushst, laufen Syntax- und Lint-Prüfung außerdem automatisch als
+GitHub Action.
 
-### 4. Pull Request
+### 3. Pull Request
 
-Gegen `python/python-docs-de`, Branch `3.15`. Eine Datei oder ein Thema
+Gegen `python/python-docs-de`, akuteller Branch `3.15`. Eine Datei oder ein Thema
 pro Pull Request. In der Beschreibung das zugehörige Issue verlinken.
 
 ---
@@ -170,7 +172,7 @@ Zwei Grenzen:
 
 - Maschinell übersetzte Dateien ohne eigene Durchsicht werden nicht
   übernommen.
-- Das `msgid` wird nie verändert, auch nicht in Kleinigkeiten.
+- Das `msgid` wird nie verändert.
 
 ---
 
