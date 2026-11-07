@@ -16,7 +16,9 @@ Herkunft (Feld "origin" der API):
 
 Aufruf (im Repo, im Branch, dessen Projekt gemeint ist):
     python _tools/tx_activity.py --probe          # erst die API-Form klaeren
-    python _tools/tx_activity.py --bestand        # was wuerde ein Force-Push loeschen?
+    python _tools/tx_activity.py --bestand        # Repo gegen Transifex stellen:
+                                                  # was loescht ein Force-Push,
+                                                  # und was ist dort nie angekommen?
     python _tools/tx_activity.py                  # letzte 7 Tage
     python _tools/tx_activity.py --tage 1
     python _tools/tx_activity.py --ohne-upload    # eigene Pushes ausblenden
@@ -434,11 +436,17 @@ def bestand(org: str, projekt: str, karte: dict, wurzel: Path, tok: str,
     solche, die aelter sind als jedes Aktivitaetsfenster. Die Sammel-
     statistik beantwortet das fuer das ganze Projekt in vier Anfragen.
 
-    Rueckgabe: Anzahl der Ressourcen, bei denen wir Inhalt verlieren.
+    Umgekehrt zeigt derselbe Vergleich, wo Transifex *weniger* hat als
+    wir: dort ist unser Push nicht angekommen. Ein tx-Push kann ohne
+    Fehlermeldung wirkungslos bleiben, deshalb ist das die verlaessliche
+    Probe nach einem Lauf von tx_push_all.sh.
+
+    Rueckgabe: Anzahl der Ressourcen, bei denen eine der beiden Seiten
+    hinter der anderen liegt.
     """
     params = {"filter[project]": f"o:{org}:p:{projekt}",
               "filter[language]": "l:de"}
-    zeilen, fehlen = [], []
+    zeilen, fehlen, rueckstand = [], [], []
     tx_summe = repo_summe = 0
 
     for e in seiten("/resource_language_stats", params, tok):
@@ -457,16 +465,26 @@ def bestand(org: str, projekt: str, karte: dict, wurzel: Path, tok: str,
         repo_summe += repo_ue
         if tx_ue > repo_ue:
             zeilen.append((tx_ue - repo_ue, datei, slug, tx_ue, repo_ue, tx_ges))
+        elif repo_ue > tx_ue:
+            # Wir haben mehr als Transifex: unser Push ist dort nicht
+            # angekommen. Genau daran erkennt man einen stillen Fehlschlag.
+            rueckstand.append((repo_ue - tx_ue, datei, slug, tx_ue, repo_ue,
+                               tx_ges))
 
     zeilen.sort(reverse=True)
+    rueckstand.sort(reverse=True)
     verlust = sum(z[0] for z in zeilen)
+    nachtrag = sum(z[0] for z in rueckstand)
 
     aus = []
     aus.append(f"# Bestandsvergleich {org}:{projekt} gegen das Repo\n")
     aus.append(f"- Transifex uebersetzt (gesamt): {tx_summe}")
     aus.append(f"- Repo uebersetzt (gesamt):      {repo_summe}")
     aus.append(f"- Dateien mit Verlustgefahr:     {len(zeilen)}")
-    aus.append(f"- Strings, die ein Force-Push loeschen wuerde: {verlust}\n")
+    aus.append(f"- Strings, die ein Force-Push loeschen wuerde: {verlust}")
+    aus.append(f"- Dateien, bei denen Transifex hinter uns liegt: "
+               f"{len(rueckstand)}")
+    aus.append(f"- Strings, die dort noch fehlen: {nachtrag}\n")
     if zeilen:
         aus.append("| Datei | Ressource | TX | Repo | Verlust | TX gesamt |")
         aus.append("|---|---|---:|---:|---:|---:|")
@@ -474,6 +492,24 @@ def bestand(org: str, projekt: str, karte: dict, wurzel: Path, tok: str,
             aus.append(f"| `{datei}` | {slug} | {tx_ue} | {repo_ue} | **{d}** | {tx_ges} |")
     else:
         aus.append("Keine Datei, bei der Transifex mehr hat als wir.")
+    if rueckstand:
+        aus.append("\n## Noch nicht in Transifex angekommen\n")
+        aus.append("Hier hat das Repo mehr uebersetzte Strings als Transifex. "
+                   "Diese Dateien\nsind entweder nie gepusht worden oder ihr "
+                   "Push ist stillschweigend\nfehlgeschlagen.\n")
+        aus.append("| Datei | Ressource | TX | Repo | fehlt | TX gesamt |")
+        aus.append("|---|---|---:|---:|---:|---:|")
+        for d, datei, slug, tx_ue, repo_ue, tx_ges in rueckstand:
+            aus.append(f"| `{datei}` | {slug} | {tx_ue} | {repo_ue} | "
+                       f"**{d}** | {tx_ges} |")
+        aus.append("\nNachschieben mit:")
+        aus.append("```")
+        for _, _, slug, _, _, _ in rueckstand[:20]:
+            aus.append(f"./_tools/tx_push_all.sh --nur {slug}")
+        aus.append("```")
+    else:
+        aus.append("\nTransifex liegt bei keiner Datei hinter dem Repo -- "
+                   "alles angekommen.")
     if fehlen:
         aus.append(f"\nNicht in .tx/config ({len(fehlen)}): "
                    + ", ".join(f"{s} ({n})" for s, n in sorted(fehlen)[:20]))
@@ -484,7 +520,7 @@ def bestand(org: str, projekt: str, karte: dict, wurzel: Path, tok: str,
         print(f"Bericht geschrieben: {ziel}", file=sys.stderr)
     else:
         print(text)
-    return len(zeilen)
+    return len(zeilen) + len(rueckstand)
 
 
 def probe_anfrage(was: str, pfad: str, params: dict, tok: str) -> tuple:
