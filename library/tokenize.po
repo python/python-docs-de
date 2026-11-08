@@ -1,7 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -9,7 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2025-09-16 00:01+0000\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,11 +21,11 @@ msgstr ""
 
 #: ../../library/tokenize.rst:2
 msgid ":mod:`!tokenize` --- Tokenizer for Python source"
-msgstr ""
+msgstr ":mod:`!tokenize` --- Tokenizer für Python-Quellcode"
 
 #: ../../library/tokenize.rst:7
 msgid "**Source code:** :source:`Lib/tokenize.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/tokenize.py`"
 
 #: ../../library/tokenize.rst:11
 msgid ""
@@ -31,6 +34,10 @@ msgid ""
 "tokens as well, making it useful for implementing \"pretty-printers\", "
 "including colorizers for on-screen displays."
 msgstr ""
+"Das Modul :mod:`!tokenize` stellt einen lexikalischen Scanner für Python-"
+"Quellcode bereit, der selbst in Python geschrieben ist. Der Scanner dieses "
+"Moduls gibt auch Kommentare als Tokens zurück und eignet sich damit für "
+"Pretty-Printer, etwa für die farbige Darstellung auf dem Bildschirm."
 
 #: ../../library/tokenize.rst:16
 msgid ""
@@ -39,6 +46,11 @@ msgid ""
 "using the generic :data:`~token.OP` token type. "
 "The :attr:`TokenInfo.exact_type` property gives the exact token type."
 msgstr ""
+"Damit sich der Tokenstrom einfacher verarbeiten lässt, werden alle Tokens "
+"für :ref:`Operatoren <operators>` und :ref:`Trennzeichen <delimiters>` "
+"sowie :data:`Ellipsis` mit dem allgemeinen Tokentyp :data:`~token.OP` "
+"zurückgegeben. Das Property :attr:`TokenInfo.exact_type` nennt den genauen "
+"Tokentyp."
 
 #: ../../library/tokenize.rst:24
 msgid ""
@@ -48,14 +60,19 @@ msgid ""
 "**undefined** when providing invalid Python code and it can change at any "
 "point."
 msgstr ""
+"Beachte, dass die Funktionen dieses Moduls nur darauf ausgelegt sind, "
+"syntaktisch gültigen Python-Code zu parsen, also Code, der beim Parsen "
+"mit :func:`ast.parse` keine Ausnahme auslöst. Bei ungültigem Python-Code ist "
+"das Verhalten der Funktionen dieses Moduls **undefiniert** und kann sich "
+"jederzeit ändern."
 
 #: ../../library/tokenize.rst:31
 msgid "Tokenizing input"
-msgstr ""
+msgstr "Eingabe zerlegen"
 
 #: ../../library/tokenize.rst:33
 msgid "The primary entry point is a :term:`generator`:"
-msgstr ""
+msgstr "Der wichtigste Einstiegspunkt ist ein :term:`Generator <generator>`:"
 
 #: ../../library/tokenize.rst:37
 msgid ""
@@ -64,24 +81,32 @@ msgid ""
 "the :meth:`io.IOBase.readline` method of file objects.  Each call to the "
 "function should return one line of input as bytes."
 msgstr ""
+"Der Generator :func:`.tokenize` erwartet ein Argument, *readline*. Es muss "
+"ein aufrufbares Objekt sein, das dieselbe Schnittstelle bietet wie die "
+"Methode :meth:`io.IOBase.readline` von Dateiobjekten. Jeder Aufruf sollte "
+"eine Eingabezeile als Bytes zurückgeben."
 
 #: ../../library/tokenize.rst:42
 msgid "The generator produces :class:`TokenInfo` objects."
-msgstr ""
+msgstr "Der Generator erzeugt :class:`TokenInfo`-Objekte."
 
 #: ../../library/tokenize.rst:44
 msgid "Changed to yield :class:`TokenInfo` objects instead of plain tuples."
-msgstr ""
+msgstr "Liefert jetzt :class:`TokenInfo`-Objekte statt einfacher Tupel."
 
 #: ../../library/tokenize.rst:47
 msgid ""
 ":func:`.tokenize` determines the source encoding of the file by looking for "
 "a UTF-8 BOM or encoding cookie, according to :pep:`263`."
 msgstr ""
+":func:`.tokenize` ermittelt die Kodierung der Quelldatei, indem es "
+"gemäß :pep:`263` nach einem UTF-8-BOM oder einem Encoding-Cookie sucht."
 
 #: ../../library/tokenize.rst:52
 msgid "Tokenize a source reading unicode strings instead of bytes."
 msgstr ""
+"Zerlegt einen Quelltext, der als Unicode-Zeichenketten statt als Bytes "
+"gelesen wird."
 
 #: ../../library/tokenize.rst:54
 msgid ""
@@ -89,18 +114,27 @@ msgid ""
 "single line of input. However, :func:`generate_tokens` expects *readline* to "
 "return a str object rather than bytes."
 msgstr ""
+"Wie bei :func:`.tokenize` ist das Argument *readline* ein aufrufbares "
+"Objekt, das eine einzelne Eingabezeile zurückgibt. Allerdings "
+"erwartet :func:`generate_tokens`, dass *readline* ein str-Objekt statt Bytes "
+"liefert."
 
 #: ../../library/tokenize.rst:58
 msgid ""
 "The result is an iterator yielding :class:`TokenInfo` objects, exactly "
 "like :func:`.tokenize`. It does not yield an :data:`~token.ENCODING` token."
 msgstr ""
+"Das Ergebnis ist ein Iterator, der genau wie "
+"bei :func:`.tokenize` :class:`TokenInfo`-Objekte liefert. "
+"Ein :data:`~token.ENCODING`-Token liefert er nicht."
 
 #: ../../library/tokenize.rst:63
 msgid ""
 "A :term:`named tuple` describing a token. It has five fields and an "
 "additional :attr:`exact_type` property."
 msgstr ""
+"Ein :term:`benanntes Tupel <named tuple>`, das ein Token beschreibt. Es hat "
+"fünf Felder und zusätzlich das Property :attr:`exact_type`."
 
 #: ../../library/tokenize.rst:70
 msgid ""
@@ -109,6 +143,10 @@ msgid ""
 "Operators and delimiters have type :data:`~token.OP`; use :attr:`exact_type` "
 "for their specific token type."
 msgstr ""
+"Eine ganze Zahl, die den Tokentyp angibt, entsprechend den Konstanten "
+"in :mod:`token`, etwa :data:`~token.NAME` und :data:`~token.STRING`. "
+"Operatoren und Trennzeichen haben den Typ :data:`~token.OP`. Für deren "
+"genauen Tokentyp dient :attr:`exact_type`."
 
 #: ../../library/tokenize.rst:77
 msgid ""
@@ -116,6 +154,9 @@ msgid ""
 "includes the quotes, any prefix, and escape sequences, without evaluating "
 "them."
 msgstr ""
+"Der Text des Tokens als :class:`str`. Bei :data:`~token.STRING`-Tokens sind "
+"die Anführungszeichen, ein etwaiges Präfix und die Escape-Sequenzen "
+"enthalten, ohne dass sie ausgewertet werden."
 
 #: ../../library/tokenize.rst:81
 msgid ""
@@ -124,6 +165,11 @@ msgid ""
 "In :data:`~token.FSTRING_MIDDLE` and :data:`~token.TSTRING_MIDDLE` tokens, "
 "doubled braces are replaced by single braces."
 msgstr ""
+"Bei einem :data:`~token.ENCODING`-Token ist das der Name der Kodierung. "
+"Tokens, die ohne zugehörigen Quelltext eingefügt werden, können eine leere "
+"Zeichenkette enthalten. In Tokens :data:`~token.FSTRING_MIDDLE` "
+"und :data:`~token.TSTRING_MIDDLE` werden doppelte geschweifte Klammern durch "
+"einfache ersetzt."
 
 #: ../../library/tokenize.rst:89
 msgid ""
@@ -132,10 +178,15 @@ msgid ""
 "Columns count Unicode code points; a tab counts as one column, without "
 "expanding it to a tab stop."
 msgstr ""
+"Ein Zweiertupel ``(srow, scol)`` aus ganzen Zahlen, das die Anfangsposition "
+"des Tokens im Quelltext angibt, einschließlich dieser Position. Zeilen "
+"werden ab 1 gezählt, Spalten ab 0. Spalten zählen Unicode-Codepunkte. Ein "
+"Tabulator zählt als eine Spalte und wird nicht bis zum nächsten "
+"Tabulatorstopp aufgefüllt."
 
 #: ../../library/tokenize.rst:94
 msgid "For an :data:`~token.ENCODING` token, this is ``(0, 0)``."
-msgstr ""
+msgstr "Bei einem :data:`~token.ENCODING`-Token ist das ``(0, 0)``."
 
 #: ../../library/tokenize.rst:98
 msgid ""
@@ -143,12 +194,18 @@ msgid ""
 "the token. Rows are numbered from 1 and columns from 0. For a token spanning "
 "multiple lines, *erow* is the final row and *ecol* is the column on that row."
 msgstr ""
+"Ein Zweiertupel ``(erow, ecol)`` aus ganzen Zahlen, das die Endposition des "
+"Tokens angibt, diese Position selbst ausgenommen. Zeilen werden ab 1 "
+"gezählt, Spalten ab 0. Reicht ein Token über mehrere Zeilen, ist *erow* die "
+"letzte Zeile und *ecol* die Spalte in dieser Zeile."
 
 #: ../../library/tokenize.rst:103
 msgid ""
 "For example, the name ``spam`` at the beginning of the first line "
 "has :attr:`start` equal to ``(1, 0)`` and :attr:`end` equal to ``(1, 4)``."
 msgstr ""
+"Beim Namen ``spam`` am Anfang der ersten Zeile ist zum "
+"Beispiel :attr:`start` gleich ``(1, 0)`` und :attr:`end` gleich ``(1, 4)``."
 
 #: ../../library/tokenize.rst:106
 msgid ""
@@ -157,6 +214,10 @@ msgid ""
 "input without a final newline can have an end column one beyond the source "
 "text."
 msgstr ""
+"Bei einem :data:`~token.ENCODING`-Token ist das ``(0, 0)``. Ein "
+"Token :data:`~token.NEWLINE` oder :data:`~token.NL`, das am Ende einer "
+"Eingabe ohne abschließenden Zeilenumbruch eingefügt wird, kann eine "
+"Endspalte haben, die einen Schritt über den Quelltext hinausgeht."
 
 #: ../../library/tokenize.rst:113
 msgid ""
@@ -165,6 +226,11 @@ msgid ""
 "spanning multiple lines, this can contain several source lines. It is empty "
 "for :data:`~token.ENCODING` and :data:`~token.ENDMARKER` tokens."
 msgstr ""
+"Ein :class:`str` mit der vollständigen Quelltextzeile, in der das Token "
+"gefunden wurde, samt umgebendem Text und, falls vorhanden, dem "
+"Zeilenendezeichen. Reicht ein Token über mehrere Zeilen, kann das mehrere "
+"Quelltextzeilen umfassen. Bei Tokens :data:`~token.ENCODING` "
+"und :data:`~token.ENDMARKER` ist es leer."
 
 #: ../../library/tokenize.rst:121
 msgid ""
@@ -174,12 +240,19 @@ msgid ""
 "equal to :data:`~token.OP` and :attr:`exact_type` equal "
 "to :data:`~token.PLUS`."
 msgstr ""
+"Eine ganze Zahl, die bei :data:`~token.OP`-Tokens den genauen Operatortyp "
+"angibt, entsprechend den Konstanten in :mod:`token`. Bei allen anderen "
+"Tokentypen entspricht sie :attr:`type`. Ein Token ``+`` hat zum "
+"Beispiel :attr:`type` gleich :data:`~token.OP` und :attr:`exact_type` "
+"gleich :data:`~token.PLUS`."
 
 #: ../../library/tokenize.rst:130
 msgid ""
 "All constants from the :mod:`token` module are also exported from :mod:`!"
 "tokenize`."
 msgstr ""
+"Alle Konstanten des Moduls :mod:`token` werden auch von :mod:`!tokenize` "
+"exportiert."
 
 #: ../../library/tokenize.rst:133
 msgid ""
@@ -187,6 +260,9 @@ msgid ""
 "useful for creating tools that tokenize a script, modify the token stream, "
 "and write back the modified script."
 msgstr ""
+"Eine weitere Funktion macht die Zerlegung wieder rückgängig. Das ist "
+"nützlich für Werkzeuge, die ein Skript zerlegen, den Tokenstrom verändern "
+"und das geänderte Skript zurückschreiben."
 
 #: ../../library/tokenize.rst:140
 msgid ""
@@ -194,6 +270,9 @@ msgid ""
 "sequences with at least two elements, the token type and the token string. "
 "Any additional sequence elements are ignored."
 msgstr ""
+"Wandelt Tokens zurück in Python-Quellcode. *iterable* muss Sequenzen mit "
+"mindestens zwei Elementen liefern: den Tokentyp und die Zeichenkette des "
+"Tokens. Weitere Elemente der Sequenz werden übergangen."
 
 #: ../../library/tokenize.rst:144
 msgid ""
@@ -202,6 +281,11 @@ msgid ""
 "only to the token type and token string as the spacing between tokens "
 "(column positions) may change."
 msgstr ""
+"Das Ergebnis lässt sich garantiert so zerlegen, dass es der Eingabe "
+"entspricht. Die Umwandlung ist damit verlustfrei und ein Hin und Zurück "
+"sicher. Die Garantie gilt nur für Tokentyp und Zeichenkette des Tokens, denn "
+"die Abstände zwischen den Tokens, also die Spaltenpositionen, können sich "
+"ändern."
 
 #: ../../library/tokenize.rst:149
 msgid ""
@@ -209,12 +293,17 @@ msgid ""
 "the first token sequence output by :func:`.tokenize`. If there is no "
 "encoding token in the input, it returns a str instead."
 msgstr ""
+"Zurückgegeben werden Bytes, kodiert nach dem :data:`~token.ENCODING`-Token, "
+"das :func:`.tokenize` als erste Tokensequenz ausgibt. Fehlt in der Eingabe "
+"ein Encoding-Token, wird stattdessen ein str zurückgegeben."
 
 #: ../../library/tokenize.rst:154
 msgid ""
 ":func:`.tokenize` needs to detect the encoding of source files it tokenizes. "
 "The function it uses to do this is available:"
 msgstr ""
+":func:`.tokenize` muss die Kodierung der Quelldateien erkennen, die es "
+"zerlegt. Die Funktion, die es dafür verwendet, ist zugänglich:"
 
 #: ../../library/tokenize.rst:159
 msgid ""
@@ -222,12 +311,18 @@ msgid ""
 "should be used to decode a Python source file. It requires one argument, "
 "readline, in the same way as the :func:`.tokenize` generator."
 msgstr ""
+"Die Funktion :func:`detect_encoding` erkennt, mit welcher Kodierung eine "
+"Python-Quelldatei dekodiert werden soll. Sie erwartet ein Argument, "
+"readline, genau wie der Generator :func:`.tokenize`."
 
 #: ../../library/tokenize.rst:163
 msgid ""
 "It will call readline a maximum of twice, and return the encoding used (as a "
 "string) and a list of any lines (not decoded from bytes) it has read in."
 msgstr ""
+"Sie ruft readline höchstens zweimal auf und gibt die verwendete Kodierung "
+"als Zeichenkette sowie eine Liste der gelesenen Zeilen zurück, die nicht aus "
+"Bytes dekodiert sind."
 
 #: ../../library/tokenize.rst:167
 msgid ""
@@ -236,40 +331,53 @@ msgid ""
 "but disagree, a :exc:`SyntaxError` will be raised. Note that if the BOM is "
 "found, ``'utf-8-sig'`` will be returned as an encoding."
 msgstr ""
+"Sie erkennt die Kodierung an einem UTF-8-BOM oder an einem Encoding-Cookie "
+"gemäß :pep:`263`. Sind BOM und Cookie beide vorhanden, widersprechen sich "
+"aber, wird :exc:`SyntaxError` ausgelöst. Beachte, dass bei gefundenem BOM "
+"``'utf-8-sig'`` als Kodierung zurückgegeben wird."
 
 #: ../../library/tokenize.rst:172
 msgid ""
 "If no encoding is specified, then the default of ``'utf-8'`` will be "
 "returned."
 msgstr ""
+"Ist keine Kodierung angegeben, wird die Vorgabe ``'utf-8'`` zurückgegeben."
 
 #: ../../library/tokenize.rst:175
 msgid ""
 "Use :func:`.open` to open Python source files: it "
 "uses :func:`detect_encoding` to detect the file encoding."
 msgstr ""
+"Zum Öffnen von Python-Quelldateien dient :func:`.open`: Sie erkennt die "
+"Kodierung der Datei mit :func:`detect_encoding`."
 
 #: ../../library/tokenize.rst:181
 msgid ""
 "Open a file in read only mode using the encoding detected "
 "by :func:`detect_encoding`."
 msgstr ""
+"Öffnet eine Datei im Nur-Lese-Modus mit der Kodierung, "
+"die :func:`detect_encoding` erkannt hat."
 
 #: ../../library/tokenize.rst:188
 msgid ""
 "Raised when either a docstring or expression that may be split over several "
 "lines is not completed anywhere in the file, for example::"
 msgstr ""
+"Wird ausgelöst, wenn ein Docstring oder ein Ausdruck, der über mehrere "
+"Zeilen gehen darf, nirgends in der Datei abgeschlossen wird, zum Beispiel::"
 
 #: ../../library/tokenize.rst:191
 msgid ""
 "\"\"\"Beginning of\n"
 "docstring"
 msgstr ""
+"\"\"\"Beginning of\n"
+"docstring"
 
 #: ../../library/tokenize.rst:194
 msgid "or::"
-msgstr ""
+msgstr "oder::"
 
 #: ../../library/tokenize.rst:196
 msgid ""
@@ -277,44 +385,53 @@ msgid ""
 " 2,\n"
 " 3"
 msgstr ""
+"[1,\n"
+" 2,\n"
+" 3"
 
 #: ../../library/tokenize.rst:203
 msgid "Command-line usage"
-msgstr ""
+msgstr "Verwendung über die Befehlszeile"
 
 #: ../../library/tokenize.rst:207
 msgid ""
 "The :mod:`!tokenize` module can be executed as a script from the command "
 "line. It is as simple as:"
 msgstr ""
+"Das Modul :mod:`!tokenize` lässt sich von der Befehlszeile als Skript "
+"ausführen. Das geht so einfach wie:"
 
 #: ../../library/tokenize.rst:210
 msgid "python -m tokenize [-e] [filename.py]"
-msgstr ""
+msgstr "python -m tokenize [-e] [filename.py]"
 
 #: ../../library/tokenize.rst:214
 msgid "The following options are accepted:"
-msgstr ""
+msgstr "Die folgenden Optionen sind möglich:"
 
 #: ../../library/tokenize.rst:220
 msgid "show this help message and exit"
-msgstr ""
+msgstr "diese Hilfe anzeigen und beenden"
 
 #: ../../library/tokenize.rst:224
 msgid "display token names using the exact type"
-msgstr ""
+msgstr "Tokennamen mit dem genauen Typ anzeigen"
 
 #: ../../library/tokenize.rst:226
 msgid ""
 "If :file:`filename.py` is specified its contents are tokenized to stdout. "
 "Otherwise, tokenization is performed on stdin."
 msgstr ""
+"Ist :file:`filename.py` angegeben, wird dessen Inhalt zerlegt und nach "
+"stdout ausgegeben. Andernfalls wird stdin zerlegt."
 
 #: ../../library/tokenize.rst:229
 msgid ""
 "Output is in color by default and can be :ref:`controlled using environment "
 "variables <using-on-controlling-color>`."
 msgstr ""
+"Die Ausgabe ist standardmäßig farbig und lässt sich :ref:`über "
+"Umgebungsvariablen steuern <using-on-controlling-color>`."
 
 #: ../../library/tokenize.rst:234
 msgid "Examples"
@@ -325,6 +442,8 @@ msgid ""
 "Example of a script rewriter that transforms float literals into Decimal "
 "objects::"
 msgstr ""
+"Beispiel für einen Skriptumschreiber, der Float-Literale in Decimal-Objekte "
+"umwandelt::"
 
 #: ../../library/tokenize.rst:239
 msgid ""
@@ -368,10 +487,49 @@ msgid ""
 "            result.append((toknum, tokval))\n"
 "    return untokenize(result).decode('utf-8')"
 msgstr ""
+"from tokenize import tokenize, untokenize, NUMBER, STRING, NAME, OP\n"
+"from io import BytesIO\n"
+"\n"
+"def decistmt(s):\n"
+"    \"\"\"Substitute Decimals for floats in a string of statements.\n"
+"\n"
+"    >>> from decimal import Decimal\n"
+"    >>> s = 'print(+21.3e-5*-.1234/81.7)'\n"
+"    >>> decistmt(s)\n"
+"    \"print (+Decimal ('21.3e-5')*-Decimal ('.1234')/Decimal ('81.7'))\"\n"
+"\n"
+"    The format of the exponent is inherited from the platform C library.\n"
+"    Known cases are \"e-007\" (Windows) and \"e-07\" (not Windows).  Since\n"
+"    we're only showing 12 digits, and the 13th isn't close to 5, the\n"
+"    rest of the output should be platform-independent.\n"
+"\n"
+"    >>> exec(s)  #doctest: +ELLIPSIS\n"
+"    -3.21716034272e-0...7\n"
+"\n"
+"    Output from calculations with Decimal should be identical across all\n"
+"    platforms.\n"
+"\n"
+"    >>> exec(decistmt(s))\n"
+"    -3.217160342717258261933904529E-7\n"
+"    \"\"\"\n"
+"    result = []\n"
+"    g = tokenize(BytesIO(s.encode('utf-8')).readline)  # tokenize the "
+"string\n"
+"    for toknum, tokval, _, _, _ in g:\n"
+"        if toknum == NUMBER and '.' in tokval:  # replace NUMBER tokens\n"
+"            result.extend([\n"
+"                (NAME, 'Decimal'),\n"
+"                (OP, '('),\n"
+"                (STRING, repr(tokval)),\n"
+"                (OP, ')')\n"
+"            ])\n"
+"        else:\n"
+"            result.append((toknum, tokval))\n"
+"    return untokenize(result).decode('utf-8')"
 
 #: ../../library/tokenize.rst:278
 msgid "Example of tokenizing from the command line.  The script::"
-msgstr ""
+msgstr "Beispiel für das Zerlegen von der Befehlszeile aus. Das Skript::"
 
 #: ../../library/tokenize.rst:280
 msgid ""
@@ -380,6 +538,10 @@ msgid ""
 "\n"
 "say_hello()"
 msgstr ""
+"def say_hello():\n"
+"    print(\"Hello, World!\")\n"
+"\n"
+"say_hello()"
 
 #: ../../library/tokenize.rst:285
 msgid ""
@@ -388,6 +550,9 @@ msgid ""
 "column is the name of the token, and the final column is the value of the "
 "token (if any):"
 msgstr ""
+"wird zu der folgenden Ausgabe zerlegt. Die erste Spalte ist der Bereich der "
+"Zeilen- und Spaltenkoordinaten, in dem das Token gefunden wurde, die zweite "
+"Spalte der Name des Tokens und die letzte Spalte, falls vorhanden, sein Wert:"
 
 #: ../../library/tokenize.rst:289
 msgid ""
@@ -413,11 +578,34 @@ msgid ""
 "4,11-4,12:          NEWLINE        '\\n'\n"
 "5,0-5,0:            ENDMARKER      ''"
 msgstr ""
+"$ python -m tokenize hello.py\n"
+"0,0-0,0:            ENCODING       'utf-8'\n"
+"1,0-1,3:            NAME           'def'\n"
+"1,4-1,13:           NAME           'say_hello'\n"
+"1,13-1,14:          OP             '('\n"
+"1,14-1,15:          OP             ')'\n"
+"1,15-1,16:          OP             ':'\n"
+"1,16-1,17:          NEWLINE        '\\n'\n"
+"2,0-2,4:            INDENT         '    '\n"
+"2,4-2,9:            NAME           'print'\n"
+"2,9-2,10:           OP             '('\n"
+"2,10-2,25:          STRING         '\"Hello, World!\"'\n"
+"2,25-2,26:          OP             ')'\n"
+"2,26-2,27:          NEWLINE        '\\n'\n"
+"3,0-3,1:            NL             '\\n'\n"
+"4,0-4,0:            DEDENT         ''\n"
+"4,0-4,9:            NAME           'say_hello'\n"
+"4,9-4,10:           OP             '('\n"
+"4,10-4,11:          OP             ')'\n"
+"4,11-4,12:          NEWLINE        '\\n'\n"
+"5,0-5,0:            ENDMARKER      ''"
 
 #: ../../library/tokenize.rst:313
 msgid ""
 "The exact token type names can be displayed using the :option:`-e` option:"
 msgstr ""
+"Die genauen Namen der Tokentypen lassen sich mit der Option :option:`-e` "
+"anzeigen:"
 
 #: ../../library/tokenize.rst:315
 msgid ""
@@ -443,12 +631,36 @@ msgid ""
 "4,11-4,12:          NEWLINE        '\\n'\n"
 "5,0-5,0:            ENDMARKER      ''"
 msgstr ""
+"$ python -m tokenize -e hello.py\n"
+"0,0-0,0:            ENCODING       'utf-8'\n"
+"1,0-1,3:            NAME           'def'\n"
+"1,4-1,13:           NAME           'say_hello'\n"
+"1,13-1,14:          LPAR           '('\n"
+"1,14-1,15:          RPAR           ')'\n"
+"1,15-1,16:          COLON          ':'\n"
+"1,16-1,17:          NEWLINE        '\\n'\n"
+"2,0-2,4:            INDENT         '    '\n"
+"2,4-2,9:            NAME           'print'\n"
+"2,9-2,10:           LPAR           '('\n"
+"2,10-2,25:          STRING         '\"Hello, World!\"'\n"
+"2,25-2,26:          RPAR           ')'\n"
+"2,26-2,27:          NEWLINE        '\\n'\n"
+"3,0-3,1:            NL             '\\n'\n"
+"4,0-4,0:            DEDENT         ''\n"
+"4,0-4,9:            NAME           'say_hello'\n"
+"4,9-4,10:           LPAR           '('\n"
+"4,10-4,11:          RPAR           ')'\n"
+"4,11-4,12:          NEWLINE        '\\n'\n"
+"5,0-5,0:            ENDMARKER      ''"
 
 #: ../../library/tokenize.rst:339
 msgid ""
 "Example of tokenizing a file programmatically, reading unicode strings "
 "instead of bytes with :func:`generate_tokens`::"
 msgstr ""
+"Beispiel für das Zerlegen einer Datei aus dem Programm heraus, wobei "
+"mit :func:`generate_tokens` Unicode-Zeichenketten statt Bytes gelesen "
+"werden::"
 
 #: ../../library/tokenize.rst:342
 msgid ""
@@ -459,10 +671,16 @@ msgid ""
 "    for token in tokens:\n"
 "        print(token)"
 msgstr ""
+"import tokenize\n"
+"\n"
+"with tokenize.open('hello.py') as f:\n"
+"    tokens = tokenize.generate_tokens(f.readline)\n"
+"    for token in tokens:\n"
+"        print(token)"
 
 #: ../../library/tokenize.rst:349
 msgid "Or reading bytes directly with :func:`.tokenize`::"
-msgstr ""
+msgstr "Oder, mit :func:`.tokenize` direkt Bytes gelesen::"
 
 #: ../../library/tokenize.rst:351
 msgid ""
@@ -473,3 +691,9 @@ msgid ""
 "    for token in tokens:\n"
 "        print(token)"
 msgstr ""
+"import tokenize\n"
+"\n"
+"with open('hello.py', 'rb') as f:\n"
+"    tokens = tokenize.tokenize(f.readline)\n"
+"    for token in tokens:\n"
+"        print(token)"
