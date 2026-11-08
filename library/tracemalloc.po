@@ -1,10 +1,10 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -12,8 +12,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-01 00:10+0000\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,31 +22,36 @@ msgstr ""
 
 #: ../../library/tracemalloc.rst:2
 msgid ":mod:`!tracemalloc` --- Trace memory allocations"
-msgstr ""
+msgstr ":mod:`!tracemalloc` --- Speicherreservierungen aufzeichnen"
 
 #: ../../library/tracemalloc.rst:9
 msgid "**Source code:** :source:`Lib/tracemalloc.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/tracemalloc.py`"
 
 #: ../../library/tracemalloc.rst:13
 msgid ""
 "The tracemalloc module is a debug tool to trace memory blocks allocated by "
 "Python. It provides the following information:"
 msgstr ""
+"Das Modul tracemalloc ist ein Werkzeug zur Fehlersuche. Es zeichnet auf, "
+"welche Speicherblöcke Python reserviert, und liefert dazu:"
 
 #: ../../library/tracemalloc.rst:16
 msgid "Traceback where an object was allocated"
-msgstr ""
+msgstr "den Traceback der Stelle, an der ein Objekt reserviert wurde"
 
 #: ../../library/tracemalloc.rst:17
 msgid ""
 "Statistics on allocated memory blocks per filename and per line number: "
 "total size, number and average size of allocated memory blocks"
 msgstr ""
+"Statistiken über reservierte Speicherblöcke je Datei und je Zeilennummer: "
+"Gesamtgröße, Anzahl und durchschnittliche Größe der reservierten "
+"Speicherblöcke"
 
 #: ../../library/tracemalloc.rst:19
 msgid "Compute the differences between two snapshots to detect memory leaks"
-msgstr ""
+msgstr "die Unterschiede zwischen zwei Snapshots, um Speicherlecks zu finden"
 
 #: ../../library/tracemalloc.rst:21
 msgid ""
@@ -56,6 +61,11 @@ msgid ""
 "command line option. The :func:`tracemalloc.start` function can be called at "
 "runtime to start tracing Python memory allocations."
 msgstr ""
+"Damit möglichst viele der von Python reservierten Speicherblöcke erfasst "
+"werden, sollte das Modul so früh wie möglich starten: indem du die "
+"Umgebungsvariable :envvar:`PYTHONTRACEMALLOC` auf ``1`` setzt oder die "
+"Befehlszeilenoption :option:`-X` ``tracemalloc`` verwendest. Zur Laufzeit "
+"lässt sich die Aufzeichnung mit :func:`tracemalloc.start` starten."
 
 #: ../../library/tracemalloc.rst:27
 msgid ""
@@ -64,6 +74,10 @@ msgid ""
 "the :envvar:`PYTHONTRACEMALLOC` environment variable to ``25``, or use "
 "the :option:`-X` ``tracemalloc=25`` command line option."
 msgstr ""
+"Standardmäßig hält ein Trace zu einem reservierten Speicherblock nur den "
+"jüngsten Frame fest, also einen. Um beim Start 25 Frames festzuhalten, setze "
+"die Umgebungsvariable :envvar:`PYTHONTRACEMALLOC` auf ``25`` oder verwende "
+"die Befehlszeilenoption :option:`-X` ``tracemalloc=25``."
 
 #: ../../library/tracemalloc.rst:34
 msgid "Examples"
@@ -71,11 +85,11 @@ msgstr "Beispiele"
 
 #: ../../library/tracemalloc.rst:37
 msgid "Display the top 10"
-msgstr ""
+msgstr "Die zehn größten anzeigen"
 
 #: ../../library/tracemalloc.rst:39
 msgid "Display the 10 files allocating the most memory::"
-msgstr ""
+msgstr "Die zehn Dateien anzeigen, die am meisten Speicher reservieren::"
 
 #: ../../library/tracemalloc.rst:41
 msgid ""
@@ -92,10 +106,22 @@ msgid ""
 "for stat in top_stats[:10]:\n"
 "    print(stat)"
 msgstr ""
+"import tracemalloc\n"
+"\n"
+"tracemalloc.start()\n"
+"\n"
+"# ... run your application ...\n"
+"\n"
+"snapshot = tracemalloc.take_snapshot()\n"
+"top_stats = snapshot.statistics('lineno')\n"
+"\n"
+"print(\"[ Top 10 ]\")\n"
+"for stat in top_stats[:10]:\n"
+"    print(stat)"
 
 #: ../../library/tracemalloc.rst:55 ../../library/tracemalloc.rst:225
 msgid "Example of output of the Python test suite::"
-msgstr ""
+msgstr "Beispielausgabe aus der Python-Testsuite::"
 
 #: ../../library/tracemalloc.rst:57
 msgid ""
@@ -115,6 +141,21 @@ msgid ""
 "<string>:5: size=49.7 KiB, count=148, average=344 B\n"
 "/usr/lib/python3.4/sysconfig.py:411: size=48.0 KiB, count=1, average=48.0 KiB"
 msgstr ""
+"[ Top 10 ]\n"
+"<frozen importlib._bootstrap>:716: size=4855 KiB, count=39328, average=126 "
+"B\n"
+"<frozen importlib._bootstrap>:284: size=521 KiB, count=3199, average=167 B\n"
+"/usr/lib/python3.4/collections/__init__.py:368: size=244 KiB, count=2315, "
+"average=108 B\n"
+"/usr/lib/python3.4/unittest/case.py:381: size=185 KiB, count=779, "
+"average=243 B\n"
+"/usr/lib/python3.4/unittest/case.py:402: size=154 KiB, count=378, "
+"average=416 B\n"
+"/usr/lib/python3.4/abc.py:133: size=88.7 KiB, count=347, average=262 B\n"
+"<frozen importlib._bootstrap>:1446: size=70.4 KiB, count=911, average=79 B\n"
+"<frozen importlib._bootstrap>:1454: size=52.0 KiB, count=25, average=2131 B\n"
+"<string>:5: size=49.7 KiB, count=148, average=344 B\n"
+"/usr/lib/python3.4/sysconfig.py:411: size=48.0 KiB, count=1, average=48.0 KiB"
 
 #: ../../library/tracemalloc.rst:69
 msgid ""
@@ -122,18 +163,21 @@ msgid ""
 "from modules and that the :mod:`collections` module allocated ``244 KiB`` to "
 "build :class:`~collections.namedtuple` types."
 msgstr ""
+"Man sieht: Python hat ``4855 KiB`` Daten aus Modulen geladen, Bytecode und "
+"Konstanten, und das Modul :mod:`collections` hat ``244 KiB`` reserviert, "
+"um :class:`~collections.namedtuple`-Typen zu erzeugen."
 
 #: ../../library/tracemalloc.rst:73 ../../library/tracemalloc.rst:250
 msgid "See :meth:`Snapshot.statistics` for more options."
-msgstr ""
+msgstr "Weitere Möglichkeiten stehen bei :meth:`Snapshot.statistics`."
 
 #: ../../library/tracemalloc.rst:77
 msgid "Compute differences"
-msgstr ""
+msgstr "Unterschiede berechnen"
 
 #: ../../library/tracemalloc.rst:79
 msgid "Take two snapshots and display the differences::"
-msgstr ""
+msgstr "Zwei Snapshots nehmen und die Unterschiede anzeigen::"
 
 #: ../../library/tracemalloc.rst:81
 msgid ""
@@ -151,11 +195,24 @@ msgid ""
 "for stat in top_stats[:10]:\n"
 "    print(stat)"
 msgstr ""
+"import tracemalloc\n"
+"tracemalloc.start()\n"
+"# ... start your application ...\n"
+"\n"
+"snapshot1 = tracemalloc.take_snapshot()\n"
+"# ... call the function leaking memory ...\n"
+"snapshot2 = tracemalloc.take_snapshot()\n"
+"\n"
+"top_stats = snapshot2.compare_to(snapshot1, 'lineno')\n"
+"\n"
+"print(\"[ Top 10 differences ]\")\n"
+"for stat in top_stats[:10]:\n"
+"    print(stat)"
 
 #: ../../library/tracemalloc.rst:95
 msgid ""
 "Example of output before/after running some tests of the Python test suite::"
-msgstr ""
+msgstr "Beispielausgabe vor und nach einigen Tests aus der Python-Testsuite::"
 
 #: ../../library/tracemalloc.rst:97
 msgid ""
@@ -181,6 +238,27 @@ msgid ""
 "/usr/lib/python3.4/contextlib.py:38: size=67.2 KiB (+67.2 KiB), count=126 "
 "(+126), average=546 B"
 msgstr ""
+"[ Top 10 differences ]\n"
+"<frozen importlib._bootstrap>:716: size=8173 KiB (+4428 KiB), count=71332 "
+"(+39369), average=117 B\n"
+"/usr/lib/python3.4/linecache.py:127: size=940 KiB (+940 KiB), count=8106 "
+"(+8106), average=119 B\n"
+"/usr/lib/python3.4/unittest/case.py:571: size=298 KiB (+298 KiB), count=589 "
+"(+589), average=519 B\n"
+"<frozen importlib._bootstrap>:284: size=1005 KiB (+166 KiB), count=7423 "
+"(+1526), average=139 B\n"
+"/usr/lib/python3.4/mimetypes.py:217: size=112 KiB (+112 KiB), count=1334 "
+"(+1334), average=86 B\n"
+"/usr/lib/python3.4/http/server.py:848: size=96.0 KiB (+96.0 KiB), count=1 "
+"(+1), average=96.0 KiB\n"
+"/usr/lib/python3.4/inspect.py:1465: size=83.5 KiB (+83.5 KiB), count=109 "
+"(+109), average=784 B\n"
+"/usr/lib/python3.4/unittest/mock.py:491: size=77.7 KiB (+77.7 KiB), "
+"count=143 (+143), average=557 B\n"
+"/usr/lib/python3.4/urllib/parse.py:476: size=71.8 KiB (+71.8 KiB), count=969 "
+"(+969), average=76 B\n"
+"/usr/lib/python3.4/contextlib.py:38: size=67.2 KiB (+67.2 KiB), count=126 "
+"(+126), average=546 B"
 
 #: ../../library/tracemalloc.rst:109
 msgid ""
@@ -190,6 +268,11 @@ msgid ""
 "the :mod:`linecache` module has cached ``940 KiB`` of Python source code to "
 "format tracebacks, all of it since the previous snapshot."
 msgstr ""
+"Man sieht: Python hat ``8173 KiB`` Moduldaten geladen, Bytecode und "
+"Konstanten, und damit ``4428 KiB`` mehr als vor den Tests, als der vorige "
+"Snapshot entstand. Ebenso hat das Modul :mod:`linecache` ``940 KiB`` Python-"
+"Quellcode zwischengespeichert, um Tracebacks zu formatieren -- alles davon "
+"seit dem vorigen Snapshot."
 
 #: ../../library/tracemalloc.rst:115
 msgid ""
@@ -197,14 +280,17 @@ msgid ""
 "the :meth:`Snapshot.dump` method to analyze the snapshot offline. Then use "
 "the :meth:`Snapshot.load` method reload the snapshot."
 msgstr ""
+"Hat das System wenig freien Speicher, lassen sich Snapshots mit der "
+"Methode :meth:`Snapshot.dump` auf die Platte schreiben und später auswerten. "
+"Zum Zurückladen dient die Methode :meth:`Snapshot.load`."
 
 #: ../../library/tracemalloc.rst:121
 msgid "Get the traceback of a memory block"
-msgstr ""
+msgstr "Den Traceback eines Speicherblocks holen"
 
 #: ../../library/tracemalloc.rst:123
 msgid "Code to display the traceback of the biggest memory block::"
-msgstr ""
+msgstr "Code, der den Traceback des größten Speicherblocks anzeigt::"
 
 #: ../../library/tracemalloc.rst:125
 msgid ""
@@ -224,11 +310,27 @@ msgid ""
 "for line in stat.traceback.format():\n"
 "    print(line)"
 msgstr ""
+"import tracemalloc\n"
+"\n"
+"# Store 25 frames\n"
+"tracemalloc.start(25)\n"
+"\n"
+"# ... run your application ...\n"
+"\n"
+"snapshot = tracemalloc.take_snapshot()\n"
+"top_stats = snapshot.statistics('traceback')\n"
+"\n"
+"# pick the biggest memory block\n"
+"stat = top_stats[0]\n"
+"print(\"%s memory blocks: %.1f KiB\" % (stat.count, stat.size / 1024))\n"
+"for line in stat.traceback.format():\n"
+"    print(line)"
 
 #: ../../library/tracemalloc.rst:141
 msgid ""
 "Example of output of the Python test suite (traceback limited to 25 frames)::"
 msgstr ""
+"Beispielausgabe aus der Python-Testsuite, Traceback auf 25 Frames begrenzt::"
 
 #: ../../library/tracemalloc.rst:143
 msgid ""
@@ -267,6 +369,40 @@ msgid ""
 "  File \"/usr/lib/python3.4/runpy.py\", line 160\n"
 "    \"__main__\", fname, loader, pkg_name)"
 msgstr ""
+"903 memory blocks: 870.1 KiB\n"
+"  File \"<frozen importlib._bootstrap>\", line 716\n"
+"  File \"<frozen importlib._bootstrap>\", line 1036\n"
+"  File \"<frozen importlib._bootstrap>\", line 934\n"
+"  File \"<frozen importlib._bootstrap>\", line 1068\n"
+"  File \"<frozen importlib._bootstrap>\", line 619\n"
+"  File \"<frozen importlib._bootstrap>\", line 1581\n"
+"  File \"<frozen importlib._bootstrap>\", line 1614\n"
+"  File \"/usr/lib/python3.4/doctest.py\", line 101\n"
+"    import pdb\n"
+"  File \"<frozen importlib._bootstrap>\", line 284\n"
+"  File \"<frozen importlib._bootstrap>\", line 938\n"
+"  File \"<frozen importlib._bootstrap>\", line 1068\n"
+"  File \"<frozen importlib._bootstrap>\", line 619\n"
+"  File \"<frozen importlib._bootstrap>\", line 1581\n"
+"  File \"<frozen importlib._bootstrap>\", line 1614\n"
+"  File \"/usr/lib/python3.4/test/support/__init__.py\", line 1728\n"
+"    import doctest\n"
+"  File \"/usr/lib/python3.4/test/test_pickletools.py\", line 21\n"
+"    support.run_doctest(pickletools)\n"
+"  File \"/usr/lib/python3.4/test/regrtest.py\", line 1276\n"
+"    test_runner()\n"
+"  File \"/usr/lib/python3.4/test/regrtest.py\", line 976\n"
+"    display_failure=not verbose)\n"
+"  File \"/usr/lib/python3.4/test/regrtest.py\", line 761\n"
+"    match_tests=ns.match_tests)\n"
+"  File \"/usr/lib/python3.4/test/regrtest.py\", line 1563\n"
+"    main()\n"
+"  File \"/usr/lib/python3.4/test/__main__.py\", line 3\n"
+"    regrtest.main_in_temp_cwd()\n"
+"  File \"/usr/lib/python3.4/runpy.py\", line 73\n"
+"    exec(code, run_globals)\n"
+"  File \"/usr/lib/python3.4/runpy.py\", line 160\n"
+"    \"__main__\", fname, loader, pkg_name)"
 
 #: ../../library/tracemalloc.rst:178
 msgid ""
@@ -276,16 +412,24 @@ msgid ""
 "``import pdb`` line of the :mod:`doctest` module. The traceback may change "
 "if a new module is loaded."
 msgstr ""
+"Man sieht: Der meiste Speicher wurde im Modul :mod:`importlib` reserviert, "
+"um Daten aus Modulen zu laden, Bytecode und Konstanten: ``870.1 KiB``. Der "
+"Traceback zeigt, wo :mod:`importlib` zuletzt Daten geladen hat, nämlich in "
+"der Zeile ``import pdb`` des Moduls :mod:`doctest`. Der Traceback kann sich "
+"ändern, wenn ein neues Modul geladen wird."
 
 #: ../../library/tracemalloc.rst:186
 msgid "Pretty top"
-msgstr ""
+msgstr "Hübsche Bestenliste"
 
 #: ../../library/tracemalloc.rst:188
 msgid ""
 "Code to display the 10 lines allocating the most memory with a pretty "
 "output, ignoring ``<frozen importlib._bootstrap>`` and ``<unknown>`` files::"
 msgstr ""
+"Code, der die zehn Zeilen mit dem meisten reservierten Speicher hübsch "
+"ausgibt und dabei die Dateien ``<frozen importlib._bootstrap>`` und "
+"``<unknown>`` übergeht::"
 
 #: ../../library/tracemalloc.rst:191
 msgid ""
@@ -323,6 +467,39 @@ msgid ""
 "snapshot = tracemalloc.take_snapshot()\n"
 "display_top(snapshot)"
 msgstr ""
+"import linecache\n"
+"import os\n"
+"import tracemalloc\n"
+"\n"
+"def display_top(snapshot, key_type='lineno', limit=10):\n"
+"    snapshot = snapshot.filter_traces((\n"
+"        tracemalloc.Filter(False, \"<frozen importlib._bootstrap>\"),\n"
+"        tracemalloc.Filter(False, \"<unknown>\"),\n"
+"    ))\n"
+"    top_stats = snapshot.statistics(key_type)\n"
+"\n"
+"    print(\"Top %s lines\" % limit)\n"
+"    for index, stat in enumerate(top_stats[:limit], 1):\n"
+"        frame = stat.traceback[0]\n"
+"        print(\"#%s: %s:%s: %.1f KiB\"\n"
+"              % (index, frame.filename, frame.lineno, stat.size / 1024))\n"
+"        line = linecache.getline(frame.filename, frame.lineno).strip()\n"
+"        if line:\n"
+"            print('    %s' % line)\n"
+"\n"
+"    other = top_stats[limit:]\n"
+"    if other:\n"
+"        size = sum(stat.size for stat in other)\n"
+"        print(\"%s other: %.1f KiB\" % (len(other), size / 1024))\n"
+"    total = sum(stat.size for stat in top_stats)\n"
+"    print(\"Total allocated size: %.1f KiB\" % (total / 1024))\n"
+"\n"
+"tracemalloc.start()\n"
+"\n"
+"# ... run your application ...\n"
+"\n"
+"snapshot = tracemalloc.take_snapshot()\n"
+"display_top(snapshot)"
 
 #: ../../library/tracemalloc.rst:227
 msgid ""
@@ -349,10 +526,33 @@ msgid ""
 "6220 other: 3602.8 KiB\n"
 "Total allocated size: 5303.1 KiB"
 msgstr ""
+"Top 10 lines\n"
+"#1: Lib/base64.py:414: 419.8 KiB\n"
+"    _b85chars2 = [(a + b) for a in _b85chars for b in _b85chars]\n"
+"#2: Lib/base64.py:306: 419.8 KiB\n"
+"    _a85chars2 = [(a + b) for a in _a85chars for b in _a85chars]\n"
+"#3: collections/__init__.py:368: 293.6 KiB\n"
+"    exec(class_definition, namespace)\n"
+"#4: Lib/abc.py:133: 115.2 KiB\n"
+"    cls = super().__new__(mcls, name, bases, namespace)\n"
+"#5: unittest/case.py:574: 103.1 KiB\n"
+"    testMethod()\n"
+"#6: Lib/linecache.py:127: 95.4 KiB\n"
+"    lines = fp.readlines()\n"
+"#7: urllib/parse.py:476: 71.8 KiB\n"
+"    for a in _hexdig for b in _hexdig}\n"
+"#8: <string>:5: 62.0 KiB\n"
+"#9: Lib/_weakrefset.py:37: 60.0 KiB\n"
+"    self.data = set()\n"
+"#10: Lib/base64.py:142: 59.8 KiB\n"
+"    _b32tab2 = [a + b for a in _b32tab for b in _b32tab]\n"
+"6220 other: 3602.8 KiB\n"
+"Total allocated size: 5303.1 KiB"
 
 #: ../../library/tracemalloc.rst:253
 msgid "Record the current and peak size of all traced memory blocks"
 msgstr ""
+"Aktuelle und höchste Größe aller aufgezeichneten Speicherblöcke festhalten"
 
 #: ../../library/tracemalloc.rst:255
 msgid ""
@@ -362,6 +562,11 @@ msgid ""
 "observe the small memory usage after the sum is computed as well as the peak "
 "memory usage during the computations::"
 msgstr ""
+"Der folgende Code berechnet zwei Summen der Art ``0 + 1 + 2 + ...`` auf "
+"umständliche Weise, nämlich über eine Liste dieser Zahlen. Diese Liste "
+"braucht vorübergehend viel Speicher. Mit :func:`get_traced_memory` "
+"und :func:`reset_peak` lassen sich der geringe Speicherbedarf nach der "
+"Berechnung und der Höchstwert während der Berechnung beobachten::"
 
 #: ../../library/tracemalloc.rst:261
 msgid ""
@@ -384,16 +589,36 @@ msgid ""
 "print(f\"{first_size=}, {first_peak=}\")\n"
 "print(f\"{second_size=}, {second_peak=}\")"
 msgstr ""
+"import tracemalloc\n"
+"\n"
+"tracemalloc.start()\n"
+"\n"
+"# Example code: compute a sum with a large temporary list\n"
+"large_sum = sum(list(range(100000)))\n"
+"\n"
+"first_size, first_peak = tracemalloc.get_traced_memory()\n"
+"\n"
+"tracemalloc.reset_peak()\n"
+"\n"
+"# Example code: compute a sum with a small temporary list\n"
+"small_sum = sum(list(range(1000)))\n"
+"\n"
+"second_size, second_peak = tracemalloc.get_traced_memory()\n"
+"\n"
+"print(f\"{first_size=}, {first_peak=}\")\n"
+"print(f\"{second_size=}, {second_peak=}\")"
 
 #: ../../library/tracemalloc.rst:280 ../../library/tracemalloc.rst:756
 msgid "Output::"
-msgstr ""
+msgstr "Ausgabe::"
 
 #: ../../library/tracemalloc.rst:282
 msgid ""
 "first_size=664, first_peak=3592984\n"
 "second_size=804, second_peak=29704"
 msgstr ""
+"first_size=664, first_peak=3592984\n"
+"second_size=804, second_peak=29704"
 
 #: ../../library/tracemalloc.rst:285
 msgid ""
@@ -406,10 +631,18 @@ msgid ""
 "we could optimise (by removing the unnecessary call to :class:`list`, and "
 "writing ``sum(range(...))``)."
 msgstr ""
+"Dank :func:`reset_peak` ließ sich der Höchstwert während der Berechnung von "
+"``small_sum`` genau festhalten, obwohl er weit unter dem Höchstwert aller "
+"Speicherblöcke seit dem Aufruf von :func:`start` liegt. Ohne den Aufruf "
+"von :func:`reset_peak` wäre ``second_peak`` noch der Höchstwert aus der "
+"Berechnung von ``large_sum``, also gleich ``first_peak``. Hier liegen beide "
+"Höchstwerte weit über dem Speicherbedarf am Ende, was auf "
+"Verbesserungspotenzial hindeutet: Der unnötige Aufruf von :class:`list` kann "
+"weg, es genügt ``sum(range(...))``."
 
 #: ../../library/tracemalloc.rst:295
 msgid "API"
-msgstr ""
+msgstr "API"
 
 #: ../../library/tracemalloc.rst:298
 msgid "Functions"
@@ -417,11 +650,11 @@ msgstr "Funktionen"
 
 #: ../../library/tracemalloc.rst:302
 msgid "Clear traces of memory blocks allocated by Python."
-msgstr ""
+msgstr "Verwirft die Traces der von Python reservierten Speicherblöcke."
 
 #: ../../library/tracemalloc.rst:304
 msgid "See also :func:`stop`."
-msgstr ""
+msgstr "Siehe auch :func:`stop`."
 
 #: ../../library/tracemalloc.rst:309
 msgid ""
@@ -430,42 +663,57 @@ msgid ""
 "is not tracing memory allocations or did not trace the allocation of the "
 "object."
 msgstr ""
+"Holt den Traceback der Stelle, an der das Python-Objekt *obj* reserviert "
+"wurde. Zurückgegeben wird eine Instanz von :class:`Traceback` oder ``None``, "
+"wenn das Modul :mod:`!tracemalloc` keine Reservierungen aufzeichnet oder die "
+"Reservierung dieses Objekts nicht aufgezeichnet hat."
 
 #: ../../library/tracemalloc.rst:314
 msgid "See also :func:`gc.get_referrers` and :func:`sys.getsizeof` functions."
 msgstr ""
+"Siehe auch die Funktionen :func:`gc.get_referrers` und :func:`sys.getsizeof`."
 
 #: ../../library/tracemalloc.rst:319
 msgid "Get the maximum number of frames stored in the traceback of a trace."
 msgstr ""
+"Holt die größte Anzahl an Frames, die im Traceback eines Traces festgehalten "
+"werden."
 
 #: ../../library/tracemalloc.rst:321
 msgid ""
 "The :mod:`!tracemalloc` module must be tracing memory allocations to get the "
 "limit, otherwise an exception is raised."
 msgstr ""
+"Das Modul :mod:`!tracemalloc` muss Reservierungen aufzeichnen, damit sich "
+"die Grenze holen lässt, sonst wird eine Ausnahme ausgelöst."
 
 #: ../../library/tracemalloc.rst:324
 msgid "The limit is set by the :func:`start` function."
-msgstr ""
+msgstr "Die Grenze setzt die Funktion :func:`start`."
 
 #: ../../library/tracemalloc.rst:329
 msgid ""
 "Get the current size and peak size of memory blocks traced by the :mod:`!"
 "tracemalloc` module as a tuple: ``(current: int, peak: int)``."
 msgstr ""
+"Holt die aktuelle und die höchste Größe der vom Modul :mod:`!tracemalloc` "
+"aufgezeichneten Speicherblöcke als Tupel ``(current: int, peak: int)``."
 
 #: ../../library/tracemalloc.rst:335
 msgid ""
 "Set the peak size of memory blocks traced by the :mod:`!tracemalloc` module "
 "to the current size."
 msgstr ""
+"Setzt die höchste Größe der vom Modul :mod:`!tracemalloc` aufgezeichneten "
+"Speicherblöcke auf die aktuelle Größe."
 
 #: ../../library/tracemalloc.rst:338
 msgid ""
 "Do nothing if the :mod:`!tracemalloc` module is not tracing memory "
 "allocations."
 msgstr ""
+"Tut nichts, wenn das Modul :mod:`!tracemalloc` keine Reservierungen "
+"aufzeichnet."
 
 #: ../../library/tracemalloc.rst:341
 msgid ""
@@ -474,26 +722,35 @@ msgid ""
 "with :func:`take_snapshot` before a call to :func:`reset_peak` can be "
 "meaningfully compared to snapshots taken after the call."
 msgstr ""
+"Diese Funktion ändert nur den festgehaltenen Höchstwert. Anders "
+"als :func:`clear_traces` ändert oder verwirft sie keine Traces. Snapshots "
+"von :func:`take_snapshot` vor einem Aufruf von :func:`reset_peak` lassen "
+"sich daher sinnvoll mit Snapshots nach dem Aufruf vergleichen."
 
 #: ../../library/tracemalloc.rst:346
 msgid "See also :func:`get_traced_memory`."
-msgstr ""
+msgstr "Siehe auch :func:`get_traced_memory`."
 
 #: ../../library/tracemalloc.rst:353
 msgid ""
 "Get the memory usage in bytes of the :mod:`!tracemalloc` module used to "
 "store traces of memory blocks. Return an :class:`int`."
 msgstr ""
+"Holt den Speicherbedarf des Moduls :mod:`!tracemalloc` in Byte, den es zum "
+"Festhalten der Traces von Speicherblöcken braucht. Zurückgegeben wird "
+"ein :class:`int`."
 
 #: ../../library/tracemalloc.rst:360
 msgid ""
 "``True`` if the :mod:`!tracemalloc` module is tracing Python memory "
 "allocations, ``False`` otherwise."
 msgstr ""
+"``True``, wenn das Modul :mod:`!tracemalloc` Reservierungen von Python-"
+"Speicher aufzeichnet, sonst ``False``."
 
 #: ../../library/tracemalloc.rst:363
 msgid "See also :func:`start` and :func:`stop` functions."
-msgstr ""
+msgstr "Siehe auch die Funktionen :func:`start` und :func:`stop`."
 
 #: ../../library/tracemalloc.rst:368
 msgid ""
@@ -502,12 +759,19 @@ msgid ""
 "frames. By default, a trace of a memory block only stores the most recent "
 "frame: the limit is ``1``. *nframe* must be greater or equal to ``1``."
 msgstr ""
+"Beginnt, Reservierungen von Python-Speicher aufzuzeichnen: Dazu werden "
+"Einhängepunkte in den Speicherverwaltungen von Python gesetzt. Die "
+"gesammelten Tracebacks der Traces sind auf *nframe* Frames begrenzt. "
+"Standardmäßig hält ein Trace zu einem Speicherblock nur den jüngsten Frame "
+"fest, die Grenze ist also ``1``. *nframe* muss größer oder gleich ``1`` sein."
 
 #: ../../library/tracemalloc.rst:373
 msgid ""
 "You can still read the original number of total frames that composed the "
 "traceback by looking at the :attr:`Traceback.total_nframe` attribute."
 msgstr ""
+"Wie viele Frames der Traceback ursprünglich hatte, lässt sich weiterhin am "
+"Attribut :attr:`Traceback.total_nframe` ablesen."
 
 #: ../../library/tracemalloc.rst:376
 msgid ""
@@ -515,6 +779,9 @@ msgid ""
 "by ``'traceback'`` or to compute cumulative statistics: see "
 "the :meth:`Snapshot.compare_to` and :meth:`Snapshot.statistics` methods."
 msgstr ""
+"Mehr als ``1`` Frame festzuhalten lohnt nur für Statistiken, die nach "
+"``'traceback'`` gruppiert sind, oder für kumulierte Statistiken. Siehe die "
+"Methoden :meth:`Snapshot.compare_to` und :meth:`Snapshot.statistics`."
 
 #: ../../library/tracemalloc.rst:380
 msgid ""
@@ -522,6 +789,9 @@ msgid ""
 "tracemalloc` module. Use the :func:`get_tracemalloc_memory` function to "
 "measure how much memory is used by the :mod:`!tracemalloc` module."
 msgstr ""
+"Mehr Frames festzuhalten erhöht den Speicher- und Rechenaufwand des "
+"Moduls :mod:`!tracemalloc`. Wie viel Speicher das Modul :mod:`!tracemalloc` "
+"braucht, misst die Funktion :func:`get_tracemalloc_memory`."
 
 #: ../../library/tracemalloc.rst:384
 msgid ""
@@ -529,12 +799,17 @@ msgid ""
 "(``PYTHONTRACEMALLOC=NFRAME``) and the :option:`-X` ``tracemalloc=NFRAME`` "
 "command line option can be used to start tracing at startup."
 msgstr ""
+"Mit der Umgebungsvariablen :envvar:`PYTHONTRACEMALLOC` "
+"(``PYTHONTRACEMALLOC=NFRAME``) und der Befehlszeilenoption :option:`-X` "
+"``tracemalloc=NFRAME`` lässt sich die Aufzeichnung schon beim Start beginnen."
 
 #: ../../library/tracemalloc.rst:388
 msgid ""
 "See also :func:`stop`, :func:`is_tracing` and :func:`get_traceback_limit` "
 "functions."
 msgstr ""
+"Siehe auch die Funktionen :func:`stop`, :func:`is_tracing` "
+"und :func:`get_traceback_limit`."
 
 #: ../../library/tracemalloc.rst:394
 msgid ""
@@ -542,84 +817,108 @@ msgid ""
 "allocators. Also clears all previously collected traces of memory blocks "
 "allocated by Python."
 msgstr ""
+"Beendet die Aufzeichnung von Reservierungen in Python-Speicher: Die "
+"Einhängepunkte in den Speicherverwaltungen von Python werden entfernt. "
+"Außerdem werden alle bisher gesammelten Traces von Python reservierter "
+"Speicherblöcke verworfen."
 
 #: ../../library/tracemalloc.rst:398
 msgid ""
 "Call :func:`take_snapshot` function to take a snapshot of traces before "
 "clearing them."
 msgstr ""
+"Mit der Funktion :func:`take_snapshot` lässt sich vor dem Verwerfen ein "
+"Snapshot der Traces nehmen."
 
 #: ../../library/tracemalloc.rst:401
 msgid ""
 "See also :func:`start`, :func:`is_tracing` and :func:`clear_traces` "
 "functions."
 msgstr ""
+"Siehe auch die Funktionen :func:`start`, :func:`is_tracing` "
+"und :func:`clear_traces`."
 
 #: ../../library/tracemalloc.rst:407
 msgid ""
 "Take a snapshot of traces of memory blocks allocated by Python. Return a "
 "new :class:`Snapshot` instance."
 msgstr ""
+"Nimmt einen Snapshot der Traces von Python reservierter Speicherblöcke. "
+"Zurückgegeben wird eine neue Instanz von :class:`Snapshot`."
 
 #: ../../library/tracemalloc.rst:410
 msgid ""
 "The snapshot does not include memory blocks allocated before the :mod:`!"
 "tracemalloc` module started to trace memory allocations."
 msgstr ""
+"Speicherblöcke, die vor dem Beginn der Aufzeichnung durch das Modul :mod:`!"
+"tracemalloc` reserviert wurden, enthält der Snapshot nicht."
 
 #: ../../library/tracemalloc.rst:413
 msgid ""
 "Tracebacks of traces are limited to :func:`get_traceback_limit` frames. Use "
 "the *nframe* parameter of the :func:`start` function to store more frames."
 msgstr ""
+"Die Tracebacks der Traces sind auf :func:`get_traceback_limit` Frames "
+"begrenzt. Für mehr Frames dient der Parameter *nframe* der "
+"Funktion :func:`start`."
 
 #: ../../library/tracemalloc.rst:416
 msgid ""
 "The :mod:`!tracemalloc` module must be tracing memory allocations to take a "
 "snapshot, see the :func:`start` function."
 msgstr ""
+"Das Modul :mod:`!tracemalloc` muss Reservierungen aufzeichnen, damit sich "
+"ein Snapshot nehmen lässt. Siehe die Funktion :func:`start`."
 
 #: ../../library/tracemalloc.rst:419
 msgid "See also the :func:`get_object_traceback` function."
-msgstr ""
+msgstr "Siehe auch die Funktion :func:`get_object_traceback`."
 
 #: ../../library/tracemalloc.rst:423
 msgid "DomainFilter"
-msgstr ""
+msgstr "DomainFilter"
 
 #: ../../library/tracemalloc.rst:427
 msgid "Filter traces of memory blocks by their address space (domain)."
-msgstr ""
+msgstr "Filtert Traces von Speicherblöcken nach ihrem Adressraum (Domain)."
 
 #: ../../library/tracemalloc.rst:433
 msgid ""
 "If *inclusive* is ``True`` (include), match memory blocks allocated in the "
 "address space :attr:`domain`."
 msgstr ""
+"Ist *inclusive* gleich ``True`` (einschließen), passen die Speicherblöcke, "
+"die im Adressraum :attr:`domain` reserviert wurden."
 
 #: ../../library/tracemalloc.rst:436
 msgid ""
 "If *inclusive* is ``False`` (exclude), match memory blocks not allocated in "
 "the address space :attr:`domain`."
 msgstr ""
+"Ist *inclusive* gleich ``False`` (ausschließen), passen die Speicherblöcke, "
+"die nicht im Adressraum :attr:`domain` reserviert wurden."
 
 #: ../../library/tracemalloc.rst:441 ../../library/tracemalloc.rst:691
 msgid "Address space of a memory block (``int``). Read-only property."
-msgstr ""
+msgstr "Adressraum eines Speicherblocks (``int``). Nur lesbares Property."
 
 #: ../../library/tracemalloc.rst:445
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: ../../library/tracemalloc.rst:449
 msgid "Filter on traces of memory blocks."
-msgstr ""
+msgstr "Filter für Traces von Speicherblöcken."
 
 #: ../../library/tracemalloc.rst:451
 msgid ""
 "See the :func:`fnmatch.fnmatch` function for the syntax of "
 "*filename_pattern*. The ``'.pyc'`` file extension is replaced with ``'.py'``."
 msgstr ""
+"Die Syntax von *filename_pattern* steht bei der "
+"Funktion :func:`fnmatch.fnmatch`. Die Dateiendung ``'.pyc'`` wird durch "
+"``'.py'`` ersetzt."
 
 #: ../../library/tracemalloc.rst:455
 msgid "Examples:"
@@ -630,34 +929,41 @@ msgid ""
 "``Filter(True, subprocess.__file__)`` only includes traces of "
 "the :mod:`subprocess` module"
 msgstr ""
+"``Filter(True, subprocess.__file__)`` schließt nur Traces des "
+"Moduls :mod:`subprocess` ein"
 
 #: ../../library/tracemalloc.rst:459
 msgid ""
 "``Filter(False, tracemalloc.__file__)`` excludes traces of the :mod:`!"
 "tracemalloc` module"
 msgstr ""
+"``Filter(False, tracemalloc.__file__)`` schließt Traces des Moduls :mod:`!"
+"tracemalloc` aus"
 
 #: ../../library/tracemalloc.rst:461
 msgid "``Filter(False, \"<unknown>\")`` excludes empty tracebacks"
-msgstr ""
+msgstr "``Filter(False, \"<unknown>\")`` schließt leere Tracebacks aus"
 
 #: ../../library/tracemalloc.rst:464
 msgid "The ``'.pyo'`` file extension is no longer replaced with ``'.py'``."
-msgstr ""
+msgstr "Die Dateiendung ``'.pyo'`` wird nicht mehr durch ``'.py'`` ersetzt."
 
 #: ../../library/tracemalloc.rst:467 ../../library/tracemalloc.rst:686
 msgid "Added the :attr:`domain` attribute."
-msgstr ""
+msgstr "Das Attribut :attr:`domain` wurde hinzugefügt."
 
 #: ../../library/tracemalloc.rst:473
 msgid "Address space of a memory block (``int`` or ``None``)."
-msgstr ""
+msgstr "Adressraum eines Speicherblocks (``int`` oder ``None``)."
 
 #: ../../library/tracemalloc.rst:475 ../../library/tracemalloc.rst:693
 msgid ""
 "tracemalloc uses the domain ``0`` to trace memory allocations made by "
 "Python. C extensions can use other domains to trace other resources."
 msgstr ""
+"tracemalloc verwendet die Domain ``0``, um Reservierungen von Python "
+"aufzuzeichnen. C-Erweiterungen können andere Domains nutzen, um andere "
+"Ressourcen aufzuzeichnen."
 
 #: ../../library/tracemalloc.rst:480
 msgid ""
@@ -665,6 +971,9 @@ msgid ""
 "a file with a name matching :attr:`filename_pattern` at line "
 "number :attr:`lineno`."
 msgstr ""
+"Ist *inclusive* gleich ``True`` (einschließen), passen nur die "
+"Speicherblöcke, die in einer Datei mit einem zu :attr:`filename_pattern` "
+"passenden Namen in Zeile :attr:`lineno` reserviert wurden."
 
 #: ../../library/tracemalloc.rst:484
 msgid ""
@@ -672,22 +981,29 @@ msgid ""
 "file with a name matching :attr:`filename_pattern` at line "
 "number :attr:`lineno`."
 msgstr ""
+"Ist *inclusive* gleich ``False`` (ausschließen), bleiben die Speicherblöcke "
+"außer Betracht, die in einer Datei mit einem zu :attr:`filename_pattern` "
+"passenden Namen in Zeile :attr:`lineno` reserviert wurden."
 
 #: ../../library/tracemalloc.rst:490
 msgid ""
 "Line number (``int``) of the filter. If *lineno* is ``None``, the filter "
 "matches any line number."
 msgstr ""
+"Zeilennummer (``int``) des Filters. Ist *lineno* gleich ``None``, passt der "
+"Filter auf jede Zeilennummer."
 
 #: ../../library/tracemalloc.rst:495
 msgid "Filename pattern of the filter (``str``). Read-only property."
-msgstr ""
+msgstr "Dateinamensmuster des Filters (``str``). Nur lesbares Property."
 
 #: ../../library/tracemalloc.rst:499
 msgid ""
 "If *all_frames* is ``True``, all frames of the traceback are checked. If "
 "*all_frames* is ``False``, only the most recent frame is checked."
 msgstr ""
+"Ist *all_frames* gleich ``True``, werden alle Frames des Tracebacks geprüft. "
+"Ist *all_frames* gleich ``False``, nur der jüngste Frame."
 
 #: ../../library/tracemalloc.rst:502
 msgid ""
@@ -695,50 +1011,59 @@ msgid ""
 "the :func:`get_traceback_limit` function "
 "and :attr:`Snapshot.traceback_limit` attribute."
 msgstr ""
+"Dieses Attribut bleibt ohne Wirkung, wenn die Traceback-Grenze ``1`` ist. "
+"Siehe die Funktion :func:`get_traceback_limit` und das "
+"Attribut :attr:`Snapshot.traceback_limit`."
 
 #: ../../library/tracemalloc.rst:508
 msgid "Frame"
-msgstr ""
+msgstr "Frame"
 
 #: ../../library/tracemalloc.rst:512
 msgid "Frame of a traceback."
-msgstr ""
+msgstr "Frame eines Tracebacks."
 
 #: ../../library/tracemalloc.rst:514
 msgid "The :class:`Traceback` class is a sequence of :class:`Frame` instances."
 msgstr ""
+"Die Klasse :class:`Traceback` ist eine Sequenz von :class:`Frame`-Instanzen."
 
 #: ../../library/tracemalloc.rst:518
 msgid "Filename (``str``)."
-msgstr ""
+msgstr "Dateiname (``str``)."
 
 #: ../../library/tracemalloc.rst:522
 msgid "Line number (``int``)."
-msgstr ""
+msgstr "Zeilennummer (``int``)."
 
 #: ../../library/tracemalloc.rst:526
 msgid "Snapshot"
-msgstr ""
+msgstr "Snapshot"
 
 #: ../../library/tracemalloc.rst:530
 msgid "Snapshot of traces of memory blocks allocated by Python."
-msgstr ""
+msgstr "Snapshot der Traces von Python reservierter Speicherblöcke."
 
 #: ../../library/tracemalloc.rst:532
 msgid "The :func:`take_snapshot` function creates a snapshot instance."
-msgstr ""
+msgstr "Die Funktion :func:`take_snapshot` erzeugt eine Snapshot-Instanz."
 
 #: ../../library/tracemalloc.rst:536
 msgid ""
 "Compute the differences with an old snapshot. Get statistics as a sorted "
 "list of :class:`StatisticDiff` instances grouped by *key_type*."
 msgstr ""
+"Berechnet die Unterschiede zu einem älteren Snapshot. Geliefert wird eine "
+"nach *key_type* gruppierte, sortierte Liste von :class:`StatisticDiff`-"
+"Instanzen."
 
 #: ../../library/tracemalloc.rst:539
 msgid ""
 "See the :meth:`Snapshot.statistics` method for *key_type* and *cumulative* "
 "parameters."
 msgstr ""
+"Zu den Parametern *key_type* und *cumulative* siehe die "
+"Methode :meth:`Snapshot.statistics`."
 
 #: ../../library/tracemalloc.rst:542
 msgid ""
@@ -747,14 +1072,18 @@ msgid ""
 "value of :attr:`StatisticDiff.count_diff`, :attr:`Statistic.count` and then "
 "by :attr:`StatisticDiff.traceback`."
 msgstr ""
+"Das Ergebnis ist absteigend sortiert nach: Betrag "
+"von :attr:`StatisticDiff.size_diff`, :attr:`StatisticDiff.size`, Betrag "
+"von :attr:`StatisticDiff.count_diff`, :attr:`Statistic.count` und "
+"schließlich :attr:`StatisticDiff.traceback`."
 
 #: ../../library/tracemalloc.rst:550
 msgid "Write the snapshot into a file."
-msgstr ""
+msgstr "Schreibt den Snapshot in eine Datei."
 
 #: ../../library/tracemalloc.rst:552
 msgid "Use :meth:`load` to reload the snapshot."
-msgstr ""
+msgstr "Zum Zurückladen des Snapshots dient :meth:`load`."
 
 #: ../../library/tracemalloc.rst:557
 msgid ""
@@ -763,6 +1092,10 @@ msgid ""
 "instances.  If *filters* is an empty list, return a new :class:`Snapshot` "
 "instance with a copy of the traces."
 msgstr ""
+"Erzeugt eine neue :class:`Snapshot`-Instanz mit gefilterter :attr:`traces`-"
+"Sequenz. *filters* ist eine Liste von :class:`DomainFilter`- "
+"und :class:`Filter`-Instanzen. Ist *filters* eine leere Liste, kommt eine "
+"neue :class:`Snapshot`-Instanz mit einer Kopie der Traces zurück."
 
 #: ../../library/tracemalloc.rst:562
 msgid ""
@@ -770,28 +1103,34 @@ msgid ""
 "inclusive filters match it. A trace is ignored if at least one exclusive "
 "filter matches it."
 msgstr ""
+"Alle einschließenden Filter greifen zugleich. Ein Trace bleibt außer "
+"Betracht, wenn kein einschließender Filter auf ihn passt. Ein Trace bleibt "
+"ebenso außer Betracht, wenn mindestens ein ausschließender Filter auf ihn "
+"passt."
 
 #: ../../library/tracemalloc.rst:566
 msgid ":class:`DomainFilter` instances are now also accepted in *filters*."
-msgstr ""
+msgstr "In *filters* sind jetzt auch :class:`DomainFilter`-Instanzen erlaubt."
 
 #: ../../library/tracemalloc.rst:572
 msgid "Load a snapshot from a file."
-msgstr ""
+msgstr "Lädt einen Snapshot aus einer Datei."
 
 #: ../../library/tracemalloc.rst:574
 msgid "See also :meth:`dump`."
-msgstr ""
+msgstr "Siehe auch :meth:`dump`."
 
 #: ../../library/tracemalloc.rst:579
 msgid ""
 "Get statistics as a sorted list of :class:`Statistic` instances grouped by "
 "*key_type*:"
 msgstr ""
+"Liefert eine nach *key_type* gruppierte, sortierte Liste "
+"von :class:`Statistic`-Instanzen:"
 
 #: ../../library/tracemalloc.rst:583
 msgid "key_type"
-msgstr ""
+msgstr "key_type"
 
 #: ../../library/tracemalloc.rst:583
 msgid "description"
@@ -799,27 +1138,27 @@ msgstr "Beschreibung"
 
 #: ../../library/tracemalloc.rst:585
 msgid "``'filename'``"
-msgstr ""
+msgstr "``'filename'``"
 
 #: ../../library/tracemalloc.rst:585
 msgid "filename"
-msgstr ""
+msgstr "Dateiname"
 
 #: ../../library/tracemalloc.rst:586
 msgid "``'lineno'``"
-msgstr ""
+msgstr "``'lineno'``"
 
 #: ../../library/tracemalloc.rst:586
 msgid "filename and line number"
-msgstr ""
+msgstr "Dateiname und Zeilennummer"
 
 #: ../../library/tracemalloc.rst:587
 msgid "``'traceback'``"
-msgstr ""
+msgstr "``'traceback'``"
 
 #: ../../library/tracemalloc.rst:587
 msgid "traceback"
-msgstr ""
+msgstr "Traceback"
 
 #: ../../library/tracemalloc.rst:590
 msgid ""
@@ -828,6 +1167,10 @@ msgid ""
 "cumulative mode can only be used with *key_type* equal to ``'filename'`` and "
 "``'lineno'``."
 msgstr ""
+"Ist *cumulative* gleich ``True``, werden Größe und Anzahl der Speicherblöcke "
+"über alle Frames des Tracebacks eines Traces summiert, nicht nur über den "
+"jüngsten Frame. Dieser kumulierende Modus ist nur mit *key_type* gleich "
+"``'filename'`` oder ``'lineno'`` möglich."
 
 #: ../../library/tracemalloc.rst:595
 msgid ""
@@ -835,128 +1178,160 @@ msgid ""
 "by: :attr:`Statistic.size`, :attr:`Statistic.count` and then "
 "by :attr:`Statistic.traceback`."
 msgstr ""
+"Das Ergebnis ist absteigend sortiert "
+"nach: :attr:`Statistic.size`, :attr:`Statistic.count` und "
+"schließlich :attr:`Statistic.traceback`."
 
 #: ../../library/tracemalloc.rst:602
 msgid ""
 "Maximum number of frames stored in the traceback of :attr:`traces`: result "
 "of the :func:`get_traceback_limit` when the snapshot was taken."
 msgstr ""
+"Größte Anzahl an Frames, die im Traceback von :attr:`traces` festgehalten "
+"sind: das Ergebnis von :func:`get_traceback_limit` zum Zeitpunkt des "
+"Snapshots."
 
 #: ../../library/tracemalloc.rst:607
 msgid ""
 "Traces of all memory blocks allocated by Python: sequence of :class:`Trace` "
 "instances."
 msgstr ""
+"Traces aller von Python reservierten Speicherblöcke: eine Sequenz "
+"von :class:`Trace`-Instanzen."
 
 #: ../../library/tracemalloc.rst:610
 msgid ""
 "The sequence has an undefined order. Use the :meth:`Snapshot.statistics` "
 "method to get a sorted list of statistics."
 msgstr ""
+"Die Reihenfolge der Sequenz ist nicht festgelegt. Eine sortierte Liste von "
+"Statistiken liefert die Methode :meth:`Snapshot.statistics`."
 
 #: ../../library/tracemalloc.rst:615
 msgid "Statistic"
-msgstr ""
+msgstr "Statistic"
 
 #: ../../library/tracemalloc.rst:619
 msgid "Statistic on memory allocations."
-msgstr ""
+msgstr "Statistik über Speicherreservierungen."
 
 #: ../../library/tracemalloc.rst:621
 msgid ""
 ":func:`Snapshot.statistics` returns a list of :class:`Statistic` instances."
 msgstr ""
+":func:`Snapshot.statistics` gibt eine Liste von :class:`Statistic`-Instanzen "
+"zurück."
 
 #: ../../library/tracemalloc.rst:623
 msgid "See also the :class:`StatisticDiff` class."
-msgstr ""
+msgstr "Siehe auch die Klasse :class:`StatisticDiff`."
 
 #: ../../library/tracemalloc.rst:627
 msgid "Number of memory blocks (``int``)."
-msgstr ""
+msgstr "Anzahl der Speicherblöcke (``int``)."
 
 #: ../../library/tracemalloc.rst:631
 msgid "Total size of memory blocks in bytes (``int``)."
-msgstr ""
+msgstr "Gesamtgröße der Speicherblöcke in Byte (``int``)."
 
 #: ../../library/tracemalloc.rst:635 ../../library/tracemalloc.rst:702
 msgid ""
 "Traceback where the memory block was allocated, :class:`Traceback` instance."
 msgstr ""
+"Traceback der Stelle, an der der Speicherblock reserviert wurde. Eine "
+"Instanz von :class:`Traceback`."
 
 #: ../../library/tracemalloc.rst:640
 msgid "StatisticDiff"
-msgstr ""
+msgstr "StatisticDiff"
 
 #: ../../library/tracemalloc.rst:644
 msgid ""
 "Statistic difference on memory allocations between an old and a "
 "new :class:`Snapshot` instance."
 msgstr ""
+"Unterschied der Statistik über Speicherreservierungen zwischen einer älteren "
+"und einer neueren :class:`Snapshot`-Instanz."
 
 #: ../../library/tracemalloc.rst:647
 msgid ""
 ":func:`Snapshot.compare_to` returns a list of :class:`StatisticDiff` "
 "instances. See also the :class:`Statistic` class."
 msgstr ""
+":func:`Snapshot.compare_to` gibt eine Liste von :class:`StatisticDiff`-"
+"Instanzen zurück. Siehe auch die Klasse :class:`Statistic`."
 
 #: ../../library/tracemalloc.rst:652
 msgid ""
 "Number of memory blocks in the new snapshot (``int``): ``0`` if the memory "
 "blocks have been released in the new snapshot."
 msgstr ""
+"Anzahl der Speicherblöcke im neuen Snapshot (``int``): ``0``, wenn die "
+"Speicherblöcke im neuen Snapshot freigegeben sind."
 
 #: ../../library/tracemalloc.rst:657
 msgid ""
 "Difference of number of memory blocks between the old and the new snapshots "
 "(``int``)."
 msgstr ""
+"Unterschied in der Anzahl der Speicherblöcke zwischen altem und neuem "
+"Snapshot (``int``)."
 
 #: ../../library/tracemalloc.rst:662
 msgid ""
 "Total size of memory blocks in bytes in the new snapshot (``int``): ``0`` if "
 "the memory blocks have been released in the new snapshot."
 msgstr ""
+"Gesamtgröße der Speicherblöcke in Byte im neuen Snapshot (``int``): ``0``, "
+"wenn die Speicherblöcke im neuen Snapshot freigegeben sind."
 
 #: ../../library/tracemalloc.rst:667
 msgid ""
 "Difference of total size of memory blocks in bytes between the old and the "
 "new snapshots (``int``)."
 msgstr ""
+"Unterschied in der Gesamtgröße der Speicherblöcke in Byte zwischen altem und "
+"neuem Snapshot (``int``)."
 
 #: ../../library/tracemalloc.rst:672
 msgid ""
 "Traceback where the memory blocks were allocated, :class:`Traceback` "
 "instance."
 msgstr ""
+"Traceback der Stelle, an der die Speicherblöcke reserviert wurden. Eine "
+"Instanz von :class:`Traceback`."
 
 #: ../../library/tracemalloc.rst:677
 msgid "Trace"
-msgstr ""
+msgstr "Trace"
 
 #: ../../library/tracemalloc.rst:681
 msgid "Trace of a memory block."
-msgstr ""
+msgstr "Trace eines Speicherblocks."
 
 #: ../../library/tracemalloc.rst:683
 msgid ""
 "The :attr:`Snapshot.traces` attribute is a sequence of :class:`Trace` "
 "instances."
 msgstr ""
+"Das Attribut :attr:`Snapshot.traces` ist eine Sequenz von :class:`Trace`-"
+"Instanzen."
 
 #: ../../library/tracemalloc.rst:698
 msgid "Size of the memory block in bytes (``int``)."
-msgstr ""
+msgstr "Größe des Speicherblocks in Byte (``int``)."
 
 #: ../../library/tracemalloc.rst:707
 msgid "Traceback"
-msgstr ""
+msgstr "Traceback"
 
 #: ../../library/tracemalloc.rst:711
 msgid ""
 "Sequence of :class:`Frame` instances sorted from the oldest frame to the "
 "most recent frame."
 msgstr ""
+"Sequenz von :class:`Frame`-Instanzen, sortiert vom ältesten zum jüngsten "
+"Frame."
 
 #: ../../library/tracemalloc.rst:714
 msgid ""
@@ -964,6 +1339,9 @@ msgid ""
 "failed to get a frame, the filename ``\"<unknown>\"`` at line number ``0`` "
 "is used."
 msgstr ""
+"Ein Traceback enthält mindestens ``1`` Frame. Konnte das Modul "
+"``tracemalloc`` einen Frame nicht ermitteln, wird der Dateiname "
+"``\"<unknown>\"`` mit Zeilennummer ``0`` verwendet."
 
 #: ../../library/tracemalloc.rst:718
 msgid ""
@@ -973,26 +1351,36 @@ msgid ""
 "the :attr:`Traceback.total_nframe` attribute. That allows one to know if a "
 "traceback has been truncated by the traceback limit."
 msgstr ""
+"Beim Nehmen eines Snapshots werden die Tracebacks der Traces "
+"auf :func:`get_traceback_limit` Frames begrenzt. Siehe die "
+"Funktion :func:`take_snapshot`. Die ursprüngliche Anzahl der Frames steht im "
+"Attribut :attr:`Traceback.total_nframe`. Daran lässt sich erkennen, ob die "
+"Traceback-Grenze einen Traceback abgeschnitten hat."
 
 #: ../../library/tracemalloc.rst:724
 msgid "The :attr:`Trace.traceback` attribute is a :class:`Traceback` instance."
 msgstr ""
+"Das Attribut :attr:`Trace.traceback` ist eine Instanz von :class:`Traceback`."
 
 #: ../../library/tracemalloc.rst:726
 msgid ""
 "Frames are now sorted from the oldest to the most recent, instead of most "
 "recent to oldest."
 msgstr ""
+"Frames sind jetzt vom ältesten zum jüngsten sortiert, nicht mehr vom "
+"jüngsten zum ältesten."
 
 #: ../../library/tracemalloc.rst:731
 msgid ""
 "Total number of frames that composed the traceback before truncation. This "
 "attribute can be set to ``None`` if the information is not available."
 msgstr ""
+"Gesamtzahl der Frames, aus denen der Traceback vor dem Abschneiden bestand. "
+"Dieses Attribut kann ``None`` sein, wenn die Information nicht vorliegt."
 
 #: ../../library/tracemalloc.rst:735
 msgid "The :attr:`Traceback.total_nframe` attribute was added."
-msgstr ""
+msgstr "Das Attribut :attr:`Traceback.total_nframe` wurde hinzugefügt."
 
 #: ../../library/tracemalloc.rst:740
 msgid ""
@@ -1003,12 +1391,20 @@ msgid ""
 "of the formatted frames is reversed, returning the most recent frame first "
 "instead of last."
 msgstr ""
+"Formatiert den Traceback als Liste von Zeilen. Die Zeilen des Quellcodes "
+"holt das Modul :mod:`linecache`. Ist *limit* gesetzt und positiv, werden die "
+"*limit* jüngsten Frames formatiert, andernfalls die ``abs(limit)`` ältesten. "
+"Ist *most_recent_first* gleich ``True``, wird die Reihenfolge der "
+"formatierten Frames umgekehrt, der jüngste Frame steht dann zuerst statt "
+"zuletzt."
 
 #: ../../library/tracemalloc.rst:747
 msgid ""
 "Similar to the :func:`traceback.format_tb` function, except "
 "that :meth:`.format` does not include newlines."
 msgstr ""
+"Ähnlich wie die Funktion :func:`traceback.format_tb`, nur "
+"enthält :meth:`.format` keine Zeilenumbrüche."
 
 #: ../../library/tracemalloc.rst:750
 msgid "Example::"
@@ -1020,6 +1416,9 @@ msgid ""
 "for line in traceback:\n"
 "    print(line)"
 msgstr ""
+"print(\"Traceback (most recent call first):\")\n"
+"for line in traceback:\n"
+"    print(line)"
 
 #: ../../library/tracemalloc.rst:758
 msgid ""
@@ -1029,3 +1428,8 @@ msgid ""
 "  File \"test.py\", line 12\n"
 "    tb = tracemalloc.get_object_traceback(f())"
 msgstr ""
+"Traceback (most recent call first):\n"
+"  File \"test.py\", line 9\n"
+"    obj = Object()\n"
+"  File \"test.py\", line 12\n"
+"    tb = tracemalloc.get_object_traceback(f())"
