@@ -1,20 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,11 +22,11 @@ msgstr ""
 
 #: ../../library/winsound.rst:2
 msgid ":mod:`!winsound` --- Sound-playing interface for Windows"
-msgstr ""
+msgstr ":mod:`!winsound` --- Schnittstelle zur Klangausgabe unter Windows"
 
 #: ../../library/winsound.rst:7
 msgid "**Source code:** :source:`PC/winsound.c`"
-msgstr ""
+msgstr "**Quellcode:** :source:`PC/winsound.c`"
 
 #: ../../library/winsound.rst:11
 msgid ""
@@ -35,14 +34,17 @@ msgid ""
 "machinery provided by Windows platforms.  It includes functions and several "
 "constants."
 msgstr ""
+"Das Modul :mod:`!winsound` gibt dir Zugriff auf die grundlegende "
+"Klangausgabe, die Windows-Plattformen mitbringen. Es enthält Funktionen und "
+"mehrere Konstanten."
 
 #: ../../library/winsound.rst:14
 msgid "Availability"
-msgstr ""
+msgstr "Verfügbarkeit"
 
 #: ../../library/winsound.rst:18
 msgid "Functions"
-msgstr ""
+msgstr "Funktionen"
 
 #: ../../library/winsound.rst:22
 msgid ""
@@ -52,6 +54,11 @@ msgid ""
 "last.  If the system is not able to beep the speaker, :exc:`RuntimeError` is "
 "raised."
 msgstr ""
+"Lässt den PC-Lautsprecher piepen. Der Parameter *frequency* gibt die "
+"Frequenz des Tons in Hertz an und muss im Bereich von 37 bis 32.767 liegen. "
+"Der Parameter *duration* gibt an, wie viele Millisekunden der Ton dauern "
+"soll. Kann das System den Lautsprecher nicht ansteuern, "
+"wird :exc:`RuntimeError` ausgelöst."
 
 #: ../../library/winsound.rst:30
 msgid ""
@@ -63,6 +70,13 @@ msgid ""
 "waveform sound is stopped. If the system indicates an "
 "error, :exc:`RuntimeError` is raised."
 msgstr ""
+"Ruft die zugrundeliegende Funktion :c:func:`!PlaySound` der Plattform-API "
+"auf. Der Parameter *sound* kann ein Dateiname, ein Systemklang-Alias, "
+"Audiodaten als :term:`bytes-like object` oder ``None`` sein. Wie er "
+"ausgewertet wird, hängt vom Wert von *flags* ab, der eine bitweise mit ODER "
+"verknüpfte Kombination der unten beschriebenen Konstanten sein kann. Ist der "
+"Parameter *sound* ``None``, wird ein gerade laufender Waveform-Klang "
+"gestoppt. Meldet das System einen Fehler, wird :exc:`RuntimeError` ausgelöst."
 
 #: ../../library/winsound.rst:41
 msgid ""
@@ -75,16 +89,26 @@ msgid ""
 "played otherwise.  If the system indicates an error, :exc:`RuntimeError` is "
 "raised."
 msgstr ""
+"Ruft die zugrundeliegende Funktion :c:func:`!MessageBeep` der Plattform-API "
+"auf. Damit wird ein Klang abgespielt, wie er in der Registry festgelegt ist. "
+"Das Argument *type* gibt an, welcher Klang abgespielt wird. Möglich sind "
+"``-1``, ``MB_ICONASTERISK``, ``MB_ICONEXCLAMATION``, ``MB_ICONHAND``, "
+"``MB_ICONQUESTION`` und ``MB_OK``, alle unten beschrieben. Der Wert ``-1`` "
+"erzeugt einen einfachen Piepton. Das ist der letzte Ausweg, wenn sich kein "
+"anderer Klang abspielen lässt. Meldet das System einen Fehler, "
+"wird :exc:`RuntimeError` ausgelöst."
 
 #: ../../library/winsound.rst:51
 msgid "Constants"
-msgstr ""
+msgstr "Konstanten"
 
 #: ../../library/winsound.rst:55
 msgid ""
 "The *sound* parameter is the name of a WAV file. Do not use "
 "with :const:`SND_ALIAS`."
 msgstr ""
+"Der Parameter *sound* ist der Name einer WAV-Datei. Nicht gemeinsam "
+"mit :const:`SND_ALIAS` verwenden."
 
 #: ../../library/winsound.rst:61
 msgid ""
@@ -93,60 +117,67 @@ msgid ""
 "unless :const:`SND_NODEFAULT` is also specified. If no default sound is "
 "registered, raise :exc:`RuntimeError`. Do not use with :const:`SND_FILENAME`."
 msgstr ""
+"Der Parameter *sound* ist ein Klangzuordnungsname aus der Registry. Enthält "
+"die Registry keinen solchen Namen, wird der Standardklang des Systems "
+"abgespielt, sofern nicht zusätzlich :const:`SND_NODEFAULT` angegeben ist. "
+"Ist kein Standardklang eingetragen, wird :exc:`RuntimeError` ausgelöst. "
+"Nicht gemeinsam mit :const:`SND_FILENAME` verwenden."
 
 #: ../../library/winsound.rst:66
 msgid ""
 "All Win32 systems support at least the following; most systems support many "
 "more:"
 msgstr ""
+"Alle Win32-Systeme unterstützen mindestens die folgenden Namen, die meisten "
+"Systeme noch viele weitere:"
 
 #: ../../library/winsound.rst:70
 msgid ":func:`PlaySound` *name*"
-msgstr ""
+msgstr ":func:`PlaySound` *name*"
 
 #: ../../library/winsound.rst:70
 msgid "Corresponding Control Panel Sound name"
-msgstr ""
+msgstr "Zugehöriger Klangname in der Systemsteuerung"
 
 #: ../../library/winsound.rst:72
 msgid "``'SystemAsterisk'``"
-msgstr ""
+msgstr "``'SystemAsterisk'``"
 
 #: ../../library/winsound.rst:72
 msgid "Asterisk"
-msgstr ""
+msgstr "Sternchen"
 
 #: ../../library/winsound.rst:74
 msgid "``'SystemExclamation'``"
-msgstr ""
+msgstr "``'SystemExclamation'``"
 
 #: ../../library/winsound.rst:74
 msgid "Exclamation"
-msgstr ""
+msgstr "Hinweis"
 
 #: ../../library/winsound.rst:76
 msgid "``'SystemExit'``"
-msgstr ""
+msgstr "``'SystemExit'``"
 
 #: ../../library/winsound.rst:76
 msgid "Exit Windows"
-msgstr ""
+msgstr "Windows beenden"
 
 #: ../../library/winsound.rst:78
 msgid "``'SystemHand'``"
-msgstr ""
+msgstr "``'SystemHand'``"
 
 #: ../../library/winsound.rst:78
 msgid "Critical Stop"
-msgstr ""
+msgstr "Kritischer Fehler"
 
 #: ../../library/winsound.rst:80
 msgid "``'SystemQuestion'``"
-msgstr ""
+msgstr "``'SystemQuestion'``"
 
 #: ../../library/winsound.rst:80
 msgid "Question"
-msgstr ""
+msgstr "Frage"
 
 #: ../../library/winsound.rst:83
 msgid "For example::"
@@ -162,18 +193,30 @@ msgid ""
 "# \"*\" probably isn't the registered name of any sound).\n"
 "winsound.PlaySound(\"*\", winsound.SND_ALIAS)"
 msgstr ""
+"import winsound\n"
+"# Play Windows exit sound.\n"
+"winsound.PlaySound(\"SystemExit\", winsound.SND_ALIAS)\n"
+"\n"
+"# Probably play Windows default sound, if any is registered (because\n"
+"# \"*\" probably isn't the registered name of any sound).\n"
+"winsound.PlaySound(\"*\", winsound.SND_ALIAS)"
 
 #: ../../library/winsound.rst:96
 msgid ""
 "Play the sound repeatedly.  The :const:`SND_ASYNC` flag must also be used to "
 "avoid blocking.  Cannot be used with :const:`SND_MEMORY`."
 msgstr ""
+"Spielt den Klang wiederholt ab. Das Flag :const:`SND_ASYNC` muss zusätzlich "
+"gesetzt sein, damit der Aufruf nicht blockiert. Nicht gemeinsam "
+"mit :const:`SND_MEMORY` verwendbar."
 
 #: ../../library/winsound.rst:102
 msgid ""
 "The *sound* parameter to :func:`PlaySound` is a memory image of a WAV file, "
 "as a :term:`bytes-like object`."
 msgstr ""
+"Der Parameter *sound* von :func:`PlaySound` ist ein Speicherabbild einer WAV-"
+"Datei als :term:`bytes-like object`."
 
 #: ../../library/winsound.rst:107
 msgid ""
@@ -181,31 +224,36 @@ msgid ""
 "a combination of this flag and :const:`SND_ASYNC` will "
 "raise :exc:`RuntimeError`."
 msgstr ""
+"Dieses Modul kann ein Speicherabbild nicht asynchron abspielen. Die "
+"Kombination dieses Flags mit :const:`SND_ASYNC` löst "
+"daher :exc:`RuntimeError` aus."
 
 #: ../../library/winsound.rst:113
 msgid "Stop playing all instances of the specified sound."
-msgstr ""
+msgstr "Beendet alle laufenden Wiedergaben des angegebenen Klangs."
 
 #: ../../library/winsound.rst:117 ../../library/winsound.rst:141
 msgid "This flag is not supported on modern Windows platforms."
-msgstr ""
+msgstr "Dieses Flag wird auf aktuellen Windows-Plattformen nicht unterstützt."
 
 #: ../../library/winsound.rst:122
 msgid "Return immediately, allowing sounds to play asynchronously."
-msgstr ""
+msgstr "Kehrt sofort zurück, sodass der Klang asynchron abgespielt wird."
 
 #: ../../library/winsound.rst:127
 msgid ""
 "If the specified sound cannot be found, do not play the system default sound."
 msgstr ""
+"Spielt nicht den Standardklang des Systems ab, wenn der angegebene Klang "
+"nicht gefunden wird."
 
 #: ../../library/winsound.rst:132
 msgid "Do not interrupt sounds currently playing."
-msgstr ""
+msgstr "Unterbricht gerade laufende Klänge nicht."
 
 #: ../../library/winsound.rst:137
 msgid "Return immediately if the sound driver is busy."
-msgstr ""
+msgstr "Kehrt sofort zurück, wenn der Klangtreiber belegt ist."
 
 #: ../../library/winsound.rst:146
 msgid ""
@@ -213,33 +261,36 @@ msgid ""
 "flag can be combined with the :const:`SND_ALIAS` flag to specify an "
 "application-defined sound alias."
 msgstr ""
+"Der Parameter *sound* ist ein anwendungseigener Alias in der Registry. "
+"Dieses Flag lässt sich mit dem Flag :const:`SND_ALIAS` verbinden, um einen "
+"von der Anwendung festgelegten Klang-Alias anzugeben."
 
 #: ../../library/winsound.rst:153
 msgid "Triggers a SoundSentry event when the sound is played."
-msgstr ""
+msgstr "Löst beim Abspielen des Klangs ein SoundSentry-Ereignis aus."
 
 #: ../../library/winsound.rst:160
 msgid "The sound is played synchronously.  This is the default behavior."
-msgstr ""
+msgstr "Der Klang wird synchron abgespielt. Das ist das Standardverhalten."
 
 #: ../../library/winsound.rst:167
 msgid "Assign the sound to the audio session for system notification sounds."
-msgstr ""
+msgstr "Ordnet den Klang der Audiositzung für Systembenachrichtigungen zu."
 
 #: ../../library/winsound.rst:174 ../../library/winsound.rst:194
 #: ../../library/winsound.rst:206
 msgid "Play the ``SystemDefault`` sound."
-msgstr ""
+msgstr "Spielt den Klang ``SystemDefault`` ab."
 
 #: ../../library/winsound.rst:179 ../../library/winsound.rst:220
 msgid "Play the ``SystemExclamation`` sound."
-msgstr ""
+msgstr "Spielt den Klang ``SystemExclamation`` ab."
 
 #: ../../library/winsound.rst:184 ../../library/winsound.rst:199
 #: ../../library/winsound.rst:213
 msgid "Play the ``SystemHand`` sound."
-msgstr ""
+msgstr "Spielt den Klang ``SystemHand`` ab."
 
 #: ../../library/winsound.rst:189
 msgid "Play the ``SystemQuestion`` sound."
-msgstr ""
+msgstr "Spielt den Klang ``SystemQuestion`` ab."
