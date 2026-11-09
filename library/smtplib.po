@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-22 12:07+0200\n"
+"POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2025-09-16 00:01+0000\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
 "Language: de\n"
@@ -50,8 +50,8 @@ msgstr ""
 
 #: ../../library/smtplib.rst:27
 msgid ""
-"If the host parameter is set to a truthy value, :meth:`SMTP.connect` is "
-"called with host and port automatically when the object is created; "
+"If the host parameter is set to a true value, :meth:`SMTP.connect` is called "
+"with host and port automatically when the object is created; "
 "otherwise, :meth:`!connect` must be called manually."
 msgstr ""
 
@@ -135,8 +135,8 @@ msgstr ""
 
 #: ../../library/smtplib.rst:91
 msgid ""
-"If the host parameter is set to a truthy value, :meth:`SMTP.connect` is "
-"called with host and port automatically when the object is created; "
+"If the host parameter is set to a true value, :meth:`SMTP.connect` is called "
+"with host and port automatically when the object is created; "
 "otherwise, :meth:`!SMTP.connect` must be called manually."
 msgstr ""
 

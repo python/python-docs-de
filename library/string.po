@@ -1651,9 +1651,9 @@ msgid ""
 "the :mod:`string.templatelib` module."
 msgstr ""
 "Sie steht in keinem Zusammenhang mit Template-String-Literalen (t-Strings), "
-"die in Python 3.14 eingeführt wurden. Diese werden zu "
-":class:`string.templatelib.Template`-Objekten ausgewertet, die sich im Modul "
-":mod:`string.templatelib` befinden."
+"die in Python 3.14 eingeführt wurden. Diese werden "
+"zu :class:`string.templatelib.Template`-Objekten ausgewertet, die sich im "
+"Modul :mod:`string.templatelib` befinden."
 
 #: ../../library/string.rst:827
 msgid ""
