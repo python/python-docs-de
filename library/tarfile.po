@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-05 06:38+0000\n"
+"POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2026-05-08 17:18+0000\n"
 "Last-Translator: Swen Bachmann, 2026\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
@@ -1086,7 +1086,7 @@ msgstr ""
 #: ../../library/tarfile.rst:764
 msgid ""
 "Several attributes can be set to ``None`` to indicate that a piece of "
-"metadata is unused or unknown. Different :class:`TarInfo` methods handle "
+"metadata is unused or unknown. Different :class:`TarFile` methods handle "
 "``None`` differently:"
 msgstr ""
 
@@ -1937,7 +1937,7 @@ msgstr ""
 #: ../../library/tarfile.rst:1444
 msgid ""
 "How to create and write an archive to stdout using :data:`sys.stdout.buffer "
-"<sys.stdout>` in the *fileobj* parameter in :meth:`TarFile.add`::"
+"<sys.stdout>` in the *fileobj* parameter in :func:`~tarfile.open`::"
 msgstr ""
 
 #: ../../library/tarfile.rst:1448

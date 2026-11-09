@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-01 00:10+0000\n"
+"POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2025-09-16 00:00+0000\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
@@ -1878,7 +1878,7 @@ msgstr ""
 #: ../../extending/extending.rst:1341
 msgid ""
 "Note that ``PySpam_API`` is declared ``static``; otherwise the pointer array "
-"would disappear when :c:func:`!PyInit_spam` terminates!"
+"would disappear when :c:func:`!spam_module_exec` terminates!"
 msgstr ""
 
 #: ../../extending/extending.rst:1344

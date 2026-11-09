@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-01 00:10+0000\n"
+"POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
@@ -1983,10 +1983,10 @@ msgstr ""
 #: ../../whatsnew/2.3.rst:1359
 msgid ""
 "Several new POSIX functions (:func:`!getpgid`, :func:`!killpg`, :func:`!"
-"lchown`, :func:`!loadavg`, :func:`!major`, :func:`!makedev`, :func:`!minor`, "
-"and :func:`!mknod`) were added to the :mod:`posix` module that underlies "
-"the :mod:`os` module. (Contributed by Gustavo Niemeyer, Geert Jansen, and "
-"Denis S. Otkidach.)"
+"lchown`, :func:`!getloadavg`, :func:`!major`, :func:`!makedev`, :func:`!"
+"minor`, and :func:`!mknod`) were added to the :mod:`posix` module that "
+"underlies the :mod:`os` module. (Contributed by Gustavo Niemeyer, Geert "
+"Jansen, and Denis S. Otkidach.)"
 msgstr ""
 
 #: ../../whatsnew/2.3.rst:1365
@@ -2437,7 +2437,7 @@ msgstr ""
 
 #: ../../whatsnew/2.3.rst:1661
 msgid ""
-">{}>{}> u\"www.Alliancefrançaise.nu\".encode(\"idna\")\n"
+">>> u\"www.Alliancefrançaise.nu\".encode(\"idna\")\n"
 "'www.xn--alliancefranaise-npb.nu'"
 msgstr ""
 
