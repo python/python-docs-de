@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-01 00:10+0000\n"
+"POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2025-09-16 00:01+0000\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
 "Language: de\n"
@@ -3678,8 +3678,8 @@ msgstr ""
 #: ../../library/os.rst:3317
 msgid ""
 "``st_ctime_ns`` is deprecated on Windows. Use ``st_birthtime_ns`` for the "
-"file creation time. In the future, ``st_ctime`` will contain the time of the "
-"most recent metadata change, as for other platforms."
+"file creation time. In the future, ``st_ctime_ns`` will contain the time of "
+"the most recent metadata change, as for other platforms."
 msgstr ""
 
 #: ../../library/os.rst:3324
@@ -5768,8 +5768,8 @@ msgstr ""
 
 #: ../../library/os.rst:5385
 msgid ""
-"The *sigdef* argument will reset the disposition of all signals in the set "
-"specified. This argument corresponds to the C library :c:macro:`!"
+"The *setsigdef* argument will reset the disposition of all signals in the "
+"set specified. This argument corresponds to the C library :c:macro:`!"
 "POSIX_SPAWN_SETSIGDEF` flag."
 msgstr ""
 
@@ -5859,7 +5859,7 @@ msgid "There is no way to unregister a function."
 msgstr ""
 
 #: ../../library/os.rst:5468
-msgid "Execute the program *path* in a new process."
+msgid "Execute the program *file* in a new process."
 msgstr ""
 
 #: ../../library/os.rst:5470
@@ -5907,7 +5907,7 @@ msgid ""
 "the new environment is used as the source of the :envvar:`PATH` variable.  "
 "The other variants, :func:`spawnl`, :func:`spawnle`, :func:`spawnv`, "
 "and :func:`spawnve`, will not use the :envvar:`PATH` variable to locate the "
-"executable; *path* must contain an appropriate absolute or relative path."
+"executable; *file* must contain an appropriate absolute or relative path."
 msgstr ""
 
 #: ../../library/os.rst:5503
@@ -5939,10 +5939,13 @@ msgid ""
 msgstr ""
 
 #: ../../library/os.rst:5521
+#, fuzzy
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.spawn`` with arguments "
-"``mode``, ``path``, ``args``, ``env``."
+"``mode``, ``file``, ``args``, ``env``."
 msgstr ""
+"Löst ein :ref:`Audit-Ereignis <auditing>` ``open`` mit den Argumenten "
+"``path``, ``mode`` und ``flags`` aus."
 
 #: ../../library/os.rst:5525
 msgid ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-01 00:10+0000\n"
+"POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -11136,11 +11136,13 @@ msgstr ""
 "tkinter` als auch in :mod:`!tkinter.constants` zur Verfügung."
 
 #: ../../library/tkinter.rst:6567
-msgid "Truthy values, all equal to the integer ``1``."
+#, fuzzy
+msgid "Values that are true, all equal to the integer ``1``."
 msgstr "Wahre Werte, alle gleich der ganzen Zahl ``1``."
 
 #: ../../library/tkinter.rst:6573
-msgid "Falsy values, all equal to the integer ``0``."
+#, fuzzy
+msgid "Values that are false, all equal to the integer ``0``."
 msgstr "Falsche Werte, alle gleich der ganzen Zahl ``0``."
 
 #: ../../library/tkinter.rst:6588
