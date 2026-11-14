@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2026-11-01 16:00+0100\n"
-"Last-Translator: python-doc bot, 2025\n"
+"Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -269,16 +269,15 @@ msgstr ""
 "ohne abschließenden Zeilenumbruch."
 
 #: ../../library/calendar.rst:167
-#, fuzzy
 msgid ""
 "Return a string representing a single day formatted with the given *width*. "
 "If *day* is ``0``, return a string of spaces of the specified width, "
 "representing an empty day. The *weekday* parameter is unused."
 msgstr ""
-"Gibt eine Zeichenkette zurück, die einen einzelnen Tag in der angegebenen "
-"Breite *width* darstellt. Ist *theday* gleich ``0``, wird eine Zeichenkette "
-"aus Leerzeichen in dieser Breite zurückgegeben, die einen leeren Tag "
-"darstellt. Der Parameter *weekday* wird nicht verwendet."
+"Gibt einen String zurück, der einen einzelnen Tag in der angegebenen Breite "
+"*width* darstellt. Ist *day* gleich ``0``, wird ein String aus Leerzeichen "
+"in dieser Breite zurückgegeben, der einen leeren Tag darstellt. Der "
+"Parameter *weekday* wird nicht verwendet."
 
 #: ../../library/calendar.rst:174
 msgid ""
@@ -292,15 +291,14 @@ msgstr ""
 "Methode :meth:`setfirstweekday` gesetzt wurde."
 
 #: ../../library/calendar.rst:182
-#, fuzzy
 msgid ""
 "Return a string representing the name of a single weekday formatted to the "
 "specified *width*. The *day* parameter is an integer representing the day of "
 "the week, where ``0`` is Monday and ``6`` is Sunday."
 msgstr ""
-"Gibt eine Zeichenkette zurück, die den Namen eines einzelnen Wochentags in "
-"der angegebenen Breite *width* darstellt. Der Parameter *weekday* ist eine "
-"Ganzzahl für den Wochentag, wobei ``0`` Montag und ``6`` Sonntag ist."
+"Gibt einen String zurück, der den Namen eines einzelnen Wochentags in der "
+"angegebenen Breite *width* darstellt. Der Parameter *day* ist eine Ganzzahl "
+"für den Wochentag, wobei ``0`` Montag und ``6`` Sonntag ist."
 
 #: ../../library/calendar.rst:189
 msgid ""
