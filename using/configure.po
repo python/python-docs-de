@@ -25,7 +25,6 @@ msgid "Configure Python"
 msgstr "Python konfigurieren"
 
 #: ../../using/configure.rst:11
-#, fuzzy
 msgid "Build requirements"
 msgstr "Voraussetzungen für den Build"
 
@@ -411,7 +410,6 @@ msgstr ""
 "erzeugen::"
 
 #: ../../using/configure.rst:175
-#, fuzzy
 msgid ""
 "make regen-all\n"
 "make regen-stdlib-module-names\n"
@@ -423,15 +421,16 @@ msgstr ""
 "make regen-all\n"
 "make regen-stdlib-module-names\n"
 "make regen-limited-abi\n"
-"make regen-configure"
+"make regen-configure\n"
+"make regen-sbom\n"
+"make regen-unicodedata"
 
 #: ../../using/configure.rst:182
-#, fuzzy
 msgid ""
 "The :source:`Makefile.pre.in` file documents generated files, their inputs, "
 "and tools used to regenerate them. Search for ``regen-*`` make targets."
 msgstr ""
-"Die Datei ``Makefile.pre.in`` dokumentiert die erzeugten Dateien, ihre "
+"Die Datei :source:`Makefile.pre.in` dokumentiert die erzeugten Dateien, ihre "
 "Eingaben und die Werkzeuge, mit denen sie neu erzeugt werden. Suche dort "
 "nach den make-Zielen ``regen-*``."
 
@@ -489,7 +488,6 @@ msgstr ""
 "Zum Neuerzeugen von :file:`configure` wird jetzt Autoconf 2.72 verwendet."
 
 #: ../../using/configure.rst:215
-#, fuzzy
 msgid "Configure options"
 msgstr "Optionen von configure"
 
@@ -509,7 +507,6 @@ msgstr ""
 "Siehe auch :file:`Misc/SpecialBuilds.txt` in der Python-Quelldistribution."
 
 #: ../../using/configure.rst:224
-#, fuzzy
 msgid "General options"
 msgstr "Allgemeine Optionen"
 
@@ -1201,7 +1198,6 @@ msgstr ""
 "Modul :mod:`gzip`, überschreibt ``pkg-config``."
 
 #: ../../using/configure.rst:625
-#, fuzzy
 msgid "WebAssembly options"
 msgstr "WebAssembly-Optionen"
 
@@ -1223,7 +1219,6 @@ msgid "Turn on pthreads support for WASM."
 msgstr "Schaltet die Unterstützung für pthreads bei WASM ein."
 
 #: ../../using/configure.rst:644
-#, fuzzy
 msgid "Install options"
 msgstr "Optionen für die Installation"
 
@@ -1714,7 +1709,6 @@ msgstr ""
 "nicht verfügbar ist, etwa auf einer unverträglichen Plattform."
 
 #: ../../using/configure.rst:913
-#, fuzzy
 msgid "Python debug build"
 msgstr "Debug-Build von Python"
 
@@ -2139,7 +2133,6 @@ msgid "*DIR*: set an explicit rpath."
 msgstr "*DIR*: setzt einen ausdrücklichen rpath."
 
 #: ../../using/configure.rst:1157
-#, fuzzy
 msgid "Security options"
 msgstr "Sicherheitsoptionen"
 
@@ -2289,7 +2282,6 @@ msgstr ""
 "und Laufzeit gegen unsichere Verwendung der libc und gegen Pufferüberläufe."
 
 #: ../../using/configure.rst:1235
-#, fuzzy
 msgid "macOS options"
 msgstr "macOS-Optionen"
 
@@ -2395,7 +2387,6 @@ msgstr ""
 "angeben. Diese Option ist standardmäßig abgeschaltet."
 
 #: ../../using/configure.rst:1290
-#, fuzzy
 msgid "iOS options"
 msgstr "iOS-Optionen"
 
@@ -2416,7 +2407,6 @@ msgid "Specify the name for the framework (default: ``Python``)."
 msgstr "Gibt den Namen des Frameworks an (Vorgabe: ``Python``)."
 
 #: ../../using/configure.rst:1305
-#, fuzzy
 msgid "Cross compiling options"
 msgstr "Optionen für das Cross-Kompilieren"
 
@@ -2495,7 +2485,6 @@ msgstr ""
 "    --with-build-python=../x86_64/python"
 
 #: ../../using/configure.rst:1355
-#, fuzzy
 msgid "Python build system"
 msgstr "Das Bausystem von Python"
 
@@ -2556,7 +2545,6 @@ msgid "Main Makefile targets"
 msgstr "Die wichtigsten Makefile-Ziele"
 
 #: ../../using/configure.rst:1380
-#, fuzzy
 msgid ""
 "For the most part, when rebuilding after editing some code or refreshing "
 "your checkout from upstream, all you need to do is execute ``make``, which "
@@ -2569,42 +2557,37 @@ msgstr ""
 "Wenn du nach einer Codeänderung oder einem Auffrischen deines Checkouts von "
 "Upstream neu baust, genügt meist ``make``. Das baut (gemäß der Semantik von "
 "Make) das Standardziel, nämlich das erste im Makefile definierte. "
-"Herkömmlich — auch im CPython-Projekt — ist das üblicherweise das Ziel "
+"Herkömmlich -- auch im CPython-Projekt -- ist das üblicherweise das Ziel "
 "``all``. Das Skript ``configure`` setzt eine ``autoconf``-Variable "
 "``@DEF_MAKE_ALL_RULE@`` ein, die genau beschreibt, welche Ziele ``make all`` "
-"baut. Es gibt drei Möglichkeiten:"
+"baut. Es gibt folgende Möglichkeiten:"
 
 #: ../../using/configure.rst:1389
 msgid "``profile-opt`` (configured with ``--enable-optimizations``)"
 msgstr "``profile-opt`` (konfiguriert mit ``--enable-optimizations``)"
 
 #: ../../using/configure.rst:1390
-#, fuzzy
 msgid "``bolt-opt`` (configured with ``--enable-bolt``)"
-msgstr "``profile-opt`` (konfiguriert mit ``--enable-optimizations``)"
+msgstr "``bolt-opt`` (konfiguriert mit ``--enable-bolt``)"
 
 #: ../../using/configure.rst:1391
-#, fuzzy
 msgid ""
 "``build_emscripten`` (chosen if the host platform matches ``wasm32-"
 "emscripten``)"
 msgstr ""
-"``build_wasm`` (gewählt, wenn die Zielplattform auf ``wasm32-wasi*`` oder "
-"``wasm32-emscripten`` passt)"
+"``build_emscripten`` (gewählt, wenn die Zielplattform auf ``wasm32-"
+"emscripten`` passt)"
 
 #: ../../using/configure.rst:1393
-#, fuzzy
 msgid "``build_wasm`` (chosen if the host platform matches ``wasm32-wasi*``)"
 msgstr ""
-"``build_wasm`` (gewählt, wenn die Zielplattform auf ``wasm32-wasi*`` oder "
-"``wasm32-emscripten`` passt)"
+"``build_wasm`` (gewählt, wenn die Zielplattform auf ``wasm32-wasi*`` passt)"
 
 #: ../../using/configure.rst:1394
-#, fuzzy
 msgid "``build_all`` (configured without explicitly using any of the others)"
 msgstr ""
-"``build_all`` (konfiguriert, ohne eines der beiden anderen ausdrücklich zu "
-"verwenden)"
+"``build_all`` (konfiguriert, ohne eine der anderen Möglichkeiten "
+"ausdrücklich zu verwenden)"
 
 #: ../../using/configure.rst:1396
 msgid ""
@@ -2629,7 +2612,6 @@ msgstr ""
 "&& make`` die meisten Abhängigkeitsprobleme — auf Kosten längerer Bauzeiten."
 
 #: ../../using/configure.rst:1409
-#, fuzzy
 msgid ""
 "Build the ``python`` program, but don't build the standard library extension "
 "modules. This generates a file named ``platform`` which contains a single "
@@ -2706,16 +2688,14 @@ msgstr ""
 "Standard-Zeitgrenze von 20 Minuten anstelle der Option ``--fast-ci``."
 
 #: ../../using/configure.rst:1457
-#, fuzzy
 msgid ""
 "Regenerate (almost) all generated files. These include (but are not limited "
 "to) bytecode cases, and parser generator files. See :ref:`generated-files` "
 "for the targets that must be run separately."
 msgstr ""
 "Erzeugt (fast) alle erzeugten Dateien neu. Dazu gehören unter anderem die "
-"Bytecode-Fälle und die Datei des Parsergenerators. ``make regen-stdlib-"
-"module-names`` und ``autoconf`` müssen für die übrigen `erzeugten Dateien "
-"<#generated-files>`_ getrennt ausgeführt werden."
+"Bytecode-Fälle und die Dateien des Parsergenerators. Die Ziele, die getrennt "
+"ausgeführt werden müssen, siehe :ref:`generated-files`."
 
 #: ../../using/configure.rst:1463
 msgid "C extensions"
@@ -2750,18 +2730,16 @@ msgstr ""
 "AttributeError: module 'sys' has no attribute '__file__'"
 
 #: ../../using/configure.rst:1479
-#, fuzzy
 msgid ""
 "Other C extensions are built as dynamic libraries, like the ``_zoneinfo`` "
 "module. They are built with the ``Py_BUILD_CORE_MODULE`` macro defined. For "
 "example on Linux x86-64:"
 msgstr ""
 "Andere C-Erweiterungen werden als dynamische Bibliotheken gebaut, etwa das "
-"Modul ``_asyncio``. Sie werden mit definiertem Makro "
+"Modul ``_zoneinfo``. Sie werden mit definiertem Makro "
 "``Py_BUILD_CORE_MODULE`` gebaut. Beispiel unter Linux x86-64:"
 
 #: ../../using/configure.rst:1483
-#, fuzzy
 msgid ""
 ">>> import _zoneinfo\n"
 ">>> _zoneinfo\n"
@@ -2770,12 +2748,12 @@ msgid ""
 ">>> _zoneinfo.__file__\n"
 "'/.../lib.linux-x86_64-3.16/_zoneinfo.cpython-316d-x86_64-linux-gnu.so'"
 msgstr ""
-">>> import _asyncio\n"
-">>> _asyncio\n"
-"<module '_asyncio' from '/usr/lib64/python3.9/lib-dynload/"
-"_asyncio.cpython-39-x86_64-linux-gnu.so'>\n"
-">>> _asyncio.__file__\n"
-"'/usr/lib64/python3.9/lib-dynload/_asyncio.cpython-39-x86_64-linux-gnu.so'"
+">>> import _zoneinfo\n"
+">>> _zoneinfo\n"
+"<module '_zoneinfo' from '/.../lib.linux-x86_64-3.16/_zoneinfo.cpython-316d-"
+"x86_64-linux-gnu.so'>\n"
+">>> _zoneinfo.__file__\n"
+"'/.../lib.linux-x86_64-3.16/_zoneinfo.cpython-316d-x86_64-linux-gnu.so'"
 
 #: ../../using/configure.rst:1491
 msgid ""
@@ -2790,14 +2768,13 @@ msgstr ""
 "definiert sind, werden als dynamische Bibliotheken gebaut."
 
 #: ../../using/configure.rst:1495
-#, fuzzy
 msgid ""
 "The :c:macro:`PyAPI_FUNC()`, :c:macro:`PyAPI_DATA()` "
 "and :c:macro:`PyMODINIT_FUNC` macros of :file:`Include/exports.h` are "
 "defined differently depending if the ``Py_BUILD_CORE_MODULE`` macro is "
 "defined:"
 msgstr ""
-"Die Makros :c:macro:`!PyAPI_FUNC()`, :c:macro:`!PyAPI_DATA()` "
+"Die Makros :c:macro:`PyAPI_FUNC()`, :c:macro:`PyAPI_DATA()` "
 "und :c:macro:`PyMODINIT_FUNC` aus :file:`Include/exports.h` werden "
 "unterschiedlich definiert, je nachdem, ob das Makro ``Py_BUILD_CORE_MODULE`` "
 "definiert ist:"
