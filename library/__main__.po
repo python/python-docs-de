@@ -229,9 +229,9 @@ msgid ""
 "from an import statement::"
 msgstr ""
 "Dadurch kann ein Modul durch Prüfen seines eigenen ``__name__`` "
-"herausfinden, ob es in der Top-Level-Umgebung läuft. Das erlaubt eine "
-"verbreitete Redewendung, um Code bedingt auszuführen, wenn das Modul nicht "
-"über eine import-Anweisung initialisiert wird::"
+"herausfinden, ob es in der Top-Level-Umgebung läuft. Das ermöglicht ein "
+"gängiges Idiom, um Code nur dann auszuführen, wenn das Modul nicht über "
+"eine import-Anweisung initialisiert wurde::"
 
 #: ../../library/__main__.rst:105
 msgid ""
