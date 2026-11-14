@@ -1,16 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Translators:
+# Swen Bachmann, 2026
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 20:17+0000\n"
 "PO-Revision-Date: 2025-09-16 00:01+0000\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,27 +21,33 @@ msgstr ""
 
 #: ../../library/dialog.rst:2
 msgid "Tkinter dialogs"
-msgstr ""
+msgstr "Tkinter-Dialoge"
 
 #: ../../library/dialog.rst:5
 msgid ":mod:`!tkinter.simpledialog` --- Standard Tkinter input dialogs"
 msgstr ""
+":mod:`!tkinter.simpledialog` --- Standard-Eingabedialoge für Tkinter"
 
 #: ../../library/dialog.rst:10
 msgid "**Source code:** :source:`Lib/tkinter/simpledialog.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/tkinter/simpledialog.py`"
 
 #: ../../library/dialog.rst:14
 msgid ""
 "The :mod:`!tkinter.simpledialog` module contains convenience classes and "
 "functions for creating simple modal dialogs to get a value from the user."
 msgstr ""
+"Das Modul :mod:`!tkinter.simpledialog` enthält Komfortklassen und "
+"-funktionen zum Erstellen einfacher modaler Dialoge, mit denen ein Wert vom "
+"Benutzer abgefragt wird."
 
 #: ../../library/dialog.rst:22
 msgid ""
 "Prompt the user to enter a value of the desired type and return it, or "
 "``None`` if the dialog is cancelled."
 msgstr ""
+"Fordert den Benutzer auf, einen Wert des gewünschten Typs einzugeben, und "
+"gibt ihn zurück, oder ``None``, wenn der Dialog abgebrochen wird."
 
 #: ../../library/dialog.rst:25
 msgid ""
@@ -50,6 +58,13 @@ msgid ""
 "accepted value. :func:`askstring` also accepts *show*, a character used to "
 "mask the entered text, for example ``'*'`` to hide a password."
 msgstr ""
+"*title* ist der Dialogtitel und *prompt* die Meldung oberhalb des "
+"Eingabefelds. *initialvalue* ist der Wert, der anfangs im Eingabefeld steht. "
+"*parent* ist das Fenster, über dem der Dialog angezeigt wird. "
+":func:`askinteger` und :func:`askfloat` akzeptieren außerdem *minvalue* und "
+"*maxvalue*, die den zulässigen Wert begrenzen. :func:`askstring` akzeptiert "
+"zusätzlich *show*, ein Zeichen, mit dem der eingegebene Text maskiert wird, "
+"zum Beispiel ``'*'``, um ein Passwort zu verbergen."
 
 #: ../../library/dialog.rst:35
 msgid ""
@@ -57,23 +72,32 @@ msgid ""
 "and returns once the user closes it; the entered value is then available in "
 "the :attr:`!result` attribute."
 msgstr ""
+"Die Basisklasse für eigene Dialoge. Beim Instanziieren wird der Dialog modal "
+"angezeigt und kehrt zurück, sobald der Benutzer ihn schließt. Der "
+"eingegebene Wert steht dann im Attribut :attr:`!result` zur Verfügung."
 
 #: ../../library/dialog.rst:41
 msgid ""
 "The value produced by :meth:`apply`, or ``None`` if the dialog was cancelled."
 msgstr ""
+"Der von :meth:`apply` erzeugte Wert oder ``None``, wenn der Dialog "
+"abgebrochen wurde."
 
 #: ../../library/dialog.rst:46
 msgid ""
 "Override to construct the dialog's interface and return the widget that "
 "should have initial focus."
 msgstr ""
+"Wird überschrieben, um die Oberfläche des Dialogs aufzubauen und das Widget "
+"zurückzugeben, das den anfänglichen Fokus erhalten soll."
 
 #: ../../library/dialog.rst:51
 msgid ""
 "Default behaviour adds OK and Cancel buttons. Override for custom button "
 "layouts."
 msgstr ""
+"Das Standardverhalten fügt die Schaltflächen „OK“ und „Abbrechen“ hinzu. "
+"Überschreibe die Methode für eigene Anordnungen der Schaltflächen."
 
 #: ../../library/dialog.rst:56
 msgid ""
@@ -82,6 +106,11 @@ msgid ""
 "open. The default implementation always returns true; override it to check "
 "the input."
 msgstr ""
+"Prüft die vom Benutzer eingegebenen Daten. Gibt einen wahren Wert zurück, "
+"wenn sie gültig sind. Dann fährt der Dialog mit :meth:`apply` fort. Bei "
+"einem falschen Wert bleibt der Dialog geöffnet. Die Standardimplementierung "
+"gibt immer einen wahren Wert zurück. Überschreibe sie, um die Eingabe zu "
+"prüfen."
 
 #: ../../library/dialog.rst:64
 msgid ""
@@ -90,12 +119,19 @@ msgid ""
 "just before the dialog is destroyed. The default implementation does "
 "nothing; override it to act on or store the result."
 msgstr ""
+"Verarbeitet die vom Benutzer eingegebenen Daten, zum Beispiel indem sie im "
+"Attribut :attr:`!result` gespeichert werden. Wird aufgerufen, nachdem "
+":meth:`validate` erfolgreich war und kurz bevor der Dialog zerstört wird. "
+"Die Standardimplementierung tut nichts. Überschreibe sie, um das Ergebnis "
+"auszuwerten oder zu speichern."
 
 #: ../../library/dialog.rst:73
 msgid ""
 "Destroy the dialog window, clearing the reference to the widget that had the "
 "initial focus."
 msgstr ""
+"Zerstört das Dialogfenster und löscht die Referenz auf das Widget, das den "
+"anfänglichen Fokus hatte."
 
 #: ../../library/dialog.rst:79
 msgid ""
@@ -106,30 +142,41 @@ msgid ""
 "through the window manager, *title* the window title, and *class_* the Tk "
 "class name of the window."
 msgstr ""
+"Ein einfacher modaler Dialog, der die Meldung *text* über einer Reihe von "
+"Schaltflächen anzeigt, deren Beschriftungen durch *buttons* angegeben "
+"werden, und den Index der vom Benutzer gedrückten Schaltfläche zurückgibt. "
+"*default* ist der Index der Schaltfläche, die mit der Eingabetaste ausgelöst "
+"wird, *cancel* der Index, der zurückgegeben wird, wenn das Fenster über den "
+"Fenstermanager geschlossen wird, *title* der Fenstertitel und *class_* der "
+"Tk-Klassenname des Fensters."
 
 #: ../../library/dialog.rst:88
 msgid ""
 "Display the dialog, wait until the user presses a button or closes the "
 "window, and return the index of the chosen button."
 msgstr ""
+"Zeigt den Dialog an, wartet, bis der Benutzer eine Schaltfläche drückt oder "
+"das Fenster schließt, und gibt den Index der gewählten Schaltfläche zurück."
 
 #: ../../library/dialog.rst:94
 msgid ":mod:`!tkinter.filedialog` --- File selection dialogs"
-msgstr ""
+msgstr ":mod:`!tkinter.filedialog` --- Dialoge zur Dateiauswahl"
 
 #: ../../library/dialog.rst:99
 msgid "**Source code:** :source:`Lib/tkinter/filedialog.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/tkinter/filedialog.py`"
 
 #: ../../library/dialog.rst:103
 msgid ""
 "The :mod:`!tkinter.filedialog` module provides classes and factory functions "
 "for creating file/directory selection windows."
 msgstr ""
+"Das Modul :mod:`!tkinter.filedialog` stellt Klassen und Factory-Funktionen "
+"zum Erstellen von Fenstern zur Datei- und Verzeichnisauswahl bereit."
 
 #: ../../library/dialog.rst:107
 msgid "Native load/save dialogs"
-msgstr ""
+msgstr "Native Dialoge zum Laden und Speichern"
 
 #: ../../library/dialog.rst:109
 msgid ""
@@ -138,39 +185,48 @@ msgid ""
 "The following keyword arguments are applicable to the classes and functions "
 "listed below:"
 msgstr ""
+"Die folgenden Klassen und Funktionen stellen Dateidialogfenster bereit, die "
+"das native Erscheinungsbild mit Konfigurationsoptionen zur Anpassung des "
+"Verhaltens verbinden. Die folgenden Schlüsselwortargumente gelten für die "
+"unten aufgeführten Klassen und Funktionen:"
 
 #: ../../library/dialog.rst:114
 msgid "*parent* - the window to place the dialog on top of"
-msgstr ""
+msgstr "*parent* - das Fenster, über dem der Dialog platziert wird"
 
 #: ../../library/dialog.rst:116
 msgid "*title* - the title of the window"
-msgstr ""
+msgstr "*title* - der Titel des Fensters"
 
 #: ../../library/dialog.rst:118
 msgid "*initialdir* - the directory that the dialog starts in"
-msgstr ""
+msgstr "*initialdir* - das Verzeichnis, in dem der Dialog startet"
 
 #: ../../library/dialog.rst:120
 msgid "*initialfile* - the file selected upon opening of the dialog"
 msgstr ""
+"*initialfile* - die Datei, die beim Öffnen des Dialogs ausgewählt ist"
 
 #: ../../library/dialog.rst:122
 msgid ""
 "*filetypes* - a sequence of (label, pattern) tuples, '*' wildcard is allowed"
 msgstr ""
+"*filetypes* - eine Sequenz von Tupeln (Beschriftung, Muster), der "
+"Platzhalter '*' ist erlaubt"
 
 #: ../../library/dialog.rst:124
 msgid "*defaultextension* - default extension to append to file (save dialogs)"
 msgstr ""
+"*defaultextension* - Standarderweiterung, die an die Datei angehängt wird "
+"(Speichern-Dialoge)"
 
 #: ../../library/dialog.rst:126
 msgid "*multiple* - when true, selection of multiple items is allowed"
-msgstr ""
+msgstr "*multiple* - wenn wahr, ist die Auswahl mehrerer Einträge erlaubt"
 
 #: ../../library/dialog.rst:129
 msgid "**Static factory functions**"
-msgstr ""
+msgstr "**Statische Factory-Funktionen**"
 
 #: ../../library/dialog.rst:131
 msgid ""
@@ -181,6 +237,13 @@ msgid ""
 "vary between platforms and Tk versions, so test the result for truth rather "
 "than comparing it with a specific value."
 msgstr ""
+"Die folgenden Funktionen erzeugen beim Aufruf einen modalen Dialog im "
+"nativen Erscheinungsbild, warten auf die Auswahl des Benutzers und geben sie "
+"zurück. Der genaue Rückgabewert hängt von der Funktion ab (siehe unten). "
+"Wird der Dialog abgebrochen, ist er ein leerer String, ein leeres Tupel oder "
+"``None``. Der genaue Typ dieses leeren Werts kann je nach Plattform und "
+"Tk-Version variieren. Prüfe das Ergebnis daher auf seinen Wahrheitswert, "
+"statt es mit einem bestimmten Wert zu vergleichen."
 
 #: ../../library/dialog.rst:142
 msgid ""
@@ -189,6 +252,11 @@ msgid ""
 "a list of the opened file objects, or an empty tuple if cancelled. The files "
 "are opened in mode *mode* (read-only ``'r'`` by default)."
 msgstr ""
+"Erzeugt einen :class:`Open`-Dialog. :func:`askopenfile` gibt das geöffnete "
+"Dateiobjekt zurück oder ``None``, wenn der Dialog abgebrochen wird. "
+":func:`askopenfiles` gibt eine Liste der geöffneten Dateiobjekte zurück oder "
+"ein leeres Tupel, wenn abgebrochen wird. Die Dateien werden im Modus *mode* "
+"geöffnet (standardmäßig schreibgeschützt, ``'r'``)."
 
 #: ../../library/dialog.rst:151
 msgid ""
@@ -196,6 +264,9 @@ msgid ""
 "``None`` if the dialog is cancelled. The file is opened in mode *mode* "
 "(``'w'`` by default)."
 msgstr ""
+"Erzeugt einen :class:`SaveAs`-Dialog und gibt das geöffnete Dateiobjekt "
+"zurück oder ``None``, wenn der Dialog abgebrochen wird. Die Datei wird im "
+"Modus *mode* geöffnet (standardmäßig ``'w'``)."
 
 #: ../../library/dialog.rst:158
 msgid ""
@@ -204,12 +275,18 @@ msgid ""
 "cancelled. :func:`askopenfilenames` returns a tuple of the selected "
 "filenames, or an empty tuple if cancelled."
 msgstr ""
+"Erzeugt einen :class:`Open`-Dialog. :func:`askopenfilename` gibt den "
+"ausgewählten Dateinamen als String zurück oder einen leeren String, wenn der "
+"Dialog abgebrochen wird. :func:`askopenfilenames` gibt ein Tupel der "
+"ausgewählten Dateinamen zurück oder ein leeres Tupel, wenn abgebrochen wird."
 
 #: ../../library/dialog.rst:166
 msgid ""
 "Create a :class:`SaveAs` dialog and return the selected filename as a "
 "string, or an empty string if the dialog is cancelled."
 msgstr ""
+"Erzeugt einen :class:`SaveAs`-Dialog und gibt den ausgewählten Dateinamen "
+"als String zurück oder einen leeren String, wenn der Dialog abgebrochen wird."
 
 #: ../../library/dialog.rst:171
 msgid ""
@@ -218,72 +295,83 @@ msgid ""
 "*mustexist* - if true, the user may only select an existing directory (false "
 "by default)."
 msgstr ""
+"Fordert den Benutzer auf, ein Verzeichnis auszuwählen, und gibt dessen Pfad "
+"als String zurück oder einen leeren String, wenn der Dialog abgebrochen "
+"wird. Zusätzliche Schlüsselwortoption: *mustexist* - wenn wahr, darf der "
+"Benutzer nur ein bestehendes Verzeichnis auswählen (standardmäßig falsch)."
 
 #: ../../library/dialog.rst:180
 msgid ""
 "The above three classes provide native dialog windows for loading and saving "
 "files and for selecting a directory."
 msgstr ""
+"Die obigen drei Klassen stellen native Dialogfenster zum Laden und Speichern "
+"von Dateien und zur Auswahl eines Verzeichnisses bereit."
 
 #: ../../library/dialog.rst:183
 msgid "**Convenience classes**"
-msgstr ""
+msgstr "**Komfortklassen**"
 
 #: ../../library/dialog.rst:185
 msgid ""
 "The below classes are used for creating file/directory windows from scratch. "
 "These do not emulate the native look-and-feel of the platform."
 msgstr ""
+"Die folgenden Klassen dienen dazu, Fenster zur Datei- und Verzeichnisauswahl "
+"von Grund auf zu erstellen. Sie ahmen das native Erscheinungsbild der "
+"Plattform nicht nach."
 
 #: ../../library/dialog.rst:188
 msgid ""
 "The *FileDialog* class should be subclassed for custom event handling and "
 "behaviour."
 msgstr ""
+"Die Klasse *FileDialog* sollte für eigene Ereignisbehandlung und eigenes "
+"Verhalten abgeleitet werden."
 
 #: ../../library/dialog.rst:193
 msgid "Create a basic file selection dialog."
-msgstr ""
+msgstr "Erzeugt einen einfachen Dateiauswahldialog."
 
 #: ../../library/dialog.rst:197
 msgid "Trigger the termination of the dialog window."
-msgstr ""
+msgstr "Löst das Beenden des Dialogfensters aus."
 
 #: ../../library/dialog.rst:201
 msgid "Event handler for double-click event on directory."
-msgstr ""
+msgstr "Ereignishandler für das Doppelklick-Ereignis auf ein Verzeichnis."
 
 #: ../../library/dialog.rst:205
 msgid "Event handler for click event on directory."
-msgstr ""
+msgstr "Ereignishandler für das Klick-Ereignis auf ein Verzeichnis."
 
 #: ../../library/dialog.rst:209
 msgid "Event handler for double-click event on file."
-msgstr ""
+msgstr "Ereignishandler für das Doppelklick-Ereignis auf eine Datei."
 
 #: ../../library/dialog.rst:213
 msgid "Event handler for single-click event on file."
-msgstr ""
+msgstr "Ereignishandler für das Einzelklick-Ereignis auf eine Datei."
 
 #: ../../library/dialog.rst:217
 msgid "Filter the files by directory."
-msgstr ""
+msgstr "Filtert die Dateien nach Verzeichnis."
 
 #: ../../library/dialog.rst:221
 msgid "Retrieve the file filter currently in use."
-msgstr ""
+msgstr "Ruft den aktuell verwendeten Dateifilter ab."
 
 #: ../../library/dialog.rst:225
 msgid "Retrieve the currently selected item."
-msgstr ""
+msgstr "Ruft den aktuell ausgewählten Eintrag ab."
 
 #: ../../library/dialog.rst:229
 msgid "Render dialog and start event loop."
-msgstr ""
+msgstr "Stellt den Dialog dar und startet die Ereignisschleife."
 
 #: ../../library/dialog.rst:233
 msgid "Exit dialog returning current selection."
-msgstr ""
+msgstr "Beendet den Dialog und gibt die aktuelle Auswahl zurück."
 
 #: ../../library/dialog.rst:237
 msgid ""
@@ -291,80 +379,100 @@ msgid ""
 "accepts the selection and closes the dialog; :class:`LoadFileDialog` "
 "and :class:`SaveFileDialog` override it to check the selection first."
 msgstr ""
+"Wird aufgerufen, wenn der Benutzer die aktuelle Auswahl bestätigt. Die "
+"Basisimplementierung übernimmt die Auswahl und schließt den Dialog. "
+":class:`LoadFileDialog` und :class:`SaveFileDialog` überschreiben sie, um "
+"die Auswahl zuerst zu prüfen."
 
 #: ../../library/dialog.rst:244
 msgid "Exit dialog returning filename, if any."
-msgstr ""
+msgstr "Beendet den Dialog und gibt den Dateinamen zurück, falls vorhanden."
 
 #: ../../library/dialog.rst:248
 msgid "Set the file filter."
-msgstr ""
+msgstr "Setzt den Dateifilter."
 
 #: ../../library/dialog.rst:252
 msgid "Update the current file selection to *file*."
-msgstr ""
+msgstr "Aktualisiert die aktuelle Dateiauswahl auf *file*."
 
 #: ../../library/dialog.rst:257
 msgid ""
 "A subclass of FileDialog that creates a dialog window for selecting an "
 "existing file."
 msgstr ""
+"Eine Unterklasse von FileDialog, die ein Dialogfenster zur Auswahl einer "
+"bestehenden Datei erzeugt."
 
 #: ../../library/dialog.rst:262
 msgid ""
 "Test that a file is provided and that the selection indicates an already "
 "existing file."
 msgstr ""
+"Prüft, ob eine Datei angegeben ist und die Auswahl auf eine bereits "
+"vorhandene Datei verweist."
 
 #: ../../library/dialog.rst:267
 msgid ""
 "A subclass of FileDialog that creates a dialog window for selecting a "
 "destination file."
 msgstr ""
+"Eine Unterklasse von FileDialog, die ein Dialogfenster zur Auswahl einer "
+"Zieldatei erzeugt."
 
 #: ../../library/dialog.rst:272
 msgid ""
 "Test whether or not the selection points to a valid file that is not a "
 "directory. Confirmation is required if an already existing file is selected."
 msgstr ""
+"Prüft, ob die Auswahl auf eine gültige Datei verweist, die kein Verzeichnis "
+"ist. Wird eine bereits vorhandene Datei ausgewählt, ist eine Bestätigung "
+"erforderlich."
 
 #: ../../library/dialog.rst:277
 msgid ":mod:`!tkinter.commondialog` --- Dialog window templates"
-msgstr ""
+msgstr ":mod:`!tkinter.commondialog` --- Vorlagen für Dialogfenster"
 
 #: ../../library/dialog.rst:282
 msgid "**Source code:** :source:`Lib/tkinter/commondialog.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/tkinter/commondialog.py`"
 
 #: ../../library/dialog.rst:286
 msgid ""
 "The :mod:`!tkinter.commondialog` module provides the :class:`Dialog` class "
 "that is the base class for dialogs defined in other supporting modules."
 msgstr ""
+"Das Modul :mod:`!tkinter.commondialog` stellt die Klasse :class:`Dialog` "
+"bereit, die die Basisklasse für Dialoge aus anderen unterstützenden Modulen "
+"ist."
 
 #: ../../library/dialog.rst:293
 msgid "Render the Dialog window."
-msgstr ""
+msgstr "Stellt das Dialogfenster dar."
 
 #: ../../library/dialog.rst:297
 msgid ":mod:`!tkinter.dialog` --- Classic Tk dialog boxes"
-msgstr ""
+msgstr ":mod:`!tkinter.dialog` --- Klassische Tk-Dialogfelder"
 
 #: ../../library/dialog.rst:302
 msgid "**Source code:** :source:`Lib/tkinter/dialog.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/tkinter/dialog.py`"
 
 #: ../../library/dialog.rst:306
 msgid ""
 "The :mod:`!tkinter.dialog` module provides a simple modal dialog box built "
 "on the classic (non-themed) Tk widgets."
 msgstr ""
+"Das Modul :mod:`!tkinter.dialog` stellt ein einfaches modales Dialogfeld "
+"bereit, das auf den klassischen Tk-Widgets (ohne Themes) aufbaut."
 
 #: ../../library/dialog.rst:311
 msgid ""
 "The name of a bitmap (``'questhead'``) suitable for use as the *bitmap* of "
 "a :class:`Dialog`."
 msgstr ""
+"Der Name einer Bitmap (``'questhead'``), die sich als *bitmap* eines "
+":class:`Dialog` eignet."
 
 #: ../../library/dialog.rst:316
 msgid ""
@@ -376,13 +484,24 @@ msgid ""
 "*strings* (the sequence of button labels). After construction, the :attr:`!"
 "num` attribute holds the index of the button the user pressed."
 msgstr ""
+"Zeigt ein modales Dialogfeld an, das aus den klassischen Tk-Widgets (ohne "
+"Themes) aufgebaut ist, und wartet, bis der Benutzer eine seiner "
+"Schaltflächen drückt. Die über *cnf* oder als Schlüsselwortargumente "
+"angegebenen Optionen sind alle erforderlich: *title* (der Fenstertitel), "
+"*text* (die Meldung), *bitmap* (der Name eines Bitmap-Symbols, etwa "
+":data:`DIALOG_ICON`), *default* (der Index der Standardschaltfläche) und "
+"*strings* (die Sequenz der Schaltflächenbeschriftungen). Nach der "
+"Konstruktion enthält das Attribut :attr:`!num` den Index der Schaltfläche, "
+"die der Benutzer gedrückt hat."
 
 #: ../../library/dialog.rst:327
 msgid ""
 "Do nothing. The dialog window is destroyed automatically before the "
 "constructor returns, so there is nothing left for this method to do."
 msgstr ""
+"Tut nichts. Das Dialogfenster wird automatisch zerstört, bevor der "
+"Konstruktor zurückkehrt, sodass für diese Methode nichts mehr zu tun bleibt."
 
 #: ../../library/dialog.rst:334
 msgid "Modules :mod:`tkinter.messagebox`, :ref:`tut-files`"
-msgstr ""
+msgstr "Module :mod:`tkinter.messagebox`, :ref:`tut-files`"
