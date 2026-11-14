@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2026-10-15 06:00+0200\n"
-"Last-Translator: python-doc bot, 2025\n"
+"Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -2007,7 +2007,6 @@ msgstr ""
 "eine :class:`~dataclasses.dataclass`"
 
 #: ../../howto/enum.rst:914
-#, fuzzy
 msgid ""
 "%-style formatting:  ``%s`` and ``%r`` call the :class:`Enum` "
 "class's :meth:`~object.__str__` and :meth:`~object.__repr__` respectively; "
@@ -2016,7 +2015,7 @@ msgid ""
 msgstr ""
 "Formatierung im %-Stil: ``%s`` und ``%r`` rufen :meth:`~object.__str__` "
 "beziehungsweise :meth:`~object.__repr__` der :class:`Enum`-Klasse auf. "
-"Andere Codes (etwa ``%i`` oder ``%h`` bei IntEnum) behandeln das Enum-"
+"Andere Codes (etwa ``%i`` oder ``%x`` bei IntEnum) behandeln das Enum-"
 "Mitglied als seinen eingemischten Typ."
 
 #: ../../howto/enum.rst:917
