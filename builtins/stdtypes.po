@@ -5979,9 +5979,8 @@ msgstr ""
 "\"They're Bill's Friends.\""
 
 #: ../../builtins/stdtypes.rst:3150
-#, fuzzy
 msgid "See also :meth:`istitle` and :meth:`capitalize`."
-msgstr "Siehe auch :meth:`ljust` und :meth:`zfill`."
+msgstr "Siehe auch :meth:`istitle` und :meth:`capitalize`."
 
 #: ../../builtins/stdtypes.rst:3155
 msgid ""
