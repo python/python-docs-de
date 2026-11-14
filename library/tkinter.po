@@ -11136,14 +11136,12 @@ msgstr ""
 "tkinter` als auch in :mod:`!tkinter.constants` zur Verfügung."
 
 #: ../../library/tkinter.rst:6567
-#, fuzzy
 msgid "Values that are true, all equal to the integer ``1``."
-msgstr "Wahre Werte, alle gleich der ganzen Zahl ``1``."
+msgstr "Wahre Werte, alle gleich der Ganzzahl ``1``."
 
 #: ../../library/tkinter.rst:6573
-#, fuzzy
 msgid "Values that are false, all equal to the integer ``0``."
-msgstr "Falsche Werte, alle gleich der ganzen Zahl ``0``."
+msgstr "Falsche Werte, alle gleich der Ganzzahl ``0``."
 
 #: ../../library/tkinter.rst:6588
 msgid ""
