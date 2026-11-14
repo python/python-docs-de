@@ -3726,14 +3726,12 @@ msgstr ""
 "<MISSING>"
 
 #: ../../builtins/functions.rst:1888
-#, fuzzy
 msgid ""
 "Sentinel objects are true and compare equal only to themselves.  They are "
 "intended to be compared with the :keyword:`is` operator."
 msgstr ""
-"Sentinel-Objekte werden in einem Boolean-Kontext als wahr ausgewertet und "
-"sind nur mit sich selbst gleich. Sie sind dafür vorgesehen, mit dem "
-"Operator :keyword:`is` verglichen zu werden."
+"Sentinel-Objekte sind wahr und nur mit sich selbst gleich. Sie sind dafür "
+"vorgesehen, mit dem Operator :keyword:`is` verglichen zu werden."
 
 #: ../../builtins/functions.rst:1891
 msgid "``sentinel`` does not support subclassing."
