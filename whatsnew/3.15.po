@@ -1,7 +1,9 @@
-# German translations for Python package.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# Automatically generated, 2026.
+#
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -9,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2026-11-01 16:00+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -732,6 +734,11 @@ msgid ""
 "and `rbspy <https://github.com/rbspy/rbspy>`__. We thank their authors and "
 "the wider profiling community for their work and ideas."
 msgstr ""
+"Tachyon knüpft an frühere Arbeiten zu externen Sampling-Profilern an, etwa "
+"`Austin <https://github.com/P403n1x87/austin>`__, `py-spy <https://"
+"github.com/benfred/py-spy>`__, `Pyflame <https://github.com/uber-archive/"
+"pyflame>`__ und `rbspy <https://github.com/rbspy/rbspy>`__. Wir danken ihren "
+"Autoren und der gesamten Profiling-Community für ihre Arbeit und ihre Ideen."
 
 #: ../../whatsnew/3.15.rst:366
 msgid ""
@@ -3176,7 +3183,6 @@ msgstr ""
 "hinzugefügt:"
 
 #: ../../whatsnew/3.15.rst:1546
-#, fuzzy
 msgid ""
 ":meth:`ssl.SSLContext.set_groups` sets the groups allowed for doing key "
 "agreement, extending the previous :meth:`ssl.SSLContext.set_ecdh_curve` "
