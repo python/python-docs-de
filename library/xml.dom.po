@@ -941,7 +941,6 @@ msgid "NodeList Objects"
 msgstr "NodeList-Objekte"
 
 #: ../../library/xml.dom.rst:501
-#, fuzzy
 msgid ""
 "A :class:`NodeList` represents a sequence of nodes.  These objects are used "
 "in two ways in the DOM Core recommendation:  an :class:`Element` object "
@@ -954,8 +953,8 @@ msgstr ""
 "DOM Core werden diese Objekte auf zwei Weisen verwendet: "
 "Ein :class:`Element`-Objekt stellt eine als Liste seiner Kindknoten bereit, "
 "und die Methoden :meth:`~Element.getElementsByTagName` "
-"und :meth:`~Element.getElementsByTagNameNS` von :class:`Node` geben Objekte "
-"mit dieser Schnittstelle zurück, um Abfrageergebnisse darzustellen."
+"und :meth:`~Element.getElementsByTagNameNS` von :class:`Element` geben "
+"Objekte mit dieser Schnittstelle zurück, um Abfrageergebnisse darzustellen."
 
 #: ../../library/xml.dom.rst:507
 msgid ":class:`NodeList` does *not* inherit from :class:`Node`."
