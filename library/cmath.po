@@ -1,10 +1,10 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -12,8 +12,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
 "PO-Revision-Date: 2025-09-16 00:00+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../library/cmath.rst:2
 msgid ":mod:`!cmath` --- Mathematical functions for complex numbers"
-msgstr ""
+msgstr ":mod:`!cmath` --- Mathematische Funktionen für komplexe Zahlen"
 
 #: ../../library/cmath.rst:9
 msgid ""
@@ -34,6 +34,13 @@ msgid ""
 "floating-point number, respectively, and the function is then applied to the "
 "result of the conversion."
 msgstr ""
+"Dieses Modul bietet Zugriff auf mathematische Funktionen für komplexe "
+"Zahlen. Die Funktionen dieses Moduls akzeptieren Ganzzahlen, "
+"Gleitkommazahlen oder komplexe Zahlen als Argumente. Sie akzeptieren "
+"außerdem jedes Python-Objekt, das eine Methode :meth:`~object.__complex__` "
+"oder :meth:`~object.__float__` hat: Diese Methoden werden verwendet, um das "
+"Objekt in eine komplexe Zahl bzw. eine Gleitkommazahl umzuwandeln, und die "
+"Funktion wird dann auf das Ergebnis der Umwandlung angewendet."
 
 #: ../../library/cmath.rst:18
 msgid ""
@@ -45,6 +52,14 @@ msgid ""
 "axis we look at the sign of the imaginary part, while for a branch cut along "
 "the imaginary axis we look at the sign of the real part."
 msgstr ""
+"Bei Funktionen mit Verzweigungsschnitten stellt sich das Problem, wie diese "
+"Funktionen auf dem Schnitt selbst definiert werden. Gemäß Kahans Aufsatz "
+"„Branch cuts for complex elementary functions“ sowie Anhang G von C99 und "
+"späteren C-Standards verwenden wir das Vorzeichen der Null, um die eine "
+"Seite des Verzweigungsschnitts von der anderen zu unterscheiden: Bei einem "
+"Verzweigungsschnitt entlang (eines Teils) der reellen Achse betrachten wir "
+"das Vorzeichen des Imaginärteils, bei einem Verzweigungsschnitt entlang der "
+"imaginären Achse das Vorzeichen des Realteils."
 
 #: ../../library/cmath.rst:26
 msgid ""
@@ -53,292 +68,305 @@ msgid ""
 "*below* the branch cut, and so gives a result on the negative imaginary "
 "axis::"
 msgstr ""
+"Die Funktion :func:`cmath.sqrt` hat zum Beispiel einen Verzweigungsschnitt "
+"entlang der negativen reellen Achse. Ein Argument ``-2-0j`` wird behandelt, "
+"als läge es *unterhalb* des Verzweigungsschnitts, und liefert daher ein "
+"Ergebnis auf der negativen imaginären Achse::"
 
 #: ../../library/cmath.rst:31
 msgid ""
 ">>> cmath.sqrt(-2-0j)\n"
 "-1.4142135623730951j"
 msgstr ""
+">>> cmath.sqrt(-2-0j)\n"
+"-1.4142135623730951j"
 
 #: ../../library/cmath.rst:34
 msgid ""
 "But an argument of ``-2+0j`` is treated as though it lies above the branch "
 "cut::"
 msgstr ""
+"Ein Argument ``-2+0j`` wird dagegen so behandelt, als läge es oberhalb des "
+"Verzweigungsschnitts::"
 
 #: ../../library/cmath.rst:37
 msgid ""
 ">>> cmath.sqrt(-2+0j)\n"
 "1.4142135623730951j"
 msgstr ""
+">>> cmath.sqrt(-2+0j)\n"
+"1.4142135623730951j"
 
 #: ../../library/cmath.rst:42
 msgid "**Conversions to and from polar coordinates**"
-msgstr ""
+msgstr "**Umrechnungen von und in Polarkoordinaten**"
 
 #: ../../library/cmath.rst:44
 msgid ":func:`phase(z) <phase>`"
-msgstr ""
+msgstr ":func:`phase(z) <phase>`"
 
 #: ../../library/cmath.rst:44
 msgid "Return the phase of *z*"
-msgstr ""
+msgstr "Gibt die Phase von *z* zurück"
 
 #: ../../library/cmath.rst:45
 msgid ":func:`polar(z) <polar>`"
-msgstr ""
+msgstr ":func:`polar(z) <polar>`"
 
 #: ../../library/cmath.rst:45
 msgid "Return the representation of *z* in polar coordinates"
-msgstr ""
+msgstr "Gibt die Darstellung von *z* in Polarkoordinaten zurück"
 
 #: ../../library/cmath.rst:46
 msgid ":func:`rect(r, phi) <rect>`"
-msgstr ""
+msgstr ":func:`rect(r, phi) <rect>`"
 
 #: ../../library/cmath.rst:46
 msgid "Return the complex number *z* with polar coordinates *r* and *phi*"
 msgstr ""
+"Gibt die komplexe Zahl *z* mit den Polarkoordinaten *r* und *phi* zurück"
 
 #: ../../library/cmath.rst:48
 msgid "**Power and logarithmic functions**"
-msgstr ""
+msgstr "**Potenz- und Logarithmusfunktionen**"
 
 #: ../../library/cmath.rst:50
 msgid ":func:`exp(z) <exp>`"
-msgstr ""
+msgstr ":func:`exp(z) <exp>`"
 
 #: ../../library/cmath.rst:50
 msgid "Return *e* raised to the power *z*"
-msgstr ""
+msgstr "Gibt *e* hoch *z* zurück"
 
 #: ../../library/cmath.rst:51
 msgid ":func:`log(z[, base]) <log>`"
-msgstr ""
+msgstr ":func:`log(z[, base]) <log>`"
 
 #: ../../library/cmath.rst:51
 msgid "Return the logarithm of *z* to the given *base* (*e* by default)"
 msgstr ""
+"Gibt den Logarithmus von *z* zur angegebenen Basis *base* zurück "
+"(standardmäßig *e*)"
 
 #: ../../library/cmath.rst:52
 msgid ":func:`log10(z) <log10>`"
-msgstr ""
+msgstr ":func:`log10(z) <log10>`"
 
 #: ../../library/cmath.rst:52
 msgid "Return the base-10 logarithm of *z*"
-msgstr ""
+msgstr "Gibt den Logarithmus von *z* zur Basis 10 zurück"
 
 #: ../../library/cmath.rst:53
 msgid ":func:`sqrt(z) <sqrt>`"
-msgstr ""
+msgstr ":func:`sqrt(z) <sqrt>`"
 
 #: ../../library/cmath.rst:53
 msgid "Return the square root of *z*"
-msgstr ""
+msgstr "Gibt die Quadratwurzel von *z* zurück"
 
 #: ../../library/cmath.rst:55
 msgid "**Trigonometric functions**"
-msgstr ""
+msgstr "**Trigonometrische Funktionen**"
 
 #: ../../library/cmath.rst:57
 msgid ":func:`acos(z) <acos>`"
-msgstr ""
+msgstr ":func:`acos(z) <acos>`"
 
 #: ../../library/cmath.rst:57
 msgid "Return the arc cosine of *z*"
-msgstr ""
+msgstr "Gibt den Arkuskosinus von *z* zurück"
 
 #: ../../library/cmath.rst:58
 msgid ":func:`asin(z) <asin>`"
-msgstr ""
+msgstr ":func:`asin(z) <asin>`"
 
 #: ../../library/cmath.rst:58
 msgid "Return the arc sine of *z*"
-msgstr ""
+msgstr "Gibt den Arkussinus von *z* zurück"
 
 #: ../../library/cmath.rst:59
 msgid ":func:`atan(z) <atan>`"
-msgstr ""
+msgstr ":func:`atan(z) <atan>`"
 
 #: ../../library/cmath.rst:59
 msgid "Return the arc tangent of *z*"
-msgstr ""
+msgstr "Gibt den Arkustangens von *z* zurück"
 
 #: ../../library/cmath.rst:60
 msgid ":func:`cos(z) <cos>`"
-msgstr ""
+msgstr ":func:`cos(z) <cos>`"
 
 #: ../../library/cmath.rst:60
 msgid "Return the cosine of *z*"
-msgstr ""
+msgstr "Gibt den Kosinus von *z* zurück"
 
 #: ../../library/cmath.rst:61
 msgid ":func:`sin(z) <sin>`"
-msgstr ""
+msgstr ":func:`sin(z) <sin>`"
 
 #: ../../library/cmath.rst:61
 msgid "Return the sine of *z*"
-msgstr ""
+msgstr "Gibt den Sinus von *z* zurück"
 
 #: ../../library/cmath.rst:62
 msgid ":func:`tan(z) <tan>`"
-msgstr ""
+msgstr ":func:`tan(z) <tan>`"
 
 #: ../../library/cmath.rst:62
 msgid "Return the tangent of *z*"
-msgstr ""
+msgstr "Gibt den Tangens von *z* zurück"
 
 #: ../../library/cmath.rst:64
 msgid "**Hyperbolic functions**"
-msgstr ""
+msgstr "**Hyperbolische Funktionen**"
 
 #: ../../library/cmath.rst:66
 msgid ":func:`acosh(z) <acosh>`"
-msgstr ""
+msgstr ":func:`acosh(z) <acosh>`"
 
 #: ../../library/cmath.rst:66
 msgid "Return the inverse hyperbolic cosine of *z*"
-msgstr ""
+msgstr "Gibt den inversen hyperbolischen Kosinus von *z* zurück"
 
 #: ../../library/cmath.rst:67
 msgid ":func:`asinh(z) <asinh>`"
-msgstr ""
+msgstr ":func:`asinh(z) <asinh>`"
 
 #: ../../library/cmath.rst:67
 msgid "Return the inverse hyperbolic sine of *z*"
-msgstr ""
+msgstr "Gibt den inversen hyperbolischen Sinus von *z* zurück"
 
 #: ../../library/cmath.rst:68
 msgid ":func:`atanh(z) <atanh>`"
-msgstr ""
+msgstr ":func:`atanh(z) <atanh>`"
 
 #: ../../library/cmath.rst:68
 msgid "Return the inverse hyperbolic tangent of *z*"
-msgstr ""
+msgstr "Gibt den inversen hyperbolischen Tangens von *z* zurück"
 
 #: ../../library/cmath.rst:69
 msgid ":func:`cosh(z) <cosh>`"
-msgstr ""
+msgstr ":func:`cosh(z) <cosh>`"
 
 #: ../../library/cmath.rst:69
 msgid "Return the hyperbolic cosine of *z*"
-msgstr ""
+msgstr "Gibt den hyperbolischen Kosinus von *z* zurück"
 
 #: ../../library/cmath.rst:70
 msgid ":func:`sinh(z) <sinh>`"
-msgstr ""
+msgstr ":func:`sinh(z) <sinh>`"
 
 #: ../../library/cmath.rst:70
 msgid "Return the hyperbolic sine of *z*"
-msgstr ""
+msgstr "Gibt den hyperbolischen Sinus von *z* zurück"
 
 #: ../../library/cmath.rst:71
 msgid ":func:`tanh(z) <tanh>`"
-msgstr ""
+msgstr ":func:`tanh(z) <tanh>`"
 
 #: ../../library/cmath.rst:71
 msgid "Return the hyperbolic tangent of *z*"
-msgstr ""
+msgstr "Gibt den hyperbolischen Tangens von *z* zurück"
 
 #: ../../library/cmath.rst:73
 msgid "**Classification functions**"
-msgstr ""
+msgstr "**Klassifizierungsfunktionen**"
 
 #: ../../library/cmath.rst:75
 msgid ":func:`isfinite(z) <isfinite>`"
-msgstr ""
+msgstr ":func:`isfinite(z) <isfinite>`"
 
 #: ../../library/cmath.rst:75
 msgid "Check if all components of *z* are finite"
-msgstr ""
+msgstr "Prüft, ob alle Komponenten von *z* endlich sind"
 
 #: ../../library/cmath.rst:76
 msgid ":func:`isinf(z) <isinf>`"
-msgstr ""
+msgstr ":func:`isinf(z) <isinf>`"
 
 #: ../../library/cmath.rst:76
 msgid "Check if any component of *z* is infinite"
-msgstr ""
+msgstr "Prüft, ob mindestens eine Komponente von *z* unendlich ist"
 
 #: ../../library/cmath.rst:77
 msgid ":func:`isnan(z) <isnan>`"
-msgstr ""
+msgstr ":func:`isnan(z) <isnan>`"
 
 #: ../../library/cmath.rst:77
 msgid "Check if any component of *z* is a NaN"
-msgstr ""
+msgstr "Prüft, ob mindestens eine Komponente von *z* ein NaN ist"
 
 #: ../../library/cmath.rst:78
 msgid ":func:`isclose(a, b, *, rel_tol, abs_tol) <isclose>`"
-msgstr ""
+msgstr ":func:`isclose(a, b, *, rel_tol, abs_tol) <isclose>`"
 
 #: ../../library/cmath.rst:78
 msgid "Check if the values *a* and *b* are close to each other"
-msgstr ""
+msgstr "Prüft, ob die Werte *a* und *b* nahe beieinander liegen"
 
 #: ../../library/cmath.rst:80
 msgid "**Constants**"
-msgstr ""
+msgstr "**Konstanten**"
 
 #: ../../library/cmath.rst:82
 msgid ":data:`pi`"
-msgstr ""
+msgstr ":data:`pi`"
 
 #: ../../library/cmath.rst:82
 msgid "*π* = 3.141592..."
-msgstr ""
+msgstr "*π* = 3.141592..."
 
 #: ../../library/cmath.rst:83
 msgid ":data:`e`"
-msgstr ""
+msgstr ":data:`e`"
 
 #: ../../library/cmath.rst:83
 msgid "*e* = 2.718281..."
-msgstr ""
+msgstr "*e* = 2.718281..."
 
 #: ../../library/cmath.rst:84
 msgid ":data:`tau`"
-msgstr ""
+msgstr ":data:`tau`"
 
 #: ../../library/cmath.rst:84
 msgid "*τ* = 2\\ *π* = 6.283185..."
-msgstr ""
+msgstr "*τ* = 2\\ *π* = 6.283185..."
 
 #: ../../library/cmath.rst:85
 msgid ":data:`inf`"
-msgstr ""
+msgstr ":data:`inf`"
 
 #: ../../library/cmath.rst:85
 msgid "Positive infinity"
-msgstr ""
+msgstr "Positive Unendlichkeit"
 
 #: ../../library/cmath.rst:86
 msgid ":data:`infj`"
-msgstr ""
+msgstr ":data:`infj`"
 
 #: ../../library/cmath.rst:86
 msgid "Pure imaginary infinity"
-msgstr ""
+msgstr "Rein imaginäre Unendlichkeit"
 
 #: ../../library/cmath.rst:87
 msgid ":data:`nan`"
-msgstr ""
+msgstr ":data:`nan`"
 
 #: ../../library/cmath.rst:87
 msgid "\"Not a number\" (NaN)"
-msgstr ""
+msgstr "„Keine Zahl“ („Not a number“, NaN)"
 
 #: ../../library/cmath.rst:88
 msgid ":data:`nanj`"
-msgstr ""
+msgstr ":data:`nanj`"
 
 #: ../../library/cmath.rst:88
 msgid "Pure imaginary NaN"
-msgstr ""
+msgstr "Rein imaginäres NaN"
 
 #: ../../library/cmath.rst:93
 msgid "Conversions to and from polar coordinates"
-msgstr ""
+msgstr "Umrechnungen von und in Polarkoordinaten"
 
 #: ../../library/cmath.rst:95
 msgid ""
@@ -346,6 +374,9 @@ msgid ""
 "*Cartesian* coordinates.  It is completely determined by its *real part* "
 "``z.real`` and its *imaginary part* ``z.imag``."
 msgstr ""
+"Eine komplexe Python-Zahl ``z`` wird intern mit *rechtwinkligen* oder "
+"*kartesischen* Koordinaten gespeichert. Sie ist vollständig durch ihren "
+"*Realteil* ``z.real`` und ihren *Imaginärteil* ``z.imag`` bestimmt."
 
 #: ../../library/cmath.rst:99
 msgid ""
@@ -356,12 +387,20 @@ msgid ""
 "radians, from the positive x-axis to the line segment that joins the origin "
 "to *z*."
 msgstr ""
+"*Polarkoordinaten* bieten eine alternative Möglichkeit, eine komplexe Zahl "
+"darzustellen. In Polarkoordinaten wird eine komplexe Zahl *z* durch den "
+"Betrag *r* und den Phasenwinkel *phi* definiert. Der Betrag *r* ist der "
+"Abstand von *z* zum Ursprung, während die Phase *phi* der Winkel gegen den "
+"Uhrzeigersinn ist, gemessen im Bogenmaß, von der positiven x-Achse zur "
+"Strecke, die den Ursprung mit *z* verbindet."
 
 #: ../../library/cmath.rst:106
 msgid ""
 "The following functions can be used to convert from the native rectangular "
 "coordinates to polar coordinates and back."
 msgstr ""
+"Mit den folgenden Funktionen lässt sich von den nativen rechtwinkligen "
+"Koordinaten in Polarkoordinaten umrechnen und zurück."
 
 #: ../../library/cmath.rst:111
 msgid ""
@@ -371,6 +410,12 @@ msgid ""
 "along the negative real axis.  The sign of the result is the same as the "
 "sign of ``z.imag``, even when ``z.imag`` is zero::"
 msgstr ""
+"Gibt die Phase von *z* zurück (auch als *Argument* von *z* bekannt), als "
+"Float. ``phase(z)`` ist äquivalent zu ``math.atan2(z.imag, z.real)``. Das "
+"Ergebnis liegt im Bereich [-\\ *π*, *π*], und der Verzweigungsschnitt für "
+"diese Operation liegt entlang der negativen reellen Achse. Das Vorzeichen "
+"des Ergebnisses ist dasselbe wie das Vorzeichen von ``z.imag``, auch wenn "
+"``z.imag`` null ist::"
 
 #: ../../library/cmath.rst:117
 msgid ""
@@ -379,6 +424,10 @@ msgid ""
 ">>> phase(-1-0j)\n"
 "-3.141592653589793"
 msgstr ""
+">>> phase(-1+0j)\n"
+"3.141592653589793\n"
+">>> phase(-1-0j)\n"
+"-3.141592653589793"
 
 #: ../../library/cmath.rst:125
 msgid ""
@@ -386,6 +435,9 @@ msgid ""
 "the built-in :func:`abs` function.  There is no separate :mod:`!cmath` "
 "module function for this operation."
 msgstr ""
+"Der Betrag (Absolutwert) einer komplexen Zahl *z* lässt sich mit der "
+"eingebauten Funktion :func:`abs` berechnen. Für diese Operation gibt es "
+"keine eigene Funktion im Modul :mod:`!cmath`."
 
 #: ../../library/cmath.rst:132
 msgid ""
@@ -393,22 +445,29 @@ msgid ""
 "phi)`` where *r* is the modulus of *z* and *phi* is the phase of *z*.  "
 "``polar(z)`` is equivalent to ``(abs(z), phase(z))``."
 msgstr ""
+"Gibt die Darstellung von *z* in Polarkoordinaten zurück. Gibt ein Paar ``(r, "
+"phi)`` zurück, wobei *r* der Betrag von *z* und *phi* die Phase von *z* ist. "
+"``polar(z)`` ist äquivalent zu ``(abs(z), phase(z))``."
 
 #: ../../library/cmath.rst:140
 msgid ""
 "Return the complex number *z* with polar coordinates *r* and *phi*. "
 "Equivalent to ``complex(r * math.cos(phi), r * math.sin(phi))``."
 msgstr ""
+"Gibt die komplexe Zahl *z* mit den Polarkoordinaten *r* und *phi* zurück. "
+"Äquivalent zu ``complex(r * math.cos(phi), r * math.sin(phi))``."
 
 #: ../../library/cmath.rst:145
 msgid "Power and logarithmic functions"
-msgstr ""
+msgstr "Potenz- und Logarithmusfunktionen"
 
 #: ../../library/cmath.rst:149
 msgid ""
 "Return *e* raised to the power *z*, where *e* is the base of natural "
 "logarithms."
 msgstr ""
+"Gibt *e* hoch *z* zurück, wobei *e* die Basis der natürlichen Logarithmen "
+"ist."
 
 #: ../../library/cmath.rst:155
 msgid ""
@@ -416,21 +475,29 @@ msgid ""
 "specified, returns the natural logarithm of *z*. There is one branch cut, "
 "from 0 along the negative real axis to -∞."
 msgstr ""
+"Gibt den Logarithmus von *z* zur angegebenen Basis *base* zurück. Wird "
+"*base* nicht angegeben, wird der natürliche Logarithmus von *z* "
+"zurückgegeben. Es gibt einen Verzweigungsschnitt, von 0 entlang der "
+"negativen reellen Achse bis -∞."
 
 #: ../../library/cmath.rst:162
 msgid ""
 "Return the base-10 logarithm of *z*. This has the same branch cut "
 "as :func:`log`."
 msgstr ""
+"Gibt den Logarithmus von *z* zur Basis 10 zurück. Er hat denselben "
+"Verzweigungsschnitt wie :func:`log`."
 
 #: ../../library/cmath.rst:168
 msgid ""
 "Return the square root of *z*. This has the same branch cut as :func:`log`."
 msgstr ""
+"Gibt die Quadratwurzel von *z* zurück. Sie hat denselben Verzweigungsschnitt "
+"wie :func:`log`."
 
 #: ../../library/cmath.rst:172
 msgid "Trigonometric functions"
-msgstr ""
+msgstr "Trigonometrische Funktionen"
 
 #: ../../library/cmath.rst:176
 msgid ""
@@ -438,11 +505,16 @@ msgid ""
 "from 1 along the real axis to ∞. The other extends left from -1 along the "
 "real axis to -∞."
 msgstr ""
+"Gibt den Arkuskosinus von *z* zurück. Es gibt zwei Verzweigungsschnitte: "
+"Einer verläuft von 1 entlang der reellen Achse nach rechts bis ∞. Der andere "
+"verläuft von -1 entlang der reellen Achse nach links bis -∞."
 
 #: ../../library/cmath.rst:183
 msgid ""
 "Return the arc sine of *z*. This has the same branch cuts as :func:`acos`."
 msgstr ""
+"Gibt den Arkussinus von *z* zurück. Er hat dieselben Verzweigungsschnitte "
+"wie :func:`acos`."
 
 #: ../../library/cmath.rst:188
 msgid ""
@@ -450,28 +522,34 @@ msgid ""
 "``1j`` along the imaginary axis to ``∞j``. The other extends from ``-1j`` "
 "along the imaginary axis to ``-∞j``."
 msgstr ""
+"Gibt den Arkustangens von *z* zurück. Es gibt zwei Verzweigungsschnitte: "
+"Einer verläuft von ``1j`` entlang der imaginären Achse bis ``∞j``. Der "
+"andere verläuft von ``-1j`` entlang der imaginären Achse bis ``-∞j``."
 
 #: ../../library/cmath.rst:195
 msgid "Return the cosine of *z*."
-msgstr ""
+msgstr "Gibt den Kosinus von *z* zurück."
 
 #: ../../library/cmath.rst:200
 msgid "Return the sine of *z*."
-msgstr ""
+msgstr "Gibt den Sinus von *z* zurück."
 
 #: ../../library/cmath.rst:205
 msgid "Return the tangent of *z*."
-msgstr ""
+msgstr "Gibt den Tangens von *z* zurück."
 
 #: ../../library/cmath.rst:209
 msgid "Hyperbolic functions"
-msgstr ""
+msgstr "Hyperbolische Funktionen"
 
 #: ../../library/cmath.rst:213
 msgid ""
 "Return the inverse hyperbolic cosine of *z*. There is one branch cut, "
 "extending left from 1 along the real axis to -∞."
 msgstr ""
+"Gibt den inversen hyperbolischen Kosinus von *z* zurück. Es gibt einen "
+"Verzweigungsschnitt, der von 1 entlang der reellen Achse nach links bis -∞ "
+"verläuft."
 
 #: ../../library/cmath.rst:219
 msgid ""
@@ -479,6 +557,10 @@ msgid ""
 "extends from ``1j`` along the imaginary axis to ``∞j``.  The other extends "
 "from ``-1j`` along the imaginary axis to ``-∞j``."
 msgstr ""
+"Gibt den inversen hyperbolischen Sinus von *z* zurück. Es gibt zwei "
+"Verzweigungsschnitte: Einer verläuft von ``1j`` entlang der imaginären Achse "
+"bis ``∞j``. Der andere verläuft von ``-1j`` entlang der imaginären Achse bis "
+"``-∞j``."
 
 #: ../../library/cmath.rst:226
 msgid ""
@@ -486,46 +568,57 @@ msgid ""
 "extends from ``1`` along the real axis to ``∞``. The other extends from "
 "``-1`` along the real axis to ``-∞``."
 msgstr ""
+"Gibt den inversen hyperbolischen Tangens von *z* zurück. Es gibt zwei "
+"Verzweigungsschnitte: Einer verläuft von ``1`` entlang der reellen Achse bis "
+"``∞``. Der andere verläuft von ``-1`` entlang der reellen Achse bis ``-∞``."
 
 #: ../../library/cmath.rst:233
 msgid "Return the hyperbolic cosine of *z*."
-msgstr ""
+msgstr "Gibt den hyperbolischen Kosinus von *z* zurück."
 
 #: ../../library/cmath.rst:238
 msgid "Return the hyperbolic sine of *z*."
-msgstr ""
+msgstr "Gibt den hyperbolischen Sinus von *z* zurück."
 
 #: ../../library/cmath.rst:243
 msgid "Return the hyperbolic tangent of *z*."
-msgstr ""
+msgstr "Gibt den hyperbolischen Tangens von *z* zurück."
 
 #: ../../library/cmath.rst:247
 msgid "Classification functions"
-msgstr ""
+msgstr "Klassifizierungsfunktionen"
 
 #: ../../library/cmath.rst:251
 msgid ""
 "Return ``True`` if both the real and imaginary parts of *z* are finite, and "
 "``False`` otherwise."
 msgstr ""
+"Gibt ``True`` zurück, wenn sowohl der Real- als auch der Imaginärteil von "
+"*z* endlich sind, andernfalls ``False``."
 
 #: ../../library/cmath.rst:259
 msgid ""
 "Return ``True`` if either the real or the imaginary part of *z* is an "
 "infinity, and ``False`` otherwise."
 msgstr ""
+"Gibt ``True`` zurück, wenn entweder der Real- oder der Imaginärteil von *z* "
+"unendlich ist, andernfalls ``False``."
 
 #: ../../library/cmath.rst:265
 msgid ""
 "Return ``True`` if either the real or the imaginary part of *z* is a NaN, "
 "and ``False`` otherwise."
 msgstr ""
+"Gibt ``True`` zurück, wenn entweder der Real- oder der Imaginärteil von *z* "
+"ein NaN ist, andernfalls ``False``."
 
 #: ../../library/cmath.rst:271
 msgid ""
 "Return ``True`` if the values *a* and *b* are close to each other and "
 "``False`` otherwise."
 msgstr ""
+"Gibt ``True`` zurück, wenn die Werte *a* und *b* nahe beieinander liegen, "
+"andernfalls ``False``."
 
 #: ../../library/cmath.rst:274
 msgid ""
@@ -533,6 +626,10 @@ msgid ""
 "given absolute and relative tolerances.  If no errors occur, the result will "
 "be: ``abs(a-b) <= max(rel_tol * max(abs(a), abs(b)), abs_tol)``."
 msgstr ""
+"Ob zwei Werte als nahe beieinander gelten, wird anhand der angegebenen "
+"absoluten und relativen Toleranzen bestimmt. Wenn keine Fehler auftreten, "
+"ist das Ergebnis: ``abs(a-b) <= max(rel_tol * max(abs(a), abs(b)), "
+"abs_tol)``."
 
 #: ../../library/cmath.rst:278
 msgid ""
@@ -543,6 +640,12 @@ msgid ""
 "within about 9 decimal digits.  *rel_tol* must be nonnegative and less than "
 "``1.0``."
 msgstr ""
+"*rel_tol* ist die relative Toleranz, also der maximal zulässige Unterschied "
+"zwischen *a* und *b*, bezogen auf den größeren Absolutwert von *a* oder *b*. "
+"Um zum Beispiel eine Toleranz von 5 % festzulegen, übergib ``rel_tol=0.05``. "
+"Die Standardtoleranz ist ``1e-09``, was sicherstellt, dass die beiden Werte "
+"auf etwa 9 Dezimalstellen übereinstimmen. *rel_tol* muss nichtnegativ und "
+"kleiner als ``1.0`` sein."
 
 #: ../../library/cmath.rst:285
 msgid ""
@@ -552,6 +655,11 @@ msgid ""
 "rel_tol less than ``1.0``.  So add an appropriate positive abs_tol argument "
 "to the call."
 msgstr ""
+"*abs_tol* ist die absolute Toleranz. Sie ist standardmäßig ``0.0`` und muss "
+"nichtnegativ sein. Beim Vergleich von ``x`` mit ``0.0`` wird ``isclose(x, "
+"0)`` als ``abs(x) <= rel_tol  * abs(x)`` berechnet, was für jedes ``x`` und "
+"jedes rel_tol kleiner als ``1.0`` ``False`` ergibt. Füge dem Aufruf daher "
+"ein passendes positives Argument abs_tol hinzu."
 
 #: ../../library/cmath.rst:291
 msgid ""
@@ -560,48 +668,58 @@ msgid ""
 "close to any other value, including ``NaN``.  ``inf`` and ``-inf`` are only "
 "considered close to themselves."
 msgstr ""
+"Die IEEE-754-Sonderwerte ``NaN``, ``inf`` und ``-inf`` werden nach den "
+"IEEE-Regeln behandelt. Insbesondere gilt ``NaN`` nicht als nahe an "
+"irgendeinem anderen Wert, auch nicht an ``NaN``. ``inf`` und ``-inf`` gelten "
+"nur als nahe an sich selbst."
 
 #: ../../library/cmath.rst:300
 msgid ":pep:`485` -- A function for testing approximate equality"
-msgstr ""
+msgstr ":pep:`485` -- Eine Funktion zum Testen auf ungefähre Gleichheit"
 
 #: ../../library/cmath.rst:304
 msgid "Constants"
-msgstr ""
+msgstr "Konstanten"
 
 #: ../../library/cmath.rst:308
 msgid "The mathematical constant *π*, as a float."
-msgstr ""
+msgstr "Die mathematische Konstante *π* als Float."
 
 #: ../../library/cmath.rst:313
 msgid "The mathematical constant *e*, as a float."
-msgstr ""
+msgstr "Die mathematische Konstante *e* als Float."
 
 #: ../../library/cmath.rst:318
 msgid "The mathematical constant *τ*, as a float."
-msgstr ""
+msgstr "Die mathematische Konstante *τ* als Float."
 
 #: ../../library/cmath.rst:325
 msgid "Floating-point positive infinity. Equivalent to ``float('inf')``."
-msgstr ""
+msgstr "Positive Gleitkomma-Unendlichkeit. Äquivalent zu ``float('inf')``."
 
 #: ../../library/cmath.rst:332
 msgid ""
 "Complex number with zero real part and positive infinity imaginary part. "
 "Equivalent to ``complex(0.0, float('inf'))``."
 msgstr ""
+"Komplexe Zahl mit Realteil null und positiv unendlichem Imaginärteil. "
+"Äquivalent zu ``complex(0.0, float('inf'))``."
 
 #: ../../library/cmath.rst:340
 msgid ""
 "A floating-point \"not a number\" (NaN) value.  Equivalent to "
 "``float('nan')``. See also :data:`math.nan`."
 msgstr ""
+"Ein Gleitkommawert „Not a number“ (NaN). Äquivalent zu ``float('nan')``. "
+"Siehe auch :data:`math.nan`."
 
 #: ../../library/cmath.rst:348
 msgid ""
 "Complex number with zero real part and NaN imaginary part. Equivalent to "
 "``complex(0.0, float('nan'))``."
 msgstr ""
+"Komplexe Zahl mit Realteil null und Imaginärteil NaN. Äquivalent zu "
+"``complex(0.0, float('nan'))``."
 
 #: ../../library/cmath.rst:356
 msgid ""
@@ -614,6 +732,14 @@ msgid ""
 "as a real number (in which case the complex number has an imaginary part of "
 "zero)."
 msgstr ""
+"Beachte, dass die Auswahl der Funktionen ähnlich, aber nicht identisch mit "
+"der im Modul :mod:`math` ist. Der Grund für zwei Module ist, dass sich "
+"manche Benutzer nicht für komplexe Zahlen interessieren und vielleicht nicht "
+"einmal wissen, was sie sind. Sie möchten lieber, dass ``math.sqrt(-1)`` eine "
+"Ausnahme auslöst, statt eine komplexe Zahl zurückzugeben. Beachte außerdem, "
+"dass die in :mod:`!cmath` definierten Funktionen immer eine komplexe Zahl "
+"zurückgeben, auch wenn sich die Antwort als reelle Zahl ausdrücken lässt "
+"(dann hat die komplexe Zahl einen Imaginärteil von null)."
 
 #: ../../library/cmath.rst:364
 msgid ""
@@ -625,6 +751,14 @@ msgid ""
 "choice of branch cuts for numerical purposes, a good reference should be the "
 "following:"
 msgstr ""
+"Ein Hinweis zu Verzweigungsschnitten: Das sind Kurven, entlang derer die "
+"jeweilige Funktion nicht stetig ist. Sie sind ein notwendiges Merkmal vieler "
+"komplexer Funktionen. Es wird davon ausgegangen, dass du dich mit "
+"Verzweigungsschnitten auskennst, wenn du mit komplexen Funktionen rechnen "
+"willst. Schlage in nahezu jedem (nicht zu elementaren) Buch über komplexe "
+"Variablen nach, um mehr zu erfahren. Zur richtigen Wahl von "
+"Verzweigungsschnitten für numerische Zwecke ist die folgende Quelle eine "
+"gute Referenz:"
 
 #: ../../library/cmath.rst:374
 msgid ""
@@ -632,6 +766,9 @@ msgid ""
 "nothing's sign bit.  In Iserles, A., and Powell, M. (eds.), The state of the "
 "art in numerical analysis. Clarendon Press (1987) pp165--211."
 msgstr ""
+"Kahan, W:  Branch cuts for complex elementary functions; or, Much ado about "
+"nothing's sign bit.  In Iserles, A., and Powell, M. (eds.), The state of the "
+"art in numerical analysis. Clarendon Press (1987) pp165--211."
 
 #: ../../library/cmath.rst:354
 msgid "module"
