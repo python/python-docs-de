@@ -1411,14 +1411,13 @@ msgid "Example::"
 msgstr "Beispiel::"
 
 #: ../../library/tracemalloc.rst:752
-#, fuzzy
 msgid ""
 "print(\"Traceback (most recent call first):\")\n"
 "for line in traceback.format(most_recent_first=True):\n"
 "    print(line)"
 msgstr ""
 "print(\"Traceback (most recent call first):\")\n"
-"for line in traceback:\n"
+"for line in traceback.format(most_recent_first=True):\n"
 "    print(line)"
 
 #: ../../library/tracemalloc.rst:758
