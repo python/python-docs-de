@@ -1,7 +1,9 @@
-# German translations for Python package.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# Automatically generated, 2026.
+#
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -9,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-23 06:17+0000\n"
 "PO-Revision-Date: 2026-09-22 21:21+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,8 +21,10 @@ msgstr ""
 
 #: ../../deprecations/c-api-pending-removal-in-3.19.rst:2
 msgid "Pending removal in Python 3.19"
-msgstr ""
+msgstr "Geplante Entfernung in Python 3.19"
 
 #: ../../deprecations/c-api-pending-removal-in-3.19.rst:4
 msgid ":pep:`456` embedders support for the string hashing scheme definition."
 msgstr ""
+":pep:`456`: Unterstützung für Embedders bei der Definition des String-"
+"Hashing-Schemas."
