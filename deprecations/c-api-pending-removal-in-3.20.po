@@ -1,7 +1,9 @@
-# German translations for Python package.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# Automatically generated, 2026.
+#
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -9,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-23 06:17+0000\n"
 "PO-Revision-Date: 2026-09-22 21:21+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +21,7 @@ msgstr ""
 
 #: ../../deprecations/c-api-pending-removal-in-3.20.rst:2
 msgid "Pending removal in Python 3.20"
-msgstr ""
+msgstr "Geplante Entfernung in Python 3.20"
 
 #: ../../deprecations/c-api-pending-removal-in-3.20.rst:4
 msgid ""
@@ -30,6 +32,12 @@ msgid ""
 "call :c:func:`PyObject_CallMethod` or :c:func:`PyObject_GetAttr`. "
 "(Contributed by Victor Stinner in :gh:`141049`.)"
 msgstr ""
+":c:func:`!_PyObject_CallMethodId`, :c:func:`!_PyObject_GetAttrId` "
+"und :c:func:`!_PyUnicode_FromId` sind seit 3.15 veraltet und werden in 3.20 "
+"entfernt. Verwende stattdessen :c:func:`PyUnicode_InternFromString()` und "
+"speichere das Ergebnis im Modulzustand zwischen, rufe "
+"dann :c:func:`PyObject_CallMethod` oder :c:func:`PyObject_GetAttr` auf. "
+"(Beigetragen von Victor Stinner in :gh:`141049`.)"
 
 #: ../../deprecations/c-api-pending-removal-in-3.20.rst:11
 msgid ""
@@ -38,7 +46,11 @@ msgid ""
 "convert a Python complex number to/from the C :c:type:`Py_complex` "
 "representation."
 msgstr ""
+"Das Feld ``cval`` in :c:type:`PyComplexObject` (:gh:`128813`). "
+"Verwende :c:func:`PyComplex_AsCComplex` "
+"und :c:func:`PyComplex_FromCComplex`, um eine komplexe Zahl aus Python in "
+"die C-Darstellung :c:type:`Py_complex` bzw. aus ihr umzuwandeln."
 
 #: ../../deprecations/c-api-pending-removal-in-3.20.rst:16
 msgid "Macros :c:macro:`!Py_MATH_PIl` and :c:macro:`!Py_MATH_El`."
-msgstr ""
+msgstr "Die Makros :c:macro:`!Py_MATH_PIl` und :c:macro:`!Py_MATH_El`."
