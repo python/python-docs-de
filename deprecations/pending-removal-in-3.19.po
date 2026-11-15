@@ -1,16 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Translators:
+# Swen Bachmann, 2026
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
 "PO-Revision-Date: 2025-09-16 00:00+0000\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +21,11 @@ msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.19.rst:2
 msgid "Pending removal in Python 3.19"
-msgstr ""
+msgstr "Geplante Entfernung in Python 3.19"
 
 #: ../../deprecations/pending-removal-in-3.19.rst:4
 msgid ":mod:`ctypes`:"
-msgstr ""
+msgstr ":mod:`ctypes`:"
 
 #: ../../deprecations/pending-removal-in-3.19.rst:6
 msgid ""
@@ -31,10 +33,13 @@ msgid ""
 "setting :attr:`~ctypes.Structure._pack_` but "
 "not :attr:`~ctypes.Structure._layout_` on non-Windows platforms."
 msgstr ""
+"Das implizite Umschalten auf das MSVC-kompatible Struct-Layout, wenn auf "
+"Nicht-Windows-Plattformen :attr:`~ctypes.Structure._pack_`, aber "
+"nicht :attr:`~ctypes.Structure._layout_` gesetzt wird."
 
 #: ../../deprecations/pending-removal-in-3.19.rst:10
 msgid ":mod:`hashlib`:"
-msgstr ""
+msgstr ":mod:`hashlib`:"
 
 #: ../../deprecations/pending-removal-in-3.19.rst:12
 msgid ""
@@ -44,12 +49,19 @@ msgid ""
 "also be passed a keyword argument named ``data=`` or ``string=`` in "
 "various :mod:`!hashlib` implementations."
 msgstr ""
+"Bei Konstruktoren von Hash-Funktionen wie :func:`~hashlib.new` oder den "
+"direkt nach dem Hash benannten Konstruktoren wie :func:`~hashlib.md5` "
+"und :func:`~hashlib.sha256` konnte dem optionalen Parameter für die "
+"Anfangsdaten in verschiedenen Implementierungen von :mod:`!hashlib` auch ein "
+"Schlüsselwortargument namens ``data=`` oder ``string=`` übergeben werden."
 
 #: ../../deprecations/pending-removal-in-3.19.rst:18
 msgid ""
 "Support for the ``string`` keyword argument name is now deprecated and "
 "slated for removal in Python 3.19."
 msgstr ""
+"Die Unterstützung des Schlüsselwortarguments ``string`` ist jetzt veraltet "
+"und soll in Python 3.19 entfernt werden."
 
 #: ../../deprecations/pending-removal-in-3.19.rst:21
 msgid ""
@@ -58,26 +70,34 @@ msgid ""
 "passing the initial data as a positional argument for maximum backwards "
 "compatibility."
 msgstr ""
+"Vor Python 3.13 wurde der Schlüsselwortparameter ``string`` je nach Backend-"
+"Implementierung der Hash-Funktionen nicht korrekt unterstützt. Übergib die "
+"Anfangsdaten für die größtmögliche Abwärtskompatibilität am besten als "
+"Positionsargument."
 
 #: ../../deprecations/pending-removal-in-3.19.rst:26
 msgid ":mod:`http.cookies`:"
-msgstr ""
+msgstr ":mod:`http.cookies`:"
 
 #: ../../deprecations/pending-removal-in-3.19.rst:28
 msgid ""
 ":meth:`http.cookies.Morsel.js_output` is deprecated and will be removed in "
 "Python 3.19."
 msgstr ""
+":meth:`http.cookies.Morsel.js_output` ist veraltet und wird in Python 3.19 "
+"entfernt."
 
 #: ../../deprecations/pending-removal-in-3.19.rst:31
 msgid ""
 ":meth:`http.cookies.BaseCookie.js_output` is deprecated and will be removed "
 "in Python 3.19."
 msgstr ""
+":meth:`http.cookies.BaseCookie.js_output` ist veraltet und wird in Python "
+"3.19 entfernt."
 
 #: ../../deprecations/pending-removal-in-3.19.rst:34
 msgid ":mod:`imaplib`:"
-msgstr ""
+msgstr ":mod:`imaplib`:"
 
 #: ../../deprecations/pending-removal-in-3.19.rst:36
 msgid ""
@@ -85,6 +105,10 @@ msgid ""
 "slated for removal in Python 3.19. This property is now unused and changing "
 "its value does not automatically close the current file."
 msgstr ""
+"Das Ändern von :attr:`IMAP4.file <imaplib.IMAP4.file>` ist jetzt veraltet "
+"und soll in Python 3.19 entfernt werden. Diese Eigenschaft wird nicht mehr "
+"verwendet, und das Ändern ihres Werts schließt die aktuelle Datei nicht "
+"automatisch."
 
 #: ../../deprecations/pending-removal-in-3.19.rst:40
 msgid ""
@@ -92,3 +116,6 @@ msgid ""
 "``read()`` and ``readline()`` methods for :class:`~imaplib.IMAP4` but this "
 "is no longer the case since then."
 msgstr ""
+"Vor Python 3.14 wurde diese Eigenschaft verwendet, um die entsprechenden "
+"Methoden ``read()`` und ``readline()`` von :class:`~imaplib.IMAP4` zu "
+"implementieren. Das ist seitdem nicht mehr der Fall."
