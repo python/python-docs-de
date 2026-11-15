@@ -1,10 +1,10 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -12,8 +12,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,15 +22,15 @@ msgstr ""
 
 #: ../../whatsnew/3.6.rst:3
 msgid "What's New In Python 3.6"
-msgstr ""
+msgstr "Was ist neu in Python 3.6"
 
 #: ../../whatsnew/3.6.rst:0
 msgid "Editors"
-msgstr ""
+msgstr "Herausgeber"
 
 #: ../../whatsnew/3.6.rst:5
 msgid "Elvis Pranskevichus <elvis@magic.io>, Yury Selivanov <yury@magic.io>"
-msgstr ""
+msgstr "Elvis Pranskevichus <elvis@magic.io>, Yury Selivanov <yury@magic.io>"
 
 #: ../../whatsnew/3.6.rst:47
 msgid ""
@@ -38,10 +38,14 @@ msgid ""
 "Python 3.6 was released on December 23, 2016.  See the `changelog <https://"
 "docs.python.org/3.6/whatsnew/changelog.html>`_ for a full list of changes."
 msgstr ""
+"Dieser Artikel erklärt die neuen Funktionen in Python 3.6 im Vergleich zu "
+"3.5. Python 3.6 wurde am 23. Dezember 2016 veröffentlicht. Eine vollständige "
+"Liste der Änderungen findest du im `Changelog <https://docs.python.org/3.6/"
+"whatsnew/changelog.html>`_."
 
 #: ../../whatsnew/3.6.rst:54
 msgid ":pep:`494` - Python 3.6 Release Schedule"
-msgstr ""
+msgstr ":pep:`494` - Release-Zeitplan für Python 3.6"
 
 #: ../../whatsnew/3.6.rst:58
 msgid "Summary -- Release highlights"
@@ -49,41 +53,44 @@ msgstr "Zusammenfassung - Release Höhepunkte"
 
 #: ../../whatsnew/3.6.rst:60
 msgid "New syntax features:"
-msgstr ""
+msgstr "Neue Syntax-Features:"
 
 #: ../../whatsnew/3.6.rst:62
 msgid ":ref:`PEP 498 <whatsnew36-pep498>`, formatted string literals."
-msgstr ""
+msgstr ":ref:`PEP 498 <whatsnew36-pep498>`, formatierte String-Literale."
 
 #: ../../whatsnew/3.6.rst:64
 msgid ":ref:`PEP 515 <whatsnew36-pep515>`, underscores in numeric literals."
 msgstr ""
+":ref:`PEP 515 <whatsnew36-pep515>`, Unterstriche in numerischen Literalen."
 
 #: ../../whatsnew/3.6.rst:66
 msgid ":ref:`PEP 526 <whatsnew36-pep526>`, syntax for variable annotations."
-msgstr ""
+msgstr ":ref:`PEP 526 <whatsnew36-pep526>`, Syntax für Variablenannotationen."
 
 #: ../../whatsnew/3.6.rst:68
 msgid ":ref:`PEP 525 <whatsnew36-pep525>`, asynchronous generators."
-msgstr ""
+msgstr ":ref:`PEP 525 <whatsnew36-pep525>`, asynchrone Generatoren."
 
 #: ../../whatsnew/3.6.rst:70
 msgid ":ref:`PEP 530 <whatsnew36-pep530>`: asynchronous comprehensions."
-msgstr ""
+msgstr ":ref:`PEP 530 <whatsnew36-pep530>`: asynchrone Comprehensions."
 
 #: ../../whatsnew/3.6.rst:73
 msgid "New library modules:"
-msgstr ""
+msgstr "Neue Bibliotheksmodule:"
 
 #: ../../whatsnew/3.6.rst:75
 msgid ""
 ":mod:`secrets`: :ref:`PEP 506 -- Adding A Secrets Module To The Standard "
 "Library <whatsnew36-pep506>`."
 msgstr ""
+":mod:`secrets`: :ref:`PEP 506 -- Adding A Secrets Module To The Standard "
+"Library <whatsnew36-pep506>`."
 
 #: ../../whatsnew/3.6.rst:78
 msgid "CPython implementation improvements:"
-msgstr ""
+msgstr "Verbesserungen an der CPython-Implementierung:"
 
 #: ../../whatsnew/3.6.rst:80
 msgid ""
@@ -94,40 +101,58 @@ msgid ""
 "implementation`_.  This resulted in dictionaries using 20% to 25% less "
 "memory when compared to Python 3.5."
 msgstr ""
+"Der Typ :ref:`dict <typesmapping>` wurde neu implementiert und verwendet nun "
+"eine :ref:`kompaktere Darstellung <whatsnew36-compactdict>` auf Basis von "
+"`einem Vorschlag von Raymond Hettinger <https://mail.python.org/pipermail/"
+"python-dev/2012-December/123028.html>`_, ähnlich der `PyPy dict "
+"implementation`_. Dadurch verbrauchen Dictionaries im Vergleich zu Python "
+"3.5 20 % bis 25 % weniger Speicher."
 
 #: ../../whatsnew/3.6.rst:87
 msgid ""
 "Customization of class creation has been simplified with the :ref:`new "
 "protocol <whatsnew36-pep487>`."
 msgstr ""
+"Die Anpassung der Klassenerzeugung wurde mit dem :ref:`neuen Protokoll "
+"<whatsnew36-pep487>` vereinfacht."
 
 #: ../../whatsnew/3.6.rst:90
 msgid ""
 "The class attribute definition order is :ref:`now preserved  <whatsnew36-"
 "pep520>`."
 msgstr ""
+"Die Definitionsreihenfolge von Klassenattributen :ref:`bleibt nun erhalten "
+"<whatsnew36-pep520>`."
 
 #: ../../whatsnew/3.6.rst:93
 msgid ""
 "The order of elements in ``**kwargs`` now :ref:`corresponds to the order "
 "<whatsnew36-pep468>` in which keyword arguments were passed to the function."
 msgstr ""
+"Die Reihenfolge der Elemente in ``**kwargs`` :ref:`entspricht nun der "
+"Reihenfolge <whatsnew36-pep468>`, in der die Schlüsselwortargumente an die "
+"Funktion übergeben wurden."
 
 #: ../../whatsnew/3.6.rst:97
 msgid ""
 "DTrace and SystemTap :ref:`probing support <whatsnew36-tracing>` has been "
 "added."
 msgstr ""
+":ref:`Unterstützung für Probes <whatsnew36-tracing>` mit DTrace und "
+"SystemTap wurde hinzugefügt."
 
 #: ../../whatsnew/3.6.rst:100
 msgid ""
 "The new :ref:`PYTHONMALLOC <whatsnew36-pythonmalloc>` environment variable "
 "can now be used to debug the interpreter memory allocation and access errors."
 msgstr ""
+"Mit der neuen Umgebungsvariable :ref:`PYTHONMALLOC <whatsnew36-"
+"pythonmalloc>` lassen sich nun Fehler bei der Speicherzuweisung und beim "
+"Speicherzugriff des Interpreters debuggen."
 
 #: ../../whatsnew/3.6.rst:105
 msgid "Significant improvements in the standard library:"
-msgstr ""
+msgstr "Wesentliche Verbesserungen in der Standardbibliothek:"
 
 #: ../../whatsnew/3.6.rst:107
 msgid ""
@@ -136,6 +161,10 @@ msgid ""
 "Python 3.6 the ``asyncio`` module is no longer provisional and its API is "
 "considered stable."
 msgstr ""
+"Das Modul :mod:`asyncio` hat neue Funktionen, erhebliche Verbesserungen bei "
+"Benutzbarkeit und Performance sowie eine ganze Reihe von Fehlerkorrekturen "
+"erhalten. Ab Python 3.6 ist das Modul ``asyncio`` nicht mehr vorläufig, und "
+"seine API gilt als stabil."
 
 #: ../../whatsnew/3.6.rst:112
 msgid ""
@@ -144,18 +173,27 @@ msgid ""
 "standard library functions operating on paths have been updated to work with "
 "the new protocol."
 msgstr ""
+"Ein neues :ref:`Protokoll für Dateisystempfade <whatsnew36-pep519>` wurde "
+"implementiert, um :term:`pfadähnliche Objekte <path-like object>` zu "
+"unterstützen. Alle Funktionen der Standardbibliothek, die mit Pfaden "
+"arbeiten, wurden so aktualisiert, dass sie mit dem neuen Protokoll "
+"funktionieren."
 
 #: ../../whatsnew/3.6.rst:117
 msgid ""
 "The :mod:`datetime` module has gained support for :ref:`Local Time "
 "Disambiguation <whatsnew36-pep495>`."
 msgstr ""
+"Das Modul :mod:`datetime` unterstützt nun die :ref:`Eindeutigkeit der "
+"Ortszeit <whatsnew36-pep495>`."
 
 #: ../../whatsnew/3.6.rst:120
 msgid ""
 "The :mod:`typing` module received a number of :ref:`improvements <whatsnew36-"
 "typing>`."
 msgstr ""
+"Das Modul :mod:`typing` hat eine Reihe von :ref:`Verbesserungen <whatsnew36-"
+"typing>` erhalten."
 
 #: ../../whatsnew/3.6.rst:123
 msgid ""
@@ -164,10 +202,15 @@ msgid ""
 "better diagnostics for memory allocation errors. See the :ref:`PYTHONMALLOC "
 "section <whatsnew36-pythonmalloc>` for more information."
 msgstr ""
+"Das Modul :mod:`tracemalloc` wurde erheblich überarbeitet und wird nun "
+"verwendet, um bessere Ausgaben für :exc:`ResourceWarning` und bessere "
+"Diagnosen bei Fehlern der Speicherzuweisung zu liefern. Weitere "
+"Informationen siehe den :ref:`Abschnitt zu PYTHONMALLOC <whatsnew36-"
+"pythonmalloc>`."
 
 #: ../../whatsnew/3.6.rst:130
 msgid "Security improvements:"
-msgstr ""
+msgstr "Verbesserungen bei der Sicherheit:"
 
 #: ../../whatsnew/3.6.rst:132
 msgid ""
@@ -175,6 +218,10 @@ msgid ""
 "cryptographically strong pseudo-random numbers suitable for managing secrets "
 "such as account authentication, tokens, and similar."
 msgstr ""
+"Das neue Modul :mod:`secrets` wurde hinzugefügt, um das Erzeugen "
+"kryptografisch starker Pseudozufallszahlen zu vereinfachen, die sich zur "
+"Verwaltung von Geheimnissen wie Kontoauthentifizierung, Tokens und Ähnlichem "
+"eignen."
 
 #: ../../whatsnew/3.6.rst:136 ../../whatsnew/3.6.rst:1283
 msgid ""
@@ -182,32 +229,43 @@ msgid ""
 "pool is initialized to increase the security. See the :pep:`524` for the "
 "rationale."
 msgstr ""
+"Unter Linux blockiert :func:`os.urandom` nun, bis der urandom-Entropie-Pool "
+"des Systems initialisiert ist, um die Sicherheit zu erhöhen. Die Begründung "
+"findest du in :pep:`524`."
 
 #: ../../whatsnew/3.6.rst:140
 msgid "The :mod:`hashlib` and :mod:`ssl` modules now support OpenSSL 1.1.0."
 msgstr ""
+"Die Module :mod:`hashlib` und :mod:`ssl` unterstützen nun OpenSSL 1.1.0."
 
 #: ../../whatsnew/3.6.rst:142
 msgid ""
 "The default settings and feature set of the :mod:`ssl` module have been "
 "improved."
 msgstr ""
+"Die Standardeinstellungen und der Funktionsumfang des Moduls :mod:`ssl` "
+"wurden verbessert."
 
 #: ../../whatsnew/3.6.rst:145
 msgid ""
 "The :mod:`hashlib` module received support for the BLAKE2, SHA-3 and SHAKE "
 "hash algorithms and the :func:`~hashlib.scrypt` key derivation function."
 msgstr ""
+"Das Modul :mod:`hashlib` unterstützt nun die Hash-Algorithmen BLAKE2, SHA-3 "
+"und SHAKE sowie die Schlüsselableitungsfunktion :func:`~hashlib.scrypt`."
 
 #: ../../whatsnew/3.6.rst:149
 msgid "Windows improvements:"
-msgstr ""
+msgstr "Verbesserungen unter Windows:"
 
 #: ../../whatsnew/3.6.rst:151
 msgid ""
 ":ref:`PEP 528 <whatsnew36-pep528>` and :ref:`PEP 529 <whatsnew36-pep529>`, "
 "Windows filesystem and console encoding changed to UTF-8."
 msgstr ""
+":ref:`PEP 528 <whatsnew36-pep528>` und :ref:`PEP 529 <whatsnew36-pep529>`, "
+"die Kodierung von Dateisystem und Konsole unter Windows wurde auf UTF-8 "
+"geändert."
 
 #: ../../whatsnew/3.6.rst:154
 msgid ""
@@ -216,6 +274,11 @@ msgid ""
 "arguments or a config file).  Handling of shebang lines remains unchanged - "
 "\"python\" refers to Python 2 in that case."
 msgstr ""
+"Der Launcher ``py.exe`` bevorzugt bei interaktiver Verwendung Python 2 nicht "
+"mehr gegenüber Python 3, wenn der Benutzer keine Version angibt (über "
+"Befehlszeilenargumente oder eine Konfigurationsdatei). Die Behandlung von "
+"Shebang-Zeilen bleibt unverändert -- „python“ verweist in diesem Fall auf "
+"Python 2."
 
 #: ../../whatsnew/3.6.rst:159
 msgid ""
@@ -223,6 +286,9 @@ msgid ""
 "which means that the 260 character path limit may no longer apply. "
 "See :ref:`removing the MAX_PATH limitation <max-path>` for details."
 msgstr ""
+"``python.exe`` und ``pythonw.exe`` wurden als fähig für lange Pfade "
+"markiert, sodass die Pfadbegrenzung auf 260 Zeichen möglicherweise nicht "
+"mehr gilt. Details siehe :ref:`Aufheben der MAX_PATH-Begrenzung <max-path>`."
 
 #: ../../whatsnew/3.6.rst:163
 msgid ""
@@ -230,6 +296,10 @@ msgid ""
 "search paths to avoid registry and environment lookup. See :ref:`the "
 "documentation <windows_finding_modules>` for more information."
 msgstr ""
+"Eine Datei ``._pth`` lässt sich hinzufügen, um den isolierten Modus zu "
+"erzwingen und alle Suchpfade vollständig anzugeben, sodass Registry und "
+"Umgebung nicht abgefragt werden. Weitere Informationen siehe :ref:`die "
+"Dokumentation <windows_finding_modules>`."
 
 #: ../../whatsnew/3.6.rst:167
 msgid ""
@@ -237,6 +307,9 @@ msgid ""
 "infer :envvar:`PYTHONHOME`. See :ref:`the documentation "
 "<windows_finding_modules>` for more information."
 msgstr ""
+"Eine Datei ``python36.zip`` dient nun als Orientierungspunkt, "
+"um :envvar:`PYTHONHOME` abzuleiten. Weitere Informationen siehe :ref:`die "
+"Dokumentation <windows_finding_modules>`."
 
 #: ../../whatsnew/3.6.rst:176
 msgid "New Features"
@@ -244,13 +317,15 @@ msgstr "Neue Funktionen"
 
 #: ../../whatsnew/3.6.rst:181
 msgid "PEP 498: Formatted string literals"
-msgstr ""
+msgstr "PEP 498: Formatierte String-Literale"
 
 #: ../../whatsnew/3.6.rst:183
 msgid ""
 ":pep:`498` introduces a new kind of string literals: *f-strings*, "
 "or :ref:`formatted string literals <f-strings>`."
 msgstr ""
+":pep:`498` führt eine neue Art von String-Literalen ein: *f-Strings* "
+"oder :ref:`formatierte String-Literale <f-strings>`."
 
 #: ../../whatsnew/3.6.rst:186
 msgid ""
@@ -260,6 +335,11 @@ msgid ""
 "which are evaluated at run time, and then formatted using the :func:`format` "
 "protocol::"
 msgstr ""
+"Formatierten String-Literalen wird ``'f'`` vorangestellt, und sie ähneln den "
+"von :meth:`str.format` akzeptierten Formatstrings. Sie enthalten "
+"Ersetzungsfelder in geschweiften Klammern. Die Ersetzungsfelder sind "
+"Ausdrücke, die zur Laufzeit ausgewertet und dann mit dem "
+"Protokoll :func:`format` formatiert werden::"
 
 #: ../../whatsnew/3.6.rst:192
 msgid ""
@@ -272,22 +352,30 @@ msgid ""
 ">>> f\"result: {value:{width}.{precision}}\"  # nested fields\n"
 "'result:      12.35'"
 msgstr ""
+">>> name = \"Fred\"\n"
+">>> f\"He said his name is {name}.\"\n"
+"'He said his name is Fred.'\n"
+">>> width = 10\n"
+">>> precision = 4\n"
+">>> value = decimal.Decimal(\"12.34567\")\n"
+">>> f\"result: {value:{width}.{precision}}\"  # nested fields\n"
+"'result:      12.35'"
 
 #: ../../whatsnew/3.6.rst:203
 msgid ":pep:`498` -- Literal String Interpolation."
-msgstr ""
+msgstr ":pep:`498` -- Literal String Interpolation."
 
 #: ../../whatsnew/3.6.rst:204
 msgid "PEP written and implemented by Eric V. Smith."
-msgstr ""
+msgstr "PEP geschrieben und implementiert von Eric V. Smith."
 
 #: ../../whatsnew/3.6.rst:206
 msgid ":ref:`Feature documentation <f-strings>`."
-msgstr ""
+msgstr ":ref:`Dokumentation der Funktion <f-strings>`."
 
 #: ../../whatsnew/3.6.rst:212
 msgid "PEP 526: Syntax for variable annotations"
-msgstr ""
+msgstr "PEP 526: Syntax für Variablenannotationen"
 
 #: ../../whatsnew/3.6.rst:214
 msgid ""
@@ -295,6 +383,10 @@ msgid ""
 "parameters, a.k.a. type hints. This PEP adds syntax to Python for annotating "
 "the types of variables including class variables and instance variables::"
 msgstr ""
+":pep:`484` hat den Standard für Typannotationen von Funktionsparametern "
+"eingeführt, auch Typhinweise genannt. Dieser PEP fügt Python eine Syntax zum "
+"Annotieren der Typen von Variablen hinzu, einschließlich Klassen- und "
+"Instanzvariablen::"
 
 #: ../../whatsnew/3.6.rst:218
 msgid ""
@@ -305,6 +397,12 @@ msgid ""
 "class Starship:\n"
 "    stats: Dict[str, int] = {}"
 msgstr ""
+"primes: List[int] = []\n"
+"\n"
+"captain: str  # Note: no initial value!\n"
+"\n"
+"class Starship:\n"
+"    stats: Dict[str, int] = {}"
 
 #: ../../whatsnew/3.6.rst:225
 msgid ""
@@ -312,6 +410,9 @@ msgid ""
 "particular meaning to variable annotations and only stores them in the "
 "``__annotations__`` attribute of a class or module."
 msgstr ""
+"Wie bei Funktionsannotationen misst der Python-Interpreter "
+"Variablenannotationen keine besondere Bedeutung bei und speichert sie nur im "
+"Attribut ``__annotations__`` einer Klasse oder eines Moduls."
 
 #: ../../whatsnew/3.6.rst:229
 msgid ""
@@ -320,32 +421,44 @@ msgid ""
 "metadata for third party tools and libraries via the abstract syntax tree "
 "and the ``__annotations__`` attribute."
 msgstr ""
+"Anders als bei Variablendeklarationen in statisch typisierten Sprachen ist "
+"das Ziel der Annotationssyntax, eine einfache Möglichkeit zu bieten, "
+"strukturierte Typmetadaten für Werkzeuge und Bibliotheken von Drittanbietern "
+"über den abstrakten Syntaxbaum und das Attribut ``__annotations__`` "
+"anzugeben."
 
 #: ../../whatsnew/3.6.rst:236
 msgid ":pep:`526` -- Syntax for variable annotations."
-msgstr ""
+msgstr ":pep:`526` -- Syntax for variable annotations."
 
 #: ../../whatsnew/3.6.rst:237
 msgid ""
 "PEP written by Ryan Gonzalez, Philip House, Ivan Levkivskyi, Lisa Roach, and "
 "Guido van Rossum. Implemented by Ivan Levkivskyi."
 msgstr ""
+"PEP geschrieben von Ryan Gonzalez, Philip House, Ivan Levkivskyi, Lisa Roach "
+"und Guido van Rossum. Implementiert von Ivan Levkivskyi."
 
 #: ../../whatsnew/3.6.rst:240
 msgid ""
 "Tools that use or will use the new syntax: `mypy <https://www.mypy-lang.org/"
 ">`_, `pytype <https://github.com/google/pytype>`_, PyCharm, etc."
 msgstr ""
+"Werkzeuge, die die neue Syntax verwenden oder verwenden werden: `mypy "
+"<https://www.mypy-lang.org/>`_, `pytype <https://github.com/google/"
+"pytype>`_, PyCharm usw."
 
 #: ../../whatsnew/3.6.rst:248
 msgid "PEP 515: Underscores in Numeric Literals"
-msgstr ""
+msgstr "PEP 515: Unterstriche in numerischen Literalen"
 
 #: ../../whatsnew/3.6.rst:250
 msgid ""
 ":pep:`515` adds the ability to use underscores in numeric literals for "
 "improved readability.  For example::"
 msgstr ""
+":pep:`515` ermöglicht Unterstriche in numerischen Literalen für bessere "
+"Lesbarkeit. Zum Beispiel::"
 
 #: ../../whatsnew/3.6.rst:253
 msgid ""
@@ -354,12 +467,19 @@ msgid ""
 ">>> 0x_FF_FF_FF_FF\n"
 "4294967295"
 msgstr ""
+">>> 1_000_000_000_000_000\n"
+"1000000000000000\n"
+">>> 0x_FF_FF_FF_FF\n"
+"4294967295"
 
 #: ../../whatsnew/3.6.rst:258
 msgid ""
 "Single underscores are allowed between digits and after any base specifier.  "
 "Leading, trailing, or multiple underscores in a row are not allowed."
 msgstr ""
+"Einzelne Unterstriche sind zwischen Ziffern und nach jeder Basisangabe "
+"erlaubt. Führende, abschließende oder mehrere aufeinanderfolgende "
+"Unterstriche sind nicht erlaubt."
 
 #: ../../whatsnew/3.6.rst:262
 msgid ""
@@ -369,6 +489,12 @@ msgid ""
 "type ``'d'``.  For integer presentation types ``'b'``, ``'o'``, ``'x'``, and "
 "``'X'``, underscores will be inserted every 4 digits::"
 msgstr ""
+"Die Sprache der :ref:`String-Formatierung <formatspec>` unterstützt nun auch "
+"die Option ``'_'``, um bei Gleitkomma-Darstellungstypen und beim "
+"ganzzahligen Darstellungstyp ``'d'`` einen Unterstrich als "
+"Tausendertrennzeichen zu verwenden. Bei den ganzzahligen Darstellungstypen "
+"``'b'``, ``'o'``, ``'x'`` und ``'X'`` werden alle 4 Ziffern Unterstriche "
+"eingefügt::"
 
 #: ../../whatsnew/3.6.rst:269
 msgid ""
@@ -377,18 +503,22 @@ msgid ""
 ">>> '{:_x}'.format(0xFFFFFFFF)\n"
 "'ffff_ffff'"
 msgstr ""
+">>> '{:_}'.format(1000000)\n"
+"'1_000_000'\n"
+">>> '{:_x}'.format(0xFFFFFFFF)\n"
+"'ffff_ffff'"
 
 #: ../../whatsnew/3.6.rst:276
 msgid ":pep:`515` -- Underscores in Numeric Literals"
-msgstr ""
+msgstr ":pep:`515` -- Underscores in Numeric Literals"
 
 #: ../../whatsnew/3.6.rst:277
 msgid "PEP written by Georg Brandl and Serhiy Storchaka."
-msgstr ""
+msgstr "PEP geschrieben von Georg Brandl und Serhiy Storchaka."
 
 #: ../../whatsnew/3.6.rst:283
 msgid "PEP 525: Asynchronous Generators"
-msgstr ""
+msgstr "PEP 525: Asynchrone Generatoren"
 
 #: ../../whatsnew/3.6.rst:285
 msgid ""
@@ -398,6 +528,12 @@ msgid ""
 "the same function body.  In Python 3.6 this restriction has been lifted, "
 "making it possible to define *asynchronous generators*::"
 msgstr ""
+":pep:`492` hat in Python 3.5 Unterstützung für native Koroutinen und die "
+"Syntax ``async`` / ``await`` eingeführt. Eine bemerkenswerte Einschränkung "
+"der Implementierung in Python 3.5 war, dass ``await`` und ``yield`` nicht im "
+"selben Funktionsrumpf verwendet werden konnten. In Python 3.6 wurde diese "
+"Einschränkung aufgehoben, sodass sich *asynchrone Generatoren* definieren "
+"lassen::"
 
 #: ../../whatsnew/3.6.rst:291
 msgid ""
@@ -407,50 +543,59 @@ msgid ""
 "        yield i\n"
 "        await asyncio.sleep(delay)"
 msgstr ""
+"async def ticker(delay, to):\n"
+"    \"\"\"Yield numbers from 0 to *to* every *delay* seconds.\"\"\"\n"
+"    for i in range(to):\n"
+"        yield i\n"
+"        await asyncio.sleep(delay)"
 
 #: ../../whatsnew/3.6.rst:297
 msgid "The new syntax allows for faster and more concise code."
-msgstr ""
+msgstr "Die neue Syntax ermöglicht schnelleren und kompakteren Code."
 
 #: ../../whatsnew/3.6.rst:301
 msgid ":pep:`525` -- Asynchronous Generators"
-msgstr ""
+msgstr ":pep:`525` -- Asynchronous Generators"
 
 #: ../../whatsnew/3.6.rst:302 ../../whatsnew/3.6.rst:323
 msgid "PEP written and implemented by Yury Selivanov."
-msgstr ""
+msgstr "PEP geschrieben und implementiert von Yury Selivanov."
 
 #: ../../whatsnew/3.6.rst:308
 msgid "PEP 530: Asynchronous Comprehensions"
-msgstr ""
+msgstr "PEP 530: Asynchrone Comprehensions"
 
 #: ../../whatsnew/3.6.rst:310
 msgid ""
 ":pep:`530` adds support for using ``async for`` in list, set, dict "
 "comprehensions and generator expressions::"
 msgstr ""
+":pep:`530` fügt Unterstützung für ``async for`` in List-, Set- und Dict-"
+"Comprehensions sowie Generatorausdrücken hinzu::"
 
 #: ../../whatsnew/3.6.rst:313
 msgid "result = [i async for i in aiter() if i % 2]"
-msgstr ""
+msgstr "result = [i async for i in aiter() if i % 2]"
 
 #: ../../whatsnew/3.6.rst:315
 msgid ""
 "Additionally, ``await`` expressions are supported in all kinds of "
 "comprehensions::"
 msgstr ""
+"Außerdem werden ``await``-Ausdrücke in allen Arten von Comprehensions "
+"unterstützt::"
 
 #: ../../whatsnew/3.6.rst:318
 msgid "result = [await fun() for fun in funcs if await condition()]"
-msgstr ""
+msgstr "result = [await fun() for fun in funcs if await condition()]"
 
 #: ../../whatsnew/3.6.rst:322
 msgid ":pep:`530` -- Asynchronous Comprehensions"
-msgstr ""
+msgstr ":pep:`530` -- Asynchronous Comprehensions"
 
 #: ../../whatsnew/3.6.rst:329
 msgid "PEP 487: Simpler customization of class creation"
-msgstr ""
+msgstr "PEP 487: Einfachere Anpassung der Klassenerzeugung"
 
 #: ../../whatsnew/3.6.rst:331
 msgid ""
@@ -458,6 +603,9 @@ msgid ""
 "The new ``__init_subclass__`` classmethod will be called on the base class "
 "whenever a new subclass is created::"
 msgstr ""
+"Die Erzeugung von Unterklassen lässt sich nun ohne Metaklasse anpassen. Die "
+"neue Klassenmethode ``__init_subclass__`` wird auf der Basisklasse "
+"aufgerufen, sobald eine neue Unterklasse erzeugt wird::"
 
 #: ../../whatsnew/3.6.rst:335
 msgid ""
@@ -474,6 +622,18 @@ msgid ""
 "class Plugin2(PluginBase):\n"
 "    pass"
 msgstr ""
+"class PluginBase:\n"
+"    subclasses = []\n"
+"\n"
+"    def __init_subclass__(cls, **kwargs):\n"
+"        super().__init_subclass__(**kwargs)\n"
+"        cls.subclasses.append(cls)\n"
+"\n"
+"class Plugin1(PluginBase):\n"
+"    pass\n"
+"\n"
+"class Plugin2(PluginBase):\n"
+"    pass"
 
 #: ../../whatsnew/3.6.rst:348
 msgid ""
@@ -482,22 +642,27 @@ msgid ""
 "must ensure that the new ``__classcell__`` namespace entry is propagated to "
 "``type.__new__`` (as described in :ref:`class-object-creation`)."
 msgstr ""
+"Damit Aufrufe von :func:`super` ohne Argumente aus Implementierungen "
+"von :meth:`~object.__init_subclass__` korrekt funktionieren, müssen eigene "
+"Metaklassen sicherstellen, dass der neue Namensraumeintrag ``__classcell__`` "
+"an ``type.__new__`` weitergegeben wird (wie in :ref:`class-object-creation` "
+"beschrieben)."
 
 #: ../../whatsnew/3.6.rst:355 ../../whatsnew/3.6.rst:393
 msgid ":pep:`487` -- Simpler customization of class creation"
-msgstr ""
+msgstr ":pep:`487` -- Simpler customization of class creation"
 
 #: ../../whatsnew/3.6.rst:356 ../../whatsnew/3.6.rst:394
 msgid "PEP written and implemented by Martin Teichmann."
-msgstr ""
+msgstr "PEP geschrieben und implementiert von Martin Teichmann."
 
 #: ../../whatsnew/3.6.rst:358
 msgid ":ref:`Feature documentation <class-customization>`"
-msgstr ""
+msgstr ":ref:`Feature documentation <class-customization>`"
 
 #: ../../whatsnew/3.6.rst:364
 msgid "PEP 487: Descriptor Protocol Enhancements"
-msgstr ""
+msgstr "PEP 487: Erweiterungen des Deskriptorprotokolls"
 
 #: ../../whatsnew/3.6.rst:366
 msgid ""
@@ -509,6 +674,13 @@ msgid ""
 "words, instances of descriptors can now know the attribute name of the "
 "descriptor in the owner class::"
 msgstr ""
+":pep:`487` erweitert das Deskriptorprotokoll um die neue optionale "
+"Methode :meth:`~object.__set_name__`. Immer wenn eine neue Klasse definiert "
+"wird, wird die neue Methode auf allen in der Definition enthaltenen "
+"Deskriptoren aufgerufen und übergibt ihnen eine Referenz auf die definierte "
+"Klasse und den Namen, den der Deskriptor im Namensraum der Klasse erhalten "
+"hat. Mit anderen Worten: Instanzen von Deskriptoren können nun den "
+"Attributnamen des Deskriptors in der besitzenden Klasse kennen::"
 
 #: ../../whatsnew/3.6.rst:374
 msgid ""
@@ -528,14 +700,29 @@ msgid ""
 "class Model:\n"
 "    int_field = IntField()"
 msgstr ""
+"class IntField:\n"
+"    def __get__(self, instance, owner):\n"
+"        return instance.__dict__[self.name]\n"
+"\n"
+"    def __set__(self, instance, value):\n"
+"        if not isinstance(value, int):\n"
+"            raise ValueError(f'expecting integer in {self.name}')\n"
+"        instance.__dict__[self.name] = value\n"
+"\n"
+"    # this is the new initializer:\n"
+"    def __set_name__(self, owner, name):\n"
+"        self.name = name\n"
+"\n"
+"class Model:\n"
+"    int_field = IntField()"
 
 #: ../../whatsnew/3.6.rst:396
 msgid ":ref:`Feature documentation <descriptors>`"
-msgstr ""
+msgstr ":ref:`Feature documentation <descriptors>`"
 
 #: ../../whatsnew/3.6.rst:402
 msgid "PEP 519: Adding a file system path protocol"
-msgstr ""
+msgstr "PEP 519: Ein Protokoll für Dateisystempfade"
 
 #: ../../whatsnew/3.6.rst:404
 msgid ""
@@ -547,6 +734,13 @@ msgid ""
 "alternative object representations of file system paths like :mod:`pathlib` "
 "from working with pre-existing code, including Python's standard library."
 msgstr ""
+"Dateisystempfade wurden bisher als :class:`str`- oder :class:`bytes`-Objekte "
+"dargestellt. Das hat dazu geführt, dass Leute, die Code für Dateisystempfade "
+"schreiben, annehmen, solche Objekte seien nur einer dieser beiden Typen "
+"(ein :class:`int` für einen Dateideskriptor zählt nicht, da es kein "
+"Dateipfad ist). Leider verhindert diese Annahme, dass alternative "
+"Objektdarstellungen von Dateisystempfaden wie :mod:`pathlib` mit bestehendem "
+"Code funktionieren, einschließlich der Standardbibliothek von Python."
 
 #: ../../whatsnew/3.6.rst:413
 msgid ""
@@ -561,6 +755,17 @@ msgid ""
 "to explicitly get a :class:`str` and/or :class:`bytes` representation of a "
 "path-like object."
 msgstr ""
+"Um das zu beheben, wurde eine neue Schnittstelle definiert, die "
+"durch :class:`os.PathLike` dargestellt wird. Implementiert ein Objekt die "
+"Methode :meth:`~os.PathLike.__fspath__`, signalisiert es, dass es einen Pfad "
+"darstellt. Das Objekt kann dann eine Darstellung des Dateisystempfades auf "
+"niedriger Ebene als :class:`str`- oder :class:`bytes`-Objekt liefern. Ein "
+"Objekt gilt also als :term:`pfadähnlich <path-like object>`, wenn "
+"es :class:`os.PathLike` implementiert oder ein :class:`str`- "
+"oder :class:`bytes`-Objekt ist, das einen Dateisystempfad darstellt. Code "
+"kann :func:`os.fspath`, :func:`os.fsdecode` oder :func:`os.fsencode` "
+"verwenden, um ausdrücklich eine :class:`str`- und/oder :class:`bytes`-"
+"Darstellung eines pfadähnlichen Objekts zu erhalten."
 
 #: ../../whatsnew/3.6.rst:426
 msgid ""
@@ -571,6 +776,12 @@ msgid ""
 "relevant classes in :mod:`pathlib` have also been updated to "
 "implement :class:`os.PathLike`."
 msgstr ""
+"Die eingebaute Funktion :func:`open` wurde so aktualisiert, dass "
+"sie :class:`os.PathLike`-Objekte akzeptiert, ebenso alle relevanten "
+"Funktionen in den Modulen :mod:`os` und :mod:`os.path` sowie die meisten "
+"anderen Funktionen und Klassen der Standardbibliothek. Die "
+"Klasse :class:`os.DirEntry` und relevante Klassen in :mod:`pathlib` wurden "
+"ebenfalls so aktualisiert, dass sie :class:`os.PathLike` implementieren."
 
 #: ../../whatsnew/3.6.rst:433
 msgid ""
@@ -580,6 +791,12 @@ msgid ""
 "or at least very minimal ones (e.g. calling :func:`os.fspath` at the "
 "beginning of code before operating on a path-like object)."
 msgstr ""
+"Die Hoffnung ist, dass die Aktualisierung der grundlegenden Funktionen für "
+"Dateisystempfade dazu führt, dass Code von Drittanbietern "
+"alle :term:`pfadähnlichen Objekte <path-like object>` implizit ohne oder mit "
+"nur minimalen Codeänderungen unterstützt (z. B. durch Aufruf "
+"von :func:`os.fspath` am Anfang des Codes, bevor mit einem pfadähnlichen "
+"Objekt gearbeitet wird)."
 
 #: ../../whatsnew/3.6.rst:440
 msgid ""
@@ -587,6 +804,9 @@ msgid ""
 "for :class:`pathlib.Path` to be used more easily and transparently with pre-"
 "existing code::"
 msgstr ""
+"Hier einige Beispiele dafür, wie die neue Schnittstelle die Verwendung "
+"von :class:`pathlib.Path` mit bestehendem Code einfacher und transparenter "
+"macht::"
 
 #: ../../whatsnew/3.6.rst:444
 msgid ""
@@ -603,24 +823,38 @@ msgid ""
 ">>> os.fspath(pathlib.Path(\"some_file.txt\"))\n"
 "'some_file.txt'"
 msgstr ""
+">>> import pathlib\n"
+">>> with open(pathlib.Path(\"README\")) as f:\n"
+"...     contents = f.read()\n"
+"...\n"
+">>> import os.path\n"
+">>> os.path.splitext(pathlib.Path(\"some_file.txt\"))\n"
+"('some_file', '.txt')\n"
+">>> os.path.join(\"/a/b\", pathlib.Path(\"c\"))\n"
+"'/a/b/c'\n"
+">>> import os\n"
+">>> os.fspath(pathlib.Path(\"some_file.txt\"))\n"
+"'some_file.txt'"
 
 #: ../../whatsnew/3.6.rst:457
 msgid ""
 "(Implemented by Brett Cannon, Ethan Furman, Dusty Phillips, and Jelle "
 "Zijlstra.)"
 msgstr ""
+"(Implementiert von Brett Cannon, Ethan Furman, Dusty Phillips und Jelle "
+"Zijlstra.)"
 
 #: ../../whatsnew/3.6.rst:461
 msgid ":pep:`519` -- Adding a file system path protocol"
-msgstr ""
+msgstr ":pep:`519` -- Adding a file system path protocol"
 
 #: ../../whatsnew/3.6.rst:462
 msgid "PEP written by Brett Cannon and Koos Zevenhoven."
-msgstr ""
+msgstr "PEP geschrieben von Brett Cannon und Koos Zevenhoven."
 
 #: ../../whatsnew/3.6.rst:468
 msgid "PEP 495: Local Time Disambiguation"
-msgstr ""
+msgstr "PEP 495: Eindeutigkeit der Ortszeit"
 
 #: ../../whatsnew/3.6.rst:470
 msgid ""
@@ -630,6 +864,12 @@ msgid ""
 "information displayed on a local clock (or stored in a Python datetime "
 "instance) is insufficient to identify a particular moment in time."
 msgstr ""
+"An den meisten Orten der Welt gab und gibt es Zeitpunkte, an denen die Uhren "
+"zurückgestellt werden. Dann entstehen Zeiträume, in denen die Uhren am "
+"selben Tag zweimal dieselbe Zeit anzeigen. In solchen Situationen reicht die "
+"auf einer Uhr angezeigte (oder in einer Python-datetime-Instanz "
+"gespeicherte) Information nicht aus, um einen bestimmten Zeitpunkt zu "
+"identifizieren."
 
 #: ../../whatsnew/3.6.rst:476
 msgid ""
@@ -638,6 +878,9 @@ msgid ""
 "differentiate between two moments in time for which local times are the "
 "same::"
 msgstr ""
+":pep:`495` fügt Instanzen der Klassen :class:`datetime.datetime` "
+"und :class:`datetime.time` das neue Attribut *fold* hinzu, um zwischen zwei "
+"Zeitpunkten mit derselben Ortszeit zu unterscheiden::"
 
 #: ../../whatsnew/3.6.rst:480
 msgid ""
@@ -652,6 +895,16 @@ msgid ""
 "06:00:00 UTC = 01:00:00 EST 1\n"
 "07:00:00 UTC = 02:00:00 EST 0"
 msgstr ""
+">>> u0 = datetime(2016, 11, 6, 4, tzinfo=timezone.utc)\n"
+">>> for i in range(4):\n"
+"...     u = u0 + i*HOUR\n"
+"...     t = u.astimezone(Eastern)\n"
+"...     print(u.time(), 'UTC =', t.time(), t.tzname(), t.fold)\n"
+"...\n"
+"04:00:00 UTC = 00:00:00 EDT 0\n"
+"05:00:00 UTC = 01:00:00 EDT 0\n"
+"06:00:00 UTC = 01:00:00 EST 1\n"
+"07:00:00 UTC = 02:00:00 EST 0"
 
 #: ../../whatsnew/3.6.rst:491
 msgid ""
@@ -659,20 +912,25 @@ msgid ""
 "value ``0`` for all instances except those that represent the second "
 "(chronologically) moment in time in an ambiguous case."
 msgstr ""
+"Das Attribut :attr:`fold <datetime.datetime.fold>` hat bei allen Instanzen "
+"den Wert ``0``, außer bei denen, die im mehrdeutigen Fall den "
+"(chronologisch) zweiten Zeitpunkt darstellen."
 
 #: ../../whatsnew/3.6.rst:497
 msgid ":pep:`495` -- Local Time Disambiguation"
-msgstr ""
+msgstr ":pep:`495` -- Local Time Disambiguation"
 
 #: ../../whatsnew/3.6.rst:498
 msgid ""
 "PEP written by Alexander Belopolsky and Tim Peters, implementation by "
 "Alexander Belopolsky."
 msgstr ""
+"PEP geschrieben von Alexander Belopolsky und Tim Peters, Implementierung von "
+"Alexander Belopolsky."
 
 #: ../../whatsnew/3.6.rst:505
 msgid "PEP 529: Change Windows filesystem encoding to UTF-8"
-msgstr ""
+msgstr "PEP 529: Dateisystemkodierung unter Windows auf UTF-8 geändert"
 
 #: ../../whatsnew/3.6.rst:507
 msgid ""
@@ -680,6 +938,9 @@ msgid ""
 "than bytes. However, there are some situations where using bytes is "
 "sufficient and correct."
 msgstr ""
+"Dateisystempfade lassen sich am besten mit str (Unicode) statt mit bytes "
+"darstellen. Es gibt aber Situationen, in denen bytes ausreichend und korrekt "
+"ist."
 
 #: ../../whatsnew/3.6.rst:511
 msgid ""
@@ -688,6 +949,11 @@ msgid ""
 "on Windows, provided those bytes are encoded with the encoding returned "
 "by :func:`sys.getfilesystemencoding`, which now defaults to ``'utf-8'``."
 msgstr ""
+"Vor Python 3.6 konnte die Verwendung von Byte-Pfaden unter Windows zu "
+"Datenverlust führen. Mit dieser Änderung wird die Darstellung von Pfaden als "
+"bytes unter Windows nun unterstützt, sofern diese Bytes mit der "
+"von :func:`sys.getfilesystemencoding` zurückgegebenen Kodierung kodiert "
+"sind, die nun standardmäßig ``'utf-8'`` ist."
 
 #: ../../whatsnew/3.6.rst:516
 msgid ""
@@ -697,16 +963,23 @@ msgid ""
 "set :envvar:`PYTHONLEGACYWINDOWSFSENCODING` or "
 "call :func:`sys._enablelegacywindowsfsencoding`."
 msgstr ""
+"Anwendungen, die Pfade nicht als str darstellen, sollten :func:`os.fsencode` "
+"und :func:`os.fsdecode` verwenden, um sicherzustellen, dass ihre Bytes "
+"korrekt kodiert sind. Um zum bisherigen Verhalten zurückzukehren, "
+"setze :envvar:`PYTHONLEGACYWINDOWSFSENCODING` oder "
+"rufe :func:`sys._enablelegacywindowsfsencoding` auf."
 
 #: ../../whatsnew/3.6.rst:522
 msgid ""
 "See :pep:`529` for more information and discussion of code modifications "
 "that may be required."
 msgstr ""
+"Weitere Informationen und eine Diskussion möglicherweise nötiger "
+"Codeänderungen siehe :pep:`529`."
 
 #: ../../whatsnew/3.6.rst:529
 msgid "PEP 528: Change Windows console encoding to UTF-8"
-msgstr ""
+msgstr "PEP 528: Konsolenkodierung unter Windows auf UTF-8 geändert"
 
 #: ../../whatsnew/3.6.rst:531
 msgid ""
@@ -714,6 +987,10 @@ msgid ""
 "provide correctly read str objects to Python code. ``sys.stdin``, "
 "``sys.stdout`` and ``sys.stderr`` now default to utf-8 encoding."
 msgstr ""
+"Die Standardkonsole unter Windows akzeptiert nun alle Unicode-Zeichen und "
+"liefert Python-Code korrekt gelesene str-Objekte. ``sys.stdin``, "
+"``sys.stdout`` und ``sys.stderr`` verwenden nun standardmäßig die Kodierung "
+"utf-8."
 
 #: ../../whatsnew/3.6.rst:535
 msgid ""
@@ -721,18 +998,22 @@ msgid ""
 "redirecting files or pipes. To revert to the previous behaviour for "
 "interactive console use, set :envvar:`PYTHONLEGACYWINDOWSSTDIO`."
 msgstr ""
+"Diese Änderung gilt nur bei Verwendung einer interaktiven Konsole, nicht "
+"beim Umleiten von Dateien oder Pipes. Um bei der interaktiven Konsole zum "
+"bisherigen Verhalten zurückzukehren, "
+"setze :envvar:`PYTHONLEGACYWINDOWSSTDIO`."
 
 #: ../../whatsnew/3.6.rst:541
 msgid ":pep:`528` -- Change Windows console encoding to UTF-8"
-msgstr ""
+msgstr ":pep:`528` -- Change Windows console encoding to UTF-8"
 
 #: ../../whatsnew/3.6.rst:542
 msgid "PEP written and implemented by Steve Dower."
-msgstr ""
+msgstr "PEP geschrieben und implementiert von Steve Dower."
 
 #: ../../whatsnew/3.6.rst:548
 msgid "PEP 520: Preserving Class Attribute Definition Order"
-msgstr ""
+msgstr "PEP 520: Beibehaltung der Definitionsreihenfolge von Klassenattributen"
 
 #: ../../whatsnew/3.6.rst:550
 msgid ""
@@ -740,6 +1021,10 @@ msgid ""
 "order in which the names appear in the source.  This order is now preserved "
 "in the new class's :attr:`~type.__dict__` attribute."
 msgstr ""
+"Attribute im Rumpf einer Klassendefinition haben eine natürliche "
+"Reihenfolge: dieselbe, in der die Namen im Quelltext erscheinen. Diese "
+"Reihenfolge bleibt nun im Attribut :attr:`~type.__dict__` der neuen Klasse "
+"erhalten."
 
 #: ../../whatsnew/3.6.rst:554
 msgid ""
@@ -747,32 +1032,37 @@ msgid ""
 "from :ref:`type.__prepare__() <prepare>`) is now an insertion-order-"
 "preserving mapping."
 msgstr ""
+"Außerdem ist der effektive Standard-*Ausführungs*-Namensraum der Klasse "
+"(zurückgegeben von :ref:`type.__prepare__() <prepare>`) nun ein Mapping, das "
+"die Einfügereihenfolge beibehält."
 
 #: ../../whatsnew/3.6.rst:560
 msgid ":pep:`520` -- Preserving Class Attribute Definition Order"
-msgstr ""
+msgstr ":pep:`520` -- Preserving Class Attribute Definition Order"
 
 #: ../../whatsnew/3.6.rst:561 ../../whatsnew/3.6.rst:575
 msgid "PEP written and implemented by Eric Snow."
-msgstr ""
+msgstr "PEP geschrieben und implementiert von Eric Snow."
 
 #: ../../whatsnew/3.6.rst:567
 msgid "PEP 468: Preserving Keyword Argument Order"
-msgstr ""
+msgstr "PEP 468: Beibehaltung der Reihenfolge von Schlüsselwortargumenten"
 
 #: ../../whatsnew/3.6.rst:569
 msgid ""
 "``**kwargs`` in a function signature is now guaranteed to be an insertion-"
 "order-preserving mapping."
 msgstr ""
+"``**kwargs`` in einer Funktionssignatur ist nun garantiert ein Mapping, das "
+"die Einfügereihenfolge beibehält."
 
 #: ../../whatsnew/3.6.rst:574
 msgid ":pep:`468` -- Preserving Keyword Argument Order"
-msgstr ""
+msgstr ":pep:`468` -- Preserving Keyword Argument Order"
 
 #: ../../whatsnew/3.6.rst:581
 msgid "New :ref:`dict <typesmapping>` implementation"
-msgstr ""
+msgstr "Neue Implementierung von :ref:`dict <typesmapping>`"
 
 #: ../../whatsnew/3.6.rst:583
 msgid ""
@@ -783,6 +1073,12 @@ msgid ""
 "more.html>`_. The memory usage of the new :func:`dict` is between 20% and "
 "25% smaller compared to Python 3.5."
 msgstr ""
+"Der Typ :ref:`dict <typesmapping>` verwendet nun eine „kompakte“ Darstellung "
+"auf Basis von `einem Vorschlag von Raymond Hettinger <https://"
+"mail.python.org/pipermail/python-dev/2012-December/123028.html>`_, die "
+"`zuerst von PyPy implementiert wurde <https://morepypy.blogspot.com/2015/01/"
+"faster-more-memory-efficient-and-more.html>`_. Der Speicherverbrauch des "
+"neuen :func:`dict` ist im Vergleich zu Python 3.5 um 20 % bis 25 % geringer."
 
 #: ../../whatsnew/3.6.rst:591
 msgid ""
@@ -795,6 +1091,15 @@ msgid ""
 "versions of the language where random iteration order is still in effect, "
 "e.g. Python 3.5)."
 msgstr ""
+"Die Eigenschaft dieser neuen Implementierung, die Reihenfolge beizubehalten, "
+"gilt als Implementierungsdetail, auf das man sich nicht verlassen sollte "
+"(das kann sich künftig ändern, es ist aber erwünscht, diese neue dict-"
+"Implementierung einige Releases lang in der Sprache zu haben, bevor die "
+"Sprachspezifikation geändert wird, um für alle aktuellen und künftigen "
+"Python-Implementierungen eine reihenfolgeerhaltende Semantik vorzuschreiben. "
+"Das hilft auch, die Abwärtskompatibilität mit älteren Sprachversionen zu "
+"wahren, in denen noch eine zufällige Iterationsreihenfolge gilt, z. B. "
+"Python 3.5)."
 
 #: ../../whatsnew/3.6.rst:600
 msgid ""
@@ -802,10 +1107,13 @@ msgid ""
 "Raymond Hettinger <https://mail.python.org/pipermail/python-dev/2012-"
 "December/123028.html>`_.)"
 msgstr ""
+"(Beigetragen von INADA Naoki in :issue:`27350`. Idee `ursprünglich von "
+"Raymond Hettinger vorgeschlagen <https://mail.python.org/pipermail/python-"
+"dev/2012-December/123028.html>`_.)"
 
 #: ../../whatsnew/3.6.rst:608
 msgid "PEP 523: Adding a frame evaluation API to CPython"
-msgstr ""
+msgstr "PEP 523: Eine API zur Frame-Auswertung für CPython"
 
 #: ../../whatsnew/3.6.rst:610
 msgid ""
@@ -815,6 +1123,10 @@ msgid ""
 "any way without directly manipulating function pointers for defined "
 "functions."
 msgstr ""
+"Python bietet zwar umfangreiche Möglichkeiten, die Ausführung von Code "
+"anzupassen, nicht aber bei der Auswertung von Frame-Objekten. Wolltest du "
+"die Frame-Auswertung in Python abfangen, ging das praktisch nur durch "
+"direkte Manipulation von Funktionszeigern für definierte Funktionen."
 
 #: ../../whatsnew/3.6.rst:616
 msgid ""
@@ -824,6 +1136,11 @@ msgid ""
 "begins. This enables the use of alternative evaluation implementations for "
 "Python code, tracking frame evaluation, etc."
 msgstr ""
+":pep:`523` ändert das, indem es eine API bereitstellt, mit der sich die "
+"Frame-Auswertung auf C-Ebene austauschen lässt. So können Werkzeuge wie "
+"Debugger und JITs die Frame-Auswertung abfangen, bevor die Ausführung von "
+"Python-Code beginnt. Das ermöglicht alternative Auswertungsimplementierungen "
+"für Python-Code, das Verfolgen der Frame-Auswertung usw."
 
 #: ../../whatsnew/3.6.rst:623
 msgid ""
@@ -832,24 +1149,30 @@ msgid ""
 "select, low-level use-cases. Semantics of the API will change with Python as "
 "necessary."
 msgstr ""
+"Diese API ist nicht Teil der eingeschränkten C-API und als privat markiert, "
+"um zu signalisieren, dass ihre Verwendung begrenzt sein und nur für sehr "
+"ausgewählte Anwendungsfälle auf niedriger Ebene gelten soll. Die Semantik "
+"der API wird sich mit Python bei Bedarf ändern."
 
 #: ../../whatsnew/3.6.rst:630
 msgid ":pep:`523` -- Adding a frame evaluation API to CPython"
-msgstr ""
+msgstr ":pep:`523` -- Adding a frame evaluation API to CPython"
 
 #: ../../whatsnew/3.6.rst:631
 msgid "PEP written by Brett Cannon and Dino Viehland."
-msgstr ""
+msgstr "PEP geschrieben von Brett Cannon und Dino Viehland."
 
 #: ../../whatsnew/3.6.rst:637
 msgid "PYTHONMALLOC environment variable"
-msgstr ""
+msgstr "Umgebungsvariable PYTHONMALLOC"
 
 #: ../../whatsnew/3.6.rst:639
 msgid ""
 "The new :envvar:`PYTHONMALLOC` environment variable allows setting the "
 "Python memory allocators and installing debug hooks."
 msgstr ""
+"Mit der neuen Umgebungsvariable :envvar:`PYTHONMALLOC` lassen sich die "
+"Speicherallokatoren von Python festlegen und Debug-Hooks installieren."
 
 #: ../../whatsnew/3.6.rst:642
 msgid ""
@@ -857,14 +1180,17 @@ msgid ""
 "Python compiled in release mode using ``PYTHONMALLOC=debug``. Effects of "
 "debug hooks:"
 msgstr ""
+"Mit ``PYTHONMALLOC=debug`` lassen sich nun auch bei einem im Release-Modus "
+"kompilierten Python Debug-Hooks für die Speicherallokatoren von Python "
+"installieren. Wirkungen der Debug-Hooks:"
 
 #: ../../whatsnew/3.6.rst:645
 msgid "Newly allocated memory is filled with the byte ``0xCB``"
-msgstr ""
+msgstr "Neu angelegter Speicher wird mit dem Byte ``0xCB`` gefüllt"
 
 #: ../../whatsnew/3.6.rst:646
 msgid "Freed memory is filled with the byte ``0xDB``"
-msgstr ""
+msgstr "Freigegebener Speicher wird mit dem Byte ``0xDB`` gefüllt"
 
 #: ../../whatsnew/3.6.rst:647
 msgid ""
@@ -872,14 +1198,18 @@ msgid ""
 "example, :c:func:`PyObject_Free` called on a memory block allocated "
 "by :c:func:`PyMem_Malloc`."
 msgstr ""
+"Verstöße gegen die API der Python-Speicherallokatoren erkennen, zum "
+"Beispiel :c:func:`PyObject_Free` auf einem mit :c:func:`PyMem_Malloc` "
+"angelegten Speicherblock."
 
 #: ../../whatsnew/3.6.rst:650
 msgid "Detect writes before the start of a buffer (buffer underflows)"
 msgstr ""
+"Schreibzugriffe vor dem Anfang eines Puffers erkennen (Pufferunterläufe)"
 
 #: ../../whatsnew/3.6.rst:651
 msgid "Detect writes after the end of a buffer (buffer overflows)"
-msgstr ""
+msgstr "Schreibzugriffe nach dem Ende eines Puffers erkennen (Pufferüberläufe)"
 
 #: ../../whatsnew/3.6.rst:652
 msgid ""
@@ -888,16 +1218,23 @@ msgid ""
 "and :c:macro:`PYMEM_DOMAIN_MEM` (ex: :c:func:`PyMem_Malloc`) domains are "
 "called."
 msgstr ""
+"Prüfen, dass der :term:`GIL <global interpreter lock>` gehalten wird, wenn "
+"Allokatorfunktionen der Domänen :c:macro:`PYMEM_DOMAIN_OBJ` (z. "
+"B. :c:func:`PyObject_Malloc`) und :c:macro:`PYMEM_DOMAIN_MEM` (z. "
+"B. :c:func:`PyMem_Malloc`) aufgerufen werden."
 
 #: ../../whatsnew/3.6.rst:656
 msgid "Checking if the GIL is held is also a new feature of Python 3.6."
 msgstr ""
+"Die Prüfung, ob der GIL gehalten wird, ist ebenfalls neu in Python 3.6."
 
 #: ../../whatsnew/3.6.rst:658
 msgid ""
 "See the :c:func:`PyMem_SetupDebugHooks` function for debug hooks on Python "
 "memory allocators."
 msgstr ""
+"Zu Debug-Hooks für die Speicherallokatoren von Python siehe die "
+"Funktion :c:func:`PyMem_SetupDebugHooks`."
 
 #: ../../whatsnew/3.6.rst:661
 msgid ""
@@ -906,6 +1243,10 @@ msgid ""
 "``PYTHONMALLOC=malloc``. This is helpful when using external memory "
 "debuggers like Valgrind on a Python compiled in release mode."
 msgstr ""
+"Mit ``PYTHONMALLOC=malloc`` lässt sich nun auch erzwingen, dass für alle "
+"Speicherzuweisungen von Python der Allokator :c:func:`malloc` der C-"
+"Bibliothek verwendet wird. Das ist hilfreich, wenn externe Speicher-Debugger "
+"wie Valgrind mit einem im Release-Modus kompilierten Python verwendet werden."
 
 #: ../../whatsnew/3.6.rst:666
 msgid ""
@@ -913,12 +1254,17 @@ msgid ""
 "the :mod:`tracemalloc` module to get the traceback where a memory block was "
 "allocated."
 msgstr ""
+"Bei einem Fehler verwenden die Debug-Hooks für die Speicherallokatoren von "
+"Python nun das Modul :mod:`tracemalloc`, um den Traceback zu ermitteln, an "
+"dem ein Speicherblock angelegt wurde."
 
 #: ../../whatsnew/3.6.rst:670
 msgid ""
 "Example of fatal error on buffer overflow using ``python3.6 -X "
 "tracemalloc=5`` (store 5 frames in traces)::"
 msgstr ""
+"Beispiel für einen fatalen Fehler bei einem Pufferüberlauf mit ``python3.6 "
+"-X tracemalloc=5`` (5 Frames in Traces speichern)::"
 
 #: ../../whatsnew/3.6.rst:673
 msgid ""
@@ -957,32 +1303,68 @@ msgid ""
 "  File \"unittest/suite.py\", line 84 in __call__\n"
 "  ..."
 msgstr ""
+"Debug memory block at address p=0x7fbcd41666f8: API 'o'\n"
+"    4 bytes originally requested\n"
+"    The 7 pad bytes at p-7 are FORBIDDENBYTE, as expected.\n"
+"    The 8 pad bytes at tail=0x7fbcd41666fc are not all FORBIDDENBYTE "
+"(0xfb):\n"
+"        at tail+0: 0x02 *** OUCH\n"
+"        at tail+1: 0xfb\n"
+"        at tail+2: 0xfb\n"
+"        at tail+3: 0xfb\n"
+"        at tail+4: 0xfb\n"
+"        at tail+5: 0xfb\n"
+"        at tail+6: 0xfb\n"
+"        at tail+7: 0xfb\n"
+"    The block was made by call #1233329 to debug malloc/realloc.\n"
+"    Data at p: 1a 2b 30 00\n"
+"\n"
+"Memory block allocated at (most recent call first):\n"
+"  File \"test/test_bytes.py\", line 323\n"
+"  File \"unittest/case.py\", line 600\n"
+"  File \"unittest/case.py\", line 648\n"
+"  File \"unittest/suite.py\", line 122\n"
+"  File \"unittest/suite.py\", line 84\n"
+"\n"
+"Fatal Python error: bad trailing pad byte\n"
+"\n"
+"Current thread 0x00007fbcdbd32700 (most recent call first):\n"
+"  File \"test/test_bytes.py\", line 323 in test_hex\n"
+"  File \"unittest/case.py\", line 600 in run\n"
+"  File \"unittest/case.py\", line 648 in __call__\n"
+"  File \"unittest/suite.py\", line 122 in run\n"
+"  File \"unittest/suite.py\", line 84 in __call__\n"
+"  File \"unittest/suite.py\", line 122 in run\n"
+"  File \"unittest/suite.py\", line 84 in __call__\n"
+"  ..."
 
 #: ../../whatsnew/3.6.rst:707
 msgid "(Contributed by Victor Stinner in :issue:`26516` and :issue:`26564`.)"
-msgstr ""
+msgstr "(Beigetragen von Victor Stinner in :issue:`26516` und :issue:`26564`.)"
 
 #: ../../whatsnew/3.6.rst:713
 msgid "DTrace and SystemTap probing support"
-msgstr ""
+msgstr "Unterstützung für Probes mit DTrace und SystemTap"
 
 #: ../../whatsnew/3.6.rst:715
 msgid ""
 "Python can now be built ``--with-dtrace`` which enables static markers for "
 "the following events in the interpreter:"
 msgstr ""
+"Python lässt sich nun mit ``--with-dtrace`` bauen, was statische Marker für "
+"folgende Ereignisse im Interpreter aktiviert:"
 
 #: ../../whatsnew/3.6.rst:718
 msgid "function call/return"
-msgstr ""
+msgstr "Funktionsaufruf/-rückkehr"
 
 #: ../../whatsnew/3.6.rst:720
 msgid "garbage collection started/finished"
-msgstr ""
+msgstr "Garbage Collection gestartet/beendet"
 
 #: ../../whatsnew/3.6.rst:722
 msgid "line of code executed."
-msgstr ""
+msgstr "Codezeile ausgeführt."
 
 #: ../../whatsnew/3.6.rst:724
 msgid ""
@@ -990,22 +1372,30 @@ msgid ""
 "the need to recompile specific :ref:`debug builds <debug-build>` or "
 "providing application-specific profiling/debugging code."
 msgstr ""
+"Damit lassen sich laufende Interpreter in der Produktion instrumentieren, "
+"ohne eigene :ref:`Debug-Builds <debug-build>` neu kompilieren oder "
+"anwendungsspezifischen Profiling- oder Debugging-Code bereitstellen zu "
+"müssen."
 
 #: ../../whatsnew/3.6.rst:728
 msgid "More details in :ref:`instrumentation`."
-msgstr ""
+msgstr "Weitere Details unter :ref:`instrumentation`."
 
 #: ../../whatsnew/3.6.rst:730
 msgid ""
 "The current implementation is tested on Linux and macOS.  Additional markers "
 "may be added in the future."
 msgstr ""
+"Die aktuelle Implementierung ist unter Linux und macOS getestet. Künftig "
+"können weitere Marker hinzukommen."
 
 #: ../../whatsnew/3.6.rst:733
 msgid ""
 "(Contributed by Łukasz Langa in :issue:`21590`, based on patches by Jesús "
 "Cea Avión, David Malcolm, and Nikhil Benesch.)"
 msgstr ""
+"(Beigetragen von Łukasz Langa in :issue:`21590`, basierend auf Patches von "
+"Jesús Cea Avión, David Malcolm und Nikhil Benesch.)"
 
 #: ../../whatsnew/3.6.rst:738
 msgid "Other Language Changes"
@@ -1013,7 +1403,7 @@ msgstr "Andere sprachliche Änderungen"
 
 #: ../../whatsnew/3.6.rst:740
 msgid "Some smaller changes made to the core Python language are:"
-msgstr ""
+msgstr "Einige kleinere Änderungen am Kern der Sprache Python:"
 
 #: ../../whatsnew/3.6.rst:742
 msgid ""
@@ -1021,6 +1411,9 @@ msgid ""
 "first use of the affected name in the same scope. Previously this was "
 "a :exc:`SyntaxWarning`."
 msgstr ""
+"Eine ``global``- oder ``nonlocal``-Anweisung muss nun im Quelltext vor der "
+"ersten Verwendung des betroffenen Namens im selben Gültigkeitsbereich "
+"stehen. Bisher war das eine :exc:`SyntaxWarning`."
 
 #: ../../whatsnew/3.6.rst:746
 msgid ""
@@ -1030,6 +1423,11 @@ msgid ""
 "iterable. (Contributed by Andrew Barnert and Ivan Levkivskyi "
 "in :issue:`25958`.)"
 msgstr ""
+"Eine :ref:`spezielle Methode <specialnames>` lässt sich nun auf ``None`` "
+"setzen, um anzuzeigen, dass die entsprechende Operation nicht verfügbar ist. "
+"Setzt eine Klasse zum Beispiel :meth:`~object.__iter__` auf ``None``, ist "
+"die Klasse nicht iterierbar. (Beigetragen von Andrew Barnert und Ivan "
+"Levkivskyi in :issue:`25958`.)"
 
 #: ../../whatsnew/3.6.rst:752
 msgid ""
@@ -1037,6 +1435,10 @@ msgid ""
 "``\"[Previous line repeated {count} more times]\"`` (see :ref:`whatsnew36-"
 "traceback` for an example). (Contributed by Emanuel Barry in :issue:`26823`.)"
 msgstr ""
+"Lange Folgen wiederholter Traceback-Zeilen werden nun als ``\"[Previous line "
+"repeated {count} more times]\"`` abgekürzt (ein Beispiel "
+"siehe :ref:`whatsnew36-traceback`). (Beigetragen von Emanuel Barry "
+"in :issue:`26823`.)"
 
 #: ../../whatsnew/3.6.rst:757
 msgid ""
@@ -1045,6 +1447,10 @@ msgid ""
 "checks for ImportError (in try-except) will still work. (Contributed by Eric "
 "Snow in :issue:`15767`.)"
 msgstr ""
+"Der Import löst nun die neue Ausnahme :exc:`ModuleNotFoundError` "
+"(Unterklasse von :exc:`ImportError`) aus, wenn er ein Modul nicht finden "
+"kann. Code, der derzeit auf ImportError prüft (in try-except), funktioniert "
+"weiterhin. (Beigetragen von Eric Snow in :issue:`15767`.)"
 
 #: ../../whatsnew/3.6.rst:762
 msgid ""
@@ -1052,6 +1458,10 @@ msgid ""
 "when called from metaclass methods during class creation. (Contributed by "
 "Martin Teichmann in :issue:`23722`.)"
 msgstr ""
+"Klassenmethoden, die sich auf ``super()`` ohne Argumente verlassen, "
+"funktionieren nun korrekt, wenn sie während der Klassenerzeugung aus "
+"Metaklassenmethoden aufgerufen werden. (Beigetragen von Martin Teichmann "
+"in :issue:`23722`.)"
 
 #: ../../whatsnew/3.6.rst:768
 msgid "New Modules"
@@ -1059,7 +1469,7 @@ msgstr "Neue Module"
 
 #: ../../whatsnew/3.6.rst:773
 msgid "secrets"
-msgstr ""
+msgstr "secrets"
 
 #: ../../whatsnew/3.6.rst:775
 msgid ""
@@ -1068,6 +1478,10 @@ msgid ""
 "suitable for managing secrets, such as account authentication, tokens, and "
 "similar."
 msgstr ""
+"Hauptzweck des neuen Moduls :mod:`secrets` ist es, einen naheliegenden Weg "
+"zu bieten, zuverlässig kryptografisch starke Pseudozufallswerte zu erzeugen, "
+"die sich zur Verwaltung von Geheimnissen wie Kontoauthentifizierung, Tokens "
+"und Ähnlichem eignen."
 
 #: ../../whatsnew/3.6.rst:781
 msgid ""
@@ -1075,14 +1489,17 @@ msgid ""
 "*NOT* be used for security purposes.  Use :mod:`secrets` on Python 3.6+ "
 "and :func:`os.urandom` on Python 3.5 and earlier."
 msgstr ""
+"Beachte, dass die Pseudozufallsgeneratoren im Modul :mod:`random` *NICHT* "
+"für Sicherheitszwecke verwendet werden sollten. Verwende :mod:`secrets` ab "
+"Python 3.6 und :func:`os.urandom` in Python 3.5 und früher."
 
 #: ../../whatsnew/3.6.rst:787
 msgid ":pep:`506` -- Adding A Secrets Module To The Standard Library"
-msgstr ""
+msgstr ":pep:`506` -- Adding A Secrets Module To The Standard Library"
 
 #: ../../whatsnew/3.6.rst:788
 msgid "PEP written and implemented by Steven D'Aprano."
-msgstr ""
+msgstr "PEP geschrieben und implementiert von Steven D'Aprano."
 
 #: ../../whatsnew/3.6.rst:792
 msgid "Improved Modules"
@@ -1098,24 +1515,29 @@ msgid ""
 "the iterated array is extended.  This is consistent with the behavior of "
 "other mutable sequences."
 msgstr ""
+"Erschöpfte Iteratoren von :class:`array.array` bleiben nun erschöpft, auch "
+"wenn das durchlaufene Array erweitert wird. Das ist konsistent mit dem "
+"Verhalten anderer veränderbarer Sequenzen."
 
 #: ../../whatsnew/3.6.rst:801
 msgid "Contributed by Serhiy Storchaka in :issue:`26492`."
-msgstr ""
+msgstr "Beigetragen von Serhiy Storchaka in :issue:`26492`."
 
 #: ../../whatsnew/3.6.rst:804
 msgid "ast"
-msgstr ""
+msgstr "ast"
 
 #: ../../whatsnew/3.6.rst:806
 msgid ""
 "The new :class:`ast.Constant` AST node has been added.  It can be used by "
 "external AST optimizers for the purposes of constant folding."
 msgstr ""
+"Der neue AST-Knoten :class:`ast.Constant` wurde hinzugefügt. Er kann von "
+"externen AST-Optimierern zur Konstantenfaltung verwendet werden."
 
 #: ../../whatsnew/3.6.rst:809
 msgid "Contributed by Victor Stinner in :issue:`26146`."
-msgstr ""
+msgstr "Beigetragen von Victor Stinner in :issue:`26146`."
 
 #: ../../whatsnew/3.6.rst:813
 msgid "asyncio"
@@ -1126,12 +1548,16 @@ msgid ""
 "Starting with Python 3.6 the ``asyncio`` module is no longer provisional and "
 "its API is considered stable."
 msgstr ""
+"Ab Python 3.6 ist das Modul ``asyncio`` nicht mehr vorläufig, und seine API "
+"gilt als stabil."
 
 #: ../../whatsnew/3.6.rst:818
 msgid ""
 "Notable changes in the :mod:`asyncio` module since Python 3.5.0 (all "
 "backported to 3.5.x due to the provisional status):"
 msgstr ""
+"Bemerkenswerte Änderungen im Modul :mod:`asyncio` seit Python 3.5.0 (wegen "
+"des vorläufigen Status alle nach 3.5.x zurückportiert):"
 
 #: ../../whatsnew/3.6.rst:821
 msgid ""
@@ -1139,6 +1565,9 @@ msgid ""
 "return the currently running loop when called from coroutines and callbacks. "
 "(Contributed by Yury Selivanov in :issue:`28613`.)"
 msgstr ""
+"Die Funktion :func:`~asyncio.get_event_loop` wurde so geändert, dass sie "
+"beim Aufruf aus Koroutinen und Callbacks immer die aktuell laufende Schleife "
+"zurückgibt. (Beigetragen von Yury Selivanov in :issue:`28613`.)"
 
 #: ../../whatsnew/3.6.rst:826
 msgid ""
@@ -1147,12 +1576,19 @@ msgid ""
 "now accept all kinds of :term:`awaitable objects <awaitable>`. (Contributed "
 "by Yury Selivanov.)"
 msgstr ""
+"Die Funktion :func:`~asyncio.ensure_future` und alle Funktionen, die sie "
+"verwenden, etwa :meth:`loop.run_until_complete() "
+"<asyncio.loop.run_until_complete>`, akzeptieren nun alle Arten "
+"von :term:`awaitable-Objekten <awaitable>`. (Beigetragen von Yury Selivanov.)"
 
 #: ../../whatsnew/3.6.rst:831
 msgid ""
 "New :func:`~asyncio.run_coroutine_threadsafe` function to submit coroutines "
 "to event loops from other threads. (Contributed by Vincent Michel.)"
 msgstr ""
+"Neue Funktion :func:`~asyncio.run_coroutine_threadsafe`, um Koroutinen aus "
+"anderen Threads an Ereignisschleifen zu übergeben. (Beigetragen von Vincent "
+"Michel.)"
 
 #: ../../whatsnew/3.6.rst:835
 msgid ""
@@ -1160,12 +1596,17 @@ msgid ""
 "to check if the transport is closing or closed. (Contributed by Yury "
 "Selivanov.)"
 msgstr ""
+"Neue Methode :meth:`Transport.is_closing() "
+"<asyncio.BaseTransport.is_closing>`, um zu prüfen, ob der Transport gerade "
+"geschlossen wird oder geschlossen ist. (Beigetragen von Yury Selivanov.)"
 
 #: ../../whatsnew/3.6.rst:839
 msgid ""
 "The :meth:`loop.create_server() <asyncio.loop.create_server>` method can now "
 "accept a list of hosts. (Contributed by Yann Sionneau.)"
 msgstr ""
+"Die Methode :meth:`loop.create_server() <asyncio.loop.create_server>` "
+"akzeptiert nun eine Liste von Hosts. (Beigetragen von Yann Sionneau.)"
 
 #: ../../whatsnew/3.6.rst:843
 msgid ""
@@ -1175,6 +1616,11 @@ msgid ""
 "faster :class:`asyncio.Future` implementation. (Contributed by Yury "
 "Selivanov in :issue:`27041`.)"
 msgstr ""
+"Neue Methode :meth:`loop.create_future() <asyncio.loop.create_future>` zum "
+"Erzeugen von Future-Objekten. Damit können alternative Implementierungen der "
+"Ereignisschleife, etwa `uvloop <https://github.com/MagicStack/uvloop>`_, "
+"eine schnellere Implementierung von :class:`asyncio.Future` bereitstellen. "
+"(Beigetragen von Yury Selivanov in :issue:`27041`.)"
 
 #: ../../whatsnew/3.6.rst:850
 msgid ""
@@ -1182,6 +1628,9 @@ msgid ""
 "<asyncio.loop.get_exception_handler>` method to get the current exception "
 "handler. (Contributed by Yury Selivanov in :issue:`27040`.)"
 msgstr ""
+"Neue Methode :meth:`loop.get_exception_handler() "
+"<asyncio.loop.get_exception_handler>`, um den aktuellen Ausnahmebehandler zu "
+"erhalten. (Beigetragen von Yury Selivanov in :issue:`27040`.)"
 
 #: ../../whatsnew/3.6.rst:854
 msgid ""
@@ -1189,6 +1638,9 @@ msgid ""
 "to read data from the stream until a separator bytes sequence appears. "
 "(Contributed by Mark Korenberg.)"
 msgstr ""
+"Neue Methode :meth:`StreamReader.readuntil() "
+"<asyncio.StreamReader.readuntil>`, um Daten aus dem Datenstrom zu lesen, bis "
+"eine Trenn-Bytefolge erscheint. (Beigetragen von Mark Korenberg.)"
 
 #: ../../whatsnew/3.6.rst:859
 msgid ""
@@ -1196,6 +1648,9 @@ msgid ""
 "<asyncio.StreamReader.readexactly>` has been improved. (Contributed by Mark "
 "Korenberg in :issue:`28370`.)"
 msgstr ""
+"Die Performance von :meth:`StreamReader.readexactly() "
+"<asyncio.StreamReader.readexactly>` wurde verbessert. (Beigetragen von Mark "
+"Korenberg in :issue:`28370`.)"
 
 #: ../../whatsnew/3.6.rst:863
 msgid ""
@@ -1203,6 +1658,9 @@ msgid ""
 "optimized to avoid calling the system ``getaddrinfo`` function if the "
 "address is already resolved. (Contributed by A. Jesse Jiryu Davis.)"
 msgstr ""
+"Die Methode :meth:`loop.getaddrinfo() <asyncio.loop.getaddrinfo>` wurde so "
+"optimiert, dass sie die Systemfunktion ``getaddrinfo`` nicht aufruft, wenn "
+"die Adresse bereits aufgelöst ist. (Beigetragen von A. Jesse Jiryu Davis.)"
 
 #: ../../whatsnew/3.6.rst:868
 msgid ""
@@ -1211,6 +1669,10 @@ msgid ""
 "scheduled as a result of the last iteration will be discarded. (Contributed "
 "by Guido van Rossum in :issue:`25593`.)"
 msgstr ""
+"Die Methode :meth:`loop.stop() <asyncio.loop.stop>` wurde so geändert, dass "
+"sie die Schleife direkt nach der aktuellen Iteration anhält. Alle neuen "
+"Callbacks, die infolge der letzten Iteration eingeplant wurden, werden "
+"verworfen. (Beigetragen von Guido van Rossum in :issue:`25593`.)"
 
 #: ../../whatsnew/3.6.rst:874
 msgid ""
@@ -1218,6 +1680,10 @@ msgid ""
 "raise :exc:`TypeError` when passed an instance of the :exc:`StopIteration` "
 "exception. (Contributed by Chris Angelico in :issue:`26221`.)"
 msgstr ""
+":meth:`Future.set_exception <asyncio.Future.set_exception>` löst "
+"nun :exc:`TypeError` aus, wenn eine Instanz der "
+"Ausnahme :exc:`StopIteration` übergeben wird. (Beigetragen von Chris "
+"Angelico in :issue:`26221`.)"
 
 #: ../../whatsnew/3.6.rst:879
 msgid ""
@@ -1226,12 +1692,18 @@ msgid ""
 "accept connections outside of asyncio, but that use asyncio to handle them. "
 "(Contributed by Jim Fulton in :issue:`27392`.)"
 msgstr ""
+"Neue Methode :meth:`loop.connect_accepted_socket() "
+"<asyncio.loop.connect_accepted_socket>` für Server, die Verbindungen "
+"außerhalb von asyncio annehmen, sie aber mit asyncio behandeln. (Beigetragen "
+"von Jim Fulton in :issue:`27392`.)"
 
 #: ../../whatsnew/3.6.rst:884
 msgid ""
 "``TCP_NODELAY`` flag is now set for all TCP transports by default. "
 "(Contributed by Yury Selivanov in :issue:`27456`.)"
 msgstr ""
+"Das Flag ``TCP_NODELAY`` ist nun standardmäßig für alle TCP-Transporte "
+"gesetzt. (Beigetragen von Yury Selivanov in :issue:`27456`.)"
 
 #: ../../whatsnew/3.6.rst:887
 msgid ""
@@ -1239,6 +1711,10 @@ msgid ""
 "properly close pending asynchronous generators before closing the loop. "
 "(Contributed by Yury Selivanov in :issue:`28003`.)"
 msgstr ""
+"Neue Methode :meth:`loop.shutdown_asyncgens() "
+"<asyncio.loop.shutdown_asyncgens>`, um ausstehende asynchrone Generatoren "
+"vor dem Schließen der Schleife ordnungsgemäß zu schließen. (Beigetragen von "
+"Yury Selivanov in :issue:`28003`.)"
 
 #: ../../whatsnew/3.6.rst:892
 msgid ""
@@ -1247,10 +1723,14 @@ msgid ""
 "faster. (Contributed by Yury Selivanov and INADA Naoki in :issue:`26081` "
 "and :issue:`28544`.)"
 msgstr ""
+"Die Klassen :class:`Future <asyncio.Future>` und :class:`Task "
+"<asyncio.Task>` haben nun eine optimierte C-Implementierung, die asyncio-"
+"Code bis zu 30 % schneller macht. (Beigetragen von Yury Selivanov und INADA "
+"Naoki in :issue:`26081` und :issue:`28544`.)"
 
 #: ../../whatsnew/3.6.rst:900
 msgid "binascii"
-msgstr ""
+msgstr "binascii"
 
 #: ../../whatsnew/3.6.rst:902
 msgid ""
@@ -1258,16 +1738,22 @@ msgid ""
 "keyword argument to control whether the newline character is appended to the "
 "return value. (Contributed by Victor Stinner in :issue:`25357`.)"
 msgstr ""
+"Die Funktion :func:`~binascii.b2a_base64` akzeptiert nun ein optionales "
+"Schlüsselwortargument *newline*, das steuert, ob das Zeilenumbruchzeichen an "
+"den Rückgabewert angehängt wird. (Beigetragen von Victor Stinner "
+"in :issue:`25357`.)"
 
 #: ../../whatsnew/3.6.rst:909
 msgid "cmath"
-msgstr ""
+msgstr "cmath"
 
 #: ../../whatsnew/3.6.rst:911
 msgid ""
 "The new :const:`cmath.tau` (*τ*) constant has been added. (Contributed by "
 "Lisa Roach in :issue:`12345`, see :pep:`628` for details.)"
 msgstr ""
+"Die neue Konstante :const:`cmath.tau` (*τ*) wurde hinzugefügt. (Beigetragen "
+"von Lisa Roach in :issue:`12345`, Details siehe :pep:`628`.)"
 
 #: ../../whatsnew/3.6.rst:914
 msgid ""
@@ -1276,10 +1762,14 @@ msgid ""
 "and :const:`cmath.nanj` to match the format used by complex repr. "
 "(Contributed by Mark Dickinson in :issue:`23229`.)"
 msgstr ""
+"Neue Konstanten: :const:`cmath.inf` und :const:`cmath.nan` passend "
+"zu :const:`math.inf` und :const:`math.nan` sowie :const:`cmath.infj` "
+"und :const:`cmath.nanj` passend zum Format der repr komplexer Zahlen. "
+"(Beigetragen von Mark Dickinson in :issue:`23229`.)"
 
 #: ../../whatsnew/3.6.rst:921
 msgid "collections"
-msgstr ""
+msgstr "Sammlungen"
 
 #: ../../whatsnew/3.6.rst:923
 msgid ""
@@ -1287,6 +1777,10 @@ msgid ""
 "added to represent sized iterable container classes. (Contributed by Ivan "
 "Levkivskyi, docs by Neil Girdhar in :issue:`27598`.)"
 msgstr ""
+"Die neue abstrakte Basisklasse :class:`~collections.abc.Collection` wurde "
+"hinzugefügt, um iterierbare Containerklassen mit Größe darzustellen. "
+"(Beigetragen von Ivan Levkivskyi, Dokumentation von Neil Girdhar "
+"in :issue:`27598`.)"
 
 #: ../../whatsnew/3.6.rst:927
 msgid ""
@@ -1294,6 +1788,9 @@ msgid ""
 "iterable classes that also provide the :meth:`~object.__reversed__` method. "
 "(Contributed by Ivan Levkivskyi in :issue:`25987`.)"
 msgstr ""
+"Die neue abstrakte Basisklasse :class:`~collections.abc.Reversible` stellt "
+"iterierbare Klassen dar, die auch die Methode :meth:`~object.__reversed__` "
+"bereitstellen. (Beigetragen von Ivan Levkivskyi in :issue:`25987`.)"
 
 #: ../../whatsnew/3.6.rst:931
 msgid ""
@@ -1301,6 +1798,9 @@ msgid ""
 "represents asynchronous generators. (Contributed by Yury Selivanov "
 "in :issue:`28720`.)"
 msgstr ""
+"Die neue abstrakte Basisklasse :class:`~collections.abc.AsyncGenerator` "
+"stellt asynchrone Generatoren dar. (Beigetragen von Yury Selivanov "
+"in :issue:`28720`.)"
 
 #: ../../whatsnew/3.6.rst:935
 msgid ""
@@ -1309,22 +1809,31 @@ msgid ""
 "the :attr:`~type.__module__` attribute of the returned named tuple class. "
 "(Contributed by Raymond Hettinger in :issue:`17941`.)"
 msgstr ""
+"Die Funktion :func:`~collections.namedtuple` akzeptiert nun ein optionales "
+"Schlüsselwortargument *module*, das, wenn angegeben, für das "
+"Attribut :attr:`~type.__module__` der zurückgegebenen benannten Tupelklasse "
+"verwendet wird. (Beigetragen von Raymond Hettinger in :issue:`17941`.)"
 
 #: ../../whatsnew/3.6.rst:940 ../../whatsnew/3.6.rst:2297
 msgid ""
 "The *verbose* and *rename* arguments for :func:`~collections.namedtuple` are "
 "now keyword-only. (Contributed by Raymond Hettinger in :issue:`25628`.)"
 msgstr ""
+"Die Argumente *verbose* und *rename* von :func:`~collections.namedtuple` "
+"sind nun reine Schlüsselwortargumente. (Beigetragen von Raymond Hettinger "
+"in :issue:`25628`.)"
 
 #: ../../whatsnew/3.6.rst:944
 msgid ""
 "Recursive :class:`collections.deque` instances can now be pickled. "
 "(Contributed by Serhiy Storchaka in :issue:`26482`.)"
 msgstr ""
+"Rekursive :class:`collections.deque`-Instanzen lassen sich nun mit Pickle "
+"serialisieren. (Beigetragen von Serhiy Storchaka in :issue:`26482`.)"
 
 #: ../../whatsnew/3.6.rst:949
 msgid "concurrent.futures"
-msgstr ""
+msgstr "concurrent.futures"
 
 #: ../../whatsnew/3.6.rst:951
 msgid ""
@@ -1333,10 +1842,15 @@ msgid ""
 "make it possible to customize the names of the threads created by the pool. "
 "(Contributed by Gregory P. Smith in :issue:`27664`.)"
 msgstr ""
+"Der Konstruktor der Klasse :class:`ThreadPoolExecutor "
+"<concurrent.futures.ThreadPoolExecutor>` akzeptiert nun ein optionales "
+"Argument *thread_name_prefix*, mit dem sich die Namen der vom Pool erzeugten "
+"Threads anpassen lassen. (Beigetragen von Gregory P. Smith "
+"in :issue:`27664`.)"
 
 #: ../../whatsnew/3.6.rst:959
 msgid "contextlib"
-msgstr ""
+msgstr "contextlib"
 
 #: ../../whatsnew/3.6.rst:961
 msgid ""
@@ -1347,10 +1861,16 @@ msgid ""
 "the :mod:`typing` module as :class:`typing.ContextManager`. (Contributed by "
 "Brett Cannon in :issue:`25609`.)"
 msgstr ""
+"Die Klasse :class:`contextlib.AbstractContextManager` wurde hinzugefügt, um "
+"eine abstrakte Basisklasse für Kontextmanager bereitzustellen. Sie bietet "
+"eine sinnvolle Standardimplementierung für ``__enter__()``, die ``self`` "
+"zurückgibt, und lässt ``__exit__()`` als abstrakte Methode. Eine passende "
+"Klasse wurde dem Modul :mod:`typing` als :class:`typing.ContextManager` "
+"hinzugefügt. (Beigetragen von Brett Cannon in :issue:`25609`.)"
 
 #: ../../whatsnew/3.6.rst:971
 msgid "datetime"
-msgstr ""
+msgstr "datetime"
 
 #: ../../whatsnew/3.6.rst:973
 msgid ""
@@ -1361,6 +1881,13 @@ msgid ""
 "<whatsnew36-pep495>` section for more information. (Contributed by Alexander "
 "Belopolsky in :issue:`24773`.)"
 msgstr ""
+"Die Klassen :class:`~datetime.datetime` und :class:`~datetime.time` haben "
+"das neue Attribut :attr:`~datetime.time.fold`, mit dem sich die Ortszeit bei "
+"Bedarf eindeutig machen lässt. Viele Funktionen in :mod:`datetime` wurden so "
+"aktualisiert, dass sie die Eindeutigkeit der Ortszeit unterstützen. Weitere "
+"Informationen siehe den Abschnitt :ref:`Eindeutigkeit der Ortszeit "
+"<whatsnew36-pep495>`. (Beigetragen von Alexander Belopolsky "
+"in :issue:`24773`.)"
 
 #: ../../whatsnew/3.6.rst:981
 msgid ""
@@ -1369,6 +1896,10 @@ msgid ""
 "8601 date directives ``%G``, ``%u`` and ``%V``. (Contributed by Ashley "
 "Anderson in :issue:`12006`.)"
 msgstr ""
+"Die Methoden :meth:`datetime.strftime() <datetime.datetime.strftime>` "
+"und :meth:`date.strftime() <datetime.date.strftime>` unterstützen nun die "
+"ISO-8601-Datumsdirektiven ``%G``, ``%u`` und ``%V``. (Beigetragen von Ashley "
+"Anderson in :issue:`12006`.)"
 
 #: ../../whatsnew/3.6.rst:986
 msgid ""
@@ -1377,6 +1908,11 @@ msgid ""
 "additional components of the time value to include. (Contributed by "
 "Alessandro Cucci and Alexander Belopolsky in :issue:`19475`.)"
 msgstr ""
+"Die Funktion :func:`datetime.isoformat() <datetime.datetime.isoformat>` "
+"akzeptiert nun ein optionales Argument *timespec*, das die Anzahl "
+"zusätzlicher Bestandteile des Zeitwertes angibt, die aufgenommen werden. "
+"(Beigetragen von Alessandro Cucci und Alexander Belopolsky "
+"in :issue:`19475`.)"
 
 #: ../../whatsnew/3.6.rst:991
 msgid ""
@@ -1384,10 +1920,13 @@ msgid ""
 "optional *tzinfo* argument. (Contributed by Alexander Belopolsky "
 "in :issue:`27661`.)"
 msgstr ""
+":meth:`datetime.combine() <datetime.datetime.combine>` akzeptiert nun ein "
+"optionales Argument *tzinfo*. (Beigetragen von Alexander Belopolsky "
+"in :issue:`27661`.)"
 
 #: ../../whatsnew/3.6.rst:997
 msgid "decimal"
-msgstr ""
+msgstr "decimal"
 
 #: ../../whatsnew/3.6.rst:999
 msgid ""
@@ -1396,20 +1935,26 @@ msgid ""
 "given :class:`~decimal.Decimal` instance as a fraction, in lowest terms and "
 "with a positive denominator::"
 msgstr ""
+"Neue Methode :meth:`Decimal.as_integer_ratio() "
+"<decimal.Decimal.as_integer_ratio>`, die ein Paar ``(n, d)`` ganzer Zahlen "
+"zurückgibt, das die gegebene :class:`~decimal.Decimal`-Instanz als gekürzten "
+"Bruch mit positivem Nenner darstellt::"
 
 #: ../../whatsnew/3.6.rst:1004
 msgid ""
 ">>> Decimal('-3.14').as_integer_ratio()\n"
 "(-157, 50)"
 msgstr ""
+">>> Decimal('-3.14').as_integer_ratio()\n"
+"(-157, 50)"
 
 #: ../../whatsnew/3.6.rst:1007
 msgid "(Contributed by Stefan Krah amd Mark Dickinson in :issue:`25928`.)"
-msgstr ""
+msgstr "(Beigetragen von Stefan Krah und Mark Dickinson in :issue:`25928`.)"
 
 #: ../../whatsnew/3.6.rst:1012 ../../whatsnew/3.6.rst:1990
 msgid "distutils"
-msgstr ""
+msgstr "distutils"
 
 #: ../../whatsnew/3.6.rst:1014
 msgid ""
@@ -1419,10 +1964,15 @@ msgid ""
 "``default_format`` may need to be adapted. See :issue:`27819` for more "
 "details."
 msgstr ""
+"Das Attribut ``default_format`` wurde aus ``distutils.command.sdist.sdist`` "
+"entfernt, und das Attribut ``formats`` ist standardmäßig ``['gztar']``. Auch "
+"wenn es nicht erwartet wird, muss Code, der sich auf das Vorhandensein von "
+"``default_format`` verlässt, eventuell angepasst werden. Weitere Details "
+"siehe :issue:`27819`."
 
 #: ../../whatsnew/3.6.rst:1022
 msgid "email"
-msgstr ""
+msgstr "email"
 
 #: ../../whatsnew/3.6.rst:1024
 msgid ""
@@ -1432,18 +1982,27 @@ msgid ""
 "documentation for the legacy API.  (Contributed by R. David Murray "
 "in :issue:`24277`.)"
 msgstr ""
+"Die neue E-Mail-API, die über das Schlüsselwort *policy* verschiedener "
+"Konstruktoren aktiviert wird, ist nicht mehr vorläufig. Die Dokumentation "
+"von :mod:`email` wurde neu organisiert und neu geschrieben, um sich auf die "
+"neue API zu konzentrieren, wobei die alte Dokumentation für die veraltete "
+"API erhalten bleibt. (Beigetragen von R. David Murray in :issue:`24277`.)"
 
 #: ../../whatsnew/3.6.rst:1029
 msgid ""
 "The :mod:`email.mime` classes now all accept an optional *policy* keyword. "
 "(Contributed by Berker Peksag in :issue:`27331`.)"
 msgstr ""
+"Die Klassen von :mod:`email.mime` akzeptieren nun alle ein optionales "
+"Schlüsselwort *policy*. (Beigetragen von Berker Peksag in :issue:`27331`.)"
 
 #: ../../whatsnew/3.6.rst:1032
 msgid ""
 "The :class:`~email.generator.DecodedGenerator` now supports the *policy* "
 "keyword."
 msgstr ""
+":class:`~email.generator.DecodedGenerator` unterstützt nun das Schlüsselwort "
+"*policy*."
 
 #: ../../whatsnew/3.6.rst:1035
 msgid ""
@@ -1455,10 +2014,17 @@ msgid ""
 "is :class:`~email.message.EmailMessage`. (Contributed by R. David Murray "
 "in :issue:`20476`.)"
 msgstr ""
+"Es gibt ein neues Attribut "
+"von :mod:`~email.policy`, :attr:`~email.policy.Policy.message_factory`, das "
+"steuert, welche Klasse standardmäßig verwendet wird, wenn der Parser neue "
+"Nachrichtenobjekte erzeugt. Für die Richtlinie :attr:`email.policy.compat32` "
+"ist das :class:`~email.message.Message`, für die neuen "
+"Richtlinien :class:`~email.message.EmailMessage`. (Beigetragen von R. David "
+"Murray in :issue:`20476`.)"
 
 #: ../../whatsnew/3.6.rst:1044
 msgid "encodings"
-msgstr ""
+msgstr "encodings"
 
 #: ../../whatsnew/3.6.rst:1046
 msgid ""
@@ -1466,10 +2032,14 @@ msgid ""
 "``'ansi'`` alias for the existing ``'mbcs'`` encoding, which uses the "
 "``CP_ACP`` code page. (Contributed by Steve Dower in :issue:`27959`.)"
 msgstr ""
+"Unter Windows wurden die Kodierung ``'oem'``, die ``CP_OEMCP`` verwendet, "
+"und der Alias ``'ansi'`` für die bestehende Kodierung ``'mbcs'``, die die "
+"Codepage ``CP_ACP`` verwendet, hinzugefügt. (Beigetragen von Steve Dower "
+"in :issue:`27959`.)"
 
 #: ../../whatsnew/3.6.rst:1052
 msgid "enum"
-msgstr ""
+msgstr "enum"
 
 #: ../../whatsnew/3.6.rst:1054
 msgid ""
@@ -1478,18 +2048,26 @@ msgid ""
 "define constants that can be combined using the bitwise operators. "
 "(Contributed by Ethan Furman in :issue:`23591`.)"
 msgstr ""
+"Zwei neue Basisklassen für Aufzählungen wurden dem Modul :mod:`enum` "
+"hinzugefügt: :class:`~enum.Flag` und :class:`~enum.IntFlag`. Beide dienen "
+"zur Definition von Konstanten, die sich mit bitweisen Operatoren kombinieren "
+"lassen. (Beigetragen von Ethan Furman in :issue:`23591`.)"
 
 #: ../../whatsnew/3.6.rst:1059
 msgid ""
 "Many standard library modules have been updated to use "
 "the :class:`~enum.IntFlag` class for their constants."
 msgstr ""
+"Viele Module der Standardbibliothek wurden so aktualisiert, dass sie für "
+"ihre Konstanten die Klasse :class:`~enum.IntFlag` verwenden."
 
 #: ../../whatsnew/3.6.rst:1062
 msgid ""
 "The new :class:`enum.auto` value can be used to assign values to enum "
 "members automatically::"
 msgstr ""
+"Mit dem neuen Wert :class:`enum.auto` lassen sich Enum-Mitgliedern "
+"automatisch Werte zuweisen::"
 
 #: ../../whatsnew/3.6.rst:1065
 msgid ""
@@ -1502,10 +2080,18 @@ msgid ""
 ">>> list(Color)\n"
 "[<Color.red: 1>, <Color.blue: 2>, <Color.green: 3>]"
 msgstr ""
+">>> from enum import Enum, auto\n"
+">>> class Color(Enum):\n"
+"...     red = auto()\n"
+"...     blue = auto()\n"
+"...     green = auto()\n"
+"...\n"
+">>> list(Color)\n"
+"[<Color.red: 1>, <Color.blue: 2>, <Color.green: 3>]"
 
 #: ../../whatsnew/3.6.rst:1076
 msgid "faulthandler"
-msgstr ""
+msgstr "faulthandler"
 
 #: ../../whatsnew/3.6.rst:1078
 msgid ""
@@ -1513,26 +2099,33 @@ msgid ""
 "Windows exceptions: see :func:`faulthandler.enable`. (Contributed by Victor "
 "Stinner in :issue:`23848`.)"
 msgstr ""
+"Unter Windows installiert das Modul :mod:`faulthandler` nun einen Handler "
+"für Windows-Ausnahmen: siehe :func:`faulthandler.enable`. (Beigetragen von "
+"Victor Stinner in :issue:`23848`.)"
 
 #: ../../whatsnew/3.6.rst:1084
 msgid "fileinput"
-msgstr ""
+msgstr "fileinput"
 
 #: ../../whatsnew/3.6.rst:1086
 msgid ""
 ":func:`~fileinput.hook_encoded` now supports the *errors* argument. "
 "(Contributed by Joseph Hackman in :issue:`25788`.)"
 msgstr ""
+":func:`~fileinput.hook_encoded` unterstützt nun das Argument *errors*. "
+"(Beigetragen von Joseph Hackman in :issue:`25788`.)"
 
 #: ../../whatsnew/3.6.rst:1091
 msgid "hashlib"
-msgstr ""
+msgstr "hashlib"
 
 #: ../../whatsnew/3.6.rst:1093
 msgid ""
 ":mod:`hashlib` supports OpenSSL 1.1.0.  The minimum recommend version is "
 "1.0.2. (Contributed by Christian Heimes in :issue:`26470`.)"
 msgstr ""
+":mod:`hashlib` unterstützt OpenSSL 1.1.0. Die empfohlene Mindestversion ist "
+"1.0.2. (Beigetragen von Christian Heimes in :issue:`26470`.)"
 
 #: ../../whatsnew/3.6.rst:1096
 msgid ""
@@ -1542,6 +2135,12 @@ msgid ""
 "based on code by Dmitry Chestnykh and Samuel Neves. Documentation written by "
 "Dmitry Chestnykh.)"
 msgstr ""
+"Dem Modul wurden die BLAKE2-Hash-Funktionen "
+"hinzugefügt. :func:`~hashlib.blake2b` und :func:`~hashlib.blake2s` sind "
+"immer verfügbar und unterstützen den vollen Funktionsumfang von BLAKE2. "
+"(Beigetragen von Christian Heimes in :issue:`26798` auf Basis von Code von "
+"Dmitry Chestnykh und Samuel Neves. Dokumentation geschrieben von Dmitry "
+"Chestnykh.)"
 
 #: ../../whatsnew/3.6.rst:1102
 msgid ""
@@ -1552,6 +2151,12 @@ msgid ""
 "in :issue:`16113`. Keccak Code Package by Guido Bertoni, Joan Daemen, "
 "Michaël Peeters, Gilles Van Assche, and Ronny Van Keer.)"
 msgstr ""
+"Die SHA-3-Hash-"
+"Funktionen :func:`~hashlib.sha3_224`, :func:`~hashlib.sha3_256`, :func:`~hashlib.sha3_384`, :func:`~hashlib.sha3_512` "
+"und die SHAKE-Hash-Funktionen :func:`~hashlib.shake_128` "
+"und :func:`~hashlib.shake_256` wurden hinzugefügt. (Beigetragen von "
+"Christian Heimes in :issue:`16113`. Keccak Code Package von Guido Bertoni, "
+"Joan Daemen, Michaël Peeters, Gilles Van Assche und Ronny Van Keer.)"
 
 #: ../../whatsnew/3.6.rst:1109
 msgid ""
@@ -1559,10 +2164,13 @@ msgid ""
 "available with OpenSSL 1.1.0 and newer. (Contributed by Christian Heimes "
 "in :issue:`27928`.)"
 msgstr ""
+"Die passwortbasierte Schlüsselableitungsfunktion :func:`~hashlib.scrypt` ist "
+"nun mit OpenSSL 1.1.0 und neuer verfügbar. (Beigetragen von Christian Heimes "
+"in :issue:`27928`.)"
 
 #: ../../whatsnew/3.6.rst:1114
 msgid "http.client"
-msgstr ""
+msgstr "http.client"
 
 #: ../../whatsnew/3.6.rst:1116
 msgid ""
@@ -1571,10 +2179,14 @@ msgid ""
 "encoding request bodies. (Contributed by Demian Brecht and Rolf Krahl "
 "in :issue:`12319`.)"
 msgstr ""
+":meth:`HTTPConnection.request() <http.client.HTTPConnection.request>` "
+"und :meth:`~http.client.HTTPConnection.endheaders` unterstützen nun beide "
+"Anfragekörper mit Chunked-Kodierung. (Beigetragen von Demian Brecht und Rolf "
+"Krahl in :issue:`12319`.)"
 
 #: ../../whatsnew/3.6.rst:1123
 msgid "idlelib and IDLE"
-msgstr ""
+msgstr "idlelib und IDLE"
 
 #: ../../whatsnew/3.6.rst:1125
 msgid ""
@@ -1585,6 +2197,13 @@ msgid ""
 "tk 8.4.  It now requires tcl/tk 8.5 or 8.6.  We recommend running the latest "
 "release of either."
 msgstr ""
+"Das Paket idlelib wird modernisiert und umgebaut, damit IDLE besser aussieht "
+"und funktioniert und der Code leichter zu verstehen, zu testen und zu "
+"verbessern ist. Ein Teil davon, IDLE besser aussehen zu lassen, besonders "
+"unter Linux und auf dem Mac, ist die Verwendung von ttk-Widgets, vor allem "
+"in den Dialogen. Folglich läuft IDLE nicht mehr mit tcl/tk 8.4. Es erfordert "
+"nun tcl/tk 8.5 oder 8.6. Wir empfehlen, jeweils das neueste Release zu "
+"verwenden."
 
 #: ../../whatsnew/3.6.rst:1132
 msgid ""
@@ -1597,6 +2216,15 @@ msgid ""
 "Terry Reedy in :issue:`24225`.  Most idlelib patches since have been and "
 "will be part of the process.)"
 msgstr ""
+"„Modernisieren“ umfasst das Umbenennen und Zusammenführen von idlelib-"
+"Modulen. Das Umbenennen von Dateien mit teilweise großgeschriebenen Namen "
+"ähnelt etwa der Umbenennung von Tkinter und TkFont in tkinter und "
+"tkinter.font in 3.0. Folglich funktionieren Importe von idlelib-Dateien, die "
+"in 3.5 funktionierten, in 3.6 meist nicht. Zumindest eine Änderung des "
+"Modulnamens ist nötig (siehe idlelib/README.txt), manchmal mehr. "
+"(Namensänderungen beigetragen von Al Swiegart und Terry Reedy "
+"in :issue:`24225`. Die meisten idlelib-Patches seitdem waren und werden Teil "
+"dieses Prozesses sein.)"
 
 #: ../../whatsnew/3.6.rst:1141
 msgid ""
@@ -1604,20 +2232,25 @@ msgid ""
 "be easier to use, with better APIs and docstrings explaining them.  "
 "Additional useful information will be added to idlelib when available."
 msgstr ""
+"Als Ausgleich werden einige idlelib-Klassen letztlich leichter zu verwenden "
+"sein, mit besseren APIs und Docstrings, die sie erklären. Weitere nützliche "
+"Informationen werden idlelib hinzugefügt, sobald sie verfügbar sind."
 
 #: ../../whatsnew/3.6.rst:1145
 msgid "New in 3.6.2:"
-msgstr ""
+msgstr "Neu in 3.6.2:"
 
 #: ../../whatsnew/3.6.rst:1147
 msgid ""
 "Multiple fixes for autocompletion. (Contributed by Louie Lu "
 "in :issue:`15786`.)"
 msgstr ""
+"Mehrere Korrekturen der Autovervollständigung. (Beigetragen von Louie Lu "
+"in :issue:`15786`.)"
 
 #: ../../whatsnew/3.6.rst:1149
 msgid "New in 3.6.3:"
-msgstr ""
+msgstr "Neu in 3.6.3:"
 
 #: ../../whatsnew/3.6.rst:1151
 msgid ""
@@ -1626,6 +2259,10 @@ msgid ""
 "classes. (Contributed by Guilherme Polo, Cheryl Sabella, and Terry Jan Reedy "
 "in :issue:`1612262`.)"
 msgstr ""
+"Der Module Browser (im Menü File, früher Class Browser genannt) zeigt nun "
+"neben Funktionen und Klassen der obersten Ebene auch verschachtelte "
+"Funktionen und Klassen an. (Beigetragen von Guilherme Polo, Cheryl Sabella "
+"und Terry Jan Reedy in :issue:`1612262`.)"
 
 #: ../../whatsnew/3.6.rst:1157
 msgid ""
@@ -1634,6 +2271,10 @@ msgid ""
 "to other dialog tabs. (Contributed by Charles Wohlganger and Terry Jan Reedy "
 "in :issue:`27099`.)"
 msgstr ""
+"Die bisher als Erweiterungen implementierten IDLE-Funktionen wurden als "
+"normale Funktionen neu implementiert. Ihre Einstellungen wurden vom Reiter "
+"Extensions auf andere Reiter des Dialogs verschoben. (Beigetragen von "
+"Charles Wohlganger und Terry Jan Reedy in :issue:`27099`.)"
 
 #: ../../whatsnew/3.6.rst:1162
 msgid ""
@@ -1641,10 +2282,13 @@ msgid ""
 "improve both appearance and function. (Contributed by Cheryl Sabella and "
 "Terry Jan Reedy in multiple issues.)"
 msgstr ""
+"Der Einstellungsdialog (Options, Configure IDLE) wurde teilweise neu "
+"geschrieben, um Aussehen und Funktion zu verbessern. (Beigetragen von Cheryl "
+"Sabella und Terry Jan Reedy in mehreren Issues.)"
 
 #: ../../whatsnew/3.6.rst:1166
 msgid "New in 3.6.4:"
-msgstr ""
+msgstr "Neu in 3.6.4:"
 
 #: ../../whatsnew/3.6.rst:1168
 msgid ""
@@ -1653,10 +2297,15 @@ msgid ""
 "by Terry Jan Reedy in :issue:`13802`.) The sample can be edited to include "
 "other characters. (Contributed by Serhiy Storchaka in :issue:`31860`.)"
 msgstr ""
+"Die Schriftprobe enthält nun eine Auswahl nichtlateinischer Zeichen, damit "
+"Benutzer die Wirkung einer bestimmten Schriftart besser sehen können. "
+"(Beigetragen von Terry Jan Reedy in :issue:`13802`.) Die Probe lässt sich "
+"bearbeiten, um weitere Zeichen aufzunehmen. (Beigetragen von Serhiy "
+"Storchaka in :issue:`31860`.)"
 
 #: ../../whatsnew/3.6.rst:1174
 msgid "New in 3.6.6:"
-msgstr ""
+msgstr "Neu in 3.6.6:"
 
 #: ../../whatsnew/3.6.rst:1176
 msgid ""
@@ -1666,6 +2315,12 @@ msgid ""
 "dialog. (Contributed by Cheryl Sabella and Terry Jan Reedy "
 "in :issue:`33642`, :issue:`33768`, and :issue:`33679`.)"
 msgstr ""
+"Die Option für den Codekontext im Editor wurde überarbeitet. Das Feld zeigt "
+"alle Kontextzeilen bis maxlines an. Ein Klick auf eine Kontextzeile springt "
+"im Editor zu dieser Zeile. Kontextfarben für eigene Themes wurden zum Reiter "
+"Highlights des Einstellungsdialogs hinzugefügt. (Beigetragen von Cheryl "
+"Sabella und Terry Jan Reedy in :issue:`33642`, :issue:`33768` "
+"und :issue:`33679`.)"
 
 #: ../../whatsnew/3.6.rst:1182
 msgid ""
@@ -1675,10 +2330,16 @@ msgid ""
 "text and lines sharper.  It should otherwise have no effect. (Contributed by "
 "Terry Jan Reedy in :issue:`33656`.)"
 msgstr ""
+"Unter Windows teilt ein neuer API-Aufruf Windows mit, dass tk für DPI "
+"skaliert. Unter Windows 8.1+ oder 10 sollte das bei unveränderten DPI-"
+"Kompatibilitätseigenschaften der Python-Binärdatei und einer "
+"Monitorauflösung von mehr als 96 DPI Text und Linien schärfer machen. "
+"Ansonsten sollte es keine Wirkung haben. (Beigetragen von Terry Jan Reedy "
+"in :issue:`33656`.)"
 
 #: ../../whatsnew/3.6.rst:1188
 msgid "New in 3.6.7:"
-msgstr ""
+msgstr "Neu in 3.6.7:"
 
 #: ../../whatsnew/3.6.rst:1190
 msgid ""
@@ -1689,10 +2350,17 @@ msgid ""
 "button or into the clipboard or a separate window by right-clicking the "
 "button.  (Contributed by Tal Einat in :issue:`1529353`.)"
 msgstr ""
+"Ausgaben mit mehr als N Zeilen (standardmäßig 50) werden zu einer "
+"Schaltfläche zusammengefasst. N lässt sich im Abschnitt PyShell der Seite "
+"General im Einstellungsdialog ändern. Weniger, aber möglicherweise sehr "
+"lange Zeilen lassen sich per Rechtsklick auf die Ausgabe zusammenfassen. "
+"Zusammengefasste Ausgaben lassen sich per Doppelklick auf die Schaltfläche "
+"an Ort und Stelle oder per Rechtsklick in die Zwischenablage oder ein "
+"eigenes Fenster aufklappen. (Beigetragen von Tal Einat in :issue:`1529353`.)"
 
 #: ../../whatsnew/3.6.rst:1199 ../../whatsnew/3.6.rst:2007
 msgid "importlib"
-msgstr ""
+msgstr "importlib"
 
 #: ../../whatsnew/3.6.rst:1201
 msgid ""
@@ -1701,6 +2369,10 @@ msgid ""
 "checks for ``ImportError`` (in try-except) will still work. (Contributed by "
 "Eric Snow in :issue:`15767`.)"
 msgstr ""
+"Der Import löst nun die neue Ausnahme :exc:`ModuleNotFoundError` "
+"(Unterklasse von :exc:`ImportError`) aus, wenn er ein Modul nicht finden "
+"kann. Code, der derzeit auf ``ImportError`` prüft (in try-except), "
+"funktioniert weiterhin. (Beigetragen von Eric Snow in :issue:`15767`.)"
 
 #: ../../whatsnew/3.6.rst:1206
 msgid ""
@@ -1710,6 +2382,12 @@ msgid ""
 "and :class:`importlib.machinery.ExtensionFileLoader` couldn't be used "
 "with :class:`importlib.util.LazyLoader`."
 msgstr ""
+":class:`importlib.util.LazyLoader` ruft "
+"nun :meth:`~importlib.abc.Loader.create_module` auf dem gekapselten Loader "
+"auf. Damit entfällt die Einschränkung, "
+"dass :class:`importlib.machinery.BuiltinImporter` "
+"und :class:`importlib.machinery.ExtensionFileLoader` nicht "
+"mit :class:`importlib.util.LazyLoader` verwendet werden konnten."
 
 #: ../../whatsnew/3.6.rst:1212
 msgid ""
@@ -1717,10 +2395,13 @@ msgid ""
 "and :func:`importlib.util.spec_from_file_location` now accept a :term:`path-"
 "like object`."
 msgstr ""
+":func:`importlib.util.cache_from_source`, :func:`importlib.util.source_from_cache` "
+"und :func:`importlib.util.spec_from_file_location` akzeptieren nun "
+"ein :term:`pfadähnliches Objekt <path-like object>`."
 
 #: ../../whatsnew/3.6.rst:1219
 msgid "inspect"
-msgstr ""
+msgstr "inspect"
 
 #: ../../whatsnew/3.6.rst:1221
 msgid ""
@@ -1729,6 +2410,11 @@ msgid ""
 "generator expression scopes as if they were positional-only parameters "
 "called ``implicit0``. (Contributed by Jelle Zijlstra in :issue:`19611`.)"
 msgstr ""
+"Die Funktion :func:`inspect.signature() <inspect.signature>` meldet nun die "
+"vom Compiler für die Gültigkeitsbereiche von Comprehensions und "
+"Generatorausdrücken erzeugten impliziten ``.0``-Parameter so, als wären es "
+"rein positionale Parameter namens ``implicit0``. (Beigetragen von Jelle "
+"Zijlstra in :issue:`19611`.)"
 
 #: ../../whatsnew/3.6.rst:1226
 msgid ""
@@ -1739,6 +2425,13 @@ msgid ""
 "richer :func:`inspect.signature` interface remains the recommended approach "
 "for new code. (Contributed by Nick Coghlan in :issue:`27172`)"
 msgstr ""
+"Um den Änderungsaufwand beim Upgrade von Python 2.7 und der veralteten "
+"API :func:`!inspect.getargspec` zu verringern, wurde die zuvor dokumentierte "
+"Veraltung von :func:`inspect.getfullargspec` zurückgenommen. Diese Funktion "
+"ist zwar für Python-2/3-Codebasen aus einer Quelle praktisch, die "
+"reichhaltigere Schnittstelle :func:`inspect.signature` bleibt aber der "
+"empfohlene Ansatz für neuen Code. (Beigetragen von Nick Coghlan "
+"in :issue:`27172`)"
 
 #: ../../whatsnew/3.6.rst:1235
 msgid "json"
@@ -1750,10 +2443,13 @@ msgid ""
 "JSON should be represented using either UTF-8, UTF-16, or UTF-32. "
 "(Contributed by Serhiy Storchaka in :issue:`17909`.)"
 msgstr ""
+":func:`json.load` und :func:`json.loads` unterstützen nun binäre Eingaben. "
+"Kodiertes JSON sollte entweder mit UTF-8, UTF-16 oder UTF-32 dargestellt "
+"werden. (Beigetragen von Serhiy Storchaka in :issue:`17909`.)"
 
 #: ../../whatsnew/3.6.rst:1243
 msgid "logging"
-msgstr ""
+msgstr "logging"
 
 #: ../../whatsnew/3.6.rst:1245
 msgid ""
@@ -1762,6 +2458,10 @@ msgid ""
 "to add the ability to check if the log file needs to be reopened. "
 "(Contributed by Marian Horban in :issue:`24884`.)"
 msgstr ""
+"Die neue Methode :meth:`WatchedFileHandler.reopenIfNeeded() "
+"<logging.handlers.WatchedFileHandler.reopenIfNeeded>` wurde hinzugefügt, um "
+"prüfen zu können, ob die Logdatei neu geöffnet werden muss. (Beigetragen von "
+"Marian Horban in :issue:`24884`.)"
 
 #: ../../whatsnew/3.6.rst:1252
 msgid "math"
@@ -1773,10 +2473,13 @@ msgid ""
 "modules. (Contributed by Lisa Roach in :issue:`12345`, see :pep:`628` for "
 "details.)"
 msgstr ""
+"Die Konstante tau (*τ*) wurde den Modulen :mod:`math` und :mod:`cmath` "
+"hinzugefügt. (Beigetragen von Lisa Roach in :issue:`12345`, Details "
+"siehe :pep:`628`.)"
 
 #: ../../whatsnew/3.6.rst:1260
 msgid "multiprocessing"
-msgstr ""
+msgstr "multiprocessing"
 
 #: ../../whatsnew/3.6.rst:1262
 msgid ""
@@ -1784,6 +2487,9 @@ msgid ""
 "by :func:`multiprocessing.Manager` can now be nested. (Contributed by Davin "
 "Potts in :issue:`6766`.)"
 msgstr ""
+"Von :func:`multiprocessing.Manager` zurückgegebene :ref:`Proxy-Objekte "
+"<multiprocessing-proxy_objects>` lassen sich nun verschachteln. (Beigetragen "
+"von Davin Potts in :issue:`6766`.)"
 
 #: ../../whatsnew/3.6.rst:1268 ../../whatsnew/3.6.rst:2021
 msgid "os"
@@ -1795,10 +2501,14 @@ msgid ""
 "the :mod:`os` and :mod:`os.path` modules now support :term:`path-like "
 "objects <path-like object>`."
 msgstr ""
+"Details dazu, wie die Module :mod:`os` und :mod:`os.path` "
+"nun :term:`pfadähnliche Objekte <path-like object>` unterstützen, findest du "
+"in der Zusammenfassung von :ref:`PEP 519 <whatsnew36-pep519>`."
 
 #: ../../whatsnew/3.6.rst:1274
 msgid ":func:`~os.scandir` now supports :class:`bytes` paths on Windows."
 msgstr ""
+":func:`~os.scandir` unterstützt nun :class:`bytes`-Pfade unter Windows."
 
 #: ../../whatsnew/3.6.rst:1276
 msgid ""
@@ -1809,6 +2519,13 @@ msgid ""
 "will be emitted in its destructor. (Contributed by Serhiy Storchaka "
 "in :issue:`25994`.)"
 msgstr ""
+"Mit einer neuen Methode :meth:`~os.scandir.close` lässt sich "
+"ein :func:`~os.scandir`-Iterator ausdrücklich schließen. "
+"Der :func:`~os.scandir`-Iterator unterstützt nun das "
+"Protokoll :term:`Kontextmanager <context manager>`. Wird ein :func:`!"
+"scandir`-Iterator weder erschöpft noch ausdrücklich geschlossen, wird in "
+"seinem Destruktor eine :exc:`ResourceWarning` ausgegeben. (Beigetragen von "
+"Serhiy Storchaka in :issue:`25994`.)"
 
 #: ../../whatsnew/3.6.rst:1286
 msgid ""
@@ -1816,6 +2533,9 @@ msgid ""
 "new :func:`os.getrandom` function. (Contributed by Victor Stinner, part of "
 "the :pep:`524`)"
 msgstr ""
+"Der Linux-Systemaufruf ``getrandom()`` (zufällige Bytes abrufen) wird nun "
+"als neue Funktion :func:`os.getrandom` bereitgestellt. (Beigetragen von "
+"Victor Stinner, Teil von :pep:`524`)"
 
 #: ../../whatsnew/3.6.rst:1292
 msgid "pathlib"
@@ -1826,10 +2546,13 @@ msgid ""
 ":mod:`pathlib` now supports :term:`path-like objects <path-like object>`. "
 "(Contributed by Brett Cannon in :issue:`27186`.)"
 msgstr ""
+":mod:`pathlib` unterstützt nun :term:`pfadähnliche Objekte <path-like "
+"object>`. (Beigetragen von Brett Cannon in :issue:`27186`.)"
 
 #: ../../whatsnew/3.6.rst:1297
 msgid "See the summary of :ref:`PEP 519 <whatsnew36-pep519>` for details."
 msgstr ""
+"Details siehe die Zusammenfassung von :ref:`PEP 519 <whatsnew36-pep519>`."
 
 #: ../../whatsnew/3.6.rst:1301
 msgid "pdb"
@@ -1840,10 +2563,12 @@ msgid ""
 "The :class:`~pdb.Pdb` class constructor has a new optional *readrc* argument "
 "to control whether ``.pdbrc`` files should be read."
 msgstr ""
+"Der Konstruktor der Klasse :class:`~pdb.Pdb` hat ein neues optionales "
+"Argument *readrc*, das steuert, ob ``.pdbrc``-Dateien gelesen werden."
 
 #: ../../whatsnew/3.6.rst:1308
 msgid "pickle"
-msgstr ""
+msgstr "pickle"
 
 #: ../../whatsnew/3.6.rst:1310
 msgid ""
@@ -1852,26 +2577,34 @@ msgid ""
 "version 4. Protocol version 4 already supports this case.  (Contributed by "
 "Serhiy Storchaka in :issue:`24164`.)"
 msgstr ""
+"Objekte, deren ``__new__`` mit Schlüsselwortargumenten aufgerufen werden "
+"muss, lassen sich nun auch mit :ref:`Pickle-Protokollen <pickle-protocols>` "
+"vor Protokollversion 4 serialisieren. Protokollversion 4 unterstützt diesen "
+"Fall bereits. (Beigetragen von Serhiy Storchaka in :issue:`24164`.)"
 
 #: ../../whatsnew/3.6.rst:1317
 msgid "pickletools"
-msgstr ""
+msgstr "pickletools"
 
 #: ../../whatsnew/3.6.rst:1319
 msgid ""
 ":func:`pickletools.dis` now outputs the implicit memo index for the "
 "``MEMOIZE`` opcode. (Contributed by Serhiy Storchaka in :issue:`25382`.)"
 msgstr ""
+":func:`pickletools.dis` gibt nun den impliziten Memo-Index für den Opcode "
+"``MEMOIZE`` aus. (Beigetragen von Serhiy Storchaka in :issue:`25382`.)"
 
 #: ../../whatsnew/3.6.rst:1325
 msgid "pydoc"
-msgstr ""
+msgstr "pydoc"
 
 #: ../../whatsnew/3.6.rst:1327
 msgid ""
 "The :mod:`pydoc` module has learned to respect the ``MANPAGER`` environment "
 "variable. (Contributed by Matthias Klose in :issue:`8637`.)"
 msgstr ""
+"Das Modul :mod:`pydoc` beachtet nun die Umgebungsvariable ``MANPAGER``. "
+"(Beigetragen von Matthias Klose in :issue:`8637`.)"
 
 #: ../../whatsnew/3.6.rst:1331
 msgid ""
@@ -1879,10 +2612,13 @@ msgid ""
 "they were defined rather than alphabetically. (Contributed by Raymond "
 "Hettinger in :issue:`24879`.)"
 msgstr ""
+":func:`help` und :mod:`pydoc` können die Felder benannter Tupel nun in der "
+"Reihenfolge ihrer Definition statt alphabetisch auflisten. (Beigetragen von "
+"Raymond Hettinger in :issue:`24879`.)"
 
 #: ../../whatsnew/3.6.rst:1337
 msgid "random"
-msgstr ""
+msgstr "random"
 
 #: ../../whatsnew/3.6.rst:1339
 msgid ""
@@ -1890,10 +2626,13 @@ msgid ""
 "specified size from the given population with optional weights. (Contributed "
 "by Raymond Hettinger in :issue:`18844`.)"
 msgstr ""
+"Die neue Funktion :func:`~random.choices` gibt eine Liste von Elementen der "
+"angegebenen Größe aus der gegebenen Grundgesamtheit zurück, optional mit "
+"Gewichten. (Beigetragen von Raymond Hettinger in :issue:`18844`.)"
 
 #: ../../whatsnew/3.6.rst:1345 ../../whatsnew/3.6.rst:2029
 msgid "re"
-msgstr ""
+msgstr "re"
 
 #: ../../whatsnew/3.6.rst:1347
 msgid ""
@@ -1902,6 +2641,11 @@ msgid ""
 "``'(?i)g(?-i:v)r'`` matches ``'GvR'`` and ``'gvr'``, but not ``'GVR'``. "
 "(Contributed by Serhiy Storchaka in :issue:`433028`.)"
 msgstr ""
+"Unterstützung für Modifikatorbereiche in regulären Ausdrücken hinzugefügt. "
+"Beispiele: ``'(?i:p)ython'`` passt auf ``'python'`` und ``'Python'``, aber "
+"nicht auf ``'PYTHON'``; ``'(?i)g(?-i:v)r'`` passt auf ``'GvR'`` und "
+"``'gvr'``, aber nicht auf ``'GVR'``. (Beigetragen von Serhiy Storchaka "
+"in :issue:`433028`.)"
 
 #: ../../whatsnew/3.6.rst:1352
 msgid ""
@@ -1909,6 +2653,9 @@ msgid ""
 "to ``group()``.  So ``mo['name']`` is now equivalent to "
 "``mo.group('name')``.  (Contributed by Eric Smith in :issue:`24454`.)"
 msgstr ""
+"Auf Gruppen von Match-Objekten lässt sich über ``__getitem__`` zugreifen, "
+"was ``group()`` entspricht. ``mo['name']`` entspricht also nun "
+"``mo.group('name')``. (Beigetragen von Eric Smith in :issue:`24454`.)"
 
 #: ../../whatsnew/3.6.rst:1356
 msgid ""
@@ -1916,10 +2663,13 @@ msgid ""
 "<object.__index__>` as group indices. (Contributed by Jeroen Demeyer and "
 "Xiang Zhang in :issue:`27177`.)"
 msgstr ""
+":class:`~re.Match`-Objekte unterstützen nun :meth:`indexähnliche Objekte "
+"<object.__index__>` als Gruppenindizes. (Beigetragen von Jeroen Demeyer und "
+"Xiang Zhang in :issue:`27177`.)"
 
 #: ../../whatsnew/3.6.rst:1363
 msgid "readline"
-msgstr ""
+msgstr "readline"
 
 #: ../../whatsnew/3.6.rst:1365
 msgid ""
@@ -1927,10 +2677,13 @@ msgid ""
 "addition of input to the history list.  (Contributed by Tyler Crompton "
 "in :issue:`26870`.)"
 msgstr ""
+":func:`~readline.set_auto_history` hinzugefügt, um das automatische "
+"Hinzufügen von Eingaben zur Historie zu aktivieren oder zu deaktivieren. "
+"(Beigetragen von Tyler Crompton in :issue:`26870`.)"
 
 #: ../../whatsnew/3.6.rst:1371
 msgid "rlcompleter"
-msgstr ""
+msgstr "rlcompleter"
 
 #: ../../whatsnew/3.6.rst:1373
 msgid ""
@@ -1939,10 +2692,14 @@ msgid ""
 "keywords. (Contributed by Serhiy Storchaka in :issue:`25011` "
 "and :issue:`25209`.)"
 msgstr ""
+"Private und spezielle Attributnamen werden nun weggelassen, sofern das "
+"Präfix nicht mit Unterstrichen beginnt. Nach einigen vervollständigten "
+"Schlüsselwörtern wird ein Leerzeichen oder ein Doppelpunkt angefügt. "
+"(Beigetragen von Serhiy Storchaka in :issue:`25011` und :issue:`25209`.)"
 
 #: ../../whatsnew/3.6.rst:1379
 msgid "shlex"
-msgstr ""
+msgstr "shlex"
 
 #: ../../whatsnew/3.6.rst:1381
 msgid ""
@@ -1951,10 +2708,14 @@ msgid ""
 "to control which characters are treated as punctuation. (Contributed by "
 "Vinay Sajip in :issue:`1521950`.)"
 msgstr ""
+":class:`~shlex.shlex` hat durch das neue Argument *punctuation_chars*, das "
+"steuert, welche Zeichen als Satzzeichen behandelt werden, eine "
+"deutlich :ref:`verbesserte Shell-Kompatibilität <improved-shell-"
+"compatibility>`. (Beigetragen von Vinay Sajip in :issue:`1521950`.)"
 
 #: ../../whatsnew/3.6.rst:1389
 msgid "site"
-msgstr ""
+msgstr "site"
 
 #: ../../whatsnew/3.6.rst:1391
 msgid ""
@@ -1962,6 +2723,10 @@ msgid ""
 "now specify file paths on top of directories (e.g. zip files). (Contributed "
 "by Wolfgang Langner in :issue:`26587`)."
 msgstr ""
+"Beim Angeben von Pfaden, die in einer ``.pth``-Datei zu :data:`sys.path` "
+"hinzugefügt werden sollen, kannst du nun zusätzlich zu Verzeichnissen auch "
+"Dateipfade angeben (z. B. ZIP-Dateien). (Beigetragen von Wolfgang Langner "
+"in :issue:`26587`)."
 
 #: ../../whatsnew/3.6.rst:1397
 msgid "sqlite3"
@@ -1972,10 +2737,12 @@ msgid ""
 ":attr:`sqlite3.Cursor.lastrowid` now supports the ``REPLACE`` statement. "
 "(Contributed by Alex LordThorsen in :issue:`16864`.)"
 msgstr ""
+":attr:`sqlite3.Cursor.lastrowid` unterstützt nun die Anweisung ``REPLACE``. "
+"(Beigetragen von Alex LordThorsen in :issue:`16864`.)"
 
 #: ../../whatsnew/3.6.rst:1404
 msgid "socket"
-msgstr ""
+msgstr "socket"
 
 #: ../../whatsnew/3.6.rst:1406
 msgid ""
@@ -1983,6 +2750,9 @@ msgid ""
 "the :const:`~socket.SIO_LOOPBACK_FAST_PATH` control code. (Contributed by "
 "Daniel Stokes in :issue:`26536`.)"
 msgstr ""
+"Die Funktion :func:`~socket.socket.ioctl` unterstützt nun den "
+"Steuercode :const:`~socket.SIO_LOOPBACK_FAST_PATH`. (Beigetragen von Daniel "
+"Stokes in :issue:`26536`.)"
 
 #: ../../whatsnew/3.6.rst:1410
 msgid ""
@@ -1990,6 +2760,9 @@ msgid ""
 "``SO_PROTOCOL``, ``SO_PEERSEC``, and ``SO_PASSSEC`` are now supported. "
 "(Contributed by Christian Heimes in :issue:`26907`.)"
 msgstr ""
+"Die Konstanten ``SO_DOMAIN``, ``SO_PROTOCOL``, ``SO_PEERSEC`` und "
+"``SO_PASSSEC`` für :meth:`~socket.socket.getsockopt` werden nun unterstützt. "
+"(Beigetragen von Christian Heimes in :issue:`26907`.)"
 
 #: ../../whatsnew/3.6.rst:1414
 msgid ""
@@ -1997,6 +2770,9 @@ msgid ""
 "optname, None, optlen: int)`` form. (Contributed by Christian Heimes "
 "in :issue:`27744`.)"
 msgstr ""
+":meth:`~socket.socket.setsockopt` unterstützt nun die Form "
+"``setsockopt(level, optname, None, optlen: int)``. (Beigetragen von "
+"Christian Heimes in :issue:`27744`.)"
 
 #: ../../whatsnew/3.6.rst:1418
 msgid ""
@@ -2005,16 +2781,22 @@ msgid ""
 "and :meth:`~socket.socket.sendmsg_afalg` were added. (Contributed by "
 "Christian Heimes in :issue:`27744` with support from Victor Stinner.)"
 msgstr ""
+"Das Modul socket unterstützt nun die Adressfamilie :const:`~socket.AF_ALG` "
+"als Schnittstelle zur Krypto-API des Linux-Kernels. ``ALG_*``, ``SOL_ALG`` "
+"und :meth:`~socket.socket.sendmsg_afalg` wurden hinzugefügt. (Beigetragen "
+"von Christian Heimes in :issue:`27744` mit Unterstützung von Victor Stinner.)"
 
 #: ../../whatsnew/3.6.rst:1424
 msgid ""
 "New Linux constants ``TCP_USER_TIMEOUT`` and ``TCP_CONGESTION`` were added. "
 "(Contributed by Omar Sandoval, :issue:`26273`)."
 msgstr ""
+"Neue Linux-Konstanten ``TCP_USER_TIMEOUT`` und ``TCP_CONGESTION`` wurden "
+"hinzugefügt. (Beigetragen von Omar Sandoval, :issue:`26273`)."
 
 #: ../../whatsnew/3.6.rst:1429
 msgid "socketserver"
-msgstr ""
+msgstr "socketserver"
 
 #: ../../whatsnew/3.6.rst:1431
 msgid ""
@@ -2023,6 +2805,10 @@ msgid ""
 "and :mod:`wsgiref.simple_server`, now support the :term:`context manager` "
 "protocol. (Contributed by Aviv Palivoda in :issue:`26404`.)"
 msgstr ""
+"Server auf Basis des Moduls :mod:`socketserver`, einschließlich der "
+"in :mod:`http.server`, :mod:`xmlrpc.server` und :mod:`wsgiref.simple_server` "
+"definierten, unterstützen nun das Protokoll :term:`Kontextmanager <context "
+"manager>`. (Beigetragen von Aviv Palivoda in :issue:`26404`.)"
 
 #: ../../whatsnew/3.6.rst:1437
 msgid ""
@@ -2032,16 +2818,23 @@ msgid ""
 "calling :meth:`~io.BufferedIOBase.write` is now guaranteed to send the data "
 "in full.  (Contributed by Martin Panter in :issue:`26721`.)"
 msgstr ""
+"Das Attribut :attr:`wfile <socketserver.DatagramRequestHandler.wfile>` "
+"von :class:`~socketserver.StreamRequestHandler`-Klassen implementiert nun "
+"die beschreibbare Schnittstelle von :class:`io.BufferedIOBase`. Insbesondere "
+"sendet ein Aufruf von :meth:`~io.BufferedIOBase.write` die Daten nun "
+"garantiert vollständig. (Beigetragen von Martin Panter in :issue:`26721`.)"
 
 #: ../../whatsnew/3.6.rst:1445 ../../whatsnew/3.6.rst:2037
 msgid "ssl"
-msgstr ""
+msgstr "ssl"
 
 #: ../../whatsnew/3.6.rst:1447
 msgid ""
 ":mod:`ssl` supports OpenSSL 1.1.0.  The minimum recommend version is 1.0.2. "
 "(Contributed by Christian Heimes in :issue:`26470`.)"
 msgstr ""
+":mod:`ssl` unterstützt OpenSSL 1.1.0. Die empfohlene Mindestversion ist "
+"1.0.2. (Beigetragen von Christian Heimes in :issue:`26470`.)"
 
 #: ../../whatsnew/3.6.rst:1450
 msgid ""
@@ -2049,12 +2842,17 @@ msgid ""
 "cipher suites have been added. (Contributed by Christian Heimes "
 "in :issue:`27850` and :issue:`27766`.)"
 msgstr ""
+"3DES wurde aus den Standard-Cipher-Suites entfernt, und ChaCha20-Poly1305-"
+"Cipher-Suites wurden hinzugefügt. (Beigetragen von Christian Heimes "
+"in :issue:`27850` und :issue:`27766`.)"
 
 #: ../../whatsnew/3.6.rst:1454
 msgid ""
 ":class:`~ssl.SSLContext` has better default configuration for options and "
 "ciphers. (Contributed by Christian Heimes in :issue:`28043`.)"
 msgstr ""
+":class:`~ssl.SSLContext` hat eine bessere Standardkonfiguration für Optionen "
+"und Cipher. (Beigetragen von Christian Heimes in :issue:`28043`.)"
 
 #: ../../whatsnew/3.6.rst:1458
 msgid ""
@@ -2063,12 +2861,20 @@ msgid ""
 "the initial handshake, reduce latency and improve performance (Contributed "
 "by Christian Heimes in :issue:`19500` based on a draft by Alex Warhawk.)"
 msgstr ""
+"Mit der neuen Klasse :class:`~ssl.SSLSession` lässt sich eine SSL-Sitzung "
+"von einer clientseitigen Verbindung auf eine andere kopieren. Die "
+"Wiederaufnahme von TLS-Sitzungen kann den anfänglichen Handshake "
+"beschleunigen, die Latenz verringern und die Performance verbessern "
+"(Beigetragen von Christian Heimes in :issue:`19500` auf Basis eines Entwurfs "
+"von Alex Warhawk.)"
 
 #: ../../whatsnew/3.6.rst:1464
 msgid ""
 "The new :meth:`~ssl.SSLContext.get_ciphers` method can be used to get a list "
 "of enabled ciphers in order of cipher priority."
 msgstr ""
+"Mit der neuen Methode :meth:`~ssl.SSLContext.get_ciphers` lässt sich eine "
+"Liste der aktivierten Cipher in der Reihenfolge ihrer Priorität abrufen."
 
 #: ../../whatsnew/3.6.rst:1467
 msgid ""
@@ -2076,12 +2882,17 @@ msgid ""
 "and :class:`~enum.IntFlag`. (Contributed by Christian Heimes "
 "in :issue:`28025`.)"
 msgstr ""
+"Alle Konstanten und Flags wurden in :class:`~enum.IntEnum` "
+"und :class:`~enum.IntFlag` umgewandelt. (Beigetragen von Christian Heimes "
+"in :issue:`28025`.)"
 
 #: ../../whatsnew/3.6.rst:1471
 msgid ""
 "Server and client-side specific TLS protocols for :class:`~ssl.SSLContext` "
 "were added. (Contributed by Christian Heimes in :issue:`28085`.)"
 msgstr ""
+"Server- und clientspezifische TLS-Protokolle für :class:`~ssl.SSLContext` "
+"wurden hinzugefügt. (Beigetragen von Christian Heimes in :issue:`28085`.)"
 
 #: ../../whatsnew/3.6.rst:1475
 msgid ""
@@ -2090,20 +2901,26 @@ msgid ""
 "post-handshake authentication. (Contributed by Christian Heimes "
 "in :gh:`78851`.)"
 msgstr ""
+":attr:`ssl.SSLContext.post_handshake_auth` zum Aktivieren "
+"und :meth:`ssl.SSLSocket.verify_client_post_handshake` zum Einleiten der "
+"Post-Handshake-Authentifizierung von TLS 1.3 hinzugefügt. (Beigetragen von "
+"Christian Heimes in :gh:`78851`.)"
 
 #: ../../whatsnew/3.6.rst:1481
 msgid "statistics"
-msgstr ""
+msgstr "statistics"
 
 #: ../../whatsnew/3.6.rst:1483
 msgid ""
 "A new :func:`~statistics.harmonic_mean` function has been added. "
 "(Contributed by Steven D'Aprano in :issue:`27181`.)"
 msgstr ""
+"Eine neue Funktion :func:`~statistics.harmonic_mean` wurde hinzugefügt. "
+"(Beigetragen von Steven D'Aprano in :issue:`27181`.)"
 
 #: ../../whatsnew/3.6.rst:1488
 msgid "struct"
-msgstr ""
+msgstr "struct"
 
 #: ../../whatsnew/3.6.rst:1490
 msgid ""
@@ -2111,10 +2928,13 @@ msgid ""
 "format specifier. (Contributed by Eli Stevens, Mark Dickinson "
 "in :issue:`11734`.)"
 msgstr ""
+":mod:`struct` unterstützt nun über die Formatangabe ``'e'`` Gleitkommazahlen "
+"mit halber Genauigkeit nach IEEE 754. (Beigetragen von Eli Stevens, Mark "
+"Dickinson in :issue:`11734`.)"
 
 #: ../../whatsnew/3.6.rst:1496
 msgid "subprocess"
-msgstr ""
+msgstr "subprocess"
 
 #: ../../whatsnew/3.6.rst:1498
 msgid ""
@@ -2124,6 +2944,11 @@ msgid ""
 "the :meth:`~subprocess.Popen.wait` method to read the exit status of the "
 "child process. (Contributed by Victor Stinner in :issue:`26741`.)"
 msgstr ""
+"Der Destruktor von :class:`subprocess.Popen` gibt nun "
+"eine :exc:`ResourceWarning` aus, wenn der Kindprozess noch läuft. Verwende "
+"das Kontextmanager-Protokoll (``with proc: ...``) oder rufe ausdrücklich die "
+"Methode :meth:`~subprocess.Popen.wait` auf, um den Exit-Status des "
+"Kindprozesses zu lesen. (Beigetragen von Victor Stinner in :issue:`26741`.)"
 
 #: ../../whatsnew/3.6.rst:1504
 msgid ""
@@ -2132,6 +2957,11 @@ msgid ""
 "Specifying either of these will enable text mode for the *stdin*, *stdout* "
 "and *stderr* streams. (Contributed by Steve Dower in :issue:`6135`.)"
 msgstr ""
+"Der Konstruktor von :class:`subprocess.Popen` und alle Funktionen, die "
+"Argumente an ihn weiterreichen, akzeptieren nun die Argumente *encoding* und "
+"*errors*. Wird eines davon angegeben, wird der Textmodus für die Datenströme "
+"*stdin*, *stdout* und *stderr* aktiviert. (Beigetragen von Steve Dower "
+"in :issue:`6135`.)"
 
 #: ../../whatsnew/3.6.rst:1511
 msgid "sys"
@@ -2143,6 +2973,9 @@ msgid ""
 "the error mode used to convert between Unicode filenames and bytes "
 "filenames. (Contributed by Steve Dower in :issue:`27781`.)"
 msgstr ""
+"Die neue Funktion :func:`~sys.getfilesystemencodeerrors` gibt den Namen des "
+"Fehlermodus zurück, der zur Umwandlung zwischen Unicode-Dateinamen und Byte-"
+"Dateinamen verwendet wird. (Beigetragen von Steve Dower in :issue:`27781`.)"
 
 #: ../../whatsnew/3.6.rst:1517
 msgid ""
@@ -2152,30 +2985,39 @@ msgid ""
 "rather than the version that is being emulated for the process (Contributed "
 "by Steve Dower in :issue:`27932`.)"
 msgstr ""
+"Unter Windows enthält der Rückgabewert der "
+"Funktion :func:`~sys.getwindowsversion` nun das Feld *platform_version*, das "
+"die genaue Haupt- und Unterversion sowie die Build-Nummer des aktuellen "
+"Betriebssystems enthält statt der Version, die für den Prozess emuliert wird "
+"(Beigetragen von Steve Dower in :issue:`27932`.)"
 
 #: ../../whatsnew/3.6.rst:1525
 msgid "telnetlib"
-msgstr ""
+msgstr "telnetlib"
 
 #: ../../whatsnew/3.6.rst:1527
 msgid ""
 ":class:`!telnetlib.Telnet` is now a context manager (contributed by Stéphane "
 "Wirtel in :issue:`25485`)."
 msgstr ""
+":class:`!telnetlib.Telnet` ist nun ein Kontextmanager (beigetragen von "
+"Stéphane Wirtel in :issue:`25485`)."
 
 #: ../../whatsnew/3.6.rst:1532
 msgid "time"
-msgstr ""
+msgstr "time"
 
 #: ../../whatsnew/3.6.rst:1534
 msgid ""
 "The :class:`~time.struct_time` attributes :attr:`!tm_gmtoff` and :attr:`!"
 "tm_zone` are now available on all platforms."
 msgstr ""
+"Die Attribute :attr:`!tm_gmtoff` und :attr:`!tm_zone` "
+"von :class:`~time.struct_time` sind nun auf allen Plattformen verfügbar."
 
 #: ../../whatsnew/3.6.rst:1539
 msgid "timeit"
-msgstr ""
+msgstr "timeit"
 
 #: ../../whatsnew/3.6.rst:1541
 msgid ""
@@ -2184,12 +3026,19 @@ msgid ""
 "repeatedly so that the total run time is greater or equal to 200 "
 "milliseconds. (Contributed by Steven D'Aprano in :issue:`6422`.)"
 msgstr ""
+"Die neue Komfortmethode :meth:`Timer.autorange() <timeit.Timer.autorange>` "
+"wurde hinzugefügt, die :meth:`Timer.timeit() <timeit.Timer.timeit>` "
+"wiederholt aufruft, bis die Gesamtlaufzeit mindestens 200 Millisekunden "
+"beträgt. (Beigetragen von Steven D'Aprano in :issue:`6422`.)"
 
 #: ../../whatsnew/3.6.rst:1546
 msgid ""
 ":mod:`timeit` now warns when there is substantial (4x) variance between best "
 "and worst times. (Contributed by Serhiy Storchaka in :issue:`23552`.)"
 msgstr ""
+":mod:`timeit` warnt nun, wenn es eine erhebliche (vierfache) Abweichung "
+"zwischen der besten und der schlechtesten Zeit gibt. (Beigetragen von Serhiy "
+"Storchaka in :issue:`23552`.)"
 
 #: ../../whatsnew/3.6.rst:1552 ../../whatsnew/3.6.rst:2054
 msgid "tkinter"
@@ -2204,10 +3053,17 @@ msgid ""
 "might not work in future versions of Tcl. (Contributed by Serhiy Storchaka "
 "in :issue:`22115`)."
 msgstr ""
+"Die Methoden :meth:`!Variable.trace_add`, :meth:`!Variable.trace_remove` "
+"und :meth:`!trace_info` in der Klasse :class:`!tkinter.Variable` "
+"hinzugefügt. Sie ersetzen die alten Methoden :meth:`!"
+"trace_variable`, :meth:`!trace`, :meth:`!trace_vdelete` und :meth:`!"
+"trace_vinfo`, die überholte Tcl-Befehle verwenden und in künftigen Tcl-"
+"Versionen möglicherweise nicht funktionieren. (Beigetragen von Serhiy "
+"Storchaka in :issue:`22115`)."
 
 #: ../../whatsnew/3.6.rst:1567
 msgid "traceback"
-msgstr ""
+msgstr "Traceback"
 
 #: ../../whatsnew/3.6.rst:1569
 msgid ""
@@ -2215,6 +3071,9 @@ msgid ""
 "now abbreviate long sequences of repeated lines in tracebacks as shown in "
 "the following example::"
 msgstr ""
+"Sowohl das Modul traceback als auch die eingebaute Ausnahmeanzeige des "
+"Interpreters kürzen nun lange Folgen wiederholter Zeilen in Tracebacks ab, "
+"wie im folgenden Beispiel gezeigt::"
 
 #: ../../whatsnew/3.6.rst:1573
 msgid ""
@@ -2229,30 +3088,44 @@ msgid ""
 "  [Previous line repeated 995 more times]\n"
 "RecursionError: maximum recursion depth exceeded"
 msgstr ""
+">>> def f(): f()\n"
+"...\n"
+">>> f()\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"  File \"<stdin>\", line 1, in f\n"
+"  File \"<stdin>\", line 1, in f\n"
+"  File \"<stdin>\", line 1, in f\n"
+"  [Previous line repeated 995 more times]\n"
+"RecursionError: maximum recursion depth exceeded"
 
 #: ../../whatsnew/3.6.rst:1584
 msgid "(Contributed by Emanuel Barry in :issue:`26823`.)"
-msgstr ""
+msgstr "(Beigetragen von Emanuel Barry in :issue:`26823`.)"
 
 #: ../../whatsnew/3.6.rst:1588
 msgid "tracemalloc"
-msgstr ""
+msgstr "tracemalloc"
 
 #: ../../whatsnew/3.6.rst:1590
 msgid ""
 "The :mod:`tracemalloc` module now supports tracing memory allocations in "
 "multiple different address spaces."
 msgstr ""
+"Das Modul :mod:`tracemalloc` unterstützt nun das Verfolgen von "
+"Speicherzuweisungen in mehreren verschiedenen Adressräumen."
 
 #: ../../whatsnew/3.6.rst:1593
 msgid ""
 "The new :class:`~tracemalloc.DomainFilter` filter class has been added to "
 "filter block traces by their address space (domain)."
 msgstr ""
+"Die neue Filterklasse :class:`~tracemalloc.DomainFilter` wurde hinzugefügt, "
+"um Block-Traces nach ihrem Adressraum (Domäne) zu filtern."
 
 #: ../../whatsnew/3.6.rst:1596
 msgid "(Contributed by Victor Stinner in :issue:`26588`.)"
-msgstr ""
+msgstr "(Beigetragen von Victor Stinner in :issue:`26588`.)"
 
 #: ../../whatsnew/3.6.rst:1602
 msgid "typing"
@@ -2263,6 +3136,9 @@ msgid ""
 "Since the :mod:`typing` module is :term:`provisional <provisional API>`, all "
 "changes introduced in Python 3.6 have also been backported to Python 3.5.x."
 msgstr ""
+"Da das Modul :mod:`typing` :term:`vorläufig <provisional API>` ist, wurden "
+"alle in Python 3.6 eingeführten Änderungen auch nach Python 3.5.x "
+"zurückportiert."
 
 #: ../../whatsnew/3.6.rst:1608
 msgid ""
@@ -2271,6 +3147,10 @@ msgid ""
 "annotation. (Contributed by Guido van Rossum in `Github #195 <https://"
 "github.com/python/typing/pull/195>`_.)"
 msgstr ""
+"Das Modul :mod:`typing` unterstützt generische Typ-Aliase nun deutlich "
+"besser. Zum Beispiel ist ``Dict[str, Tuple[S, T]]`` nun eine gültige "
+"Typannotation. (Beigetragen von Guido van Rossum in `Github #195 <https://"
+"github.com/python/typing/pull/195>`_.)"
 
 #: ../../whatsnew/3.6.rst:1614
 msgid ""
@@ -2278,6 +3158,9 @@ msgid ""
 "representing :class:`contextlib.AbstractContextManager`. (Contributed by "
 "Brett Cannon in :issue:`25609`.)"
 msgstr ""
+"Die Klasse :class:`typing.ContextManager` wurde hinzugefügt, "
+"um :class:`contextlib.AbstractContextManager` darzustellen. (Beigetragen von "
+"Brett Cannon in :issue:`25609`.)"
 
 #: ../../whatsnew/3.6.rst:1618
 msgid ""
@@ -2285,6 +3168,9 @@ msgid ""
 "representing :class:`collections.abc.Collection`. (Contributed by Ivan "
 "Levkivskyi in :issue:`27598`.)"
 msgstr ""
+"Die Klasse :class:`typing.Collection` wurde hinzugefügt, "
+"um :class:`collections.abc.Collection` darzustellen. (Beigetragen von Ivan "
+"Levkivskyi in :issue:`27598`.)"
 
 #: ../../whatsnew/3.6.rst:1622
 msgid ""
@@ -2295,6 +3181,12 @@ msgid ""
 "Ivan Levkivskyi in `Github #280 <https://github.com/python/typing/pull/"
 "280>`_.)"
 msgstr ""
+"Das Typkonstrukt :const:`typing.ClassVar` wurde hinzugefügt, um "
+"Klassenvariablen zu markieren. Wie in :pep:`526` eingeführt, zeigt eine in "
+"ClassVar gekapselte Variablenannotation an, dass ein bestimmtes Attribut als "
+"Klassenvariable verwendet und nicht auf Instanzen dieser Klasse gesetzt "
+"werden soll. (Beigetragen von Ivan Levkivskyi in `Github #280 <https://"
+"github.com/python/typing/pull/280>`_.)"
 
 #: ../../whatsnew/3.6.rst:1629
 msgid ""
@@ -2303,12 +3195,18 @@ msgid ""
 "Guido van Rossum in `Github #230 <https://github.com/python/typing/issues/"
 "230>`_.)"
 msgstr ""
+"Eine neue Konstante :const:`~typing.TYPE_CHECKING`, die von statischen "
+"Typprüfern als ``True`` angenommen wird, zur Laufzeit aber ``False`` ist. "
+"(Beigetragen von Guido van Rossum in `Github #230 <https://github.com/python/"
+"typing/issues/230>`_.)"
 
 #: ../../whatsnew/3.6.rst:1634
 msgid ""
 "A new :func:`~typing.NewType` helper function has been added to create "
 "lightweight distinct types for annotations::"
 msgstr ""
+"Eine neue Hilfsfunktion :func:`~typing.NewType` wurde hinzugefügt, um "
+"leichtgewichtige eigenständige Typen für Annotationen zu erzeugen::"
 
 #: ../../whatsnew/3.6.rst:1637
 msgid ""
@@ -2317,6 +3215,10 @@ msgid ""
 "UserId = NewType('UserId', int)\n"
 "some_id = UserId(524313)"
 msgstr ""
+"from typing import NewType\n"
+"\n"
+"UserId = NewType('UserId', int)\n"
+"some_id = UserId(524313)"
 
 #: ../../whatsnew/3.6.rst:1642
 msgid ""
@@ -2324,6 +3226,9 @@ msgid ""
 "the original type.  (Contributed by Ivan Levkivskyi in `Github #189 <https://"
 "github.com/python/typing/issues/189>`_.)"
 msgstr ""
+"Der statische Typprüfer behandelt den neuen Typ so, als wäre er eine "
+"Unterklasse des ursprünglichen Typs. (Beigetragen von Ivan Levkivskyi in "
+"`Github #189 <https://github.com/python/typing/issues/189>`_.)"
 
 #: ../../whatsnew/3.6.rst:1648
 msgid "unicodedata"
@@ -2334,14 +3239,16 @@ msgid ""
 "The :mod:`unicodedata` module now uses data from `Unicode 9.0.0 <https://"
 "unicode.org/versions/Unicode9.0.0/>`_. (Contributed by Benjamin Peterson.)"
 msgstr ""
+"Das Modul :mod:`unicodedata` verwendet nun Daten aus `Unicode 9.0.0 <https://"
+"unicode.org/versions/Unicode9.0.0/>`_. (Beigetragen von Benjamin Peterson.)"
 
 #: ../../whatsnew/3.6.rst:1656
 msgid "unittest.mock"
-msgstr ""
+msgstr "unittest.mock"
 
 #: ../../whatsnew/3.6.rst:1658
 msgid "The :class:`~unittest.mock.Mock` class has the following improvements:"
-msgstr ""
+msgstr "Die Klasse :class:`~unittest.mock.Mock` hat folgende Verbesserungen:"
 
 #: ../../whatsnew/3.6.rst:1660
 msgid ""
@@ -2350,6 +3257,10 @@ msgid ""
 "<unittest.mock.Mock.assert_called_once>` to check if the mock object was "
 "called. (Contributed by Amit Saha in :issue:`26323`.)"
 msgstr ""
+"Zwei neue Methoden, :meth:`Mock.assert_called() "
+"<unittest.mock.Mock.assert_called>` und :meth:`Mock.assert_called_once() "
+"<unittest.mock.Mock.assert_called_once>`, um zu prüfen, ob das Mock-Objekt "
+"aufgerufen wurde. (Beigetragen von Amit Saha in :issue:`26323`.)"
 
 #: ../../whatsnew/3.6.rst:1666
 msgid ""
@@ -2357,10 +3268,13 @@ msgid ""
 "two optional keyword only arguments: *return_value* and *side_effect*. "
 "(Contributed by Kushal Das in :issue:`21271`.)"
 msgstr ""
+"Die Methode :meth:`Mock.reset_mock() <unittest.mock.Mock.reset_mock>` hat "
+"nun zwei optionale, reine Schlüsselwortargumente: *return_value* und "
+"*side_effect*. (Beigetragen von Kushal Das in :issue:`21271`.)"
 
 #: ../../whatsnew/3.6.rst:1673
 msgid "urllib.request"
-msgstr ""
+msgstr "urllib.request"
 
 #: ../../whatsnew/3.6.rst:1675
 msgid ""
@@ -2370,10 +3284,15 @@ msgid ""
 "back to use chunked transfer encoding. (Contributed by Demian Brecht and "
 "Rolf Krahl in :issue:`12319`.)"
 msgstr ""
+"Hat eine HTTP-Anfrage einen Datei- oder Iterable-Körper (außer einem bytes-"
+"Objekt), aber keinen Header ``Content-Length``, "
+"greift :class:`AbstractHTTPHandler <urllib.request.HTTPHandler>` nun auf "
+"Chunked-Transferkodierung zurück, statt einen Fehler auszulösen. "
+"(Beigetragen von Demian Brecht und Rolf Krahl in :issue:`12319`.)"
 
 #: ../../whatsnew/3.6.rst:1683
 msgid "urllib.robotparser"
-msgstr ""
+msgstr "urllib.robotparser"
 
 #: ../../whatsnew/3.6.rst:1685
 msgid ""
@@ -2381,10 +3300,13 @@ msgid ""
 "delay`` and ``Request-rate`` extensions. (Contributed by Nikolay Bogoychev "
 "in :issue:`16099`.)"
 msgstr ""
+":class:`~urllib.robotparser.RobotFileParser` unterstützt nun die "
+"Erweiterungen ``Crawl-delay`` und ``Request-rate``. (Beigetragen von Nikolay "
+"Bogoychev in :issue:`16099`.)"
 
 #: ../../whatsnew/3.6.rst:1691 ../../whatsnew/3.6.rst:2062
 msgid "venv"
-msgstr ""
+msgstr "venv"
 
 #: ../../whatsnew/3.6.rst:1693
 msgid ""
@@ -2392,10 +3314,14 @@ msgid ""
 "alternative prefix for the virtual environment. (Proposed by Łukasz "
 "Balcerzak and ported to 3.6 by Stéphane Wirtel in :issue:`22829`.)"
 msgstr ""
+":mod:`venv` akzeptiert einen neuen Parameter ``--prompt``. Dieser Parameter "
+"liefert ein alternatives Präfix für die virtuelle Umgebung. (Vorgeschlagen "
+"von Łukasz Balcerzak und nach 3.6 portiert von Stéphane Wirtel "
+"in :issue:`22829`.)"
 
 #: ../../whatsnew/3.6.rst:1699
 msgid "warnings"
-msgstr ""
+msgstr "warnings"
 
 #: ../../whatsnew/3.6.rst:1701
 msgid ""
@@ -2405,6 +3331,11 @@ msgid ""
 "to :class:`!warnings.WarningMessage` (contributed by Victor Stinner "
 "in :issue:`26568` and :issue:`26567`)."
 msgstr ""
+"Der Funktion :func:`warnings.warn_explicit` wurde ein neuer optionaler "
+"Parameter *source* hinzugefügt: das zerstörte Objekt, das "
+"eine :exc:`ResourceWarning` ausgegeben hat. Ein Attribut *source* wurde "
+"außerdem zu :class:`!warnings.WarningMessage` hinzugefügt (beigetragen von "
+"Victor Stinner in :issue:`26568` und :issue:`26567`)."
 
 #: ../../whatsnew/3.6.rst:1707
 msgid ""
@@ -2412,10 +3343,13 @@ msgid ""
 "module is now used to try to retrieve the traceback where the destroyed "
 "object was allocated."
 msgstr ""
+"Wird eine :exc:`ResourceWarning` protokolliert, wird nun das "
+"Modul :mod:`tracemalloc` verwendet, um zu versuchen, den Traceback zu "
+"ermitteln, an dem das zerstörte Objekt angelegt wurde."
 
 #: ../../whatsnew/3.6.rst:1710
 msgid "Example with the script ``example.py``::"
-msgstr ""
+msgstr "Beispiel mit dem Skript ``example.py``::"
 
 #: ../../whatsnew/3.6.rst:1712
 msgid ""
@@ -2427,10 +3361,17 @@ msgid ""
 "f = func()\n"
 "f = None"
 msgstr ""
+"import warnings\n"
+"\n"
+"def func():\n"
+"    return open(__file__)\n"
+"\n"
+"f = func()\n"
+"f = None"
 
 #: ../../whatsnew/3.6.rst:1720
 msgid "Output of the command ``python3.6 -Wd -X tracemalloc=5 example.py``::"
-msgstr ""
+msgstr "Ausgabe des Befehls ``python3.6 -Wd -X tracemalloc=5 example.py``::"
 
 #: ../../whatsnew/3.6.rst:1722
 msgid ""
@@ -2443,6 +3384,14 @@ msgid ""
 "  File \"example.py\", lineno 6\n"
 "    f = func()"
 msgstr ""
+"example.py:7: ResourceWarning: unclosed file <_io.TextIOWrapper "
+"name='example.py' mode='r' encoding='UTF-8'>\n"
+"  f = None\n"
+"Object allocated at (most recent call first):\n"
+"  File \"example.py\", lineno 4\n"
+"    return open(__file__)\n"
+"  File \"example.py\", lineno 6\n"
+"    f = func()"
 
 #: ../../whatsnew/3.6.rst:1730
 msgid ""
@@ -2450,20 +3399,25 @@ msgid ""
 "if :mod:`tracemalloc` is tracing Python memory allocations and if "
 "the :mod:`warnings` module was already imported."
 msgstr ""
+"Der Traceback „Object allocated at“ ist neu und wird nur angezeigt, "
+"wenn :mod:`tracemalloc` die Speicherzuweisungen von Python verfolgt und das "
+"Modul :mod:`warnings` bereits importiert wurde."
 
 #: ../../whatsnew/3.6.rst:1736
 msgid "winreg"
-msgstr ""
+msgstr "winreg"
 
 #: ../../whatsnew/3.6.rst:1738
 msgid ""
 "Added the 64-bit integer type :data:`REG_QWORD <winreg.REG_QWORD>`. "
 "(Contributed by Clement Rouault in :issue:`23026`.)"
 msgstr ""
+"Den 64-Bit-Ganzzahltyp :data:`REG_QWORD <winreg.REG_QWORD>` hinzugefügt. "
+"(Beigetragen von Clement Rouault in :issue:`23026`.)"
 
 #: ../../whatsnew/3.6.rst:1743
 msgid "winsound"
-msgstr ""
+msgstr "winsound"
 
 #: ../../whatsnew/3.6.rst:1745
 msgid ""
@@ -2471,10 +3425,13 @@ msgid ""
 "<winsound.Beep>`, :func:`MessageBeep <winsound.MessageBeep>`, "
 "and :func:`PlaySound <winsound.PlaySound>` (:issue:`27982`)."
 msgstr ""
+"An :func:`Beep <winsound.Beep>`, :func:`MessageBeep <winsound.MessageBeep>` "
+"und :func:`PlaySound <winsound.PlaySound>` können nun Schlüsselwortargumente "
+"übergeben werden (:issue:`27982`)."
 
 #: ../../whatsnew/3.6.rst:1751
 msgid "xmlrpc.client"
-msgstr ""
+msgstr "xmlrpc.client"
 
 #: ../../whatsnew/3.6.rst:1753
 msgid ""
@@ -2482,10 +3439,13 @@ msgid ""
 "types used by the Apache XML-RPC implementation for numerics and ``None``. "
 "(Contributed by Serhiy Storchaka in :issue:`26885`.)"
 msgstr ""
+"Das Modul :mod:`xmlrpc.client` unterstützt nun das Unmarshalling "
+"zusätzlicher Datentypen, die die Apache-XML-RPC-Implementierung für Zahlen "
+"und ``None`` verwendet. (Beigetragen von Serhiy Storchaka in :issue:`26885`.)"
 
 #: ../../whatsnew/3.6.rst:1760
 msgid "zipfile"
-msgstr ""
+msgstr "zipfile"
 
 #: ../../whatsnew/3.6.rst:1762
 msgid ""
@@ -2495,6 +3455,12 @@ msgid ""
 "check if the :class:`~zipfile.ZipInfo` instance represents a directory. "
 "(Contributed by Thomas Kluyver in :issue:`26039`.)"
 msgstr ""
+"Eine neue Klassenmethode :meth:`ZipInfo.from_file() "
+"<zipfile.ZipInfo.from_file>` erlaubt es, eine :class:`~zipfile.ZipInfo`-"
+"Instanz aus einer Datei im Dateisystem zu erzeugen. Mit einer neuen "
+"Methode :meth:`ZipInfo.is_dir() <zipfile.ZipInfo.is_dir>` lässt sich prüfen, "
+"ob die :class:`~zipfile.ZipInfo`-Instanz ein Verzeichnis darstellt. "
+"(Beigetragen von Thomas Kluyver in :issue:`26039`.)"
 
 #: ../../whatsnew/3.6.rst:1768
 msgid ""
@@ -2502,10 +3468,13 @@ msgid ""
 "write data into a ZIP file, as well as for extracting data. (Contributed by "
 "Thomas Kluyver in :issue:`26039`.)"
 msgstr ""
+"Die Methode :meth:`ZipFile.open() <zipfile.ZipFile.open>` kann nun sowohl "
+"zum Schreiben von Daten in eine ZIP-Datei als auch zum Extrahieren verwendet "
+"werden. (Beigetragen von Thomas Kluyver in :issue:`26039`.)"
 
 #: ../../whatsnew/3.6.rst:1774
 msgid "zlib"
-msgstr ""
+msgstr "zlib"
 
 #: ../../whatsnew/3.6.rst:1776
 msgid ""
@@ -2513,6 +3482,9 @@ msgid ""
 "keyword arguments. (Contributed by Aviv Palivoda in :issue:`26243` and Xiang "
 "Zhang in :issue:`16764` respectively.)"
 msgstr ""
+"Die Funktionen :func:`~zlib.compress` und :func:`~zlib.decompress` "
+"akzeptieren nun Schlüsselwortargumente. (Beigetragen von Aviv Palivoda "
+"in :issue:`26243` bzw. Xiang Zhang in :issue:`16764`.)"
 
 #: ../../whatsnew/3.6.rst:1783
 msgid "Optimizations"
@@ -2525,18 +3497,27 @@ msgid ""
 "with input and reviews from Serhiy Storchaka and Victor Stinner "
 "in :issue:`26647` and :issue:`28050`.)"
 msgstr ""
+"Der Python-Interpreter verwendet nun einen 16-Bit-Wordcode statt Bytecode, "
+"was eine Reihe von Opcode-Optimierungen ermöglicht hat. (Beigetragen von "
+"Demur Rumed mit Beiträgen und Reviews von Serhiy Storchaka und Victor "
+"Stinner in :issue:`26647` und :issue:`28050`.)"
 
 #: ../../whatsnew/3.6.rst:1790
 msgid ""
 "The :class:`asyncio.Future` class now has an optimized C implementation. "
 "(Contributed by Yury Selivanov and INADA Naoki in :issue:`26081`.)"
 msgstr ""
+"Die Klasse :class:`asyncio.Future` hat nun eine optimierte C-"
+"Implementierung. (Beigetragen von Yury Selivanov und INADA Naoki "
+"in :issue:`26081`.)"
 
 #: ../../whatsnew/3.6.rst:1793
 msgid ""
 "The :class:`asyncio.Task` class now has an optimized C implementation. "
 "(Contributed by Yury Selivanov in :issue:`28544`.)"
 msgstr ""
+"Die Klasse :class:`asyncio.Task` hat nun eine optimierte C-Implementierung. "
+"(Beigetragen von Yury Selivanov in :issue:`28544`.)"
 
 #: ../../whatsnew/3.6.rst:1796
 msgid ""
@@ -2544,6 +3525,9 @@ msgid ""
 "caching of generic types) allow up to 30 times performance improvements and "
 "reduced memory footprint."
 msgstr ""
+"Verschiedene Verbesserungen an der Implementierung des Moduls :mod:`typing` "
+"(etwa das Zwischenspeichern generischer Typen) ermöglichen bis zu 30-fache "
+"Performance-Verbesserungen und einen geringeren Speicherbedarf."
 
 #: ../../whatsnew/3.6.rst:1800
 msgid ""
@@ -2551,6 +3535,9 @@ msgid ""
 "``surrogateescape``, ``ignore`` and ``replace`` (Contributed by Victor "
 "Stinner in :issue:`24870`)."
 msgstr ""
+"Der ASCII-Decoder ist nun für die Fehlerbehandler ``surrogateescape``, "
+"``ignore`` und ``replace`` bis zu 60-mal so schnell (Beigetragen von Victor "
+"Stinner in :issue:`24870`)."
 
 #: ../../whatsnew/3.6.rst:1804
 msgid ""
@@ -2558,6 +3545,9 @@ msgid ""
 "error handler ``surrogateescape`` (Contributed by Victor Stinner "
 "in :issue:`25227`)."
 msgstr ""
+"Die ASCII- und Latin1-Encoder sind nun für den Fehlerbehandler "
+"``surrogateescape`` bis zu dreimal so schnell (Beigetragen von Victor "
+"Stinner in :issue:`25227`)."
 
 #: ../../whatsnew/3.6.rst:1808
 msgid ""
@@ -2565,6 +3555,9 @@ msgid ""
 "``ignore``, ``replace``, ``surrogateescape``, ``surrogatepass`` (Contributed "
 "by Victor Stinner in :issue:`25267`)."
 msgstr ""
+"Der UTF-8-Encoder ist nun für die Fehlerbehandler ``ignore``, ``replace``, "
+"``surrogateescape`` und ``surrogatepass`` bis zu 75-mal so schnell "
+"(Beigetragen von Victor Stinner in :issue:`25267`)."
 
 #: ../../whatsnew/3.6.rst:1812
 msgid ""
@@ -2572,18 +3565,25 @@ msgid ""
 "``ignore``, ``replace`` and ``surrogateescape`` (Contributed by Victor "
 "Stinner in :issue:`25301`)."
 msgstr ""
+"Der UTF-8-Decoder ist nun für die Fehlerbehandler ``ignore``, ``replace`` "
+"und ``surrogateescape`` bis zu 15-mal so schnell (Beigetragen von Victor "
+"Stinner in :issue:`25301`)."
 
 #: ../../whatsnew/3.6.rst:1816
 msgid ""
 "``bytes % args`` is now up to 2 times faster. (Contributed by Victor Stinner "
 "in :issue:`25349`)."
 msgstr ""
+"``bytes % args`` ist nun bis zu doppelt so schnell. (Beigetragen von Victor "
+"Stinner in :issue:`25349`)."
 
 #: ../../whatsnew/3.6.rst:1819
 msgid ""
 "``bytearray % args`` is now between 2.5 and 5 times faster. (Contributed by "
 "Victor Stinner in :issue:`25399`)."
 msgstr ""
+"``bytearray % args`` ist nun 2,5- bis 5-mal so schnell. (Beigetragen von "
+"Victor Stinner in :issue:`25399`)."
 
 #: ../../whatsnew/3.6.rst:1822
 msgid ""
@@ -2591,12 +3591,17 @@ msgid ""
 "between 2x and 3.5x faster. (Contributed by Victor Stinner "
 "in :issue:`25401`)."
 msgstr ""
+":meth:`bytes.fromhex` und :meth:`bytearray.fromhex` optimiert: Sie sind nun "
+"2- bis 3,5-mal so schnell. (Beigetragen von Victor Stinner "
+"in :issue:`25401`)."
 
 #: ../../whatsnew/3.6.rst:1825
 msgid ""
 "Optimize ``bytes.replace(b'', b'.')`` and ``bytearray.replace(b'', b'.')``: "
 "up to 80% faster. (Contributed by Josh Snider in :issue:`26574`)."
 msgstr ""
+"``bytes.replace(b'', b'.')`` und ``bytearray.replace(b'', b'.')`` optimiert: "
+"bis zu 80 % schneller. (Beigetragen von Josh Snider in :issue:`26574`)."
 
 #: ../../whatsnew/3.6.rst:1828
 msgid ""
@@ -2607,6 +3612,13 @@ msgid ""
 "with a short lifetime, and use :c:func:`malloc` for larger memory blocks. "
 "(Contributed by Victor Stinner in :issue:`26249`)."
 msgstr ""
+"Allokatorfunktionen der Domäne :c:func:`PyMem_Malloc` "
+"(:c:macro:`PYMEM_DOMAIN_MEM`) verwenden nun den :ref:`Speicherallokator "
+"pymalloc <pymalloc>` statt der Funktion :c:func:`malloc` der C-Bibliothek. "
+"Der Allokator pymalloc ist für Objekte von höchstens 512 Bytes mit kurzer "
+"Lebensdauer optimiert und verwendet für größere "
+"Speicherblöcke :c:func:`malloc`. (Beigetragen von Victor Stinner "
+"in :issue:`26249`)."
 
 #: ../../whatsnew/3.6.rst:1835
 msgid ""
@@ -2614,6 +3626,9 @@ msgid ""
 "deserializing many small objects (Contributed by Victor Stinner "
 "in :issue:`27056`)."
 msgstr ""
+":func:`pickle.load` und :func:`pickle.loads` sind beim Deserialisieren "
+"vieler kleiner Objekte nun bis zu 10 % schneller (Beigetragen von Victor "
+"Stinner in :issue:`27056`)."
 
 #: ../../whatsnew/3.6.rst:1839
 msgid ""
@@ -2623,6 +3638,11 @@ msgid ""
 "Clinic this overhead is significantly decreased. (Contributed by Serhiy "
 "Storchaka in :issue:`27574`)."
 msgstr ""
+"Die Übergabe von :term:`Schlüsselwortargumenten <keyword argument>` an eine "
+"Funktion verursacht im Vergleich zur Übergabe von :term:`Positionsargumenten "
+"<positional argument>` Mehraufwand. Bei mit Argument Clinic implementierten "
+"Erweiterungsfunktionen ist dieser Mehraufwand nun deutlich geringer. "
+"(Beigetragen von Serhiy Storchaka in :issue:`27574`)."
 
 #: ../../whatsnew/3.6.rst:1845
 msgid ""
@@ -2630,6 +3650,9 @@ msgid ""
 "the :mod:`glob` module; they are now about 3--6 times faster. (Contributed "
 "by Serhiy Storchaka in :issue:`25596`)."
 msgstr ""
+"Die Funktionen :func:`~glob.glob` und :func:`~glob.iglob` im "
+"Modul :mod:`glob` wurden optimiert. Sie sind nun etwa 3- bis 6-mal "
+"schneller. (Beigetragen von Serhiy Storchaka in :issue:`25596`)."
 
 #: ../../whatsnew/3.6.rst:1849
 msgid ""
@@ -2637,6 +3660,9 @@ msgid ""
 "about 1.5--4 times faster. (Contributed by Serhiy Storchaka "
 "in :issue:`26032`)."
 msgstr ""
+"Globbing in :mod:`pathlib` wurde durch Verwendung von :func:`os.scandir` "
+"optimiert. Es ist nun etwa 1,5- bis 4-mal schneller. (Beigetragen von Serhiy "
+"Storchaka in :issue:`26032`)."
 
 #: ../../whatsnew/3.6.rst:1853
 msgid ""
@@ -2644,6 +3670,9 @@ msgid ""
 "has been significantly improved. (Contributed by Serhiy Storchaka "
 "in :issue:`25638`, :issue:`25873`, and :issue:`25869`.)"
 msgstr ""
+"Die Performance beim Parsen, Iterieren und tiefen Kopieren "
+"mit :class:`xml.etree.ElementTree` wurde erheblich verbessert. (Beigetragen "
+"von Serhiy Storchaka in :issue:`25638`, :issue:`25873` und :issue:`25869`.)"
 
 #: ../../whatsnew/3.6.rst:1858
 msgid ""
@@ -2651,10 +3680,13 @@ msgid ""
 "is now 2 to 3 times faster. (Contributed by Serhiy Storchaka "
 "in :issue:`25971`.)"
 msgstr ""
+"Das Erzeugen von :class:`fractions.Fraction`-Instanzen aus Gleitkommazahlen "
+"und Dezimalzahlen ist nun 2- bis 3-mal schneller. (Beigetragen von Serhiy "
+"Storchaka in :issue:`25971`.)"
 
 #: ../../whatsnew/3.6.rst:1864
 msgid "Build and C API Changes"
-msgstr ""
+msgstr "Änderungen am Build und an der C-API"
 
 #: ../../whatsnew/3.6.rst:1866
 msgid ""
@@ -2663,6 +3695,10 @@ msgid ""
 "custom macros like ``PY_LONG_LONG``. For more information, see :pep:`7` "
 "and :issue:`17884`."
 msgstr ""
+"Python erfordert zum Bauen nun etwas C99-Unterstützung in der Toolchain. Vor "
+"allem verwendet Python nun Standard-Ganzzahltypen und -Makros statt eigener "
+"Makros wie ``PY_LONG_LONG``. Weitere Informationen siehe :pep:`7` "
+"und :issue:`17884`."
 
 #: ../../whatsnew/3.6.rst:1871
 msgid ""
@@ -2672,6 +3708,11 @@ msgid ""
 "emulator with only about 16 tests failures. See the Android meta-"
 "issue :issue:`26865`."
 msgstr ""
+"Die Cross-Kompilierung von CPython mit dem Android NDK und einem Android-API-"
+"Level von 21 (Android 5.0 Lollipop) oder höher läuft erfolgreich. Android "
+"ist zwar noch keine unterstützte Plattform, die Python-Testsuite läuft aber "
+"auf dem Android-Emulator mit nur etwa 16 fehlschlagenden Tests. Siehe das "
+"Android-Meta-Issue :issue:`26865`."
 
 #: ../../whatsnew/3.6.rst:1876
 msgid ""
@@ -2679,6 +3720,9 @@ msgid ""
 "will activate expensive optimizations like PGO. (Original patch by "
 "Alecsandru Patrascu of Intel in :issue:`26359`.)"
 msgstr ""
+"Das configure-Flag ``--enable-optimizations`` wurde hinzugefügt. Ist es "
+"aktiviert, werden aufwendige Optimierungen wie PGO eingeschaltet. "
+"(Ursprünglicher Patch von Alecsandru Patrascu von Intel in :issue:`26359`.)"
 
 #: ../../whatsnew/3.6.rst:1880
 msgid ""
@@ -2687,12 +3731,18 @@ msgid ""
 "and :c:macro:`PYMEM_DOMAIN_MEM` (ex: :c:func:`PyMem_Malloc`) domains are "
 "called."
 msgstr ""
+"Der :term:`GIL <global interpreter lock>` muss nun gehalten werden, wenn "
+"Allokatorfunktionen der Domänen :c:macro:`PYMEM_DOMAIN_OBJ` (z. "
+"B. :c:func:`PyObject_Malloc`) und :c:macro:`PYMEM_DOMAIN_MEM` (z. "
+"B. :c:func:`PyMem_Malloc`) aufgerufen werden."
 
 #: ../../whatsnew/3.6.rst:1884
 msgid ""
 "New :c:func:`Py_FinalizeEx` API which indicates if flushing buffered data "
 "failed. (Contributed by Martin Panter in :issue:`5319`.)"
 msgstr ""
+"Neue API :c:func:`Py_FinalizeEx`, die angibt, ob das Leeren gepufferter "
+"Daten fehlgeschlagen ist. (Beigetragen von Martin Panter in :issue:`5319`.)"
 
 #: ../../whatsnew/3.6.rst:1888
 msgid ""
@@ -2700,6 +3750,10 @@ msgid ""
 "parameters <positional-only_parameter>`.  Positional-only parameters are "
 "defined by empty names. (Contributed by Serhiy Storchaka in :issue:`26282`)."
 msgstr ""
+":c:func:`PyArg_ParseTupleAndKeywords` unterstützt nun :ref:`rein positionale "
+"Parameter <positional-only_parameter>`. Rein positionale Parameter werden "
+"durch leere Namen definiert. (Beigetragen von Serhiy Storchaka "
+"in :issue:`26282`)."
 
 #: ../../whatsnew/3.6.rst:1893
 msgid ""
@@ -2707,6 +3761,9 @@ msgid ""
 "lines as ``\"[Previous line repeated {count} more times]\"``. (Contributed "
 "by Emanuel Barry in :issue:`26823`.)"
 msgstr ""
+"Die Methode ``PyTraceback_Print`` kürzt lange Folgen wiederholter Zeilen nun "
+"als ``\"[Previous line repeated {count} more times]\"`` ab. (Beigetragen von "
+"Emanuel Barry in :issue:`26823`.)"
 
 #: ../../whatsnew/3.6.rst:1897
 msgid ""
@@ -2714,6 +3771,9 @@ msgid ""
 "specifying a subclass of :exc:`ImportError` to raise. (Contributed by Eric "
 "Snow in :issue:`15767`.)"
 msgstr ""
+"Die neue Funktion :c:func:`PyErr_SetImportErrorSubclass` erlaubt es, eine "
+"auszulösende Unterklasse von :exc:`ImportError` anzugeben. (Beigetragen von "
+"Eric Snow in :issue:`15767`.)"
 
 #: ../../whatsnew/3.6.rst:1901
 msgid ""
@@ -2721,6 +3781,9 @@ msgid ""
 "a :exc:`ResourceWarning` providing the source of the resource allocation. "
 "(Contributed by Victor Stinner in :issue:`26567`.)"
 msgstr ""
+"Mit der neuen Funktion :c:func:`PyErr_ResourceWarning` lässt sich "
+"eine :exc:`ResourceWarning` mit Angabe der Quelle der Ressourcenzuweisung "
+"erzeugen. (Beigetragen von Victor Stinner in :issue:`26567`.)"
 
 #: ../../whatsnew/3.6.rst:1905
 msgid ""
@@ -2728,22 +3791,30 @@ msgid ""
 "representation of a :term:`path-like object`. (Contributed by Brett Cannon "
 "in :issue:`27186`.)"
 msgstr ""
+"Die neue Funktion :c:func:`PyOS_FSPath` gibt die Dateisystemdarstellung "
+"eines :term:`pfadähnlichen Objekts <path-like object>` zurück. (Beigetragen "
+"von Brett Cannon in :issue:`27186`.)"
 
 #: ../../whatsnew/3.6.rst:1909
 msgid ""
 "The :c:func:`PyUnicode_FSConverter` and :c:func:`PyUnicode_FSDecoder` "
 "functions will now accept :term:`path-like objects <path-like object>`."
 msgstr ""
+"Die Funktionen :c:func:`PyUnicode_FSConverter` "
+"und :c:func:`PyUnicode_FSDecoder` akzeptieren nun :term:`pfadähnliche "
+"Objekte <path-like object>`."
 
 #: ../../whatsnew/3.6.rst:1914
 msgid "Other Improvements"
-msgstr ""
+msgstr "Weitere Verbesserungen"
 
 #: ../../whatsnew/3.6.rst:1916
 msgid ""
 "When :option:`--version` (short form: :option:`-V`) is supplied twice, "
 "Python prints :data:`sys.version` for detailed information."
 msgstr ""
+"Wird :option:`--version` (Kurzform: :option:`-V`) zweimal angegeben, gibt "
+"Python für detaillierte Informationen :data:`sys.version` aus."
 
 #: ../../whatsnew/3.6.rst:1919
 msgid ""
@@ -2751,6 +3822,9 @@ msgid ""
 "Python 3.6.0b4+ (3.6:223967b49e49+, Nov 21 2016, 20:55:04)\n"
 "[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)]"
 msgstr ""
+"$ ./python -VV\n"
+"Python 3.6.0b4+ (3.6:223967b49e49+, Nov 21 2016, 20:55:04)\n"
+"[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)]"
 
 #: ../../whatsnew/3.6.rst:1927
 msgid "Deprecated"
@@ -2758,7 +3832,7 @@ msgstr "Als veraltet markiert"
 
 #: ../../whatsnew/3.6.rst:1930
 msgid "New Keywords"
-msgstr ""
+msgstr "Neue Schlüsselwörter"
 
 #: ../../whatsnew/3.6.rst:1932
 msgid ""
@@ -2767,10 +3841,15 @@ msgid ""
 "become proper keywords in Python 3.7.  Starting in Python 3.6, the use of "
 "``async`` or ``await`` as names will generate a :exc:`DeprecationWarning`."
 msgstr ""
+"``async`` und ``await`` sollten nicht als Variablen-, Klassen-, Funktions- "
+"oder Modulnamen verwendet werden. Sie wurden in Python 3.5 durch :pep:`492` "
+"eingeführt und werden in Python 3.7 zu echten Schlüsselwörtern. Ab Python "
+"3.6 erzeugt die Verwendung von ``async`` oder ``await`` als Namen "
+"eine :exc:`DeprecationWarning`."
 
 #: ../../whatsnew/3.6.rst:1939
 msgid "Deprecated Python behavior"
-msgstr ""
+msgstr "Veraltetes Python-Verhalten"
 
 #: ../../whatsnew/3.6.rst:1941
 msgid ""
@@ -2778,6 +3857,9 @@ msgid ""
 "generate a :exc:`DeprecationWarning`, and will trigger a :exc:`RuntimeError` "
 "in Python 3.7.  See :ref:`whatsnew-pep-479` for details."
 msgstr ""
+"Das Auslösen der Ausnahme :exc:`StopIteration` in einem Generator erzeugt "
+"nun eine :exc:`DeprecationWarning` und löst in Python 3.7 "
+"einen :exc:`RuntimeError` aus. Details siehe :ref:`whatsnew-pep-479`."
 
 #: ../../whatsnew/3.6.rst:1945
 msgid ""
@@ -2787,6 +3869,11 @@ msgid ""
 "Backward compatibility will be removed in Python 3.7. (Contributed by Yury "
 "Selivanov in :issue:`27243`.)"
 msgstr ""
+"Von der Methode :meth:`~object.__aiter__` wird nun erwartet, dass sie direkt "
+"einen asynchronen Iterator zurückgibt statt wie bisher ein awaitable. "
+"Ersteres löst eine :exc:`DeprecationWarning` aus. Die Abwärtskompatibilität "
+"wird in Python 3.7 entfernt. (Beigetragen von Yury Selivanov "
+"in :issue:`27243`.)"
 
 #: ../../whatsnew/3.6.rst:1951
 msgid ""
@@ -2795,6 +3882,10 @@ msgid ""
 "a :exc:`SyntaxError`, that will not be for several Python releases. "
 "(Contributed by Emanuel Barry in :issue:`27364`.)"
 msgstr ""
+"Ein Paar aus Backslash und Zeichen, das keine gültige Escape-Sequenz ist, "
+"erzeugt nun eine :exc:`DeprecationWarning`. Auch wenn das irgendwann zu "
+"einem :exc:`SyntaxError` wird, wird das erst in einigen Python-Releases der "
+"Fall sein. (Beigetragen von Emanuel Barry in :issue:`27364`.)"
 
 #: ../../whatsnew/3.6.rst:1956
 msgid ""
@@ -2803,34 +3894,42 @@ msgid ""
 "are not defined now raises an :exc:`ImportWarning`. (Contributed by Rose "
 "Ames in :issue:`25791`.)"
 msgstr ""
+"Beim Durchführen eines relativen Imports löst das Zurückgreifen auf "
+"``__name__`` und ``__path__`` des aufrufenden Moduls, wenn ``__spec__`` oder "
+"``__package__`` nicht definiert sind, nun eine :exc:`ImportWarning` aus. "
+"(Beigetragen von Rose Ames in :issue:`25791`.)"
 
 #: ../../whatsnew/3.6.rst:1963
 msgid "Deprecated Python modules, functions and methods"
-msgstr ""
+msgstr "Veraltete Python-Module, -Funktionen und -Methoden"
 
 #: ../../whatsnew/3.6.rst:1966
 msgid "asynchat"
-msgstr ""
+msgstr "asynchat"
 
 #: ../../whatsnew/3.6.rst:1968
 msgid ""
 "The :mod:`!asynchat` has been deprecated in favor of :mod:`asyncio`. "
 "(Contributed by Mariatta in :issue:`25002`.)"
 msgstr ""
+":mod:`!asynchat` ist zugunsten von :mod:`asyncio` veraltet. (Beigetragen von "
+"Mariatta in :issue:`25002`.)"
 
 #: ../../whatsnew/3.6.rst:1973
 msgid "asyncore"
-msgstr ""
+msgstr "asyncore"
 
 #: ../../whatsnew/3.6.rst:1975
 msgid ""
 "The :mod:`!asyncore` has been deprecated in favor of :mod:`asyncio`. "
 "(Contributed by Mariatta in :issue:`25002`.)"
 msgstr ""
+":mod:`!asyncore` ist zugunsten von :mod:`asyncio` veraltet. (Beigetragen von "
+"Mariatta in :issue:`25002`.)"
 
 #: ../../whatsnew/3.6.rst:1980
 msgid "dbm"
-msgstr ""
+msgstr "dbm"
 
 #: ../../whatsnew/3.6.rst:1982
 msgid ""
@@ -2839,6 +3938,11 @@ msgid ""
 "with the ``'r'`` mode.  This behavior is now deprecated and will be removed "
 "in 3.8. (Contributed by Serhiy Storchaka in :issue:`21708`.)"
 msgstr ""
+"Anders als andere :mod:`dbm`-Implementierungen erzeugt das "
+"Modul :mod:`dbm.dumb` Datenbanken im Modus ``'rw'`` und erlaubt das Ändern "
+"von im Modus ``'r'`` geöffneten Datenbanken. Dieses Verhalten ist nun "
+"veraltet und wird in 3.8 entfernt. (Beigetragen von Serhiy Storchaka "
+"in :issue:`21708`.)"
 
 #: ../../whatsnew/3.6.rst:1992
 msgid ""
@@ -2847,16 +3951,22 @@ msgid ""
 "Support for this parameter will be removed in a future Python release.  "
 "See :issue:`27919` for details."
 msgstr ""
+"Das undokumentierte Argument ``extra_path`` des Konstruktors von "
+"``distutils.Distribution`` gilt nun als veraltet und löst eine Warnung aus, "
+"wenn es gesetzt ist. Die Unterstützung für diesen Parameter wird in einem "
+"künftigen Python-Release entfernt. Details siehe :issue:`27919`."
 
 #: ../../whatsnew/3.6.rst:1999
 msgid "grp"
-msgstr ""
+msgstr "grp"
 
 #: ../../whatsnew/3.6.rst:2001
 msgid ""
 "The support of non-integer arguments in :func:`~grp.getgrgid` has been "
 "deprecated. (Contributed by Serhiy Storchaka in :issue:`26129`.)"
 msgstr ""
+"Die Unterstützung nicht ganzzahliger Argumente in :func:`~grp.getgrgid` ist "
+"veraltet. (Beigetragen von Serhiy Storchaka in :issue:`26129`.)"
 
 #: ../../whatsnew/3.6.rst:2009
 msgid ""
@@ -2867,6 +3977,13 @@ msgid ""
 "deprecated in previous versions of Python in favour "
 "of :meth:`importlib.abc.Loader.exec_module`."
 msgstr ""
+"Die Methoden ``importlib.machinery.SourceFileLoader.load_module`` und "
+"``importlib.machinery.SourcelessFileLoader.load_module`` sind nun veraltet. "
+"Sie waren die einzigen verbliebenen Implementierungen von "
+"``importlib.abc.Loader.load_module`` in :mod:`importlib`, die in früheren "
+"Python-Versionen nicht zugunsten "
+"von :meth:`importlib.abc.Loader.exec_module` als veraltet markiert worden "
+"waren."
 
 #: ../../whatsnew/3.6.rst:2016
 msgid ""
@@ -2874,6 +3991,10 @@ msgid ""
 "deprecated. As of 3.6.0, it is still added to :data:`sys.meta_path` by "
 "default (on Windows), but this may change in future releases."
 msgstr ""
+"Die Klasse :class:`importlib.machinery.WindowsRegistryFinder` ist nun "
+"veraltet. Ab 3.6.0 wird sie (unter Windows) weiterhin standardmäßig "
+"zu :data:`sys.meta_path` hinzugefügt, das kann sich aber in künftigen "
+"Releases ändern."
 
 #: ../../whatsnew/3.6.rst:2023
 msgid ""
@@ -2882,6 +4003,10 @@ msgid ""
 "functions is now deprecated. (Contributed by Serhiy Storchaka "
 "in :issue:`25791` and :issue:`26754`.)"
 msgstr ""
+"Die undokumentierte Unterstützung allgemeiner :term:`bytes-ähnlicher Objekte "
+"<bytes-like object>` als Pfade in Funktionen von :mod:`os`, :func:`compile` "
+"und ähnlichen Funktionen ist nun veraltet. (Beigetragen von Serhiy Storchaka "
+"in :issue:`25791` und :issue:`26754`.)"
 
 #: ../../whatsnew/3.6.rst:2031
 msgid ""
@@ -2890,6 +4015,10 @@ msgid ""
 "version.  Flags at the start of a regular expression are still allowed. "
 "(Contributed by Serhiy Storchaka in :issue:`22493`.)"
 msgstr ""
+"Die Unterstützung von Inline-Flags ``(?letters)`` mitten im regulären "
+"Ausdruck ist veraltet und wird in einer künftigen Python-Version entfernt. "
+"Flags am Anfang eines regulären Ausdrucks sind weiterhin erlaubt. "
+"(Beigetragen von Serhiy Storchaka in :issue:`22493`.)"
 
 #: ../../whatsnew/3.6.rst:2039
 msgid ""
@@ -2897,6 +4026,9 @@ msgid ""
 "the future the :mod:`ssl` module will require at least OpenSSL 1.0.2 or "
 "1.1.0."
 msgstr ""
+"OpenSSL 0.9.8, 1.0.0 und 1.0.1 sind veraltet und werden nicht mehr "
+"unterstützt. Künftig wird das Modul :mod:`ssl` mindestens OpenSSL 1.0.2 oder "
+"1.1.0 erfordern."
 
 #: ../../whatsnew/3.6.rst:2043
 msgid ""
@@ -2905,6 +4037,10 @@ msgid ""
 "and :mod:`smtplib` have been deprecated in favor of ``context``. "
 "(Contributed by Christian Heimes in :issue:`28022`.)"
 msgstr ""
+"SSL-bezogene Argumente wie ``certfile``, ``keyfile`` und ``check_hostname`` "
+"in :mod:`ftplib`, :mod:`http.client`, :mod:`imaplib`, :mod:`poplib` "
+"und :mod:`smtplib` sind zugunsten von ``context`` veraltet. (Beigetragen von "
+"Christian Heimes in :issue:`28022`.)"
 
 #: ../../whatsnew/3.6.rst:2048
 msgid ""
@@ -2913,12 +4049,18 @@ msgid ""
 "OpenSSL. Other features are deprecated in favor of a different API. "
 "(Contributed by Christian Heimes in :issue:`28022` and :issue:`26470`.)"
 msgstr ""
+"Einige Protokolle und Funktionen des Moduls :mod:`ssl` sind nun veraltet. "
+"Manche Funktionen werden in künftigen OpenSSL-Versionen nicht mehr verfügbar "
+"sein. Andere sind zugunsten einer anderen API veraltet. (Beigetragen von "
+"Christian Heimes in :issue:`28022` und :issue:`26470`.)"
 
 #: ../../whatsnew/3.6.rst:2056
 msgid ""
 "The :mod:`!tkinter.tix` module is now deprecated.  :mod:`tkinter` users "
 "should use :mod:`tkinter.ttk` instead."
 msgstr ""
+"Das Modul :mod:`!tkinter.tix` ist nun veraltet. Benutzer von :mod:`tkinter` "
+"sollten stattdessen :mod:`tkinter.ttk` verwenden."
 
 #: ../../whatsnew/3.6.rst:2064
 msgid ""
@@ -2927,10 +4069,14 @@ msgid ""
 "connected to and thus what Python interpreter will be used by the virtual "
 "environment.  (Contributed by Brett Cannon in :issue:`25154`.)"
 msgstr ""
+"Das Skript ``pyvenv`` ist zugunsten von ``python3 -m venv`` veraltet. Das "
+"vermeidet Verwirrung darüber, mit welchem Python-Interpreter ``pyvenv`` "
+"verbunden ist und welcher Python-Interpreter daher von der virtuellen "
+"Umgebung verwendet wird. (Beigetragen von Brett Cannon in :issue:`25154`.)"
 
 #: ../../whatsnew/3.6.rst:2071
 msgid "xml"
-msgstr ""
+msgstr "xml"
 
 #: ../../whatsnew/3.6.rst:2073
 msgid ""
@@ -2939,10 +4085,14 @@ msgid ""
 "external entities by default. (Contributed by Christian Heimes "
 "in :gh:`61441`.)"
 msgstr ""
+"Als Schutzmaßnahme gegen das Abrufen von DTDs und externen Entitäten "
+"verarbeiten die Module :mod:`xml.dom.minidom` und :mod:`xml.sax` externe "
+"Entitäten standardmäßig nicht mehr. (Beigetragen von Christian Heimes "
+"in :gh:`61441`.)"
 
 #: ../../whatsnew/3.6.rst:2080
 msgid "Deprecated functions and types of the C API"
-msgstr ""
+msgstr "Veraltete Funktionen und Typen der C-API"
 
 #: ../../whatsnew/3.6.rst:2082
 msgid ""
@@ -2951,10 +4101,15 @@ msgid ""
 "and :c:func:`!PyUnicode_AsDecodedUnicode` are deprecated now. Use "
 "the :ref:`generic codec based API <codec-registry>` instead."
 msgstr ""
+"Die undokumentierten Funktionen :c:func:`!"
+"PyUnicode_AsEncodedObject`, :c:func:`!PyUnicode_AsDecodedObject`, :c:func:`!"
+"PyUnicode_AsEncodedUnicode` und :c:func:`!PyUnicode_AsDecodedUnicode` sind "
+"nun veraltet. Verwende stattdessen die :ref:`generische, auf Codecs "
+"basierende API <codec-registry>`."
 
 #: ../../whatsnew/3.6.rst:2089
 msgid "Deprecated Build Options"
-msgstr ""
+msgstr "Veraltete Build-Optionen"
 
 #: ../../whatsnew/3.6.rst:2091
 msgid ""
@@ -2964,6 +4119,12 @@ msgid ""
 "is unaffected by this change.  Note that many OS distributors already use "
 "the ``--with-system-ffi`` flag when building their system Python."
 msgstr ""
+"Das configure-Flag ``--with-system-ffi`` ist auf UNIX-Plattformen außer "
+"macOS nun standardmäßig aktiviert. Es lässt sich mit ``--without-system-"
+"ffi`` deaktivieren, die Verwendung dieses Flags ist aber veraltet und wird "
+"in Python 3.7 nicht mehr akzeptiert. macOS ist von dieser Änderung nicht "
+"betroffen. Beachte, dass viele Betriebssystem-Distributoren das Flag ``--"
+"with-system-ffi`` bereits beim Bauen ihres System-Pythons verwenden."
 
 #: ../../whatsnew/3.6.rst:2099
 msgid "Removed"
@@ -2971,7 +4132,7 @@ msgstr "Entfernt"
 
 #: ../../whatsnew/3.6.rst:2102
 msgid "API and Feature Removals"
-msgstr ""
+msgstr "Entfernte APIs und Funktionen"
 
 #: ../../whatsnew/3.6.rst:2104
 msgid ""
@@ -2980,6 +4141,11 @@ msgid ""
 "for :func:`re.sub` they are still allowed, but deprecated. "
 "The :const:`re.LOCALE` flag can now only be used with binary patterns."
 msgstr ""
+"Unbekannte Escape-Sequenzen aus ``'\\'`` und einem ASCII-Buchstaben in "
+"regulären Ausdrücken führen nun zu einem Fehler. In Ersetzungsvorlagen "
+"für :func:`re.sub` sind sie weiterhin erlaubt, aber veraltet. Das "
+"Flag :const:`re.LOCALE` kann nun nur noch mit binären Mustern verwendet "
+"werden."
 
 #: ../../whatsnew/3.6.rst:2109
 msgid ""
@@ -2987,6 +4153,10 @@ msgid ""
 "3.3). :func:`inspect.getmodulename` should be used for obtaining the module "
 "name for a given path. (Contributed by Yury Selivanov in :issue:`13248`.)"
 msgstr ""
+"``inspect.getmoduleinfo()`` wurde entfernt (war seit CPython 3.3 veraltet). "
+"Zum Ermitteln des Modulnamens für einen gegebenen Pfad "
+"sollte :func:`inspect.getmodulename` verwendet werden. (Beigetragen von Yury "
+"Selivanov in :issue:`13248`.)"
 
 #: ../../whatsnew/3.6.rst:2114
 msgid ""
@@ -2997,6 +4167,12 @@ msgid ""
 "deprecated since Python 3.2 and equivalent functionality is available from "
 "private methods."
 msgstr ""
+"Die Klasse ``trace.Ignore`` und die Methoden ``trace.usage``, "
+"``trace.modname``, ``trace.fullmodname``, ``trace.find_lines_from_code``, "
+"``trace.find_lines``, ``trace.find_strings`` und "
+"``trace.find_executable_linenos`` wurden aus dem Modul :mod:`trace` "
+"entfernt. Es waren undokumentierte, seit Python 3.2 veraltete Methoden, und "
+"gleichwertige Funktionalität ist über private Methoden verfügbar."
 
 #: ../../whatsnew/3.6.rst:2121
 msgid ""
@@ -3004,6 +4180,9 @@ msgid ""
 "in :mod:`tkinter` widget classes were removed (corresponding Tk commands "
 "were obsolete since Tk 4.0)."
 msgstr ""
+"Die Platzhaltermethoden ``tk_menuBar()`` und ``tk_bindForTraversal()`` in "
+"den Widget-Klassen von :mod:`tkinter` wurden entfernt (die entsprechenden Tk-"
+"Befehle waren seit Tk 4.0 überholt)."
 
 #: ../../whatsnew/3.6.rst:2125
 msgid ""
@@ -3012,6 +4191,10 @@ msgid ""
 "Use :class:`io.TextIOWrapper` for reading compressed text files "
 "in :term:`universal newlines` mode."
 msgstr ""
+"Die Methode :meth:`~zipfile.ZipFile.open` der "
+"Klasse :class:`zipfile.ZipFile` unterstützt den Modus ``'U'`` nicht mehr "
+"(war seit Python 3.4 veraltet). Verwende :class:`io.TextIOWrapper`, um "
+"komprimierte Textdateien im Modus :term:`universal newlines` zu lesen."
 
 #: ../../whatsnew/3.6.rst:2130
 msgid ""
@@ -3023,24 +4206,33 @@ msgid ""
 "distribution at `Tools/scripts/h2py.py <https://github.com/python/cpython/"
 "blob/v3.6.15/Tools/scripts/h2py.py>`_."
 msgstr ""
+"Die undokumentierten Module ``IN``, ``CDROM``, ``DLFCN``, ``TYPES``, "
+"``CDIO`` und ``STROPTS`` wurden entfernt. Sie waren in den "
+"plattformspezifischen Verzeichnissen ``Lib/plat-*/`` verfügbar, aber "
+"chronisch veraltet, auf den Plattformen uneinheitlich vorhanden und "
+"ungepflegt. Das Skript, das diese Module erzeugt hat, ist in der "
+"Quelldistribution weiterhin unter `Tools/scripts/h2py.py <https://github.com/"
+"python/cpython/blob/v3.6.15/Tools/scripts/h2py.py>`_ verfügbar."
 
 #: ../../whatsnew/3.6.rst:2138
 msgid "The deprecated ``asynchat.fifo`` class has been removed."
-msgstr ""
+msgstr "Die veraltete Klasse ``asynchat.fifo`` wurde entfernt."
 
 #: ../../whatsnew/3.6.rst:2142
 msgid "Porting to Python 3.6"
-msgstr ""
+msgstr "Portierung auf Python 3.6"
 
 #: ../../whatsnew/3.6.rst:2144
 msgid ""
 "This section lists previously described changes and other bugfixes that may "
 "require changes to your code."
 msgstr ""
+"Dieser Abschnitt listet die bereits beschriebenen Änderungen und weitere "
+"Fehlerbehebungen auf, die Änderungen an deinem Code nötig machen können."
 
 #: ../../whatsnew/3.6.rst:2148
 msgid "Changes in 'python' Command Behavior"
-msgstr ""
+msgstr "Änderungen im Verhalten des Befehls „python“"
 
 #: ../../whatsnew/3.6.rst:2150
 msgid ""
@@ -3050,6 +4242,11 @@ msgid ""
 "to ``stderr`` instead of ``stdout``. (Contributed by Serhiy Storchaka "
 "in :issue:`23034`.)"
 msgstr ""
+"Die Ausgabe eines speziellen Python-Builds mit definierten Makros "
+"``COUNT_ALLOCS``, ``SHOW_ALLOC_COUNT`` oder ``SHOW_TRACK_COUNT`` ist nun "
+"standardmäßig ausgeschaltet. Sie lässt sich mit der Option ``-X "
+"showalloccount`` wieder einschalten. Sie wird nun nach ``stderr`` statt nach "
+"``stdout`` ausgegeben. (Beigetragen von Serhiy Storchaka in :issue:`23034`.)"
 
 #: ../../whatsnew/3.6.rst:2158
 msgid "Changes in the Python API"
@@ -3061,30 +4258,41 @@ msgid ""
 "with ``'+'``. (Contributed by Jeff Balogh and John O'Connor "
 "in :issue:`2091`.)"
 msgstr ""
+":func:`open() <open>` erlaubt es nicht mehr, das Modus-Flag ``'U'`` mit "
+"``'+'`` zu kombinieren. (Beigetragen von Jeff Balogh und John O'Connor "
+"in :issue:`2091`.)"
 
 #: ../../whatsnew/3.6.rst:2164
 msgid ""
 ":mod:`sqlite3` no longer implicitly commits an open transaction before DDL "
 "statements."
 msgstr ""
+":mod:`sqlite3` schließt eine offene Transaktion vor DDL-Anweisungen nicht "
+"mehr implizit ab."
 
 #: ../../whatsnew/3.6.rst:2167
 msgid ""
 "On Linux, :func:`os.urandom` now blocks until the system urandom entropy "
 "pool is initialized to increase the security."
 msgstr ""
+"Unter Linux blockiert :func:`os.urandom` nun, bis der urandom-Entropie-Pool "
+"des Systems initialisiert ist, um die Sicherheit zu erhöhen."
 
 #: ../../whatsnew/3.6.rst:2170
 msgid ""
 "When :meth:`importlib.abc.Loader.exec_module` is "
 "defined, :meth:`importlib.abc.Loader.create_module` must also be defined."
 msgstr ""
+"Ist :meth:`importlib.abc.Loader.exec_module` definiert, muss "
+"auch :meth:`importlib.abc.Loader.create_module` definiert sein."
 
 #: ../../whatsnew/3.6.rst:2173
 msgid ""
 ":c:func:`PyErr_SetImportError` now sets :exc:`TypeError` when its **msg** "
 "argument is not set. Previously only ``NULL`` was returned."
 msgstr ""
+":c:func:`PyErr_SetImportError` setzt nun :exc:`TypeError`, wenn sein "
+"Argument **msg** nicht gesetzt ist. Bisher wurde nur ``NULL`` zurückgegeben."
 
 #: ../../whatsnew/3.6.rst:2176
 msgid ""
@@ -3099,6 +4307,17 @@ msgid ""
 "co_lnotab` format and how to decode it, and see the :pep:`511` for the "
 "rationale."
 msgstr ""
+"Das Format des Attributs :attr:`!codeobject.co_lnotab` von Codeobjekten "
+"wurde geändert, um ein negatives Zeilennummern-Delta zu unterstützen. "
+"Standardmäßig erzeugt Python keinen Bytecode mit negativem Zeilennummern-"
+"Delta. Funktionen, die :attr:`frame.f_lineno`, ``PyFrame_GetLineNumber()`` "
+"oder ``PyCode_Addr2Line()`` verwenden, sind nicht betroffen. Funktionen, "
+"die :attr:`!co_lnotab` direkt dekodieren, sollten so aktualisiert werden, "
+"dass sie für das Zeilennummern-Delta einen vorzeichenbehafteten 8-Bit-"
+"Ganzzahltyp verwenden; das ist aber nur nötig, um Anwendungen mit negativem "
+"Zeilennummern-Delta zu unterstützen. Das Format von :attr:`!co_lnotab` und "
+"wie man es dekodiert, findest du in ``Objects/lnotab_notes.txt``, die "
+"Begründung in :pep:`511`."
 
 #: ../../whatsnew/3.6.rst:2187
 msgid ""
@@ -3107,6 +4326,11 @@ msgid ""
 "booleans being a subclass of integers, this should only be an issue if you "
 "were doing identity checks for ``1`` or ``0``. See :issue:`25768`."
 msgstr ""
+"Die Funktionen im Modul :mod:`compileall` geben nun boolesche Werte statt "
+"``1`` oder ``0`` zurück, um Erfolg bzw. Misserfolg darzustellen. Da "
+"boolesche Werte eine Unterklasse von Ganzzahlen sind, sollte das nur dann "
+"ein Problem sein, wenn du Identitätsprüfungen auf ``1`` oder ``0`` "
+"durchgeführt hast. Siehe :issue:`25768`."
 
 #: ../../whatsnew/3.6.rst:2192
 msgid ""
@@ -3115,12 +4339,18 @@ msgid ""
 "out-of-range values, rather than returning :const:`None`.  "
 "See :issue:`20059`."
 msgstr ""
+"Das Lesen des Attributs :attr:`!port` von Ergebnissen "
+"von :func:`urllib.parse.urlsplit` und :func:`~urllib.parse.urlparse` löst "
+"bei Werten außerhalb des Bereichs nun :exc:`ValueError` aus, "
+"statt :const:`None` zurückzugeben. Siehe :issue:`20059`."
 
 #: ../../whatsnew/3.6.rst:2197
 msgid ""
 "The :mod:`!imp` module now raises a :exc:`DeprecationWarning` instead "
 "of :exc:`PendingDeprecationWarning`."
 msgstr ""
+"Das Modul :mod:`!imp` löst nun eine :exc:`DeprecationWarning` statt "
+"einer :exc:`PendingDeprecationWarning` aus."
 
 #: ../../whatsnew/3.6.rst:2200
 msgid ""
@@ -3132,6 +4362,13 @@ msgid ""
 "and :mod:`wave`.  This means they will export new symbols when ``import *`` "
 "is used. (Contributed by Joel Taddei and Jacek Kołodziej in :issue:`23883`.)"
 msgstr ""
+"Bei folgenden Modulen wurden fehlende APIs zu ihren "
+"Attributen :attr:`~module.__all__` hinzugefügt, passend zu den "
+"dokumentierten APIs: :mod:`calendar`, :mod:`!"
+"cgi`, :mod:`csv`, :mod:`~xml.etree.ElementTree`, :mod:`enum`, :mod:`fileinput`, :mod:`ftplib`, :mod:`logging`, :mod:`mailbox`, :mod:`mimetypes`, :mod:`optparse`, :mod:`plistlib`, :mod:`!"
+"smtpd`, :mod:`subprocess`, :mod:`tarfile`, :mod:`threading` und :mod:`wave`. "
+"Das bedeutet, dass sie bei ``import *`` neue Symbole exportieren. "
+"(Beigetragen von Joel Taddei und Jacek Kołodziej in :issue:`23883`.)"
 
 #: ../../whatsnew/3.6.rst:2211
 msgid ""
@@ -3139,6 +4376,9 @@ msgid ""
 "to ``__spec__.parent`` then :exc:`ImportWarning` is raised. (Contributed by "
 "Brett Cannon in :issue:`25791`.)"
 msgstr ""
+"Wird beim Durchführen eines relativen Imports ``__package__`` nicht als "
+"gleich mit ``__spec__.parent`` bewertet, wird :exc:`ImportWarning` "
+"ausgelöst. (Beigetragen von Brett Cannon in :issue:`25791`.)"
 
 #: ../../whatsnew/3.6.rst:2215
 msgid ""
@@ -3146,6 +4386,9 @@ msgid ""
 "then :exc:`ImportError` will be raised. Previously, :exc:`SystemError` could "
 "be raised. (Contributed by Brett Cannon in :issue:`18018`.)"
 msgstr ""
+"Wird ein relativer Import durchgeführt und ist kein Elternpaket bekannt, "
+"wird :exc:`ImportError` ausgelöst. Bisher konnte :exc:`SystemError` "
+"ausgelöst werden. (Beigetragen von Brett Cannon in :issue:`18018`.)"
 
 #: ../../whatsnew/3.6.rst:2219
 msgid ""
@@ -3158,12 +4401,22 @@ msgid ""
 "is no longer called, and the exception will stop a single-threaded server. "
 "(Contributed by Martin Panter in :issue:`23430`.)"
 msgstr ""
+"Server auf Basis des Moduls :mod:`socketserver`, einschließlich der "
+"in :mod:`http.server`, :mod:`xmlrpc.server` und :mod:`wsgiref.simple_server` "
+"definierten, fangen nun nur noch von :exc:`Exception` abgeleitete Ausnahmen "
+"ab. Löst ein Request-Handler also eine Ausnahme wie :exc:`SystemExit` "
+"oder :exc:`KeyboardInterrupt` aus, "
+"wird :meth:`~socketserver.BaseServer.handle_error` nicht mehr aufgerufen, "
+"und die Ausnahme hält einen Server mit einem einzigen Thread an. "
+"(Beigetragen von Martin Panter in :issue:`23430`.)"
 
 #: ../../whatsnew/3.6.rst:2228
 msgid ""
 ":func:`!spwd.getspnam` now raises a :exc:`PermissionError` instead "
 "of :exc:`KeyError` if the user doesn't have privileges."
 msgstr ""
+":func:`!spwd.getspnam` löst nun einen :exc:`PermissionError` "
+"statt :exc:`KeyError` aus, wenn der Benutzer keine Berechtigungen hat."
 
 #: ../../whatsnew/3.6.rst:2231
 msgid ""
@@ -3171,6 +4424,9 @@ msgid ""
 "(e.g. ``EBADF``) was reported by the underlying system call. (Contributed by "
 "Martin Panter in :issue:`26685`.)"
 msgstr ""
+"Die Methode :meth:`socket.socket.close` löst nun eine Ausnahme aus, wenn der "
+"zugrunde liegende Systemaufruf einen Fehler (z. B. ``EBADF``) gemeldet hat. "
+"(Beigetragen von Martin Panter in :issue:`26685`.)"
 
 #: ../../whatsnew/3.6.rst:2235
 msgid ""
@@ -3181,6 +4437,12 @@ msgid ""
 "that has already been updated in accordance with the deprecation warning "
 "generated by 3.5 will not be affected."
 msgstr ""
+"Das Argument *decode_data* der Konstruktoren von :class:`!smtpd.SMTPChannel` "
+"und :class:`!smtpd.SMTPServer` ist nun standardmäßig ``False``. Das "
+"bedeutet, dass das an :meth:`!process_message` übergebene Argument nun "
+"standardmäßig ein bytes-Objekt ist und :meth:`!process_message` "
+"Schlüsselwortargumente erhält. Code, der bereits gemäß der von 3.5 erzeugten "
+"Veraltungswarnung aktualisiert wurde, ist nicht betroffen."
 
 #: ../../whatsnew/3.6.rst:2243
 msgid ""
@@ -3191,12 +4453,21 @@ msgid ""
 "are now :ref:`keyword-only <keyword-only_parameter>`. (Contributed by Serhiy "
 "Storchaka in :issue:`18726`.)"
 msgstr ""
+"Alle optionalen Argumente der "
+"Funktionen :func:`~json.dump`, :func:`~json.dumps`, :func:`~json.load` "
+"und :func:`~json.loads` sowie der Konstruktoren der "
+"Klassen :class:`~json.JSONEncoder` und :class:`~json.JSONDecoder` im "
+"Modul :mod:`json` sind nun :ref:`reine Schlüsselwortargumente <keyword-"
+"only_parameter>`. (Beigetragen von Serhiy Storchaka in :issue:`18726`.)"
 
 #: ../../whatsnew/3.6.rst:2250
 msgid ""
 "Subclasses of :class:`type` which don't override ``type.__new__`` may no "
 "longer use the one-argument form to get the type of an object."
 msgstr ""
+"Unterklassen von :class:`type`, die ``type.__new__`` nicht überschreiben, "
+"können die Form mit einem Argument nicht mehr verwenden, um den Typ eines "
+"Objekts zu ermitteln."
 
 #: ../../whatsnew/3.6.rst:2253
 msgid ""
@@ -3211,6 +4482,17 @@ msgid ""
 "adjust their calls to :meth:`type.__new__ <object.__new__>` (whether direct "
 "or via :class:`super`) accordingly."
 msgstr ""
+"Im Rahmen von :pep:`487` wird die Behandlung von an :class:`type` "
+"übergebenen Schlüsselwortargumenten (außer dem Metaklassen-Hinweis "
+"``metaclass``) nun durchgehend an :meth:`object.__init_subclass__` "
+"delegiert. Das bedeutet, dass :meth:`type.__new__ <object.__new__>` "
+"und :meth:`type.__init__ <object.__init__>` nun beide beliebige "
+"Schlüsselwortargumente akzeptieren, :meth:`object.__init_subclass__` (das "
+"von :meth:`type.__new__ <object.__new__>` aufgerufen wird) sie aber "
+"standardmäßig ablehnt. Eigene Metaklassen, die zusätzliche "
+"Schlüsselwortargumente akzeptieren, müssen ihre Aufrufe "
+"von :meth:`type.__new__ <object.__new__>` (ob direkt oder "
+"über :class:`super`) entsprechend anpassen."
 
 #: ../../whatsnew/3.6.rst:2264
 msgid ""
@@ -3221,18 +4503,29 @@ msgid ""
 "distributions are required, configure the project with a ``setup.cfg`` file "
 "containing the following:"
 msgstr ""
+"In ``distutils.command.sdist.sdist`` wurde das Attribut ``default_format`` "
+"entfernt und wird nicht mehr beachtet. Stattdessen ist das gzip-komprimierte "
+"tar-Format auf allen Plattformen der Standard, und es findet keine "
+"plattformspezifische Auswahl statt. In Umgebungen, in denen Distributionen "
+"unter Windows gebaut werden und ZIP-Distributionen erforderlich sind, "
+"konfiguriere das Projekt mit einer Datei ``setup.cfg``, die Folgendes "
+"enthält:"
 
 #: ../../whatsnew/3.6.rst:2272
 msgid ""
 "[sdist]\n"
 "formats=zip"
 msgstr ""
+"[sdist]\n"
+"formats=zip"
 
 #: ../../whatsnew/3.6.rst:2277
 msgid ""
 "This behavior has also been backported to earlier Python versions by "
 "Setuptools 26.0.0."
 msgstr ""
+"Dieses Verhalten wurde durch Setuptools 26.0.0 auch in frühere Python-"
+"Versionen zurückportiert."
 
 #: ../../whatsnew/3.6.rst:2280
 msgid ""
@@ -3244,6 +4537,13 @@ msgid ""
 "caller. (Contributed by Demian Brecht and Rolf Krahl with tweaks from Martin "
 "Panter in :issue:`12319`.)"
 msgstr ""
+"Ist im Modul :mod:`urllib.request` und in der "
+"Methode :meth:`http.client.HTTPConnection.request` kein Headerfeld Content-"
+"Length angegeben und ist der Anfragekörper ein Dateiobjekt, wird er nun mit "
+"HTTP-1.1-Chunked-Kodierung gesendet. Muss ein Dateiobjekt an einen HTTP-1.0-"
+"Server gesendet werden, muss der Aufrufer den Content-Length-Wert nun "
+"angeben. (Beigetragen von Demian Brecht und Rolf Krahl mit Anpassungen von "
+"Martin Panter in :issue:`12319`.)"
 
 #: ../../whatsnew/3.6.rst:2289
 msgid ""
@@ -3251,6 +4551,9 @@ msgid ""
 "type :class:`~collections.OrderedDict`. (Contributed by Steve Holden "
 "in :issue:`27842`.)"
 msgstr ""
+":class:`~csv.DictReader` gibt nun Zeilen vom "
+"Typ :class:`~collections.OrderedDict` zurück. (Beigetragen von Steve Holden "
+"in :issue:`27842`.)"
 
 #: ../../whatsnew/3.6.rst:2293
 msgid ""
@@ -3258,12 +4561,18 @@ msgid ""
 "``crypt.methods`` if unsupported by the platform. (Contributed by Victor "
 "Stinner in :issue:`25287`.)"
 msgstr ""
+":const:`!crypt.METHOD_CRYPT` wird nicht mehr zu ``crypt.methods`` "
+"hinzugefügt, wenn die Plattform es nicht unterstützt. (Beigetragen von "
+"Victor Stinner in :issue:`25287`.)"
 
 #: ../../whatsnew/3.6.rst:2301
 msgid ""
 "On Linux, :func:`ctypes.util.find_library` now looks in ``LD_LIBRARY_PATH`` "
 "for shared libraries. (Contributed by Vinay Sajip in :issue:`9998`.)"
 msgstr ""
+"Unter Linux sucht :func:`ctypes.util.find_library` nun in "
+"``LD_LIBRARY_PATH`` nach Shared Libraries. (Beigetragen von Vinay Sajip "
+"in :issue:`9998`.)"
 
 #: ../../whatsnew/3.6.rst:2305
 msgid ""
@@ -3271,12 +4580,18 @@ msgid ""
 "character in messages sent from the server to improve real-world "
 "compatibility. (Contributed by Lita Cho in :issue:`21815`.)"
 msgstr ""
+"Die Klasse :class:`imaplib.IMAP4` behandelt nun Flags mit dem Zeichen "
+"``']'`` in vom Server gesendeten Nachrichten, um die Kompatibilität in der "
+"Praxis zu verbessern. (Beigetragen von Lita Cho in :issue:`21815`.)"
 
 #: ../../whatsnew/3.6.rst:2310
 msgid ""
 "The :func:`mmap.mmap.write` function now returns the number of bytes written "
 "like other write methods. (Contributed by Jakub Stasiak in :issue:`26335`.)"
 msgstr ""
+"Die Funktion :func:`mmap.mmap.write` gibt nun wie andere Schreibmethoden die "
+"Anzahl der geschriebenen Bytes zurück. (Beigetragen von Jakub Stasiak "
+"in :issue:`26335`.)"
 
 #: ../../whatsnew/3.6.rst:2314
 msgid ""
@@ -3284,6 +4599,10 @@ msgid ""
 "now return :class:`~pkgutil.ModuleInfo` named tuples. (Contributed by "
 "Ramchandra Apte in :issue:`17211`.)"
 msgstr ""
+"Die Funktionen :func:`pkgutil.iter_modules` "
+"und :func:`pkgutil.walk_packages` geben nun benannte Tupel vom "
+"Typ :class:`~pkgutil.ModuleInfo` zurück. (Beigetragen von Ramchandra Apte "
+"in :issue:`17211`.)"
 
 #: ../../whatsnew/3.6.rst:2318
 msgid ""
@@ -3293,6 +4612,11 @@ msgid ""
 "the position of the reference. (Contributed by SilentGhost, Serhiy Storchaka "
 "in :issue:`25953`.)"
 msgstr ""
+":func:`re.sub` löst nun bei ungültigen numerischen Gruppenreferenzen in "
+"Ersetzungsvorlagen einen Fehler aus, auch wenn das Muster im String nicht "
+"gefunden wird. Die Fehlermeldung für ungültige Gruppenreferenzen enthält nun "
+"den Gruppenindex und die Position der Referenz. (Beigetragen von "
+"SilentGhost, Serhiy Storchaka in :issue:`25953`.)"
 
 #: ../../whatsnew/3.6.rst:2324
 msgid ""
@@ -3303,6 +4627,13 @@ msgid ""
 "created with mode ``'r'`` will raise a :exc:`ValueError`. Previously, "
 "a :exc:`RuntimeError` was raised in those scenarios."
 msgstr ""
+":class:`zipfile.ZipFile` löst nun bei nicht erkannten "
+"Kompressionswerten :exc:`NotImplementedError` aus. Bisher wurde ein "
+"einfacher :exc:`RuntimeError` ausgelöst. Außerdem löst der Aufruf von "
+"Methoden von :class:`~zipfile.ZipFile` auf einem geschlossenen ZipFile oder "
+"der Aufruf der Methode :meth:`~zipfile.ZipFile.write` auf einem mit dem "
+"Modus ``'r'`` erzeugten ZipFile einen :exc:`ValueError` aus. Bisher wurde in "
+"diesen Fällen ein :exc:`RuntimeError` ausgelöst."
 
 #: ../../whatsnew/3.6.rst:2331
 msgid ""
@@ -3313,6 +4644,12 @@ msgid ""
 "a :exc:`DeprecationWarning` in Python 3.6 and a :exc:`RuntimeError` in "
 "Python 3.8."
 msgstr ""
+"Werden eigene Metaklassen mit :func:`super` ohne Argumente oder mit direkten "
+"Verweisen aus Methoden auf die implizite Closure-Variable ``__class__`` "
+"kombiniert, muss der implizite Namensraumeintrag ``__classcell__`` nun zur "
+"Initialisierung an ``type.__new__`` weitergereicht werden. Andernfalls führt "
+"das in Python 3.6 zu einer :exc:`DeprecationWarning` und in Python 3.8 zu "
+"einem :exc:`RuntimeError`."
 
 #: ../../whatsnew/3.6.rst:2338
 msgid ""
@@ -3327,10 +4664,20 @@ msgid ""
 "changes, as the default import system will raise the new subclass when "
 "appropriate."
 msgstr ""
+"Mit der Einführung von :exc:`ModuleNotFoundError` könnten Nutzer des "
+"Importsystems erwarten, dass Ersatz-Importsysteme gegebenenfalls diese "
+"spezifischere Ausnahme statt des weniger spezifischen :exc:`ImportError` "
+"auslösen. Um künftig mit solchen Nutzern kompatibel zu sein, müssen "
+"Implementierer alternativer Importsysteme, die :func:`__import__` "
+"vollständig ersetzen, ihre Implementierungen so anpassen, dass sie die neue "
+"Unterklasse auslösen, wenn ein Modul überhaupt nicht gefunden werden kann. "
+"Implementierer konformer Plugins für das Standard-Importsystem sollten "
+"nichts ändern müssen, da das Standard-Importsystem die neue Unterklasse bei "
+"Bedarf auslöst."
 
 #: ../../whatsnew/3.6.rst:2350
 msgid "Changes in the C API"
-msgstr ""
+msgstr "Änderungen an der C-API"
 
 #: ../../whatsnew/3.6.rst:2352
 msgid ""
@@ -3340,12 +4687,21 @@ msgid ""
 "the :envvar:`PYTHONMALLOC` environment variable to ``debug`` to validate the "
 "usage of memory allocators in your application. See :issue:`26249`."
 msgstr ""
+"Die Allokatorfamilie :c:func:`PyMem_Malloc` verwendet nun "
+"den :ref:`Allokator pymalloc <pymalloc>` statt des System-:c:func:`malloc`. "
+"Anwendungen, die :c:func:`PyMem_Malloc` aufrufen, ohne den GIL zu halten, "
+"können nun abstürzen. Setze die Umgebungsvariable :envvar:`PYTHONMALLOC` auf "
+"``debug``, um die Verwendung der Speicherallokatoren in deiner Anwendung zu "
+"prüfen. Siehe :issue:`26249`."
 
 #: ../../whatsnew/3.6.rst:2358
 msgid ""
 ":c:func:`Py_Exit` (and the main interpreter) now override the exit status "
 "with 120 if flushing buffered data failed.  See :issue:`5319`."
 msgstr ""
+":c:func:`Py_Exit` (und der Hauptinterpreter) überschreiben den Exit-Status "
+"nun mit 120, wenn das Leeren gepufferter Daten fehlgeschlagen ist. "
+"Siehe :issue:`5319`."
 
 #: ../../whatsnew/3.6.rst:2363
 msgid "CPython bytecode changes"
@@ -3355,6 +4711,8 @@ msgstr "CPython Bytecode Änderungen"
 msgid ""
 "There have been several major changes to the :term:`bytecode` in Python 3.6."
 msgstr ""
+"In Python 3.6 gab es mehrere größere Änderungen am :term:`Bytecode "
+"<bytecode>`."
 
 #: ../../whatsnew/3.6.rst:2367
 msgid ""
@@ -3362,6 +4720,9 @@ msgid ""
 "(Contributed by Demur Rumed with input and reviews from Serhiy Storchaka and "
 "Victor Stinner in :issue:`26647` and :issue:`28050`.)"
 msgstr ""
+"Der Python-Interpreter verwendet nun einen 16-Bit-Wordcode statt Bytecode. "
+"(Beigetragen von Demur Rumed mit Beiträgen und Reviews von Serhiy Storchaka "
+"und Victor Stinner in :issue:`26647` und :issue:`28050`.)"
 
 #: ../../whatsnew/3.6.rst:2371
 msgid ""
@@ -3370,6 +4731,10 @@ msgid ""
 "(Contributed by Eric Smith in :issue:`25483` and Serhiy Storchaka "
 "in :issue:`27078`.)"
 msgstr ""
+"Die neuen Opcodes :opcode:`!FORMAT_VALUE` und :opcode:`BUILD_STRING` als "
+"Teil der Implementierung :ref:`formatierter String-Literale <whatsnew36-"
+"pep498>`. (Beigetragen von Eric Smith in :issue:`25483` und Serhiy Storchaka "
+"in :issue:`27078`.)"
 
 #: ../../whatsnew/3.6.rst:2376
 msgid ""
@@ -3377,6 +4742,9 @@ msgid ""
 "dictionaries with constant keys. (Contributed by Serhiy Storchaka "
 "in :issue:`27140`.)"
 msgstr ""
+"Der neue Opcode :opcode:`!BUILD_CONST_KEY_MAP` zur Optimierung der Erzeugung "
+"von Dictionaries mit konstanten Schlüsseln. (Beigetragen von Serhiy "
+"Storchaka in :issue:`27140`.)"
 
 #: ../../whatsnew/3.6.rst:2380
 msgid ""
@@ -3389,6 +4757,15 @@ msgid ""
 "``MAKE_CLOSURE`` opcodes have been removed. (Contributed by Demur Rumed "
 "in :issue:`27095`, and Serhiy Storchaka in :issue:`27213`, :issue:`28257`.)"
 msgstr ""
+"Die Opcodes für Funktionsaufrufe wurden für bessere Performance und "
+"einfachere Implementierung grundlegend überarbeitet. Die "
+"Opcodes :opcode:`MAKE_FUNCTION`, :opcode:`!CALL_FUNCTION`, :opcode:`!"
+"CALL_FUNCTION_KW` und :opcode:`!BUILD_MAP_UNPACK_WITH_CALL` wurden geändert, "
+"die neuen :opcode:`CALL_FUNCTION_EX` und :opcode:`!"
+"BUILD_TUPLE_UNPACK_WITH_CALL` wurden hinzugefügt, und die Opcodes "
+"``CALL_FUNCTION_VAR``, ``CALL_FUNCTION_VAR_KW`` und ``MAKE_CLOSURE`` wurden "
+"entfernt. (Beigetragen von Demur Rumed in :issue:`27095` sowie Serhiy "
+"Storchaka in :issue:`27213`, :issue:`28257`.)"
 
 #: ../../whatsnew/3.6.rst:2391
 msgid ""
@@ -3396,14 +4773,18 @@ msgid ""
 "have been added to support the new :term:`variable annotation` syntax. "
 "(Contributed by Ivan Levkivskyi in :issue:`27985`.)"
 msgstr ""
+"Die neuen Opcodes :opcode:`SETUP_ANNOTATIONS` und :opcode:`!"
+"STORE_ANNOTATION` wurden hinzugefügt, um die neue Syntax "
+"für :term:`Variablenannotationen <variable annotation>` zu unterstützen. "
+"(Beigetragen von Ivan Levkivskyi in :issue:`27985`.)"
 
 #: ../../whatsnew/3.6.rst:2397
 msgid "Notable changes in Python 3.6.2"
-msgstr ""
+msgstr "Wichtige Änderungen in Python 3.6.2"
 
 #: ../../whatsnew/3.6.rst:2400
 msgid "New ``make regen-all`` build target"
-msgstr ""
+msgstr "Neues Build-Ziel ``make regen-all``"
 
 #: ../../whatsnew/3.6.rst:2402
 msgid ""
@@ -3412,6 +4793,11 @@ msgid ""
 "available, the autotools-based build system no longer attempts to implicitly "
 "recompile generated files based on file modification times."
 msgstr ""
+"Um Cross-Kompilierung zu vereinfachen und sicherzustellen, dass sich CPython "
+"zuverlässig kompilieren lässt, ohne dass bereits eine Python-Version "
+"verfügbar sein muss, versucht das auf autotools basierende Build-System "
+"nicht mehr, erzeugte Dateien anhand ihrer Änderungszeiten implizit neu zu "
+"erzeugen."
 
 #: ../../whatsnew/3.6.rst:2407
 msgid ""
@@ -3419,20 +4805,25 @@ msgid ""
 "regeneration of these files when desired (e.g. after an initial version of "
 "Python has already been built based on the pregenerated versions)."
 msgstr ""
+"Stattdessen wurde ein neuer Befehl ``make regen-all`` hinzugefügt, um bei "
+"Bedarf die Neuerzeugung dieser Dateien zu erzwingen (z. B. nachdem eine "
+"erste Python-Version auf Basis der vorab erzeugten Versionen gebaut wurde)."
 
 #: ../../whatsnew/3.6.rst:2411
 msgid ""
 "More selective regeneration targets are also defined - "
 "see :source:`Makefile.pre.in` for details."
 msgstr ""
+"Außerdem sind gezieltere Ziele zur Neuerzeugung definiert -- Details "
+"siehe :source:`Makefile.pre.in`."
 
 #: ../../whatsnew/3.6.rst:2414 ../../whatsnew/3.6.rst:2427
 msgid "(Contributed by Victor Stinner in :issue:`23404`.)"
-msgstr ""
+msgstr "(Beigetragen von Victor Stinner in :issue:`23404`.)"
 
 #: ../../whatsnew/3.6.rst:2420
 msgid "Removal of ``make touch`` build target"
-msgstr ""
+msgstr "Entfernung des Build-Ziels ``make touch``"
 
 #: ../../whatsnew/3.6.rst:2422
 msgid ""
@@ -3440,14 +4831,17 @@ msgid ""
 "regeneration of generated files by updating their modification times has "
 "been removed."
 msgstr ""
+"Das Build-Ziel ``make touch``, mit dem bisher die implizite Neuerzeugung "
+"erzeugter Dateien durch Aktualisieren ihrer Änderungszeiten angefordert "
+"wurde, wurde entfernt."
 
 #: ../../whatsnew/3.6.rst:2425
 msgid "It has been replaced by the new ``make regen-all`` target."
-msgstr ""
+msgstr "Es wurde durch das neue Ziel ``make regen-all`` ersetzt."
 
 #: ../../whatsnew/3.6.rst:2433
 msgid "Notable changes in Python 3.6.4"
-msgstr ""
+msgstr "Wichtige Änderungen in Python 3.6.4"
 
 #: ../../whatsnew/3.6.rst:2435
 msgid ""
@@ -3456,10 +4850,14 @@ msgid ""
 "during finalization of the interpreter. (Contributed by Xavier de Gaye "
 "in :issue:`22898` and :issue:`30697`.)"
 msgstr ""
+"Das Singleton ``PyExc_RecursionErrorInst``, das Teil der öffentlichen API "
+"war, wurde entfernt, da seine nie geleerten Elemente bei der Finalisierung "
+"des Interpreters einen Segfault verursachen können. (Beigetragen von Xavier "
+"de Gaye in :issue:`22898` und :issue:`30697`.)"
 
 #: ../../whatsnew/3.6.rst:2442
 msgid "Notable changes in Python 3.6.5"
-msgstr ""
+msgstr "Wichtige Änderungen in Python 3.6.5"
 
 #: ../../whatsnew/3.6.rst:2444
 msgid ""
@@ -3467,16 +4865,21 @@ msgid ""
 "locale to the ``LC_NUMERIC`` locale in some cases. (Contributed by Victor "
 "Stinner in :issue:`31900`.)"
 msgstr ""
+"Die Funktion :func:`locale.localeconv` setzt die Locale ``LC_CTYPE`` in "
+"manchen Fällen nun vorübergehend auf die Locale ``LC_NUMERIC``. (Beigetragen "
+"von Victor Stinner in :issue:`31900`.)"
 
 #: ../../whatsnew/3.6.rst:2450
 msgid "Notable changes in Python 3.6.7"
-msgstr ""
+msgstr "Wichtige Änderungen in Python 3.6.7"
 
 #: ../../whatsnew/3.6.rst:2452
 msgid ""
 ":mod:`xml.dom.minidom` and :mod:`xml.sax` modules no longer process external "
 "entities by default. See also :gh:`61441`."
 msgstr ""
+"Die Module :mod:`xml.dom.minidom` und :mod:`xml.sax` verarbeiten externe "
+"Entitäten standardmäßig nicht mehr. Siehe auch :gh:`61441`."
 
 #: ../../whatsnew/3.6.rst:2455
 msgid ""
@@ -3485,10 +4888,14 @@ msgid ""
 "behavior now matches what the C tokenizer does internally. (Contributed by "
 "Ammar Askar in :issue:`33899`.)"
 msgstr ""
+"In 3.6.7 erzeugt das Modul :mod:`tokenize` nun implizit ein ``NEWLINE``-"
+"Token, wenn die Eingabe nicht mit einem Zeilenumbruch endet. Dieses "
+"Verhalten entspricht nun dem, was der C-Tokenizer intern tut. (Beigetragen "
+"von Ammar Askar in :issue:`33899`.)"
 
 #: ../../whatsnew/3.6.rst:2461
 msgid "Notable changes in Python 3.6.10"
-msgstr ""
+msgstr "Wichtige Änderungen in Python 3.6.10"
 
 #: ../../whatsnew/3.6.rst:2463
 msgid ""
@@ -3499,10 +4906,16 @@ msgid ""
 "``loop.create_datagram_endpoint()``. (Contributed by Kyle Stanley, Antoine "
 "Pitrou, and Yury Selivanov in :issue:`37228`.)"
 msgstr ""
+"Wegen erheblicher Sicherheitsbedenken wird der Parameter *reuse_address* "
+"von :meth:`asyncio.loop.create_datagram_endpoint` nicht mehr unterstützt. "
+"Grund ist das Verhalten der Socket-Option ``SO_REUSEADDR`` bei UDP. Weitere "
+"Details siehe die Dokumentation zu ``loop.create_datagram_endpoint()``. "
+"(Beigetragen von Kyle Stanley, Antoine Pitrou und Yury Selivanov "
+"in :issue:`37228`.)"
 
 #: ../../whatsnew/3.6.rst:2471
 msgid "Notable changes in Python 3.6.13"
-msgstr ""
+msgstr "Wichtige Änderungen in Python 3.6.13"
 
 #: ../../whatsnew/3.6.rst:2473
 msgid ""
@@ -3516,10 +4929,19 @@ msgid ""
 "documentation. (Contributed by Adam Goldschmidt, Senthil Kumaran and Ken Jin "
 "in :issue:`42967`.)"
 msgstr ""
+"Frühere Python-Versionen erlaubten sowohl ``;`` als auch ``&`` als "
+"Trennzeichen für Abfrageparameter in :func:`urllib.parse.parse_qs` "
+"und :func:`urllib.parse.parse_qsl`. Aus Sicherheitsgründen und zur "
+"Übereinstimmung mit neueren W3C-Empfehlungen wurde das so geändert, dass nur "
+"noch ein einziges Trennzeichen erlaubt ist, standardmäßig ``&``. Diese "
+"Änderung betrifft auch :func:`!cgi.parse` und :func:`!cgi.parse_multipart`, "
+"da sie die betroffenen Funktionen intern verwenden. Weitere Details findest "
+"du in ihrer jeweiligen Dokumentation. (Beigetragen von Adam Goldschmidt, "
+"Senthil Kumaran und Ken Jin in :issue:`42967`.)"
 
 #: ../../whatsnew/3.6.rst:2484
 msgid "Notable changes in Python 3.6.14"
-msgstr ""
+msgstr "Wichtige Änderungen in Python 3.6.14"
 
 #: ../../whatsnew/3.6.rst:2486
 msgid ""
@@ -3529,6 +4951,12 @@ msgid ""
 "old behavior, set a ``trust_server_pasv_ipv4_address`` attribute on your FTP "
 "instance to ``True``.  (See :gh:`87451`)"
 msgstr ""
+"Eine Sicherheitskorrektur ändert das Verhalten von :class:`ftplib.FTP` so, "
+"dass der vom entfernten Server gesendeten IPv4-Adresse beim Einrichten eines "
+"passiven Datenkanals nicht mehr vertraut wird. Stattdessen verwenden wir die "
+"IP-Adresse des FTP-Servers erneut. Für ungewöhnlichen Code, der das alte "
+"Verhalten benötigt, setze auf deiner FTP-Instanz das Attribut "
+"``trust_server_pasv_ipv4_address`` auf ``True``. (Siehe :gh:`87451`)"
 
 #: ../../whatsnew/3.6.rst:2492
 msgid ""
@@ -3539,3 +4967,10 @@ msgid ""
 "removal characters are controlled by a new module level variable "
 "``urllib.parse._UNSAFE_URL_BYTES_TO_REMOVE``. (See :gh:`88048`)"
 msgstr ""
+"Zeilenumbruch- oder Tabulatorzeichen in Teilen einer URL ermöglichen "
+"bestimmte Angriffsformen. Gemäß der WHATWG-Spezifikation, die RFC 3986 "
+"aktualisiert, entfernt der Parser :func:`urllib.parse` die ASCII-Zeichen für "
+"Zeilenumbruch ``\\n``, ``\\r`` und Tabulator ``\\t`` aus der URL und "
+"verhindert so solche Angriffe. Die zu entfernenden Zeichen werden über die "
+"neue Modulvariable ``urllib.parse._UNSAFE_URL_BYTES_TO_REMOVE`` gesteuert. "
+"(Siehe :gh:`88048`)"
