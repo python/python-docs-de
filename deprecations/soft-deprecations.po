@@ -1,7 +1,9 @@
-# German translations for Python package.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# Automatically generated, 2026.
+#
+# Translators:
+# Swen Bachmann, 2026
 #
 msgid ""
 msgstr ""
@@ -9,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-23 06:17+0000\n"
 "PO-Revision-Date: 2026-09-22 21:21+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +21,13 @@ msgstr ""
 
 #: ../../deprecations/soft-deprecations.rst:2
 msgid "Soft deprecations"
-msgstr ""
+msgstr "Sanfte Abkündigungen"
 
 #: ../../deprecations/soft-deprecations.rst:4
 msgid "There are no plans to remove :term:`soft deprecated` APIs."
 msgstr ""
+"Es ist nicht geplant, :term:`sanft abgekündigte <soft deprecated>` APIs zu "
+"entfernen."
 
 #: ../../deprecations/soft-deprecations.rst:6
 msgid ""
@@ -36,6 +40,14 @@ msgid ""
 "libraries use an API named *match* to mean what Python has always called "
 "*search*."
 msgstr ""
+":func:`re.match` und :meth:`re.Pattern.match` sind jetzt :term:`sanft "
+"abgekündigt <soft deprecated>`, zugunsten der neuen "
+"APIs :func:`re.prefixmatch` und :meth:`re.Pattern.prefixmatch`, die als "
+"alternative, explizitere Namen hinzugefügt wurden. Sie sollen Verwirrung "
+"darüber vermeiden, was *match* bedeutet, und folgen damit dem Grundsatz "
+"*„Explizit ist besser als implizit“* aus dem Zen of Python. Die Bibliotheken "
+"für reguläre Ausdrücke der meisten anderen Sprachen verwenden eine API "
+"namens *match* für das, was in Python schon immer *search* heißt."
 
 #: ../../deprecations/soft-deprecations.rst:15
 msgid ""
@@ -44,12 +56,19 @@ msgid ""
 "should continue to use :func:`!match`, while new code should prefer :func:`!"
 "prefixmatch`. See :ref:`prefixmatch-vs-match`."
 msgstr ""
+"Wir planen **nicht**, den älteren Namen :func:`!match` zu entfernen, da er "
+"seit über 30 Jahren in Code verwendet wird. Code, der ältere Python-"
+"Versionen unterstützt, sollte weiterhin :func:`!match` verwenden, während "
+"neuer Code :func:`!prefixmatch` bevorzugen sollte. Siehe :ref:`prefixmatch-"
+"vs-match`."
 
 #: ../../deprecations/soft-deprecations.rst:20
 msgid ""
 "(Contributed by Gregory P. Smith in :gh:`86519` and Hugo van Kemenade "
 "in :gh:`148100`.)"
 msgstr ""
+"(Beigetragen von Gregory P. Smith in :gh:`86519` und Hugo van Kemenade "
+"in :gh:`148100`.)"
 
 #: ../../deprecations/soft-deprecations.rst:23
 msgid ""
@@ -57,3 +76,7 @@ msgid ""
 "are :term:`soft deprecated` in favor of two-letter forms ``'Zf'`` and "
 "``'Zd'``. (Contributed by Sergey B Kirpichev in :gh:`121249`.)"
 msgstr ""
+"Die Verwendung der Formattypcodes ``'F'`` und ``'D'`` des "
+"Moduls :mod:`struct` ist jetzt :term:`sanft abgekündigt <soft deprecated>` "
+"zugunsten der zweibuchstabigen Formen ``'Zf'`` und ``'Zd'``. (Beigetragen "
+"von Sergey B Kirpichev in :gh:`121249`.)"
