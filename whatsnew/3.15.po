@@ -6165,42 +6165,36 @@ msgstr "(Beigetragen von Victor Stinner in :gh:`141510`.)"
 #: ../../whatsnew/3.15.rst:2519
 msgid "Add the :pep:`757` export/import functions to the limited C API:"
 msgstr ""
+"Die Export-/Importfunktionen aus :pep:`757` wurden zur eingeschränkten C-API "
+"hinzugefügt:"
 
 #: ../../whatsnew/3.15.rst:2521
-#, fuzzy
 msgid ":c:func:`PyLong_GetNativeLayout`"
-msgstr ":c:func:`PyBytesWriter_GetData`"
+msgstr ":c:func:`PyLong_GetNativeLayout`"
 
 #: ../../whatsnew/3.15.rst:2522
-#, fuzzy
 msgid ":c:func:`PyLong_Export`"
-msgstr ":c:func:`PyModule_ExecDef`"
+msgstr ":c:func:`PyLong_Export`"
 
 #: ../../whatsnew/3.15.rst:2523
-#, fuzzy
 msgid ":c:func:`PyLong_FreeExport`"
-msgstr ":c:func:`PyFrozenDict_CheckExact`"
+msgstr ":c:func:`PyLong_FreeExport`"
 
 #: ../../whatsnew/3.15.rst:2524
-#, fuzzy
 msgid ":c:func:`PyLongWriter_Create`"
-msgstr ":c:func:`PyBytesWriter_Create`"
+msgstr ":c:func:`PyLongWriter_Create`"
 
 #: ../../whatsnew/3.15.rst:2525
-#, fuzzy
 msgid ":c:func:`PyLongWriter_Finish`"
-msgstr ":c:func:`PyBytesWriter_Finish`"
+msgstr ":c:func:`PyLongWriter_Finish`"
 
 #: ../../whatsnew/3.15.rst:2526
-#, fuzzy
 msgid ":c:func:`PyLongWriter_Discard`"
-msgstr ":c:func:`PyBytesWriter_Discard`"
+msgstr ":c:func:`PyLongWriter_Discard`"
 
 #: ../../whatsnew/3.15.rst:2528
-#, fuzzy
 msgid "(Contributed by Sergey B Kirpichev in :gh:`143869`.)"
-msgstr ""
-"(Beigetragen von Sergey B Kirpichev und Serhiy Storchaka in :gh:`143715`.)"
+msgstr "(Beigetragen von Sergey B Kirpichev in :gh:`143869`.)"
 
 #: ../../whatsnew/3.15.rst:2530
 msgid ""

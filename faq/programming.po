@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-16 03:06+0000\n"
 "PO-Revision-Date: 2026-10-19 22:30+0200\n"
-"Last-Translator: python-doc bot, 2025\n"
+"Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -2596,6 +2596,8 @@ msgstr ""
 msgid ""
 "This returns a reverse iterator without modifying your original sequence."
 msgstr ""
+"Das gibt einen umgekehrten Iterator zurück, ohne deine ursprüngliche Sequenz "
+"zu verändern."
 
 #: ../../faq/programming.rst:1205
 msgid "How do you remove duplicates from a list?"
@@ -3525,7 +3527,6 @@ msgstr ""
 "        super().meth()  # ruft Base.meth auf"
 
 #: ../../faq/programming.rst:1642
-#, fuzzy
 msgid ""
 "In the example, :func:`super` will automatically determine the instance from "
 "which it was called (the ``self`` value), look up the :term:`method "
@@ -3536,8 +3537,8 @@ msgstr ""
 "Im Beispiel bestimmt :func:`super` automatisch die Instanz, von der aus es "
 "aufgerufen wurde (den Wert von ``self``), sucht die :term:`Reihenfolge der "
 "Methodenauflösung <method resolution order>` (MRO) mit "
-"``type(self).__mro__`` und gibt die in der MRO auf ``Derived`` folgende "
-"Klasse zurück: ``Base``."
+"``type(self).__mro__`` und gibt einen Proxy zurück, der Methoden ab der "
+"Klasse sucht, die in der MRO auf ``Derived`` folgt: ``Base``."
 
 #: ../../faq/programming.rst:1649
 msgid "How can I organize my code to make it easier to change the base class?"
@@ -3629,7 +3630,6 @@ msgstr ""
 "überschreibt es."
 
 #: ../../faq/programming.rst:1687
-#, fuzzy
 msgid ""
 "Caution: within a method of C, an assignment like ``self.count = 42`` "
 "creates a new and unrelated attribute named \"count\" in ``self``'s own "
@@ -3637,10 +3637,10 @@ msgid ""
 "whether inside a method or not::"
 msgstr ""
 "Achtung: Innerhalb einer Methode von C erzeugt eine Zuweisung wie "
-"``self.count = 42`` eine neue, davon unabhängige Instanzvariable namens "
-"„count“ im eigenen Dictionary von ``self``. Beim Neubinden eines "
-"klassenstatischen Datennamens muss immer die Klasse angegeben werden, ob "
-"innerhalb einer Methode oder nicht::"
+"``self.count = 42`` ein neues, davon unabhängiges Attribut namens „count“ im "
+"eigenen Dictionary von ``self``. Beim Neubinden eines klassenstatischen "
+"Datennamens muss immer die Klasse angegeben werden, ob innerhalb einer "
+"Methode oder nicht::"
 
 #: ../../faq/programming.rst:1692
 msgid "C.count = 314"

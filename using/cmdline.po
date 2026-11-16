@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-16 03:06+0000\n"
 "PO-Revision-Date: 2026-11-01 16:00+0100\n"
-"Last-Translator: python-doc bot, 2025\n"
+"Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -611,7 +611,6 @@ msgstr ""
 "Optionen :option:`-E`, :option:`-P` und :option:`-s` nach sich."
 
 #: ../../using/cmdline.rst:325
-#, fuzzy
 msgid ""
 "In isolated mode, Python does not prepend the potentially unsafe "
 "path :data:`sys._path0` to :data:`sys.path`, and ignores all ``PYTHON*`` "
@@ -619,11 +618,12 @@ msgid ""
 "that might be set. Further restrictions may be imposed to prevent the user "
 "from injecting malicious code."
 msgstr ""
-"Im abgeschotteten Modus enthält :data:`sys.path` weder das Verzeichnis des "
-"Skripts noch das site-packages-Verzeichnis des Benutzers. Alle "
-"Umgebungsvariablen ``PYTHON*`` werden ebenfalls ignoriert. Weitere "
-"Einschränkungen können hinzukommen, um das Einschleusen von Schadcode durch "
-"den Benutzer zu verhindern."
+"Im abgeschotteten Modus stellt Python den möglicherweise unsicheren Pfad "
+":data:`sys._path0` nicht an den Anfang von :data:`sys.path` und ignoriert "
+"alle eventuell gesetzten Umgebungsvariablen ``PYTHON*``, z. B. "
+":envvar:`PYTHONPATH` und :envvar:`PYTHONHOME`. Weitere Einschränkungen "
+"können hinzukommen, um das Einschleusen von Schadcode durch den Benutzer zu "
+"verhindern."
 
 #: ../../using/cmdline.rst:337
 msgid ""
@@ -652,13 +652,12 @@ msgstr ""
 "vor der Endung ``.pyc`` (siehe :pep:`488`)."
 
 #: ../../using/cmdline.rst:358
-#, fuzzy
 msgid ""
 "Don't prepend the potentially unsafe path :data:`sys._path0` "
 "to :data:`sys.path`."
 msgstr ""
-"Stellt keinen möglicherweise unsicheren Pfad an den Anfang "
-"von :data:`sys.path`:"
+"Stellt den möglicherweise unsicheren Pfad :data:`sys._path0` nicht an den "
+"Anfang von :data:`sys.path`."
 
 #: ../../using/cmdline.rst:361
 msgid ""
@@ -1491,19 +1490,17 @@ msgstr ""
 "Variable :data:`sys.path` verändern."
 
 #: ../../using/cmdline.rst:818
-#, fuzzy
 msgid ""
 "If this is set to a non-empty string, don't prepend a potentially unsafe "
 "path :data:`sys._path0` to :data:`sys.path`."
 msgstr ""
-"Ist sie auf eine nicht leere Zeichenkette gesetzt, wird kein möglicherweise "
-"unsicherer Pfad an den Anfang von :data:`sys.path` gestellt. Einzelheiten "
-"dazu unter der Option :option:`-P`."
+"Ist sie auf eine nicht leere Zeichenkette gesetzt, wird der möglicherweise "
+"unsichere Pfad :data:`sys._path0` nicht an den Anfang von :data:`sys.path` "
+"gestellt."
 
 #: ../../using/cmdline.rst:821
-#, fuzzy
 msgid "See also the :option:`-P` option."
-msgstr "Siehe auch die Befehlszeilenoption :option:`-X tlbc <-X>`."
+msgstr "Siehe auch die Option :option:`-P`."
 
 #: ../../using/cmdline.rst:828
 msgid ""

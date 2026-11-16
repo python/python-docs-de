@@ -2311,7 +2311,6 @@ msgstr ""
 "``athrow(GeneratorExit)``)."
 
 #: ../../builtins/stdtypes.rst:1225
-#, fuzzy
 msgid ""
 "If the asynchronous generator function then exits gracefully, is already "
 "closed, or raises :exc:`GeneratorExit` (by not catching the exception), then "
@@ -2321,10 +2320,10 @@ msgid ""
 msgstr ""
 "Endet die asynchrone Generatorfunktion daraufhin ordnungsgemäß, ist sie "
 "bereits geschlossen oder löst sie :exc:`GeneratorExit` aus (indem sie die "
-"Ausnahme nicht abfängt), löst das zurückgegebene abwartbare Objekt "
-"eine :exc:`StopIteration`-Ausnahme aus. Alle weiteren abwartbaren Objekte, "
-"die nachfolgende Aufrufe des asynchronen Generators zurückgeben, lösen "
-"eine :exc:`StopAsyncIteration`-Ausnahme aus."
+"Ausnahme nicht abfängt), löst das zurückgegebene abwartbare Objekt eine "
+":exc:`StopIteration`-Ausnahme aus. Abwartbare Objekte, die von nachfolgenden "
+"Aufrufen von :meth:`~agen.__anext__` oder :meth:`~agen.asend` zurückgegeben "
+"werden, lösen eine :exc:`StopAsyncIteration`-Ausnahme aus."
 
 #: ../../builtins/stdtypes.rst:1231
 msgid ""
@@ -4499,7 +4498,6 @@ msgstr ""
 "True"
 
 #: ../../builtins/stdtypes.rst:2314
-#, fuzzy
 msgid ""
 "Perform a string formatting operation.  The string on which this method is "
 "called can contain literal text or replacement fields delimited by braces "
@@ -4511,13 +4509,12 @@ msgstr ""
 "Führt eine Zeichenketten-Formatierungsoperation aus. Die Zeichenkette, auf "
 "der diese Methode aufgerufen wird, kann literalen Text oder durch "
 "geschweifte Klammern ``{}`` abgegrenzte Ersetzungsfelder enthalten. Jedes "
-"Ersetzungsfeld enthält entweder den numerischen Index eines "
-"Positionsarguments oder den Namen eines Schlüsselwortarguments. Gibt eine "
-"Kopie der Zeichenkette zurück, in der jedes Ersetzungsfeld durch den String-"
-"Wert des entsprechenden Arguments ersetzt wird. Zum Beispiel:"
+"Ersetzungsfeld verweist auf ein Positionsargument (ausdrücklich oder "
+"automatisch nummeriert) oder auf ein Schlüsselwortargument. Gibt eine Kopie "
+"der Zeichenkette zurück, in der jedes Ersetzungsfeld durch den String-Wert "
+"des entsprechenden Arguments ersetzt wird. Zum Beispiel:"
 
 #: ../../builtins/stdtypes.rst:2321
-#, fuzzy
 msgid ""
 ">>> \"The sum of {} + {} is {}\".format(1, 2, 1+2)\n"
 "'The sum of 1 + 2 is 3'\n"
@@ -4526,12 +4523,12 @@ msgid ""
 ">>> \"The sum of {a} + {b} is {answer}\".format(answer=1+2, a=1, b=2)\n"
 "'The sum of 1 + 2 is 3'"
 msgstr ""
-">>> \"The sum of 1 + 2 is {0}\".format(1+2)\n"
-"'The sum of 1 + 2 is 3'\n"
-">>> \"The sum of {a} + {b} is {answer}\".format(answer=1+2, a=1, b=2)\n"
+">>> \"The sum of {} + {} is {}\".format(1, 2, 1+2)\n"
 "'The sum of 1 + 2 is 3'\n"
 ">>> \"{1} expects the {0} Inquisition!\".format(\"Spanish\", \"Nobody\")\n"
-"'Nobody expects the Spanish Inquisition!'"
+"'Nobody expects the Spanish Inquisition!'\n"
+">>> \"The sum of {a} + {b} is {answer}\".format(answer=1+2, a=1, b=2)\n"
+"'The sum of 1 + 2 is 3'"
 
 #: ../../builtins/stdtypes.rst:2330
 msgid ""
@@ -6040,7 +6037,6 @@ msgstr ""
 "benutzerdefinierten Zeichenabbildungen."
 
 #: ../../builtins/stdtypes.rst:3181
-#, fuzzy
 msgid ""
 "Return a copy of the string with all the cased characters [4]_ converted to "
 "uppercase.  Note that ``s.upper().isupper()`` might be ``False`` if ``s`` "
@@ -6048,10 +6044,10 @@ msgid ""
 "character(s) is not \"Lu\" (Letter, uppercase), but e.g. \"Lt\" (Letter, "
 "titlecase)."
 msgstr ""
-"Gibt eine Kopie des Strings zurück, bei der alle Zeichen mit Groß-/"
-"Kleinschreibung [4]_ in Großbuchstaben umgewandelt wurden. Beachte, dass "
-"``s.upper().isupper()`` ``False`` sein kann, wenn ``s`` Zeichen ohne Groß-/"
-"Kleinschreibung enthält oder wenn die Unicode-Kategorie des/der "
+"Gibt eine Kopie des Strings zurück, bei der alle Zeichen mit "
+"Groß-/Kleinschreibung [4]_ in Großbuchstaben umgewandelt wurden. Beachte, "
+"dass ``s.upper().isupper()`` ``False`` sein kann, wenn ``s`` keine Zeichen "
+"mit Groß-/Kleinschreibung enthält oder wenn die Unicode-Kategorie des/der "
 "resultierenden Zeichens/Zeichen nicht \"Lu\" (Buchstabe, Großbuchstabe), "
 "sondern z. B. \"Lt\" (Buchstabe, Titlecase) ist."
 
@@ -6781,15 +6777,14 @@ msgstr ""
 "Kein Argument wird konvertiert, führt zu einem ``'%'``-Zeichen im Ergebnis."
 
 #: ../../builtins/stdtypes.rst:3540
-#, fuzzy
 msgid ""
 "For floating-point formats, the result should be correctly rounded to the "
 "specified precision.  The rounding mode matches that of the :func:`round` "
 "builtin."
 msgstr ""
-"Bei Gleitkommaformaten sollte das Ergebnis korrekt auf eine angegebene "
-"Präzision ``p`` von Nachkommastellen gerundet werden. Der Rundungsmodus "
-"entspricht dem des integrierten :func:`round`."
+"Bei Gleitkommaformaten sollte das Ergebnis korrekt auf die angegebene "
+"Genauigkeit gerundet werden. Der Rundungsmodus entspricht dem der "
+"eingebauten Funktion :func:`round`."
 
 #: ../../builtins/stdtypes.rst:3546 ../../builtins/stdtypes.rst:4848
 msgid ""
@@ -10512,14 +10507,14 @@ msgid "Dictionaries are now reversible."
 msgstr "Dictionaries sind nun umkehrbar."
 
 #: ../../builtins/stdtypes.rst:5907
-#, fuzzy
 msgid ""
 ":class:`types.MappingProxyType` can be used to create a read-only view of "
 "a :class:`dict`.  :class:`frozendict` is an immutable version "
 "of :class:`dict`."
 msgstr ""
-"Mit :class:`frozendict` und :class:`types.MappingProxyType` kann ein "
-"schreibgeschützter View eines :class:`dict` erstellt werden."
+"Mit :class:`types.MappingProxyType` lässt sich ein schreibgeschützter View "
+"eines :class:`dict` erstellen. :class:`frozendict` ist eine unveränderliche "
+"Version von :class:`dict`."
 
 #: ../../builtins/stdtypes.rst:5913
 msgid ""
@@ -10814,7 +10809,6 @@ msgstr ""
 "Werte des Frozendicts angeben."
 
 #: ../../builtins/stdtypes.rst:6060
-#, fuzzy
 msgid ""
 "Similar to :meth:`dict.fromkeys`, but call again the type constructor with "
 "an initialized :class:`frozendict` if the type is a :class:`frozendict` "
@@ -10822,8 +10816,7 @@ msgid ""
 msgstr ""
 "Ähnlich wie :meth:`dict.fromkeys`, ruft jedoch erneut den Typkonstruktor mit "
 "einem initialisierten :class:`frozendict` auf, falls der Typ eine "
-"Unterklasse von :class:`frozendict` ist oder falls der Konstruktor "
-"ein :class:`frozendict` zurückgegeben hat."
+"Unterklasse von :class:`frozendict` ist."
 
 #: ../../builtins/stdtypes.rst:6070
 msgid "Context Manager Types"
@@ -11849,15 +11842,14 @@ msgstr ""
 "TypeError: cannot create 'typing.Union' instances"
 
 #: ../../builtins/stdtypes.rst:6510
-#, fuzzy
 msgid ""
 "The :meth:`!__or__` method for type objects was added to support the syntax "
 "``X | Y``.  If a metaclass implements :meth:`!__or__`, it may override the "
 "default behavior of creating a union:"
 msgstr ""
 "Die Methode :meth:`!__or__` für Typobjekte wurde hinzugefügt, um die Syntax "
-"``X | Y`` zu unterstützen. Wenn eine Metaklasse :meth:`!__or__` "
-"implementiert, kann die Union diese überschreiben:"
+"``X | Y`` zu unterstützen. Implementiert eine Metaklasse :meth:`!__or__`, "
+"kann sie das Standardverhalten, eine Union zu erzeugen, überschreiben:"
 
 #: ../../builtins/stdtypes.rst:6514
 msgid ""

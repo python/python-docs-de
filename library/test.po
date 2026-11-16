@@ -2661,90 +2661,96 @@ msgstr "Das Modul :mod:`!test.support.import_helper` unterstützt Import-Tests."
 
 #: ../../library/test.rst:1701
 msgid "Creating module objects"
-msgstr ""
+msgstr "Modulobjekte erzeugen"
 
 #: ../../library/test.rst:1705
 msgid "Create a new, empty :term:`module` or :term:`package` and return it."
 msgstr ""
+"Erzeugt ein neues, leeres :term:`Modul <module>` oder :term:`Paket "
+"<package>` und gibt es zurück."
 
 #: ../../library/test.rst:1707
 msgid ""
 "*name*, *loader* and *ispkg* (as ``is_package``) are passed "
 "to :class:`importlib.machinery.ModuleSpec`."
 msgstr ""
+"*name*, *loader* und *ispkg* (als ``is_package``) werden an "
+":class:`importlib.machinery.ModuleSpec` übergeben."
 
 #: ../../library/test.rst:1713
 msgid ""
 "Create a :term:`module` from a name or spec and add it "
 "to :data:`sys.modules`."
 msgstr ""
+"Erzeugt ein :term:`Modul <module>` aus einem Namen oder einer Spec und fügt "
+"es zu :data:`sys.modules` hinzu."
 
 #: ../../library/test.rst:1715 ../../library/test.rst:1724
 msgid "If *parents* is ``True``, create any missing parent modules."
 msgstr ""
+"Ist *parents* ``True``, werden fehlende übergeordnete Module erzeugt."
 
 #: ../../library/test.rst:1717
 msgid "Return the new module."
-msgstr ""
+msgstr "Gibt das neue Modul zurück."
 
 #: ../../library/test.rst:1722
 msgid ""
 "Create a :term:`package` from a name or spec and add it "
 "to :data:`sys.modules`."
 msgstr ""
+"Erzeugt ein :term:`Paket <package>` aus einem Namen oder einer Spec und fügt "
+"es zu :data:`sys.modules` hinzu."
 
 #: ../../library/test.rst:1726
 msgid "Return the new package."
-msgstr ""
+msgstr "Gibt das neue Paket zurück."
 
 #: ../../library/test.rst:1730
 msgid "Manipulating sys.modules"
-msgstr ""
+msgstr "sys.modules bearbeiten"
 
 #: ../../library/test.rst:1735
-#, fuzzy
 msgid "Remove the module named *name* from :data:`sys.modules`."
-msgstr "Löscht *name* aus ``sys.modules``."
+msgstr "Entfernt das Modul namens *name* aus :data:`sys.modules`."
 
 #: ../../library/test.rst:1740
-#, fuzzy
 msgid ""
 "Remove the module named *modname* from :data:`sys.modules` and delete any "
 "byte-compiled files of the module."
 msgstr ""
-"Entfernt das Modul *module_name* aus ``sys.modules`` und löscht alle "
+"Entfernt das Modul namens *modname* aus :data:`sys.modules` und löscht alle "
 "bytekompilierten Dateien des Moduls."
 
 #: ../../library/test.rst:1746
-#, fuzzy
 msgid "Return a tuple containing a copy of :data:`sys.modules`."
-msgstr "Gibt eine Kopie von :data:`sys.modules` zurück."
+msgstr "Gibt ein Tupel mit einer Kopie von :data:`sys.modules` zurück."
 
 #: ../../library/test.rst:1751
-#, fuzzy
 msgid ""
 "Remove modules except for *oldmodules* and ``encodings`` "
 "from :data:`sys.modules` in order to preserve the internal cache."
 msgstr ""
-"Entfernt Module außer *oldmodules* und ``encodings``, um den internen "
-"Zwischenspeicher zu erhalten."
+"Entfernt Module außer *oldmodules* und ``encodings`` aus "
+":data:`sys.modules`, um den internen Zwischenspeicher zu erhalten."
 
 #: ../../library/test.rst:1757
 msgid ""
 "A context manager that makes a copy of :data:`sys.modules` on entry and "
 "restores it on exit."
 msgstr ""
+"Ein Kontextmanager, der beim Eintritt eine Kopie von :data:`sys.modules` "
+"anlegt und sie beim Verlassen wiederherstellt."
 
 #: ../../library/test.rst:1763
-#, fuzzy
 msgid ""
 "A context manager to force imports to return new module references.  This is "
 "useful for testing module-level behaviors, such as the emission of "
 "a :exc:`DeprecationWarning` on import."
 msgstr ""
-"Ein Kontextmanager, der den Import zwingt, eine neue Modulreferenz "
+"Ein Kontextmanager, der den Import zwingt, neue Modulreferenzen "
 "zurückzugeben. Nützlich, um Verhalten auf Modulebene zu prüfen, etwa das "
-"Ausgeben einer :exc:`DeprecationWarning` beim Import. Beispiel::"
+"Ausgeben einer :exc:`DeprecationWarning` beim Import."
 
 #: ../../library/test.rst:1767
 msgid ""
@@ -2752,30 +2758,34 @@ msgid ""
 "from *module_names* from the original. On exit, the original module "
 "references are restored."
 msgstr ""
+"Beim Erzeugen legt er eine Kopie von :data:`sys.modules` an und entfernt die "
+"Namen aus *module_names* aus dem Original. Beim Verlassen werden die "
+"ursprünglichen Modulreferenzen wiederhergestellt."
 
 #: ../../library/test.rst:1771 ../../library/test.rst:1817
 msgid ""
 "If *usefrozen* is False (the default) then the frozen importer is disabled "
 "(except for essential modules like ``importlib._bootstrap``)."
 msgstr ""
+"Ist *usefrozen* False (der Standard), wird der Importer für eingefrorene "
+"Module deaktiviert (außer für wesentliche Module wie "
+"``importlib._bootstrap``)."
 
 #: ../../library/test.rst:1774
-#, fuzzy
 msgid "Example usage::"
-msgstr "Beispiel::"
+msgstr "Anwendungsbeispiel::"
 
 #: ../../library/test.rst:1776
-#, fuzzy
 msgid ""
 "with CleanImport('foo'):\n"
 "      importlib.import_module('foo')  # New reference."
 msgstr ""
 "with CleanImport('foo'):\n"
-"    importlib.import_module('foo')  # New reference."
+"      importlib.import_module('foo')  # New reference."
 
 #: ../../library/test.rst:1781
 msgid "Importing modules"
-msgstr ""
+msgstr "Module importieren"
 
 #: ../../library/test.rst:1785
 msgid ""
@@ -2801,7 +2811,6 @@ msgstr ""
 "werden."
 
 #: ../../library/test.rst:1798
-#, fuzzy
 msgid ""
 "This function imports and returns a fresh copy of the named Python module by "
 "removing the named module from :data:`sys.modules` before doing the import. "
@@ -2810,17 +2819,16 @@ msgid ""
 msgstr ""
 "Diese Funktion importiert eine frische Kopie des genannten Python-Moduls und "
 "gibt sie zurück. Dazu entfernt sie das Modul vor dem Import aus "
-"``sys.modules``. Beachte, dass das ursprüngliche Modul – anders als "
-"bei :func:`importlib.reload` – von dieser Operation unberührt bleibt."
+":data:`sys.modules`. Beachte, dass das ursprüngliche Modul – anders als bei "
+":func:`reload <importlib.reload>` – von dieser Operation unberührt bleibt."
 
 #: ../../library/test.rst:1803
-#, fuzzy
 msgid ""
 "*fresh* is an iterable of additional module names that are also removed from "
 "the :data:`sys.modules` cache before doing the import."
 msgstr ""
 "*fresh* ist ein Iterable weiterer Modulnamen, die vor dem Import ebenfalls "
-"aus dem ``sys.modules``-Zwischenspeicher entfernt werden."
+"aus dem Zwischenspeicher :data:`sys.modules` entfernt werden."
 
 #: ../../library/test.rst:1806
 msgid ""
@@ -2833,7 +2841,6 @@ msgstr ""
 "importieren, einen :exc:`ImportError` auslösen."
 
 #: ../../library/test.rst:1810
-#, fuzzy
 msgid ""
 "The named module and any modules named in the *fresh* and *blocked* "
 "parameters are saved before starting the import and then reinserted "
@@ -2841,7 +2848,7 @@ msgid ""
 msgstr ""
 "Das genannte Modul und alle in den Parametern *fresh* und *blocked* "
 "genannten Module werden vor dem Import gesichert und nach dem frischen "
-"Import wieder in ``sys.modules`` eingefügt."
+"Import wieder in :data:`sys.modules` eingefügt."
 
 #: ../../library/test.rst:1814
 msgid ""
@@ -2877,7 +2884,7 @@ msgstr ""
 
 #: ../../library/test.rst:1837
 msgid "Import and return the named module."
-msgstr ""
+msgstr "Importiert das genannte Modul und gibt es zurück."
 
 #: ../../library/test.rst:1839
 msgid ""
@@ -2885,16 +2892,21 @@ msgid ""
 "module and return it. If the module is not found a new, empty module will be "
 "created."
 msgstr ""
+"Ist das Modul bereits importiert, wird es zurückgegeben. Andernfalls wird "
+"das Modul importiert und zurückgegeben. Wird das Modul nicht gefunden, wird "
+"ein neues, leeres Modul erzeugt."
 
 #: ../../library/test.rst:1843
 msgid ""
 "If *clearnone* is ``True``, this will first remove any ``None`` values that "
 "would block the import."
 msgstr ""
+"Ist *clearnone* ``True``, werden zuerst alle ``None``-Werte entfernt, die "
+"den Import blockieren würden."
 
 #: ../../library/test.rst:1848
 msgid "Manipulating sys.path"
-msgstr ""
+msgstr "sys.path bearbeiten"
 
 #: ../../library/test.rst:1852
 msgid "A context manager to temporarily add directories to :data:`sys.path`."
@@ -2929,23 +2941,29 @@ msgid ""
 "of :data:`sys.path`. The context manager yields a tuple with the name and "
 "the path to the script in the temporary directory."
 msgstr ""
+"Ein Kontextmanager, der in einem temporären Verzeichnis ein neues "
+"Python-Modul *name* mit dem Quellcode *source* erzeugt und dieses "
+"Verzeichnis an den Anfang von :data:`sys.path` stellt. Der Kontextmanager "
+"liefert ein Tupel mit dem Namen und dem Pfad zum Skript im temporären "
+"Verzeichnis."
 
 #: ../../library/test.rst:1870
 msgid ""
 "If the name matches an existing module, this will be cleared "
 "from :data:`sys.modules` on entry and restored on exit."
 msgstr ""
+"Entspricht der Name einem vorhandenen Modul, wird dieses beim Eintritt aus "
+":data:`sys.modules` entfernt und beim Verlassen wiederhergestellt."
 
 #: ../../library/test.rst:1873
 msgid "If no name is given, the module will be named \"spam\"."
-msgstr ""
+msgstr "Wird kein Name angegeben, heißt das Modul „spam“."
 
 #: ../../library/test.rst:1878
 msgid "Manipulating internals"
-msgstr ""
+msgstr "Interna bearbeiten"
 
 #: ../../library/test.rst:1882
-#, fuzzy
 msgid ""
 "Move a :pep:`3147`/:pep:`488` pyc file to its legacy pyc location and return "
 "the file system path to the legacy pyc file.  The *source* value is the file "
@@ -2955,57 +2973,76 @@ msgstr ""
 "Verschiebt eine pyc-Datei nach :pep:`3147`/:pep:`488` an ihren alten pyc-Ort "
 "und gibt den Dateisystempfad der alten pyc-Datei zurück. Der Wert *source* "
 "ist der Dateisystempfad der Quelldatei. Sie muss nicht vorhanden sein, die "
-"pyc-Datei nach PEP 3147/488 aber schon."
+"pyc-Datei nach PEP 3147/488 aber schon, oder *allow_compile* muss gesetzt "
+"sein."
 
 #: ../../library/test.rst:1887
 msgid ""
 "If *allow_compile* is ``True`` this will create a .pyc file if it does not "
 "exist."
 msgstr ""
+"Ist *allow_compile* ``True``, wird eine .pyc-Datei erzeugt, falls sie nicht "
+"existiert."
 
 #: ../../library/test.rst:1892
 msgid "A context manager that forces frozen modules to be used or excluded."
 msgstr ""
+"Ein Kontextmanager, der die Verwendung eingefrorener Module erzwingt oder "
+"sie ausschließt."
 
 #: ../../library/test.rst:1894
 msgid ""
 "If *enabled* is ``True`` frozen modules are used, otherwise they are "
 "excluded."
 msgstr ""
+"Ist *enabled* ``True``, werden eingefrorene Module verwendet, andernfalls "
+"werden sie ausgeschlossen."
 
 #: ../../library/test.rst:1896
 msgid ""
 "This only applies to modules that have not yet been imported. Some essential "
 "modules will always be imported frozen."
 msgstr ""
+"Das gilt nur für Module, die noch nicht importiert wurden. Einige "
+"wesentliche Module werden immer eingefroren importiert."
 
 #: ../../library/test.rst:1902
 msgid ""
 "A context manager that forces (if *enabled* is ``True``) or prevents legacy "
 "(single-phase init) modules from being allowed in subinterpreters."
 msgstr ""
+"Ein Kontextmanager, der Legacy-Module (mit einphasiger Initialisierung) in "
+"Subinterpretern erzwingt (wenn *enabled* ``True`` ist) oder verhindert."
 
 #: ../../library/test.rst:1905
 msgid ""
 "This only applies to modules that haven't been imported yet. It overrides "
 "the :c:member:`PyInterpreterConfig.check_multi_interp_extensions` setting."
 msgstr ""
+"Das gilt nur für Module, die noch nicht importiert wurden. Es überschreibt "
+"die Einstellung "
+":c:member:`PyInterpreterConfig.check_multi_interp_extensions`."
 
 #: ../../library/test.rst:1911
 msgid "Lazy imports"
-msgstr ""
+msgstr "Verzögerte Importe"
 
 #: ../../library/test.rst:1915
 msgid ""
 "Test that when *imported_module* is imported, none of the modules named in "
 "*modules_to_block* are imported as a side effect."
 msgstr ""
+"Prüft, dass beim Import von *imported_module* keines der in "
+"*modules_to_block* genannten Module als Nebenwirkung importiert wird."
 
 #: ../../library/test.rst:1918
 msgid ""
 "*additional_code* if given should be additional Python source code to "
 "execute before checking that the blocked modules still haven't been imported."
 msgstr ""
+"*additional_code* sollte, falls angegeben, zusätzlicher Python-Quellcode "
+"sein, der ausgeführt wird, bevor geprüft wird, dass die blockierten Module "
+"weiterhin nicht importiert wurden."
 
 #: ../../library/test.rst:1923
 msgid ":mod:`!test.support.warnings_helper` --- Utilities for warnings tests"

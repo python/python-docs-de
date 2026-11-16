@@ -68,7 +68,6 @@ msgid "abstract base class"
 msgstr "Abstrakte Basisklasse"
 
 #: ../../glossary.rst:29
-#, fuzzy
 msgid ""
 "Abstract base classes complement :term:`duck-typing` by providing a way to "
 "define interfaces when other techniques like :func:`hasattr` would be clumsy "
@@ -82,18 +81,18 @@ msgid ""
 "the :mod:`importlib.abc` module).  You can create your own ABCs with "
 "the :mod:`abc` module."
 msgstr ""
-"Abstrakte Basisklassen (abstract base class / ABC) ergänzen :term:`Duck-"
-"Typing <duck-typing>`, indem sie eine Möglichkeit bieten, Schnittstellen zu "
-"definieren, wenn andere Techniken wie :func:`hasattr` umständlich oder in "
-"subtiler Weise falsch wären (zum Beispiel bei :ref:`magischen Methoden "
-"<special-lookup>`). ABCs führen virtuelle Unterklassen ein – das sind "
-"Klassen, die nicht von einer Klasse erben, aber dennoch "
-"von :func:`isinstance` und :func:`issubclass` erkannt werden. Siehe die "
-"Dokumentation zum Modul :mod:`abc`. Python enthält viele integrierte ABCs "
-"für Datenstrukturen (im Modul :mod:`collections.abc` ), Zahlen (im "
-"Modul :mod:`numbers` ), Streams (im Modul :mod:`io` ) sowie Import-Finder "
-"und Loader (im Modul :mod:`importlib.abc` ). Mit dem Modul :mod:`abc` kannst "
-"du eigene ABCs erstellen."
+"Abstrakte Basisklassen (abstract base class / ABC) ergänzen "
+":term:`Duck-Typing <duck-typing>`, indem sie eine Möglichkeit bieten, "
+"Schnittstellen zu definieren, wenn andere Techniken wie :func:`hasattr` "
+"umständlich oder in subtiler Weise falsch wären (zum Beispiel bei "
+":ref:`magischen Methoden <special-lookup>`). ABCs führen :term:`virtuelle "
+"Unterklassen <virtual subclass>` ein – das sind Klassen, die nicht von einer "
+"Klasse erben, aber dennoch von :func:`isinstance` und :func:`issubclass` "
+"erkannt werden. Siehe die Dokumentation zum Modul :mod:`abc`. Python enthält "
+"viele integrierte ABCs für Datenstrukturen (im Modul "
+":mod:`collections.abc`), Zahlen (im Modul :mod:`numbers`), Streams (im Modul "
+":mod:`io`) sowie Import-Finder und Loader (im Modul :mod:`importlib.abc`). "
+"Mit dem Modul :mod:`abc` kannst du eigene ABCs erstellen."
 
 #: ../../glossary.rst:41
 msgid "annotate function"
@@ -4413,7 +4412,7 @@ msgstr ""
 
 #: ../../glossary.rst:1730
 msgid "virtual subclass"
-msgstr ""
+msgstr "virtuelle Unterklasse"
 
 #: ../../glossary.rst:1732
 msgid ""
@@ -4422,6 +4421,10 @@ msgid ""
 "A class is made a virtual subclass by registering it with the "
 "ABC's :meth:`~abc.ABCMeta.register` method."
 msgstr ""
+"Eine Klasse, die :func:`issubclass` und :func:`isinstance` als Unterklasse "
+"einer :term:`abstrakten Basisklasse <abstract base class>` behandeln, obwohl "
+"sie nicht von ihr erbt. Zur virtuellen Unterklasse wird eine Klasse, indem "
+"man sie mit der Methode :meth:`~abc.ABCMeta.register` der ABC registriert."
 
 #: ../../glossary.rst:1736
 msgid "walrus operator"

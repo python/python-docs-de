@@ -2112,9 +2112,13 @@ msgid ""
 "positional argument after a command name; options for the outer parser must "
 "precede that command::"
 msgstr ""
+"``argparse.REMAINDER``. Die restlichen Befehlszeilenargumente werden in "
+"einer Liste gesammelt, auch Strings, die wie Optionen aussehen. Das ist "
+"nützlich, um Argumente an einen anderen Befehl weiterzureichen. Ein übliches "
+"Muster ist ein letztes Positionsargument nach einem Befehlsnamen. Optionen "
+"für den äußeren Parser müssen vor diesem Befehl stehen::"
 
 #: ../../library/argparse.rst:983
-#, fuzzy
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo')\n"
@@ -2127,12 +2131,12 @@ msgid ""
 msgstr ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo')\n"
-">>> parser.add_argument('cmd')\n"
-">>> parser.add_argument('rest', nargs='*', type=int)\n"
-">>> parser.parse_known_args('doit 1 --foo bar 2 3'.split())\n"
-"(Namespace(cmd='doit', foo='bar', rest=[1]), ['2', '3'])\n"
-">>> parser.parse_intermixed_args('doit 1 --foo bar 2 3'.split())\n"
-"Namespace(cmd='doit', foo='bar', rest=[1, 2, 3])"
+">>> parser.add_argument('command')\n"
+">>> parser.add_argument('args', nargs=argparse.REMAINDER)\n"
+">>> parser.parse_args('--foo B cmd --foo C'.split())\n"
+"Namespace(foo='B', command='cmd', args=['--foo', 'C'])\n"
+">>> parser.parse_args(['cmd'])\n"
+"Namespace(foo=None, command='cmd', args=[])"
 
 #: ../../library/argparse.rst:992
 msgid ""
@@ -2142,9 +2146,13 @@ msgid ""
 "parent parser and does not start the remainder. Any ``--`` consumed by the "
 "remainder is retained::"
 msgstr ""
+"Ist der Rest das erste Positionsargument, werden vorangehende Optionen "
+"weiterhin normal geparst. Der Rest beginnt mit dem ersten Positionswert oder "
+"mit ``--``. In einem Subparser hat der übergeordnete Parser den Namen des "
+"Unterbefehls bereits verarbeitet, und dieser leitet den Rest nicht ein. Ein "
+"vom Rest aufgenommenes ``--`` bleibt erhalten::"
 
 #: ../../library/argparse.rst:998
-#, fuzzy
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('args', nargs=argparse.REMAINDER)\n"
@@ -2152,18 +2160,17 @@ msgid ""
 "Namespace(args=['--', '--foo', 'B'])"
 msgstr ""
 ">>> parser = argparse.ArgumentParser()\n"
-">>> parser.add_argument('bar')\n"
-">>> parser.parse_args(['XXX'])\n"
-"Namespace(bar='XXX')"
+">>> parser.add_argument('args', nargs=argparse.REMAINDER)\n"
+">>> parser.parse_args(['--', '--foo', 'B'])\n"
+"Namespace(args=['--', '--foo', 'B'])"
 
 #: ../../library/argparse.rst:1003
-#, fuzzy
 msgid ""
 "For an optional argument, supply the option separately from its values::"
-msgstr "Ein optionales Argument könnte zum Beispiel so erzeugt werden::"
+msgstr ""
+"Gib bei einem optionalen Argument die Option getrennt von ihren Werten an::"
 
 #: ../../library/argparse.rst:1005
-#, fuzzy
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--forward', nargs=argparse.REMAINDER)\n"
@@ -2173,23 +2180,27 @@ msgid ""
 "Namespace(forward=[])"
 msgstr ""
 ">>> parser = argparse.ArgumentParser()\n"
-">>> parser.add_argument('--foo', default=argparse.SUPPRESS)\n"
-">>> parser.parse_args([])\n"
-"Namespace()\n"
-">>> parser.parse_args(['--foo', '1'])\n"
-"Namespace(foo='1')"
+">>> parser.add_argument('--forward', nargs=argparse.REMAINDER)\n"
+">>> parser.parse_args('--forward --foo B --'.split())\n"
+"Namespace(forward=['--foo', 'B', '--'])\n"
+">>> parser.parse_args(['--forward'])\n"
+"Namespace(forward=[])"
 
 #: ../../library/argparse.rst:1012
 msgid ""
 "An attached value such as ``--forward=value`` supplies only that value; "
 "subsequent arguments are parsed normally."
 msgstr ""
+"Ein angehängter Wert wie ``--forward=value`` liefert nur diesen Wert, "
+"nachfolgende Argumente werden normal geparst."
 
 #: ../../library/argparse.rst:1015
 msgid ""
 "Optional arguments with ``nargs=argparse.REMAINDER`` consume ``--`` and "
 "subsequent arguments instead of stopping at ``--``."
 msgstr ""
+"Optionale Argumente mit ``nargs=argparse.REMAINDER`` nehmen ``--`` und die "
+"nachfolgenden Argumente auf, statt bei ``--`` anzuhalten."
 
 #: ../../library/argparse.rst:1019
 msgid ""
@@ -2197,6 +2208,9 @@ msgid ""
 "default_ and produces ``[]``. The choices_ restriction is not applied to the "
 "remainder."
 msgstr ""
+"Mit der Standardaktion ``'store'`` ignoriert ein leerer positioneller Rest "
+"default_ und liefert ``[]``. Die Einschränkung durch choices_ wird auf den "
+"Rest nicht angewendet."
 
 #: ../../library/argparse.rst:1023
 msgid ""
@@ -4952,7 +4966,6 @@ msgstr ""
 "Parse-Stil."
 
 #: ../../library/argparse.rst:2344
-#, fuzzy
 msgid ""
 "These parsers do not support all the :mod:`!argparse` features, and will "
 "raise exceptions if unsupported features are used.  In particular, "
@@ -4962,9 +4975,10 @@ msgid ""
 msgstr ""
 "Diese Parser unterstützen nicht alle Funktionen von :mod:`!argparse` und "
 "lösen Ausnahmen aus, wenn nicht unterstützte Funktionen verwendet werden. "
-"Insbesondere werden Subparser und Gruppen sich gegenseitig ausschließender "
-"Argumente, die sowohl optionale als auch positionelle Argumente enthalten, "
-"nicht unterstützt."
+"Insbesondere werden Subparser, Positionsargumente mit "
+":ref:`nargs=argparse.REMAINDER <argparse.REMAINDER>` und Gruppen sich "
+"gegenseitig ausschließender Argumente, die sowohl optionale als auch "
+"positionelle Argumente enthalten, nicht unterstützt."
 
 #: ../../library/argparse.rst:2350
 msgid ""
