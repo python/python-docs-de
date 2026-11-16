@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-05 06:38+0000\n"
+"POT-Creation-Date: 2026-11-16 03:06+0000\n"
 "PO-Revision-Date: 2025-09-16 00:00+0000\n"
 "Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
 "Language: de\n"
@@ -1873,8 +1873,8 @@ msgstr ""
 
 #: ../../c-api/init_config.rst:1219
 msgid ""
-"If equals to zero, ``Py_RunMain()`` prepends a potentially unsafe path "
-"to :data:`sys.path` at startup:"
+"If equals to zero, ``Py_RunMain()`` prepends a potentially "
+"unsafe :data:`sys._path0` to :data:`sys.path` at startup:"
 msgstr ""
 
 #: ../../c-api/init_config.rst:1222
