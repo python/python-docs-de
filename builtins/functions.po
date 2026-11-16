@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-09 03:05+0000\n"
+"POT-Creation-Date: 2026-11-16 03:06+0000\n"
 "PO-Revision-Date: 2026-11-01 16:00+0100\n"
 "Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -1550,13 +1550,14 @@ msgid "*globals* can now be a :class:`frozendict`."
 msgstr "*globals* kann jetzt ein :class:`frozendict` sein."
 
 #: ../../builtins/functions.rst:700
+#, fuzzy
 msgid ""
 "This function supports dynamic execution of Python code. *source* must be "
 "either a string or a code object.  If it is a string, the string is parsed "
 "as a suite of Python statements which is then executed (unless a syntax "
-"error occurs). [#]_ If it is a code object, it is simply executed.  In all "
-"cases, the code that's executed is expected to be valid as file input (see "
-"the section :ref:`file-input` in the Reference Manual). Be aware that "
+"error occurs). If it is a code object, it is simply executed.  In all cases, "
+"the code that's executed is expected to be valid as file input (see the "
+"section :ref:`file-input` in the Reference Manual). Be aware that "
 "the :keyword:`nonlocal`, :keyword:`yield`,  and :keyword:`return` statements "
 "may not be used outside of function definitions even within the context of "
 "code passed to the :func:`exec` function. The return value is ``None``."
@@ -4807,21 +4808,6 @@ msgstr ""
 "Wenn die Befehlszeilenoptionen :option:`-E` oder :option:`-I` verwendet "
 "werden, wird die Umgebungsvariable :envvar:`PYTHONCASEOK` nun ignoriert."
 
-#: ../../builtins/functions.rst:2410
-msgid "Footnotes"
-msgstr "Fußnoten"
-
-#: ../../builtins/functions.rst:2411
-msgid ""
-"Note that the parser only accepts the Unix-style end of line convention. If "
-"you are reading the code from a file, make sure to use newline conversion "
-"mode to convert Windows or Mac-style newlines."
-msgstr ""
-"Beachte, dass der Parser nur Zeilenenden im Unix-Format akzeptiert. Wenn Du "
-"den Code aus einer Datei liest, stelle sicher, dass Du den Modus zur "
-"Umwandlung von Zeilenumbrüchen verwendest, um Zeilenumbrüche im Windows- "
-"oder Mac-Format zu konvertieren."
-
 #: ../../builtins/functions.rst:158
 msgid "Boolean"
 msgstr "Boolescher Wert"
@@ -4929,6 +4915,19 @@ msgstr "Import"
 #: ../../builtins/functions.rst:2340
 msgid "builtins"
 msgstr "Integrierte Funktionen"
+
+#~ msgid "Footnotes"
+#~ msgstr "Fußnoten"
+
+#~ msgid ""
+#~ "Note that the parser only accepts the Unix-style end of line convention. "
+#~ "If you are reading the code from a file, make sure to use newline "
+#~ "conversion mode to convert Windows or Mac-style newlines."
+#~ msgstr ""
+#~ "Beachte, dass der Parser nur Zeilenenden im Unix-Format akzeptiert. Wenn "
+#~ "Du den Code aus einer Datei liest, stelle sicher, dass Du den Modus zur "
+#~ "Umwandlung von Zeilenumbrüchen verwendest, um Zeilenumbrüche im Windows- "
+#~ "oder Mac-Format zu konvertieren."
 
 #~ msgid ""
 #~ "This function raises :exc:`SyntaxError` or :exc:`ValueError` if the "

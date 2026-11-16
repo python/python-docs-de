@@ -82,9 +82,9 @@ msgid ""
 "2.1)."
 msgstr ""
 "Es soll sichergestellt werden, dass :ref:`Future-Anweisungen <future>` unter "
-"Releases vor Python 2.1 zumindest Laufzeitausnahmen auslösen (der Import von "
-":mod:`!__future__` schlägt fehl, weil es vor 2.1 kein Modul dieses Namens "
-"gab)."
+"Releases vor Python 2.1 zumindest Laufzeitausnahmen auslösen (der Import "
+"von :mod:`!__future__` schlägt fehl, weil es vor 2.1 kein Modul dieses "
+"Namens gab)."
 
 #: ../../library/__future__.rst:34
 msgid "Module Contents"
@@ -191,8 +191,7 @@ msgstr "3.7"
 
 #: ../../library/__future__.rst:80
 msgid ":pep:`479`: *StopIteration handling inside generators*"
-msgstr ""
-":pep:`479`: *Behandlung von StopIteration innerhalb von Generatoren*"
+msgstr ":pep:`479`: *Behandlung von StopIteration innerhalb von Generatoren*"
 
 #: ../../library/__future__.rst:82
 msgid "3.7.0b1"
@@ -274,9 +273,9 @@ msgid ""
 "imports."
 msgstr ""
 "Andernfalls hält *MandatoryRelease* fest, wann das Feature Teil der Sprache "
-"wurde. In Releases ab diesem Zeitpunkt brauchen Module keine "
-"Future-Anweisung mehr, um das betreffende Feature zu nutzen, dürfen solche "
-"Importe aber weiterhin verwenden."
+"wurde. In Releases ab diesem Zeitpunkt brauchen Module keine Future-"
+"Anweisung mehr, um das betreffende Feature zu nutzen, dürfen solche Importe "
+"aber weiterhin verwenden."
 
 #: ../../library/__future__.rst:122
 msgid ""
@@ -295,8 +294,9 @@ msgid ""
 msgstr ""
 "*CompilerFlag* ist das (Bitfeld-)Flag, das als viertes Argument an die "
 "eingebaute Funktion :func:`compile` übergeben werden sollte, um das Feature "
-"in dynamisch kompiliertem Code zu aktivieren. Dieses Flag ist im Attribut "
-":attr:`_Feature.compiler_flag` der :class:`_Feature`-Instanzen gespeichert."
+"in dynamisch kompiliertem Code zu aktivieren. Dieses Flag ist im "
+"Attribut :attr:`_Feature.compiler_flag` der :class:`_Feature`-Instanzen "
+"gespeichert."
 
 #: ../../library/__future__.rst:133
 msgid ""
