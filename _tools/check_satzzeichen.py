@@ -47,6 +47,17 @@ from pathlib import Path
 SEMIKOLON_RE = re.compile(r"; (?=[a-zäöüß])")
 # Satzende, dann zwei oder mehr Leerzeichen, dann ein Satzanfang
 ABSTAND_RE = re.compile(r"(?<=[.!?])  +(?=[A-ZÄÖÜ„*`\"'])")
+# Inline-Code und Rollen (``…``, `…`_, :rolle:`…`): Semikolons darin sind
+# Code und werden nicht gemeldet
+LITERAL_RE = re.compile(r"``.+?``|:[a-z:]+:`[^`]*`|`[^`]*`_*", re.S)
+
+
+def literal_bereiche(text: str) -> list[tuple[int, int]]:
+    return [m.span() for m in LITERAL_RE.finditer(text)]
+
+
+def im_literal(pos: int, bereiche: list[tuple[int, int]]) -> bool:
+    return any(a <= pos < b for a, b in bereiche)
 
 KLEIN = "aäbcdefghijklmnoöpqrstuüvwxyzß"
 
@@ -131,9 +142,14 @@ def pruefe_datei(pfad: Path, fix: bool, mit_abstand: bool):
         rst = rst_zeile(block)
         semi_offen = 0          # Semikolon-Funde, die zu beheben sind
         semi_aufzaehlung = 0    # richtige Semikolons in diesem Eintrag
+        semi_literal = 0        # Semikolons in Inline-Code
+        bereiche = literal_bereiche(msgstr)
 
         for m in SEMIKOLON_RE.finditer(msgstr):
             i = m.start()
+            if im_literal(i, bereiche):
+                semi_literal += 1
+                continue
             if ist_aufzaehlung(msgstr, i):
                 semi_aufzaehlung += 1
                 continue
@@ -152,7 +168,9 @@ def pruefe_datei(pfad: Path, fix: bool, mit_abstand: bool):
         # Enthaelt ein Eintrag auch ein richtiges Semikolon (Aufzaehlung),
         # bleibt er beim Semikolon unangetastet: lieber von Hand nachsehen
         # als eine richtige Stelle kaputtmachen.
-        semi_fix = semi_offen > 0 and semi_aufzaehlung == 0
+        # Gleiches gilt fuer Semikolons in Inline-Code: die zeilenweise
+        # Reparatur kann sie nicht unterscheiden.
+        semi_fix = semi_offen > 0 and semi_aufzaehlung == 0 and semi_literal == 0
 
         for k in range(sa, len(block)):
             alt = block[k]
