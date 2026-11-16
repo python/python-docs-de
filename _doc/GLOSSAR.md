@@ -22,7 +22,7 @@ nicht hier, sondern in [AI-SKILLS.md](AI-SKILLS.md).
 Ein eigener Begriff lässt sich **nicht** in `glossary.po` ergänzen: Jeder
 Eintrag dort hängt an einem `msgid` aus `Doc/glossary.rst` in CPython.
 Soll ein Begriff wirklich ins veröffentlichte Glossar, führt der Weg über
-einen Pull Request gegen CPython; beim nächsten Sync steht er dann allen
+einen Pull Request gegen CPython. Beim nächsten Sync steht er dann allen
 Sprachen zur Verfügung.
 
 ## Grundhaltung
