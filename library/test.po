@@ -2674,8 +2674,8 @@ msgid ""
 "*name*, *loader* and *ispkg* (as ``is_package``) are passed "
 "to :class:`importlib.machinery.ModuleSpec`."
 msgstr ""
-"*name*, *loader* und *ispkg* (als ``is_package``) werden an "
-":class:`importlib.machinery.ModuleSpec` übergeben."
+"*name*, *loader* und *ispkg* (als ``is_package``) werden "
+"an :class:`importlib.machinery.ModuleSpec` übergeben."
 
 #: ../../library/test.rst:1713
 msgid ""
@@ -2687,8 +2687,7 @@ msgstr ""
 
 #: ../../library/test.rst:1715 ../../library/test.rst:1724
 msgid "If *parents* is ``True``, create any missing parent modules."
-msgstr ""
-"Ist *parents* ``True``, werden fehlende übergeordnete Module erzeugt."
+msgstr "Ist *parents* ``True``, werden fehlende übergeordnete Module erzeugt."
 
 #: ../../library/test.rst:1717
 msgid "Return the new module."
@@ -2731,8 +2730,8 @@ msgid ""
 "Remove modules except for *oldmodules* and ``encodings`` "
 "from :data:`sys.modules` in order to preserve the internal cache."
 msgstr ""
-"Entfernt Module außer *oldmodules* und ``encodings`` aus "
-":data:`sys.modules`, um den internen Zwischenspeicher zu erhalten."
+"Entfernt Module außer *oldmodules* und ``encodings`` "
+"aus :data:`sys.modules`, um den internen Zwischenspeicher zu erhalten."
 
 #: ../../library/test.rst:1757
 msgid ""
@@ -2818,9 +2817,10 @@ msgid ""
 "not affected by this operation."
 msgstr ""
 "Diese Funktion importiert eine frische Kopie des genannten Python-Moduls und "
-"gibt sie zurück. Dazu entfernt sie das Modul vor dem Import aus "
-":data:`sys.modules`. Beachte, dass das ursprüngliche Modul – anders als bei "
-":func:`reload <importlib.reload>` – von dieser Operation unberührt bleibt."
+"gibt sie zurück. Dazu entfernt sie das Modul vor dem Import "
+"aus :data:`sys.modules`. Beachte, dass das ursprüngliche Modul – anders als "
+"bei :func:`reload <importlib.reload>` – von dieser Operation unberührt "
+"bleibt."
 
 #: ../../library/test.rst:1803
 msgid ""
@@ -2941,19 +2941,18 @@ msgid ""
 "of :data:`sys.path`. The context manager yields a tuple with the name and "
 "the path to the script in the temporary directory."
 msgstr ""
-"Ein Kontextmanager, der in einem temporären Verzeichnis ein neues "
-"Python-Modul *name* mit dem Quellcode *source* erzeugt und dieses "
-"Verzeichnis an den Anfang von :data:`sys.path` stellt. Der Kontextmanager "
-"liefert ein Tupel mit dem Namen und dem Pfad zum Skript im temporären "
-"Verzeichnis."
+"Ein Kontextmanager, der in einem temporären Verzeichnis ein neues Python-"
+"Modul *name* mit dem Quellcode *source* erzeugt und dieses Verzeichnis an "
+"den Anfang von :data:`sys.path` stellt. Der Kontextmanager liefert ein Tupel "
+"mit dem Namen und dem Pfad zum Skript im temporären Verzeichnis."
 
 #: ../../library/test.rst:1870
 msgid ""
 "If the name matches an existing module, this will be cleared "
 "from :data:`sys.modules` on entry and restored on exit."
 msgstr ""
-"Entspricht der Name einem vorhandenen Modul, wird dieses beim Eintritt aus "
-":data:`sys.modules` entfernt und beim Verlassen wiederhergestellt."
+"Entspricht der Name einem vorhandenen Modul, wird dieses beim Eintritt "
+"aus :data:`sys.modules` entfernt und beim Verlassen wiederhergestellt."
 
 #: ../../library/test.rst:1873
 msgid "If no name is given, the module will be named \"spam\"."
@@ -3020,8 +3019,8 @@ msgid ""
 "the :c:member:`PyInterpreterConfig.check_multi_interp_extensions` setting."
 msgstr ""
 "Das gilt nur für Module, die noch nicht importiert wurden. Es überschreibt "
-"die Einstellung "
-":c:member:`PyInterpreterConfig.check_multi_interp_extensions`."
+"die "
+"Einstellung :c:member:`PyInterpreterConfig.check_multi_interp_extensions`."
 
 #: ../../library/test.rst:1911
 msgid "Lazy imports"
