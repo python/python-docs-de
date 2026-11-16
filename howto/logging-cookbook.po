@@ -2020,7 +2020,7 @@ msgstr ""
 #: ../../howto/logging-cookbook.rst:944
 msgid "Using objects other than dicts to pass contextual information"
 msgstr ""
-"Andere Objekte als Dictionarys verwenden, um Kontextinformationen zu "
+"Andere Objekte als Dictionaries verwenden, um Kontextinformationen zu "
 "übergeben"
 
 #: ../../howto/logging-cookbook.rst:946

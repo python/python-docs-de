@@ -353,7 +353,7 @@ msgstr ""
 
 #: ../../library/tomllib.rst:171
 msgid "Tables/dicts"
-msgstr "Tabellen/Dictionarys"
+msgstr "Tabellen/Dictionaries"
 
 #: ../../library/tomllib.rst:172
 msgid ""

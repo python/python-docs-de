@@ -472,7 +472,7 @@ msgstr ""
 msgid ""
 "If ``True``, dictionaries will be outputted sorted by key. Default ``False``."
 msgstr ""
-"Bei ``True`` werden Dictionarys nach Schlüssel sortiert ausgegeben. "
+"Bei ``True`` werden Dictionaries nach Schlüssel sortiert ausgegeben. "
 "Voreingestellt ``False``."
 
 #: ../../library/json.rst:245
@@ -1034,7 +1034,7 @@ msgid ""
 "JSON serializations can be compared on a day-to-day basis."
 msgstr ""
 "Ist *sort_keys* wahr (voreingestellt ``False``), wird die Ausgabe von "
-"Dictionarys nach Schlüssel sortiert. Das ist für Regressionstests nützlich, "
+"Dictionaries nach Schlüssel sortiert. Das ist für Regressionstests nützlich, "
 "damit JSON-Serialisierungen von Tag zu Tag vergleichbar bleiben."
 
 #: ../../library/json.rst:547
@@ -1503,7 +1503,7 @@ msgid ""
 "keys` option to sort the output of dictionaries alphabetically by key."
 msgstr ""
 "Die Ausgabe hat jetzt dieselbe Reihenfolge wie die Eingabe. Mit der "
-"Option :option:`--sort-keys` wird die Ausgabe von Dictionarys alphabetisch "
+"Option :option:`--sort-keys` wird die Ausgabe von Dictionaries alphabetisch "
 "nach Schlüssel sortiert."
 
 #: ../../library/json.rst:798
@@ -1564,7 +1564,7 @@ msgstr ""
 
 #: ../../library/json.rst:834
 msgid "Sort the output of dictionaries alphabetically by key."
-msgstr "Sortiert die Ausgabe von Dictionarys alphabetisch nach Schlüssel."
+msgstr "Sortiert die Ausgabe von Dictionaries alphabetisch nach Schlüssel."
 
 #: ../../library/json.rst:840
 msgid ""

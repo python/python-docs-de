@@ -748,7 +748,7 @@ msgid ""
 msgstr ""
 "Unveränderliche Objekte wie Zahlen, Zeichenketten, Tupel und ``None`` sind "
 "schon per Definition vor Änderungen sicher. Änderungen an veränderlichen "
-"Objekten wie Dictionarys, Listen und Klasseninstanzen können dagegen zu "
+"Objekten wie Dictionaries, Listen und Klasseninstanzen können dagegen zu "
 "Verwirrung führen."
 
 #: ../../faq/programming.rst:362
@@ -1387,7 +1387,7 @@ msgid ""
 "Some objects can be copied more easily.  Dictionaries have "
 "a :meth:`~dict.copy` method::"
 msgstr ""
-"Manche Objekte lassen sich leichter kopieren. Dictionarys haben eine "
+"Manche Objekte lassen sich leichter kopieren. Dictionaries haben eine "
 "Methode :meth:`~dict.copy`::"
 
 #: ../../faq/programming.rst:646

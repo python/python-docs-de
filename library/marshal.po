@@ -150,7 +150,7 @@ msgid ""
 "dictionaries."
 msgstr ""
 "Formatversion 3 hinzugefügt, die das Schreiben rekursiver Listen, Mengen und "
-"Dictionarys unterstützt."
+"Dictionaries unterstützt."
 
 #: ../../library/marshal.rst:68
 msgid ""

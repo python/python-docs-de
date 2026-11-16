@@ -609,7 +609,7 @@ msgstr ""
 "Theoretisch bedeutet das, dass eine genaue Abrechnung ein genaues "
 "Verständnis der Bytecode-Umsetzung der PVM erfordert. In der Praxis bedeutet "
 "es, dass Operationen auf gemeinsam genutzten Variablen integrierter "
-"Datentypen (ints, Listen, Dictionarys und so weiter), die „atomar aussehen“, "
+"Datentypen (ints, Listen, Dictionaries und so weiter), die „atomar aussehen“, "
 "es wirklich sind."
 
 #: ../../faq/library.rst:333
@@ -618,7 +618,7 @@ msgid ""
 "D, D1, D2 are dicts, x, y are objects, i, j are ints)::"
 msgstr ""
 "Zum Beispiel sind die folgenden Operationen alle atomar (L, L1, L2 sind "
-"Listen, D, D1, D2 sind Dictionarys, x, y sind Objekte, i, j sind ints)::"
+"Listen, D, D1, D2 sind Dictionaries, x, y sind Objekte, i, j sind ints)::"
 
 #: ../../faq/library.rst:336
 msgid ""
@@ -672,7 +672,7 @@ msgstr ""
 "Operationen, die andere Objekte ersetzen, können die "
 "Methode :meth:`~object.__del__` dieser anderen Objekte auslösen, sobald "
 "deren Referenzzähler null erreicht, und das kann sich auswirken. Besonders "
-"gilt das für Massenaktualisierungen von Dictionarys und Listen. Im Zweifel: "
+"gilt das für Massenaktualisierungen von Dictionaries und Listen. Im Zweifel: "
 "nimm einen Mutex!"
 
 #: ../../faq/library.rst:362

@@ -154,7 +154,7 @@ msgid ""
 "If ``True``, dictionaries will be formatted with their keys sorted, "
 "otherwise they will be displayed in insertion order (the default)."
 msgstr ""
-"Bei ``True`` werden Dictionarys mit sortierten Schlüsseln formatiert, "
+"Bei ``True`` werden Dictionaries mit sortierten Schlüsseln formatiert, "
 "andernfalls in der Reihenfolge des Einfügens (die Voreinstellung)."
 
 #: ../../library/pprint.rst:86
@@ -187,7 +187,7 @@ msgid ""
 "use :func:`~pprint.pp` instead where it is ``False`` by default."
 msgstr ""
 "Alias für :func:`~pprint.pp`, bei dem *sort_dicts* voreingestellt auf "
-"``True`` steht und die Schlüssel der Dictionarys damit selbsttätig sortiert "
+"``True`` steht und die Schlüssel der Dictionaries damit selbsttätig sortiert "
 "werden. Meist ist stattdessen :func:`~pprint.pp` die bessere Wahl, dort "
 "steht der Wert voreingestellt auf ``False``."
 

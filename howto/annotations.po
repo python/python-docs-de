@@ -35,7 +35,7 @@ msgid ""
 "guidelines described below."
 msgstr ""
 "Dieses Dokument soll die Best Practices für die Arbeit mit Annotations-"
-"Dictionarys bündeln. Wenn du Python-Code schreibst, der ``__annotations__`` "
+"Dictionaries bündeln. Wenn du Python-Code schreibst, der ``__annotations__`` "
 "an Python-Objekten untersucht, empfehlen wir dir, den unten beschriebenen "
 "Richtlinien zu folgen."
 
@@ -441,7 +441,7 @@ msgstr ""
 #: ../../howto/annotations.rst:198
 msgid "You should avoid modifying ``__annotations__`` dicts."
 msgstr ""
-"Du solltest es vermeiden, ``__annotations__``-Dictionarys zu verändern."
+"Du solltest es vermeiden, ``__annotations__``-Dictionaries zu verändern."
 
 #: ../../howto/annotations.rst:200
 msgid ""

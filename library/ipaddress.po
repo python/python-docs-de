@@ -155,7 +155,7 @@ msgstr ""
 "sind, setzen auch :class:`IPv4Address`-Objekte um, damit sich Code leichter "
 "schreiben lässt, der beide IP-Versionen richtig behandelt. Adressobjekte "
 "sind :term:`hashbar <hashable>` und lassen sich deshalb als Schlüssel in "
-"Dictionarys verwenden."
+"Dictionaries verwenden."
 
 #: ../../library/ipaddress.rst:97
 msgid ""
@@ -822,7 +822,7 @@ msgstr ""
 "hinaus weitere. Diese haben :class:`IPv4Network` und :class:`IPv6Network` "
 "alle gemeinsam, deshalb sind sie nur bei :class:`IPv4Network` beschrieben. "
 "Netzwerkobjekte sind :term:`hashbar <hashable>` und lassen sich deshalb als "
-"Schlüssel in Dictionarys verwenden."
+"Schlüssel in Dictionaries verwenden."
 
 #: ../../library/ipaddress.rst:499
 msgid ""
@@ -1311,7 +1311,7 @@ msgid ""
 "dictionaries."
 msgstr ""
 "Schnittstellenobjekte sind :term:`hashbar <hashable>` und lassen sich "
-"deshalb als Schlüssel in Dictionarys verwenden."
+"deshalb als Schlüssel in Dictionaries verwenden."
 
 #: ../../library/ipaddress.rst:871
 msgid ""
