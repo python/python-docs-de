@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-14 20:17+0000\n"
+"POT-Creation-Date: 2026-11-23 03:06+0000\n"
 "PO-Revision-Date: 2026-10-23 22:10+0200\n"
 "Last-Translator: python-doc bot, 2025\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -847,15 +847,18 @@ msgid "Added support for an optional positional argument."
 msgstr "Unterstützung für ein wahlfreies Positionsargument hinzugefügt."
 
 #: ../../library/types.rst:520
-msgid "Route attribute access on a class to __getattr__."
+#, fuzzy
+msgid "Route attribute access on a class to :meth:`~object.__getattr__`."
 msgstr "Leitet Attributzugriff auf einer Klasse an __getattr__ weiter."
 
 #: ../../library/types.rst:522
+#, fuzzy
 msgid ""
 "This is a descriptor, used to define attributes that act differently when "
 "accessed through an instance and through a class.  Instance access remains "
 "normal, but access to an attribute through a class will be routed to the "
-"class's __getattr__ method; this is done by raising AttributeError."
+"class's ``__getattr__`` method; this is done by "
+"raising :exc:`AttributeError`."
 msgstr ""
 "Das ist ein Deskriptor, mit dem Attribute definiert werden, die sich beim "
 "Zugriff über eine Instanz anders verhalten als beim Zugriff über eine "
