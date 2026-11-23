@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-09 03:05+0000\n"
+"POT-Creation-Date: 2026-11-23 03:06+0000\n"
 "PO-Revision-Date: 2025-09-16 00:01+0000\n"
 "Last-Translator: Swen Bachmann\n"
 "Language-Team: German (https://github.com/python/python-docs-de)\n"
@@ -425,64 +425,64 @@ msgstr ""
 #: ../../library/os.rst:2494 ../../library/os.rst:2514
 #: ../../library/os.rst:2662 ../../library/os.rst:2684
 #: ../../library/os.rst:2735 ../../library/os.rst:2747
-#: ../../library/os.rst:2769 ../../library/os.rst:3489
-#: ../../library/os.rst:3521 ../../library/os.rst:3531
-#: ../../library/os.rst:3541 ../../library/os.rst:3551
-#: ../../library/os.rst:3625 ../../library/os.rst:3635
-#: ../../library/os.rst:3645 ../../library/os.rst:3674
-#: ../../library/os.rst:3734 ../../library/os.rst:3746
-#: ../../library/os.rst:3775 ../../library/os.rst:3785
-#: ../../library/os.rst:3794 ../../library/os.rst:3806
-#: ../../library/os.rst:3818 ../../library/os.rst:3832
-#: ../../library/os.rst:3918 ../../library/os.rst:3926
-#: ../../library/os.rst:3934 ../../library/os.rst:3942
-#: ../../library/os.rst:3950 ../../library/os.rst:3958
-#: ../../library/os.rst:3966 ../../library/os.rst:3974
-#: ../../library/os.rst:3982 ../../library/os.rst:3990
-#: ../../library/os.rst:4111 ../../library/os.rst:4134
-#: ../../library/os.rst:4148 ../../library/os.rst:4372
-#: ../../library/os.rst:4397 ../../library/os.rst:4422
-#: ../../library/os.rst:4476 ../../library/os.rst:4485
-#: ../../library/os.rst:4494 ../../library/os.rst:4502
-#: ../../library/os.rst:4511 ../../library/os.rst:4520
-#: ../../library/os.rst:4593 ../../library/os.rst:4655
-#: ../../library/os.rst:4665 ../../library/os.rst:4683
-#: ../../library/os.rst:4692 ../../library/os.rst:4702
-#: ../../library/os.rst:4712 ../../library/os.rst:4722
-#: ../../library/os.rst:4733 ../../library/os.rst:4882
-#: ../../library/os.rst:4951 ../../library/os.rst:4986
+#: ../../library/os.rst:2769 ../../library/os.rst:3475
+#: ../../library/os.rst:3507 ../../library/os.rst:3517
+#: ../../library/os.rst:3527 ../../library/os.rst:3537
+#: ../../library/os.rst:3611 ../../library/os.rst:3621
+#: ../../library/os.rst:3631 ../../library/os.rst:3660
+#: ../../library/os.rst:3720 ../../library/os.rst:3732
+#: ../../library/os.rst:3761 ../../library/os.rst:3771
+#: ../../library/os.rst:3780 ../../library/os.rst:3792
+#: ../../library/os.rst:3804 ../../library/os.rst:3818
+#: ../../library/os.rst:3904 ../../library/os.rst:3912
+#: ../../library/os.rst:3920 ../../library/os.rst:3928
+#: ../../library/os.rst:3936 ../../library/os.rst:3944
+#: ../../library/os.rst:3952 ../../library/os.rst:3960
+#: ../../library/os.rst:3968 ../../library/os.rst:3976
+#: ../../library/os.rst:4097 ../../library/os.rst:4120
+#: ../../library/os.rst:4134 ../../library/os.rst:4358
+#: ../../library/os.rst:4383 ../../library/os.rst:4408
+#: ../../library/os.rst:4462 ../../library/os.rst:4471
+#: ../../library/os.rst:4480 ../../library/os.rst:4488
+#: ../../library/os.rst:4497 ../../library/os.rst:4506
+#: ../../library/os.rst:4579 ../../library/os.rst:4641
+#: ../../library/os.rst:4651 ../../library/os.rst:4669
+#: ../../library/os.rst:4678 ../../library/os.rst:4688
+#: ../../library/os.rst:4698 ../../library/os.rst:4708
+#: ../../library/os.rst:4719 ../../library/os.rst:4868
+#: ../../library/os.rst:4937 ../../library/os.rst:4972
+#: ../../library/os.rst:4980 ../../library/os.rst:4987
 #: ../../library/os.rst:4994 ../../library/os.rst:5001
 #: ../../library/os.rst:5008 ../../library/os.rst:5015
-#: ../../library/os.rst:5022 ../../library/os.rst:5029
-#: ../../library/os.rst:5036 ../../library/os.rst:5044
-#: ../../library/os.rst:5052 ../../library/os.rst:5059
-#: ../../library/os.rst:5066 ../../library/os.rst:5075
-#: ../../library/os.rst:5083 ../../library/os.rst:5091
-#: ../../library/os.rst:5098 ../../library/os.rst:5105
-#: ../../library/os.rst:5154 ../../library/os.rst:5186
-#: ../../library/os.rst:5209 ../../library/os.rst:5225
-#: ../../library/os.rst:5232 ../../library/os.rst:5243
-#: ../../library/os.rst:5253 ../../library/os.rst:5262
-#: ../../library/os.rst:5294 ../../library/os.rst:5405
-#: ../../library/os.rst:5421 ../../library/os.rst:5454
-#: ../../library/os.rst:5523 ../../library/os.rst:5545
-#: ../../library/os.rst:5556 ../../library/os.rst:5568
-#: ../../library/os.rst:5613 ../../library/os.rst:5650
-#: ../../library/os.rst:5673 ../../library/os.rst:5694
-#: ../../library/os.rst:5728 ../../library/os.rst:5769
-#: ../../library/os.rst:5789 ../../library/os.rst:5803
-#: ../../library/os.rst:5820 ../../library/os.rst:5835
-#: ../../library/os.rst:5846 ../../library/os.rst:5858
-#: ../../library/os.rst:5871 ../../library/os.rst:5880
-#: ../../library/os.rst:5890 ../../library/os.rst:5903
-#: ../../library/os.rst:5938 ../../library/os.rst:5954
-#: ../../library/os.rst:5965 ../../library/os.rst:5977
-#: ../../library/os.rst:5984 ../../library/os.rst:5993
-#: ../../library/os.rst:6002 ../../library/os.rst:6011
-#: ../../library/os.rst:6020 ../../library/os.rst:6184
-#: ../../library/os.rst:6193 ../../library/os.rst:6217
-#: ../../library/os.rst:6244 ../../library/os.rst:6253
-#: ../../library/os.rst:6376
+#: ../../library/os.rst:5022 ../../library/os.rst:5030
+#: ../../library/os.rst:5038 ../../library/os.rst:5045
+#: ../../library/os.rst:5052 ../../library/os.rst:5061
+#: ../../library/os.rst:5069 ../../library/os.rst:5077
+#: ../../library/os.rst:5084 ../../library/os.rst:5091
+#: ../../library/os.rst:5140 ../../library/os.rst:5172
+#: ../../library/os.rst:5195 ../../library/os.rst:5211
+#: ../../library/os.rst:5218 ../../library/os.rst:5229
+#: ../../library/os.rst:5239 ../../library/os.rst:5248
+#: ../../library/os.rst:5280 ../../library/os.rst:5391
+#: ../../library/os.rst:5407 ../../library/os.rst:5440
+#: ../../library/os.rst:5509 ../../library/os.rst:5531
+#: ../../library/os.rst:5542 ../../library/os.rst:5554
+#: ../../library/os.rst:5599 ../../library/os.rst:5636
+#: ../../library/os.rst:5659 ../../library/os.rst:5680
+#: ../../library/os.rst:5714 ../../library/os.rst:5755
+#: ../../library/os.rst:5775 ../../library/os.rst:5789
+#: ../../library/os.rst:5806 ../../library/os.rst:5821
+#: ../../library/os.rst:5832 ../../library/os.rst:5844
+#: ../../library/os.rst:5857 ../../library/os.rst:5866
+#: ../../library/os.rst:5876 ../../library/os.rst:5889
+#: ../../library/os.rst:5924 ../../library/os.rst:5940
+#: ../../library/os.rst:5951 ../../library/os.rst:5963
+#: ../../library/os.rst:5970 ../../library/os.rst:5979
+#: ../../library/os.rst:5988 ../../library/os.rst:5997
+#: ../../library/os.rst:6006 ../../library/os.rst:6170
+#: ../../library/os.rst:6179 ../../library/os.rst:6203
+#: ../../library/os.rst:6230 ../../library/os.rst:6239
+#: ../../library/os.rst:6362
 msgid "Availability"
 msgstr "Verfügbarkeit"
 
@@ -1273,7 +1273,7 @@ msgstr ""
 msgid ":data:`sys.platform` which has finer granularity."
 msgstr ":data:`sys.platform`, das feiner aufgelöst ist."
 
-#: ../../library/os.rst:818 ../../library/os.rst:5675
+#: ../../library/os.rst:818 ../../library/os.rst:5661
 msgid ""
 "Return type changed from a tuple to a tuple-like object with named "
 "attributes."
@@ -1648,7 +1648,7 @@ msgstr ""
 #: ../../library/os.rst:1072 ../../library/os.rst:1090
 #: ../../library/os.rst:1178 ../../library/os.rst:1811
 #: ../../library/os.rst:2264 ../../library/os.rst:2297
-#: ../../library/os.rst:4113
+#: ../../library/os.rst:4099
 msgid ""
 "The function is limited on WASI, see :ref:`wasm-availability` for more "
 "information."
@@ -1789,7 +1789,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.truncate`` mit den "
 "Argumenten ``fd`` und ``length`` aus."
 
-#: ../../library/os.rst:1165 ../../library/os.rst:4152
+#: ../../library/os.rst:1165 ../../library/os.rst:4138
 msgid "Added support for Windows"
 msgstr "Unterstützung für Windows hinzugefügt"
 
@@ -2054,12 +2054,12 @@ msgstr ""
 #: ../../library/os.rst:2581 ../../library/os.rst:2664
 #: ../../library/os.rst:2686 ../../library/os.rst:2774
 #: ../../library/os.rst:2804 ../../library/os.rst:2911
-#: ../../library/os.rst:4168
+#: ../../library/os.rst:4154
 msgid "Added the *dir_fd* parameter."
 msgstr "Den Parameter *dir_fd* hinzugefügt."
 
 #: ../../library/os.rst:1337 ../../library/os.rst:1709
-#: ../../library/os.rst:1944 ../../library/os.rst:5771
+#: ../../library/os.rst:1944 ../../library/os.rst:5757
 msgid ""
 "If the system call is interrupted and the signal handler does not raise an "
 "exception, the function now retries the system call instead of raising "
@@ -2080,11 +2080,11 @@ msgstr ""
 #: ../../library/os.rst:2689 ../../library/os.rst:2737
 #: ../../library/os.rst:2807 ../../library/os.rst:2826
 #: ../../library/os.rst:2914 ../../library/os.rst:3222
-#: ../../library/os.rst:3837 ../../library/os.rst:4155
-#: ../../library/os.rst:4171 ../../library/os.rst:4212
-#: ../../library/os.rst:4315 ../../library/os.rst:4376
-#: ../../library/os.rst:4773 ../../library/os.rst:4957
-#: ../../library/os.rst:5530
+#: ../../library/os.rst:3823 ../../library/os.rst:4141
+#: ../../library/os.rst:4157 ../../library/os.rst:4198
+#: ../../library/os.rst:4301 ../../library/os.rst:4362
+#: ../../library/os.rst:4759 ../../library/os.rst:4943
+#: ../../library/os.rst:5516
 msgid "Accepts a :term:`path-like object`."
 msgstr "Akzeptiert ein :term:`pfadähnliches Objekt <path-like object>`."
 
@@ -3392,7 +3392,7 @@ msgid ":const:`stat.S_IXOTH`"
 msgstr ":const:`stat.S_IXOTH`"
 
 #: ../../library/os.rst:2253 ../../library/os.rst:2286
-#: ../../library/os.rst:4202
+#: ../../library/os.rst:4188
 msgid ""
 "This function can support :ref:`specifying a file descriptor "
 "<path_fd>`, :ref:`paths relative to directory descriptors <dir_fd>` "
@@ -3551,7 +3551,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.link`` mit den Argumenten "
 "``src``, ``dst``, ``src_dir_fd`` und ``dst_dir_fd`` aus."
 
-#: ../../library/os.rst:2405 ../../library/os.rst:5211
+#: ../../library/os.rst:2405 ../../library/os.rst:5197
 msgid "Added Windows support."
 msgstr "Unterstützung für Windows hinzugefügt."
 
@@ -3561,7 +3561,7 @@ msgstr ""
 "Die Parameter *src_dir_fd*, *dst_dir_fd* und *follow_symlinks* hinzugefügt."
 
 #: ../../library/os.rst:2411 ../../library/os.rst:2858
-#: ../../library/os.rst:2895 ../../library/os.rst:4123
+#: ../../library/os.rst:2895 ../../library/os.rst:4109
 msgid "Accepts a :term:`path-like object` for *src* and *dst*."
 msgstr ""
 "Akzeptiert ein :term:`pfadähnliches Objekt <path-like object>` für *src* und "
@@ -3630,7 +3630,7 @@ msgstr ""
 msgid "The *path* parameter became optional."
 msgstr "Der Parameter *path* ist nun optional."
 
-#: ../../library/os.rst:2445 ../../library/os.rst:3834
+#: ../../library/os.rst:2445 ../../library/os.rst:3820
 msgid "Added support for specifying *path* as an open file descriptor."
 msgstr ""
 "Unterstützung für die Angabe von *path* als geöffneter Dateideskriptor "
@@ -3789,7 +3789,7 @@ msgstr ""
 "<dir_fd>` unterstützen."
 
 #: ../../library/os.rst:2538 ../../library/os.rst:2771
-#: ../../library/os.rst:4116
+#: ../../library/os.rst:4102
 msgid "Added support for Windows 6.0 (Vista) symbolic links."
 msgstr ""
 "Unterstützung für symbolische Links unter Windows 6.0 (Vista) hinzugefügt."
@@ -4051,8 +4051,8 @@ msgstr ""
 "Konfigurationsvariablen, die nicht in diesem Mapping enthalten sind, wird "
 "auch eine Ganzzahl für *name* akzeptiert."
 
-#: ../../library/os.rst:2732 ../../library/os.rst:3830
-#: ../../library/os.rst:4144
+#: ../../library/os.rst:2732 ../../library/os.rst:3816
+#: ../../library/os.rst:4130
 msgid ""
 "This function can support :ref:`specifying a file descriptor <path_fd>`."
 msgstr ""
@@ -4138,7 +4138,7 @@ msgstr ""
 "ausgelöst."
 
 #: ../../library/os.rst:2793 ../../library/os.rst:2906
-#: ../../library/os.rst:4095
+#: ../../library/os.rst:4081
 msgid ""
 "This function can support :ref:`paths relative to directory descriptors "
 "<dir_fd>`."
@@ -4163,7 +4163,7 @@ msgid "This function is semantically identical to :func:`unlink`."
 msgstr "Diese Funktion ist semantisch identisch mit :func:`unlink`."
 
 #: ../../library/os.rst:2802 ../../library/os.rst:2824
-#: ../../library/os.rst:4166
+#: ../../library/os.rst:4152
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.remove`` with arguments "
 "``path``, ``dir_fd``."
@@ -4876,9 +4876,9 @@ msgstr ""
 "symbolischen Link selbst anzuwenden, füge das Argument "
 "``follow_symlinks=False`` hinzu oder verwende :func:`lstat`."
 
-#: ../../library/os.rst:3187 ../../library/os.rst:4752
-#: ../../library/os.rst:4768 ../../library/os.rst:4788
-#: ../../library/os.rst:4808
+#: ../../library/os.rst:3187 ../../library/os.rst:4738
+#: ../../library/os.rst:4754 ../../library/os.rst:4774
+#: ../../library/os.rst:4794
 msgid ""
 "This function can support :ref:`specifying a file descriptor <path_fd>` "
 "and :ref:`not following symlinks <follow_symlinks>`."
@@ -4912,7 +4912,7 @@ msgstr ""
 "verwaiste symbolische Links oder Junction-Points, die die üblichen Ausnahmen "
 "auslösen."
 
-#: ../../library/os.rst:3203 ../../library/os.rst:4459
+#: ../../library/os.rst:3203 ../../library/os.rst:4445
 msgid "Example::"
 msgstr "Beispiel::"
 
@@ -4978,7 +4978,7 @@ msgstr ""
 msgid "Attributes:"
 msgstr "Attribute:"
 
-#: ../../library/os.rst:3244 ../../library/os.rst:3679
+#: ../../library/os.rst:3244 ../../library/os.rst:3665
 msgid "File mode: file type and file mode bits (permissions)."
 msgstr "Dateimodus: Dateityp und Modus-Bits der Datei (Berechtigungen)."
 
@@ -5002,23 +5002,23 @@ msgstr ""
 "der `Dateiindex <https://msdn.microsoft.com/en-us/library/aa363788>`_ unter "
 "Windows"
 
-#: ../../library/os.rst:3258 ../../library/os.rst:3608
+#: ../../library/os.rst:3258 ../../library/os.rst:3594
 msgid "Identifier of the device on which this file resides."
 msgstr "Kennung des Geräts, auf dem sich diese Datei befindet."
 
-#: ../../library/os.rst:3262 ../../library/os.rst:3701
+#: ../../library/os.rst:3262 ../../library/os.rst:3687
 msgid "Number of hard links."
 msgstr "Anzahl der harten Links."
 
-#: ../../library/os.rst:3266 ../../library/os.rst:3739
+#: ../../library/os.rst:3266 ../../library/os.rst:3725
 msgid "User identifier of the file owner."
 msgstr "Benutzerkennung des Dateibesitzers."
 
-#: ../../library/os.rst:3270 ../../library/os.rst:3650
+#: ../../library/os.rst:3270 ../../library/os.rst:3636
 msgid "Group identifier of the file owner."
 msgstr "Gruppenkennung des Dateibesitzers."
 
-#: ../../library/os.rst:3274 ../../library/os.rst:3720
+#: ../../library/os.rst:3274 ../../library/os.rst:3706
 msgid ""
 "Size of the file in bytes, if it is a regular file or a symbolic link. The "
 "size of a symbolic link is the length of the pathname it contains, without a "
@@ -5032,15 +5032,15 @@ msgstr ""
 msgid "Timestamps:"
 msgstr "Zeitstempel:"
 
-#: ../../library/os.rst:3282 ../../library/os.rst:3502
+#: ../../library/os.rst:3282 ../../library/os.rst:3488
 msgid "Time of most recent access expressed in seconds."
 msgstr "Zeitpunkt des letzten Zugriffs in Sekunden."
 
-#: ../../library/os.rst:3286 ../../library/os.rst:3686
+#: ../../library/os.rst:3286 ../../library/os.rst:3672
 msgid "Time of most recent content modification expressed in seconds."
 msgstr "Zeitpunkt der letzten Inhaltsänderung in Sekunden."
 
-#: ../../library/os.rst:3290 ../../library/os.rst:3593
+#: ../../library/os.rst:3290 ../../library/os.rst:3579
 msgid "Time of most recent metadata change expressed in seconds."
 msgstr "Zeitpunkt der letzten Metadatenänderung in Sekunden."
 
@@ -5054,17 +5054,17 @@ msgstr ""
 "Erstellungszeit der Datei. Künftig wird ``st_ctime`` wie auf anderen "
 "Plattformen den Zeitpunkt der letzten Metadatenänderung enthalten."
 
-#: ../../library/os.rst:3299 ../../library/os.rst:3509
+#: ../../library/os.rst:3299 ../../library/os.rst:3495
 msgid "Time of most recent access expressed in nanoseconds as an integer."
 msgstr "Zeitpunkt des letzten Zugriffs in Nanosekunden als Ganzzahl."
 
-#: ../../library/os.rst:3305 ../../library/os.rst:3693
+#: ../../library/os.rst:3305 ../../library/os.rst:3679
 msgid ""
 "Time of most recent content modification expressed in nanoseconds as an "
 "integer."
 msgstr "Zeitpunkt der letzten Inhaltsänderung in Nanosekunden als Ganzzahl."
 
-#: ../../library/os.rst:3312 ../../library/os.rst:3600
+#: ../../library/os.rst:3312 ../../library/os.rst:3586
 msgid ""
 "Time of most recent metadata change expressed in nanoseconds as an integer."
 msgstr "Zeitpunkt der letzten Metadatenänderung in Nanosekunden als Ganzzahl."
@@ -5155,7 +5155,7 @@ msgstr ""
 "Anzahl der für die Datei belegten 512-Byte-Blöcke. Sie kann kleiner "
 "als :attr:`st_size`/512 sein, wenn die Datei Lücken hat."
 
-#: ../../library/os.rst:3367 ../../library/os.rst:3566
+#: ../../library/os.rst:3367 ../../library/os.rst:3552
 msgid ""
 "\"Preferred\" blocksize for efficient file system I/O. Writing to a file in "
 "smaller chunks may cause an inefficient read-modify-rewrite."
@@ -5164,7 +5164,7 @@ msgstr ""
 "Schreiben in eine Datei in kleineren Stücken kann zu ineffizientem Lesen-"
 "Ändern-Zurückschreiben führen."
 
-#: ../../library/os.rst:3372 ../../library/os.rst:3708
+#: ../../library/os.rst:3372 ../../library/os.rst:3694
 msgid "Type of device if an inode device."
 msgstr "Gerätetyp, falls es ein Inode-Gerät ist."
 
@@ -5201,26 +5201,10 @@ msgstr ""
 "identifiziert."
 
 #: ../../library/os.rst:3393
-msgid "On macOS systems, the following attributes may also be available:"
-msgstr "Auf macOS-Systemen können auch die folgenden Attribute verfügbar sein:"
-
-#: ../../library/os.rst:3397
-msgid "Real size of the file."
-msgstr "Tatsächliche Größe der Datei."
-
-#: ../../library/os.rst:3401
-msgid "Creator of the file."
-msgstr "Ersteller der Datei."
-
-#: ../../library/os.rst:3405
-msgid "File type."
-msgstr "Dateityp."
-
-#: ../../library/os.rst:3407
 msgid "On Windows systems, the following attributes are also available:"
 msgstr "Auf Windows-Systemen sind auch die folgenden Attribute verfügbar:"
 
-#: ../../library/os.rst:3411
+#: ../../library/os.rst:3397
 msgid ""
 "Windows file attributes: ``dwFileAttributes`` member of the "
 "``BY_HANDLE_FILE_INFORMATION`` structure returned by :c:func:`!"
@@ -5233,7 +5217,7 @@ msgstr ""
 "Konstanten :const:`!FILE_ATTRIBUTE_* <stat.FILE_ATTRIBUTE_ARCHIVE>` im "
 "Modul :mod:`stat`."
 
-#: ../../library/os.rst:3421
+#: ../../library/os.rst:3407
 msgid ""
 "When :attr:`st_file_attributes` has "
 "the :const:`~stat.FILE_ATTRIBUTE_REPARSE_POINT` set, this field contains the "
@@ -5246,7 +5230,7 @@ msgstr ""
 "Siehe die Konstanten :const:`IO_REPARSE_TAG_* <stat.IO_REPARSE_TAG_SYMLINK>` "
 "im Modul :mod:`stat`."
 
-#: ../../library/os.rst:3426
+#: ../../library/os.rst:3412
 msgid ""
 "The standard module :mod:`stat` defines functions and constants that are "
 "useful for extracting information from a :c:struct:`stat` structure. (On "
@@ -5257,7 +5241,7 @@ msgstr ""
 "extrahieren. (Unter Windows werden manche Elemente mit Platzhalterwerten "
 "gefüllt.)"
 
-#: ../../library/os.rst:3430
+#: ../../library/os.rst:3416
 msgid ""
 "For backward compatibility, a :class:`stat_result` instance is also "
 "accessible as a tuple of at least 10 integers giving the most important (and "
@@ -5275,20 +5259,20 @@ msgstr ""
 "Kompatibilität mit älteren Python-Versionen liefert der Zugriff "
 "auf :class:`stat_result` als Tupel immer Ganzzahlen."
 
-#: ../../library/os.rst:3439
+#: ../../library/os.rst:3425
 msgid "Windows now returns the file index as :attr:`st_ino` when available."
 msgstr ""
 "Windows gibt nun, falls verfügbar, den Dateiindex als :attr:`st_ino` zurück."
 
-#: ../../library/os.rst:3443
+#: ../../library/os.rst:3429
 msgid "Added the :attr:`st_fstype` member to Solaris/derivatives."
 msgstr "Das Element :attr:`st_fstype` unter Solaris/Derivaten hinzugefügt."
 
-#: ../../library/os.rst:3446
+#: ../../library/os.rst:3432
 msgid "Added the :attr:`st_reparse_tag` member on Windows."
 msgstr "Das Element :attr:`st_reparse_tag` unter Windows hinzugefügt."
 
-#: ../../library/os.rst:3449
+#: ../../library/os.rst:3435
 msgid ""
 "On Windows, the :attr:`st_mode` member now identifies special files "
 "as :const:`~stat.S_IFCHR`, :const:`~stat.S_IFIFO` or :const:`~stat.S_IFBLK` "
@@ -5298,7 +5282,7 @@ msgstr ""
 "je nach Fall als :const:`~stat.S_IFCHR`, :const:`~stat.S_IFIFO` "
 "oder :const:`~stat.S_IFBLK`."
 
-#: ../../library/os.rst:3454
+#: ../../library/os.rst:3440
 msgid ""
 "On Windows, :attr:`st_ctime` is deprecated. Eventually, it will contain the "
 "last metadata change time, for consistency with other platforms, but for now "
@@ -5309,7 +5293,7 @@ msgstr ""
 "enthalten, vorerst enthält es aber noch die Erstellungszeit. "
 "Verwende :attr:`st_birthtime` für die Erstellungszeit."
 
-#: ../../library/os.rst:3460
+#: ../../library/os.rst:3446
 msgid ""
 "On Windows, :attr:`st_ino` may now be up to 128 bits, depending on the file "
 "system. Previously it would not be above 64 bits, and larger file "
@@ -5319,7 +5303,7 @@ msgstr ""
 "groß sein. Zuvor war es nie größer als 64 Bit, und größere Dateikennungen "
 "wurden willkürlich gepackt."
 
-#: ../../library/os.rst:3464
+#: ../../library/os.rst:3450
 msgid ""
 "On Windows, :attr:`st_rdev` no longer returns a value. Previously it would "
 "contain the same as :attr:`st_dev`, which was incorrect."
@@ -5327,11 +5311,11 @@ msgstr ""
 "Unter Windows gibt :attr:`st_rdev` keinen Wert mehr zurück. Zuvor enthielt "
 "es dasselbe wie :attr:`st_dev`, was falsch war."
 
-#: ../../library/os.rst:3467
+#: ../../library/os.rst:3453
 msgid "Added the :attr:`st_birthtime` member on Windows."
 msgstr "Das Element :attr:`st_birthtime` unter Windows hinzugefügt."
 
-#: ../../library/os.rst:3472
+#: ../../library/os.rst:3458
 msgid ""
 "Get the status of a file or file descriptor by performing a :c:func:`!statx` "
 "system call on the given path."
@@ -5339,7 +5323,7 @@ msgstr ""
 "Ermittelt den Status einer Datei oder eines Dateideskriptors durch einen "
 "Systemaufruf :c:func:`!statx` auf dem angegebenen Pfad."
 
-#: ../../library/os.rst:3475
+#: ../../library/os.rst:3461
 msgid ""
 "*path* is a :term:`path-like object` or an open file descriptor. *mask* is a "
 "combination of the module-level :const:`STATX_* <STATX_TYPE>` constants "
@@ -5358,7 +5342,7 @@ msgstr ""
 "dessen Attribut :attr:`~os.statx_result.stx_mask` die tatsächlich "
 "abgerufenen Informationen angibt (die von *mask* abweichen können)."
 
-#: ../../library/os.rst:3483
+#: ../../library/os.rst:3469
 msgid ""
 "This function supports :ref:`specifying a file descriptor "
 "<path_fd>`, :ref:`paths relative to directory descriptors <dir_fd>`, "
@@ -5368,19 +5352,19 @@ msgstr ""
 "<path_fd>`, :ref:`Pfade relativ zu Verzeichnisdeskriptoren <dir_fd>` und "
 "das :ref:`Nichtfolgen symbolischer Links <follow_symlinks>`."
 
-#: ../../library/os.rst:3487 ../../library/os.rst:3744
+#: ../../library/os.rst:3473 ../../library/os.rst:3730
 msgid "The :manpage:`statx(2)` man page."
 msgstr "Die Manpage :manpage:`statx(2)`."
 
-#: ../../library/os.rst:3496
+#: ../../library/os.rst:3482
 msgid "Information about a file returned by :func:`os.statx`."
 msgstr "Von :func:`os.statx` zurückgegebene Informationen über eine Datei."
 
-#: ../../library/os.rst:3498
+#: ../../library/os.rst:3484
 msgid ":class:`!statx_result` has the following attributes:"
 msgstr ":class:`!statx_result` hat die folgenden Attribute:"
 
-#: ../../library/os.rst:3504 ../../library/os.rst:3511
+#: ../../library/os.rst:3490 ../../library/os.rst:3497
 msgid ""
 "Equal to ``None`` if :data:`STATX_ATIME` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5388,14 +5372,14 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_ATIME` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3516
+#: ../../library/os.rst:3502
 msgid "Maximum iovecs for direct I/O with torn-write protection."
 msgstr ""
 "Höchstzahl an iovecs für direkte Ein-/Ausgabe mit Schutz vor zerrissenen "
 "Schreibvorgängen."
 
-#: ../../library/os.rst:3518 ../../library/os.rst:3528
-#: ../../library/os.rst:3538 ../../library/os.rst:3548
+#: ../../library/os.rst:3504 ../../library/os.rst:3514
+#: ../../library/os.rst:3524 ../../library/os.rst:3534
 msgid ""
 "Equal to ``None`` if :data:`STATX_WRITE_ATOMIC` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5403,25 +5387,25 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_WRITE_ATOMIC` "
 "in :attr:`~statx_result.stx_mask` fehlt."
 
-#: ../../library/os.rst:3526
+#: ../../library/os.rst:3512
 msgid "Maximum size for direct I/O with torn-write protection."
 msgstr ""
 "Maximale Größe für direkte Ein-/Ausgabe mit Schutz vor zerrissenen "
 "Schreibvorgängen."
 
-#: ../../library/os.rst:3536
+#: ../../library/os.rst:3522
 msgid "Maximum optimized size for direct I/O with torn-write protection."
 msgstr ""
 "Maximale optimierte Größe für direkte Ein-/Ausgabe mit Schutz vor "
 "zerrissenen Schreibvorgängen."
 
-#: ../../library/os.rst:3546
+#: ../../library/os.rst:3532
 msgid "Minimum size for direct I/O with torn-write protection."
 msgstr ""
 "Minimale Größe für direkte Ein-/Ausgabe mit Schutz vor zerrissenen "
 "Schreibvorgängen."
 
-#: ../../library/os.rst:3556
+#: ../../library/os.rst:3542
 msgid ""
 "Bitmask of :const:`STATX_ATTR_* <stat.STATX_ATTR_COMPRESSED>` constants "
 "specifying the attributes of this file."
@@ -5429,7 +5413,7 @@ msgstr ""
 "Bitmaske aus Konstanten :const:`STATX_ATTR_* <stat.STATX_ATTR_COMPRESSED>`, "
 "die die Attribute dieser Datei angeben."
 
-#: ../../library/os.rst:3561
+#: ../../library/os.rst:3547
 msgid ""
 "A mask indicating which bits in :attr:`stx_attributes` are supported by the "
 "VFS and the filesystem."
@@ -5437,7 +5421,7 @@ msgstr ""
 "Eine Maske, die angibt, welche Bits in :attr:`stx_attributes` vom VFS und "
 "vom Dateisystem unterstützt werden."
 
-#: ../../library/os.rst:3571
+#: ../../library/os.rst:3557
 msgid ""
 "Number of 512-byte blocks allocated for file. This may be smaller "
 "than :attr:`stx_size`/512 when the file has holes."
@@ -5445,7 +5429,7 @@ msgstr ""
 "Anzahl der für die Datei belegten 512-Byte-Blöcke. Sie kann kleiner "
 "als :attr:`stx_size`/512 sein, wenn die Datei Lücken hat."
 
-#: ../../library/os.rst:3574
+#: ../../library/os.rst:3560
 msgid ""
 "Equal to ``None`` if :data:`STATX_BLOCKS` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5453,11 +5437,11 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_BLOCKS` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3579
+#: ../../library/os.rst:3565
 msgid "Time of file creation expressed in seconds."
 msgstr "Zeitpunkt der Dateierstellung in Sekunden."
 
-#: ../../library/os.rst:3581 ../../library/os.rst:3588
+#: ../../library/os.rst:3567 ../../library/os.rst:3574
 msgid ""
 "Equal to ``None`` if :data:`STATX_BTIME` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5465,11 +5449,11 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_BTIME` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3586
+#: ../../library/os.rst:3572
 msgid "Time of file creation expressed in nanoseconds as an integer."
 msgstr "Zeitpunkt der Dateierstellung in Nanosekunden als Ganzzahl."
 
-#: ../../library/os.rst:3595 ../../library/os.rst:3603
+#: ../../library/os.rst:3581 ../../library/os.rst:3589
 msgid ""
 "Equal to ``None`` if :data:`STATX_CTIME` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5477,19 +5461,19 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_CTIME` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3612
+#: ../../library/os.rst:3598
 msgid "Major number of the device on which this file resides."
 msgstr "Major-Nummer des Geräts, auf dem sich diese Datei befindet."
 
-#: ../../library/os.rst:3616
+#: ../../library/os.rst:3602
 msgid "Minor number of the device on which this file resides."
 msgstr "Minor-Nummer des Geräts, auf dem sich diese Datei befindet."
 
-#: ../../library/os.rst:3620
+#: ../../library/os.rst:3606
 msgid "Direct I/O memory buffer alignment requirement."
 msgstr "Ausrichtungsanforderung an Speicherpuffer für direkte Ein-/Ausgabe."
 
-#: ../../library/os.rst:3622 ../../library/os.rst:3632
+#: ../../library/os.rst:3608 ../../library/os.rst:3618
 msgid ""
 "Equal to ``None`` if :data:`STATX_DIOALIGN` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5497,16 +5481,16 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_DIOALIGN` "
 "in :attr:`~statx_result.stx_mask` fehlt."
 
-#: ../../library/os.rst:3630
+#: ../../library/os.rst:3616
 msgid "Direct I/O file offset alignment requirement."
 msgstr "Ausrichtungsanforderung an Datei-Offsets für direkte Ein-/Ausgabe."
 
-#: ../../library/os.rst:3640
+#: ../../library/os.rst:3626
 msgid "Direct I/O file offset alignment requirement for reads."
 msgstr ""
 "Ausrichtungsanforderung an Datei-Offsets für direkte Ein-/Ausgabe beim Lesen."
 
-#: ../../library/os.rst:3642
+#: ../../library/os.rst:3628
 msgid ""
 "Equal to ``None`` if :data:`STATX_DIO_READ_ALIGN` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5514,7 +5498,7 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_DIO_READ_ALIGN` "
 "in :attr:`~statx_result.stx_mask` fehlt."
 
-#: ../../library/os.rst:3652
+#: ../../library/os.rst:3638
 msgid ""
 "Equal to ``None`` if :data:`STATX_GID` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5522,11 +5506,11 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_GID` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3657
+#: ../../library/os.rst:3643
 msgid "Inode number."
 msgstr "Inode-Nummer."
 
-#: ../../library/os.rst:3659
+#: ../../library/os.rst:3645
 msgid ""
 "Equal to ``None`` if :data:`STATX_INO` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5534,7 +5518,7 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_INO` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3664
+#: ../../library/os.rst:3650
 msgid ""
 "Bitmask of :const:`STATX_* <STATX_TYPE>` constants specifying the "
 "information retrieved, which may differ from what was requested."
@@ -5542,11 +5526,11 @@ msgstr ""
 "Bitmaske aus Konstanten :const:`STATX_* <STATX_TYPE>`, die die abgerufenen "
 "Informationen angeben, die vom Angeforderten abweichen können."
 
-#: ../../library/os.rst:3669
+#: ../../library/os.rst:3655
 msgid "Mount identifier."
 msgstr "Kennung des Einhängepunkts."
 
-#: ../../library/os.rst:3671
+#: ../../library/os.rst:3657
 msgid ""
 "Equal to ``None`` if :data:`STATX_MNT_ID` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5554,7 +5538,7 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_MNT_ID` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3681
+#: ../../library/os.rst:3667
 msgid ""
 "Equal to ``None`` if :data:`STATX_TYPE | STATX_MODE <STATX_TYPE>` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5562,7 +5546,7 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_TYPE | STATX_MODE <STATX_TYPE>` "
 "in :attr:`~statx_result.stx_mask` fehlt."
 
-#: ../../library/os.rst:3688 ../../library/os.rst:3696
+#: ../../library/os.rst:3674 ../../library/os.rst:3682
 msgid ""
 "Equal to ``None`` if :data:`STATX_MTIME` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5570,7 +5554,7 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_MTIME` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3703
+#: ../../library/os.rst:3689
 msgid ""
 "Equal to ``None`` if :data:`STATX_NLINK` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5578,15 +5562,15 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_NLINK` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3712
+#: ../../library/os.rst:3698
 msgid "Major number of the device this file represents."
 msgstr "Major-Nummer des Geräts, das diese Datei darstellt."
 
-#: ../../library/os.rst:3716
+#: ../../library/os.rst:3702
 msgid "Minor number of the device this file represents."
 msgstr "Minor-Nummer des Geräts, das diese Datei darstellt."
 
-#: ../../library/os.rst:3724
+#: ../../library/os.rst:3710
 msgid ""
 "Equal to ``None`` if :data:`STATX_SIZE` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5594,11 +5578,11 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_SIZE` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3729
+#: ../../library/os.rst:3715
 msgid "Subvolume identifier."
 msgstr "Kennung des Subvolumes."
 
-#: ../../library/os.rst:3731
+#: ../../library/os.rst:3717
 msgid ""
 "Equal to ``None`` if :data:`STATX_SUBVOL` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5606,7 +5590,7 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_SUBVOL` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3741
+#: ../../library/os.rst:3727
 msgid ""
 "Equal to ``None`` if :data:`STATX_UID` is missing "
 "from :attr:`~statx_result.stx_mask`."
@@ -5614,7 +5598,7 @@ msgstr ""
 "Gleich ``None``, wenn :data:`STATX_UID` in :attr:`~statx_result.stx_mask` "
 "fehlt."
 
-#: ../../library/os.rst:3771
+#: ../../library/os.rst:3757
 msgid ""
 "Bitflags for use in the *mask* parameter to :func:`os.statx`.  Some of these "
 "flags may be available even when their corresponding members "
@@ -5624,7 +5608,7 @@ msgstr ""
 "können verfügbar sein, auch wenn die entsprechenden Elemente "
 "in :class:`statx_result` nicht verfügbar sind."
 
-#: ../../library/os.rst:3781
+#: ../../library/os.rst:3767
 msgid ""
 "A flag for the :func:`os.statx` function.  Requests that the kernel return "
 "up-to-date information even when doing so is expensive (for example, "
@@ -5634,7 +5618,7 @@ msgstr ""
 "Informationen zurückzugeben, auch wenn das aufwendig ist (zum Beispiel einen "
 "Umlauf zum Server bei einer Datei auf einem Netzwerkdateisystem erfordert)."
 
-#: ../../library/os.rst:3791
+#: ../../library/os.rst:3777
 msgid ""
 "A flag for the :func:`os.statx` function.  Requests that the kernel return "
 "cached information if possible."
@@ -5642,7 +5626,7 @@ msgstr ""
 "Ein Flag für die Funktion :func:`os.statx`. Fordert den Kernel auf, nach "
 "Möglichkeit zwischengespeicherte Informationen zurückzugeben."
 
-#: ../../library/os.rst:3800
+#: ../../library/os.rst:3786
 msgid ""
 "A flag for the :func:`os.statx` function.  This flag is defined as ``0``, so "
 "it has no effect, but it can be used to explicitly indicate "
@@ -5657,7 +5641,7 @@ msgstr ""
 "Flags gibt der Kernel im Allgemeinen Informationen zurück, die so aktuell "
 "sind wie die von :func:`os.stat`."
 
-#: ../../library/os.rst:3813
+#: ../../library/os.rst:3799
 msgid ""
 "If the final component of a path is an automount point, operate on the "
 "automount point instead of performing the automount.  On "
@@ -5669,7 +5653,7 @@ msgstr ""
 "Linux verhalten sich :func:`os.stat`, :func:`os.fstat` und :func:`os.lstat` "
 "immer so."
 
-#: ../../library/os.rst:3825
+#: ../../library/os.rst:3811
 msgid ""
 "Perform a :manpage:`statvfs(3)` system call on the given path.  The return "
 "value is a :class:`statvfs_result` whose attributes describe the filesystem "
@@ -5681,7 +5665,7 @@ msgstr ""
 "Dateisystem des angegebenen Pfades beschreiben und den Elementen der "
 "Struktur :c:struct:`statvfs` entsprechen."
 
-#: ../../library/os.rst:3843
+#: ../../library/os.rst:3829
 msgid ""
 "Filesystem statistics returned by :func:`os.statvfs` "
 "and :func:`os.fstatvfs`. See :manpage:`statvfs(3)` for more details."
@@ -5689,15 +5673,15 @@ msgstr ""
 "Von :func:`os.statvfs` und :func:`os.fstatvfs` zurückgegebene "
 "Dateisystemstatistik. Weitere Details siehe :manpage:`statvfs(3)`."
 
-#: ../../library/os.rst:3848
+#: ../../library/os.rst:3834
 msgid "Block size."
 msgstr "Blockgröße."
 
-#: ../../library/os.rst:3852
+#: ../../library/os.rst:3838
 msgid "Fragment size."
 msgstr "Fragmentgröße."
 
-#: ../../library/os.rst:3856
+#: ../../library/os.rst:3842
 msgid ""
 "Number of :attr:`~statvfs_result.f_frsize` sized blocks the filesystem can "
 "contain."
@@ -5705,27 +5689,27 @@ msgstr ""
 "Anzahl der Blöcke der Größe :attr:`~statvfs_result.f_frsize`, die das "
 "Dateisystem aufnehmen kann."
 
-#: ../../library/os.rst:3861
+#: ../../library/os.rst:3847
 msgid "Number of free blocks."
 msgstr "Anzahl der freien Blöcke."
 
-#: ../../library/os.rst:3865
+#: ../../library/os.rst:3851
 msgid "Number of free blocks for unprivileged users."
 msgstr "Anzahl der freien Blöcke für nicht privilegierte Benutzer."
 
-#: ../../library/os.rst:3869
+#: ../../library/os.rst:3855
 msgid "Number of file entries, inodes, the filesystem can contain."
 msgstr "Anzahl der Dateieinträge (Inodes), die das Dateisystem aufnehmen kann."
 
-#: ../../library/os.rst:3873
+#: ../../library/os.rst:3859
 msgid "Number of free files entries."
 msgstr "Anzahl der freien Dateieinträge."
 
-#: ../../library/os.rst:3877
+#: ../../library/os.rst:3863
 msgid "Number of free file entries for unprivileged users."
 msgstr "Anzahl der freien Dateieinträge für nicht privilegierte Benutzer."
 
-#: ../../library/os.rst:3881
+#: ../../library/os.rst:3867
 msgid ""
 "Bit-mask of mount flags.  The following flags are "
 "defined: :data:`ST_RDONLY`, :data:`ST_NOSUID`, :data:`ST_NODEV`, :data:`ST_NOEXEC`, :data:`ST_SYNCHRONOUS`, :data:`ST_MANDLOCK`, :data:`ST_WRITE`, :data:`ST_APPEND`, :data:`ST_IMMUTABLE`, :data:`ST_NOATIME`, :data:`ST_NODIRATIME`, "
@@ -5735,7 +5719,7 @@ msgstr ""
 "definiert: :data:`ST_RDONLY`, :data:`ST_NOSUID`, :data:`ST_NODEV`, :data:`ST_NOEXEC`, :data:`ST_SYNCHRONOUS`, :data:`ST_MANDLOCK`, :data:`ST_WRITE`, :data:`ST_APPEND`, :data:`ST_IMMUTABLE`, :data:`ST_NOATIME`, :data:`ST_NODIRATIME` "
 "und :data:`ST_RELATIME`."
 
-#: ../../library/os.rst:3889
+#: ../../library/os.rst:3875
 msgid ""
 "Filesystem max filename length. OS specific limitations such "
 "as :ref:`Windows MAX_PATH <max-path>` and those described in "
@@ -5745,63 +5729,63 @@ msgstr ""
 "Beschränkungen geben, etwa :ref:`Windows MAX_PATH <max-path>` und die in "
 "Linux :manpage:`pathname(7)` beschriebenen."
 
-#: ../../library/os.rst:3895
+#: ../../library/os.rst:3881
 msgid "Filesystem ID."
 msgstr "Dateisystem-ID."
 
-#: ../../library/os.rst:3900
+#: ../../library/os.rst:3886
 msgid "The following flags are used in :attr:`statvfs_result.f_flag`."
 msgstr "Die folgenden Flags werden in :attr:`statvfs_result.f_flag` verwendet."
 
-#: ../../library/os.rst:3904
+#: ../../library/os.rst:3890
 msgid "Read-only filesystem."
 msgstr "Schreibgeschütztes Dateisystem."
 
-#: ../../library/os.rst:3910
+#: ../../library/os.rst:3896
 msgid "Setuid/setgid bits are disabled or not supported."
 msgstr "Setuid/setgid-Bits sind deaktiviert oder werden nicht unterstützt."
 
-#: ../../library/os.rst:3916
+#: ../../library/os.rst:3902
 msgid "Disallow access to device special files."
 msgstr "Zugriff auf Gerätedateien verbieten."
 
-#: ../../library/os.rst:3924
+#: ../../library/os.rst:3910
 msgid "Disallow program execution."
 msgstr "Ausführung von Programmen verbieten."
 
-#: ../../library/os.rst:3932
+#: ../../library/os.rst:3918
 msgid "Writes are synced at once."
 msgstr "Schreibvorgänge werden sofort synchronisiert."
 
-#: ../../library/os.rst:3940
+#: ../../library/os.rst:3926
 msgid "Allow mandatory locks on an FS."
 msgstr "Zwingende Sperren (mandatory locks) auf einem Dateisystem erlauben."
 
-#: ../../library/os.rst:3948
+#: ../../library/os.rst:3934
 msgid "Write on file/directory/symlink."
 msgstr "Schreiben auf Datei/Verzeichnis/symbolischen Link."
 
-#: ../../library/os.rst:3956
+#: ../../library/os.rst:3942
 msgid "Append-only file."
 msgstr "Datei, an die nur angehängt werden kann."
 
-#: ../../library/os.rst:3964
+#: ../../library/os.rst:3950
 msgid "Immutable file."
 msgstr "Unveränderliche Datei."
 
-#: ../../library/os.rst:3972
+#: ../../library/os.rst:3958
 msgid "Do not update access times."
 msgstr "Zugriffszeiten nicht aktualisieren."
 
-#: ../../library/os.rst:3980
+#: ../../library/os.rst:3966
 msgid "Do not update directory access times."
 msgstr "Zugriffszeiten von Verzeichnissen nicht aktualisieren."
 
-#: ../../library/os.rst:3988
+#: ../../library/os.rst:3974
 msgid "Update atime relative to mtime/ctime."
 msgstr "atime relativ zu mtime/ctime aktualisieren."
 
-#: ../../library/os.rst:3997
+#: ../../library/os.rst:3983
 msgid ""
 "A :class:`set` object indicating which functions in the :mod:`!os` module "
 "accept an open file descriptor for their *dir_fd* parameter. Different "
@@ -5823,7 +5807,7 @@ msgstr ""
 "verfügbar ist. (Die Angabe von ``None`` für *dir_fd* wird immer auf allen "
 "Plattformen unterstützt.)"
 
-#: ../../library/os.rst:4007
+#: ../../library/os.rst:3993
 msgid ""
 "To check whether a particular function accepts an open file descriptor for "
 "its *dir_fd* parameter, use the ``in`` operator on ``supports_dir_fd``. As "
@@ -5836,11 +5820,11 @@ msgstr ""
 "wenn :func:`os.stat` auf der lokalen Plattform geöffnete Dateideskriptoren "
 "für *dir_fd* akzeptiert::"
 
-#: ../../library/os.rst:4012
+#: ../../library/os.rst:3998
 msgid "os.stat in os.supports_dir_fd"
 msgstr "os.stat in os.supports_dir_fd"
 
-#: ../../library/os.rst:4014
+#: ../../library/os.rst:4000
 msgid ""
 "Currently *dir_fd* parameters only work on Unix platforms; none of them work "
 "on Windows."
@@ -5848,7 +5832,7 @@ msgstr ""
 "Derzeit funktionieren *dir_fd*-Parameter nur auf Unix-Plattformen. Unter "
 "Windows funktioniert keiner davon."
 
-#: ../../library/os.rst:4022
+#: ../../library/os.rst:4008
 msgid ""
 "A :class:`set` object indicating whether :func:`os.access` permits "
 "specifying ``True`` for its *effective_ids* parameter on the local platform. "
@@ -5862,7 +5846,7 @@ msgstr ""
 "Plattformen unterstützt.) Unterstützt die lokale Plattform es, enthält die "
 "Sammlung :func:`os.access`, andernfalls ist sie leer."
 
-#: ../../library/os.rst:4028
+#: ../../library/os.rst:4014
 msgid ""
 "This expression evaluates to ``True`` if :func:`os.access` supports "
 "``effective_ids=True`` on the local platform::"
@@ -5870,11 +5854,11 @@ msgstr ""
 "Dieser Ausdruck ergibt ``True``, wenn :func:`os.access` auf der lokalen "
 "Plattform ``effective_ids=True`` unterstützt::"
 
-#: ../../library/os.rst:4031
+#: ../../library/os.rst:4017
 msgid "os.access in os.supports_effective_ids"
 msgstr "os.access in os.supports_effective_ids"
 
-#: ../../library/os.rst:4033
+#: ../../library/os.rst:4019
 msgid ""
 "Currently *effective_ids* is only supported on Unix platforms; it does not "
 "work on Windows."
@@ -5882,7 +5866,7 @@ msgstr ""
 "Derzeit wird *effective_ids* nur auf Unix-Plattformen unterstützt. Unter "
 "Windows funktioniert es nicht."
 
-#: ../../library/os.rst:4041
+#: ../../library/os.rst:4027
 msgid ""
 "A :class:`set` object indicating which functions in the :mod:`!os` module "
 "permit specifying their *path* parameter as an open file descriptor on the "
@@ -5897,7 +5881,7 @@ msgstr ""
 "geöffnete Dateideskriptoren als Argument *path* akzeptiert, ist nicht auf "
 "allen von Python unterstützten Plattformen verfügbar."
 
-#: ../../library/os.rst:4048
+#: ../../library/os.rst:4034
 msgid ""
 "To determine whether a particular function permits specifying an open file "
 "descriptor for its *path* parameter, use the ``in`` operator on "
@@ -5911,11 +5895,11 @@ msgstr ""
 "wenn :func:`os.chdir` auf deiner lokalen Plattform geöffnete "
 "Dateideskriptoren für *path* akzeptiert::"
 
-#: ../../library/os.rst:4054
+#: ../../library/os.rst:4040
 msgid "os.chdir in os.supports_fd"
 msgstr "os.chdir in os.supports_fd"
 
-#: ../../library/os.rst:4061
+#: ../../library/os.rst:4047
 msgid ""
 "A :class:`set` object indicating which functions in the :mod:`!os` module "
 "accept ``False`` for their *follow_symlinks* parameter on the local "
@@ -5938,7 +5922,7 @@ msgstr ""
 "sie lokal nicht verfügbar ist. (Die Angabe von ``True`` für "
 "*follow_symlinks* wird immer auf allen Plattformen unterstützt.)"
 
-#: ../../library/os.rst:4071
+#: ../../library/os.rst:4057
 msgid ""
 "To check whether a particular function accepts ``False`` for its "
 "*follow_symlinks* parameter, use the ``in`` operator on "
@@ -5952,15 +5936,15 @@ msgstr ""
 "wenn du beim Aufruf von :func:`os.stat` auf der lokalen Plattform "
 "``follow_symlinks=False`` angeben darfst::"
 
-#: ../../library/os.rst:4077
+#: ../../library/os.rst:4063
 msgid "os.stat in os.supports_follow_symlinks"
 msgstr "os.stat in os.supports_follow_symlinks"
 
-#: ../../library/os.rst:4084
+#: ../../library/os.rst:4070
 msgid "Create a symbolic link pointing to *src* named *dst*."
 msgstr "Erzeugt einen symbolischen Link namens *dst*, der auf *src* verweist."
 
-#: ../../library/os.rst:4086
+#: ../../library/os.rst:4072
 msgid ""
 "The *src* parameter refers to the target of the link (the file or directory "
 "being linked to), and *dst* is the name of the link being created."
@@ -5969,7 +5953,7 @@ msgstr ""
 "Verzeichnis, auf das verlinkt wird), und *dst* ist der Name des zu "
 "erzeugenden Links."
 
-#: ../../library/os.rst:4089
+#: ../../library/os.rst:4075
 msgid ""
 "On Windows, a symlink represents either a file or a directory, and does not "
 "morph to the target dynamically.  If the target is present, the type of the "
@@ -5985,7 +5969,7 @@ msgstr ""
 "*target_is_directory* ``True`` ist, sonst als Datei-Link (der Standard). Auf "
 "anderen Plattformen als Windows wird *target_is_directory* ignoriert."
 
-#: ../../library/os.rst:4100
+#: ../../library/os.rst:4086
 msgid ""
 "On newer versions of Windows 10, unprivileged accounts can create symlinks "
 "if Developer Mode is enabled. When Developer Mode is not available/enabled, "
@@ -5998,14 +5982,14 @@ msgstr ""
 "*SeCreateSymbolicLinkPrivilege* erforderlich, oder der Prozess muss als "
 "Administrator ausgeführt werden."
 
-#: ../../library/os.rst:4106
+#: ../../library/os.rst:4092
 msgid ""
 ":exc:`OSError` is raised when the function is called by an unprivileged user."
 msgstr ""
 ":exc:`OSError` wird ausgelöst, wenn die Funktion von einem nicht "
 "privilegierten Benutzer aufgerufen wird."
 
-#: ../../library/os.rst:4109
+#: ../../library/os.rst:4095
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.symlink`` with arguments "
 "``src``, ``dst``, ``dir_fd``."
@@ -6013,7 +5997,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.symlink`` mit den "
 "Argumenten ``src``, ``dst`` und ``dir_fd`` aus."
 
-#: ../../library/os.rst:4119
+#: ../../library/os.rst:4105
 msgid ""
 "Added the *dir_fd* parameter, and now allow *target_is_directory* on non-"
 "Windows platforms."
@@ -6021,17 +6005,17 @@ msgstr ""
 "Den Parameter *dir_fd* hinzugefügt; *target_is_directory* ist nun auch auf "
 "anderen Plattformen als Windows erlaubt."
 
-#: ../../library/os.rst:4126
+#: ../../library/os.rst:4112
 msgid "Added support for unelevated symlinks on Windows with Developer Mode."
 msgstr ""
 "Unterstützung für symbolische Links ohne erhöhte Rechte unter Windows im "
 "Entwicklermodus hinzugefügt."
 
-#: ../../library/os.rst:4132
+#: ../../library/os.rst:4118
 msgid "Force write of everything to disk."
 msgstr "Erzwingt das Schreiben aller Daten auf die Festplatte."
 
-#: ../../library/os.rst:4141
+#: ../../library/os.rst:4127
 msgid ""
 "Truncate the file corresponding to *path*, so that it is at most *length* "
 "bytes in size."
@@ -6039,7 +6023,7 @@ msgstr ""
 "Kürzt die zu *path* gehörende Datei, sodass sie höchstens *length* Bytes "
 "groß ist."
 
-#: ../../library/os.rst:4146
+#: ../../library/os.rst:4132
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.truncate`` with arguments "
 "``path``, ``length``."
@@ -6047,7 +6031,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.truncate`` mit den "
 "Argumenten ``path`` und ``length`` aus."
 
-#: ../../library/os.rst:4161
+#: ../../library/os.rst:4147
 msgid ""
 "Remove (delete) the file *path*.  This function is semantically identical "
 "to :func:`remove`; the ``unlink`` name is its traditional Unix name.  Please "
@@ -6057,12 +6041,12 @@ msgstr ""
 "mit :func:`remove`. Der Name ``unlink`` ist ihr traditioneller Unix-Name. "
 "Weitere Informationen findest du in der Dokumentation zu :func:`remove`."
 
-#: ../../library/os.rst:4177
+#: ../../library/os.rst:4163
 msgid "Set the access and modified times of the file specified by *path*."
 msgstr ""
 "Setzt die Zugriffs- und Änderungszeit der durch *path* angegebenen Datei."
 
-#: ../../library/os.rst:4179
+#: ../../library/os.rst:4165
 msgid ""
 ":func:`utime` takes two optional parameters, *times* and *ns*. These specify "
 "the times set on *path* and are used as follows:"
@@ -6070,7 +6054,7 @@ msgstr ""
 ":func:`utime` nimmt zwei optionale Parameter, *times* und *ns*. Sie geben "
 "die für *path* zu setzenden Zeiten an und werden wie folgt verwendet:"
 
-#: ../../library/os.rst:4182
+#: ../../library/os.rst:4168
 msgid ""
 "If *ns* is specified, it must be a 2-tuple of the form ``(atime_ns, "
 "mtime_ns)`` where each member is an int expressing nanoseconds."
@@ -6078,7 +6062,7 @@ msgstr ""
 "Ist *ns* angegeben, muss es ein 2-Tupel der Form ``(atime_ns, mtime_ns)`` "
 "sein, wobei jedes Element ein int ist, der Nanosekunden angibt."
 
-#: ../../library/os.rst:4185
+#: ../../library/os.rst:4171
 msgid ""
 "If *times* is not ``None``, it must be a 2-tuple of the form ``(atime, "
 "mtime)`` where each member is a real number expressing seconds, rounded down "
@@ -6088,7 +6072,7 @@ msgstr ""
 "sein, wobei jedes Element eine reelle Zahl ist, die Sekunden angibt, "
 "abgerundet auf Nanosekunden."
 
-#: ../../library/os.rst:4189
+#: ../../library/os.rst:4175
 msgid ""
 "If *times* is ``None`` and *ns* is unspecified, this is equivalent to "
 "specifying ``ns=(atime_ns, mtime_ns)`` where both times are the current time."
@@ -6096,12 +6080,12 @@ msgstr ""
 "Ist *times* ``None`` und *ns* nicht angegeben, entspricht das der Angabe "
 "``ns=(atime_ns, mtime_ns)``, wobei beide Zeiten die aktuelle Zeit sind."
 
-#: ../../library/os.rst:4193
+#: ../../library/os.rst:4179
 msgid "It is an error to specify tuples for both *times* and *ns*."
 msgstr ""
 "Es ist ein Fehler, sowohl für *times* als auch für *ns* Tupel anzugeben."
 
-#: ../../library/os.rst:4195
+#: ../../library/os.rst:4181
 msgid ""
 "Note that the exact times you set here may not be returned by a "
 "subsequent :func:`~os.stat` call, depending on the resolution with which "
@@ -6117,7 +6101,7 @@ msgstr ""
 "indem du die Felder *st_atime_ns* und *st_mtime_ns* aus dem Ergebnisobjekt "
 "von :func:`os.stat` mit dem Parameter *ns* von :func:`utime` verwendest."
 
-#: ../../library/os.rst:4206
+#: ../../library/os.rst:4192
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.utime`` with arguments "
 "``path``, ``times``, ``ns``, ``dir_fd``."
@@ -6125,7 +6109,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.utime`` mit den Argumenten "
 "``path``, ``times``, ``ns`` und ``dir_fd`` aus."
 
-#: ../../library/os.rst:4208
+#: ../../library/os.rst:4194
 msgid ""
 "Added support for specifying *path* as an open file descriptor, and the "
 "*dir_fd*, *follow_symlinks*, and *ns* parameters."
@@ -6133,13 +6117,13 @@ msgstr ""
 "Unterstützung für die Angabe von *path* als geöffneter Dateideskriptor sowie "
 "die Parameter *dir_fd*, *follow_symlinks* und *ns* hinzugefügt."
 
-#: ../../library/os.rst:4215
+#: ../../library/os.rst:4201
 msgid "Accepts any real numbers as *times*, not only integers or floats."
 msgstr ""
 "Akzeptiert beliebige reelle Zahlen als *times*, nicht nur Ganzzahlen oder "
 "Gleitkommazahlen."
 
-#: ../../library/os.rst:4225
+#: ../../library/os.rst:4211
 msgid ""
 "Generate the file names in a directory tree by walking the tree either top-"
 "down or bottom-up. For each directory in the tree rooted at directory *top* "
@@ -6151,7 +6135,7 @@ msgstr ""
 "Verzeichnis im Baum mit der Wurzel *top* (einschließlich *top* selbst) wird "
 "ein 3-Tupel ``(dirpath, dirnames, filenames)`` geliefert."
 
-#: ../../library/os.rst:4230
+#: ../../library/os.rst:4216
 msgid ""
 "*dirpath* is a string, the path to the directory.  *dirnames* is a list of "
 "the names of the subdirectories in *dirpath* (including symlinks to "
@@ -6176,7 +6160,7 @@ msgstr ""
 "Verzeichnis *dirpath* entfernt oder hinzugefügt, ist nicht festgelegt, ob "
 "ein Name für diese Datei enthalten ist."
 
-#: ../../library/os.rst:4241
+#: ../../library/os.rst:4227
 msgid ""
 "If optional argument *topdown* is ``True`` or not specified, the triple for "
 "a directory is generated before the triples for any of its subdirectories "
@@ -6195,7 +6179,7 @@ msgstr ""
 "Unterverzeichnisse abgerufen, bevor die Tupel für das Verzeichnis und seine "
 "Unterverzeichnisse erzeugt werden."
 
-#: ../../library/os.rst:4249
+#: ../../library/os.rst:4235
 msgid ""
 "When *topdown* is ``True``, the caller can modify the *dirnames* list in-"
 "place (perhaps using :keyword:`del` or slice assignment), and :func:`walk` "
@@ -6217,7 +6201,7 @@ msgstr ""
 "Durchlaufen, weil im Bottom-up-Modus die Verzeichnisse in *dirnames* erzeugt "
 "werden, bevor *dirpath* selbst erzeugt wird."
 
-#: ../../library/os.rst:4258
+#: ../../library/os.rst:4244
 msgid ""
 "By default, errors from the :func:`scandir` call are ignored.  If optional "
 "argument *onerror* is specified, it should be a function; it will be called "
@@ -6233,7 +6217,7 @@ msgstr ""
 "Ausnahme auslösen, um es abzubrechen. Beachte, dass der Dateiname als "
 "Attribut ``filename`` des Ausnahmeobjekts verfügbar ist."
 
-#: ../../library/os.rst:4264
+#: ../../library/os.rst:4250
 msgid ""
 "By default, :func:`walk` will not walk down into symbolic links that resolve "
 "to directories. Set *followlinks* to ``True`` to visit directories pointed "
@@ -6244,7 +6228,7 @@ msgstr ""
 "die sie unterstützen, Verzeichnisse zu besuchen, auf die symbolische Links "
 "verweisen."
 
-#: ../../library/os.rst:4270
+#: ../../library/os.rst:4256
 msgid ""
 "Be aware that setting *followlinks* to ``True`` can lead to infinite "
 "recursion if a link points to a parent directory of itself. :func:`walk` "
@@ -6255,7 +6239,7 @@ msgstr ""
 "verweist. :func:`walk` merkt sich nicht, welche Verzeichnisse es bereits "
 "besucht hat."
 
-#: ../../library/os.rst:4276
+#: ../../library/os.rst:4262
 msgid ""
 "If you pass a relative pathname, don't change the current working directory "
 "between resumptions of :func:`walk`.  :func:`walk` never changes the current "
@@ -6266,7 +6250,7 @@ msgstr ""
 "von :func:`walk`. :func:`walk` wechselt das aktuelle Verzeichnis nie und "
 "geht davon aus, dass sein Aufrufer das auch nicht tut."
 
-#: ../../library/os.rst:4280 ../../library/os.rst:4342
+#: ../../library/os.rst:4266 ../../library/os.rst:4328
 msgid ""
 "This example displays the number of bytes taken by non-directory files in "
 "each directory under the starting directory, except that it doesn't look "
@@ -6276,7 +6260,7 @@ msgstr ""
 "in jedem Verzeichnis unterhalb des Startverzeichnisses belegen, wobei keine "
 "Unterverzeichnisse ``__pycache__`` durchsucht werden::"
 
-#: ../../library/os.rst:4284
+#: ../../library/os.rst:4270
 msgid ""
 "import os\n"
 "from os.path import join, getsize\n"
@@ -6296,7 +6280,7 @@ msgstr ""
 "    if '__pycache__' in dirs:\n"
 "        dirs.remove('__pycache__')  # don't visit __pycache__ directories"
 
-#: ../../library/os.rst:4293
+#: ../../library/os.rst:4279
 msgid ""
 "In the next example (simple implementation of :func:`shutil.rmtree`), "
 "walking the tree bottom-up is essential, :func:`rmdir` doesn't allow "
@@ -6307,7 +6291,7 @@ msgstr ""
 "unerlässlich, denn :func:`rmdir` erlaubt das Löschen eines Verzeichnisses "
 "erst, wenn es leer ist::"
 
-#: ../../library/os.rst:4297
+#: ../../library/os.rst:4283
 msgid ""
 "# Delete everything reachable from the directory named in \"top\",\n"
 "# assuming there are no symbolic links.\n"
@@ -6333,7 +6317,7 @@ msgstr ""
 "        os.rmdir(os.path.join(root, name))\n"
 "os.rmdir(top)"
 
-#: ../../library/os.rst:4309
+#: ../../library/os.rst:4295
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.walk`` with arguments "
 "``top``, ``topdown``, ``onerror``, ``followlinks``."
@@ -6341,7 +6325,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.walk`` mit den Argumenten "
 "``top``, ``topdown``, ``onerror`` und ``followlinks`` aus."
 
-#: ../../library/os.rst:4311
+#: ../../library/os.rst:4297
 msgid ""
 "This function now calls :func:`os.scandir` instead of :func:`os.listdir`, "
 "making it faster by reducing the number of calls to :func:`os.stat`."
@@ -6349,7 +6333,7 @@ msgstr ""
 "Diese Funktion ruft nun :func:`os.scandir` statt :func:`os.listdir` auf, was "
 "sie durch weniger Aufrufe von :func:`os.stat` schneller macht."
 
-#: ../../library/os.rst:4325
+#: ../../library/os.rst:4311
 msgid ""
 "This behaves exactly like :func:`walk`, except that it yields a 4-tuple "
 "``(dirpath, dirnames, filenames, dirfd)``, and it supports ``dir_fd``."
@@ -6357,7 +6341,7 @@ msgstr ""
 "Verhält sich genau wie :func:`walk`, liefert aber ein 4-Tupel ``(dirpath, "
 "dirnames, filenames, dirfd)`` und unterstützt ``dir_fd``."
 
-#: ../../library/os.rst:4328
+#: ../../library/os.rst:4314
 msgid ""
 "*dirpath*, *dirnames* and *filenames* are identical to :func:`walk` output, "
 "and *dirfd* is a file descriptor referring to the directory *dirpath*."
@@ -6366,7 +6350,7 @@ msgstr ""
 "von :func:`walk`, und *dirfd* ist ein Dateideskriptor, der auf das "
 "Verzeichnis *dirpath* verweist."
 
-#: ../../library/os.rst:4331
+#: ../../library/os.rst:4317
 msgid ""
 "This function always supports :ref:`paths relative to directory descriptors "
 "<dir_fd>` and :ref:`not following symlinks <follow_symlinks>`.  Note however "
@@ -6379,7 +6363,7 @@ msgstr ""
 "*follow_symlinks* bei :func:`fwalk` anders als bei anderen Funktionen "
 "``False`` ist."
 
-#: ../../library/os.rst:4338
+#: ../../library/os.rst:4324
 msgid ""
 "Since :func:`fwalk` yields file descriptors, those are only valid until the "
 "next iteration step, so you should duplicate them (e.g. with :func:`dup`) if "
@@ -6389,7 +6373,7 @@ msgstr ""
 "Iterationsschritt gültig sind, solltest du sie duplizieren (z. B. "
 "mit :func:`dup`), wenn du sie länger behalten möchtest."
 
-#: ../../library/os.rst:4346
+#: ../../library/os.rst:4332
 msgid ""
 "import os\n"
 "for root, dirs, files, rootfd in os.fwalk('python/Lib/xml'):\n"
@@ -6409,7 +6393,7 @@ msgstr ""
 "    if '__pycache__' in dirs:\n"
 "        dirs.remove('__pycache__')  # don't visit __pycache__ directories"
 
-#: ../../library/os.rst:4355
+#: ../../library/os.rst:4341
 msgid ""
 "In the next example, walking the tree bottom-up is essential: :func:`rmdir` "
 "doesn't allow deleting a directory before the directory is empty::"
@@ -6418,7 +6402,7 @@ msgstr ""
 "unerlässlich: :func:`rmdir` erlaubt das Löschen eines Verzeichnisses erst, "
 "wenn es leer ist::"
 
-#: ../../library/os.rst:4359
+#: ../../library/os.rst:4345
 msgid ""
 "# Delete everything reachable from the directory named in \"top\",\n"
 "# assuming there are no symbolic links.\n"
@@ -6442,7 +6426,7 @@ msgstr ""
 "    for name in dirs:\n"
 "        os.rmdir(name, dir_fd=rootfd)"
 
-#: ../../library/os.rst:4370
+#: ../../library/os.rst:4356
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.fwalk`` with arguments "
 "``top``, ``topdown``, ``onerror``, ``follow_symlinks``, ``dir_fd``."
@@ -6450,11 +6434,11 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.fwalk`` mit den Argumenten "
 "``top``, ``topdown``, ``onerror``, ``follow_symlinks`` und ``dir_fd`` aus."
 
-#: ../../library/os.rst:4379
+#: ../../library/os.rst:4365
 msgid "Added support for :class:`bytes` paths."
 msgstr "Unterstützung für :class:`bytes`-Pfade hinzugefügt."
 
-#: ../../library/os.rst:4385
+#: ../../library/os.rst:4371
 msgid ""
 "Create an anonymous file and return a file descriptor that refers to it. "
 "*flags* must be one of the ``os.MFD_*`` constants available on the system "
@@ -6466,7 +6450,7 @@ msgstr ""
 "``os.MFD_*`` sein (oder eine bitweise ODER-Kombination davon). Standardmäßig "
 "ist der neue Dateideskriptor :ref:`nicht vererbbar <fd_inheritance>`."
 
-#: ../../library/os.rst:4390
+#: ../../library/os.rst:4376
 msgid ""
 "The name supplied in *name* is used as a filename and will be displayed as "
 "the target of the corresponding symbolic link in the directory ``/proc/self/"
@@ -6482,15 +6466,15 @@ msgstr ""
 "Dateideskriptors nicht, daher können mehrere Dateien ohne Nebenwirkungen "
 "denselben Namen haben."
 
-#: ../../library/os.rst:4420
+#: ../../library/os.rst:4406
 msgid "These flags can be passed to :func:`memfd_create`."
 msgstr "Diese Flags können an :func:`memfd_create` übergeben werden."
 
-#: ../../library/os.rst:4424
+#: ../../library/os.rst:4410
 msgid "The ``MFD_HUGE*`` flags are only available since Linux 4.14."
 msgstr "Die Flags ``MFD_HUGE*`` sind erst seit Linux 4.14 verfügbar."
 
-#: ../../library/os.rst:4431
+#: ../../library/os.rst:4417
 msgid ""
 "Create and return an event file descriptor. The file descriptors supports "
 "raw :func:`read` and :func:`write` with a buffer size of "
@@ -6504,7 +6488,7 @@ msgstr ""
 "Informationen siehe die Manpage :manpage:`eventfd(2)`. Standardmäßig ist der "
 "neue Dateideskriptor :ref:`nicht vererbbar <fd_inheritance>`."
 
-#: ../../library/os.rst:4437
+#: ../../library/os.rst:4423
 msgid ""
 "*initval* is the initial value of the event counter. The initial value must "
 "be a 32 bit unsigned integer. Please note that the initial value is limited "
@@ -6516,7 +6500,7 @@ msgstr ""
 "vorzeichenlose 32-Bit-Ganzzahl beschränkt ist, obwohl der Event-Zähler eine "
 "vorzeichenlose 64-Bit-Ganzzahl mit dem Höchstwert 2\\ :sup:`64`\\ -\\ 2 ist."
 
-#: ../../library/os.rst:4442
+#: ../../library/os.rst:4428
 msgid ""
 "*flags* can be constructed from :const:`EFD_CLOEXEC`, :const:`EFD_NONBLOCK`, "
 "and :const:`EFD_SEMAPHORE`."
@@ -6524,7 +6508,7 @@ msgstr ""
 "*flags* lässt sich aus :const:`EFD_CLOEXEC`, :const:`EFD_NONBLOCK` "
 "und :const:`EFD_SEMAPHORE` bilden."
 
-#: ../../library/os.rst:4445
+#: ../../library/os.rst:4431
 msgid ""
 "If :const:`EFD_SEMAPHORE` is specified and the event counter is non-"
 "zero, :func:`eventfd_read` returns 1 and decrements the counter by one."
@@ -6532,7 +6516,7 @@ msgstr ""
 "Ist :const:`EFD_SEMAPHORE` angegeben und der Event-Zähler ungleich null, "
 "gibt :func:`eventfd_read` 1 zurück und verringert den Zähler um eins."
 
-#: ../../library/os.rst:4448
+#: ../../library/os.rst:4434
 msgid ""
 "If :const:`EFD_SEMAPHORE` is not specified and the event counter is non-"
 "zero, :func:`eventfd_read` returns the current event counter value and "
@@ -6542,7 +6526,7 @@ msgstr ""
 "null, gibt :func:`eventfd_read` den aktuellen Wert des Event-Zählers zurück "
 "und setzt den Zähler auf null zurück."
 
-#: ../../library/os.rst:4452
+#: ../../library/os.rst:4438
 msgid ""
 "If the event counter is zero and :const:`EFD_NONBLOCK` is not "
 "specified, :func:`eventfd_read` blocks."
@@ -6550,7 +6534,7 @@ msgstr ""
 "Ist der Event-Zähler null und :const:`EFD_NONBLOCK` nicht angegeben, "
 "blockiert :func:`eventfd_read`."
 
-#: ../../library/os.rst:4455
+#: ../../library/os.rst:4441
 msgid ""
 ":func:`eventfd_write` increments the event counter. Write blocks if the "
 "write operation would increment the counter to a value larger than "
@@ -6560,7 +6544,7 @@ msgstr ""
 "wenn er den Zähler auf einen Wert größer als 2\\ :sup:`64`\\ -\\ 2 erhöhen "
 "würde."
 
-#: ../../library/os.rst:4461
+#: ../../library/os.rst:4447
 msgid ""
 "import os\n"
 "\n"
@@ -6592,7 +6576,7 @@ msgstr ""
 "finally:\n"
 "    os.close(fd)"
 
-#: ../../library/os.rst:4482
+#: ../../library/os.rst:4468
 msgid ""
 "Read value from an :func:`eventfd` file descriptor and return a 64 bit "
 "unsigned int. The function does not verify that *fd* is an :func:`eventfd`."
@@ -6601,7 +6585,7 @@ msgstr ""
 "vorzeichenlose 64-Bit-Ganzzahl zurück. Die Funktion prüft nicht, ob *fd* "
 "ein :func:`eventfd` ist."
 
-#: ../../library/os.rst:4491
+#: ../../library/os.rst:4477
 msgid ""
 "Add value to an :func:`eventfd` file descriptor. *value* must be a 64 bit "
 "unsigned int. The function does not verify that *fd* is an :func:`eventfd`."
@@ -6610,19 +6594,19 @@ msgstr ""
 "eine vorzeichenlose 64-Bit-Ganzzahl sein. Die Funktion prüft nicht, ob *fd* "
 "ein :func:`eventfd` ist."
 
-#: ../../library/os.rst:4500
+#: ../../library/os.rst:4486
 msgid "Set close-on-exec flag for new :func:`eventfd` file descriptor."
 msgstr ""
 "Setzt das Close-on-exec-Flag für einen neuen :func:`eventfd`-Dateideskriptor."
 
-#: ../../library/os.rst:4508
+#: ../../library/os.rst:4494
 msgid ""
 "Set :const:`O_NONBLOCK` status flag for new :func:`eventfd` file descriptor."
 msgstr ""
 "Setzt das Status-Flag :const:`O_NONBLOCK` für einen neuen :func:`eventfd`-"
 "Dateideskriptor."
 
-#: ../../library/os.rst:4517
+#: ../../library/os.rst:4503
 msgid ""
 "Provide semaphore-like semantics for reads from an :func:`eventfd` file "
 "descriptor. On read the internal counter is decremented by one."
@@ -6630,11 +6614,11 @@ msgstr ""
 "Bietet semaphorähnliche Semantik beim Lesen aus einem :func:`eventfd`-"
 "Dateideskriptor. Beim Lesen wird der interne Zähler um eins verringert."
 
-#: ../../library/os.rst:4528
+#: ../../library/os.rst:4514
 msgid "Timer File Descriptors"
 msgstr "Timer-Dateideskriptoren"
 
-#: ../../library/os.rst:4532
+#: ../../library/os.rst:4518
 msgid ""
 "These functions provide support for Linux's *timer file descriptor* API. "
 "Naturally, they are all only available on Linux."
@@ -6642,28 +6626,28 @@ msgstr ""
 "Diese Funktionen unterstützen die Linux-API für *Timer-Dateideskriptoren*. "
 "Natürlich sind sie alle nur unter Linux verfügbar."
 
-#: ../../library/os.rst:4537
+#: ../../library/os.rst:4523
 msgid "Create and return a timer file descriptor (*timerfd*)."
 msgstr "Erzeugt einen Timer-Dateideskriptor (*timerfd*) und gibt ihn zurück."
 
-#: ../../library/os.rst:4539
+#: ../../library/os.rst:4525
 msgid "The file descriptor returned by :func:`timerfd_create` supports:"
 msgstr ""
 "Der von :func:`timerfd_create` zurückgegebene Dateideskriptor unterstützt:"
 
-#: ../../library/os.rst:4541
+#: ../../library/os.rst:4527
 msgid ":func:`read`"
 msgstr ":func:`read`"
 
-#: ../../library/os.rst:4542
+#: ../../library/os.rst:4528
 msgid ":func:`~select.select`"
 msgstr ":func:`~select.select`"
 
-#: ../../library/os.rst:4543
+#: ../../library/os.rst:4529
 msgid ":func:`~select.poll`"
 msgstr ":func:`~select.poll`"
 
-#: ../../library/os.rst:4545
+#: ../../library/os.rst:4531
 msgid ""
 "The file descriptor's :func:`read` method can be called with a buffer size "
 "of 8. If the timer has already expired one or more times, :func:`read` "
@@ -6677,7 +6661,7 @@ msgstr ""
 "zurück, die sich mit ``int.from_bytes(x, byteorder=sys.byteorder)`` in "
 "einen :class:`int` umwandeln lässt."
 
-#: ../../library/os.rst:4550
+#: ../../library/os.rst:4536
 msgid ""
 ":func:`~select.select` and :func:`~select.poll` can be used to wait until "
 "timer expires and the file descriptor is readable."
@@ -6685,7 +6669,7 @@ msgstr ""
 "Mit :func:`~select.select` und :func:`~select.poll` lässt sich warten, bis "
 "der Timer abläuft und der Dateideskriptor lesbar ist."
 
-#: ../../library/os.rst:4553
+#: ../../library/os.rst:4539
 msgid ""
 "*clockid* must be a valid :ref:`clock ID <time-clock-id-constants>`, as "
 "defined in the :py:mod:`time` module:"
@@ -6693,19 +6677,19 @@ msgstr ""
 "*clockid* muss eine gültige :ref:`Uhr-ID <time-clock-id-constants>` sein, "
 "wie im Modul :py:mod:`time` definiert:"
 
-#: ../../library/os.rst:4556
+#: ../../library/os.rst:4542
 msgid ":const:`time.CLOCK_REALTIME`"
 msgstr ":const:`time.CLOCK_REALTIME`"
 
-#: ../../library/os.rst:4557
+#: ../../library/os.rst:4543
 msgid ":const:`time.CLOCK_MONOTONIC`"
 msgstr ":const:`time.CLOCK_MONOTONIC`"
 
-#: ../../library/os.rst:4558
+#: ../../library/os.rst:4544
 msgid ":const:`time.CLOCK_BOOTTIME` (Since Linux 3.15 for timerfd_create)"
 msgstr ":const:`time.CLOCK_BOOTTIME` (seit Linux 3.15 für timerfd_create)"
 
-#: ../../library/os.rst:4560
+#: ../../library/os.rst:4546
 msgid ""
 "If *clockid* is :const:`time.CLOCK_REALTIME`, a settable system-wide real-"
 "time clock is used. If the system clock is changed, the timer setting needs "
@@ -6717,7 +6701,7 @@ msgstr ""
 "Timer-Einstellung aktualisiert werden. Wie der Timer bei einer Änderung der "
 "Systemuhr abgebrochen wird, siehe :const:`TFD_TIMER_CANCEL_ON_SET`."
 
-#: ../../library/os.rst:4565
+#: ../../library/os.rst:4551
 msgid ""
 "If *clockid* is :const:`time.CLOCK_MONOTONIC`, a non-settable monotonically "
 "increasing clock is used. Even if the system clock is changed, the timer "
@@ -6727,7 +6711,7 @@ msgstr ""
 "monoton steigende Uhr verwendet. Auch wenn die Systemuhr geändert wird, ist "
 "die Timer-Einstellung davon nicht betroffen."
 
-#: ../../library/os.rst:4569
+#: ../../library/os.rst:4555
 msgid ""
 "If *clockid* is :const:`time.CLOCK_BOOTTIME`, it is the same "
 "as :const:`time.CLOCK_MONOTONIC` except it includes any time that the system "
@@ -6737,7 +6721,7 @@ msgstr ""
 "das :const:`time.CLOCK_MONOTONIC`, schließt aber die Zeit ein, in der das "
 "System im Ruhezustand ist."
 
-#: ../../library/os.rst:4573
+#: ../../library/os.rst:4559
 msgid ""
 "The file descriptor's behaviour can be modified by specifying a *flags* "
 "value. Any of the following variables may be used, combined using bitwise OR "
@@ -6747,15 +6731,15 @@ msgstr ""
 "*flags* ändern. Jede der folgenden Variablen kann verwendet und mit "
 "bitweisem ODER (dem Operator ``|``) kombiniert werden:"
 
-#: ../../library/os.rst:4577
+#: ../../library/os.rst:4563
 msgid ":const:`TFD_NONBLOCK`"
 msgstr ":const:`TFD_NONBLOCK`"
 
-#: ../../library/os.rst:4578
+#: ../../library/os.rst:4564
 msgid ":const:`TFD_CLOEXEC`"
 msgstr ":const:`TFD_CLOEXEC`"
 
-#: ../../library/os.rst:4580
+#: ../../library/os.rst:4566
 msgid ""
 "If :const:`TFD_NONBLOCK` is not set as a flag, :func:`read` blocks until the "
 "timer expires. If it is set as a flag, :func:`read` doesn't block, but if "
@@ -6768,11 +6752,11 @@ msgstr ""
 "löst :func:`read` :class:`OSError` aus, wobei ``errno`` "
 "auf :const:`errno.EAGAIN` gesetzt ist."
 
-#: ../../library/os.rst:4586
+#: ../../library/os.rst:4572
 msgid ":const:`TFD_CLOEXEC` is always set by Python automatically."
 msgstr ":const:`TFD_CLOEXEC` wird von Python immer automatisch gesetzt."
 
-#: ../../library/os.rst:4588
+#: ../../library/os.rst:4574
 msgid ""
 "The file descriptor must be closed with :func:`os.close` when it is no "
 "longer needed, or else the file descriptor will be leaked."
@@ -6780,11 +6764,11 @@ msgstr ""
 "Der Dateideskriptor muss mit :func:`os.close` geschlossen werden, wenn er "
 "nicht mehr benötigt wird, andernfalls entsteht ein Leck des Dateideskriptors."
 
-#: ../../library/os.rst:4591
+#: ../../library/os.rst:4577
 msgid "The :manpage:`timerfd_create(2)` man page."
 msgstr "Die Manpage :manpage:`timerfd_create(2)`."
 
-#: ../../library/os.rst:4600
+#: ../../library/os.rst:4586
 msgid ""
 "Alter a timer file descriptor's internal timer. This function operates the "
 "same interval timer as :func:`timerfd_settime_ns`."
@@ -6792,11 +6776,11 @@ msgstr ""
 "Ändert den internen Timer eines Timer-Dateideskriptors. Diese Funktion "
 "steuert denselben Intervall-Timer wie :func:`timerfd_settime_ns`."
 
-#: ../../library/os.rst:4603
+#: ../../library/os.rst:4589
 msgid "*fd* must be a valid timer file descriptor."
 msgstr "*fd* muss ein gültiger Timer-Dateideskriptor sein."
 
-#: ../../library/os.rst:4605
+#: ../../library/os.rst:4591
 msgid ""
 "The timer's behaviour can be modified by specifying a *flags* value. Any of "
 "the following variables may be used, combined using bitwise OR (the ``|`` "
@@ -6806,15 +6790,15 @@ msgstr ""
 "ändern. Jede der folgenden Variablen kann verwendet und mit bitweisem ODER "
 "(dem Operator ``|``) kombiniert werden:"
 
-#: ../../library/os.rst:4609
+#: ../../library/os.rst:4595
 msgid ":const:`TFD_TIMER_ABSTIME`"
 msgstr ":const:`TFD_TIMER_ABSTIME`"
 
-#: ../../library/os.rst:4610
+#: ../../library/os.rst:4596
 msgid ":const:`TFD_TIMER_CANCEL_ON_SET`"
 msgstr ":const:`TFD_TIMER_CANCEL_ON_SET`"
 
-#: ../../library/os.rst:4612
+#: ../../library/os.rst:4598
 msgid ""
 "The timer is disabled by setting *initial* to zero (``0``). If *initial* is "
 "greater than zero, the timer is enabled. If *initial* is less than zero, it "
@@ -6826,12 +6810,12 @@ msgstr ""
 "kleiner als null, wird eine :class:`OSError`-Ausnahme ausgelöst, wobei "
 "``errno`` auf :const:`errno.EINVAL` gesetzt ist."
 
-#: ../../library/os.rst:4617
+#: ../../library/os.rst:4603
 msgid "By default the timer will fire when *initial* seconds have elapsed."
 msgstr ""
 "Standardmäßig löst der Timer aus, wenn *initial* Sekunden vergangen sind."
 
-#: ../../library/os.rst:4619
+#: ../../library/os.rst:4605
 msgid ""
 "However, if the :const:`TFD_TIMER_ABSTIME` flag is set, the timer will fire "
 "when the timer's clock (set by *clockid* in :func:`timerfd_create`) reaches "
@@ -6841,7 +6825,7 @@ msgstr ""
 "wenn die Uhr des Timers (festgelegt durch *clockid* "
 "in :func:`timerfd_create`) *initial* Sekunden erreicht."
 
-#: ../../library/os.rst:4623
+#: ../../library/os.rst:4609
 msgid ""
 "The timer's interval is set by the *interval* real number. If *interval* is "
 "zero, the timer only fires once, on the initial expiration. If *interval* is "
@@ -6856,7 +6840,7 @@ msgstr ""
 "als null, wird :class:`OSError` ausgelöst, wobei ``errno`` "
 "auf :const:`errno.EINVAL` gesetzt ist."
 
-#: ../../library/os.rst:4630
+#: ../../library/os.rst:4616
 msgid ""
 "If the :const:`TFD_TIMER_CANCEL_ON_SET` flag is set along "
 "with :const:`TFD_TIMER_ABSTIME` and the clock for this timer "
@@ -6870,7 +6854,7 @@ msgstr ""
 "falls die Echtzeituhr sprunghaft geändert wird. Das Lesen des Deskriptors "
 "wird dann mit dem Fehler :const:`errno.ECANCELED` abgebrochen."
 
-#: ../../library/os.rst:4636
+#: ../../library/os.rst:4622
 msgid ""
 "Linux manages system clock as UTC. A daylight-savings time transition is "
 "done by changing time offset only and doesn't cause discontinuous system "
@@ -6880,26 +6864,26 @@ msgstr ""
 "durch Ändern des Zeitversatzes und verursacht keine sprunghafte Änderung der "
 "Systemuhr."
 
-#: ../../library/os.rst:4640
+#: ../../library/os.rst:4626
 msgid ""
 "Discontinuous system clock change will be caused by the following events:"
 msgstr ""
 "Eine sprunghafte Änderung der Systemuhr wird durch folgende Ereignisse "
 "verursacht:"
 
-#: ../../library/os.rst:4642
+#: ../../library/os.rst:4628
 msgid "``settimeofday``"
 msgstr "``settimeofday``"
 
-#: ../../library/os.rst:4643
+#: ../../library/os.rst:4629
 msgid "``clock_settime``"
 msgstr "``clock_settime``"
 
-#: ../../library/os.rst:4644
+#: ../../library/os.rst:4630
 msgid "set the system date and time by ``date`` command"
 msgstr "Setzen von Systemdatum und -uhrzeit mit dem Befehl ``date``"
 
-#: ../../library/os.rst:4646
+#: ../../library/os.rst:4632
 msgid ""
 "Return a two-item tuple of (``next_expiration``, ``interval``) from the "
 "previous timer state, before this function executed."
@@ -6907,7 +6891,7 @@ msgstr ""
 "Gibt ein Tupel mit zwei Elementen (``next_expiration``, ``interval``) aus "
 "dem vorherigen Timer-Zustand zurück, also vor Ausführung dieser Funktion."
 
-#: ../../library/os.rst:4651
+#: ../../library/os.rst:4637
 msgid ""
 ":manpage:`timerfd_create(2)`, :manpage:`timerfd_settime(2)`, :manpage:`settimeofday(2)`, :manpage:`clock_settime(2)`, "
 "and :manpage:`date(1)`."
@@ -6915,7 +6899,7 @@ msgstr ""
 ":manpage:`timerfd_create(2)`, :manpage:`timerfd_settime(2)`, :manpage:`settimeofday(2)`, :manpage:`clock_settime(2)` "
 "und :manpage:`date(1)`."
 
-#: ../../library/os.rst:4662
+#: ../../library/os.rst:4648
 msgid ""
 "Similar to :func:`timerfd_settime`, but use time as nanoseconds. This "
 "function operates the same interval timer as :func:`timerfd_settime`."
@@ -6923,13 +6907,13 @@ msgstr ""
 "Ähnlich wie :func:`timerfd_settime`, verwendet aber Zeiten in Nanosekunden. "
 "Diese Funktion steuert denselben Intervall-Timer wie :func:`timerfd_settime`."
 
-#: ../../library/os.rst:4672
+#: ../../library/os.rst:4658
 msgid "Return a two-item tuple of floats (``next_expiration``, ``interval``)."
 msgstr ""
 "Gibt ein Tupel mit zwei Gleitkommazahlen (``next_expiration``, ``interval``) "
 "zurück."
 
-#: ../../library/os.rst:4674
+#: ../../library/os.rst:4660
 msgid ""
 "``next_expiration`` denotes the relative time until the timer next fires, "
 "regardless of if the :const:`TFD_TIMER_ABSTIME` flag is set."
@@ -6938,7 +6922,7 @@ msgstr ""
 "des Timers, unabhängig davon, ob das Flag :const:`TFD_TIMER_ABSTIME` gesetzt "
 "ist."
 
-#: ../../library/os.rst:4677
+#: ../../library/os.rst:4663
 msgid ""
 "``interval`` denotes the timer's interval. If zero, the timer will only fire "
 "once, after ``next_expiration`` seconds have elapsed."
@@ -6946,17 +6930,17 @@ msgstr ""
 "``interval`` bezeichnet das Intervall des Timers. Ist es null, löst der "
 "Timer nur einmal aus, nachdem ``next_expiration`` Sekunden vergangen sind."
 
-#: ../../library/os.rst:4681
+#: ../../library/os.rst:4667
 msgid ":manpage:`timerfd_gettime(2)`"
 msgstr ":manpage:`timerfd_gettime(2)`"
 
-#: ../../library/os.rst:4690
+#: ../../library/os.rst:4676
 msgid "Similar to :func:`timerfd_gettime`, but return time as nanoseconds."
 msgstr ""
 "Ähnlich wie :func:`timerfd_gettime`, gibt die Zeit aber in Nanosekunden "
 "zurück."
 
-#: ../../library/os.rst:4698
+#: ../../library/os.rst:4684
 msgid ""
 "A flag for the :func:`timerfd_create` function, which sets "
 "the :const:`O_NONBLOCK` status flag for the new timer file descriptor. "
@@ -6966,7 +6950,7 @@ msgstr ""
 "Flag :const:`O_NONBLOCK` für den neuen Timer-Dateideskriptor setzt. "
 "Ist :const:`TFD_NONBLOCK` nicht als Flag gesetzt, blockiert :func:`read`."
 
-#: ../../library/os.rst:4708
+#: ../../library/os.rst:4694
 msgid ""
 "A flag for the :func:`timerfd_create` function, If :const:`TFD_CLOEXEC` is "
 "set as a flag, set close-on-exec flag for new file descriptor."
@@ -6975,7 +6959,7 @@ msgstr ""
 "als Flag gesetzt, wird das Close-on-exec-Flag für den neuen Dateideskriptor "
 "gesetzt."
 
-#: ../../library/os.rst:4718
+#: ../../library/os.rst:4704
 msgid ""
 "A flag for the :func:`timerfd_settime` and :func:`timerfd_settime_ns` "
 "functions. If this flag is set, *initial* is interpreted as an absolute "
@@ -6987,7 +6971,7 @@ msgstr ""
 "absoluter Wert auf der Uhr des Timers interpretiert (in UTC-Sekunden oder "
 "-Nanosekunden seit der Unix-Epoche)."
 
-#: ../../library/os.rst:4728
+#: ../../library/os.rst:4714
 msgid ""
 "A flag for the :func:`timerfd_settime` and :func:`timerfd_settime_ns` "
 "functions along with :const:`TFD_TIMER_ABSTIME`. The timer is cancelled when "
@@ -6998,15 +6982,15 @@ msgstr ""
 "Timer wird abgebrochen, wenn sich die Zeit der zugrunde liegenden Uhr "
 "sprunghaft ändert."
 
-#: ../../library/os.rst:4739
+#: ../../library/os.rst:4725
 msgid "Linux extended attributes"
 msgstr "Erweiterte Attribute unter Linux"
 
-#: ../../library/os.rst:4743
+#: ../../library/os.rst:4729
 msgid "These functions are all available on Linux only."
 msgstr "Diese Funktionen sind alle nur unter Linux verfügbar."
 
-#: ../../library/os.rst:4747
+#: ../../library/os.rst:4733
 msgid ""
 "Return the value of the extended filesystem attribute *attribute* for "
 "*path*. *attribute* can be bytes or str (directly or indirectly through "
@@ -7018,7 +7002,7 @@ msgstr ""
 "Schnittstelle :class:`PathLike`). Ist es str, wird es mit der Dateisystem-"
 "Kodierung kodiert."
 
-#: ../../library/os.rst:4755
+#: ../../library/os.rst:4741
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.getxattr`` with arguments "
 "``path``, ``attribute``."
@@ -7026,14 +7010,14 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.getxattr`` mit den "
 "Argumenten ``path`` und ``attribute`` aus."
 
-#: ../../library/os.rst:4757 ../../library/os.rst:4793
-#: ../../library/os.rst:4818
+#: ../../library/os.rst:4743 ../../library/os.rst:4779
+#: ../../library/os.rst:4804
 msgid "Accepts a :term:`path-like object` for *path* and *attribute*."
 msgstr ""
 "Akzeptiert ein :term:`pfadähnliches Objekt <path-like object>` für *path* "
 "und *attribute*."
 
-#: ../../library/os.rst:4763
+#: ../../library/os.rst:4749
 msgid ""
 "Return a list of the extended filesystem attributes on *path*.  The "
 "attributes in the list are represented as strings decoded with the "
@@ -7045,7 +7029,7 @@ msgstr ""
 "Dateisystem-Kodierung dekodiert wurden. Ist *path* ``None``, "
 "untersucht :func:`listxattr` das aktuelle Verzeichnis."
 
-#: ../../library/os.rst:4771
+#: ../../library/os.rst:4757
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.listxattr`` with argument "
 "``path``."
@@ -7053,7 +7037,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.listxattr`` mit dem "
 "Argument ``path`` aus."
 
-#: ../../library/os.rst:4776
+#: ../../library/os.rst:4762
 msgid ""
 "``os.listxattr(-1)`` now fails with ``OSError(errno.EBADF)`` rather than "
 "listing extended attributes of the current directory."
@@ -7061,7 +7045,7 @@ msgstr ""
 "``os.listxattr(-1)`` schlägt nun mit ``OSError(errno.EBADF)`` fehl, statt "
 "die erweiterten Attribute des aktuellen Verzeichnisses aufzulisten."
 
-#: ../../library/os.rst:4783
+#: ../../library/os.rst:4769
 msgid ""
 "Removes the extended filesystem attribute *attribute* from *path*. "
 "*attribute* should be bytes or str (directly or indirectly through "
@@ -7074,7 +7058,7 @@ msgstr ""
 "der :term:`Dateisystem-Kodierung und Fehlerbehandlung <filesystem encoding "
 "and error handler>` kodiert."
 
-#: ../../library/os.rst:4791
+#: ../../library/os.rst:4777
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.removexattr`` with arguments "
 "``path``, ``attribute``."
@@ -7082,7 +7066,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.removexattr`` mit den "
 "Argumenten ``path`` und ``attribute`` aus."
 
-#: ../../library/os.rst:4799
+#: ../../library/os.rst:4785
 msgid ""
 "Set the extended filesystem attribute *attribute* on *path* to *value*. "
 "*attribute* must be a bytes or str with no embedded NULs (directly or "
@@ -7103,7 +7087,7 @@ msgstr ""
 "Ist :data:`XATTR_CREATE` angegeben und das Attribut existiert bereits, wird "
 "es nicht erzeugt und ``EEXISTS`` ausgelöst."
 
-#: ../../library/os.rst:4813
+#: ../../library/os.rst:4799
 msgid ""
 "A bug in Linux kernel versions less than 2.6.39 caused the flags argument to "
 "be ignored on some filesystems."
@@ -7111,7 +7095,7 @@ msgstr ""
 "Ein Fehler in Linux-Kernel-Versionen vor 2.6.39 führte dazu, dass das "
 "Argument flags auf manchen Dateisystemen ignoriert wurde."
 
-#: ../../library/os.rst:4816
+#: ../../library/os.rst:4802
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.setxattr`` with arguments "
 "``path``, ``attribute``, ``value``, ``flags``."
@@ -7119,7 +7103,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.setxattr`` mit den "
 "Argumenten ``path``, ``attribute``, ``value`` und ``flags`` aus."
 
-#: ../../library/os.rst:4824
+#: ../../library/os.rst:4810
 msgid ""
 "The maximum size the value of an extended attribute can be. Currently, this "
 "is 64 KiB on Linux."
@@ -7127,7 +7111,7 @@ msgstr ""
 "Die maximale Größe des Werts eines erweiterten Attributs. Derzeit sind das "
 "unter Linux 64 KiB."
 
-#: ../../library/os.rst:4830
+#: ../../library/os.rst:4816
 msgid ""
 "This is a possible value for the flags argument in :func:`setxattr`. It "
 "indicates the operation must create an attribute."
@@ -7135,7 +7119,7 @@ msgstr ""
 "Dies ist ein möglicher Wert für das Argument flags von :func:`setxattr`. Er "
 "gibt an, dass die Operation ein Attribut erzeugen muss."
 
-#: ../../library/os.rst:4836
+#: ../../library/os.rst:4822
 msgid ""
 "This is a possible value for the flags argument in :func:`setxattr`. It "
 "indicates the operation must replace an existing attribute."
@@ -7143,15 +7127,15 @@ msgstr ""
 "Dies ist ein möglicher Wert für das Argument flags von :func:`setxattr`. Er "
 "gibt an, dass die Operation ein existierendes Attribut ersetzen muss."
 
-#: ../../library/os.rst:4843
+#: ../../library/os.rst:4829
 msgid "Process Management"
 msgstr "Prozessverwaltung"
 
-#: ../../library/os.rst:4845
+#: ../../library/os.rst:4831
 msgid "These functions may be used to create and manage processes."
 msgstr "Mit diesen Funktionen lassen sich Prozesse erzeugen und verwalten."
 
-#: ../../library/os.rst:4847
+#: ../../library/os.rst:4833
 msgid ""
 "The various :func:`exec\\* <execl>` functions take a list of arguments for "
 "the new program loaded into the process.  In each case, the first of these "
@@ -7170,7 +7154,7 @@ msgstr ""
 "gibt ``os.execv('/bin/echo', ['foo', 'bar'])`` auf der Standardausgabe nur "
 "``bar`` aus; ``foo`` scheint ignoriert zu werden."
 
-#: ../../library/os.rst:4858
+#: ../../library/os.rst:4844
 msgid ""
 "Generate a :const:`~signal.SIGABRT` signal to the current process.  On Unix, "
 "the default behavior is to produce a core dump; on Windows, the process "
@@ -7184,11 +7168,11 @@ msgstr ""
 "Funktion nicht den Python-Signal-Handler aufruft, der "
 "mit :func:`signal.signal` für :const:`~signal.SIGABRT` registriert wurde."
 
-#: ../../library/os.rst:4867
+#: ../../library/os.rst:4853
 msgid "Add a path to the DLL search path."
 msgstr "Fügt dem DLL-Suchpfad einen Pfad hinzu."
 
-#: ../../library/os.rst:4869
+#: ../../library/os.rst:4855
 msgid ""
 "This search path is used when resolving dependencies for imported extension "
 "modules (the module itself is resolved through :data:`sys.path`), and also "
@@ -7198,7 +7182,7 @@ msgstr ""
 "Erweiterungsmodule verwendet (das Modul selbst wird über :data:`sys.path` "
 "aufgelöst) und auch von :mod:`ctypes`."
 
-#: ../../library/os.rst:4873
+#: ../../library/os.rst:4859
 msgid ""
 "Remove the directory by calling **close()** on the returned object or using "
 "it in a :keyword:`with` statement."
@@ -7206,7 +7190,7 @@ msgstr ""
 "Entferne das Verzeichnis, indem du **close()** auf dem zurückgegebenen "
 "Objekt aufrufst oder es in einer Anweisung :keyword:`with` verwendest."
 
-#: ../../library/os.rst:4876
+#: ../../library/os.rst:4862
 msgid ""
 "See the `Microsoft documentation <https://msdn.microsoft.com/"
 "44228cf2-6306-466c-8f16-f513cd3ba8b5>`_ for more information about how DLLs "
@@ -7216,7 +7200,7 @@ msgstr ""
 "`Microsoft-Dokumentation <https://msdn.microsoft.com/44228cf2-6306-466c-8f16-"
 "f513cd3ba8b5>`_."
 
-#: ../../library/os.rst:4880
+#: ../../library/os.rst:4866
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.add_dll_directory`` with "
 "argument ``path``."
@@ -7224,7 +7208,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.add_dll_directory`` mit "
 "dem Argument ``path`` aus."
 
-#: ../../library/os.rst:4884
+#: ../../library/os.rst:4870
 msgid ""
 "Previous versions of CPython would resolve DLLs using the default behavior "
 "for the current process. This led to inconsistencies, such as only sometimes "
@@ -7237,7 +7221,7 @@ msgstr ""
 "durchsucht wurden und Betriebssystemfunktionen wie ``AddDllDirectory`` keine "
 "Wirkung hatten."
 
-#: ../../library/os.rst:4891
+#: ../../library/os.rst:4877
 msgid ""
 "In 3.8, the two primary ways DLLs are loaded now explicitly override the "
 "process-wide behavior to ensure consistency. See the :ref:`porting notes "
@@ -7248,7 +7232,7 @@ msgstr ""
 "Informationen zum Aktualisieren von Bibliotheken siehe "
 "die :ref:`Portierungshinweise <bpo-36085-whatsnew>`."
 
-#: ../../library/os.rst:4906
+#: ../../library/os.rst:4892
 msgid ""
 "These functions all execute a new program, replacing the current process; "
 "they do not return.  On Unix, the new executable is loaded into the current "
@@ -7260,7 +7244,7 @@ msgstr ""
 "ausführbare Datei in den aktuellen Prozess geladen und hat dieselbe Prozess-"
 "ID wie der Aufrufer. Fehler werden als :exc:`OSError`-Ausnahmen gemeldet."
 
-#: ../../library/os.rst:4911
+#: ../../library/os.rst:4897
 msgid ""
 "The current process is replaced immediately. Open file objects and "
 "descriptors are not flushed, so if there may be data buffered on these open "
@@ -7273,7 +7257,7 @@ msgstr ""
 "Funktion :func:`exec\\* <execl>` mit :func:`~io.IOBase.flush` "
 "oder :func:`os.fsync` leeren."
 
-#: ../../library/os.rst:4917
+#: ../../library/os.rst:4903
 msgid ""
 "The \"l\" and \"v\" variants of the :func:`exec\\* <execl>` functions differ "
 "in how command-line arguments are passed.  The \"l\" variants are perhaps "
@@ -7295,7 +7279,7 @@ msgstr ""
 "übergeben. In beiden Fällen sollten die Argumente für den Kindprozess mit "
 "dem Namen des ausgeführten Befehls beginnen, das wird aber nicht erzwungen."
 
-#: ../../library/os.rst:4926
+#: ../../library/os.rst:4912
 msgid ""
 "The variants which include a \"p\" near the end "
 "(:func:`execlp`, :func:`execlpe`, :func:`execvp`, and :func:`execvpe`) will "
@@ -7321,7 +7305,7 @@ msgstr ""
 "Relative Pfade müssen auch unter Windows mindestens einen Schrägstrich "
 "enthalten, da einfache Namen nicht aufgelöst werden."
 
-#: ../../library/os.rst:4937
+#: ../../library/os.rst:4923
 msgid ""
 "For :func:`execle`, :func:`execlpe`, :func:`execve`, and :func:`execvpe` "
 "(note that these all end in \"e\"), the *env* parameter must be a mapping "
@@ -7337,7 +7321,7 @@ msgstr ""
 "Funktionen :func:`execl`, :func:`execlp`, :func:`execv` und :func:`execvp` "
 "erbt der neue Prozess die Umgebung des aktuellen Prozesses."
 
-#: ../../library/os.rst:4944
+#: ../../library/os.rst:4930
 msgid ""
 "For :func:`execve` on some platforms, *path* may also be specified as an "
 "open file descriptor.  This functionality may not be supported on your "
@@ -7351,7 +7335,7 @@ msgstr ""
 "mit :data:`os.supports_fd`. Ist sie nicht verfügbar, löst ihre Verwendung "
 "einen :exc:`NotImplementedError` aus."
 
-#: ../../library/os.rst:4949
+#: ../../library/os.rst:4935
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.exec`` with arguments "
 "``path``, ``args``, ``env``."
@@ -7359,7 +7343,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.exec`` mit den Argumenten "
 "``path``, ``args`` und ``env`` aus."
 
-#: ../../library/os.rst:4953
+#: ../../library/os.rst:4939
 msgid ""
 "Added support for specifying *path* as an open file descriptor "
 "for :func:`execve`."
@@ -7367,7 +7351,7 @@ msgstr ""
 "Unterstützung für die Angabe von *path* als geöffneter Dateideskriptor "
 "bei :func:`execve` hinzugefügt."
 
-#: ../../library/os.rst:4962
+#: ../../library/os.rst:4948
 msgid ""
 "Exit the process with status *n*, without calling cleanup handlers, flushing "
 "stdio buffers, etc."
@@ -7375,7 +7359,7 @@ msgstr ""
 "Beendet den Prozess mit dem Status *n*, ohne Aufräum-Handler aufzurufen, "
 "stdio-Puffer zu leeren usw."
 
-#: ../../library/os.rst:4967
+#: ../../library/os.rst:4953
 msgid ""
 "The standard way to exit is :func:`sys.exit(n) <sys.exit>`.  :func:`!_exit` "
 "should normally only be used in the child process after a :func:`fork`."
@@ -7384,7 +7368,7 @@ msgstr ""
 "_exit` sollte normalerweise nur im Kindprozess nach einem :func:`fork` "
 "verwendet werden."
 
-#: ../../library/os.rst:4970
+#: ../../library/os.rst:4956
 msgid ""
 "The following exit codes are defined and can be used with :func:`_exit`, "
 "although they are not required.  These are typically used for system "
@@ -7396,7 +7380,7 @@ msgstr ""
 "für in Python geschriebene Systemprogramme verwendet, etwa das Programm "
 "eines Mailservers zur Zustellung über externe Befehle."
 
-#: ../../library/os.rst:4976
+#: ../../library/os.rst:4962
 msgid ""
 "Some of these may not be available on all Unix platforms, since there is "
 "some variation.  These constants are defined where they are defined by the "
@@ -7406,7 +7390,7 @@ msgstr ""
 "da es gewisse Unterschiede gibt. Diese Konstanten sind dort definiert, wo "
 "sie von der zugrunde liegenden Plattform definiert werden."
 
-#: ../../library/os.rst:4983
+#: ../../library/os.rst:4969
 msgid ""
 "Exit code that means no error occurred. May be taken from the defined value "
 "of ``EXIT_SUCCESS`` on some platforms. Generally has a value of zero."
@@ -7415,7 +7399,7 @@ msgstr ""
 "Plattformen dem definierten Wert von ``EXIT_SUCCESS`` entnommen sein. Hat im "
 "Allgemeinen den Wert null."
 
-#: ../../library/os.rst:4991
+#: ../../library/os.rst:4977
 msgid ""
 "Exit code that means the command was used incorrectly, such as when the "
 "wrong number of arguments are given."
@@ -7423,36 +7407,36 @@ msgstr ""
 "Exit-Code, der bedeutet, dass der Befehl falsch verwendet wurde, etwa wenn "
 "eine falsche Anzahl von Argumenten angegeben wurde."
 
-#: ../../library/os.rst:4999
+#: ../../library/os.rst:4985
 msgid "Exit code that means the input data was incorrect."
 msgstr "Exit-Code, der bedeutet, dass die Eingabedaten fehlerhaft waren."
 
-#: ../../library/os.rst:5006
+#: ../../library/os.rst:4992
 msgid "Exit code that means an input file did not exist or was not readable."
 msgstr ""
 "Exit-Code, der bedeutet, dass eine Eingabedatei nicht existierte oder nicht "
 "lesbar war."
 
-#: ../../library/os.rst:5013
+#: ../../library/os.rst:4999
 msgid "Exit code that means a specified user did not exist."
 msgstr ""
 "Exit-Code, der bedeutet, dass ein angegebener Benutzer nicht existierte."
 
-#: ../../library/os.rst:5020
+#: ../../library/os.rst:5006
 msgid "Exit code that means a specified host did not exist."
 msgstr "Exit-Code, der bedeutet, dass ein angegebener Host nicht existierte."
 
-#: ../../library/os.rst:5027
+#: ../../library/os.rst:5013
 msgid "Exit code that means that a required service is unavailable."
 msgstr ""
 "Exit-Code, der bedeutet, dass ein benötigter Dienst nicht verfügbar ist."
 
-#: ../../library/os.rst:5034
+#: ../../library/os.rst:5020
 msgid "Exit code that means an internal software error was detected."
 msgstr ""
 "Exit-Code, der bedeutet, dass ein interner Softwarefehler erkannt wurde."
 
-#: ../../library/os.rst:5041
+#: ../../library/os.rst:5027
 msgid ""
 "Exit code that means an operating system error was detected, such as the "
 "inability to fork or create a pipe."
@@ -7460,7 +7444,7 @@ msgstr ""
 "Exit-Code, der bedeutet, dass ein Betriebssystemfehler erkannt wurde, etwa "
 "dass kein fork möglich ist oder keine Pipe erzeugt werden kann."
 
-#: ../../library/os.rst:5049
+#: ../../library/os.rst:5035
 msgid ""
 "Exit code that means some system file did not exist, could not be opened, or "
 "had some other kind of error."
@@ -7468,20 +7452,20 @@ msgstr ""
 "Exit-Code, der bedeutet, dass eine Systemdatei nicht existierte, nicht "
 "geöffnet werden konnte oder einen anderen Fehler hatte."
 
-#: ../../library/os.rst:5057
+#: ../../library/os.rst:5043
 msgid "Exit code that means a user specified output file could not be created."
 msgstr ""
 "Exit-Code, der bedeutet, dass eine vom Benutzer angegebene Ausgabedatei "
 "nicht erzeugt werden konnte."
 
-#: ../../library/os.rst:5064
+#: ../../library/os.rst:5050
 msgid ""
 "Exit code that means that an error occurred while doing I/O on some file."
 msgstr ""
 "Exit-Code, der bedeutet, dass bei der Ein-/Ausgabe auf einer Datei ein "
 "Fehler aufgetreten ist."
 
-#: ../../library/os.rst:5071
+#: ../../library/os.rst:5057
 msgid ""
 "Exit code that means a temporary failure occurred.  This indicates something "
 "that may not really be an error, such as a network connection that couldn't "
@@ -7492,7 +7476,7 @@ msgstr ""
 "eine Netzwerkverbindung, die bei einer wiederholbaren Operation nicht "
 "hergestellt werden konnte."
 
-#: ../../library/os.rst:5080
+#: ../../library/os.rst:5066
 msgid ""
 "Exit code that means that a protocol exchange was illegal, invalid, or not "
 "understood."
@@ -7500,7 +7484,7 @@ msgstr ""
 "Exit-Code, der bedeutet, dass ein Protokollaustausch unzulässig, ungültig "
 "oder nicht verstanden war."
 
-#: ../../library/os.rst:5088
+#: ../../library/os.rst:5074
 msgid ""
 "Exit code that means that there were insufficient permissions to perform the "
 "operation (but not intended for file system problems)."
@@ -7508,17 +7492,17 @@ msgstr ""
 "Exit-Code, der bedeutet, dass die Berechtigungen für die Operation nicht "
 "ausreichten (aber nicht für Probleme mit dem Dateisystem gedacht)."
 
-#: ../../library/os.rst:5096
+#: ../../library/os.rst:5082
 msgid "Exit code that means that some kind of configuration error occurred."
 msgstr ""
 "Exit-Code, der bedeutet, dass irgendeine Art von Konfigurationsfehler "
 "aufgetreten ist."
 
-#: ../../library/os.rst:5103
+#: ../../library/os.rst:5089
 msgid "Exit code that means something like \"an entry was not found\"."
 msgstr "Exit-Code, der etwa „ein Eintrag wurde nicht gefunden“ bedeutet."
 
-#: ../../library/os.rst:5110
+#: ../../library/os.rst:5096
 msgid ""
 "Fork a child process.  Return ``0`` in the child and the child's process id "
 "in the parent.  If an error occurs :exc:`OSError` is raised."
@@ -7527,7 +7511,7 @@ msgstr ""
 "Elternprozess die Prozess-ID des Kindes zurück. Tritt ein Fehler auf, "
 "wird :exc:`OSError` ausgelöst."
 
-#: ../../library/os.rst:5113
+#: ../../library/os.rst:5099
 msgid ""
 "Note that some platforms including FreeBSD <= 6.3 and Cygwin have known "
 "issues when using ``fork()`` from a thread."
@@ -7536,13 +7520,13 @@ msgstr ""
 "bekannte Probleme haben, wenn ``fork()`` aus einem Thread heraus verwendet "
 "wird."
 
-#: ../../library/os.rst:5116
+#: ../../library/os.rst:5102
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.fork`` with no arguments."
 msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.fork`` ohne Argumente aus."
 
-#: ../../library/os.rst:5120
+#: ../../library/os.rst:5106
 msgid ""
 "If you use TLS sockets in an application calling ``fork()``, see the warning "
 "in the :mod:`ssl` documentation."
@@ -7550,7 +7534,7 @@ msgstr ""
 "Wenn du TLS-Sockets in einer Anwendung verwendest, die ``fork()`` aufruft, "
 "beachte die Warnung in der Dokumentation zu :mod:`ssl`."
 
-#: ../../library/os.rst:5125 ../../library/os.rst:5171
+#: ../../library/os.rst:5111 ../../library/os.rst:5157
 msgid ""
 "On macOS the use of this function is unsafe when mixed with using higher-"
 "level system APIs, and that includes using :mod:`urllib.request`."
@@ -7559,7 +7543,7 @@ msgstr ""
 "Systemschnittstellen höherer Ebene gemischt wird, wozu auch die Verwendung "
 "von :mod:`urllib.request` gehört."
 
-#: ../../library/os.rst:5128
+#: ../../library/os.rst:5114
 msgid ""
 "Calling ``fork()`` in a subinterpreter is no longer supported "
 "(:exc:`RuntimeError` is raised)."
@@ -7567,7 +7551,7 @@ msgstr ""
 "Der Aufruf von ``fork()`` in einem Subinterpreter wird nicht mehr "
 "unterstützt (es wird :exc:`RuntimeError` ausgelöst)."
 
-#: ../../library/os.rst:5132
+#: ../../library/os.rst:5118
 msgid ""
 "If Python is able to detect that your process has multiple "
 "threads, :func:`os.fork` now raises a :exc:`DeprecationWarning`."
@@ -7575,7 +7559,7 @@ msgstr ""
 "Kann Python erkennen, dass dein Prozess mehrere Threads hat, "
 "löst :func:`os.fork` nun eine :exc:`DeprecationWarning` aus."
 
-#: ../../library/os.rst:5136
+#: ../../library/os.rst:5122
 msgid ""
 "We chose to surface this as a warning, when detectable, to better inform "
 "developers of a design problem that the POSIX platform specifically notes as "
@@ -7594,7 +7578,7 @@ msgstr ""
 "sicher sind, wenn im Elternprozess Threads existierten (etwa ``malloc`` und "
 "``free``)."
 
-#: ../../library/os.rst:5145
+#: ../../library/os.rst:5131
 msgid ""
 "Users of macOS or users of libc or malloc implementations other than those "
 "typically found in glibc to date are among those already more likely to "
@@ -7604,7 +7588,7 @@ msgstr ""
 "von den bisher in glibc üblichen unterscheiden, gehören zu denen, bei denen "
 "solcher Code schon jetzt eher zu Deadlocks führt."
 
-#: ../../library/os.rst:5149
+#: ../../library/os.rst:5135
 msgid ""
 "See `this discussion on fork being incompatible with threads <https://"
 "discuss.python.org/t/33555>`_ for technical details of why we're surfacing "
@@ -7615,7 +7599,7 @@ msgstr ""
 "Diskussion über die Unverträglichkeit von fork mit Threads <https://"
 "discuss.python.org/t/33555>`_."
 
-#: ../../library/os.rst:5159
+#: ../../library/os.rst:5145
 msgid ""
 "Fork a child process, using a new pseudo-terminal as the child's controlling "
 "terminal. Return a pair of ``(pid, fd)``, where *pid* is ``0`` in the child, "
@@ -7630,21 +7614,21 @@ msgstr ""
 "Endes des Pseudoterminals. Für einen portableren Ansatz verwende das "
 "Modul :mod:`pty`. Tritt ein Fehler auf, wird :exc:`OSError` ausgelöst."
 
-#: ../../library/os.rst:5165
+#: ../../library/os.rst:5151
 msgid ""
 "The returned file descriptor *fd* is :ref:`non-inheritable <fd_inheritance>`."
 msgstr ""
 "Der zurückgegebene Dateideskriptor *fd* ist :ref:`nicht vererbbar "
 "<fd_inheritance>`."
 
-#: ../../library/os.rst:5167
+#: ../../library/os.rst:5153
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.forkpty`` with no arguments."
 msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.forkpty`` ohne Argumente "
 "aus."
 
-#: ../../library/os.rst:5174
+#: ../../library/os.rst:5160
 msgid ""
 "Calling ``forkpty()`` in a subinterpreter is no longer supported "
 "(:exc:`RuntimeError` is raised)."
@@ -7652,7 +7636,7 @@ msgstr ""
 "Der Aufruf von ``forkpty()`` in einem Subinterpreter wird nicht mehr "
 "unterstützt (es wird :exc:`RuntimeError` ausgelöst)."
 
-#: ../../library/os.rst:5178
+#: ../../library/os.rst:5164
 msgid ""
 "If Python is able to detect that your process has multiple threads, this now "
 "raises a :exc:`DeprecationWarning`. See the longer explanation "
@@ -7662,11 +7646,11 @@ msgstr ""
 "eine :exc:`DeprecationWarning` aus. Siehe die ausführlichere Erklärung "
 "bei :func:`os.fork`."
 
-#: ../../library/os.rst:5183
+#: ../../library/os.rst:5169
 msgid "The returned file descriptor is now made non-inheritable."
 msgstr "Der zurückgegebene Dateideskriptor ist nun nicht vererbbar."
 
-#: ../../library/os.rst:5195
+#: ../../library/os.rst:5181
 msgid ""
 "Send signal *sig* to the process *pid*.  Constants for the specific signals "
 "available on the host platform are defined in the :mod:`signal` module."
@@ -7674,7 +7658,7 @@ msgstr ""
 "Sendet das Signal *sig* an den Prozess *pid*. Konstanten für die auf der "
 "Host-Plattform verfügbaren Signale sind im Modul :mod:`signal` definiert."
 
-#: ../../library/os.rst:5198
+#: ../../library/os.rst:5184
 msgid ""
 "Windows: The :const:`signal.CTRL_C_EVENT` "
 "and :const:`signal.CTRL_BREAK_EVENT` signals are special signals which can "
@@ -7690,11 +7674,11 @@ msgstr ""
 "*sig* führt dazu, dass der Prozess über die API TerminateProcess "
 "bedingungslos beendet wird und der Exit-Code auf *sig* gesetzt wird."
 
-#: ../../library/os.rst:5205
+#: ../../library/os.rst:5191
 msgid "See also :func:`signal.pthread_kill`."
 msgstr "Siehe auch :func:`signal.pthread_kill`."
 
-#: ../../library/os.rst:5207
+#: ../../library/os.rst:5193
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.kill`` with arguments "
 "``pid``, ``sig``."
@@ -7702,11 +7686,11 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.kill`` mit den Argumenten "
 "``pid`` und ``sig`` aus."
 
-#: ../../library/os.rst:5221
+#: ../../library/os.rst:5207
 msgid "Send the signal *sig* to the process group *pgid*."
 msgstr "Sendet das Signal *sig* an die Prozessgruppe *pgid*."
 
-#: ../../library/os.rst:5223
+#: ../../library/os.rst:5209
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.killpg`` with arguments "
 "``pgid``, ``sig``."
@@ -7714,14 +7698,14 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.killpg`` mit den "
 "Argumenten ``pgid`` und ``sig`` aus."
 
-#: ../../library/os.rst:5230
+#: ../../library/os.rst:5216
 msgid ""
 "Add *increment* to the process's \"niceness\".  Return the new niceness."
 msgstr ""
 "Addiert *increment* zur „Niceness“ des Prozesses. Gibt die neue Niceness "
 "zurück."
 
-#: ../../library/os.rst:5237
+#: ../../library/os.rst:5223
 msgid ""
 "Return a file descriptor referring to the process *pid* with *flags* set. "
 "This descriptor can be used to perform process management without races and "
@@ -7731,11 +7715,11 @@ msgstr ""
 "gesetzten *flags*. Mit diesem Deskriptor lässt sich die Prozessverwaltung "
 "ohne Wettlaufsituationen und Signale durchführen."
 
-#: ../../library/os.rst:5241
+#: ../../library/os.rst:5227
 msgid "See the :manpage:`pidfd_open(2)` man page for more details."
 msgstr "Weitere Details siehe die Manpage :manpage:`pidfd_open(2)`."
 
-#: ../../library/os.rst:5248
+#: ../../library/os.rst:5234
 msgid ""
 "This flag indicates that the file descriptor will be non-blocking. If the "
 "process referred to by the file descriptor has not yet terminated, then an "
@@ -7747,7 +7731,7 @@ msgstr ""
 "gibt der Versuch, mit :manpage:`waitid(2)` auf den Dateideskriptor zu "
 "warten, sofort den Fehler :const:`~errno.EAGAIN` zurück, statt zu blockieren."
 
-#: ../../library/os.rst:5259
+#: ../../library/os.rst:5245
 msgid ""
 "Lock program segments into memory.  The value of *op* (defined in ``<sys/"
 "lock.h>``) determines which segments are locked."
@@ -7755,7 +7739,7 @@ msgstr ""
 "Sperrt Programmsegmente im Speicher. Der Wert von *op* (definiert in ``<sys/"
 "lock.h>``) bestimmt, welche Segmente gesperrt werden."
 
-#: ../../library/os.rst:5267
+#: ../../library/os.rst:5253
 msgid ""
 "Open a pipe to or from command *cmd*. The return value is an open file "
 "object connected to the pipe, which can be read or written depending on "
@@ -7771,7 +7755,7 @@ msgstr ""
 "entsprechende Argument der eingebauten Funktion :func:`open`. Das "
 "zurückgegebene Dateiobjekt liest oder schreibt Text-Strings statt Bytes."
 
-#: ../../library/os.rst:5275
+#: ../../library/os.rst:5261
 msgid ""
 "The ``close`` method returns :const:`None` if the subprocess exited "
 "successfully, or the subprocess's return code if there was an error. On "
@@ -7792,7 +7776,7 @@ msgstr ""
 "Windows-Systemen enthält der Rückgabewert den vorzeichenbehafteten "
 "ganzzahligen Rückgabecode des Kindprozesses."
 
-#: ../../library/os.rst:5285
+#: ../../library/os.rst:5271
 msgid ""
 "On Unix, :func:`waitstatus_to_exitcode` can be used to convert the ``close`` "
 "method result (exit status) into an exit code if it is not ``None``. On "
@@ -7803,7 +7787,7 @@ msgstr ""
 "nicht ``None`` ist. Unter Windows ist das Ergebnis der Methode ``close`` "
 "direkt der Exit-Code (oder ``None``)."
 
-#: ../../library/os.rst:5290
+#: ../../library/os.rst:5276
 msgid ""
 "This is implemented using :class:`subprocess.Popen`; see that class's "
 "documentation for more powerful ways to manage and communicate with "
@@ -7813,7 +7797,7 @@ msgstr ""
 "Möglichkeiten, Unterprozesse zu verwalten und mit ihnen zu kommunizieren, "
 "findest du in der Dokumentation dieser Klasse."
 
-#: ../../library/os.rst:5297
+#: ../../library/os.rst:5283
 msgid ""
 "The :ref:`Python UTF-8 Mode <utf8-mode>` affects encodings used for *cmd* "
 "and pipe contents."
@@ -7821,7 +7805,7 @@ msgstr ""
 "Der :ref:`Python-UTF-8-Modus <utf8-mode>` beeinflusst die für *cmd* und den "
 "Inhalt der Pipe verwendeten Kodierungen."
 
-#: ../../library/os.rst:5300
+#: ../../library/os.rst:5286
 msgid ""
 ":func:`popen` is a simple wrapper around :class:`subprocess.Popen`. "
 "Use :class:`subprocess.Popen` or :func:`subprocess.run` to control options "
@@ -7831,24 +7815,24 @@ msgstr ""
 "Verwende :class:`subprocess.Popen` oder :func:`subprocess.run`, um Optionen "
 "wie Kodierungen zu steuern."
 
-#: ../../library/os.rst:5304 ../../library/os.rst:5533
+#: ../../library/os.rst:5290 ../../library/os.rst:5519
 msgid "The :mod:`subprocess` module is recommended instead."
 msgstr "Stattdessen wird das Modul :mod:`subprocess` empfohlen."
 
-#: ../../library/os.rst:5312
+#: ../../library/os.rst:5298
 msgid "Wraps the :c:func:`!posix_spawn` C library API for use from Python."
 msgstr ""
 "Verpackt die C-Bibliotheks-API :c:func:`!posix_spawn` zur Verwendung aus "
 "Python."
 
-#: ../../library/os.rst:5314
+#: ../../library/os.rst:5300
 msgid ""
 "Most users should use :func:`subprocess.run` instead of :func:`posix_spawn`."
 msgstr ""
 "Die meisten Benutzer sollten :func:`subprocess.run` "
 "statt :func:`posix_spawn` verwenden."
 
-#: ../../library/os.rst:5316
+#: ../../library/os.rst:5302
 msgid ""
 "The positional-only arguments *path*, *args*, and *env* are similar "
 "to :func:`execve`. *env* is allowed to be ``None``, in which case current "
@@ -7858,7 +7842,7 @@ msgstr ""
 "von :func:`execve`. *env* darf ``None`` sein. Dann wird die Umgebung des "
 "aktuellen Prozesses verwendet."
 
-#: ../../library/os.rst:5320
+#: ../../library/os.rst:5306
 msgid ""
 "The *path* parameter is the path to the executable file.  The *path* should "
 "contain a directory.  Use :func:`posix_spawnp` to pass an executable file "
@@ -7868,7 +7852,7 @@ msgstr ""
 "Verzeichnis enthalten. Verwende :func:`posix_spawnp`, um eine ausführbare "
 "Datei ohne Verzeichnis zu übergeben."
 
-#: ../../library/os.rst:5324
+#: ../../library/os.rst:5310
 msgid ""
 "The *file_actions* argument may be a sequence of tuples describing actions "
 "to take on specific file descriptors in the child process between the C "
@@ -7883,39 +7867,39 @@ msgstr ""
 "einer der drei unten aufgeführten Typkennzeichner sein, die die übrigen "
 "Tupelelemente beschreiben:"
 
-#: ../../library/os.rst:5332
+#: ../../library/os.rst:5318
 msgid "(``os.POSIX_SPAWN_OPEN``, *fd*, *path*, *flags*, *mode*)"
 msgstr "(``os.POSIX_SPAWN_OPEN``, *fd*, *path*, *flags*, *mode*)"
 
-#: ../../library/os.rst:5334
+#: ../../library/os.rst:5320
 msgid "Performs ``os.dup2(os.open(path, flags, mode), fd)``."
 msgstr "Führt ``os.dup2(os.open(path, flags, mode), fd)`` aus."
 
-#: ../../library/os.rst:5338
+#: ../../library/os.rst:5324
 msgid "(``os.POSIX_SPAWN_CLOSE``, *fd*)"
 msgstr "(``os.POSIX_SPAWN_CLOSE``, *fd*)"
 
-#: ../../library/os.rst:5340
+#: ../../library/os.rst:5326
 msgid "Performs ``os.close(fd)``."
 msgstr "Führt ``os.close(fd)`` aus."
 
-#: ../../library/os.rst:5344
+#: ../../library/os.rst:5330
 msgid "(``os.POSIX_SPAWN_DUP2``, *fd*, *new_fd*)"
 msgstr "(``os.POSIX_SPAWN_DUP2``, *fd*, *new_fd*)"
 
-#: ../../library/os.rst:5346
+#: ../../library/os.rst:5332
 msgid "Performs ``os.dup2(fd, new_fd)``."
 msgstr "Führt ``os.dup2(fd, new_fd)`` aus."
 
-#: ../../library/os.rst:5350
+#: ../../library/os.rst:5336
 msgid "(``os.POSIX_SPAWN_CLOSEFROM``, *fd*)"
 msgstr "(``os.POSIX_SPAWN_CLOSEFROM``, *fd*)"
 
-#: ../../library/os.rst:5352
+#: ../../library/os.rst:5338
 msgid "Performs ``os.closerange(fd, INF)``."
 msgstr "Führt ``os.closerange(fd, INF)`` aus."
 
-#: ../../library/os.rst:5354
+#: ../../library/os.rst:5340
 msgid ""
 "These tuples correspond to the C library :c:func:`!"
 "posix_spawn_file_actions_addopen`, :c:func:`!"
@@ -7931,7 +7915,7 @@ msgstr ""
 "posix_spawn_file_actions_addclosefrom_np`, mit denen der eigentliche Aufruf "
 "von :c:func:`!posix_spawn` vorbereitet wird."
 
-#: ../../library/os.rst:5361
+#: ../../library/os.rst:5347
 msgid ""
 "The *setpgroup* argument will set the process group of the child to the "
 "value specified. If the value specified is 0, the child's process group ID "
@@ -7945,7 +7929,7 @@ msgstr ""
 "Kind die Prozessgruppen-ID des Elternprozesses. Dieses Argument entspricht "
 "dem Flag :c:macro:`!POSIX_SPAWN_SETPGROUP` der C-Bibliothek."
 
-#: ../../library/os.rst:5367
+#: ../../library/os.rst:5353
 msgid ""
 "If the *resetids* argument is ``True`` it will reset the effective UID and "
 "GID of the child to the real UID and GID of the parent process. If the "
@@ -7963,7 +7947,7 @@ msgstr ""
 "Einstellung der effektiven UID und GID. Dieses Argument entspricht dem "
 "Flag :c:macro:`!POSIX_SPAWN_RESETIDS` der C-Bibliothek."
 
-#: ../../library/os.rst:5375
+#: ../../library/os.rst:5361
 msgid ""
 "If the *setsid* argument is ``True``, it will create a new session ID for "
 "``posix_spawn``. *setsid* requires :c:macro:`!POSIX_SPAWN_SETSID` "
@@ -7975,7 +7959,7 @@ msgstr ""
 "POSIX_SPAWN_SETSID` oder :c:macro:`!POSIX_SPAWN_SETSID_NP`. Andernfalls "
 "wird :exc:`NotImplementedError` ausgelöst."
 
-#: ../../library/os.rst:5380
+#: ../../library/os.rst:5366
 msgid ""
 "The *setsigmask* argument will set the signal mask to the signal set "
 "specified. If the parameter is not used, then the child inherits the "
@@ -7987,7 +7971,7 @@ msgstr ""
 "Signalmaske des Elternprozesses. Dieses Argument entspricht dem "
 "Flag :c:macro:`!POSIX_SPAWN_SETSIGMASK` der C-Bibliothek."
 
-#: ../../library/os.rst:5385
+#: ../../library/os.rst:5371
 msgid ""
 "The *setsigdef* argument will reset the disposition of all signals in the "
 "set specified. This argument corresponds to the C library :c:macro:`!"
@@ -7997,7 +7981,7 @@ msgstr ""
 "angegebenen Menge zurück. Dieses Argument entspricht dem Flag :c:macro:`!"
 "POSIX_SPAWN_SETSIGDEF` der C-Bibliothek."
 
-#: ../../library/os.rst:5389
+#: ../../library/os.rst:5375
 msgid ""
 "The *scheduler* argument must be a tuple containing the (optional) scheduler "
 "policy and an instance of :class:`sched_param` with the scheduler "
@@ -8013,7 +7997,7 @@ msgstr ""
 "der Flags :c:macro:`!POSIX_SPAWN_SETSCHEDPARAM` und :c:macro:`!"
 "POSIX_SPAWN_SETSCHEDULER` der C-Bibliothek."
 
-#: ../../library/os.rst:5396 ../../library/os.rst:5417
+#: ../../library/os.rst:5382 ../../library/os.rst:5403
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.posix_spawn`` with arguments "
 "``path``, ``argv``, ``env``."
@@ -8021,7 +8005,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.posix_spawn`` mit den "
 "Argumenten ``path``, ``argv`` und ``env`` aus."
 
-#: ../../library/os.rst:5400
+#: ../../library/os.rst:5386
 msgid ""
 "*env* parameter accepts ``None``. ``os.POSIX_SPAWN_CLOSEFROM`` is available "
 "on platforms where :c:func:`!posix_spawn_file_actions_addclosefrom_np` "
@@ -8031,13 +8015,13 @@ msgstr ""
 "auf Plattformen verfügbar, auf denen :c:func:`!"
 "posix_spawn_file_actions_addclosefrom_np` existiert."
 
-#: ../../library/os.rst:5411
+#: ../../library/os.rst:5397
 msgid "Wraps the :c:func:`!posix_spawnp` C library API for use from Python."
 msgstr ""
 "Verpackt die C-Bibliotheks-API :c:func:`!posix_spawnp` zur Verwendung aus "
 "Python."
 
-#: ../../library/os.rst:5413
+#: ../../library/os.rst:5399
 msgid ""
 "Similar to :func:`posix_spawn` except that the system searches for the "
 "*executable* file in the list of directories specified by the :envvar:`PATH` "
@@ -8048,11 +8032,11 @@ msgstr ""
 "Umgebungsvariable :envvar:`PATH` angibt (auf dieselbe Weise wie bei "
 "``execvp(3)``)."
 
-#: ../../library/os.rst:5423
+#: ../../library/os.rst:5409
 msgid "See :func:`posix_spawn` documentation."
 msgstr "Siehe die Dokumentation zu :func:`posix_spawn`."
 
-#: ../../library/os.rst:5429
+#: ../../library/os.rst:5415
 msgid ""
 "Register callables to be executed when a new child process is forked "
 "using :func:`os.fork` or similar process cloning APIs. The parameters are "
@@ -8063,13 +8047,13 @@ msgstr ""
 "Kindprozess erzeugt wird. Die Parameter sind optional und reine "
 "Schlüsselwortparameter. Jeder gibt einen anderen Aufrufzeitpunkt an."
 
-#: ../../library/os.rst:5434
+#: ../../library/os.rst:5420
 msgid "*before* is a function called before forking a child process."
 msgstr ""
 "*before* ist eine Funktion, die vor dem Erzeugen eines Kindprozesses "
 "aufgerufen wird."
 
-#: ../../library/os.rst:5435
+#: ../../library/os.rst:5421
 msgid ""
 "*after_in_parent* is a function called from the parent process after forking "
 "a child process."
@@ -8077,12 +8061,12 @@ msgstr ""
 "*after_in_parent* ist eine Funktion, die nach dem Erzeugen eines "
 "Kindprozesses aus dem Elternprozess aufgerufen wird."
 
-#: ../../library/os.rst:5437
+#: ../../library/os.rst:5423
 msgid "*after_in_child* is a function called from the child process."
 msgstr ""
 "*after_in_child* ist eine Funktion, die aus dem Kindprozess aufgerufen wird."
 
-#: ../../library/os.rst:5439
+#: ../../library/os.rst:5425
 msgid ""
 "These calls are only made if control is expected to return to the Python "
 "interpreter.  A typical :mod:`subprocess` launch will not trigger them as "
@@ -8092,7 +8076,7 @@ msgstr ""
 "Python-Interpreter zurückkehrt. Ein typischer Start mit :mod:`subprocess` "
 "löst sie nicht aus, da das Kind den Interpreter nicht erneut betritt."
 
-#: ../../library/os.rst:5443
+#: ../../library/os.rst:5429
 msgid ""
 "Functions registered for execution before forking are called in reverse "
 "registration order.  Functions registered for execution after forking "
@@ -8103,7 +8087,7 @@ msgstr ""
 "dem fork registrierte Funktionen (im Eltern- oder Kindprozess) werden in "
 "Registrierungsreihenfolge aufgerufen."
 
-#: ../../library/os.rst:5448
+#: ../../library/os.rst:5434
 msgid ""
 "Note that :c:func:`fork` calls made by third-party C code may not call those "
 "functions, unless it explicitly "
@@ -8115,15 +8099,15 @@ msgstr ""
 "ausdrücklich :c:func:`PyOS_BeforeFork`, :c:func:`PyOS_AfterFork_Parent` "
 "und :c:func:`PyOS_AfterFork_Child` aufruft."
 
-#: ../../library/os.rst:5452
+#: ../../library/os.rst:5438
 msgid "There is no way to unregister a function."
 msgstr "Es gibt keine Möglichkeit, eine Funktion wieder abzumelden."
 
-#: ../../library/os.rst:5468
+#: ../../library/os.rst:5454
 msgid "Execute the program *file* in a new process."
 msgstr "Führt das Programm *file* in einem neuen Prozess aus."
 
-#: ../../library/os.rst:5470
+#: ../../library/os.rst:5456
 msgid ""
 "(Note that the :mod:`subprocess` module provides more powerful facilities "
 "for spawning new processes and retrieving their results; using that module "
@@ -8135,7 +8119,7 @@ msgstr ""
 "Verwendung dieses Moduls ist diesen Funktionen vorzuziehen. Sieh dir "
 "besonders den Abschnitt :ref:`subprocess-replacements` an.)"
 
-#: ../../library/os.rst:5475
+#: ../../library/os.rst:5461
 msgid ""
 "If *mode* is :const:`P_NOWAIT`, this function returns the process id of the "
 "new process; if *mode* is :const:`P_WAIT`, returns the process's exit code "
@@ -8150,7 +8134,7 @@ msgstr ""
 "Prozess-ID tatsächlich das Prozess-Handle und kann daher mit der "
 "Funktion :func:`waitpid` verwendet werden."
 
-#: ../../library/os.rst:5481
+#: ../../library/os.rst:5467
 msgid ""
 "Note on VxWorks, this function doesn't return ``-signal`` when the new "
 "process is killed. Instead it raises OSError exception."
@@ -8159,7 +8143,7 @@ msgstr ""
 "wenn der neue Prozess abgeschossen wird. Stattdessen löst sie eine OSError-"
 "Ausnahme aus."
 
-#: ../../library/os.rst:5484
+#: ../../library/os.rst:5470
 msgid ""
 "The \"l\" and \"v\" variants of the :func:`spawn\\* <spawnl>` functions "
 "differ in how command-line arguments are passed.  The \"l\" variants are "
@@ -8180,7 +8164,7 @@ msgstr ""
 "übergeben. In beiden Fällen müssen die Argumente für den Kindprozess mit dem "
 "Namen des ausgeführten Befehls beginnen."
 
-#: ../../library/os.rst:5493
+#: ../../library/os.rst:5479
 msgid ""
 "The variants which include a second \"p\" near the end "
 "(:func:`spawnlp`, :func:`spawnlpe`, :func:`spawnvp`, and :func:`spawnvpe`) "
@@ -8203,7 +8187,7 @@ msgstr ""
 "ausführbare Datei zu finden; *file* muss einen passenden absoluten oder "
 "relativen Pfad enthalten."
 
-#: ../../library/os.rst:5503
+#: ../../library/os.rst:5489
 msgid ""
 "For :func:`spawnle`, :func:`spawnlpe`, :func:`spawnve`, and :func:`spawnvpe` "
 "(note that these all end in \"e\"), the *env* parameter must be a mapping "
@@ -8225,7 +8209,7 @@ msgstr ""
 "sein müssen. Ungültige Schlüssel oder Werte lassen die Funktion mit dem "
 "Rückgabewert ``127`` fehlschlagen."
 
-#: ../../library/os.rst:5512
+#: ../../library/os.rst:5498
 msgid ""
 "As an example, the following calls to :func:`spawnlp` and :func:`spawnvpe` "
 "are equivalent::"
@@ -8233,7 +8217,7 @@ msgstr ""
 "Zum Beispiel sind die folgenden Aufrufe von :func:`spawnlp` "
 "und :func:`spawnvpe` gleichwertig::"
 
-#: ../../library/os.rst:5515
+#: ../../library/os.rst:5501
 msgid ""
 "import os\n"
 "os.spawnlp(os.P_WAIT, 'cp', 'cp', 'index.html', '/dev/null')\n"
@@ -8247,7 +8231,7 @@ msgstr ""
 "L = ['cp', 'index.html', '/dev/null']\n"
 "os.spawnvpe(os.P_WAIT, 'cp', L, os.environ)"
 
-#: ../../library/os.rst:5521
+#: ../../library/os.rst:5507
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.spawn`` with arguments "
 "``mode``, ``file``, ``args``, ``env``."
@@ -8255,7 +8239,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.spawn`` mit den Argumenten "
 "``mode``, ``file``, ``args`` und ``env`` aus."
 
-#: ../../library/os.rst:5525
+#: ../../library/os.rst:5511
 msgid ""
 ":func:`spawnlp`, :func:`spawnlpe`, :func:`spawnvp` and :func:`spawnvpe` are "
 "not available on Windows.  :func:`spawnle` and :func:`spawnve` are not "
@@ -8267,7 +8251,7 @@ msgstr ""
 "unter Windows nicht threadsicher. Wir empfehlen, stattdessen das "
 "Modul :mod:`subprocess` zu verwenden."
 
-#: ../../library/os.rst:5540
+#: ../../library/os.rst:5526
 msgid ""
 "Possible values for the *mode* parameter to the :func:`spawn\\* <spawnl>` "
 "family of functions.  If either of these values is given, "
@@ -8279,7 +8263,7 @@ msgstr ""
 "Funktionen :func:`spawn\\* <spawnl>` zurück, sobald der neue Prozess erzeugt "
 "wurde, mit der Prozess-ID als Rückgabewert."
 
-#: ../../library/os.rst:5550
+#: ../../library/os.rst:5536
 msgid ""
 "Possible value for the *mode* parameter to the :func:`spawn\\* <spawnl>` "
 "family of functions.  If this is given as *mode*, the :func:`spawn\\* "
@@ -8293,7 +8277,7 @@ msgstr ""
 "vollständig gelaufen ist, und geben bei erfolgreichem Lauf den Exit-Code des "
 "Prozesses zurück oder ``-signal``, wenn ein Signal den Prozess beendet."
 
-#: ../../library/os.rst:5562
+#: ../../library/os.rst:5548
 msgid ""
 "Possible values for the *mode* parameter to the :func:`spawn\\* <spawnl>` "
 "family of functions.  These are less portable than those listed "
@@ -8309,11 +8293,11 @@ msgstr ""
 "Wird :const:`P_OVERLAY` verwendet, wird der aktuelle Prozess ersetzt; die "
 "Funktion :func:`spawn\\* <spawnl>` kehrt nicht zurück."
 
-#: ../../library/os.rst:5573
+#: ../../library/os.rst:5559
 msgid "Start a file with its associated application."
 msgstr "Startet eine Datei mit der ihr zugeordneten Anwendung."
 
-#: ../../library/os.rst:5575
+#: ../../library/os.rst:5561
 msgid ""
 "When *operation* is not specified, this acts like double-clicking the file "
 "in Windows Explorer, or giving the file name as an argument to "
@@ -8326,7 +8310,7 @@ msgstr ""
 "Datei wird mit der Anwendung geöffnet, der ihre Dateierweiterung zugeordnet "
 "ist (falls vorhanden)."
 
-#: ../../library/os.rst:5580
+#: ../../library/os.rst:5566
 msgid ""
 "When another *operation* is given, it must be a \"command verb\" that "
 "specifies what should be done with the file. Common verbs documented by "
@@ -8338,7 +8322,7 @@ msgstr ""
 "dokumentierte Verben sind ``'open'``, ``'print'`` und ``'edit'`` (für "
 "Dateien) sowie ``'explore'`` und ``'find'`` (für Verzeichnisse)."
 
-#: ../../library/os.rst:5585
+#: ../../library/os.rst:5571
 msgid ""
 "When launching an application, specify *arguments* to be passed as a single "
 "string. This argument may have no effect when using this function to launch "
@@ -8348,7 +8332,7 @@ msgstr ""
 "einzelnen String an. Dieses Argument hat möglicherweise keine Wirkung, wenn "
 "mit dieser Funktion ein Dokument gestartet wird."
 
-#: ../../library/os.rst:5589
+#: ../../library/os.rst:5575
 msgid ""
 "The default working directory is inherited, but may be overridden by the "
 "*cwd* argument. This should be an absolute path. A relative *path* will be "
@@ -8358,7 +8342,7 @@ msgstr ""
 "*cwd* überschrieben werden. Es sollte ein absoluter Pfad sein. Ein relativer "
 "*path* wird relativ zu diesem Argument aufgelöst."
 
-#: ../../library/os.rst:5593
+#: ../../library/os.rst:5579
 msgid ""
 "Use *show_cmd* to override the default window style. Whether this has any "
 "effect will depend on the application being launched. Values are integers as "
@@ -8368,7 +8352,7 @@ msgstr ""
 "eine Wirkung hat, hängt von der gestarteten Anwendung ab. Die Werte sind "
 "Ganzzahlen, wie sie die Win32-Funktion :c:func:`!ShellExecute` unterstützt."
 
-#: ../../library/os.rst:5597
+#: ../../library/os.rst:5583
 msgid ""
 ":func:`startfile` returns as soon as the associated application is launched. "
 "There is no option to wait for the application to close, and no way to "
@@ -8387,7 +8371,7 @@ msgstr ""
 "Funktion :func:`os.path.normpath`, um sicherzustellen, dass Pfade für Win32 "
 "richtig kodiert sind."
 
-#: ../../library/os.rst:5605
+#: ../../library/os.rst:5591
 msgid ""
 "To reduce interpreter startup overhead, the Win32 :c:func:`!ShellExecute` "
 "function is not resolved until this function is first called.  If the "
@@ -8398,7 +8382,7 @@ msgstr ""
 "aufgelöst. Kann die Funktion nicht aufgelöst werden, "
 "wird :exc:`NotImplementedError` ausgelöst."
 
-#: ../../library/os.rst:5609
+#: ../../library/os.rst:5595
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.startfile`` with arguments "
 "``path``, ``operation``."
@@ -8406,7 +8390,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.startfile`` mit den "
 "Argumenten ``path`` und ``operation`` aus."
 
-#: ../../library/os.rst:5611
+#: ../../library/os.rst:5597
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.startfile/2`` with arguments "
 "``path``, ``operation``, ``arguments``, ``cwd``, ``show_cmd``."
@@ -8415,7 +8399,7 @@ msgstr ""
 "Argumenten ``path``, ``operation``, ``arguments``, ``cwd`` und ``show_cmd`` "
 "aus."
 
-#: ../../library/os.rst:5615
+#: ../../library/os.rst:5601
 msgid ""
 "Added the *arguments*, *cwd* and *show_cmd* arguments, and the "
 "``os.startfile/2`` audit event."
@@ -8423,7 +8407,7 @@ msgstr ""
 "Die Argumente *arguments*, *cwd* und *show_cmd* sowie das Auditing-Ereignis "
 "``os.startfile/2`` hinzugefügt."
 
-#: ../../library/os.rst:5622
+#: ../../library/os.rst:5608
 msgid ""
 "Execute the command (a string) in a subshell.  This is implemented by "
 "calling the Standard C function :c:func:`system`, and has the same "
@@ -8441,7 +8425,7 @@ msgstr ""
 "gesendet. Der C-Standard legt die Bedeutung des Rückgabewerts der C-Funktion "
 "nicht fest, daher ist der Rückgabewert der Python-Funktion systemabhängig."
 
-#: ../../library/os.rst:5630
+#: ../../library/os.rst:5616
 msgid ""
 "On Unix, the return value is the exit status of the process encoded in the "
 "format specified for :func:`wait`."
@@ -8449,7 +8433,7 @@ msgstr ""
 "Unter Unix ist der Rückgabewert der Exit-Status des Prozesses, kodiert im "
 "für :func:`wait` angegebenen Format."
 
-#: ../../library/os.rst:5633
+#: ../../library/os.rst:5619
 msgid ""
 "On Windows, the return value is that returned by the system shell after "
 "running *command*.  The shell is given by the Windows environment "
@@ -8464,7 +8448,7 @@ msgstr ""
 "zurückgibt. Auf Systemen mit einer nicht nativen Shell sieh in der "
 "Dokumentation deiner Shell nach."
 
-#: ../../library/os.rst:5639
+#: ../../library/os.rst:5625
 msgid ""
 "The :mod:`subprocess` module provides more powerful facilities for spawning "
 "new processes and retrieving their results; using that module is recommended "
@@ -8477,7 +8461,7 @@ msgstr ""
 "findest du im Abschnitt :ref:`subprocess-replacements` der Dokumentation "
 "zu :mod:`subprocess`."
 
-#: ../../library/os.rst:5644
+#: ../../library/os.rst:5630
 msgid ""
 "On Unix, :func:`waitstatus_to_exitcode` can be used to convert the result "
 "(exit status) into an exit code. On Windows, the result is directly the exit "
@@ -8487,7 +8471,7 @@ msgstr ""
 "Status) in einen Exit-Code umwandeln. Unter Windows ist das Ergebnis direkt "
 "der Exit-Code."
 
-#: ../../library/os.rst:5648
+#: ../../library/os.rst:5634
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``os.system`` with argument "
 "``command``."
@@ -8495,7 +8479,7 @@ msgstr ""
 "Löst ein :ref:`Auditing-Ereignis <auditing>` ``os.system`` mit dem Argument "
 "``command`` aus."
 
-#: ../../library/os.rst:5655
+#: ../../library/os.rst:5641
 msgid ""
 "Returns the current global process times. The return value is an object with "
 "five attributes:"
@@ -8503,29 +8487,29 @@ msgstr ""
 "Gibt die aktuellen globalen Prozesszeiten zurück. Der Rückgabewert ist ein "
 "Objekt mit fünf Attributen:"
 
-#: ../../library/os.rst:5658
+#: ../../library/os.rst:5644
 msgid ":attr:`!user` - user time"
 msgstr ":attr:`!user` - Benutzerzeit"
 
-#: ../../library/os.rst:5659
+#: ../../library/os.rst:5645
 msgid ":attr:`!system` - system time"
 msgstr ":attr:`!system` - Systemzeit"
 
-#: ../../library/os.rst:5660
+#: ../../library/os.rst:5646
 msgid ":attr:`!children_user` - user time of all child processes"
 msgstr ":attr:`!children_user` - Benutzerzeit aller Kindprozesse"
 
-#: ../../library/os.rst:5661
+#: ../../library/os.rst:5647
 msgid ":attr:`!children_system` - system time of all child processes"
 msgstr ":attr:`!children_system` - Systemzeit aller Kindprozesse"
 
-#: ../../library/os.rst:5662
+#: ../../library/os.rst:5648
 msgid ":attr:`!elapsed` - elapsed real time since a fixed point in the past"
 msgstr ""
 ":attr:`!elapsed` - vergangene reale Zeit seit einem festen Zeitpunkt in der "
 "Vergangenheit"
 
-#: ../../library/os.rst:5664
+#: ../../library/os.rst:5650
 msgid ""
 "For backwards compatibility, this object also behaves like a five-tuple "
 "containing :attr:`!user`, :attr:`!system`, :attr:`!children_user`, :attr:`!"
@@ -8536,7 +8520,7 @@ msgstr ""
 "children_user`, :attr:`!children_system` und :attr:`!elapsed` in dieser "
 "Reihenfolge."
 
-#: ../../library/os.rst:5668
+#: ../../library/os.rst:5654
 msgid ""
 "See the Unix manual page :manpage:`times(2)` and `times(3) <https://"
 "man.freebsd.org/cgi/man.cgi?time(3)>`_ manual page on Unix or `the "
@@ -8552,7 +8536,7 @@ msgstr ""
 "Unter Windows sind nur :attr:`!user` und :attr:`!system` bekannt; die "
 "anderen Attribute sind null."
 
-#: ../../library/os.rst:5682
+#: ../../library/os.rst:5668
 msgid ""
 "Wait for completion of a child process, and return a tuple containing its "
 "pid and exit status indication: a 16-bit number, whose low byte is the "
@@ -8567,7 +8551,7 @@ msgstr ""
 "ist); das höchste Bit des niederwertigen Bytes ist gesetzt, wenn eine Core-"
 "Datei erzeugt wurde."
 
-#: ../../library/os.rst:5688
+#: ../../library/os.rst:5674
 msgid ""
 "If there are no children that could be waited for, :exc:`ChildProcessError` "
 "is raised."
@@ -8575,7 +8559,7 @@ msgstr ""
 "Gibt es keine Kinder, auf die gewartet werden könnte, "
 "wird :exc:`ChildProcessError` ausgelöst."
 
-#: ../../library/os.rst:5691 ../../library/os.rst:5766
+#: ../../library/os.rst:5677 ../../library/os.rst:5752
 msgid ""
 ":func:`waitstatus_to_exitcode` can be used to convert the exit status into "
 "an exit code."
@@ -8583,7 +8567,7 @@ msgstr ""
 "Mit :func:`waitstatus_to_exitcode` lässt sich der Exit-Status in einen Exit-"
 "Code umwandeln."
 
-#: ../../library/os.rst:5698
+#: ../../library/os.rst:5684
 msgid ""
 "The other :func:`!wait*` functions documented below can be used to wait for "
 "the completion of a specific child process and have more "
@@ -8594,11 +8578,11 @@ msgstr ""
 "Optionen. :func:`waitpid` ist die einzige, die auch unter Windows verfügbar "
 "ist."
 
-#: ../../library/os.rst:5705
+#: ../../library/os.rst:5691
 msgid "Wait for the completion of a child process."
 msgstr "Wartet auf das Ende eines Kindprozesses."
 
-#: ../../library/os.rst:5707
+#: ../../library/os.rst:5693
 msgid ""
 "*idtype* can be :data:`P_PID`, :data:`P_PGID`, :data:`P_ALL`, or (on "
 "Linux) :data:`P_PIDFD`. The interpretation of *id* depends on it; see their "
@@ -8608,7 +8592,7 @@ msgstr ""
 "Linux) :data:`P_PIDFD` sein. Davon hängt die Interpretation von *id* ab. "
 "Siehe die jeweiligen Beschreibungen."
 
-#: ../../library/os.rst:5710
+#: ../../library/os.rst:5696
 msgid ""
 "*options* is an OR combination of flags.  At least one "
 "of :data:`WEXITED`, :data:`WSTOPPED` or :data:`WCONTINUED` is "
@@ -8619,7 +8603,7 @@ msgstr ""
 "erforderlich; :data:`WNOHANG` und :data:`WNOWAIT` sind zusätzliche optionale "
 "Flags."
 
-#: ../../library/os.rst:5714
+#: ../../library/os.rst:5700
 msgid ""
 "The return value is an object representing the data contained in "
 "the :c:type:`siginfo_t` structure with the following attributes:"
@@ -8627,30 +8611,30 @@ msgstr ""
 "Der Rückgabewert ist ein Objekt, das die in der Struktur :c:type:`siginfo_t` "
 "enthaltenen Daten darstellt, mit folgenden Attributen:"
 
-#: ../../library/os.rst:5717
+#: ../../library/os.rst:5703
 msgid ":attr:`!si_pid` (process ID)"
 msgstr ":attr:`!si_pid` (Prozess-ID)"
 
-#: ../../library/os.rst:5718
+#: ../../library/os.rst:5704
 msgid ":attr:`!si_uid` (real user ID of the child)"
 msgstr ":attr:`!si_uid` (reale Benutzer-ID des Kindes)"
 
-#: ../../library/os.rst:5719
+#: ../../library/os.rst:5705
 msgid ":attr:`!si_signo` (always :const:`~signal.SIGCHLD`)"
 msgstr ":attr:`!si_signo` (immer :const:`~signal.SIGCHLD`)"
 
-#: ../../library/os.rst:5720
+#: ../../library/os.rst:5706
 msgid ""
 ":attr:`!si_status` (the exit status or signal number, depending on :attr:`!"
 "si_code`)"
 msgstr ""
 ":attr:`!si_status` (Exit-Status oder Signalnummer, je nach :attr:`!si_code`)"
 
-#: ../../library/os.rst:5721
+#: ../../library/os.rst:5707
 msgid ":attr:`!si_code` (see :data:`CLD_EXITED` for possible values)"
 msgstr ":attr:`!si_code` (mögliche Werte siehe :data:`CLD_EXITED`)"
 
-#: ../../library/os.rst:5723
+#: ../../library/os.rst:5709
 msgid ""
 "If :data:`WNOHANG` is specified and there are no matching children in the "
 "requested state, ``None`` is returned. Otherwise, if there are no matching "
@@ -8661,15 +8645,15 @@ msgstr ""
 "wird :exc:`ChildProcessError` ausgelöst, wenn es keine passenden Kinder "
 "gibt, auf die gewartet werden könnte."
 
-#: ../../library/os.rst:5732
+#: ../../library/os.rst:5718
 msgid "This function is now available on macOS as well."
 msgstr "Diese Funktion ist nun auch unter macOS verfügbar."
 
-#: ../../library/os.rst:5738
+#: ../../library/os.rst:5724
 msgid "The details of this function differ on Unix and Windows."
 msgstr "Die Details dieser Funktion unterscheiden sich unter Unix und Windows."
 
-#: ../../library/os.rst:5740
+#: ../../library/os.rst:5726
 msgid ""
 "On Unix: Wait for completion of a child process given by process id *pid*, "
 "and return a tuple containing its process id and exit status indication "
@@ -8683,7 +8667,7 @@ msgstr ""
 "hängt vom Wert der Ganzzahl *options* ab, die für den normalen Betrieb ``0`` "
 "sein sollte."
 
-#: ../../library/os.rst:5745
+#: ../../library/os.rst:5731
 msgid ""
 "If *pid* is greater than ``0``, :func:`waitpid` requests status information "
 "for that specific process.  If *pid* is ``0``, the request is for the status "
@@ -8699,7 +8683,7 @@ msgstr ""
 "Prozesses. Ist *pid* kleiner als ``-1``, wird der Status eines beliebigen "
 "Prozesses in der Prozessgruppe ``-pid`` (dem Betrag von *pid*) angefordert."
 
-#: ../../library/os.rst:5752
+#: ../../library/os.rst:5738
 msgid ""
 "*options* is an OR combination of flags.  If it contains :data:`WNOHANG` and "
 "there are no matching children in the requested state, ``(0, 0)`` is "
@@ -8713,7 +8697,7 @@ msgstr ""
 "keine passenden Kinder gibt, auf die gewartet werden könnte. Weitere "
 "verwendbare Optionen sind :data:`WUNTRACED` und :data:`WCONTINUED`."
 
-#: ../../library/os.rst:5758
+#: ../../library/os.rst:5744
 msgid ""
 "On Windows: Wait for completion of a process given by process handle *pid*, "
 "and return a tuple containing *pid*, and its exit status shifted left by 8 "
@@ -8734,7 +8718,7 @@ msgstr ""
 "auf einen Kindprozess. Die mit :const:`P_NOWAIT` aufgerufenen "
 "Funktionen :func:`spawn\\* <spawnl>` geben passende Prozess-Handles zurück."
 
-#: ../../library/os.rst:5779
+#: ../../library/os.rst:5765
 msgid ""
 "Similar to :func:`waitpid`, except no process id argument is given and a 3-"
 "element tuple containing the child's process id, exit status indication, and "
@@ -8749,7 +8733,7 @@ msgstr ""
 "Ressourcennutzung siehe :func:`resource.getrusage`. Das Argument *options* "
 "ist dasselbe wie bei :func:`waitpid` und :func:`wait4`."
 
-#: ../../library/os.rst:5786 ../../library/os.rst:5800
+#: ../../library/os.rst:5772 ../../library/os.rst:5786
 msgid ""
 ":func:`waitstatus_to_exitcode` can be used to convert the exit status into "
 "an exitcode."
@@ -8757,7 +8741,7 @@ msgstr ""
 "Mit :func:`waitstatus_to_exitcode` lässt sich der Exit-Status in einen Exit-"
 "Code umwandeln."
 
-#: ../../library/os.rst:5794
+#: ../../library/os.rst:5780
 msgid ""
 "Similar to :func:`waitpid`, except a 3-element tuple, containing the child's "
 "process id, exit status indication, and resource usage information is "
@@ -8771,7 +8755,7 @@ msgstr ""
 "Informationen zur Ressourcennutzung siehe :func:`resource.getrusage`. Die "
 "Argumente von :func:`wait4` sind dieselben wie bei :func:`waitpid`."
 
-#: ../../library/os.rst:5811
+#: ../../library/os.rst:5797
 msgid ""
 "These are the possible values for *idtype* in :func:`waitid`. They affect "
 "how *id* is interpreted:"
@@ -8779,21 +8763,21 @@ msgstr ""
 "Dies sind die möglichen Werte für *idtype* in :func:`waitid`. Sie "
 "beeinflussen, wie *id* interpretiert wird:"
 
-#: ../../library/os.rst:5814
+#: ../../library/os.rst:5800
 msgid ":data:`!P_PID` - wait for the child whose PID is *id*."
 msgstr ":data:`!P_PID` - wartet auf das Kind, dessen PID *id* ist."
 
-#: ../../library/os.rst:5815
+#: ../../library/os.rst:5801
 msgid ":data:`!P_PGID` - wait for any child whose progress group ID is *id*."
 msgstr ""
 ":data:`!P_PGID` - wartet auf ein beliebiges Kind, dessen Prozessgruppen-ID "
 "*id* ist."
 
-#: ../../library/os.rst:5816
+#: ../../library/os.rst:5802
 msgid ":data:`!P_ALL` - wait for any child; *id* is ignored."
 msgstr ":data:`!P_ALL` - wartet auf ein beliebiges Kind; *id* wird ignoriert."
 
-#: ../../library/os.rst:5817
+#: ../../library/os.rst:5803
 msgid ""
 ":data:`!P_PIDFD` - wait for the child identified by the file descriptor *id* "
 "(a process file descriptor created with :func:`pidfd_open`)."
@@ -8802,15 +8786,15 @@ msgstr ""
 "identifiziert wird (ein mit :func:`pidfd_open` erzeugter Prozess-"
 "Dateideskriptor)."
 
-#: ../../library/os.rst:5822
+#: ../../library/os.rst:5808
 msgid ":data:`!P_PIDFD` is only available on Linux >= 5.4."
 msgstr ":data:`!P_PIDFD` ist nur unter Linux >= 5.4 verfügbar."
 
-#: ../../library/os.rst:5825
+#: ../../library/os.rst:5811
 msgid "The :data:`!P_PIDFD` constant."
 msgstr "Die Konstante :data:`!P_PIDFD`."
 
-#: ../../library/os.rst:5831
+#: ../../library/os.rst:5817
 msgid ""
 "This *options* flag for :func:`waitpid`, :func:`wait3`, :func:`wait4`, "
 "and :func:`waitid` causes child processes to be reported if they have been "
@@ -8820,7 +8804,7 @@ msgstr ""
 "und :func:`waitid` bewirkt, dass Kindprozesse gemeldet werden, wenn sie seit "
 "ihrer letzten Meldung aus einem Job-Control-Stopp fortgesetzt wurden."
 
-#: ../../library/os.rst:5840
+#: ../../library/os.rst:5826
 msgid ""
 "This *options* flag for :func:`waitid` causes child processes that have "
 "terminated to be reported."
@@ -8828,7 +8812,7 @@ msgstr ""
 "Dieses *options*-Flag für :func:`waitid` bewirkt, dass beendete Kindprozesse "
 "gemeldet werden."
 
-#: ../../library/os.rst:5843
+#: ../../library/os.rst:5829
 msgid ""
 "The other ``wait*`` functions always report children that have terminated, "
 "so this option is not available for them."
@@ -8836,7 +8820,7 @@ msgstr ""
 "Die anderen Funktionen ``wait*`` melden beendete Kinder immer, daher ist "
 "diese Option für sie nicht verfügbar."
 
-#: ../../library/os.rst:5853
+#: ../../library/os.rst:5839
 msgid ""
 "This *options* flag for :func:`waitid` causes child processes that have been "
 "stopped by the delivery of a signal to be reported."
@@ -8844,11 +8828,11 @@ msgstr ""
 "Dieses *options*-Flag für :func:`waitid` bewirkt, dass Kindprozesse gemeldet "
 "werden, die durch die Zustellung eines Signals angehalten wurden."
 
-#: ../../library/os.rst:5856 ../../library/os.rst:5888
+#: ../../library/os.rst:5842 ../../library/os.rst:5874
 msgid "This option is not available for the other ``wait*`` functions."
 msgstr "Diese Option ist für die anderen Funktionen ``wait*`` nicht verfügbar."
 
-#: ../../library/os.rst:5865
+#: ../../library/os.rst:5851
 msgid ""
 "This *options* flag for :func:`waitpid`, :func:`wait3`, and :func:`wait4` "
 "causes child processes to also be reported if they have been stopped but "
@@ -8859,11 +8843,11 @@ msgstr ""
 "wurden, ihr aktueller Zustand aber seit dem Anhalten noch nicht gemeldet "
 "wurde."
 
-#: ../../library/os.rst:5869
+#: ../../library/os.rst:5855
 msgid "This option is not available for :func:`waitid`."
 msgstr "Diese Option ist für :func:`waitid` nicht verfügbar."
 
-#: ../../library/os.rst:5876
+#: ../../library/os.rst:5862
 msgid ""
 "This *options* flag causes :func:`waitpid`, :func:`wait3`, :func:`wait4`, "
 "and :func:`waitid` to return right away if no child process status is "
@@ -8873,7 +8857,7 @@ msgstr ""
 "dass :func:`waitpid`, :func:`wait3`, :func:`wait4` und :func:`waitid` sofort "
 "zurückkehren, wenn kein Status eines Kindprozesses sofort verfügbar ist."
 
-#: ../../library/os.rst:5885
+#: ../../library/os.rst:5871
 msgid ""
 "This *options* flag causes :func:`waitid` to leave the child in a waitable "
 "state, so that a later :func:`!wait*` call can be used to retrieve the child "
@@ -8883,7 +8867,7 @@ msgstr ""
 "belässt, auf den gewartet werden kann, sodass ein späterer Aufruf "
 "von :func:`!wait*` die Statusinformationen des Kindes erneut abrufen kann."
 
-#: ../../library/os.rst:5900
+#: ../../library/os.rst:5886
 msgid ""
 "These are the possible values for :attr:`!si_code` in the result returned "
 "by :func:`waitid`."
@@ -8891,19 +8875,19 @@ msgstr ""
 "Dies sind die möglichen Werte für :attr:`!si_code` im Ergebnis "
 "von :func:`waitid`."
 
-#: ../../library/os.rst:5907
+#: ../../library/os.rst:5893
 msgid "Added :data:`CLD_KILLED` and :data:`CLD_STOPPED` values."
 msgstr "Die Werte :data:`CLD_KILLED` und :data:`CLD_STOPPED` hinzugefügt."
 
-#: ../../library/os.rst:5913
+#: ../../library/os.rst:5899
 msgid "Convert a wait status to an exit code."
 msgstr "Wandelt einen Wartestatus in einen Exit-Code um."
 
-#: ../../library/os.rst:5915
+#: ../../library/os.rst:5901
 msgid "On Unix:"
 msgstr "Unter Unix:"
 
-#: ../../library/os.rst:5917
+#: ../../library/os.rst:5903
 msgid ""
 "If the process exited normally (if ``WIFEXITED(status)`` is true), return "
 "the process exit status (return ``WEXITSTATUS(status)``): result greater "
@@ -8913,7 +8897,7 @@ msgstr ""
 "wird der Exit-Status des Prozesses zurückgegeben (Rückgabe von "
 "``WEXITSTATUS(status)``): Ergebnis größer oder gleich 0."
 
-#: ../../library/os.rst:5920
+#: ../../library/os.rst:5906
 msgid ""
 "If the process was terminated by a signal (if ``WIFSIGNALED(status)`` is "
 "true), return ``-signum`` where *signum* is the number of the signal that "
@@ -8925,16 +8909,16 @@ msgstr ""
 "Signals ist, das den Prozess beendet hat (Rückgabe von ``-"
 "WTERMSIG(status)``): Ergebnis kleiner als 0."
 
-#: ../../library/os.rst:5924
+#: ../../library/os.rst:5910
 msgid "Otherwise, raise a :exc:`ValueError`."
 msgstr "Andernfalls wird ein :exc:`ValueError` ausgelöst."
 
-#: ../../library/os.rst:5926
+#: ../../library/os.rst:5912
 msgid "On Windows, return *status* shifted right by 8 bits."
 msgstr ""
 "Unter Windows wird *status* um 8 Bit nach rechts verschoben zurückgegeben."
 
-#: ../../library/os.rst:5928
+#: ../../library/os.rst:5914
 msgid ""
 "On Unix, if the process is being traced or if :func:`waitpid` was called "
 "with :data:`WUNTRACED` option, the caller must first check if "
@@ -8946,7 +8930,7 @@ msgstr ""
 "``WIFSTOPPED(status)`` wahr ist. Diese Funktion darf nicht aufgerufen "
 "werden, wenn ``WIFSTOPPED(status)`` wahr ist."
 
-#: ../../library/os.rst:5935
+#: ../../library/os.rst:5921
 msgid ""
 ":func:`WIFEXITED`, :func:`WEXITSTATUS`, :func:`WIFSIGNALED`, :func:`WTERMSIG`, :func:`WIFSTOPPED`, :func:`WSTOPSIG` "
 "functions."
@@ -8955,7 +8939,7 @@ msgstr ""
 "Funktionen :func:`WIFEXITED`, :func:`WEXITSTATUS`, :func:`WIFSIGNALED`, :func:`WTERMSIG`, :func:`WIFSTOPPED` "
 "und :func:`WSTOPSIG`."
 
-#: ../../library/os.rst:5943
+#: ../../library/os.rst:5929
 msgid ""
 "The following functions take a process status code as returned "
 "by :func:`system`, :func:`wait`, or :func:`waitpid` as a parameter.  They "
@@ -8965,7 +8949,7 @@ msgstr ""
 "entgegen, wie ihn :func:`system`, :func:`wait` oder :func:`waitpid` "
 "zurückgeben. Mit ihnen lässt sich ermitteln, wie ein Prozess beendet wurde."
 
-#: ../../library/os.rst:5949
+#: ../../library/os.rst:5935
 msgid ""
 "Return ``True`` if a core dump was generated for the process, otherwise "
 "return ``False``."
@@ -8973,13 +8957,13 @@ msgstr ""
 "Gibt ``True`` zurück, wenn für den Prozess ein Core-Dump erzeugt wurde, "
 "andernfalls ``False``."
 
-#: ../../library/os.rst:5952 ../../library/os.rst:6018
+#: ../../library/os.rst:5938 ../../library/os.rst:6004
 msgid "This function should be employed only if :func:`WIFSIGNALED` is true."
 msgstr ""
 "Diese Funktion sollte nur verwendet werden, wenn :func:`WIFSIGNALED` wahr "
 "ist."
 
-#: ../../library/os.rst:5959
+#: ../../library/os.rst:5945
 msgid ""
 "Return ``True`` if a stopped child has been resumed by delivery "
 "of :const:`~signal.SIGCONT` (if the process has been continued from a job "
@@ -8989,11 +8973,11 @@ msgstr ""
 "von :const:`~signal.SIGCONT` fortgesetzt wurde (wenn der Prozess aus einem "
 "Job-Control-Stopp fortgesetzt wurde), andernfalls ``False``."
 
-#: ../../library/os.rst:5963
+#: ../../library/os.rst:5949
 msgid "See :data:`WCONTINUED` option."
 msgstr "Siehe die Option :data:`WCONTINUED`."
 
-#: ../../library/os.rst:5970
+#: ../../library/os.rst:5956
 msgid ""
 "Return ``True`` if the process was stopped by delivery of a signal, "
 "otherwise return ``False``."
@@ -9001,7 +8985,7 @@ msgstr ""
 "Gibt ``True`` zurück, wenn der Prozess durch Zustellung eines Signals "
 "angehalten wurde, andernfalls ``False``."
 
-#: ../../library/os.rst:5973
+#: ../../library/os.rst:5959
 msgid ""
 ":func:`WIFSTOPPED` only returns ``True`` if the :func:`waitpid` call was "
 "done using :data:`WUNTRACED` option or when the process is being traced "
@@ -9011,7 +8995,7 @@ msgstr ""
 "von :func:`waitpid` mit der Option :data:`WUNTRACED` erfolgte oder der "
 "Prozess verfolgt wird (siehe :manpage:`ptrace(2)`)."
 
-#: ../../library/os.rst:5981
+#: ../../library/os.rst:5967
 msgid ""
 "Return ``True`` if the process was terminated by a signal, otherwise return "
 "``False``."
@@ -9019,7 +9003,7 @@ msgstr ""
 "Gibt ``True`` zurück, wenn der Prozess durch ein Signal beendet wurde, "
 "andernfalls ``False``."
 
-#: ../../library/os.rst:5989
+#: ../../library/os.rst:5975
 msgid ""
 "Return ``True`` if the process exited terminated normally, that is, by "
 "calling ``exit()`` or ``_exit()``, or by returning from ``main()``; "
@@ -9029,33 +9013,33 @@ msgstr ""
 "Aufruf von ``exit()`` oder ``_exit()`` oder durch Rückkehr aus ``main()``. "
 "Andernfalls ``False``."
 
-#: ../../library/os.rst:5998
+#: ../../library/os.rst:5984
 msgid "Return the process exit status."
 msgstr "Gibt den Exit-Status des Prozesses zurück."
 
-#: ../../library/os.rst:6000
+#: ../../library/os.rst:5986
 msgid "This function should be employed only if :func:`WIFEXITED` is true."
 msgstr ""
 "Diese Funktion sollte nur verwendet werden, wenn :func:`WIFEXITED` wahr ist."
 
-#: ../../library/os.rst:6007
+#: ../../library/os.rst:5993
 msgid "Return the signal which caused the process to stop."
 msgstr "Gibt das Signal zurück, das den Prozess angehalten hat."
 
-#: ../../library/os.rst:6009
+#: ../../library/os.rst:5995
 msgid "This function should be employed only if :func:`WIFSTOPPED` is true."
 msgstr ""
 "Diese Funktion sollte nur verwendet werden, wenn :func:`WIFSTOPPED` wahr ist."
 
-#: ../../library/os.rst:6016
+#: ../../library/os.rst:6002
 msgid "Return the number of the signal that caused the process to terminate."
 msgstr "Gibt die Nummer des Signals zurück, das den Prozess beendet hat."
 
-#: ../../library/os.rst:6024
+#: ../../library/os.rst:6010
 msgid "Interface to the scheduler"
 msgstr "Schnittstelle zum Scheduler"
 
-#: ../../library/os.rst:6026
+#: ../../library/os.rst:6012
 msgid ""
 "These functions control how a process is allocated CPU time by the operating "
 "system. They are only available on some Unix platforms. For more detailed "
@@ -9065,7 +9049,7 @@ msgstr ""
 "zuteilt. Sie sind nur auf manchen Unix-Plattformen verfügbar. Ausführlichere "
 "Informationen findest du in deinen Unix-Manpages."
 
-#: ../../library/os.rst:6032
+#: ../../library/os.rst:6018
 msgid ""
 "The following scheduling policies are exposed if they are supported by the "
 "operating system."
@@ -9073,11 +9057,11 @@ msgstr ""
 "Die folgenden Scheduling-Richtlinien werden bereitgestellt, wenn das "
 "Betriebssystem sie unterstützt."
 
-#: ../../library/os.rst:6039
+#: ../../library/os.rst:6025
 msgid "The default scheduling policy."
 msgstr "Die Standard-Scheduling-Richtlinie."
 
-#: ../../library/os.rst:6043
+#: ../../library/os.rst:6029
 msgid ""
 "Scheduling policy for CPU-intensive processes that tries to preserve "
 "interactivity on the rest of the computer."
@@ -9085,32 +9069,32 @@ msgstr ""
 "Scheduling-Richtlinie für CPU-intensive Prozesse, die versucht, die "
 "Interaktivität auf dem übrigen Rechner zu erhalten."
 
-#: ../../library/os.rst:6048
+#: ../../library/os.rst:6034
 msgid "Scheduling policy for tasks with deadline constraints."
 msgstr "Scheduling-Richtlinie für Aufgaben mit Fristvorgaben."
 
-#: ../../library/os.rst:6054
+#: ../../library/os.rst:6040
 msgid "Scheduling policy for extremely low priority background tasks."
 msgstr ""
 "Scheduling-Richtlinie für Hintergrundaufgaben mit extrem niedriger Priorität."
 
-#: ../../library/os.rst:6058
+#: ../../library/os.rst:6044
 msgid "Alias for :data:`SCHED_OTHER`."
 msgstr "Alias für :data:`SCHED_OTHER`."
 
-#: ../../library/os.rst:6064
+#: ../../library/os.rst:6050
 msgid "Scheduling policy for sporadic server programs."
 msgstr "Scheduling-Richtlinie für sporadische Serverprogramme."
 
-#: ../../library/os.rst:6068
+#: ../../library/os.rst:6054
 msgid "A First In First Out scheduling policy."
 msgstr "Eine First-In-First-Out-Scheduling-Richtlinie."
 
-#: ../../library/os.rst:6072
+#: ../../library/os.rst:6058
 msgid "A round-robin scheduling policy."
 msgstr "Eine Round-Robin-Scheduling-Richtlinie."
 
-#: ../../library/os.rst:6076
+#: ../../library/os.rst:6062
 msgid ""
 "This flag can be OR'ed with any other scheduling policy. When a process with "
 "this flag set forks, its child's scheduling policy and priority are reset to "
@@ -9121,7 +9105,7 @@ msgstr ""
 "Kindprozess, werden Scheduling-Richtlinie und Priorität des Kindes auf den "
 "Standard zurückgesetzt."
 
-#: ../../library/os.rst:6083
+#: ../../library/os.rst:6069
 msgid ""
 "This class represents tunable scheduling parameters used "
 "in :func:`sched_setparam`, :func:`sched_setscheduler`, "
@@ -9131,15 +9115,15 @@ msgstr ""
 "in :func:`sched_setparam`, :func:`sched_setscheduler` "
 "und :func:`sched_getparam` verwendet werden. Sie ist unveränderlich."
 
-#: ../../library/os.rst:6087
+#: ../../library/os.rst:6073
 msgid "At the moment, there is only one possible parameter:"
 msgstr "Derzeit gibt es nur einen möglichen Parameter:"
 
-#: ../../library/os.rst:6091
+#: ../../library/os.rst:6077
 msgid "The scheduling priority for a scheduling policy."
 msgstr "Die Scheduling-Priorität für eine Scheduling-Richtlinie."
 
-#: ../../library/os.rst:6096
+#: ../../library/os.rst:6082
 msgid ""
 "Get the minimum priority value for *policy*. *policy* is one of the "
 "scheduling policy constants above."
@@ -9147,7 +9131,7 @@ msgstr ""
 "Ermittelt den minimalen Prioritätswert für *policy*. *policy* ist eine der "
 "obigen Konstanten für Scheduling-Richtlinien."
 
-#: ../../library/os.rst:6102
+#: ../../library/os.rst:6088
 msgid ""
 "Get the maximum priority value for *policy*. *policy* is one of the "
 "scheduling policy constants above."
@@ -9155,7 +9139,7 @@ msgstr ""
 "Ermittelt den maximalen Prioritätswert für *policy*. *policy* ist eine der "
 "obigen Konstanten für Scheduling-Richtlinien."
 
-#: ../../library/os.rst:6108
+#: ../../library/os.rst:6094
 msgid ""
 "Set the scheduling policy for the process with PID *pid*. A *pid* of 0 means "
 "the calling process. *policy* is one of the scheduling policy constants "
@@ -9166,7 +9150,7 @@ msgstr ""
 "Konstanten für Scheduling-Richtlinien. *param* ist eine Instanz "
 "von :class:`sched_param`."
 
-#: ../../library/os.rst:6115
+#: ../../library/os.rst:6101
 msgid ""
 "Return the scheduling policy for the process with PID *pid*. A *pid* of 0 "
 "means the calling process. The result is one of the scheduling policy "
@@ -9176,7 +9160,7 @@ msgstr ""
 "*pid* 0, ist der aufrufende Prozess gemeint. Das Ergebnis ist eine der "
 "obigen Konstanten für Scheduling-Richtlinien."
 
-#: ../../library/os.rst:6122
+#: ../../library/os.rst:6108
 msgid ""
 "Set the scheduling parameters for the process with PID *pid*. A *pid* of 0 "
 "means the calling process. *param* is a :class:`sched_param` instance."
@@ -9185,7 +9169,7 @@ msgstr ""
 "0, ist der aufrufende Prozess gemeint. *param* ist eine Instanz "
 "von :class:`sched_param`."
 
-#: ../../library/os.rst:6128
+#: ../../library/os.rst:6114
 msgid ""
 "Return the scheduling parameters as a :class:`sched_param` instance for the "
 "process with PID *pid*. A *pid* of 0 means the calling process."
@@ -9194,7 +9178,7 @@ msgstr ""
 "von :class:`sched_param` zurück. Ist *pid* 0, ist der aufrufende Prozess "
 "gemeint."
 
-#: ../../library/os.rst:6134
+#: ../../library/os.rst:6120
 msgid ""
 "Return the round-robin quantum in seconds for the process with PID *pid*. A "
 "*pid* of 0 means the calling process."
@@ -9202,12 +9186,12 @@ msgstr ""
 "Gibt das Round-Robin-Zeitquantum in Sekunden für den Prozess mit der PID "
 "*pid* zurück. Ist *pid* 0, ist der aufrufende Prozess gemeint."
 
-#: ../../library/os.rst:6140
+#: ../../library/os.rst:6126
 msgid ""
 "Voluntarily relinquish the CPU. See :manpage:`sched_yield(2)` for details."
 msgstr "Gibt die CPU freiwillig ab. Details siehe :manpage:`sched_yield(2)`."
 
-#: ../../library/os.rst:6145
+#: ../../library/os.rst:6131
 msgid ""
 "Restrict the process with PID *pid* (or the current process if zero) to a "
 "set of CPUs.  *mask* is an iterable of integers representing the set of CPUs "
@@ -9217,13 +9201,13 @@ msgstr ""
 "Prozess) auf eine Menge von CPUs. *mask* ist ein Iterable von Ganzzahlen, "
 "das die Menge der CPUs darstellt, auf die der Prozess beschränkt werden soll."
 
-#: ../../library/os.rst:6152
+#: ../../library/os.rst:6138
 msgid "Return the set of CPUs the process with PID *pid* is restricted to."
 msgstr ""
 "Gibt die Menge der CPUs zurück, auf die der Prozess mit der PID *pid* "
 "beschränkt ist."
 
-#: ../../library/os.rst:6154
+#: ../../library/os.rst:6140
 msgid ""
 "If *pid* is zero, return the set of CPUs the calling thread of the current "
 "process is restricted to."
@@ -9231,15 +9215,15 @@ msgstr ""
 "Ist *pid* null, wird die Menge der CPUs zurückgegeben, auf die der "
 "aufrufende Thread des aktuellen Prozesses beschränkt ist."
 
-#: ../../library/os.rst:6157
+#: ../../library/os.rst:6143
 msgid "See also the :func:`process_cpu_count` function."
 msgstr "Siehe auch die Funktion :func:`process_cpu_count`."
 
-#: ../../library/os.rst:6163
+#: ../../library/os.rst:6149
 msgid "Miscellaneous System Information"
 msgstr "Verschiedene Systeminformationen"
 
-#: ../../library/os.rst:6168
+#: ../../library/os.rst:6154
 msgid ""
 "Return string-valued system configuration values. *name* specifies the "
 "configuration value to retrieve; it may be a string which is the name of a "
@@ -9258,7 +9242,7 @@ msgstr ""
 "Konfigurationsvariablen, die nicht in diesem Mapping enthalten sind, wird "
 "auch eine Ganzzahl für *name* akzeptiert."
 
-#: ../../library/os.rst:6176
+#: ../../library/os.rst:6162
 msgid ""
 "If the configuration value specified by *name* isn't defined, ``None`` is "
 "returned."
@@ -9266,7 +9250,7 @@ msgstr ""
 "Ist der durch *name* angegebene Konfigurationswert nicht definiert, wird "
 "``None`` zurückgegeben."
 
-#: ../../library/os.rst:6179
+#: ../../library/os.rst:6165
 msgid ""
 "If *name* is a string and is not known, :exc:`ValueError` is raised.  If a "
 "specific value for *name* is not supported by the host system, even if it is "
@@ -9278,7 +9262,7 @@ msgstr ""
 "er in ``confstr_names`` enthalten ist, wird ein :exc:`OSError` "
 "mit :const:`errno.EINVAL` als Fehlernummer ausgelöst."
 
-#: ../../library/os.rst:6189
+#: ../../library/os.rst:6175
 msgid ""
 "Dictionary mapping names accepted by :func:`confstr` to the integer values "
 "defined for those names by the host operating system. This can be used to "
@@ -9289,7 +9273,7 @@ msgstr ""
 "definiert. Damit lässt sich die Menge der dem System bekannten Namen "
 "ermitteln."
 
-#: ../../library/os.rst:6198
+#: ../../library/os.rst:6184
 msgid ""
 "Return the number of logical CPUs in the **system**. Returns ``None`` if "
 "undetermined."
@@ -9297,7 +9281,7 @@ msgstr ""
 "Gibt die Anzahl der logischen CPUs im **System** zurück. Gibt ``None`` "
 "zurück, wenn sie nicht ermittelt werden kann."
 
-#: ../../library/os.rst:6201
+#: ../../library/os.rst:6187
 msgid ""
 "The :func:`process_cpu_count` function can be used to get the number of "
 "logical CPUs usable by the calling thread of the **current process**."
@@ -9306,7 +9290,7 @@ msgstr ""
 "logischen CPUs, die der aufrufende Thread des **aktuellen Prozesses** nutzen "
 "kann."
 
-#: ../../library/os.rst:6206
+#: ../../library/os.rst:6192
 msgid ""
 "If :option:`-X cpu_count <-X>` is given or :envvar:`PYTHON_CPU_COUNT` is "
 "set, :func:`cpu_count` returns the override value *n*."
@@ -9314,7 +9298,7 @@ msgstr ""
 "Ist :option:`-X cpu_count <-X>` angegeben oder :envvar:`PYTHON_CPU_COUNT` "
 "gesetzt, gibt :func:`cpu_count` den Überschreibungswert *n* zurück."
 
-#: ../../library/os.rst:6213
+#: ../../library/os.rst:6199
 msgid ""
 "Return the number of processes in the system run queue averaged over the "
 "last 1, 5, and 15 minutes or raises :exc:`OSError` if the load average was "
@@ -9324,7 +9308,7 @@ msgstr ""
 "in der Run-Queue des Systems zurück oder löst :exc:`OSError` aus, wenn die "
 "Durchschnittslast nicht ermittelt werden konnte."
 
-#: ../../library/os.rst:6222
+#: ../../library/os.rst:6208
 msgid ""
 "Get the number of logical CPUs usable by the calling thread of the **current "
 "process**. Returns ``None`` if undetermined. It can be less "
@@ -9335,7 +9319,7 @@ msgstr ""
 "ermittelt werden kann. Sie kann je nach CPU-Affinität kleiner "
 "als :func:`cpu_count` sein."
 
-#: ../../library/os.rst:6226
+#: ../../library/os.rst:6212
 msgid ""
 "The :func:`cpu_count` function can be used to get the number of logical CPUs "
 "in the **system**."
@@ -9343,7 +9327,7 @@ msgstr ""
 "Mit der Funktion :func:`cpu_count` erhältst du die Anzahl der logischen CPUs "
 "im **System**."
 
-#: ../../library/os.rst:6229
+#: ../../library/os.rst:6215
 msgid ""
 "If :option:`-X cpu_count <-X>` is given or :envvar:`PYTHON_CPU_COUNT` is "
 "set, :func:`process_cpu_count` returns the override value *n*."
@@ -9351,11 +9335,11 @@ msgstr ""
 "Ist :option:`-X cpu_count <-X>` angegeben oder :envvar:`PYTHON_CPU_COUNT` "
 "gesetzt, gibt :func:`process_cpu_count` den Überschreibungswert *n* zurück."
 
-#: ../../library/os.rst:6232
+#: ../../library/os.rst:6218
 msgid "See also the :func:`sched_getaffinity` function."
 msgstr "Siehe auch die Funktion :func:`sched_getaffinity`."
 
-#: ../../library/os.rst:6239
+#: ../../library/os.rst:6225
 msgid ""
 "Return integer-valued system configuration values. If the configuration "
 "value specified by *name* isn't defined, ``-1`` is returned.  The comments "
@@ -9369,7 +9353,7 @@ msgstr ""
 "Das Dictionary mit Informationen zu den bekannten Namen ist "
 "``sysconf_names``."
 
-#: ../../library/os.rst:6249
+#: ../../library/os.rst:6235
 msgid ""
 "Dictionary mapping names accepted by :func:`sysconf` to the integer values "
 "defined for those names by the host operating system. This can be used to "
@@ -9380,11 +9364,11 @@ msgstr ""
 "definiert. Damit lässt sich die Menge der dem System bekannten Namen "
 "ermitteln."
 
-#: ../../library/os.rst:6255
+#: ../../library/os.rst:6241
 msgid "Add ``'SC_MINSIGSTKSZ'`` name."
 msgstr "Den Namen ``'SC_MINSIGSTKSZ'`` hinzugefügt."
 
-#: ../../library/os.rst:6258
+#: ../../library/os.rst:6244
 msgid ""
 "The following data values are used to support path manipulation operations.  "
 "These are defined for all platforms."
@@ -9392,7 +9376,7 @@ msgstr ""
 "Die folgenden Datenwerte dienen zur Unterstützung von Operationen zur "
 "Pfadbearbeitung. Sie sind für alle Plattformen definiert."
 
-#: ../../library/os.rst:6261
+#: ../../library/os.rst:6247
 msgid ""
 "Higher-level operations on pathnames are defined in the :mod:`os.path` "
 "module."
@@ -9400,7 +9384,7 @@ msgstr ""
 "Operationen höherer Ebene auf Pfadnamen sind im Modul :mod:`os.path` "
 "definiert."
 
-#: ../../library/os.rst:6267
+#: ../../library/os.rst:6253
 msgid ""
 "The constant string used by the operating system to refer to the current "
 "directory. This is ``'.'`` for Windows and POSIX. Also available "
@@ -9410,7 +9394,7 @@ msgstr ""
 "Verzeichnis verweist. Unter Windows und POSIX ist das ``'.'``. Auch "
 "über :mod:`os.path` verfügbar."
 
-#: ../../library/os.rst:6275
+#: ../../library/os.rst:6261
 msgid ""
 "The constant string used by the operating system to refer to the parent "
 "directory. This is ``'..'`` for Windows and POSIX. Also available "
@@ -9420,7 +9404,7 @@ msgstr ""
 "Verzeichnis verweist. Unter Windows und POSIX ist das ``'..'``. Auch "
 "über :mod:`os.path` verfügbar."
 
-#: ../../library/os.rst:6284
+#: ../../library/os.rst:6270
 msgid ""
 "The character used by the operating system to separate pathname components. "
 "This is ``'/'`` for POSIX and ``'\\\\'`` for Windows.  Note that knowing "
@@ -9435,7 +9419,7 @@ msgstr ""
 "und :func:`os.path.join` --, es ist aber gelegentlich nützlich. Auch "
 "über :mod:`os.path` verfügbar."
 
-#: ../../library/os.rst:6294
+#: ../../library/os.rst:6280
 msgid ""
 "An alternative character used by the operating system to separate pathname "
 "components, or ``None`` if only one separator character exists.  This is set "
@@ -9447,7 +9431,7 @@ msgstr ""
 "Windows-Systemen, bei denen ``sep`` ein Backslash ist, ist es auf ``'/'`` "
 "gesetzt. Auch über :mod:`os.path` verfügbar."
 
-#: ../../library/os.rst:6303
+#: ../../library/os.rst:6289
 msgid ""
 "The character which separates the base filename from the extension; for "
 "example, the ``'.'`` in :file:`os.py`. Also available via :mod:`os.path`."
@@ -9455,7 +9439,7 @@ msgstr ""
 "Das Zeichen, das den Basis-Dateinamen von der Erweiterung trennt, zum "
 "Beispiel der ``'.'`` in :file:`os.py`. Auch über :mod:`os.path` verfügbar."
 
-#: ../../library/os.rst:6311
+#: ../../library/os.rst:6297
 msgid ""
 "The character conventionally used by the operating system to separate search "
 "path components (as in :envvar:`PATH`), such as ``':'`` for POSIX or ``';'`` "
@@ -9465,7 +9449,7 @@ msgstr ""
 "Suchpfaden trennt (wie in :envvar:`PATH`), etwa ``':'`` unter POSIX oder "
 "``';'`` unter Windows. Auch über :mod:`os.path` verfügbar."
 
-#: ../../library/os.rst:6318
+#: ../../library/os.rst:6304
 msgid ""
 "The default search path used by :func:`exec\\*p\\* <execl>` "
 "and :func:`spawn\\*p\\* <spawnl>` if the environment doesn't have a "
@@ -9475,7 +9459,7 @@ msgstr ""
 "und :func:`spawn\\*p\\* <spawnl>` verwenden, wenn die Umgebung keinen "
 "Schlüssel ``'PATH'`` hat. Auch über :mod:`os.path` verfügbar."
 
-#: ../../library/os.rst:6325
+#: ../../library/os.rst:6311
 msgid ""
 "The string used to separate (or, rather, terminate) lines on the current "
 "platform.  This may be a single character, such as ``'\\n'`` for POSIX, or "
@@ -9490,7 +9474,7 @@ msgstr ""
 "Dateien schreibst, die im Textmodus (dem Standard) geöffnet wurden. Verwende "
 "stattdessen auf allen Plattformen ein einzelnes ``'\\n'``."
 
-#: ../../library/os.rst:6334
+#: ../../library/os.rst:6320
 msgid ""
 "The file path of the null device. For example: ``'/dev/null'`` for POSIX, "
 "``'nul'`` for Windows.  Also available via :mod:`os.path`."
@@ -9498,7 +9482,7 @@ msgstr ""
 "Der Dateipfad des Null-Geräts. Zum Beispiel ``'/dev/null'`` unter POSIX und "
 "``'nul'`` unter Windows. Auch über :mod:`os.path` verfügbar."
 
-#: ../../library/os.rst:6345
+#: ../../library/os.rst:6331
 msgid ""
 "Flags for use with the :func:`~sys.setdlopenflags` "
 "and :func:`~sys.getdlopenflags` functions.  See the Unix manual "
@@ -9508,11 +9492,11 @@ msgstr ""
 "und :func:`~sys.getdlopenflags`. Die Bedeutung der verschiedenen Flags siehe "
 "die Unix-Manpage :manpage:`dlopen(3)`."
 
-#: ../../library/os.rst:6353
+#: ../../library/os.rst:6339
 msgid "Random numbers"
 msgstr "Zufallszahlen"
 
-#: ../../library/os.rst:6358
+#: ../../library/os.rst:6344
 msgid ""
 "Get up to *size* random bytes. The function can return less bytes than "
 "requested."
@@ -9520,7 +9504,7 @@ msgstr ""
 "Ermittelt bis zu *size* zufällige Bytes. Die Funktion kann weniger Bytes als "
 "angefordert zurückgeben."
 
-#: ../../library/os.rst:6361
+#: ../../library/os.rst:6347
 msgid ""
 "These bytes can be used to seed user-space random number generators or for "
 "cryptographic purposes."
@@ -9528,7 +9512,7 @@ msgstr ""
 "Diese Bytes können als Startwert für Zufallszahlengeneratoren im "
 "Benutzerbereich oder für kryptografische Zwecke verwendet werden."
 
-#: ../../library/os.rst:6364
+#: ../../library/os.rst:6350
 msgid ""
 "``getrandom()`` relies on entropy gathered from device drivers and other "
 "sources of environmental noise. Unnecessarily reading large quantities of "
@@ -9540,7 +9524,7 @@ msgstr ""
 "Datenmengen beeinträchtigt andere Benutzer der Geräte ``/dev/random`` und ``/"
 "dev/urandom``."
 
-#: ../../library/os.rst:6369
+#: ../../library/os.rst:6355
 msgid ""
 "The flags argument is a bit mask that can contain zero or more of the "
 "following values ORed together: :py:const:`os.GRND_RANDOM` "
@@ -9550,7 +9534,7 @@ msgstr ""
 "per ODER verknüpft enthalten kann: :py:const:`os.GRND_RANDOM` "
 "und :py:data:`GRND_NONBLOCK`."
 
-#: ../../library/os.rst:6373
+#: ../../library/os.rst:6359
 msgid ""
 "See also the `Linux getrandom() manual page <https://man7.org/linux/man-"
 "pages/man2/getrandom.2.html>`_."
@@ -9558,14 +9542,14 @@ msgstr ""
 "Siehe auch die `Linux-Manpage zu getrandom() <https://man7.org/linux/man-"
 "pages/man2/getrandom.2.html>`_."
 
-#: ../../library/os.rst:6382
+#: ../../library/os.rst:6368
 msgid ""
 "Return a bytestring of *size* random bytes suitable for cryptographic use."
 msgstr ""
 "Gibt einen Bytestring mit *size* zufälligen Bytes zurück, der für die "
 "kryptografische Verwendung geeignet ist."
 
-#: ../../library/os.rst:6384
+#: ../../library/os.rst:6370
 msgid ""
 "This function returns random bytes from an OS-specific randomness source.  "
 "The returned data should be unpredictable enough for cryptographic "
@@ -9576,7 +9560,7 @@ msgstr ""
 "Anwendungen unvorhersehbar genug sein, ihre genaue Qualität hängt aber von "
 "der Implementierung des Betriebssystems ab."
 
-#: ../../library/os.rst:6388
+#: ../../library/os.rst:6374
 msgid ""
 "On Linux, if the ``getrandom()`` syscall is available, it is used in "
 "blocking mode: block until the system urandom entropy pool is initialized "
@@ -9593,21 +9577,28 @@ msgstr ""
 "Flag :data:`GRND_NONBLOCK`) an zufällige Bytes kommen oder abfragen, bis der "
 "urandom-Entropiepool des Systems initialisiert ist."
 
-#: ../../library/os.rst:6395
+#: ../../library/os.rst:6381
 msgid ""
-"On a Unix-like system, random bytes are read from the ``/dev/urandom`` "
-"device. If the ``/dev/urandom`` device is not available or not readable, "
-"the :exc:`NotImplementedError` exception is raised."
+"On other Unix-like systems, the C ``getrandom()`` function is used if it is "
+"available, otherwise the C ``getentropy()`` function."
+msgstr ""
+
+#: ../../library/os.rst:6384
+#, fuzzy
+msgid ""
+"If none of these functions can be used, random bytes are read from the ``/"
+"dev/urandom`` device. If the ``/dev/urandom`` device is not available or not "
+"readable, the :exc:`NotImplementedError` exception is raised."
 msgstr ""
 "Auf einem Unix-ähnlichen System werden zufällige Bytes aus dem Gerät ``/dev/"
 "urandom`` gelesen. Ist das Gerät ``/dev/urandom`` nicht verfügbar oder nicht "
 "lesbar, wird die Ausnahme :exc:`NotImplementedError` ausgelöst."
 
-#: ../../library/os.rst:6399
+#: ../../library/os.rst:6388
 msgid "On Windows, it will use ``BCryptGenRandom()``."
 msgstr "Unter Windows wird ``BCryptGenRandom()`` verwendet."
 
-#: ../../library/os.rst:6402
+#: ../../library/os.rst:6391
 msgid ""
 "The :mod:`secrets` module provides higher level functions. For an easy-to-"
 "use interface to the random number generator provided by your platform, "
@@ -9617,7 +9608,7 @@ msgstr ""
 "verwendende Schnittstelle zum Zufallszahlengenerator deiner Plattform "
 "findest du in :class:`random.SystemRandom`."
 
-#: ../../library/os.rst:6406
+#: ../../library/os.rst:6395
 msgid ""
 "On Linux 3.17 and newer, the ``getrandom()`` syscall is now used when "
 "available.  On OpenBSD 5.6 and newer, the C ``getentropy()`` function is now "
@@ -9628,7 +9619,7 @@ msgstr ""
 "Funktion ``getentropy()`` verwendet. Diese Funktionen vermeiden die "
 "Verwendung eines internen Dateideskriptors."
 
-#: ../../library/os.rst:6412
+#: ../../library/os.rst:6401
 msgid ""
 "On Linux, if the ``getrandom()`` syscall blocks (the urandom entropy pool is "
 "not initialized yet), fall back on reading ``/dev/urandom``."
@@ -9637,7 +9628,7 @@ msgstr ""
 "Entropiepool ist noch nicht initialisiert), wird ersatzweise aus ``/dev/"
 "urandom`` gelesen."
 
-#: ../../library/os.rst:6416
+#: ../../library/os.rst:6405
 msgid ""
 "On Linux, ``getrandom()`` is now used in blocking mode to increase the "
 "security."
@@ -9645,7 +9636,7 @@ msgstr ""
 "Unter Linux wird ``getrandom()`` nun im blockierenden Modus verwendet, um "
 "die Sicherheit zu erhöhen."
 
-#: ../../library/os.rst:6420
+#: ../../library/os.rst:6409
 msgid ""
 "On Windows, ``BCryptGenRandom()`` is used instead of ``CryptGenRandom()`` "
 "which is deprecated."
@@ -9653,7 +9644,7 @@ msgstr ""
 "Unter Windows wird ``BCryptGenRandom()`` statt des veralteten "
 "``CryptGenRandom()`` verwendet."
 
-#: ../../library/os.rst:6426
+#: ../../library/os.rst:6415
 msgid ""
 "By  default, when reading from ``/dev/random``, :func:`getrandom` blocks if "
 "no random bytes are available, and when reading from ``/dev/urandom``, it "
@@ -9663,7 +9654,7 @@ msgstr ""
 "wenn keine zufälligen Bytes verfügbar sind, und beim Lesen aus ``/dev/"
 "urandom``, wenn der Entropiepool noch nicht initialisiert ist."
 
-#: ../../library/os.rst:6430
+#: ../../library/os.rst:6419
 msgid ""
 "If the :py:data:`GRND_NONBLOCK` flag is set, then :func:`getrandom` does not "
 "block in these cases, but instead immediately raises :exc:`BlockingIOError`."
@@ -9671,7 +9662,7 @@ msgstr ""
 "Ist das Flag :py:data:`GRND_NONBLOCK` gesetzt, blockiert :func:`getrandom` "
 "in diesen Fällen nicht, sondern löst sofort :exc:`BlockingIOError` aus."
 
-#: ../../library/os.rst:6437
+#: ../../library/os.rst:6426
 msgid ""
 "If  this  bit  is  set,  then  random bytes are drawn from the ``/dev/"
 "random`` pool instead of the ``/dev/urandom`` pool."
@@ -9689,7 +9680,7 @@ msgstr "effektive ID"
 
 #: ../../library/os.rst:404 ../../library/os.rst:470 ../../library/os.rst:479
 #: ../../library/os.rst:488 ../../library/os.rst:502 ../../library/os.rst:700
-#: ../../library/os.rst:5191 ../../library/os.rst:5217
+#: ../../library/os.rst:5177 ../../library/os.rst:5203
 msgid "process"
 msgstr "Prozess"
 
@@ -9742,8 +9733,8 @@ msgid "pty"
 msgstr "pty"
 
 #: ../../library/os.rst:2171 ../../library/os.rst:2594
-#: ../../library/os.rst:2813 ../../library/os.rst:4221
-#: ../../library/os.rst:4321
+#: ../../library/os.rst:2813 ../../library/os.rst:4207
+#: ../../library/os.rst:4307
 msgid "directory"
 msgstr "Verzeichnis"
 
@@ -9767,56 +9758,69 @@ msgstr "und os.makedirs()"
 msgid "stat"
 msgstr "stat"
 
-#: ../../library/os.rst:4221 ../../library/os.rst:4321
+#: ../../library/os.rst:4207 ../../library/os.rst:4307
 msgid "walking"
 msgstr "durchlaufen"
 
-#: ../../library/os.rst:4221 ../../library/os.rst:4321
+#: ../../library/os.rst:4207 ../../library/os.rst:4307
 msgid "traversal"
 msgstr "Traversierung"
 
-#: ../../library/os.rst:5191 ../../library/os.rst:5217
+#: ../../library/os.rst:5177 ../../library/os.rst:5203
 msgid "killing"
 msgstr "abschießen"
 
-#: ../../library/os.rst:5191 ../../library/os.rst:5217
+#: ../../library/os.rst:5177 ../../library/os.rst:5203
 msgid "signalling"
 msgstr "Signale senden"
 
-#: ../../library/os.rst:6264 ../../library/os.rst:6300
+#: ../../library/os.rst:6250 ../../library/os.rst:6286
 msgid ". (dot)"
 msgstr ". (Punkt)"
 
-#: ../../library/os.rst:6264 ../../library/os.rst:6272
-#: ../../library/os.rst:6280 ../../library/os.rst:6291
-#: ../../library/os.rst:6300
+#: ../../library/os.rst:6250 ../../library/os.rst:6258
+#: ../../library/os.rst:6266 ../../library/os.rst:6277
+#: ../../library/os.rst:6286
 msgid "in pathnames"
 msgstr "in Pfadnamen"
 
-#: ../../library/os.rst:6272
+#: ../../library/os.rst:6258
 msgid ".."
 msgstr ".."
 
-#: ../../library/os.rst:6280 ../../library/os.rst:6291
+#: ../../library/os.rst:6266 ../../library/os.rst:6277
 msgid "/ (slash)"
 msgstr "/ (Schrägstrich)"
 
-#: ../../library/os.rst:6281
+#: ../../library/os.rst:6267
 msgid "\\ (backslash)"
 msgstr "\\ (Backslash)"
 
-#: ../../library/os.rst:6281
+#: ../../library/os.rst:6267
 msgid "in pathnames (Windows)"
 msgstr "in Pfadnamen (Windows)"
 
-#: ../../library/os.rst:6307
+#: ../../library/os.rst:6293
 msgid ": (colon)"
 msgstr ": (Doppelpunkt)"
 
-#: ../../library/os.rst:6307
+#: ../../library/os.rst:6293
 msgid "path separator (POSIX)"
 msgstr "Pfadtrenner (POSIX)"
 
-#: ../../library/os.rst:6307
+#: ../../library/os.rst:6293
 msgid "; (semicolon)"
 msgstr "; (Semikolon)"
+
+#~ msgid "On macOS systems, the following attributes may also be available:"
+#~ msgstr ""
+#~ "Auf macOS-Systemen können auch die folgenden Attribute verfügbar sein:"
+
+#~ msgid "Real size of the file."
+#~ msgstr "Tatsächliche Größe der Datei."
+
+#~ msgid "Creator of the file."
+#~ msgstr "Ersteller der Datei."
+
+#~ msgid "File type."
+#~ msgstr "Dateityp."
