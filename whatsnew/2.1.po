@@ -1,20 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-22 12:07+0200\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,15 +22,15 @@ msgstr ""
 
 #: ../../whatsnew/2.1.rst:3
 msgid "What's New in Python 2.1"
-msgstr ""
+msgstr "Was ist neu in Python 2.1"
 
 #: ../../whatsnew/2.1.rst:0
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: ../../whatsnew/2.1.rst:5
 msgid "A.M. Kuchling"
-msgstr ""
+msgstr "A.M. Kuchling"
 
 #: ../../whatsnew/2.1.rst:13
 msgid "Introduction"
@@ -50,6 +49,16 @@ msgid ""
 "to the specific PEP, for more details about any new feature that "
 "particularly interests you."
 msgstr ""
+"Dieser Artikel erklärt die neuen Funktionen in Python 2.1. Es gibt in 2.1 "
+"zwar nicht so viele Änderungen wie in Python 2.0, aber trotzdem einige "
+"angenehme Überraschungen. 2.1 ist das erste Release, das mithilfe von Python "
+"Enhancement Proposals, kurz PEPs, gesteuert wurde, daher haben die meisten "
+"größeren Änderungen begleitende PEPs mit vollständigerer Dokumentation und "
+"einer Designbegründung. Dieser Artikel versucht nicht, die neuen Funktionen "
+"vollständig zu dokumentieren, sondern gibt Python-Programmierern nur einen "
+"Überblick. Weitere Details zu einer neuen Funktion, die dich besonders "
+"interessiert, findest du in der Dokumentation zu Python 2.1 oder im "
+"jeweiligen PEP."
 
 #: ../../whatsnew/2.1.rst:25
 msgid ""
@@ -58,14 +67,18 @@ msgid ""
 "the first release to come out at this faster pace, with the first alpha "
 "appearing in January, 3 months after the final version of 2.0 was released."
 msgstr ""
+"Ein aktuelles Ziel des Python-Entwicklungsteams ist es, das Tempo neuer "
+"Releases zu erhöhen, mit einem neuen Release alle 6 bis 9 Monate. 2.1 ist "
+"das erste Release in diesem schnelleren Takt. Die erste Alpha erschien im "
+"Januar, 3 Monate nach der finalen Version von 2.0."
 
 #: ../../whatsnew/2.1.rst:30
 msgid "The final release of Python 2.1 was made on April 17, 2001."
-msgstr ""
+msgstr "Die finale Version von Python 2.1 erschien am 17. April 2001."
 
 #: ../../whatsnew/2.1.rst:36
 msgid "PEP 227: Nested Scopes"
-msgstr ""
+msgstr "PEP 227: Verschachtelte Gültigkeitsbereiche"
 
 #: ../../whatsnew/2.1.rst:38
 msgid ""
@@ -75,6 +88,12 @@ msgid ""
 "surprised people because it didn't match their intuitive expectations.  For "
 "example, a nested recursive function definition doesn't work::"
 msgstr ""
+"Die größte Änderung in Python 2.1 betrifft die Regeln für "
+"Gültigkeitsbereiche. In Python 2.0 gibt es zu jedem Zeitpunkt höchstens drei "
+"Namensräume, in denen Variablennamen nachgeschlagen werden: lokal, auf "
+"Modulebene und der eingebaute Namensraum. Das überraschte oft, weil es nicht "
+"der intuitiven Erwartung entsprach. Zum Beispiel funktioniert eine "
+"verschachtelte rekursive Funktionsdefinition nicht::"
 
 #: ../../whatsnew/2.1.rst:44
 msgid ""
@@ -85,6 +104,12 @@ msgid ""
 "        return g(value-1) + 1\n"
 "    ..."
 msgstr ""
+"def f():\n"
+"    ...\n"
+"    def g(value):\n"
+"        ...\n"
+"        return g(value-1) + 1\n"
+"    ..."
 
 #: ../../whatsnew/2.1.rst:51
 msgid ""
@@ -97,6 +122,14 @@ msgid ""
 "find local variables being copied by passing them as the default values of "
 "arguments. ::"
 msgstr ""
+"Die Funktion :func:`!g` löst immer eine :exc:`NameError`-Ausnahme aus, weil "
+"die Bindung des Namens ``g`` weder in ihrem lokalen Namensraum noch im "
+"Namensraum auf Modulebene liegt. In der Praxis ist das kein großes Problem "
+"(wie oft definierst du innere Funktionen rekursiv?), es machte aber auch die "
+"Verwendung des Ausdrucks :keyword:`lambda` umständlicher, und das war in der "
+"Praxis ein Problem. In Code mit :keyword:`lambda` findet man oft lokale "
+"Variablen, die kopiert werden, indem man sie als Standardwerte von "
+"Argumenten übergibt. ::"
 
 #: ../../whatsnew/2.1.rst:59
 msgid ""
@@ -106,12 +139,19 @@ msgid ""
 "               self.list_attribute)\n"
 "    return L"
 msgstr ""
+"def find(self, name):\n"
+"    \"Return list of any entries equal to 'name'\"\n"
+"    L = filter(lambda x, name=name: x == name,\n"
+"               self.list_attribute)\n"
+"    return L"
 
 #: ../../whatsnew/2.1.rst:65
 msgid ""
 "The readability of Python code written in a strongly functional style "
 "suffers greatly as a result."
 msgstr ""
+"Die Lesbarkeit von Python-Code in stark funktionalem Stil leidet dadurch "
+"erheblich."
 
 #: ../../whatsnew/2.1.rst:68
 msgid ""
@@ -125,6 +165,15 @@ msgid ""
 "explanation of the rules, and a dissection of the implementation, can be "
 "found in the PEP."
 msgstr ""
+"Die wichtigste Änderung in Python 2.1 ist, dass der Sprache statische "
+"Gültigkeitsbereiche hinzugefügt wurden, um dieses Problem zu beheben. Als "
+"erste Auswirkung ist das Standardargument ``name=name`` im obigen Beispiel "
+"nun unnötig. Einfach gesagt: Wird einem Variablennamen innerhalb einer "
+"Funktion kein Wert zugewiesen (durch eine Zuweisung oder die "
+"Anweisungen :keyword:`def`, :keyword:`class` oder :keyword:`import`), werden "
+"Verweise auf die Variable im lokalen Namensraum des umschließenden "
+"Gültigkeitsbereichs nachgeschlagen. Eine ausführlichere Erklärung der Regeln "
+"und eine Analyse der Implementierung findest du im PEP."
 
 #: ../../whatsnew/2.1.rst:77
 msgid ""
@@ -134,6 +183,11 @@ msgid ""
 "rather unlikely though, since such code would have been pretty confusing to "
 "read in the first place."
 msgstr ""
+"Diese Änderung kann Kompatibilitätsprobleme bei Code verursachen, in dem "
+"derselbe Variablenname sowohl auf Modulebene als auch als lokale Variable in "
+"einer Funktion verwendet wird, die weitere Funktionsdefinitionen enthält. "
+"Das scheint aber eher unwahrscheinlich, da solcher Code von vornherein "
+"ziemlich verwirrend zu lesen gewesen wäre."
 
 #: ../../whatsnew/2.1.rst:83
 msgid ""
@@ -150,10 +204,24 @@ msgid ""
 "function definitions or :keyword:`lambda` expressions with free variables, "
 "the compiler will flag this by raising a :exc:`SyntaxError` exception."
 msgstr ""
+"Eine Nebenwirkung der Änderung ist, dass die Anweisungen ``from module "
+"import *`` und ``exec`` unter bestimmten Bedingungen innerhalb eines "
+"Funktions-Gültigkeitsbereichs unzulässig wurden. Das Python-Referenzhandbuch "
+"sagt schon immer, dass ``from module import *`` nur auf oberster Ebene eines "
+"Moduls zulässig ist, der CPython-Interpreter hat das aber bisher nie "
+"durchgesetzt. Als Teil der Implementierung verschachtelter "
+"Gültigkeitsbereiche muss der Compiler, der Python-Quellcode in Bytecode "
+"umwandelt, anderen Code erzeugen, um auf Variablen in einem umgebenden "
+"Gültigkeitsbereich zuzugreifen. ``from module import *`` und ``exec`` machen "
+"es dem Compiler unmöglich, das herauszufinden, weil sie dem lokalen "
+"Namensraum Namen hinzufügen, die zur Übersetzungszeit nicht bekannt sind. "
+"Enthält eine Funktion also Funktionsdefinitionen oder :keyword:`lambda`-"
+"Ausdrücke mit freien Variablen, meldet der Compiler das, indem er "
+"eine :exc:`SyntaxError`-Ausnahme auslöst."
 
 #: ../../whatsnew/2.1.rst:96
 msgid "To make the preceding explanation a bit clearer, here's an example::"
-msgstr ""
+msgstr "Um die obige Erklärung etwas klarer zu machen, hier ein Beispiel::"
 
 #: ../../whatsnew/2.1.rst:98
 msgid ""
@@ -164,6 +232,12 @@ msgid ""
 "    def g():\n"
 "        return x"
 msgstr ""
+"x = 1\n"
+"def f():\n"
+"    # The next line is a syntax error\n"
+"    exec 'x=2'\n"
+"    def g():\n"
+"        return x"
 
 #: ../../whatsnew/2.1.rst:105
 msgid ""
@@ -171,6 +245,9 @@ msgid ""
 "would define a new local variable named ``x`` whose value should be accessed "
 "by :func:`!g`."
 msgstr ""
+"Zeile 4 mit der Anweisung ``exec`` ist ein Syntaxfehler, da ``exec`` eine "
+"neue lokale Variable namens ``x`` definieren würde, auf deren Wert :func:`!"
+"g` zugreifen soll."
 
 #: ../../whatsnew/2.1.rst:109
 msgid ""
@@ -178,6 +255,9 @@ msgid ""
 "most Python code (and when it is used, it's often a sign of a poor design "
 "anyway)."
 msgstr ""
+"Das sollte keine große Einschränkung sein, da ``exec`` in den meisten Python-"
+"Programmen selten verwendet wird (und wenn doch, ist das oft ohnehin ein "
+"Zeichen für schlechtes Design)."
 
 #: ../../whatsnew/2.1.rst:113
 msgid ""
@@ -189,18 +269,26 @@ msgid ""
 "off, but users will have had all of 2.1's lifetime to fix any breakage "
 "resulting from their introduction."
 msgstr ""
+"Wegen Kompatibilitätsbedenken werden verschachtelte Gültigkeitsbereiche "
+"schrittweise eingeführt. In Python 2.1 sind sie standardmäßig nicht "
+"aktiviert, lassen sich aber innerhalb eines Moduls mit einer Future-"
+"Anweisung einschalten, wie in :pep:`236` beschrieben. (Mehr zu :pep:`236` im "
+"folgenden Abschnitt.) In Python 2.2 werden verschachtelte "
+"Gültigkeitsbereiche zum Standard und lassen sich nicht mehr abschalten, aber "
+"die Benutzer hatten dann die gesamte Lebenszeit von 2.1, um durch ihre "
+"Einführung verursachte Fehler zu beheben."
 
 #: ../../whatsnew/2.1.rst:123
 msgid ":pep:`227` - Statically Nested Scopes"
-msgstr ""
+msgstr ":pep:`227` - Statically Nested Scopes"
 
 #: ../../whatsnew/2.1.rst:124
 msgid "Written and implemented by Jeremy Hylton."
-msgstr ""
+msgstr "Geschrieben und implementiert von Jeremy Hylton."
 
 #: ../../whatsnew/2.1.rst:130
 msgid "PEP 236: __future__ Directives"
-msgstr ""
+msgstr "PEP 236: __future__-Direktiven"
 
 #: ../../whatsnew/2.1.rst:132
 msgid ""
@@ -210,6 +298,12 @@ msgid ""
 "introducing a convention for enabling optional functionality in release N "
 "that will become compulsory in release N+1."
 msgstr ""
+"Die Reaktion auf verschachtelte Gültigkeitsbereiche war eine verbreitete "
+"Sorge, mit dem Release 2.1 Code kaputtzumachen, und sie war stark genug, "
+"dass die Python-Entwickler einen vorsichtigeren Ansatz wählten. Dieser "
+"Ansatz besteht darin, eine Konvention einzuführen, mit der sich in Release N "
+"optionale Funktionalität aktivieren lässt, die in Release N+1 verpflichtend "
+"wird."
 
 #: ../../whatsnew/2.1.rst:138
 msgid ""
@@ -217,10 +311,13 @@ msgid ""
 "name :mod:`__future__`.  Nested scopes can be enabled by the following "
 "statement::"
 msgstr ""
+"Die Syntax verwendet eine ``from...import``-Anweisung mit dem reservierten "
+"Modulnamen :mod:`__future__`. Verschachtelte Gültigkeitsbereiche lassen sich "
+"mit folgender Anweisung aktivieren::"
 
 #: ../../whatsnew/2.1.rst:141
 msgid "from __future__ import nested_scopes"
-msgstr ""
+msgstr "from __future__ import nested_scopes"
 
 #: ../../whatsnew/2.1.rst:143
 msgid ""
@@ -232,18 +329,26 @@ msgid ""
 "so they must precede any statement that will result in bytecodes being "
 "produced."
 msgstr ""
+"Sie sieht zwar aus wie eine normale :keyword:`import`-Anweisung, ist es aber "
+"nicht. Es gibt strenge Regeln, wo eine solche Future-Anweisung stehen darf. "
+"Sie darf nur am Anfang eines Moduls stehen und muss vor jeglichem Python-"
+"Code und vor normalen :keyword:`!import`-Anweisungen kommen. Das liegt "
+"daran, dass solche Anweisungen beeinflussen können, wie der Python-Bytecode-"
+"Compiler Code parst und Bytecode erzeugt, daher müssen sie vor jeder "
+"Anweisung stehen, die Bytecode erzeugt."
 
 #: ../../whatsnew/2.1.rst:153
 msgid ":pep:`236` - Back to the :mod:`__future__`"
-msgstr ""
+msgstr ":pep:`236` - Back to the :mod:`__future__`"
 
 #: ../../whatsnew/2.1.rst:154
 msgid "Written by Tim Peters, and primarily implemented by Jeremy Hylton."
 msgstr ""
+"Geschrieben von Tim Peters, hauptsächlich implementiert von Jeremy Hylton."
 
 #: ../../whatsnew/2.1.rst:160
 msgid "PEP 207: Rich Comparisons"
-msgstr ""
+msgstr "PEP 207: Reichhaltige Vergleiche"
 
 #: ../../whatsnew/2.1.rst:162
 msgid ""
@@ -260,6 +365,18 @@ msgid ""
 "sizes, then the compare has to be able to raise an exception to signal the "
 "error."
 msgstr ""
+"In früheren Versionen war die Unterstützung von Python für Vergleiche bei "
+"benutzerdefinierten Klassen und Erweiterungstypen recht einfach. Klassen "
+"konnten eine Methode :meth:`!__cmp__` implementieren, die zwei Instanzen "
+"einer Klasse erhielt und nur 0 zurückgeben konnte, wenn sie gleich waren, "
+"oder +1 bzw. -1, wenn nicht. Die Methode konnte keine Ausnahme auslösen und "
+"nichts anderes als einen Wahrheitswert zurückgeben. Benutzer von Numeric "
+"Python fanden dieses Modell oft zu schwach und einschränkend, denn in den "
+"Rechenprogrammen, für die Numeric Python verwendet wird, wäre es nützlicher, "
+"zwei Matrizen elementweise vergleichen zu können und eine Matrix mit den "
+"Ergebnissen des jeweiligen Vergleichs für jedes Element zurückzugeben. Sind "
+"die beiden Matrizen verschieden groß, muss der Vergleich eine Ausnahme "
+"auslösen können, um den Fehler zu melden."
 
 #: ../../whatsnew/2.1.rst:174
 msgid ""
@@ -268,14 +385,18 @@ msgid ""
 "``>``, ``>=``, ``==``, and ``!=`` operations.  The new magic method names "
 "are:"
 msgstr ""
+"In Python 2.1 wurden reichhaltige Vergleiche hinzugefügt, um diesen Bedarf "
+"zu decken. Python-Klassen können nun jede der Operationen ``<``, ``<=``, "
+"``>``, ``>=``, ``==`` und ``!=`` einzeln überladen. Die neuen magischen "
+"Methodennamen sind:"
 
 #: ../../whatsnew/2.1.rst:179
 msgid "Operation"
-msgstr ""
+msgstr "Operation"
 
 #: ../../whatsnew/2.1.rst:179
 msgid "Method name"
-msgstr ""
+msgstr "Methodenname"
 
 #: ../../whatsnew/2.1.rst:181
 msgid "``<``"
@@ -283,7 +404,7 @@ msgstr "``<``"
 
 #: ../../whatsnew/2.1.rst:181
 msgid ":meth:`~object.__lt__`"
-msgstr ""
+msgstr ":meth:`~object.__lt__`"
 
 #: ../../whatsnew/2.1.rst:183
 msgid "``<=``"
@@ -291,7 +412,7 @@ msgstr "``<=``"
 
 #: ../../whatsnew/2.1.rst:183
 msgid ":meth:`~object.__le__`"
-msgstr ""
+msgstr ":meth:`~object.__le__`"
 
 #: ../../whatsnew/2.1.rst:185
 msgid "``>``"
@@ -299,7 +420,7 @@ msgstr "``>``"
 
 #: ../../whatsnew/2.1.rst:185
 msgid ":meth:`~object.__gt__`"
-msgstr ""
+msgstr ":meth:`~object.__gt__`"
 
 #: ../../whatsnew/2.1.rst:187
 msgid "``>=``"
@@ -307,7 +428,7 @@ msgstr "``>=``"
 
 #: ../../whatsnew/2.1.rst:187
 msgid ":meth:`~object.__ge__`"
-msgstr ""
+msgstr ":meth:`~object.__ge__`"
 
 #: ../../whatsnew/2.1.rst:189
 msgid "``==``"
@@ -315,7 +436,7 @@ msgstr "``==``"
 
 #: ../../whatsnew/2.1.rst:189
 msgid ":meth:`~object.__eq__`"
-msgstr ""
+msgstr ":meth:`~object.__eq__`"
 
 #: ../../whatsnew/2.1.rst:191
 msgid "``!=``"
@@ -323,7 +444,7 @@ msgstr "``!=``"
 
 #: ../../whatsnew/2.1.rst:191
 msgid ":meth:`~object.__ne__`"
-msgstr ""
+msgstr ":meth:`~object.__ne__`"
 
 #: ../../whatsnew/2.1.rst:194
 msgid ""
@@ -331,6 +452,9 @@ msgid ""
 "``.LT.``. ``.LE.``, &c.  Numeric programmers are almost certainly quite "
 "familiar with these names and will find them easy to remember.)"
 msgstr ""
+"(Die magischen Methoden sind nach den entsprechenden Fortran-Operatoren "
+"``.LT.``. ``.LE.`` usw. benannt. Numerik-Programmierer kennen diese Namen "
+"mit ziemlicher Sicherheit und werden sie sich leicht merken können.)"
 
 #: ../../whatsnew/2.1.rst:198
 msgid ""
@@ -339,6 +463,10 @@ msgid ""
 "``other`` will be the object on the right-hand side.  For example, the "
 "expression ``A < B`` will cause ``A.__lt__(B)`` to be called."
 msgstr ""
+"Jede dieser magischen Methoden hat die Form ``method(self, other)``, wobei "
+"``self`` das Objekt auf der linken Seite des Operators und ``other`` das "
+"Objekt auf der rechten Seite ist. Zum Beispiel führt der Ausdruck ``A < B`` "
+"zum Aufruf von ``A.__lt__(B)``."
 
 #: ../../whatsnew/2.1.rst:203
 msgid ""
@@ -347,6 +475,10 @@ msgid ""
 "exception if the comparison is impossible, inconsistent, or otherwise "
 "meaningless."
 msgstr ""
+"Jede dieser magischen Methoden kann alles Mögliche zurückgeben: einen "
+"Wahrheitswert, eine Matrix, eine Liste oder ein beliebiges anderes Python-"
+"Objekt. Alternativ können sie eine Ausnahme auslösen, wenn der Vergleich "
+"unmöglich, widersprüchlich oder anderweitig sinnlos ist."
 
 #: ../../whatsnew/2.1.rst:207
 msgid ""
@@ -358,6 +490,13 @@ msgid ""
 "previous versions of Python; otherwise it will call the appropriate method "
 "and can return any Python object."
 msgstr ""
+"Die eingebaute Funktion ``cmp(A,B)`` kann die Maschinerie der reichhaltigen "
+"Vergleiche nutzen und akzeptiert nun ein optionales Argument, das angibt, "
+"welche Vergleichsoperation verwendet werden soll. Es wird als einer der "
+"Strings ``\"<\"``, ``\"<=\"``, ``\">\"``, ``\">=\"``, ``\"==\"`` oder ``\"!"
+"=\"`` angegeben. Ohne das optionale dritte Argument gibt :func:`!cmp` wie in "
+"früheren Python-Versionen nur -1, 0 oder +1 zurück. Andernfalls ruft sie die "
+"passende Methode auf und kann ein beliebiges Python-Objekt zurückgeben."
 
 #: ../../whatsnew/2.1.rst:214
 msgid ""
@@ -367,20 +506,27 @@ msgid ""
 "to :pep:`207`, or to 2.1's C API documentation, for the full list of related "
 "functions."
 msgstr ""
+"Es gibt auch entsprechende Änderungen, die für C-Programmierer interessant "
+"sind: einen neuen Slot ``tp_richcmp`` in Typobjekten und eine API, um einen "
+"bestimmten reichhaltigen Vergleich durchzuführen. Die C-API behandle ich "
+"hier nicht, sondern verweise für die vollständige Liste der zugehörigen "
+"Funktionen auf :pep:`207` oder die C-API-Dokumentation von 2.1."
 
 #: ../../whatsnew/2.1.rst:222
 msgid ":pep:`207` - Rich Comparisons"
-msgstr ""
+msgstr ":pep:`207` - Rich Comparisons"
 
 #: ../../whatsnew/2.1.rst:223
 msgid ""
 "Written by Guido van Rossum, heavily based on earlier work by David Ascher, "
 "and implemented by Guido van Rossum."
 msgstr ""
+"Geschrieben von Guido van Rossum, stark angelehnt an frühere Arbeiten von "
+"David Ascher, und implementiert von Guido van Rossum."
 
 #: ../../whatsnew/2.1.rst:230
 msgid "PEP 230: Warning Framework"
-msgstr ""
+msgstr "PEP 230: Warnungs-Framework"
 
 #: ../../whatsnew/2.1.rst:232
 msgid ""
@@ -394,6 +540,16 @@ msgid ""
 "following Python version can then drop the feature, and users will have had "
 "a full release cycle to remove uses of the old feature."
 msgstr ""
+"In seinen 10 Jahren hat Python eine gewisse Zahl veralteter Module und "
+"Funktionen angesammelt. Es ist schwer zu wissen, wann eine Funktion "
+"gefahrlos entfernt werden kann, da es keine Möglichkeit gibt zu erfahren, "
+"wie viel Code sie verwendet --- vielleicht hängt kein Programm davon ab, "
+"vielleicht viele. Um alte Funktionen strukturierter entfernen zu können, "
+"wurde ein Warnungs-Framework hinzugefügt. Wollen die Python-Entwickler eine "
+"Funktion loswerden, löst sie in der nächsten Python-Version zunächst eine "
+"Warnung aus. Die darauf folgende Version kann die Funktion dann streichen, "
+"und die Benutzer hatten einen vollen Release-Zyklus Zeit, die Verwendungen "
+"der alten Funktion zu entfernen."
 
 #: ../../whatsnew/2.1.rst:242
 msgid ""
@@ -403,12 +559,20 @@ msgid ""
 "can also use this framework to deprecate old features that they no longer "
 "wish to support."
 msgstr ""
+"Python 2.1 fügt das Warnungs-Framework für dieses Vorgehen hinzu. Es fügt "
+"ein Modul :mod:`warnings` hinzu, das Funktionen bietet, um Warnungen "
+"auszugeben und Warnungen herauszufiltern, die du nicht angezeigt bekommen "
+"willst. Auch Module von Drittanbietern können dieses Framework nutzen, um "
+"alte Funktionen, die sie nicht mehr unterstützen wollen, als veraltet zu "
+"markieren."
 
 #: ../../whatsnew/2.1.rst:248
 msgid ""
 "For example, in Python 2.1 the :mod:`!regex` module is deprecated, so "
 "importing it causes a warning to be printed::"
 msgstr ""
+"Zum Beispiel ist in Python 2.1 das Modul :mod:`!regex` veraltet, sein Import "
+"gibt also eine Warnung aus::"
 
 #: ../../whatsnew/2.1.rst:251
 msgid ""
@@ -417,20 +581,28 @@ msgid ""
 "         is deprecated; please use the re module\n"
 ">>>"
 msgstr ""
+">>> import regex\n"
+"__main__:1: DeprecationWarning: the regex module\n"
+"         is deprecated; please use the re module\n"
+">>>"
 
 #: ../../whatsnew/2.1.rst:256
 msgid "Warnings can be issued by calling the :func:`warnings.warn` function::"
 msgstr ""
+"Warnungen lassen sich durch Aufruf der Funktion :func:`warnings.warn` "
+"ausgeben::"
 
 #: ../../whatsnew/2.1.rst:258
 msgid "warnings.warn(\"feature X no longer supported\")"
-msgstr ""
+msgstr "warnings.warn(\"feature X no longer supported\")"
 
 #: ../../whatsnew/2.1.rst:260
 msgid ""
 "The first parameter is the warning message; an additional optional "
 "parameters can be used to specify a particular warning category."
 msgstr ""
+"Der erste Parameter ist die Warnmeldung. Mit weiteren optionalen Parametern "
+"lässt sich eine bestimmte Warnungskategorie angeben."
 
 #: ../../whatsnew/2.1.rst:263
 msgid ""
@@ -440,6 +612,12 @@ msgid ""
 "the :mod:`!regex` module and not want to spare the time to convert it to use "
 "the :mod:`re` module right now.  The warning can be suppressed by calling ::"
 msgstr ""
+"Filter lassen sich hinzufügen, um bestimmte Warnungen abzuschalten. Ein "
+"Muster aus einem regulären Ausdruck lässt sich auf die Meldung oder den "
+"Modulnamen anwenden, um eine Warnung zu unterdrücken. Zum Beispiel hast du "
+"vielleicht ein Programm, das das Modul :mod:`!regex` verwendet, und willst "
+"dir gerade nicht die Zeit nehmen, es auf das Modul :mod:`re` umzustellen. "
+"Die Warnung lässt sich durch folgenden Aufruf unterdrücken ::"
 
 #: ../../whatsnew/2.1.rst:269
 msgid ""
@@ -449,6 +627,11 @@ msgid ""
 "                        category=DeprecationWarning,\n"
 "                        module = '__main__')"
 msgstr ""
+"import warnings\n"
+"warnings.filterwarnings(action = 'ignore',\n"
+"                        message='.*regex module is deprecated',\n"
+"                        category=DeprecationWarning,\n"
+"                        module = '__main__')"
 
 #: ../../whatsnew/2.1.rst:275
 msgid ""
@@ -460,16 +643,27 @@ msgid ""
 "code is executed, or turned into exceptions that will cause the program to "
 "stop (unless the exceptions are caught in the usual way, of course)."
 msgstr ""
+"Das fügt einen Filter hinzu, der nur für Warnungen der "
+"Klasse :class:`DeprecationWarning` aus dem Modul :mod:`__main__` gilt, "
+"wendet einen regulären Ausdruck an, der nur auf die Meldung passt, dass das "
+"Modul :mod:`!regex` veraltet ist, und sorgt dafür, dass solche Warnungen "
+"ignoriert werden. Warnungen lassen sich auch nur einmal ausgeben, jedes Mal "
+"ausgeben, wenn der betreffende Code ausgeführt wird, oder in Ausnahmen "
+"umwandeln, die das Programm anhalten (sofern die Ausnahmen natürlich nicht "
+"wie üblich abgefangen werden)."
 
 #: ../../whatsnew/2.1.rst:283
 msgid ""
 "Functions were also added to Python's C API for issuing warnings; refer to "
 "PEP 230 or to Python's API documentation for the details."
 msgstr ""
+"Auch zur C-API von Python wurden Funktionen zum Ausgeben von Warnungen "
+"hinzugefügt; Einzelheiten findest du in PEP 230 oder in der API-"
+"Dokumentation von Python."
 
 #: ../../whatsnew/2.1.rst:289
 msgid ":pep:`5` - Guidelines for Language Evolution"
-msgstr ""
+msgstr ":pep:`5` - Guidelines for Language Evolution"
 
 #: ../../whatsnew/2.1.rst:290
 msgid ""
@@ -478,18 +672,23 @@ msgid ""
 "officially adopted, but the eventual policy probably won't be too different "
 "from Prescod's proposal."
 msgstr ""
+"Geschrieben von Paul Prescod, um festzulegen, welche Verfahren beim "
+"Entfernen alter Funktionen aus Python einzuhalten sind. Die in diesem PEP "
+"beschriebene Richtlinie wurde nicht offiziell angenommen, aber die "
+"endgültige Richtlinie wird sich wahrscheinlich nicht stark von Prescods "
+"Vorschlag unterscheiden."
 
 #: ../../whatsnew/2.1.rst:295
 msgid ":pep:`230` - Warning Framework"
-msgstr ""
+msgstr ":pep:`230` - Warning Framework"
 
 #: ../../whatsnew/2.1.rst:296
 msgid "Written and implemented by Guido van Rossum."
-msgstr ""
+msgstr "Geschrieben und implementiert von Guido van Rossum."
 
 #: ../../whatsnew/2.1.rst:302
 msgid "PEP 229: New Build System"
-msgstr ""
+msgstr "PEP 229: Neues Build-System"
 
 #: ../../whatsnew/2.1.rst:304
 msgid ""
@@ -500,6 +699,12 @@ msgid ""
 "notably Linux, Python installations often don't contain all useful modules "
 "they could."
 msgstr ""
+"Beim Kompilieren von Python musste der Benutzer die Datei :file:`Modules/"
+"Setup` bearbeiten, um verschiedene zusätzliche Module zu aktivieren. Die "
+"Standardauswahl ist relativ klein und auf Module beschränkt, die sich auf "
+"den meisten Unix-Plattformen kompilieren lassen. Auf Unix-Plattformen mit "
+"deutlich mehr Funktionen, allen voran Linux, enthalten Python-Installationen "
+"daher oft nicht alle nützlichen Module, die sie enthalten könnten."
 
 #: ../../whatsnew/2.1.rst:310
 msgid ""
@@ -509,6 +714,12 @@ msgid ""
 "are supported on the current machine.  It's hoped that this will make Python "
 "installations easier and more featureful."
 msgstr ""
+"Python 2.0 hat die Distutils hinzugefügt, eine Sammlung von Modulen zum "
+"Verteilen und Installieren von Erweiterungen. In Python 2.1 werden die "
+"Distutils verwendet, um einen Großteil der Standardbibliothek an "
+"Erweiterungsmodulen zu kompilieren, wobei automatisch erkannt wird, welche "
+"auf dem aktuellen Rechner unterstützt werden. Man hofft, dass Python-"
+"Installationen dadurch einfacher und umfangreicher werden."
 
 #: ../../whatsnew/2.1.rst:316
 msgid ""
@@ -521,6 +732,15 @@ msgid ""
 "Setup` file's contents.  This provides a way to specific any strange command-"
 "line flags or libraries that are required for a specific platform."
 msgstr ""
+"Statt die Datei :file:`Modules/Setup` bearbeiten zu müssen, um Module zu "
+"aktivieren, wird beim Build ein Skript :file:`setup.py` im obersten "
+"Verzeichnis der Python-Quelldistribution ausgeführt, das durch Untersuchen "
+"der Module und Header-Dateien auf dem System herauszufinden versucht, welche "
+"Module sich aktivieren lassen. Ist ein Modul in :file:`Modules/Setup` "
+"konfiguriert, versucht das Skript :file:`setup.py` nicht, dieses Modul zu "
+"kompilieren, und hält sich an den Inhalt der Datei :file:`Modules/Setup`. So "
+"lassen sich ungewöhnliche Befehlszeilenoptionen oder Bibliotheken angeben, "
+"die für eine bestimmte Plattform nötig sind."
 
 #: ../../whatsnew/2.1.rst:325
 msgid ""
@@ -531,24 +751,33 @@ msgid ""
 "subdirectories.  This makes building Python faster and also makes hacking "
 "the Makefiles clearer and simpler."
 msgstr ""
+"In einer weiteren weitreichenden Änderung am Build-Mechanismus hat Neil "
+"Schemenauer die Dinge so umgebaut, dass Python nun ein einziges, nicht "
+"rekursives Makefile verwendet statt Makefiles im obersten Verzeichnis und in "
+"jedem der Unterverzeichnisse :file:`Python/`, :file:`Parser/"
+"`, :file:`Objects/` und :file:`Modules/`. Das macht den Build von Python "
+"schneller und das Arbeiten an den Makefiles übersichtlicher und einfacher."
 
 #: ../../whatsnew/2.1.rst:335
 msgid ":pep:`229` - Using Distutils to Build Python"
-msgstr ""
+msgstr ":pep:`229` - Using Distutils to Build Python"
 
 #: ../../whatsnew/2.1.rst:336 ../../whatsnew/2.1.rst:575
 msgid "Written and implemented by A.M. Kuchling."
-msgstr ""
+msgstr "Geschrieben und implementiert von A.M. Kuchling."
 
 #: ../../whatsnew/2.1.rst:342
 msgid "PEP 205: Weak References"
-msgstr ""
+msgstr "PEP 205: Schwache Referenzen"
 
 #: ../../whatsnew/2.1.rst:344
 msgid ""
 "Weak references, available through the :mod:`weakref` module, are a minor "
 "but useful new data type in the Python programmer's toolbox."
 msgstr ""
+"Schwache Referenzen, verfügbar über das Modul :mod:`weakref`, sind ein "
+"kleiner, aber nützlicher neuer Datentyp im Werkzeugkasten des Python-"
+"Programmierers."
 
 #: ../../whatsnew/2.1.rst:347
 msgid ""
@@ -558,6 +787,11 @@ msgid ""
 "common one, and another being circular references in data structures such as "
 "trees."
 msgstr ""
+"Eine Referenz auf ein Objekt zu speichern (etwa in einem Dictionary oder "
+"einer Liste) hat die Nebenwirkung, dieses Objekt für immer am Leben zu "
+"halten. Es gibt einige bestimmte Fälle, in denen dieses Verhalten "
+"unerwünscht ist; Objekt-Caches sind der häufigste, ein weiterer sind "
+"zirkuläre Referenzen in Datenstrukturen wie Bäumen."
 
 #: ../../whatsnew/2.1.rst:352
 msgid ""
@@ -565,6 +799,9 @@ msgid ""
 "another function ``f(x)`` by storing the function's argument and its result "
 "in a dictionary::"
 msgstr ""
+"Nimm zum Beispiel eine memoisierende Funktion, die die Ergebnisse einer "
+"anderen Funktion ``f(x)`` zwischenspeichert, indem sie das Argument der "
+"Funktion und ihr Ergebnis in einem Dictionary ablegt::"
 
 #: ../../whatsnew/2.1.rst:356
 msgid ""
@@ -580,6 +817,17 @@ msgid ""
 "\n"
 "    return retval"
 msgstr ""
+"_cache = {}\n"
+"def memoize(x):\n"
+"    if _cache.has_key(x):\n"
+"        return _cache[x]\n"
+"\n"
+"    retval = f(x)\n"
+"\n"
+"    # Cache the returned object\n"
+"    _cache[x] = retval\n"
+"\n"
+"    return retval"
 
 #: ../../whatsnew/2.1.rst:368
 msgid ""
@@ -590,6 +838,12 @@ msgid ""
 "object, or a data structure that takes up a lot of memory, this can be a "
 "problem."
 msgstr ""
+"Diese Version funktioniert für einfache Dinge wie ganze Zahlen, hat aber "
+"eine Nebenwirkung: Das Dictionary ``_cache`` hält eine Referenz auf die "
+"Rückgabewerte, sie werden also nie freigegeben, bis der Python-Prozess endet "
+"und aufräumt. Bei ganzen Zahlen fällt das kaum auf, gibt :func:`!f` aber ein "
+"Objekt oder eine Datenstruktur zurück, die viel Speicher belegt, kann das "
+"ein Problem sein."
 
 #: ../../whatsnew/2.1.rst:374
 msgid ""
@@ -602,12 +856,24 @@ msgid ""
 "were a function: ``wr()``.  It will return the referenced object, or "
 "``None`` if the object no longer exists."
 msgstr ""
+"Schwache Referenzen bieten eine Möglichkeit, einen Cache zu implementieren, "
+"der Objekte nicht über ihre Zeit hinaus am Leben hält. Ist ein Objekt nur "
+"über schwache Referenzen erreichbar, wird es freigegeben, und die schwachen "
+"Referenzen zeigen dann an, dass das Objekt, auf das sie verwiesen, nicht "
+"mehr existiert. Eine schwache Referenz auf ein Objekt *obj* wird mit ``wr = "
+"weakref.ref(obj)`` erzeugt. Das referenzierte Objekt erhältst du, indem du "
+"die schwache Referenz wie eine Funktion aufrufst: ``wr()``. Sie gibt das "
+"referenzierte Objekt zurück oder ``None``, wenn das Objekt nicht mehr "
+"existiert."
 
 #: ../../whatsnew/2.1.rst:382
 msgid ""
 "This makes it possible to write a :func:`!memoize` function whose cache "
 "doesn't keep objects alive, by storing weak references in the cache. ::"
 msgstr ""
+"So lässt sich eine Funktion :func:`!memoize` schreiben, deren Cache keine "
+"Objekte am Leben hält, indem im Cache schwache Referenzen gespeichert "
+"werden. ::"
 
 #: ../../whatsnew/2.1.rst:385
 msgid ""
@@ -626,6 +892,20 @@ msgid ""
 "\n"
 "    return retval"
 msgstr ""
+"_cache = {}\n"
+"def memoize(x):\n"
+"    if _cache.has_key(x):\n"
+"        obj = _cache[x]()\n"
+"        # If weak reference object still exists,\n"
+"        # return it\n"
+"        if obj is not None: return obj\n"
+"\n"
+"    retval = f(x)\n"
+"\n"
+"    # Cache a weak reference\n"
+"    _cache[x] = weakref.ref(retval)\n"
+"\n"
+"    return retval"
 
 #: ../../whatsnew/2.1.rst:400
 msgid ""
@@ -637,6 +917,13 @@ msgid ""
 "to use a proxy will cause a :exc:`!weakref.ReferenceError` exception to be "
 "raised. ::"
 msgstr ""
+"Mit dem Modul :mod:`weakref` lassen sich auch Proxy-Objekte erzeugen, die "
+"sich wie schwache Referenzen verhalten --- ein Objekt, auf das nur Proxy-"
+"Objekte verweisen, wird freigegeben --- statt aber einen ausdrücklichen "
+"Aufruf zum Abrufen des Objekts zu verlangen, leitet der Proxy alle "
+"Operationen transparent an das Objekt weiter, solange es noch existiert. Ist "
+"das Objekt freigegeben, löst der Versuch, einen Proxy zu verwenden, "
+"eine :exc:`!weakref.ReferenceError`-Ausnahme aus. ::"
 
 #: ../../whatsnew/2.1.rst:407
 msgid ""
@@ -646,18 +933,23 @@ msgid ""
 "del obj\n"
 "proxy.attr   # raises weakref.ReferenceError"
 msgstr ""
+"proxy = weakref.proxy(obj)\n"
+"proxy.attr   # Equivalent to obj.attr\n"
+"proxy.meth() # Equivalent to obj.meth()\n"
+"del obj\n"
+"proxy.attr   # raises weakref.ReferenceError"
 
 #: ../../whatsnew/2.1.rst:416
 msgid ":pep:`205` - Weak References"
-msgstr ""
+msgstr ":pep:`205` - Weak References"
 
 #: ../../whatsnew/2.1.rst:417
 msgid "Written and implemented by Fred L. Drake, Jr."
-msgstr ""
+msgstr "Geschrieben und implementiert von Fred L. Drake, Jr."
 
 #: ../../whatsnew/2.1.rst:423
 msgid "PEP 232: Function Attributes"
-msgstr ""
+msgstr "PEP 232: Funktionsattribute"
 
 #: ../../whatsnew/2.1.rst:425
 msgid ""
@@ -672,12 +964,25 @@ msgid ""
 "documentation; for example, it means you can't properly document functions "
 "intended for private use in Zope."
 msgstr ""
+"In Python 2.1 können an Funktionen nun beliebige Informationen angehängt "
+"werden. Oft wurden Docstrings verwendet, um Informationen über Funktionen "
+"und Methoden zu speichern, weil das Attribut :attr:`~function.__doc__` die "
+"einzige Möglichkeit war, einer Funktion überhaupt Informationen anzuhängen. "
+"Im Webanwendungsserver Zope werden Funktionen zum Beispiel dadurch als "
+"sicher für öffentlichen Zugriff markiert, dass sie einen Docstring haben, "
+"und in John Aycocks Parsing-Framework SPARK enthalten Docstrings Teile der "
+"zu parsenden BNF-Grammatik. Diese Überladung ist unglücklich, da Docstrings "
+"eigentlich die Dokumentation einer Funktion enthalten sollen. Sie bedeutet "
+"zum Beispiel, dass du in Zope für den privaten Gebrauch gedachte Funktionen "
+"nicht richtig dokumentieren kannst."
 
 #: ../../whatsnew/2.1.rst:436
 msgid ""
 "Arbitrary attributes can now be set and retrieved on functions using the "
 "regular Python syntax::"
 msgstr ""
+"Beliebige Attribute lassen sich nun mit der normalen Python-Syntax an "
+"Funktionen setzen und abrufen::"
 
 #: ../../whatsnew/2.1.rst:439
 msgid ""
@@ -687,6 +992,11 @@ msgid ""
 "f.secure = 1\n"
 "f.grammar = \"A ::= B (C D)*\""
 msgstr ""
+"def f(): pass\n"
+"\n"
+"f.publish = 1\n"
+"f.secure = 1\n"
+"f.grammar = \"A ::= B (C D)*\""
 
 #: ../../whatsnew/2.1.rst:445
 msgid ""
@@ -698,18 +1008,27 @@ msgid ""
 "a :class:`!UserDict` instance, or any other random object that behaves like "
 "a mapping."
 msgstr ""
+"Auf das Dictionary mit den Attributen lässt sich "
+"über :attr:`~function.__dict__` der Funktion zugreifen. Anders als beim "
+"Attribut :attr:`~type.__dict__` von Klasseninstanzen kannst du bei "
+"Funktionen :attr:`~function.__dict__` tatsächlich ein neues Dictionary "
+"zuweisen, wobei der neue Wert auf ein normales Python-Dictionary beschränkt "
+"ist. Du *kannst* nicht tricksen und es auf eine :class:`!UserDict`-Instanz "
+"oder ein beliebiges anderes Objekt setzen, das sich wie ein Mapping verhält."
 
 #: ../../whatsnew/2.1.rst:455
 msgid ":pep:`232` - Function Attributes"
-msgstr ""
+msgstr ":pep:`232` - Function Attributes"
 
 #: ../../whatsnew/2.1.rst:456
 msgid "Written and implemented by Barry Warsaw."
-msgstr ""
+msgstr "Geschrieben und implementiert von Barry Warsaw."
 
 #: ../../whatsnew/2.1.rst:462
 msgid "PEP 235: Importing Modules on Case-Insensitive Platforms"
 msgstr ""
+"PEP 235: Module auf Plattformen ohne Unterscheidung der Groß-/"
+"Kleinschreibung importieren"
 
 #: ../../whatsnew/2.1.rst:464
 msgid ""
@@ -718,6 +1037,11 @@ msgid ""
 "distinguish the filenames ``FILE.PY`` and ``file.py``, even though they do "
 "store the file's name  in its original case (they're case-preserving, too)."
 msgstr ""
+"Manche Betriebssysteme haben Dateisysteme, die nicht zwischen Groß- und "
+"Kleinschreibung unterscheiden, vor allem MacOS und Windows. Auf diesen "
+"Systemen lassen sich die Dateinamen ``FILE.PY`` und ``file.py`` nicht "
+"unterscheiden, obwohl sie den Dateinamen in seiner ursprünglichen "
+"Schreibweise speichern (sie erhalten die Groß-/Kleinschreibung also)."
 
 #: ../../whatsnew/2.1.rst:469
 msgid ""
@@ -729,10 +1053,18 @@ msgid ""
 "the :envvar:`PYTHONCASEOK` environment variable before starting the Python "
 "interpreter."
 msgstr ""
+"In Python 2.1 simuliert die Anweisung :keyword:`import` auf Plattformen ohne "
+"Unterscheidung der Groß-/Kleinschreibung eine solche Unterscheidung. Python "
+"sucht nun standardmäßig nach dem ersten Treffer mit passender Groß-/"
+"Kleinschreibung und löst einen :exc:`ImportError` aus, wenn keine solche "
+"Datei gefunden wird; ``import file`` importiert also kein Modul namens "
+"``FILE.PY``. Eine Suche ohne Beachtung der Groß-/Kleinschreibung lässt sich "
+"anfordern, indem man vor dem Start des Python-Interpreters die "
+"Umgebungsvariable :envvar:`PYTHONCASEOK` setzt."
 
 #: ../../whatsnew/2.1.rst:480
 msgid "PEP 217: Interactive Display Hook"
-msgstr ""
+msgstr "PEP 217: Interaktiver Anzeige-Hook"
 
 #: ../../whatsnew/2.1.rst:482
 msgid ""
@@ -742,6 +1074,11 @@ msgid ""
 "be called instead of :func:`repr`. For example, you can set it to a special "
 "pretty-printing function::"
 msgstr ""
+"Bei interaktiver Verwendung des Python-Interpreters wird die Ausgabe von "
+"Befehlen mit der eingebauten Funktion :func:`repr` angezeigt. In Python 2.1 "
+"lässt sich die Variable :func:`sys.displayhook` auf ein aufrufbares Objekt "
+"setzen, das statt :func:`repr` aufgerufen wird. Zum Beispiel kannst du sie "
+"auf eine spezielle Funktion für schöne Ausgabe setzen::"
 
 #: ../../whatsnew/2.1.rst:488
 msgid ""
@@ -757,18 +1094,29 @@ msgid ""
 "[1, 2, 3,  <Recursion on list with id=135143996>]\n"
 ">>>"
 msgstr ""
+">>> # Create a recursive data structure\n"
+"... L = [1,2,3]\n"
+">>> L.append(L)\n"
+">>> L # Show Python's default output\n"
+"[1, 2, 3, [...]]\n"
+">>> # Use pprint.pprint() as the display function\n"
+"... import sys, pprint\n"
+">>> sys.displayhook = pprint.pprint\n"
+">>> L\n"
+"[1, 2, 3,  <Recursion on list with id=135143996>]\n"
+">>>"
 
 #: ../../whatsnew/2.1.rst:503
 msgid ":pep:`217` - Display Hook for Interactive Use"
-msgstr ""
+msgstr ":pep:`217` - Display Hook for Interactive Use"
 
 #: ../../whatsnew/2.1.rst:504
 msgid "Written and implemented by Moshe Zadka."
-msgstr ""
+msgstr "Geschrieben und implementiert von Moshe Zadka."
 
 #: ../../whatsnew/2.1.rst:510
 msgid "PEP 208: New Coercion Model"
-msgstr ""
+msgstr "PEP 208: Neues Koerzionsmodell"
 
 #: ../../whatsnew/2.1.rst:512
 msgid ""
@@ -776,6 +1124,10 @@ msgid ""
 "This will only affect the authors of C extensions to Python, allowing them "
 "more flexibility in writing extension types that support numeric operations."
 msgstr ""
+"Die Art, wie numerische Koerzion auf C-Ebene erfolgt, wurde erheblich "
+"geändert. Das betrifft nur Autoren von C-Erweiterungen für Python und gibt "
+"ihnen mehr Flexibilität beim Schreiben von Erweiterungstypen, die numerische "
+"Operationen unterstützen."
 
 #: ../../whatsnew/2.1.rst:516
 msgid ""
@@ -794,10 +1146,25 @@ msgid ""
 "not exist (perhaps raising a :exc:`TypeError`, perhaps trying another "
 "object's numeric methods)."
 msgstr ""
+"Erweiterungstypen können nun in ihrer Struktur ``PyTypeObject`` das Typ-Flag "
+"``Py_TPFLAGS_CHECKTYPES`` setzen, um anzuzeigen, dass sie das neue "
+"Koerzionsmodell unterstützen. In solchen Erweiterungstypen können die "
+"numerischen Slot-Funktionen nicht mehr davon ausgehen, dass sie zwei "
+"Argumente desselben Typs erhalten. Sie können zwei Argumente verschiedener "
+"Typen erhalten und dann ihre eigene interne Koerzion durchführen. Erhält die "
+"Slot-Funktion einen Typ, den sie nicht verarbeiten kann, kann sie das durch "
+"Rückgabe einer Referenz auf den Singleton-Wert ``Py_NotImplemented`` "
+"anzeigen. Dann werden die numerischen Funktionen des anderen Typs versucht, "
+"die die Operation vielleicht verarbeiten können. Gibt auch der andere Typ "
+"``Py_NotImplemented`` zurück, wird ein :exc:`TypeError` ausgelöst. Auch in "
+"Python geschriebene numerische Methoden können ``Py_NotImplemented`` "
+"zurückgeben, sodass sich der Interpreter so verhält, als gäbe es die Methode "
+"nicht (und vielleicht einen :exc:`TypeError` auslöst oder die numerischen "
+"Methoden eines anderen Objekts versucht)."
 
 #: ../../whatsnew/2.1.rst:533
 msgid ":pep:`208` - Reworking the Coercion Model"
-msgstr ""
+msgstr ":pep:`208` - Reworking the Coercion Model"
 
 #: ../../whatsnew/2.1.rst:534
 msgid ""
@@ -805,10 +1172,13 @@ msgid ""
 "by Marc-André Lemburg.  Read this to understand the fine points of how "
 "numeric operations will now be processed at the C level."
 msgstr ""
+"Geschrieben und implementiert von Neil Schemenauer, stark angelehnt an "
+"frühere Arbeiten von Marc-André Lemburg. Lies dies, um die Feinheiten zu "
+"verstehen, wie numerische Operationen nun auf C-Ebene verarbeitet werden."
 
 #: ../../whatsnew/2.1.rst:542
 msgid "PEP 241: Metadata in Python Packages"
-msgstr ""
+msgstr "PEP 241: Metadaten in Python-Paketen"
 
 #: ../../whatsnew/2.1.rst:544
 msgid ""
@@ -820,6 +1190,13 @@ msgid ""
 "but registering software at the Vaults is optional, and many people did not "
 "bother."
 msgstr ""
+"Eine häufige Beschwerde von Python-Benutzern ist, dass es keinen einzigen "
+"Katalog aller existierenden Python-Module gibt. T. Middletons Vaults of "
+"Parnassus unter ``www.vex.net/parnassus/`` (im Februar 2009 eingestellt, `im "
+"Internet Archive Wayback Machine verfügbar <https://web.archive.org/web/"
+"20090130140102/http://www.vex.net/parnassus/>`_) war der größte Katalog von "
+"Python-Modulen, aber die Registrierung von Software in den Vaults ist "
+"optional, und viele haben sich die Mühe nicht gemacht."
 
 #: ../../whatsnew/2.1.rst:552
 msgid ""
@@ -837,6 +1214,19 @@ msgid ""
 "could support an ``upload`` option that would automatically upload your "
 "package to a catalog server."
 msgstr ""
+"Als ersten kleinen Schritt zur Lösung des Problems enthält mit dem Distutils-"
+"Befehl :command:`sdist` paketierte Python-Software eine Datei "
+"namens :file:`PKG-INFO` mit Informationen über das Paket wie Name, Version "
+"und Autor (Metadaten, in der Terminologie der Katalogisierung). :pep:`241` "
+"enthält die vollständige Liste der Felder, die in der Datei :file:`PKG-INFO` "
+"vorkommen können. Wenn Leute ihre Software mit Python 2.1 zu paketieren "
+"beginnen, enthalten immer mehr Pakete Metadaten, sodass sich automatisierte "
+"Katalogsysteme bauen und damit experimentieren lässt. Mit der daraus "
+"gewonnenen Erfahrung lässt sich vielleicht ein wirklich guter Katalog "
+"entwerfen und dann in Python 2.2 Unterstützung dafür einbauen. Zum Beispiel "
+"könnten die Distutils-Befehle :command:`sdist` und :command:`bdist_\\*` eine "
+"Option ``upload`` unterstützen, die dein Paket automatisch auf einen "
+"Katalogserver hochlädt."
 
 #: ../../whatsnew/2.1.rst:565
 msgid ""
@@ -847,24 +1237,33 @@ msgid ""
 "enhancements.  It will be available from the Distutils SIG at https://"
 "www.python.org/community/sigs/current/distutils-sig/."
 msgstr ""
+"Du kannst schon Pakete mit :file:`PKG-INFO` erstellen, auch wenn du nicht "
+"Python 2.1 verwendest, da es ein neues Release der Distutils für Benutzer "
+"älterer Python-Versionen geben wird. Version 1.0.2 der Distutils enthält die "
+"in :pep:`241` beschriebenen Änderungen sowie verschiedene Fehlerkorrekturen "
+"und Verbesserungen. Sie wird über die Distutils-SIG unter https://"
+"www.python.org/community/sigs/current/distutils-sig/ verfügbar sein."
 
 #: ../../whatsnew/2.1.rst:574
 msgid ":pep:`241` - Metadata for Python Software Packages"
-msgstr ""
+msgstr ":pep:`241` - Metadata for Python Software Packages"
 
 #: ../../whatsnew/2.1.rst:577
 msgid ":pep:`243` - Module Repository Upload Mechanism"
-msgstr ""
+msgstr ":pep:`243` - Module Repository Upload Mechanism"
 
 #: ../../whatsnew/2.1.rst:578
 msgid ""
 "Written by Sean Reifschneider, this draft PEP describes a proposed mechanism "
 "for uploading  Python packages to a central server."
 msgstr ""
+"Dieser von Sean Reifschneider geschriebene PEP-Entwurf beschreibt einen "
+"vorgeschlagenen Mechanismus, um Python-Pakete auf einen zentralen Server "
+"hochzuladen."
 
 #: ../../whatsnew/2.1.rst:585
 msgid "New and Improved Modules"
-msgstr ""
+msgstr "Neue und verbesserte Module"
 
 #: ../../whatsnew/2.1.rst:587
 msgid ""
@@ -876,6 +1275,13 @@ msgid ""
 "package, or class name.  For example, ``pydoc xml.dom`` displays the "
 "following::"
 msgstr ""
+"Ka-Ping Yee hat zwei neue Module beigesteuert: :mod:`!inspect.py`, ein "
+"Modul, das Informationen über laufenden Python-Code liefert, und :mod:`!"
+"pydoc.py`, ein Modul, das Docstrings interaktiv in HTML oder Text umwandelt. "
+"Als Bonus verwendet :file:`Tools/scripts/pydoc`, das nun automatisch "
+"installiert wird, :mod:`!pydoc.py`, um anhand eines Python-Modul-, Paket- "
+"oder Klassennamens Dokumentation anzuzeigen. Zum Beispiel zeigt ``pydoc "
+"xml.dom`` Folgendes an::"
 
 #: ../../whatsnew/2.1.rst:594
 msgid ""
@@ -894,12 +1300,28 @@ msgid ""
 "    This package contains the following modules:\n"
 "      ..."
 msgstr ""
+"Python Library Documentation: package xml.dom in xml\n"
+"\n"
+"NAME\n"
+"    xml.dom - W3C Document Object Model implementation for Python.\n"
+"\n"
+"FILE\n"
+"    /usr/local/lib/python2.1/xml/dom/__init__.pyc\n"
+"\n"
+"DESCRIPTION\n"
+"    The Python mapping of the Document Object Model is documented in the\n"
+"    Python Library Reference in the section on the xml.dom package.\n"
+"\n"
+"    This package contains the following modules:\n"
+"      ..."
 
 #: ../../whatsnew/2.1.rst:609
 msgid ""
 ":file:`pydoc` also includes a Tk-based interactive help "
 "browser.   :file:`pydoc` quickly becomes addictive; try it out!"
 msgstr ""
+":file:`pydoc` enthält außerdem einen Tk-basierten interaktiven Hilfe-"
+"Browser. :file:`pydoc` macht schnell süchtig. Probier es aus!"
 
 #: ../../whatsnew/2.1.rst:612
 msgid ""
@@ -911,6 +1333,13 @@ msgid ""
 "adaptation of Kent Beck's Smalltalk testing framework.  See https://"
 "pyunit.sourceforge.net/ for more information about PyUnit."
 msgstr ""
+"Zwei verschiedene Module für Unit-Tests wurden zur Standardbibliothek "
+"hinzugefügt. Das von Tim Peters beigesteuerte Modul :mod:`doctest` bietet "
+"ein Test-Framework, das in Docstrings eingebettete Beispiele ausführt und "
+"die Ergebnisse mit der erwarteten Ausgabe vergleicht. PyUnit, beigesteuert "
+"von Steve Purcell, ist ein von JUnit inspiriertes Unit-Test-Framework, das "
+"wiederum eine Adaption von Kent Becks Smalltalk-Test-Framework war. Weitere "
+"Informationen zu PyUnit findest du unter https://pyunit.sourceforge.net/."
 
 #: ../../whatsnew/2.1.rst:620
 msgid ""
@@ -921,6 +1350,13 @@ msgid ""
 "Unix :program:`diff` program, and in fact the sample program :file:`Tools/"
 "scripts/ndiff.py` demonstrates how to write such a script."
 msgstr ""
+"Das Modul :mod:`difflib` enthält eine "
+"Klasse :class:`~difflib.SequenceMatcher`, die zwei Sequenzen vergleicht und "
+"die Änderungen berechnet, die nötig sind, um die eine Sequenz in die andere "
+"umzuwandeln. Mit diesem Modul lässt sich zum Beispiel ein Werkzeug ähnlich "
+"dem Unix-Programm :program:`diff` schreiben, und das "
+"Beispielprogramm :file:`Tools/scripts/ndiff.py` zeigt tatsächlich, wie man "
+"ein solches Skript schreibt."
 
 #: ../../whatsnew/2.1.rst:626
 msgid ""
@@ -930,6 +1366,12 @@ msgid ""
 "lower in the depth ordering, and the panel library figures out where panels "
 "overlap and which sections are visible."
 msgstr ""
+":mod:`curses.panel`, ein Wrapper für die Panel-Bibliothek, die Teil von "
+"ncurses und SYSV curses ist, wurde von Thomas Gellekum beigesteuert. Die "
+"Panel-Bibliothek bietet Fenster mit der zusätzlichen Eigenschaft der Tiefe. "
+"Fenster lassen sich in der Tiefenreihenfolge nach oben oder unten "
+"verschieben, und die Panel-Bibliothek ermittelt, wo sich Panels überlappen "
+"und welche Bereiche sichtbar sind."
 
 #: ../../whatsnew/2.1.rst:632
 msgid ""
@@ -939,6 +1381,12 @@ msgid ""
 "ability for Expat parsers to handle files in any encoding supported by "
 "Python, and various bugfixes for SAX, DOM, and the :mod:`!minidom` module."
 msgstr ""
+"Das Paket PyXML hat seit Python 2.0 einige Releases durchlaufen, und Python "
+"2.1 enthält eine aktualisierte Version des Pakets :mod:`xml`. Zu den "
+"nennenswerten Änderungen gehören Unterstützung für Expat 1.2 und neuere "
+"Versionen, die Fähigkeit von Expat-Parsern, Dateien in jeder von Python "
+"unterstützten Kodierung zu verarbeiten, und verschiedene Fehlerkorrekturen "
+"für SAX, DOM und das Modul :mod:`!minidom`."
 
 #: ../../whatsnew/2.1.rst:638
 msgid ""
@@ -951,6 +1399,14 @@ msgid ""
 "lists the stack frames, but also lists the function arguments and the local "
 "variables for each frame."
 msgstr ""
+"Ping hat außerdem einen weiteren Hook zur Behandlung nicht abgefangener "
+"Ausnahmen beigesteuert. :func:`sys.excepthook` lässt sich auf ein "
+"aufrufbares Objekt setzen. Wird eine Ausnahme von keinem :keyword:`try`..."
+"\\ :keyword:`except`-Block abgefangen, wird sie an :func:`sys.excepthook` "
+"übergeben, das dann damit machen kann, was es will. Auf der neunten Python-"
+"Konferenz zeigte Ping eine Anwendung für diesen Hook: einen erweiterten "
+"Traceback, der nicht nur die Stack-Frames auflistet, sondern auch die "
+"Funktionsargumente und lokalen Variablen jedes Frames."
 
 #: ../../whatsnew/2.1.rst:646
 msgid ""
@@ -964,10 +1420,19 @@ msgid ""
 "lengthier ``time.asctime(time.localtime(time.time()))`` that was previously "
 "required."
 msgstr ""
+"Verschiedene Funktionen im Modul :mod:`time`, etwa :func:`~time.asctime` "
+"und :func:`~time.localtime`, benötigen ein Gleitkommaargument mit der Zeit "
+"in Sekunden seit der Epoche. Am häufigsten werden diese Funktionen mit der "
+"aktuellen Zeit verwendet, daher wurde das Gleitkommaargument optional "
+"gemacht. Wird kein Wert angegeben, wird die aktuelle Zeit verwendet. "
+"Logdatei-Einträge brauchen zum Beispiel meist einen String mit der aktuellen "
+"Zeit. In Python 2.1 lässt sich ``time.asctime()`` verwenden statt des "
+"längeren ``time.asctime(time.localtime(time.time()))``, das bisher nötig war."
 
 #: ../../whatsnew/2.1.rst:655
 msgid "This change was proposed and implemented by Thomas Wouters."
 msgstr ""
+"Diese Änderung wurde von Thomas Wouters vorgeschlagen und implementiert."
 
 #: ../../whatsnew/2.1.rst:657
 msgid ""
@@ -980,12 +1445,23 @@ msgid ""
 "passive mode is unsuitable for your application or network setup, call "
 "``set_pasv(0)`` on FTP objects to disable passive mode."
 msgstr ""
+"Das Modul :mod:`ftplib` ruft Dateien nun standardmäßig im passiven Modus ab, "
+"weil der passive Modus hinter einer Firewall eher funktioniert. Diese "
+"Anfrage kam aus dem Debian-Bugtracker, da andere Debian-Pakete :mod:`ftplib` "
+"zum Abrufen von Dateien verwenden und dann hinter einer Firewall nicht "
+"funktionieren. Es gilt als unwahrscheinlich, dass das jemandem Probleme "
+"bereitet, denn Netscape verwendet standardmäßig den passiven Modus, und kaum "
+"jemand beschwert sich. Ist der passive Modus für deine Anwendung oder dein "
+"Netzwerk aber ungeeignet, rufe ``set_pasv(0)`` auf FTP-Objekten auf, um ihn "
+"abzuschalten."
 
 #: ../../whatsnew/2.1.rst:666
 msgid ""
 "Support for raw socket access has been added to the :mod:`socket` module, "
 "contributed by Grant Edwards."
 msgstr ""
+"Unterstützung für rohen Socket-Zugriff wurde zum Modul :mod:`socket` "
+"hinzugefügt, beigesteuert von Grant Edwards."
 
 #: ../../whatsnew/2.1.rst:669
 msgid ""
@@ -993,6 +1469,10 @@ msgid ""
 "browser for displaying timing profiles for Python programs, invoked when the "
 "module is run as a script.  Contributed by  Eric S. Raymond."
 msgstr ""
+"Das Modul :mod:`pstats` enthält nun einen einfachen interaktiven Statistik-"
+"Browser zur Anzeige von Zeitprofilen von Python-Programmen, der aufgerufen "
+"wird, wenn das Modul als Skript ausgeführt wird. Beigesteuert von Eric S. "
+"Raymond."
 
 #: ../../whatsnew/2.1.rst:673
 msgid ""
@@ -1003,6 +1483,13 @@ msgid ""
 "returns the frame that is *depth* calls below the top of the stack.  For "
 "example, ``sys._getframe(1)`` returns the caller's frame object."
 msgstr ""
+"Eine neue implementierungsabhängige Funktion ``sys._getframe([depth])`` "
+"wurde hinzugefügt, die ein bestimmtes Frame-Objekt aus dem aktuellen "
+"Aufrufstack zurückgibt. :func:`sys._getframe` gibt den Frame an der Spitze "
+"des Aufrufstacks zurück. Wird das optionale ganzzahlige Argument *depth* "
+"angegeben, gibt die Funktion den Frame zurück, der *depth* Aufrufe unterhalb "
+"der Spitze des Stacks liegt. Zum Beispiel gibt ``sys._getframe(1)`` das "
+"Frame-Objekt des Aufrufers zurück."
 
 #: ../../whatsnew/2.1.rst:680
 msgid ""
@@ -1010,10 +1497,13 @@ msgid ""
 "implementation.  Use it for debugging, and resist the temptation to put it "
 "into production code."
 msgstr ""
+"Diese Funktion gibt es nur in CPython, nicht in Jython oder der .NET-"
+"Implementierung. Verwende sie zum Debuggen und widerstehe der Versuchung, "
+"sie in Produktivcode einzusetzen."
 
 #: ../../whatsnew/2.1.rst:688
 msgid "Other Changes and Fixes"
-msgstr ""
+msgstr "Weitere Änderungen und Korrekturen"
 
 #: ../../whatsnew/2.1.rst:690
 msgid ""
@@ -1022,6 +1512,10 @@ msgid ""
 "patches applied, and 136 bugs fixed; both figures are likely to be "
 "underestimates.  Some of the more notable changes are:"
 msgstr ""
+"Wegen des kürzeren Release-Zyklus gab es in Python 2.1 relativ wenige "
+"kleinere Änderungen. Eine Suche in den CVS-Änderungsprotokollen ergibt 117 "
+"eingespielte Patches und 136 behobene Fehler. Beide Zahlen sind "
+"wahrscheinlich zu niedrig. Einige der bemerkenswerteren Änderungen sind:"
 
 #: ../../whatsnew/2.1.rst:695
 msgid ""
@@ -1033,6 +1527,13 @@ msgid ""
 "the :program:`configure` script; see :file:`Objects/obmalloc.c` for the "
 "implementation details."
 msgstr ""
+"Ein spezialisierter Objekt-Allokator ist nun optional verfügbar, der "
+"schneller als das :c:func:`malloc` des Systems sein und weniger Speicher-"
+"Overhead haben sollte. Der Allokator verwendet die C-Funktion :c:func:`!"
+"malloc`, um große Speicherpools zu holen, und bedient dann kleinere "
+"Speicheranforderungen aus diesen Pools. Er lässt sich aktivieren, indem man "
+"dem Skript :program:`configure` die Option :option:`!--with-pymalloc` "
+"übergibt; Implementierungsdetails findest du in :file:`Objects/obmalloc.c`."
 
 #: ../../whatsnew/2.1.rst:702
 msgid ""
@@ -1050,10 +1551,24 @@ msgid ""
 "Python fell afoul of this and had to be fixed; doubtless there are more "
 "third-party modules that will have the same problem."
 msgstr ""
+"Autoren von C-Erweiterungsmodulen sollten ihren Code mit aktiviertem Objekt-"
+"Allokator testen, weil manch fehlerhafter Code kaputtgehen und zur Laufzeit "
+"Core-Dumps verursachen kann. Es gibt eine Reihe von Funktionen zur "
+"Speicherallokation in der C-API von Python, die bisher nur Aliase "
+"für :c:func:`malloc` und :c:func:`free` der C-Bibliothek waren. Hast du also "
+"versehentlich nicht zueinander passende Funktionen aufgerufen, fiel der "
+"Fehler nicht auf. Ist der Objekt-Allokator aktiviert, sind diese Funktionen "
+"keine Aliase von :c:func:`!malloc` und :c:func:`!free` mehr, und der Aufruf "
+"der falschen Funktion zum Freigeben von Speicher führt zu einem Core-Dump. "
+"Wurde Speicher zum Beispiel mit :c:macro:`PyMem_New` angelegt, muss er "
+"mit :c:func:`PyMem_Del` freigegeben werden, nicht mit :c:func:`!free`. "
+"Einige Module, die mit Python ausgeliefert werden, hatten dieses Problem und "
+"mussten korrigiert werden. Zweifellos gibt es weitere Module von "
+"Drittanbietern mit demselben Problem."
 
 #: ../../whatsnew/2.1.rst:715
 msgid "The object allocator was contributed by Vladimir Marangozov."
-msgstr ""
+msgstr "Der Objekt-Allokator wurde von Vladimir Marangozov beigesteuert."
 
 #: ../../whatsnew/2.1.rst:717
 msgid ""
@@ -1066,6 +1581,16 @@ msgid ""
 "operating systems. Tim Peters did much of the benchmarking and coding for "
 "this change, motivated by a discussion in comp.lang.python."
 msgstr ""
+"Die Geschwindigkeit zeilenorientierter Datei-Ein-/Ausgabe wurde verbessert, "
+"weil sich Leute oft über ihre mangelnde Geschwindigkeit beschweren und weil "
+"sie oft als naiver Benchmark verwendet wird. Die Methode :meth:`readline` "
+"von Dateiobjekten wurde daher so neu geschrieben, dass sie viel schneller "
+"ist. Die genaue Beschleunigung variiert von Plattform zu Plattform, je "
+"nachdem, wie langsam :c:func:`!getc` der C-Bibliothek war, liegt aber bei "
+"etwa 66 % und auf bestimmten Betriebssystemen möglicherweise noch deutlich "
+"höher. Tim Peters hat einen Großteil der Benchmarks und der Programmierung "
+"für diese Änderung übernommen, angeregt durch eine Diskussion in "
+"comp.lang.python."
 
 #: ../../whatsnew/2.1.rst:726
 msgid ""
@@ -1076,6 +1601,13 @@ msgid ""
 "every iteration but not reading the entire file into memory as the "
 "existing :meth:`!readlines` method does. You'd use it like this::"
 msgstr ""
+"Außerdem wurden ein neues Modul und eine neue Methode für Dateiobjekte "
+"hinzugefügt, beigesteuert von Jeff Epler. Die neue Methode :meth:`!"
+"xreadlines` ähnelt der vorhandenen eingebauten Funktion :func:`!"
+"xrange`. :func:`!xreadlines` gibt ein undurchsichtiges Sequenzobjekt zurück, "
+"das nur das Iterieren unterstützt und bei jeder Iteration eine Zeile liest, "
+"statt wie die vorhandene Methode :meth:`!readlines` die ganze Datei in den "
+"Speicher zu lesen. Du würdest sie so verwenden::"
 
 #: ../../whatsnew/2.1.rst:733
 msgid ""
@@ -1083,6 +1615,9 @@ msgid ""
 "    # ... do something for each line ...\n"
 "    ..."
 msgstr ""
+"for line in sys.stdin.xreadlines():\n"
+"    # ... do something for each line ...\n"
+"    ..."
 
 #: ../../whatsnew/2.1.rst:737
 msgid ""
@@ -1090,6 +1625,9 @@ msgid ""
 "for January 1--15, 2001 at https://mail.python.org/pipermail/python-dev/2001-"
 "January/."
 msgstr ""
+"Eine ausführlichere Diskussion der Änderungen an der zeilenweisen Ein-/"
+"Ausgabe findest du in der python-dev-Zusammenfassung vom 1. bis 15. Januar "
+"2001 unter https://mail.python.org/pipermail/python-dev/2001-January/."
 
 #: ../../whatsnew/2.1.rst:740
 msgid ""
@@ -1101,6 +1639,13 @@ msgid ""
 "was implemented mostly by Tim Peters and Guido van Rossum, after a "
 "suggestion and preliminary patch by Moshe Zadka."
 msgstr ""
+"Eine neue Methode :meth:`~dict.popitem` wurde zu Dictionaries hinzugefügt, "
+"um den Inhalt eines Dictionarys zerstörend zu durchlaufen. Das kann bei "
+"großen Dictionaries schneller sein, weil keine Liste mit allen Schlüsseln "
+"oder Werten erzeugt werden muss. ``D.popitem()`` entfernt ein zufälliges "
+"Paar ``(key, value)`` aus dem Dictionary ``D`` und gibt es als 2-Tupel "
+"zurück. Implementiert wurde das hauptsächlich von Tim Peters und Guido van "
+"Rossum nach einem Vorschlag und einem ersten Patch von Moshe Zadka."
 
 #: ../../whatsnew/2.1.rst:748
 msgid ""
@@ -1111,12 +1656,20 @@ msgid ""
 "will add them to the importing module's namespace.  To fix this, simply list "
 "the public names in ``__all__``::"
 msgstr ""
+"Module können nun steuern, welche Namen bei ``from module import *`` "
+"importiert werden, indem sie ein Attribut ``__all__`` mit einer Liste der zu "
+"importierenden Namen definieren. Eine häufige Beschwerde ist, dass ``from "
+"module import *`` andere Module, die das Modul importiert, etwa :mod:`sys` "
+"oder :mod:`string`, in den Namensraum des importierenden Moduls aufnimmt. Um "
+"das zu beheben, liste einfach die öffentlichen Namen in ``__all__`` auf::"
 
 #: ../../whatsnew/2.1.rst:755
 msgid ""
 "# List public names\n"
 "__all__ = ['Database', 'open']"
 msgstr ""
+"# List public names\n"
+"__all__ = ['Database', 'open']"
 
 #: ../../whatsnew/2.1.rst:758
 msgid ""
@@ -1124,6 +1677,9 @@ msgid ""
 "Wolfson, but after some python-dev discussion, a weaker final version was "
 "checked in."
 msgstr ""
+"Eine strengere Version dieses Patches wurde zuerst von Ben Wolfson "
+"vorgeschlagen und implementiert, nach einiger Diskussion auf python-dev "
+"wurde aber eine schwächere endgültige Version eingecheckt."
 
 #: ../../whatsnew/2.1.rst:762
 msgid ""
@@ -1134,6 +1690,13 @@ msgid ""
 "ones, and using the ``\\n``, ``\\t``, ``\\r`` escapes for the appropriate "
 "characters, and implemented this new formatting."
 msgstr ""
+"Bei Anwendung von :func:`repr` auf Strings wurden für nicht druckbare "
+"Zeichen bisher oktale Escapes verwendet. Ein Zeilenumbruch war zum Beispiel "
+"``'\\012'``. Das war ein Überbleibsel von Pythons C-Herkunft, doch heute hat "
+"Oktal kaum noch praktischen Nutzen. Ka-Ping Yee schlug vor, hexadezimale "
+"statt oktaler Escapes und für die entsprechenden Zeichen die Escapes "
+"``\\n``, ``\\t`` und ``\\r`` zu verwenden, und hat diese neue Formatierung "
+"implementiert."
 
 #: ../../whatsnew/2.1.rst:769
 msgid ""
@@ -1141,6 +1704,9 @@ msgid ""
 "the filename and line number of the error, a pleasant side effect of the "
 "compiler reorganization done by Jeremy Hylton."
 msgstr ""
+"Zur Übersetzungszeit erkannte Syntaxfehler können nun Ausnahmen auslösen, "
+"die Dateiname und Zeilennummer des Fehlers enthalten, eine angenehme "
+"Nebenwirkung der Umstrukturierung des Compilers durch Jeremy Hylton."
 
 #: ../../whatsnew/2.1.rst:773
 msgid ""
@@ -1149,12 +1715,18 @@ msgid ""
 "import hooks that have been installed.  This is also encouraged for third-"
 "party extensions that need to import some other module from C code."
 msgstr ""
+"C-Erweiterungen, die andere Module importieren, wurden so geändert, dass "
+"sie :c:func:`PyImport_ImportModule` verwenden. Sie nutzen also alle "
+"installierten Import-Hooks. Das wird auch Erweiterungen von Drittanbietern "
+"empfohlen, die aus C-Code ein anderes Modul importieren müssen."
 
 #: ../../whatsnew/2.1.rst:778
 msgid ""
 "The size of the Unicode character database was shrunk by another 340K thanks "
 "to Fredrik Lundh."
 msgstr ""
+"Die Größe der Unicode-Zeichendatenbank schrumpfte dank Fredrik Lundh um "
+"weitere 340K."
 
 #: ../../whatsnew/2.1.rst:781
 msgid ""
@@ -1162,6 +1734,9 @@ msgid ""
 "Jason Tishler); RISCOS (by Dietmar Schwertberger); Unixware 7  (by Billy G. "
 "Allie)."
 msgstr ""
+"Einige neue Portierungen wurden beigesteuert: MacOS X (von Steven Majewski), "
+"Cygwin (von Jason Tishler), RISCOS (von Dietmar Schwertberger), Unixware 7 "
+"(von Billy G. Allie)."
 
 #: ../../whatsnew/2.1.rst:785
 msgid ""
@@ -1169,10 +1744,14 @@ msgid ""
 "edits, and other tweaks, too lengthy to be worth itemizing; see the CVS logs "
 "for the full details if you want them."
 msgstr ""
+"Und es gibt die übliche Liste kleinerer Fehlerkorrekturen, kleinerer "
+"Speicherlecks, Docstring-Änderungen und anderer Anpassungen, die zu lang "
+"ist, um sie einzeln aufzuführen. Alle Details findest du bei Bedarf in den "
+"CVS-Protokollen."
 
 #: ../../whatsnew/2.1.rst:793
 msgid "Acknowledgements"
-msgstr ""
+msgstr "Danksagungen"
 
 #: ../../whatsnew/2.1.rst:795
 msgid ""
@@ -1181,3 +1760,6 @@ msgid ""
 "Michael Hudson, Marc-André Lemburg, Fredrik Lundh, Neil Schemenauer, Thomas "
 "Wouters."
 msgstr ""
+"Der Autor dankt folgenden Personen für Vorschläge zu verschiedenen Entwürfen "
+"dieses Artikels: Graeme Cross, David Goodger, Jay Graves, Michael Hudson, "
+"Marc-André Lemburg, Fredrik Lundh, Neil Schemenauer, Thomas Wouters."
