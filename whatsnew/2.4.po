@@ -1,20 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation of the Python documentation.
 # Copyright (C) 2001 Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
 # python-doc bot, 2025
+# Swen Bachmann, 2026
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-09 03:05+0000\n"
 "PO-Revision-Date: 2025-09-16 00:02+0000\n"
-"Last-Translator: python-doc bot, 2025\n"
-"Language-Team: German (https://app.transifex.com/python-doc/teams/5390/de/)\n"
+"Last-Translator: Swen Bachmann\n"
+"Language-Team: German (https://github.com/python/python-docs-de)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,21 +22,23 @@ msgstr ""
 
 #: ../../whatsnew/2.4.rst:3
 msgid "What's New in Python 2.4"
-msgstr ""
+msgstr "Was ist neu in Python 2.4"
 
 #: ../../whatsnew/2.4.rst:0
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: ../../whatsnew/2.4.rst:5
 msgid "A.M. Kuchling"
-msgstr ""
+msgstr "A.M. Kuchling"
 
 #: ../../whatsnew/2.4.rst:14
 msgid ""
 "This article explains the new features in Python 2.4.1, released on March "
 "30, 2005."
 msgstr ""
+"Dieser Artikel erklärt die neuen Funktionen in Python 2.4.1, veröffentlicht "
+"am 30. März 2005."
 
 #: ../../whatsnew/2.4.rst:17
 msgid ""
@@ -47,6 +48,11 @@ msgid ""
 "function decorators and generator expressions; most other changes are to the "
 "standard library."
 msgstr ""
+"Python 2.4 ist ein mittelgroßes Release. Es bringt nicht so viele Änderungen "
+"wie das radikale Python 2.2, aber mehr Funktionen als das zurückhaltende "
+"Release 2.3. Die wichtigsten neuen Sprachfunktionen sind "
+"Funktionsdekoratoren und Generatorausdrücke. Die meisten anderen Änderungen "
+"betreffen die Standardbibliothek."
 
 #: ../../whatsnew/2.4.rst:22
 msgid ""
@@ -54,6 +60,9 @@ msgid ""
 "bugs fixed between Python 2.3 and 2.4.  Both figures are likely to be "
 "underestimates."
 msgstr ""
+"Laut den CVS-Änderungsprotokollen wurden zwischen Python 2.3 und 2.4 481 "
+"Patches eingespielt und 502 Fehler behoben. Beide Zahlen sind wahrscheinlich "
+"zu niedrig."
 
 #: ../../whatsnew/2.4.rst:25
 msgid ""
@@ -64,10 +73,16 @@ msgid ""
 "Often you will be referred to the PEP for a particular new feature for "
 "explanations of the implementation and design rationale."
 msgstr ""
+"Dieser Artikel versucht nicht, eine vollständige Spezifikation jeder "
+"einzelnen neuen Funktion zu liefern, sondern gibt eine kurze Einführung in "
+"jede Funktion. Alle Details findest du in der Dokumentation zu Python 2.4, "
+"etwa in der Python Library Reference und im Python Reference Manual. Für "
+"Erklärungen zur Implementierung und zur Designbegründung wirst du oft auf "
+"den PEP zur jeweiligen neuen Funktion verwiesen."
 
 #: ../../whatsnew/2.4.rst:36
 msgid "PEP 218: Built-In Set Objects"
-msgstr ""
+msgstr "PEP 218: Eingebaute Mengenobjekte"
 
 #: ../../whatsnew/2.4.rst:38
 msgid ""
@@ -78,6 +93,12 @@ msgid ""
 "sequences, and for mathematical operations like unions, intersections, "
 "differences, and symmetric differences. ::"
 msgstr ""
+"Python 2.3 hat das Modul :mod:`!sets` eingeführt. C-Implementierungen von "
+"Mengen-Datentypen wurden nun als zwei neue eingebaute Typen, "
+"``set(iterable)`` und ``frozenset(iterable)``, zum Python-Kern hinzugefügt. "
+"Sie bieten schnelle Operationen für Enthaltenseinstests, zum Entfernen von "
+"Duplikaten aus Sequenzen und für mathematische Operationen wie Vereinigung, "
+"Schnittmenge, Differenz und symmetrische Differenz. ::"
 
 #: ../../whatsnew/2.4.rst:45
 msgid ""
@@ -107,6 +128,31 @@ msgid ""
 ">>> a\n"
 "set(['a', 'c', 'b', 'd', 'r', 'w', 'y', 'z'])"
 msgstr ""
+">>> a = set('abracadabra')              # form a set from a string\n"
+">>> 'z' in a                            # fast membership testing\n"
+"False\n"
+">>> a                                   # unique letters in a\n"
+"set(['a', 'r', 'b', 'c', 'd'])\n"
+">>> ''.join(a)                          # convert back into a string\n"
+"'arbcd'\n"
+"\n"
+">>> b = set('alacazam')                 # form a second set\n"
+">>> a - b                               # letters in a but not in b\n"
+"set(['r', 'd', 'b'])\n"
+">>> a | b                               # letters in either a or b\n"
+"set(['a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'])\n"
+">>> a & b                               # letters in both a and b\n"
+"set(['a', 'c'])\n"
+">>> a ^ b                               # letters in a or b but not both\n"
+"set(['r', 'd', 'b', 'm', 'z', 'l'])\n"
+"\n"
+">>> a.add('z')                          # add a new element\n"
+">>> a.update('wxy')                     # add multiple new elements\n"
+">>> a\n"
+"set(['a', 'c', 'b', 'd', 'r', 'w', 'y', 'x', 'z'])\n"
+">>> a.remove('x')                       # take one element out\n"
+">>> a\n"
+"set(['a', 'c', 'b', 'd', 'r', 'w', 'y', 'z'])"
 
 #: ../../whatsnew/2.4.rst:71
 msgid ""
@@ -114,6 +160,9 @@ msgid ""
 "is immutable and hashable, it may be used as a dictionary key or as a member "
 "of another set."
 msgstr ""
+"Der Typ :func:`frozenset` ist eine unveränderliche Version von :func:`set`. "
+"Da er unveränderlich und hashbar ist, lässt er sich als Dictionary-Schlüssel "
+"oder als Element einer anderen Menge verwenden."
 
 #: ../../whatsnew/2.4.rst:75
 msgid ""
@@ -121,20 +170,25 @@ msgid ""
 "if you wish to subclass the :class:`!Set` or :class:`!ImmutableSet` "
 "classes.  There are currently no plans to deprecate the module."
 msgstr ""
+"Das Modul :mod:`!sets` bleibt in der Standardbibliothek und kann nützlich "
+"sein, wenn du die Klassen :class:`!Set` oder :class:`!ImmutableSet` ableiten "
+"willst. Derzeit ist nicht geplant, das Modul als veraltet zu markieren."
 
 #: ../../whatsnew/2.4.rst:82
 msgid ":pep:`218` - Adding a Built-In Set Object Type"
-msgstr ""
+msgstr ":pep:`218` - Adding a Built-In Set Object Type"
 
 #: ../../whatsnew/2.4.rst:83
 msgid ""
 "Originally proposed by Greg Wilson and ultimately implemented by Raymond "
 "Hettinger."
 msgstr ""
+"Ursprünglich vorgeschlagen von Greg Wilson und schließlich implementiert von "
+"Raymond Hettinger."
 
 #: ../../whatsnew/2.4.rst:90
 msgid "PEP 237: Unifying Long Integers and Integers"
-msgstr ""
+msgstr "PEP 237: Vereinheitlichung von langen Ganzzahlen und Ganzzahlen"
 
 #: ../../whatsnew/2.4.rst:92
 msgid ""
@@ -146,6 +200,13 @@ msgid ""
 "produce a warning and instead produce a different result that's usually a "
 "long integer."
 msgstr ""
+"Der langwierige Übergangsprozess für diesen PEP, der in Python 2.2 begann, "
+"macht in Python 2.4 einen weiteren Schritt. In 2.3 lösten bestimmte "
+"Ganzzahloperationen, die sich nach der Vereinheitlichung von int/long anders "
+"verhalten würden, :exc:`FutureWarning`-Warnungen aus und gaben auf 32 oder "
+"64 Bit (je nach Plattform) begrenzte Werte zurück. In 2.4 erzeugen diese "
+"Ausdrücke keine Warnung mehr, sondern ein anderes Ergebnis, meist eine lange "
+"Ganzzahl."
 
 #: ../../whatsnew/2.4.rst:99
 msgid ""
@@ -154,20 +215,26 @@ msgid ""
 "warning in 2.3, evaluating to 0 on 32-bit platforms.  In Python 2.4, this "
 "expression now returns the correct answer, 8589934592."
 msgstr ""
+"Die problematischen Ausdrücke sind vor allem Linksverschiebungen und lange "
+"hexadezimale und oktale Konstanten. Zum Beispiel führt ``2 << 32`` in 2.3 zu "
+"einer Warnung und ergibt auf 32-Bit-Plattformen 0. In Python 2.4 gibt dieser "
+"Ausdruck nun die korrekte Antwort zurück, 8589934592."
 
 #: ../../whatsnew/2.4.rst:107
 msgid ":pep:`237` - Unifying Long Integers and Integers"
-msgstr ""
+msgstr ":pep:`237` - Unifying Long Integers and Integers"
 
 #: ../../whatsnew/2.4.rst:108
 msgid ""
 "Original PEP written by Moshe Zadka and GvR.  The changes for 2.4 were "
 "implemented by  Kalle Svensson."
 msgstr ""
+"Ursprünglicher PEP geschrieben von Moshe Zadka und GvR. Die Änderungen für "
+"2.4 wurden von Kalle Svensson implementiert."
 
 #: ../../whatsnew/2.4.rst:115
 msgid "PEP 289: Generator Expressions"
-msgstr ""
+msgstr "PEP 289: Generatorausdrücke"
 
 #: ../../whatsnew/2.4.rst:117
 msgid ""
@@ -180,6 +247,14 @@ msgid ""
 "large.  When trying to write a functionally styled program, it would be "
 "natural to write something like::"
 msgstr ""
+"Die in Python 2.2 eingeführte Iterator-Funktion und das "
+"Modul :mod:`itertools` erleichtern es, Programme zu schreiben, die große "
+"Datenmengen durchlaufen, ohne den gesamten Datenbestand auf einmal im "
+"Speicher zu haben. List Comprehensions passen nicht gut in dieses Bild, weil "
+"sie ein Python-Listenobjekt mit allen Elementen erzeugen. Das holt "
+"unvermeidlich alle Objekte in den Speicher, was bei sehr großen Datenmengen "
+"ein Problem sein kann. Beim Versuch, ein Programm im funktionalen Stil zu "
+"schreiben, läge es nahe, etwa Folgendes zu schreiben::"
 
 #: ../../whatsnew/2.4.rst:125
 msgid ""
@@ -187,10 +262,13 @@ msgid ""
 "for link in links:\n"
 "    ..."
 msgstr ""
+"links = [link for link in get_all_links() if not link.followed]\n"
+"for link in links:\n"
+"    ..."
 
 #: ../../whatsnew/2.4.rst:129
 msgid "instead of  ::"
-msgstr ""
+msgstr "statt ::"
 
 #: ../../whatsnew/2.4.rst:131
 msgid ""
@@ -199,6 +277,10 @@ msgid ""
 "        continue\n"
 "    ..."
 msgstr ""
+"for link in get_all_links():\n"
+"    if link.followed:\n"
+"        continue\n"
+"    ..."
 
 #: ../../whatsnew/2.4.rst:136
 msgid ""
@@ -206,6 +288,9 @@ msgid ""
 "dealing with a large number of link objects you'd have to write the second "
 "form to avoid having all link objects in memory at the same time."
 msgstr ""
+"Die erste Form ist knapper und vielleicht lesbarer, hast du es aber mit "
+"einer großen Zahl von Link-Objekten zu tun, müsstest du die zweite Form "
+"schreiben, um nicht alle Link-Objekte gleichzeitig im Speicher zu haben."
 
 #: ../../whatsnew/2.4.rst:140
 msgid ""
@@ -213,6 +298,9 @@ msgid ""
 "materialize the entire list; instead they create a generator that will "
 "return elements one by one.  The above example could be written as::"
 msgstr ""
+"Generatorausdrücke funktionieren ähnlich wie List Comprehensions, erzeugen "
+"aber nicht die ganze Liste, sondern einen Generator, der die Elemente "
+"einzeln zurückgibt. Das obige Beispiel ließe sich so schreiben::"
 
 #: ../../whatsnew/2.4.rst:144
 msgid ""
@@ -220,6 +308,9 @@ msgid ""
 "for link in links:\n"
 "    ..."
 msgstr ""
+"links = (link for link in get_all_links() if not link.followed)\n"
+"for link in links:\n"
+"    ..."
 
 #: ../../whatsnew/2.4.rst:148
 msgid ""
@@ -228,10 +319,14 @@ msgid ""
 "so if you want to create an iterator that will be immediately passed to a "
 "function you could write::"
 msgstr ""
+"Generatorausdrücke müssen immer in Klammern stehen, wie im obigen Beispiel. "
+"Die Klammern eines Funktionsaufrufs zählen auch. Willst du also einen "
+"Iterator erzeugen, der sofort an eine Funktion übergeben wird, könntest du "
+"schreiben::"
 
 #: ../../whatsnew/2.4.rst:153
 msgid "print sum(obj.count for obj in list_all_objects())"
-msgstr ""
+msgstr "print sum(obj.count for obj in list_all_objects())"
 
 #: ../../whatsnew/2.4.rst:155
 msgid ""
@@ -242,20 +337,28 @@ msgid ""
 "change this, making list comprehensions match generator expressions in this "
 "respect."
 msgstr ""
+"Generatorausdrücke unterscheiden sich in verschiedenen kleinen Punkten von "
+"List Comprehensions. Vor allem ist die Schleifenvariable (*obj* im obigen "
+"Beispiel) außerhalb des Generatorausdrucks nicht zugänglich. List "
+"Comprehensions lassen der Variable ihren letzten Wert zugewiesen. Künftige "
+"Python-Versionen werden das ändern und List Comprehensions in dieser "
+"Hinsicht an Generatorausdrücke angleichen."
 
 #: ../../whatsnew/2.4.rst:164
 msgid ":pep:`289` - Generator Expressions"
-msgstr ""
+msgstr ":pep:`289` - Generator Expressions"
 
 #: ../../whatsnew/2.4.rst:165
 msgid ""
 "Proposed by Raymond Hettinger and implemented by Jiwon Seo with early "
 "efforts steered by Hye-Shik Chang."
 msgstr ""
+"Vorgeschlagen von Raymond Hettinger und implementiert von Jiwon Seo, mit "
+"frühen Arbeiten unter der Leitung von Hye-Shik Chang."
 
 #: ../../whatsnew/2.4.rst:172
 msgid "PEP 292: Simpler String Substitutions"
-msgstr ""
+msgstr "PEP 292: Einfachere String-Ersetzungen"
 
 #: ../../whatsnew/2.4.rst:174
 msgid ""
@@ -263,16 +366,23 @@ msgid ""
 "for substituting variables into strings; this style of substitution may be "
 "better for applications where untrained users need to edit templates."
 msgstr ""
+"Einige neue Klassen in der Standardbibliothek bieten einen alternativen "
+"Mechanismus, um Variablen in Strings einzusetzen. Diese Art der Ersetzung "
+"kann für Anwendungen besser sein, bei denen ungeschulte Benutzer Vorlagen "
+"bearbeiten müssen."
 
 #: ../../whatsnew/2.4.rst:178
 msgid "The usual way of substituting variables by name is the ``%`` operator::"
 msgstr ""
+"Der übliche Weg, Variablen nach Namen einzusetzen, ist der Operator ``%``::"
 
 #: ../../whatsnew/2.4.rst:180
 msgid ""
 ">>> '%(page)i: %(title)s' % {'page':2, 'title': 'The Best of Times'}\n"
 "'2: The Best of Times'"
 msgstr ""
+">>> '%(page)i: %(title)s' % {'page':2, 'title': 'The Best of Times'}\n"
+"'2: The Best of Times'"
 
 #: ../../whatsnew/2.4.rst:183
 msgid ""
@@ -286,12 +396,23 @@ msgid ""
 "users, and if they make a mistake, it's difficult to provide helpful "
 "feedback to them."
 msgstr ""
+"Beim Schreiben des Vorlagenstrings vergisst man leicht das ``i`` oder ``s`` "
+"nach der schließenden Klammer. Das ist kein großes Problem, wenn die Vorlage "
+"in einem Python-Modul steht, denn du führst den Code aus, bekommst "
+"einen :exc:`ValueError` „Unsupported format character“ und behebst das "
+"Problem. Denk aber an eine Anwendung wie Mailman, in der Vorlagenstrings "
+"oder Übersetzungen von Benutzern bearbeitet werden, die die Sprache Python "
+"nicht kennen. Die Syntax des Formatstrings ist solchen Benutzern schwer zu "
+"erklären, und machen sie einen Fehler, ist es schwierig, ihnen hilfreiche "
+"Rückmeldung zu geben."
 
 #: ../../whatsnew/2.4.rst:192
 msgid ""
 "PEP 292 adds a :class:`~string.Template` class to the :mod:`string` module "
 "that uses ``$`` to indicate a substitution::"
 msgstr ""
+"PEP 292 fügt dem Modul :mod:`string` eine Klasse :class:`~string.Template` "
+"hinzu, die ``$`` zur Kennzeichnung einer Ersetzung verwendet::"
 
 #: ../../whatsnew/2.4.rst:195
 msgid ""
@@ -300,6 +421,10 @@ msgid ""
 ">>> t.substitute({'page':2, 'title': 'The Best of Times'})\n"
 "'2: The Best of Times'"
 msgstr ""
+">>> import string\n"
+">>> t = string.Template('$page: $title')\n"
+">>> t.substitute({'page':2, 'title': 'The Best of Times'})\n"
+"'2: The Best of Times'"
 
 #: ../../whatsnew/2.4.rst:200
 msgid ""
@@ -308,6 +433,10 @@ msgid ""
 "a :exc:`KeyError`.  There's also a :meth:`~string.Template.safe_substitute` "
 "method that ignores missing keys::"
 msgstr ""
+"Fehlt ein Schlüssel im Dictionary, löst die "
+"Methode :meth:`~string.Template.substitute` einen :exc:`KeyError` aus. Es "
+"gibt auch eine Methode :meth:`~string.Template.safe_substitute`, die "
+"fehlende Schlüssel ignoriert::"
 
 #: ../../whatsnew/2.4.rst:204
 msgid ""
@@ -315,18 +444,21 @@ msgid ""
 ">>> t.safe_substitute({'page':3})\n"
 "'3: $title'"
 msgstr ""
+">>> t = string.Template('$page: $title')\n"
+">>> t.safe_substitute({'page':3})\n"
+"'3: $title'"
 
 #: ../../whatsnew/2.4.rst:211
 msgid ":pep:`292` - Simpler String Substitutions"
-msgstr ""
+msgstr ":pep:`292` - Simpler String Substitutions"
 
 #: ../../whatsnew/2.4.rst:212
 msgid "Written and implemented  by Barry Warsaw."
-msgstr ""
+msgstr "Geschrieben und implementiert von Barry Warsaw."
 
 #: ../../whatsnew/2.4.rst:218
 msgid "PEP 318: Decorators for Functions and Methods"
-msgstr ""
+msgstr "PEP 318: Dekoratoren für Funktionen und Methoden"
 
 #: ../../whatsnew/2.4.rst:220
 msgid ""
@@ -337,6 +469,13 @@ msgid ""
 "to a :func:`staticmethod` or :func:`classmethod` function that would wrap up "
 "the function as a method of the new type. Your code would look like this::"
 msgstr ""
+"Python 2.2 hat das Objektmodell von Python um statische Methoden und "
+"Klassenmethoden erweitert, aber nicht die Syntax von Python um einen neuen "
+"Weg, statische Methoden oder Klassenmethoden zu definieren. Stattdessen "
+"musstest du eine :keyword:`def`-Anweisung auf die übliche Weise schreiben "
+"und die entstehende Methode an eine Funktion :func:`staticmethod` "
+"oder :func:`classmethod` übergeben, die die Funktion als Methode des neuen "
+"Typs verpackt. Dein Code sah dann so aus::"
 
 #: ../../whatsnew/2.4.rst:227
 msgid ""
@@ -346,12 +485,19 @@ msgid ""
 "\n"
 "   meth = classmethod(meth)   # Rebind name to wrapped-up class method"
 msgstr ""
+"class C:\n"
+"   def meth (cls):\n"
+"       ...\n"
+"\n"
+"   meth = classmethod(meth)   # Rebind name to wrapped-up class method"
 
 #: ../../whatsnew/2.4.rst:233
 msgid ""
 "If the method was very long, it would be easy to miss or forget "
 "the :func:`classmethod` invocation after the function body."
 msgstr ""
+"War die Methode sehr lang, konnte man den Aufruf von :func:`classmethod` "
+"nach dem Funktionsrumpf leicht übersehen oder vergessen."
 
 #: ../../whatsnew/2.4.rst:236
 msgid ""
@@ -361,6 +507,12 @@ msgid ""
 "access to the feature; a new syntactic feature has been added to meet this "
 "need."
 msgstr ""
+"Es war immer beabsichtigt, eine Syntax hinzuzufügen, die solche Definitionen "
+"lesbarer macht, zur Zeit des Releases von 2.2 war aber keine gute Syntax "
+"offensichtlich. Auch heute ist eine gute Syntax *immer noch* nicht "
+"offensichtlich, aber Benutzer wünschen sich einen einfacheren Zugang zu "
+"dieser Funktion. Um diesen Bedarf zu decken, wurde eine neue syntaktische "
+"Funktion hinzugefügt."
 
 #: ../../whatsnew/2.4.rst:241
 msgid ""
@@ -369,12 +521,18 @@ msgid ""
 "additional information on a function object; they're *decorating* functions "
 "with more details."
 msgstr ""
+"Die neue Funktion heißt „Funktionsdekoratoren“. Der Name kommt von der Idee, "
+"dass :func:`classmethod`, :func:`staticmethod` und Verwandte zusätzliche "
+"Informationen an einem Funktionsobjekt speichern. Sie *dekorieren* "
+"Funktionen mit weiteren Details."
 
 #: ../../whatsnew/2.4.rst:246
 msgid ""
 "The notation borrows from Java and uses the ``'@'`` character as an "
 "indicator. Using the new syntax, the example above would be written::"
 msgstr ""
+"Die Schreibweise ist von Java entlehnt und verwendet das Zeichen ``'@'`` als "
+"Kennzeichen. Mit der neuen Syntax würde das obige Beispiel so geschrieben::"
 
 #: ../../whatsnew/2.4.rst:249
 msgid ""
@@ -384,12 +542,19 @@ msgid ""
 "   def meth (cls):\n"
 "       ..."
 msgstr ""
+"class C:\n"
+"\n"
+"   @classmethod\n"
+"   def meth (cls):\n"
+"       ..."
 
 #: ../../whatsnew/2.4.rst:256
 msgid ""
 "The ``@classmethod`` is shorthand for the ``meth=classmethod(meth)`` "
 "assignment. More generally, if you have the following::"
 msgstr ""
+"``@classmethod`` ist eine Kurzform für die Zuweisung "
+"``meth=classmethod(meth)``. Allgemeiner gesagt, wenn du Folgendes hast::"
 
 #: ../../whatsnew/2.4.rst:259
 msgid ""
@@ -399,16 +564,23 @@ msgid ""
 "def f ():\n"
 "    ..."
 msgstr ""
+"@A\n"
+"@B\n"
+"@C\n"
+"def f ():\n"
+"    ..."
 
 #: ../../whatsnew/2.4.rst:265
 msgid "It's equivalent to the following pre-decorator code::"
-msgstr ""
+msgstr "Das entspricht folgendem Code aus der Zeit vor den Dekoratoren::"
 
 #: ../../whatsnew/2.4.rst:267
 msgid ""
 "def f(): ...\n"
 "f = A(B(C(f)))"
 msgstr ""
+"def f(): ...\n"
+"f = A(B(C(f)))"
 
 #: ../../whatsnew/2.4.rst:270
 msgid ""
@@ -418,6 +590,11 @@ msgid ""
 "either at the module level or inside a class; you can't decorate class "
 "definitions."
 msgstr ""
+"Dekoratoren müssen in der Zeile vor einer Funktionsdefinition stehen, ein "
+"Dekorator pro Zeile, und dürfen nicht in derselben Zeile wie die def-"
+"Anweisung stehen; ``@A def f(): ...`` ist also unzulässig. Du kannst nur "
+"Funktionsdefinitionen dekorieren, entweder auf Modulebene oder innerhalb "
+"einer Klasse; Klassendefinitionen lassen sich nicht dekorieren."
 
 #: ../../whatsnew/2.4.rst:275
 msgid ""
@@ -428,6 +605,12 @@ msgid ""
 "your own decorators.  The following simple example just sets an attribute on "
 "the function object::"
 msgstr ""
+"Ein Dekorator ist einfach eine Funktion, die die zu dekorierende Funktion "
+"als Argument annimmt und entweder dieselbe Funktion oder ein neues Objekt "
+"zurückgibt. Der Rückgabewert des Dekorators muss nicht aufrufbar sein (meist "
+"ist er es aber), sofern nicht weitere Dekoratoren auf das Ergebnis "
+"angewendet werden. Eigene Dekoratoren zu schreiben ist einfach. Das folgende "
+"einfache Beispiel setzt nur ein Attribut am Funktionsobjekt::"
 
 #: ../../whatsnew/2.4.rst:282
 msgid ""
@@ -444,12 +627,26 @@ msgid ""
 "'decorated'\n"
 ">>>"
 msgstr ""
+">>> def deco(func):\n"
+"...    func.attr = 'decorated'\n"
+"...    return func\n"
+"...\n"
+">>> @deco\n"
+"... def f(): pass\n"
+"...\n"
+">>> f\n"
+"<function f at 0x402ef0d4>\n"
+">>> f.attr\n"
+"'decorated'\n"
+">>>"
 
 #: ../../whatsnew/2.4.rst:295
 msgid ""
 "As a slightly more realistic example, the following decorator checks that "
 "the supplied argument is an integer::"
 msgstr ""
+"Als etwas realistischeres Beispiel prüft der folgende Dekorator, ob das "
+"übergebene Argument eine ganze Zahl ist::"
 
 #: ../../whatsnew/2.4.rst:298
 msgid ""
@@ -468,12 +665,29 @@ msgid ""
 "def p2(arg):\n"
 "    print arg*2"
 msgstr ""
+"def require_int (func):\n"
+"    def wrapper (arg):\n"
+"        assert isinstance(arg, int)\n"
+"        return func(arg)\n"
+"\n"
+"    return wrapper\n"
+"\n"
+"@require_int\n"
+"def p1 (arg):\n"
+"    print arg\n"
+"\n"
+"@require_int\n"
+"def p2(arg):\n"
+"    print arg*2"
 
 #: ../../whatsnew/2.4.rst:313
 msgid ""
 "An example in :pep:`318` contains a fancier version of this idea that lets "
 "you both specify the required type and check the returned type."
 msgstr ""
+"Ein Beispiel in :pep:`318` enthält eine ausgefeiltere Version dieser Idee, "
+"mit der du sowohl den erforderlichen Typ angeben als auch den "
+"zurückgegebenen Typ prüfen kannst."
 
 #: ../../whatsnew/2.4.rst:316
 msgid ""
@@ -483,6 +697,11 @@ msgid ""
 "function, as previously described.  In other words, ``@A @B @C(args)`` "
 "becomes::"
 msgstr ""
+"Dekoratorfunktionen können Argumente annehmen. Werden Argumente übergeben, "
+"wird deine Dekoratorfunktion nur mit diesen Argumenten aufgerufen und muss "
+"eine neue Dekoratorfunktion zurückgeben. Diese Funktion muss wie oben "
+"beschrieben eine einzelne Funktion annehmen und eine Funktion zurückgeben. "
+"Mit anderen Worten: Aus ``@A @B @C(args)`` wird::"
 
 #: ../../whatsnew/2.4.rst:321
 msgid ""
@@ -490,11 +709,16 @@ msgid ""
 "_deco = C(args)\n"
 "f = A(B(_deco(f)))"
 msgstr ""
+"def f(): ...\n"
+"_deco = C(args)\n"
+"f = A(B(_deco(f)))"
 
 #: ../../whatsnew/2.4.rst:325
 msgid ""
 "Getting this right can be slightly brain-bending, but it's not too difficult."
 msgstr ""
+"Das richtig hinzubekommen kann etwas Kopfzerbrechen bereiten, ist aber nicht "
+"allzu schwierig."
 
 #: ../../whatsnew/2.4.rst:327
 msgid ""
@@ -503,10 +727,14 @@ msgid ""
 "names in tracebacks, so decorators should change the name of any new "
 "function that's constructed and returned."
 msgstr ""
+"Eine kleine verwandte Änderung macht das Attribut :attr:`func_name "
+"<function.__name__>` von Funktionen beschreibbar. Dieses Attribut wird zur "
+"Anzeige von Funktionsnamen in Tracebacks verwendet, Dekoratoren sollten also "
+"den Namen jeder neuen Funktion ändern, die sie erzeugen und zurückgeben."
 
 #: ../../whatsnew/2.4.rst:336
 msgid ":pep:`318` - Decorators for Functions, Methods and Classes"
-msgstr ""
+msgstr ":pep:`318` - Decorators for Functions, Methods and Classes"
 
 #: ../../whatsnew/2.4.rst:337
 msgid ""
@@ -514,24 +742,30 @@ msgid ""
 "wrote patches implementing function decorators, but the one that was "
 "actually checked in was patch #979728, written by Mark Russell."
 msgstr ""
+"Geschrieben von Kevin D. Smith, Jim Jewett und Skip Montanaro. Mehrere Leute "
+"haben Patches zur Implementierung von Funktionsdekoratoren geschrieben, "
+"eingecheckt wurde aber der Patch #979728 von Mark Russell."
 
 #: ../../whatsnew/2.4.rst:341
 msgid "https://wiki.python.org/moin/PythonDecoratorLibrary"
-msgstr ""
+msgstr "https://wiki.python.org/moin/PythonDecoratorLibrary"
 
 #: ../../whatsnew/2.4.rst:342
 msgid "This Wiki page contains several examples of decorators."
-msgstr ""
+msgstr "Diese Wiki-Seite enthält mehrere Beispiele für Dekoratoren."
 
 #: ../../whatsnew/2.4.rst:348
 msgid "PEP 322: Reverse Iteration"
-msgstr ""
+msgstr "PEP 322: Umgekehrte Iteration"
 
 #: ../../whatsnew/2.4.rst:350
 msgid ""
 "A new built-in function, ``reversed(seq)``, takes a sequence and returns an "
 "iterator that loops over the elements of the sequence  in reverse order.   ::"
 msgstr ""
+"Eine neue eingebaute Funktion, ``reversed(seq)``, nimmt eine Sequenz und "
+"gibt einen Iterator zurück, der die Elemente der Sequenz in umgekehrter "
+"Reihenfolge durchläuft. ::"
 
 #: ../../whatsnew/2.4.rst:353
 msgid ""
@@ -542,12 +776,21 @@ msgid ""
 "2\n"
 "1"
 msgstr ""
+">>> for i in reversed(xrange(1,4)):\n"
+"...    print i\n"
+"...\n"
+"3\n"
+"2\n"
+"1"
 
 #: ../../whatsnew/2.4.rst:360
 msgid ""
 "Compared to extended slicing, such as ``range(1,4)[::-1]``, :func:`reversed` "
 "is easier to read, runs faster, and uses substantially less memory."
 msgstr ""
+"Im Vergleich zu erweiterten Slices wie ``range(1,4)[::-1]`` "
+"ist :func:`reversed` leichter zu lesen, läuft schneller und verbraucht "
+"erheblich weniger Speicher."
 
 #: ../../whatsnew/2.4.rst:363
 msgid ""
@@ -555,6 +798,9 @@ msgid ""
 "If you want to reverse an iterator, first convert it to  a list "
 "with :func:`list`. ::"
 msgstr ""
+"Beachte, dass :func:`reversed` nur Sequenzen akzeptiert, keine beliebigen "
+"Iteratoren. Willst du einen Iterator umkehren, wandle ihn zuerst "
+"mit :func:`list` in eine Liste um. ::"
 
 #: ../../whatsnew/2.4.rst:367
 msgid ""
@@ -565,18 +811,24 @@ msgid ""
 "root:*:0:0:System Administrator:/var/root:/bin/tcsh\n"
 "  ..."
 msgstr ""
+">>> input = open('/etc/passwd', 'r')\n"
+">>> for line in reversed(list(input)):\n"
+"...   print line\n"
+"...\n"
+"root:*:0:0:System Administrator:/var/root:/bin/tcsh\n"
+"  ..."
 
 #: ../../whatsnew/2.4.rst:377
 msgid ":pep:`322` - Reverse Iteration"
-msgstr ""
+msgstr ":pep:`322` - Reverse Iteration"
 
 #: ../../whatsnew/2.4.rst:378
 msgid "Written and implemented by Raymond Hettinger."
-msgstr ""
+msgstr "Geschrieben und implementiert von Raymond Hettinger."
 
 #: ../../whatsnew/2.4.rst:384
 msgid "PEP 324: New subprocess Module"
-msgstr ""
+msgstr "PEP 324: Neues Modul subprocess"
 
 #: ../../whatsnew/2.4.rst:386
 msgid ""
@@ -590,6 +842,15 @@ msgid ""
 "cleans  this up, providing a unified interface that offers all the features "
 "you might need."
 msgstr ""
+"Die Standardbibliothek bietet eine Reihe von Wegen, einen Unterprozess "
+"auszuführen, mit verschiedenen Funktionen und unterschiedlich hoher "
+"Komplexität. ``os.system(command)`` ist einfach zu verwenden, aber langsam "
+"(es startet einen Shell-Prozess, der den Befehl ausführt) und gefährlich (du "
+"musst die Metazeichen der Shell sorgfältig maskieren). Das Modul :mod:`!"
+"popen2` bietet Klassen, die Standardausgabe und Standardfehler des "
+"Unterprozesses abfangen können, die Benennung ist aber verwirrend. Das "
+"Modul :mod:`subprocess` räumt damit auf und bietet eine einheitliche "
+"Schnittstelle mit allen Funktionen, die du brauchen könntest."
 
 #: ../../whatsnew/2.4.rst:395
 msgid ""
@@ -597,6 +858,9 @@ msgid ""
 "contains a single class called :class:`subprocess.Popen`  whose constructor "
 "supports a number of different keyword arguments. ::"
 msgstr ""
+"Statt der Klassensammlung von :mod:`!popen2` enthält :mod:`subprocess` eine "
+"einzige Klasse namens :class:`subprocess.Popen`, deren Konstruktor eine "
+"Reihe verschiedener Schlüsselwortargumente unterstützt. ::"
 
 #: ../../whatsnew/2.4.rst:399
 msgid ""
@@ -606,6 +870,11 @@ msgid ""
 "            cwd=None, env=None, universal_newlines=False,\n"
 "            startupinfo=None, creationflags=0):"
 msgstr ""
+"class Popen(args, bufsize=0, executable=None,\n"
+"            stdin=None, stdout=None, stderr=None,\n"
+"            preexec_fn=None, close_fds=False, shell=False,\n"
+"            cwd=None, env=None, universal_newlines=False,\n"
+"            startupinfo=None, creationflags=0):"
 
 #: ../../whatsnew/2.4.rst:405
 msgid ""
@@ -614,6 +883,10 @@ msgid ""
 "*args* can be a string which will then be passed on to the shell for "
 "interpretation, just as :func:`os.system` does.)"
 msgstr ""
+"*args* ist meist eine Sequenz von Strings, die die Argumente des als "
+"Unterprozess ausgeführten Programms bilden. (Ist das Argument *shell* wahr, "
+"kann *args* ein String sein, der dann wie bei :func:`os.system` zur "
+"Interpretation an die Shell übergeben wird.)"
 
 #: ../../whatsnew/2.4.rst:410
 msgid ""
@@ -622,37 +895,49 @@ msgid ""
 "descriptor, or you can use the constant ``subprocess.PIPE`` to create a pipe "
 "between the subprocess and the parent."
 msgstr ""
+"*stdin*, *stdout* und *stderr* legen fest, was Eingabe-, Ausgabe- und "
+"Fehlerstrom des Unterprozesses sind. Du kannst ein Dateiobjekt oder einen "
+"Dateideskriptor angeben oder mit der Konstante ``subprocess.PIPE`` eine Pipe "
+"zwischen Unterprozess und Elternprozess erzeugen."
 
 #: ../../whatsnew/2.4.rst:418
 msgid "The constructor has a number of handy options:"
-msgstr ""
+msgstr "Der Konstruktor hat eine Reihe praktischer Optionen:"
 
 #: ../../whatsnew/2.4.rst:420
 msgid ""
 "*close_fds* requests that all file descriptors be closed before running the "
 "subprocess."
 msgstr ""
+"*close_fds* verlangt, dass vor dem Start des Unterprozesses alle "
+"Dateideskriptoren geschlossen werden."
 
 #: ../../whatsnew/2.4.rst:423
 msgid ""
 "*cwd* specifies the working directory in which the subprocess will be "
 "executed (defaulting to whatever the parent's working directory is)."
 msgstr ""
+"*cwd* gibt das Arbeitsverzeichnis an, in dem der Unterprozess ausgeführt "
+"wird (standardmäßig das Arbeitsverzeichnis des Elternprozesses)."
 
 #: ../../whatsnew/2.4.rst:426
 msgid "*env* is a dictionary specifying environment variables."
-msgstr ""
+msgstr "*env* ist ein Dictionary mit Umgebungsvariablen."
 
 #: ../../whatsnew/2.4.rst:428
 msgid ""
 "*preexec_fn* is a function that gets called before the child is started."
 msgstr ""
+"*preexec_fn* ist eine Funktion, die vor dem Start des Kindprozesses "
+"aufgerufen wird."
 
 #: ../../whatsnew/2.4.rst:430
 msgid ""
 "*universal_newlines* opens the child's input and output using "
 "Python's :term:`universal newlines` feature."
 msgstr ""
+"*universal_newlines* öffnet Ein- und Ausgabe des Kindprozesses mit der "
+"Funktion :term:`universal newlines` von Python."
 
 #: ../../whatsnew/2.4.rst:433
 msgid ""
@@ -664,6 +949,14 @@ msgid ""
 "that the subprocess has sent to its standard output  or standard error, "
 "returning a tuple ``(stdout_data, stderr_data)``."
 msgstr ""
+"Hast du die :class:`~subprocess.Popen`-Instanz erzeugt, kannst du ihre "
+"Methode :meth:`~subprocess.Popen.wait` aufrufen, um zu warten, bis der "
+"Unterprozess beendet ist, :meth:`~subprocess.Popen.poll`, um ohne Warten zu "
+"prüfen, ob er beendet ist, oder ``communicate(data)``, um den String *data* "
+"an die Standardeingabe des Unterprozesses zu senden. ``communicate(data)`` "
+"liest dann alle Daten, die der Unterprozess auf seine Standardausgabe oder "
+"Standardfehler geschrieben hat, und gibt ein Tupel ``(stdout_data, "
+"stderr_data)`` zurück."
 
 #: ../../whatsnew/2.4.rst:440
 msgid ""
@@ -672,6 +965,10 @@ msgid ""
 "complete, and returns the status code of the subprocess.  It can serve as a "
 "safer analog to :func:`os.system`::"
 msgstr ""
+":func:`~subprocess.call` ist eine Abkürzung, die ihre Argumente an den "
+"Konstruktor :class:`~subprocess.Popen` weiterreicht, auf das Ende des "
+"Befehls wartet und den Statuscode des Unterprozesses zurückgibt. Sie kann "
+"als sicheres Gegenstück zu :func:`os.system` dienen::"
 
 #: ../../whatsnew/2.4.rst:444
 msgid ""
@@ -683,6 +980,13 @@ msgid ""
 "    # dpkg returned an error\n"
 "    ..."
 msgstr ""
+"sts = subprocess.call(['dpkg', '-i', '/tmp/new-package.deb'])\n"
+"if sts == 0:\n"
+"    # Success\n"
+"    ...\n"
+"else:\n"
+"    # dpkg returned an error\n"
+"    ..."
 
 #: ../../whatsnew/2.4.rst:452
 msgid ""
@@ -690,10 +994,13 @@ msgid ""
 "use the shell, you can add ``shell=True`` as a keyword argument and provide "
 "a string instead of a sequence::"
 msgstr ""
+"Der Befehl wird ohne Shell aufgerufen. Willst du wirklich die Shell "
+"verwenden, kannst du ``shell=True`` als Schlüsselwortargument hinzufügen und "
+"einen String statt einer Sequenz angeben::"
 
 #: ../../whatsnew/2.4.rst:456
 msgid "sts = subprocess.call('dpkg -i /tmp/new-package.deb', shell=True)"
-msgstr ""
+msgstr "sts = subprocess.call('dpkg -i /tmp/new-package.deb', shell=True)"
 
 #: ../../whatsnew/2.4.rst:458
 msgid ""
@@ -701,20 +1008,25 @@ msgid ""
 "be translated into Python code that uses :mod:`subprocess`.  Reading this "
 "section of the PEP is highly recommended."
 msgstr ""
+"Der PEP nimmt verschiedene Beispiele für Shell- und Python-Code und zeigt, "
+"wie sie in Python-Code mit :mod:`subprocess` übersetzt würden. Diesen "
+"Abschnitt des PEP zu lesen wird sehr empfohlen."
 
 #: ../../whatsnew/2.4.rst:465
 msgid ":pep:`324` - subprocess - New process module"
-msgstr ""
+msgstr ":pep:`324` - subprocess - New process module"
 
 #: ../../whatsnew/2.4.rst:466
 msgid ""
 "Written and implemented by Peter Åstrand, with assistance from Fredrik Lundh "
 "and others."
 msgstr ""
+"Geschrieben und implementiert von Peter Åstrand, mit Unterstützung von "
+"Fredrik Lundh und anderen."
 
 #: ../../whatsnew/2.4.rst:473
 msgid "PEP 327: Decimal Data Type"
-msgstr ""
+msgstr "PEP 327: Der Datentyp Decimal"
 
 #: ../../whatsnew/2.4.rst:475
 msgid ""
@@ -725,20 +1037,29 @@ msgid ""
 "decimal fractions accurately.  The new :class:`~decimal.Decimal` type can "
 "represent these fractions accurately, up to a user-specified precision limit."
 msgstr ""
+"Python hat schon immer Gleitkommazahlen (FP) als Datentyp unterstützt, "
+"basierend auf dem zugrunde liegenden C-Typ :c:expr:`double`. Die meisten "
+"Programmiersprachen bieten zwar einen Gleitkommatyp, vielen Leuten (sogar "
+"Programmierern) ist aber nicht bewusst, dass Gleitkommazahlen bestimmte "
+"Dezimalbrüche nicht genau darstellen. Der neue Typ :class:`~decimal.Decimal` "
+"kann diese Brüche bis zu einer vom Benutzer festgelegten Genauigkeit exakt "
+"darstellen."
 
 #: ../../whatsnew/2.4.rst:484
 msgid "Why is Decimal needed?"
-msgstr ""
+msgstr "Wozu braucht man Decimal?"
 
 #: ../../whatsnew/2.4.rst:486
 msgid ""
 "The limitations arise from the representation used for floating-point "
 "numbers. FP numbers are made up of three components:"
 msgstr ""
+"Die Einschränkungen ergeben sich aus der Darstellung von Gleitkommazahlen. "
+"FP-Zahlen bestehen aus drei Komponenten:"
 
 #: ../../whatsnew/2.4.rst:489
 msgid "The sign, which is positive or negative."
-msgstr ""
+msgstr "Dem Vorzeichen, positiv oder negativ."
 
 #: ../../whatsnew/2.4.rst:491
 msgid ""
@@ -746,12 +1067,16 @@ msgid ""
 "fractional part.  For example, ``1.01`` in base-2 notation is ``1 + 0/2 + "
 "1/4``, or 1.25 in decimal notation."
 msgstr ""
+"Der Mantisse, einer einstelligen Binärzahl gefolgt von einem Bruchteil. Zum "
+"Beispiel ist ``1.01`` in Basis-2-Schreibweise ``1 + 0/2 + 1/4`` oder 1,25 in "
+"Dezimalschreibweise."
 
 #: ../../whatsnew/2.4.rst:495
 msgid ""
 "The exponent, which tells where the decimal point is located in the number "
 "represented."
 msgstr ""
+"Dem Exponenten, der angibt, wo in der dargestellten Zahl das Komma steht."
 
 #: ../../whatsnew/2.4.rst:498
 msgid ""
@@ -761,6 +1086,11 @@ msgid ""
 "because the mantissa is multiplied by 4 (2 to the power of the exponent 2); "
 "1.25 \\* 4 equals 5."
 msgstr ""
+"Die Zahl 1,25 hat zum Beispiel ein positives Vorzeichen, einen Mantissenwert "
+"von 1.01 (binär) und einen Exponenten von 0 (das Komma muss nicht verschoben "
+"werden). Die Zahl 5 hat dasselbe Vorzeichen und dieselbe Mantisse, der "
+"Exponent ist aber 2, weil die Mantisse mit 4 multipliziert wird (2 hoch "
+"Exponent 2); 1,25 \\* 4 ergibt 5."
 
 #: ../../whatsnew/2.4.rst:504
 msgid ""
@@ -776,16 +1106,30 @@ msgid ""
 "additional terms.  IEEE 754 has to chop off that infinitely repeated decimal "
 "after 52 digits, so the representation is slightly inaccurate."
 msgstr ""
+"Moderne Systeme bieten meist Gleitkommaunterstützung nach einem Standard "
+"namens IEEE 754. Der C-Typ :c:expr:`double` ist meist als 64-Bit-Zahl nach "
+"IEEE 754 implementiert, die 52 Bit für die Mantisse verwendet. Zahlen lassen "
+"sich also nur mit 52 Bit Genauigkeit angeben. Versuchst du, Zahlen "
+"darzustellen, deren Entwicklung sich endlos wiederholt, wird die Entwicklung "
+"nach 52 Bit abgeschnitten. Leider muss die meiste Software Ausgaben zur "
+"Basis 10 erzeugen, und gängige Brüche zur Basis 10 sind binär oft "
+"periodische Brüche. Zum Beispiel ist 1,1 dezimal binär "
+"``1.0001100110011 ...``; .1 = 1/16 + 1/32 + 1/256 plus unendlich viele "
+"weitere Glieder. IEEE 754 muss diesen unendlich periodischen Bruch nach 52 "
+"Stellen abschneiden, die Darstellung ist also leicht ungenau."
 
 #: ../../whatsnew/2.4.rst:516
 msgid "Sometimes you can see this inaccuracy when the number is printed::"
 msgstr ""
+"Manchmal siehst du diese Ungenauigkeit, wenn die Zahl ausgegeben wird::"
 
 #: ../../whatsnew/2.4.rst:518
 msgid ""
 ">>> 1.1\n"
 "1.1000000000000001"
 msgstr ""
+">>> 1.1\n"
+"1.1000000000000001"
 
 #: ../../whatsnew/2.4.rst:521
 msgid ""
@@ -795,6 +1139,11 @@ msgid ""
 "however, the inaccuracy is still there and subsequent operations can magnify "
 "the error."
 msgstr ""
+"Die Ungenauigkeit ist beim Ausgeben der Zahl nicht immer sichtbar, weil die "
+"Umwandlung von FP in einen Dezimalstring von der C-Bibliothek erledigt wird "
+"und die meisten C-Bibliotheken versuchen, vernünftige Ausgaben zu erzeugen. "
+"Auch wenn sie nicht angezeigt wird, ist die Ungenauigkeit aber trotzdem da, "
+"und nachfolgende Operationen können den Fehler vergrößern."
 
 #: ../../whatsnew/2.4.rst:526
 msgid ""
@@ -806,14 +1155,21 @@ msgid ""
 "for applications where it does matter,  it's a lot of work to implement your "
 "own custom arithmetic routines."
 msgstr ""
+"Für viele Anwendungen spielt das keine Rolle. Zeichne ich Punkte und zeige "
+"sie auf meinem Monitor an, ist der Unterschied zwischen 1.1 und "
+"1.1000000000000001 zu klein, um sichtbar zu sein. Berichte beschränken die "
+"Ausgabe oft auf eine bestimmte Zahl von Nachkommastellen, und rundest du die "
+"Zahl auf zwei, drei oder sogar acht Nachkommastellen, fällt der Fehler nie "
+"auf. Für Anwendungen, bei denen es doch eine Rolle spielt, ist es aber viel "
+"Arbeit, eigene Rechenroutinen zu implementieren."
 
 #: ../../whatsnew/2.4.rst:534
 msgid "Hence, the :class:`~decimal.Decimal` type was created."
-msgstr ""
+msgstr "Deshalb wurde der Typ :class:`~decimal.Decimal` geschaffen."
 
 #: ../../whatsnew/2.4.rst:538
 msgid "The :class:`~decimal.Decimal` type"
-msgstr ""
+msgstr "Der Typ :class:`~decimal.Decimal`"
 
 #: ../../whatsnew/2.4.rst:540
 msgid ""
@@ -823,6 +1179,11 @@ msgid ""
 "represent numbers, and :class:`~decimal.Context` instances are used to wrap "
 "up various settings such as the precision and default rounding mode."
 msgstr ""
+"Ein neues Modul, :mod:`decimal`, wurde zur Standardbibliothek von Python "
+"hinzugefügt. Es enthält zwei Klassen, :class:`~decimal.Decimal` "
+"und :class:`~decimal.Context`. :class:`~decimal.Decimal`-Instanzen stellen "
+"Zahlen dar, und :class:`~decimal.Context`-Instanzen fassen verschiedene "
+"Einstellungen wie die Genauigkeit und den Standard-Rundungsmodus zusammen."
 
 #: ../../whatsnew/2.4.rst:545
 msgid ""
@@ -831,6 +1192,10 @@ msgid ""
 "an instance represents.  :class:`~decimal.Decimal` instances can be created "
 "from integers or strings::"
 msgstr ""
+":class:`~decimal.Decimal`-Instanzen sind wie normale Python-Ganzzahlen und "
+"FP-Zahlen unveränderlich. Ist eine Instanz erzeugt, kannst du den Wert, den "
+"sie darstellt, nicht ändern. :class:`~decimal.Decimal`-Instanzen lassen sich "
+"aus ganzen Zahlen oder Strings erzeugen::"
 
 #: ../../whatsnew/2.4.rst:550
 msgid ""
@@ -840,24 +1205,35 @@ msgid ""
 ">>> decimal.Decimal(\"1.1\")\n"
 "Decimal(\"1.1\")"
 msgstr ""
+">>> import decimal\n"
+">>> decimal.Decimal(1972)\n"
+"Decimal(\"1972\")\n"
+">>> decimal.Decimal(\"1.1\")\n"
+"Decimal(\"1.1\")"
 
 #: ../../whatsnew/2.4.rst:556
 msgid ""
 "You can also provide tuples containing the sign, the mantissa represented  "
 "as a tuple of decimal digits, and the exponent::"
 msgstr ""
+"Du kannst auch Tupel angeben, die das Vorzeichen, die Mantisse als Tupel von "
+"Dezimalziffern und den Exponenten enthalten::"
 
 #: ../../whatsnew/2.4.rst:559
 msgid ""
 ">>> decimal.Decimal((1, (1, 4, 7, 5), -2))\n"
 "Decimal(\"-14.75\")"
 msgstr ""
+">>> decimal.Decimal((1, (1, 4, 7, 5), -2))\n"
+"Decimal(\"-14.75\")"
 
 #: ../../whatsnew/2.4.rst:562
 msgid ""
 "Cautionary note: the sign bit is a Boolean value, so 0 is positive and 1 is "
 "negative."
 msgstr ""
+"Achtung: Das Vorzeichenbit ist ein Wahrheitswert, 0 ist also positiv und 1 "
+"negativ."
 
 #: ../../whatsnew/2.4.rst:565
 msgid ""
@@ -868,6 +1244,13 @@ msgid ""
 "convert the floating-point number into a string using the desired precision "
 "and pass the string to the :class:`~decimal.Decimal` constructor::"
 msgstr ""
+"Die Umwandlung aus Gleitkommazahlen ist etwas problematisch: Soll die FP-"
+"Zahl für 1,1 zur Dezimalzahl für genau 1,1 werden oder für 1,1 plus der "
+"eingeschleppten Ungenauigkeiten? Man entschied sich, dem Problem "
+"auszuweichen und eine solche Umwandlung aus der API herauszulassen. "
+"Stattdessen solltest du die Gleitkommazahl mit der gewünschten Genauigkeit "
+"in einen String umwandeln und den String an den "
+"Konstruktor :class:`~decimal.Decimal` übergeben::"
 
 #: ../../whatsnew/2.4.rst:572
 msgid ""
@@ -877,6 +1260,11 @@ msgid ""
 ">>> decimal.Decimal('%.12f' % f)\n"
 "Decimal(\"1.100000000000\")"
 msgstr ""
+">>> f = 1.1\n"
+">>> decimal.Decimal(str(f))\n"
+"Decimal(\"1.1\")\n"
+">>> decimal.Decimal('%.12f' % f)\n"
+"Decimal(\"1.100000000000\")"
 
 #: ../../whatsnew/2.4.rst:578
 msgid ""
@@ -884,6 +1272,9 @@ msgid ""
 "mathematical operations on them.  One limitation: exponentiation requires an "
 "integer exponent::"
 msgstr ""
+"Hast du :class:`~decimal.Decimal`-Instanzen, kannst du damit die üblichen "
+"mathematischen Operationen durchführen. Eine Einschränkung: Die Potenzierung "
+"erfordert einen ganzzahligen Exponenten::"
 
 #: ../../whatsnew/2.4.rst:582
 msgid ""
@@ -904,12 +1295,30 @@ msgid ""
 "  ...\n"
 "decimal.InvalidOperation: x ** (non-integer)"
 msgstr ""
+">>> a = decimal.Decimal('35.72')\n"
+">>> b = decimal.Decimal('1.73')\n"
+">>> a+b\n"
+"Decimal(\"37.45\")\n"
+">>> a-b\n"
+"Decimal(\"33.99\")\n"
+">>> a*b\n"
+"Decimal(\"61.7956\")\n"
+">>> a/b\n"
+"Decimal(\"20.64739884393063583815028902\")\n"
+">>> a ** 2\n"
+"Decimal(\"1275.9184\")\n"
+">>> a**b\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"decimal.InvalidOperation: x ** (non-integer)"
 
 #: ../../whatsnew/2.4.rst:599
 msgid ""
 "You can combine :class:`~decimal.Decimal` instances with integers, but not "
 "with floating-point numbers::"
 msgstr ""
+"Du kannst :class:`~decimal.Decimal`-Instanzen mit ganzen Zahlen kombinieren, "
+"aber nicht mit Gleitkommazahlen::"
 
 #: ../../whatsnew/2.4.rst:602
 msgid ""
@@ -922,6 +1331,14 @@ msgid ""
 "types.\n"
 ">>>"
 msgstr ""
+">>> a + 4\n"
+"Decimal(\"39.72\")\n"
+">>> a + 4.5\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"TypeError: You can interact Decimal only with int, long or Decimal data "
+"types.\n"
+">>>"
 
 #: ../../whatsnew/2.4.rst:610
 msgid ""
@@ -931,6 +1348,11 @@ msgid ""
 "possible loss of precision and accuracy.  You'll also get back a regular "
 "floating-point number and not a :class:`~decimal.Decimal`. ::"
 msgstr ""
+":class:`~decimal.Decimal`-Zahlen lassen sich mit den Modulen :mod:`math` "
+"und :mod:`cmath` verwenden, beachte aber, dass sie vor der Operation sofort "
+"in Gleitkommazahlen umgewandelt werden, was zu einem möglichen Verlust an "
+"Genauigkeit führt. Du erhältst außerdem eine normale Gleitkommazahl zurück "
+"und kein :class:`~decimal.Decimal`. ::"
 
 #: ../../whatsnew/2.4.rst:616
 msgid ""
@@ -941,6 +1363,12 @@ msgid ""
 ">>> cmath.sqrt(-d)\n"
 "351364.18288201344j"
 msgstr ""
+">>> import math, cmath\n"
+">>> d = decimal.Decimal('123456789012.345')\n"
+">>> math.sqrt(d)\n"
+"351364.18288201344\n"
+">>> cmath.sqrt(-d)\n"
+"351364.18288201344j"
 
 #: ../../whatsnew/2.4.rst:623
 msgid ""
@@ -948,27 +1376,37 @@ msgid ""
 "method that returns a :class:`~decimal.Decimal`, but if you need other "
 "things such as trigonometric functions you'll have to implement them. ::"
 msgstr ""
+":class:`~decimal.Decimal`-Instanzen haben eine "
+"Methode :meth:`~decimal.Decimal.sqrt`, die ein :class:`~decimal.Decimal` "
+"zurückgibt, brauchst du aber anderes wie trigonometrische Funktionen, musst "
+"du sie selbst implementieren. ::"
 
 #: ../../whatsnew/2.4.rst:627
 msgid ""
 ">>> d.sqrt()\n"
 "Decimal(\"351364.1828820134592177245001\")"
 msgstr ""
+">>> d.sqrt()\n"
+"Decimal(\"351364.1828820134592177245001\")"
 
 #: ../../whatsnew/2.4.rst:632
 msgid "The :class:`~decimal.Context` type"
-msgstr ""
+msgstr "Der Typ :class:`~decimal.Context`"
 
 #: ../../whatsnew/2.4.rst:634
 msgid ""
 "Instances of the :class:`~decimal.Context` class encapsulate several "
 "settings for decimal operations:"
 msgstr ""
+"Instanzen der Klasse :class:`~decimal.Context` kapseln mehrere Einstellungen "
+"für Dezimaloperationen:"
 
 #: ../../whatsnew/2.4.rst:637
 msgid ""
 ":attr:`~decimal.Context.prec` is the precision, the number of decimal places."
 msgstr ""
+":attr:`~decimal.Context.prec` ist die Genauigkeit, die Zahl der "
+"Dezimalstellen."
 
 #: ../../whatsnew/2.4.rst:639
 msgid ""
@@ -977,6 +1415,10 @@ msgid ""
 "possibilities: :const:`~decimal.ROUND_DOWN`, :const:`~decimal.ROUND_CEILING`, :const:`~decimal.ROUND_HALF_EVEN`, "
 "and various others."
 msgstr ""
+":attr:`~decimal.Context.rounding` legt den Rundungsmodus fest. Das "
+"Modul :mod:`decimal` hat Konstanten für die verschiedenen "
+"Möglichkeiten: :const:`~decimal.ROUND_DOWN`, :const:`~decimal.ROUND_CEILING`, :const:`~decimal.ROUND_HALF_EVEN` "
+"und verschiedene weitere."
 
 #: ../../whatsnew/2.4.rst:644
 msgid ""
@@ -985,6 +1427,10 @@ msgid ""
 "value is returned.  Some examples of error conditions are division by zero, "
 "loss of precision, and overflow."
 msgstr ""
+":attr:`~decimal.Context.traps` ist ein Dictionary, das festlegt, was bei "
+"bestimmten Fehlerbedingungen passiert: Entweder wird eine Ausnahme ausgelöst "
+"oder ein Wert zurückgegeben. Beispiele für Fehlerbedingungen sind Division "
+"durch null, Genauigkeitsverlust und Überlauf."
 
 #: ../../whatsnew/2.4.rst:649
 msgid ""
@@ -994,6 +1440,11 @@ msgid ""
 "following example shows the effect of changing the precision of the default "
 "context::"
 msgstr ""
+"Es gibt einen Thread-lokalen Standardkontext, den du durch Aufruf "
+"von :func:`~decimal.getcontext` erhältst. Du kannst die Eigenschaften dieses "
+"Kontexts ändern, um die Standardgenauigkeit, die Rundung oder die Trap-"
+"Behandlung zu ändern. Das folgende Beispiel zeigt die Wirkung einer Änderung "
+"der Genauigkeit des Standardkontexts::"
 
 #: ../../whatsnew/2.4.rst:654
 msgid ""
@@ -1005,6 +1456,13 @@ msgid ""
 ">>> decimal.Decimal(1) / decimal.Decimal(7)\n"
 "Decimal(\"0.142857143\")"
 msgstr ""
+">>> decimal.getcontext().prec\n"
+"28\n"
+">>> decimal.Decimal(1) / decimal.Decimal(7)\n"
+"Decimal(\"0.1428571428571428571428571429\")\n"
+">>> decimal.getcontext().prec = 9\n"
+">>> decimal.Decimal(1) / decimal.Decimal(7)\n"
+"Decimal(\"0.142857143\")"
 
 #: ../../whatsnew/2.4.rst:662
 msgid ""
@@ -1012,6 +1470,9 @@ msgid ""
 "return a special value such as infinity or not-a-number, or exceptions can "
 "be raised::"
 msgstr ""
+"Die Standardaktion bei Fehlerbedingungen ist wählbar. Das Modul kann "
+"entweder einen speziellen Wert wie Unendlich oder Not-a-Number zurückgeben, "
+"oder es können Ausnahmen ausgelöst werden::"
 
 #: ../../whatsnew/2.4.rst:666
 msgid ""
@@ -1024,6 +1485,14 @@ msgid ""
 "Decimal(\"Infinity\")\n"
 ">>>"
 msgstr ""
+">>> decimal.Decimal(1) / decimal.Decimal(0)\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"decimal.DivisionByZero: x / 0\n"
+">>> decimal.getcontext().traps[decimal.DivisionByZero] = False\n"
+">>> decimal.Decimal(1) / decimal.Decimal(0)\n"
+"Decimal(\"Infinity\")\n"
+">>>"
 
 #: ../../whatsnew/2.4.rst:675
 msgid ""
@@ -1031,38 +1500,50 @@ msgid ""
 "formatting numbers such as :meth:`~decimal.Context.to_eng_string` "
 "and :meth:`~decimal.Context.to_sci_string`."
 msgstr ""
+"Die :class:`~decimal.Context`-Instanz hat außerdem verschiedene Methoden zum "
+"Formatieren von Zahlen, etwa :meth:`~decimal.Context.to_eng_string` "
+"und :meth:`~decimal.Context.to_sci_string`."
 
 #: ../../whatsnew/2.4.rst:678
 msgid ""
 "For more information, see the documentation for the :mod:`decimal` module, "
 "which includes a quick-start tutorial and a reference."
 msgstr ""
+"Weitere Informationen findest du in der Dokumentation des "
+"Moduls :mod:`decimal`, die ein Schnellstart-Tutorial und eine Referenz "
+"enthält."
 
 #: ../../whatsnew/2.4.rst:684
 msgid ":pep:`327` - Decimal Data Type"
-msgstr ""
+msgstr ":pep:`327` - Decimal Data Type"
 
 #: ../../whatsnew/2.4.rst:685
 msgid ""
 "Written by Facundo Batista and implemented by Facundo Batista, Eric Price, "
 "Raymond Hettinger, Aahz, and Tim Peters."
 msgstr ""
+"Geschrieben von Facundo Batista und implementiert von Facundo Batista, Eric "
+"Price, Raymond Hettinger, Aahz und Tim Peters."
 
 #: ../../whatsnew/2.4.rst:688
 msgid ""
 "`http://www.lahey.com/float.htm <https://web.archive.org/web/20230604072523/"
 "http://www.lahey.com/float.htm>`__"
 msgstr ""
+"`http://www.lahey.com/float.htm <https://web.archive.org/web/20230604072523/"
+"http://www.lahey.com/float.htm>`__"
 
 #: ../../whatsnew/2.4.rst:689
 msgid ""
 "The article uses Fortran code to illustrate many of the problems that "
 "floating-point inaccuracy can cause."
 msgstr ""
+"Der Artikel veranschaulicht mit Fortran-Code viele der Probleme, die durch "
+"Ungenauigkeiten bei Gleitkommazahlen entstehen können."
 
 #: ../../whatsnew/2.4.rst:692
 msgid "https://speleotrove.com/decimal/"
-msgstr ""
+msgstr "https://speleotrove.com/decimal/"
 
 #: ../../whatsnew/2.4.rst:693
 msgid ""
@@ -1071,10 +1552,14 @@ msgid ""
 "Much of this material was written by Mike Cowlishaw, designer of the Rexx "
 "language."
 msgstr ""
+"Eine Beschreibung einer dezimalbasierten Darstellung. Diese Darstellung wird "
+"als Standard vorgeschlagen und liegt dem neuen Dezimaltyp von Python "
+"zugrunde. Ein Großteil dieses Materials wurde von Mike Cowlishaw "
+"geschrieben, dem Entwickler der Sprache Rexx."
 
 #: ../../whatsnew/2.4.rst:701
 msgid "PEP 328: Multi-line Imports"
-msgstr ""
+msgstr "PEP 328: Mehrzeilige Importe"
 
 #: ../../whatsnew/2.4.rst:703
 msgid ""
@@ -1084,6 +1569,12 @@ msgid ""
 "sequence is  very long, you can either write multiple imports from the same "
 "module, or you can use backslashes to escape the line endings like this::"
 msgstr ""
+"Eine Sprachänderung ist eine kleine syntaktische Anpassung, die es "
+"erleichtern soll, viele Namen aus einem Modul zu importieren. In einer "
+"Anweisung ``from module import names`` ist *names* eine durch Kommas "
+"getrennte Folge von Namen. Ist die Folge sehr lang, kannst du entweder "
+"mehrere Importe aus demselben Modul schreiben oder die Zeilenenden wie folgt "
+"mit Backslashes maskieren::"
 
 #: ../../whatsnew/2.4.rst:709
 msgid ""
@@ -1092,6 +1583,10 @@ msgid ""
 "            CGIXMLRPCRequestHandler,\\\n"
 "            resolve_dotted_attribute"
 msgstr ""
+"from SimpleXMLRPCServer import SimpleXMLRPCServer,\\\n"
+"            SimpleXMLRPCRequestHandler,\\\n"
+"            CGIXMLRPCRequestHandler,\\\n"
+"            resolve_dotted_attribute"
 
 #: ../../whatsnew/2.4.rst:714
 msgid ""
@@ -1099,6 +1594,9 @@ msgid ""
 "parentheses.  Python ignores newlines within a parenthesized expression, so "
 "the backslashes are no longer needed::"
 msgstr ""
+"Die syntaktische Änderung in Python 2.4 erlaubt einfach, die Namen in "
+"Klammern zu setzen. Python ignoriert Zeilenumbrüche innerhalb eines "
+"geklammerten Ausdrucks, die Backslashes sind also nicht mehr nötig::"
 
 #: ../../whatsnew/2.4.rst:718
 msgid ""
@@ -1107,6 +1605,10 @@ msgid ""
 "                                CGIXMLRPCRequestHandler,\n"
 "                                resolve_dotted_attribute)"
 msgstr ""
+"from SimpleXMLRPCServer import (SimpleXMLRPCServer,\n"
+"                                SimpleXMLRPCRequestHandler,\n"
+"                                CGIXMLRPCRequestHandler,\n"
+"                                resolve_dotted_attribute)"
 
 #: ../../whatsnew/2.4.rst:723
 msgid ""
@@ -1115,18 +1617,24 @@ msgid ""
 "part of the PEP was not implemented for Python 2.4, but was completed for "
 "Python 2.5."
 msgstr ""
+"Der PEP schlägt außerdem vor, dass alle :keyword:`import`-Anweisungen "
+"absolute Importe sind, wobei ein vorangestelltes Zeichen ``.`` einen "
+"relativen Import anzeigt. Dieser Teil des PEP wurde für Python 2.4 nicht "
+"implementiert, aber für Python 2.5 fertiggestellt."
 
 #: ../../whatsnew/2.4.rst:730
 msgid ":pep:`328` - Imports: Multi-Line and Absolute/Relative"
-msgstr ""
+msgstr ":pep:`328` - Imports: Multi-Line and Absolute/Relative"
 
 #: ../../whatsnew/2.4.rst:731
 msgid "Written by Aahz.  Multi-line imports were implemented by Dima Dorfman."
 msgstr ""
+"Geschrieben von Aahz. Mehrzeilige Importe wurden von Dima Dorfman "
+"implementiert."
 
 #: ../../whatsnew/2.4.rst:737
 msgid "PEP 331: Locale-Independent Float/String Conversions"
-msgstr ""
+msgstr "PEP 331: Locale-unabhängige Umwandlungen zwischen Float und String"
 
 #: ../../whatsnew/2.4.rst:739
 msgid ""
@@ -1137,6 +1645,13 @@ msgid ""
 "numeric locale remain set to the ``'C'`` locale.  Often this was because the "
 "code was using the C library's :c:func:`!atof` function."
 msgstr ""
+"Mit dem Modul :mod:`locale` kann Python-Software verschiedene Umwandlungen "
+"und Darstellungskonventionen wählen, die an ein bestimmtes Land oder eine "
+"bestimmte Sprache angepasst sind. Das Modul achtete aber darauf, die "
+"numerische Locale nicht zu ändern, weil verschiedene Funktionen in der "
+"Implementierung von Python verlangten, dass die numerische Locale auf "
+"``'C'`` gesetzt bleibt. Oft lag das daran, dass der Code die "
+"Funktion :c:func:`!atof` der C-Bibliothek verwendete."
 
 #: ../../whatsnew/2.4.rst:746
 msgid ""
@@ -1145,24 +1660,35 @@ msgid ""
 "set. The motivating example was GTK+, whose user interface widgets weren't "
 "displaying numbers in the current locale."
 msgstr ""
+"Die numerische Locale nicht zu setzen, verursachte aber Probleme bei "
+"Erweiterungen, die C-Bibliotheken von Drittanbietern verwendeten, weil diese "
+"nicht die richtige Locale gesetzt hatten. Das auslösende Beispiel war GTK+, "
+"dessen Oberflächen-Widgets Zahlen nicht in der aktuellen Locale anzeigten."
 
 #: ../../whatsnew/2.4.rst:751
 msgid ""
 "The solution described in the PEP is to add three new functions to the "
 "Python API that perform ASCII-only conversions, ignoring the locale setting:"
 msgstr ""
+"Die im PEP beschriebene Lösung ist, der Python-API drei neue Funktionen "
+"hinzuzufügen, die reine ASCII-Umwandlungen durchführen und die Locale-"
+"Einstellung ignorieren:"
 
 #: ../../whatsnew/2.4.rst:754
 msgid ""
 "``PyOS_ascii_strtod(str, ptr)``  and ``PyOS_ascii_atof(str, ptr)`` both "
 "convert a string to a C :c:expr:`double`."
 msgstr ""
+"``PyOS_ascii_strtod(str, ptr)`` und ``PyOS_ascii_atof(str, ptr)`` wandeln "
+"beide einen String in ein C-:c:expr:`double` um."
 
 #: ../../whatsnew/2.4.rst:757
 msgid ""
 "``PyOS_ascii_formatd(buffer, buf_len, format, d)`` converts "
 "a :c:expr:`double` to an ASCII string."
 msgstr ""
+"``PyOS_ascii_formatd(buffer, buf_len, format, d)`` wandelt "
+"ein :c:expr:`double` in einen ASCII-String um."
 
 #: ../../whatsnew/2.4.rst:760
 msgid ""
@@ -1173,14 +1699,22 @@ msgid ""
 "The :mod:`locale` module  can now change the numeric locale, letting "
 "extensions such as GTK+  produce the correct results."
 msgstr ""
+"Der Code für diese Funktionen stammt aus der Bibliothek GLib (`https://"
+"developer-old.gnome.org/glib/2.26/ <http://web.archive.org/web/"
+"20210306104320/https://developer.gnome.org/glib/2.26/>`__), deren Entwickler "
+"die betreffenden Funktionen freundlicherweise neu lizenziert und der Python "
+"Software Foundation gespendet haben. Das Modul :mod:`locale` kann nun die "
+"numerische Locale ändern, sodass Erweiterungen wie GTK+ die korrekten "
+"Ergebnisse liefern."
 
 #: ../../whatsnew/2.4.rst:769
 msgid ":pep:`331` - Locale-Independent Float/String Conversions"
-msgstr ""
+msgstr ":pep:`331` - Locale-Independent Float/String Conversions"
 
 #: ../../whatsnew/2.4.rst:770
 msgid "Written by Christian R. Reis, and implemented by Gustavo Carneiro."
 msgstr ""
+"Geschrieben von Christian R. Reis und implementiert von Gustavo Carneiro."
 
 #: ../../whatsnew/2.4.rst:776
 msgid "Other Language Changes"
@@ -1191,32 +1725,41 @@ msgid ""
 "Here are all of the changes that Python 2.4 makes to the core Python "
 "language."
 msgstr ""
+"Hier alle Änderungen, die Python 2.4 am Sprachkern von Python vornimmt."
 
 #: ../../whatsnew/2.4.rst:780
 msgid "Decorators for functions and methods were added (:pep:`318`)."
 msgstr ""
+"Dekoratoren für Funktionen und Methoden wurden hinzugefügt (:pep:`318`)."
 
 #: ../../whatsnew/2.4.rst:782
 msgid ""
 "Built-in :func:`set` and :func:`frozenset` types were  added (:pep:`218`). "
 "Other new built-ins include the ``reversed(seq)`` function (:pep:`322`)."
 msgstr ""
+"Die eingebauten Typen :func:`set` und :func:`frozenset` wurden hinzugefügt "
+"(:pep:`218`). Zu den weiteren neuen eingebauten Funktionen gehört "
+"``reversed(seq)`` (:pep:`322`)."
 
 #: ../../whatsnew/2.4.rst:785
 msgid "Generator expressions were added (:pep:`289`)."
-msgstr ""
+msgstr "Generatorausdrücke wurden hinzugefügt (:pep:`289`)."
 
 #: ../../whatsnew/2.4.rst:787
 msgid ""
 "Certain numeric expressions no longer return values restricted to 32 or 64 "
 "bits (:pep:`237`)."
 msgstr ""
+"Bestimmte numerische Ausdrücke geben keine auf 32 oder 64 Bit beschränkten "
+"Werte mehr zurück (:pep:`237`)."
 
 #: ../../whatsnew/2.4.rst:790
 msgid ""
 "You can now put parentheses around the list of names in a ``from module "
 "import names`` statement (:pep:`328`)."
 msgstr ""
+"Du kannst die Liste der Namen in einer Anweisung ``from module import "
+"names`` nun in Klammern setzen (:pep:`328`)."
 
 #: ../../whatsnew/2.4.rst:793
 msgid ""
@@ -1224,6 +1767,10 @@ msgid ""
 "the :class:`dict` constructor.  This includes any mapping, any iterable of "
 "key/value pairs, and keyword arguments. (Contributed by Raymond Hettinger.)"
 msgstr ""
+"Die Methode :meth:`dict.update` akzeptiert nun dieselben Argumentformen wie "
+"der Konstruktor :class:`dict`. Dazu gehören beliebige Mappings, beliebige "
+"Iterables von Schlüssel-Wert-Paaren und Schlüsselwortargumente. (Beigetragen "
+"von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:797
 msgid ""
@@ -1231,6 +1778,10 @@ msgid ""
 "and :meth:`~str.center` now take an optional argument for specifying a fill "
 "character other than a space. (Contributed by Raymond Hettinger.)"
 msgstr ""
+"Die String-Methoden :meth:`~str.ljust`, :meth:`~str.rjust` "
+"und :meth:`~str.center` nehmen nun ein optionales Argument an, das ein "
+"anderes Füllzeichen als das Leerzeichen angibt. (Beigetragen von Raymond "
+"Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:801
 msgid ""
@@ -1238,6 +1789,9 @@ msgid ""
 "the :meth:`~str.split` method but splits from the end of the string.   "
 "(Contributed by Sean Reifschneider.) ::"
 msgstr ""
+"Strings haben außerdem eine Methode :meth:`~str.rsplit` erhalten, die wie "
+"die Methode :meth:`~str.split` funktioniert, aber vom Ende des Strings her "
+"teilt. (Beigetragen von Sean Reifschneider.) ::"
 
 #: ../../whatsnew/2.4.rst:805
 msgid ""
@@ -1246,6 +1800,10 @@ msgid ""
 "'www.python.org'.rsplit('.', 1)\n"
 "['www.python', 'org']"
 msgstr ""
+">>> 'www.python.org'.split('.', 1)\n"
+"['www', 'python.org']\n"
+"'www.python.org'.rsplit('.', 1)\n"
+"['www.python', 'org']"
 
 #: ../../whatsnew/2.4.rst:810
 msgid ""
@@ -1253,6 +1811,10 @@ msgid ""
 "the :meth:`~list.sort` method of lists. These parameters make some common "
 "usages of :meth:`~list.sort` simpler. All of these parameters are optional."
 msgstr ""
+"Zur Methode :meth:`~list.sort` von Listen wurden drei Schlüsselwortparameter "
+"hinzugefügt: *cmp*, *key* und *reverse*. Diese Parameter vereinfachen einige "
+"häufige Verwendungen von :meth:`~list.sort`. Alle diese Parameter sind "
+"optional."
 
 #: ../../whatsnew/2.4.rst:814
 msgid ""
@@ -1262,6 +1824,11 @@ msgid ""
 "Previously this was the only parameter that could be provided "
 "to :meth:`~list.sort`."
 msgstr ""
+"Für den Parameter *cmp* sollte der Wert eine Vergleichsfunktion sein, die "
+"zwei Parameter annimmt und je nach Vergleich der Parameter -1, 0 oder +1 "
+"zurückgibt. Diese Funktion wird dann zum Sortieren der Liste verwendet. "
+"Bisher war das der einzige Parameter, der sich an :meth:`~list.sort` "
+"übergeben ließ."
 
 #: ../../whatsnew/2.4.rst:819
 msgid ""
@@ -1269,6 +1836,10 @@ msgid ""
 "returns a comparison key for the element.  The list is then sorted using the "
 "comparison keys.  The following example sorts a list case-insensitively::"
 msgstr ""
+"*key* sollte eine Funktion mit einem Parameter sein, die ein Listenelement "
+"annimmt und einen Vergleichsschlüssel für das Element zurückgibt. Die Liste "
+"wird dann anhand der Vergleichsschlüssel sortiert. Das folgende Beispiel "
+"sortiert eine Liste ohne Beachtung der Groß-/Kleinschreibung::"
 
 #: ../../whatsnew/2.4.rst:823
 msgid ""
@@ -1285,6 +1856,18 @@ msgid ""
 ">>> L\n"
 "['A', 'b', 'c', 'D']"
 msgstr ""
+">>> L = ['A', 'b', 'c', 'D']\n"
+">>> L.sort()                 # Case-sensitive sort\n"
+">>> L\n"
+"['A', 'D', 'b', 'c']\n"
+">>> # Using 'key' parameter to sort list\n"
+">>> L.sort(key=lambda x: x.lower())\n"
+">>> L\n"
+"['A', 'b', 'c', 'D']\n"
+">>> # Old-fashioned way\n"
+">>> L.sort(cmp=lambda x,y: cmp(x.lower(), y.lower()))\n"
+">>> L\n"
+"['A', 'b', 'c', 'D']"
 
 #: ../../whatsnew/2.4.rst:836
 msgid ""
@@ -1294,6 +1877,11 @@ msgid ""
 "in the list while using *cmp* will call it twice for each comparison, so "
 "using *key* saves on invocations of the :meth:`~str.lower` method."
 msgstr ""
+"Das letzte Beispiel mit dem Parameter *cmp* ist der alte Weg, ohne Beachtung "
+"der Groß-/Kleinschreibung zu sortieren. Er funktioniert, ist aber langsamer "
+"als der Parameter *key*. Mit *key* wird die Methode :meth:`~str.lower` "
+"einmal pro Listenelement aufgerufen, mit *cmp* dagegen zweimal pro "
+"Vergleich; *key* spart also Aufrufe der Methode :meth:`~str.lower`."
 
 #: ../../whatsnew/2.4.rst:842
 msgid ""
@@ -1301,6 +1889,10 @@ msgid ""
 "avoid a :keyword:`lambda` expression by using an unbound method instead.  "
 "For example, the above case-insensitive sort is best written as::"
 msgstr ""
+"Bei einfachen Schlüssel- und Vergleichsfunktionen lässt sich "
+"ein :keyword:`lambda`-Ausdruck oft vermeiden, indem man stattdessen eine "
+"ungebundene Methode verwendet. Die obige Sortierung ohne Beachtung der Groß-/"
+"Kleinschreibung schreibt man zum Beispiel am besten so::"
 
 #: ../../whatsnew/2.4.rst:846
 msgid ""
@@ -1308,6 +1900,9 @@ msgid ""
 ">>> L\n"
 "['A', 'b', 'c', 'D']"
 msgstr ""
+">>> L.sort(key=str.lower)\n"
+">>> L\n"
+"['A', 'b', 'c', 'D']"
 
 #: ../../whatsnew/2.4.rst:850
 msgid ""
@@ -1315,6 +1910,9 @@ msgid ""
 "true, the list will be sorted into reverse order. Instead of ``L.sort(); "
 "L.reverse()``, you can now write ``L.sort(reverse=True)``."
 msgstr ""
+"Schließlich nimmt der Parameter *reverse* einen Wahrheitswert an. Ist der "
+"Wert wahr, wird die Liste in umgekehrter Reihenfolge sortiert. Statt "
+"``L.sort(); L.reverse()`` kannst du nun ``L.sort(reverse=True)`` schreiben."
 
 #: ../../whatsnew/2.4.rst:854
 msgid ""
@@ -1324,10 +1922,17 @@ msgid ""
 "list by age, resulting in a list sorted by age where people with the same "
 "age are in name-sorted order."
 msgstr ""
+"Die Ergebnisse des Sortierens sind nun garantiert stabil. Das bedeutet, dass "
+"zwei Einträge mit gleichen Schlüsseln in derselben Reihenfolge zurückgegeben "
+"werden, in der sie eingegeben wurden. Du kannst zum Beispiel eine Liste von "
+"Personen nach Namen sortieren und dann nach Alter, und erhältst eine nach "
+"Alter sortierte Liste, in der Personen gleichen Alters nach Namen sortiert "
+"sind."
 
 #: ../../whatsnew/2.4.rst:860
 msgid "(All changes to :meth:`~list.sort` contributed by Raymond Hettinger.)"
 msgstr ""
+"(Alle Änderungen an :meth:`~list.sort` beigesteuert von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:862
 msgid ""
@@ -1335,18 +1940,22 @@ msgid ""
 "place :meth:`list.sort` method but can be used in expressions.  The "
 "differences are:"
 msgstr ""
+"Es gibt eine neue eingebaute Funktion ``sorted(iterable)``, die wie die In-"
+"place-Methode :meth:`list.sort` funktioniert, sich aber in Ausdrücken "
+"verwenden lässt. Die Unterschiede sind:"
 
 #: ../../whatsnew/2.4.rst:866
 msgid "the input may be any iterable;"
-msgstr ""
+msgstr "die Eingabe kann ein beliebiges Iterable sein,"
 
 #: ../../whatsnew/2.4.rst:868
 msgid "a newly formed copy is sorted, leaving the original intact; and"
 msgstr ""
+"sortiert wird eine neu erzeugte Kopie, das Original bleibt unverändert, und"
 
 #: ../../whatsnew/2.4.rst:870
 msgid "the expression returns the new sorted copy"
-msgstr ""
+msgstr "der Ausdruck gibt die neue sortierte Kopie zurück"
 
 #: ../../whatsnew/2.4.rst:874
 msgid ""
@@ -1369,17 +1978,37 @@ msgid ""
 "red 1\n"
 "yellow 5"
 msgstr ""
+">>> L = [9,7,8,3,2,4,1,6,5]\n"
+">>> [10+i for i in sorted(L)]       # usable in a list comprehension\n"
+"[11, 12, 13, 14, 15, 16, 17, 18, 19]\n"
+">>> L                               # original is left unchanged\n"
+"[9,7,8,3,2,4,1,6,5]\n"
+">>> sorted('Monty Python')          # any iterable may be an input\n"
+"[' ', 'M', 'P', 'h', 'n', 'n', 'o', 'o', 't', 't', 'y', 'y']\n"
+"\n"
+">>> # List the contents of a dict sorted by key values\n"
+">>> colormap = dict(red=1, blue=2, green=3, black=4, yellow=5)\n"
+">>> for k, v in sorted(colormap.iteritems()):\n"
+"...     print k, v\n"
+"...\n"
+"black 4\n"
+"blue 2\n"
+"green 3\n"
+"red 1\n"
+"yellow 5"
 
 #: ../../whatsnew/2.4.rst:893 ../../whatsnew/2.4.rst:921
 #: ../../whatsnew/2.4.rst:1214
 msgid "(Contributed by Raymond Hettinger.)"
-msgstr ""
+msgstr "(Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:895 ../../whatsnew/2.4.rst:1521
 msgid ""
 "Integer operations will no longer trigger an :exc:`!OverflowWarning`. "
 "The :exc:`!OverflowWarning` warning will disappear in Python 2.5."
 msgstr ""
+"Ganzzahloperationen lösen keine :exc:`!OverflowWarning` mehr aus. Die "
+"Warnung :exc:`!OverflowWarning` verschwindet in Python 2.5."
 
 #: ../../whatsnew/2.4.rst:898
 msgid ""
@@ -1388,6 +2017,10 @@ msgid ""
 "as a script. For example,  you can now run the Python profiler with ``python "
 "-m profile``. (Contributed by Nick Coghlan.)"
 msgstr ""
+"Der Interpreter hat eine neue Option :option:`-m` erhalten, die einen Namen "
+"annimmt, das entsprechende Modul in ``sys.path`` sucht und es als Skript "
+"ausführt. Den Python-Profiler kannst du nun zum Beispiel mit ``python -m "
+"profile`` ausführen. (Beigetragen von Nick Coghlan.)"
 
 #: ../../whatsnew/2.4.rst:903
 msgid ""
@@ -1396,6 +2029,10 @@ msgid ""
 "for the *locals* parameter.  Previously this had to be a regular Python "
 "dictionary.  (Contributed by Raymond Hettinger.)"
 msgstr ""
+"Die Funktionen ``eval(expr, globals, locals)`` und ``execfile(filename, "
+"globals, locals)`` sowie die Anweisung ``exec`` akzeptieren nun einen "
+"beliebigen Mapping-Typ für den Parameter *locals*. Bisher musste das ein "
+"normales Python-Dictionary sein. (Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:908
 msgid ""
@@ -1404,6 +2041,10 @@ msgid ""
 "a :exc:`TypeError` exception.  This makes them more suitable for use with "
 "variable length argument lists::"
 msgstr ""
+"Die eingebaute Funktion :func:`zip` und :func:`!itertools.izip` geben nun "
+"eine leere Liste zurück, wenn sie ohne Argumente aufgerufen werden. Bisher "
+"lösten sie eine :exc:`TypeError`-Ausnahme aus. Das macht sie besser geeignet "
+"für Argumentlisten variabler Länge::"
 
 #: ../../whatsnew/2.4.rst:913
 msgid ""
@@ -1415,6 +2056,13 @@ msgid ""
 ">>> transpose([])\n"
 "[]"
 msgstr ""
+">>> def transpose(array):\n"
+"...    return zip(*array)\n"
+"...\n"
+">>> transpose([(1,2,3), (4,5,6)])\n"
+"[(1, 4), (2, 5), (3, 6)]\n"
+">>> transpose([])\n"
+"[]"
 
 #: ../../whatsnew/2.4.rst:923
 msgid ""
@@ -1423,12 +2071,19 @@ msgid ""
 "left behind would fool further imports of the same module into succeeding, "
 "leading to confusing errors.   (Fixed by Tim Peters.)"
 msgstr ""
+"Ein Fehler beim Import eines Moduls hinterlässt kein teilweise "
+"initialisiertes Modulobjekt mehr in ``sys.modules``. Das zurückgelassene "
+"unvollständige Modulobjekt ließ weitere Importe desselben Moduls fälschlich "
+"gelingen, was zu verwirrenden Fehlern führte. (Behoben von Tim Peters.)"
 
 #: ../../whatsnew/2.4.rst:928
 msgid ""
 ":const:`None` is now a constant; code that binds a new value to  the name "
 "``None`` is now a syntax error. (Contributed by Raymond Hettinger.)"
 msgstr ""
+":const:`None` ist nun eine Konstante; Code, der den Namen ``None`` an einen "
+"neuen Wert bindet, ist nun ein Syntaxfehler. (Beigetragen von Raymond "
+"Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:935
 msgid "Optimizations"
@@ -1443,6 +2098,12 @@ msgid ""
 "iterkeys`, :meth:`!itervalues`, and :meth:`!iteritems`. (Contributed by "
 "Raymond Hettinger.)"
 msgstr ""
+"Die inneren Schleifen für das Slicen von Listen und Tupeln wurden optimiert "
+"und laufen nun etwa ein Drittel schneller. Auch die inneren Schleifen für "
+"Dictionaries wurden optimiert, was zu Performance-Steigerungen "
+"bei :meth:`~dict.keys`, :meth:`~dict.values`, :meth:`~dict.items`, :meth:`!"
+"iterkeys`, :meth:`!itervalues` und :meth:`!iteritems` führt. (Beigetragen "
+"von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:943
 msgid ""
@@ -1454,6 +2115,13 @@ msgid ""
 "argument into a temporary list before extending the base list.  (Contributed "
 "by Raymond Hettinger.)"
 msgstr ""
+"Die Maschinerie zum Vergrößern und Verkleinern von Listen wurde auf "
+"Geschwindigkeit und Platzeffizienz optimiert. Anhängen an und Entnehmen aus "
+"Listen läuft nun dank effizienterer Codepfade und seltenerer Verwendung des "
+"zugrunde liegenden System-:c:func:`realloc` schneller. Auch List "
+"Comprehensions profitieren davon. :meth:`list.extend` wurde ebenfalls "
+"optimiert und wandelt sein Argument vor dem Erweitern der Basisliste nicht "
+"mehr in eine temporäre Liste um. (Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:950
 msgid ""
@@ -1461,6 +2129,10 @@ msgid ""
 "now run several times faster with non-sequence arguments that supply "
 "a :meth:`~object.__len__` method.  (Contributed by Raymond Hettinger.)"
 msgstr ""
+":func:`list`, :func:`tuple`, :func:`map`, :func:`filter` und :func:`zip` "
+"laufen nun mehrfach schneller mit Argumenten, die keine Sequenzen sind, aber "
+"eine Methode :meth:`~object.__len__` bereitstellen. (Beigetragen von Raymond "
+"Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:954
 msgid ""
@@ -1471,6 +2143,12 @@ msgid ""
 "suitable for use as arguments to functionals: ``map(mydict.__getitem__, "
 "keylist)``. (Contributed by Raymond Hettinger.)"
 msgstr ""
+"Die Methoden :meth:`!list.__getitem__`, :meth:`!dict.__getitem__` "
+"und :meth:`!dict.__contains__` sind nun als :class:`!method_descriptor`-"
+"Objekte statt als :class:`!wrapper_descriptor`-Objekte implementiert. Diese "
+"Form des Zugriffs verdoppelt ihre Performance und macht sie besser geeignet "
+"als Argumente für Funktionale: ``map(mydict.__getitem__, keylist)``. "
+"(Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:961
 msgid ""
@@ -1478,6 +2156,9 @@ msgid ""
 "for list comprehensions and speeds them up by about a third.  (Contributed "
 "by Raymond Hettinger.)"
 msgstr ""
+"Ein neuer Opcode, ``LIST_APPEND``, wurde hinzugefügt, der den für List "
+"Comprehensions erzeugten Bytecode vereinfacht und sie um etwa ein Drittel "
+"beschleunigt. (Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:965
 msgid ""
@@ -1485,6 +2166,9 @@ msgid ""
 "faster bytecode; remarkably, the resulting bytecode is  more readable.  "
 "(Enhanced by Raymond Hettinger.)"
 msgstr ""
+"Der Peephole-Optimierer für Bytecode wurde verbessert und erzeugt kürzeren, "
+"schnelleren Bytecode. Bemerkenswerterweise ist der entstehende Bytecode auch "
+"lesbarer. (Verbessert von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:969
 msgid ""
@@ -1495,6 +2179,12 @@ msgid ""
 "strings is still recommended when you want to efficiently glue a large "
 "number of strings together. (Contributed by Armin Rigo.)"
 msgstr ""
+"String-Verkettungen in Anweisungen der Form ``s = s + \"abc\"`` und ``s += "
+"\"abc\"`` werden unter bestimmten Umständen nun effizienter ausgeführt. "
+"Diese Optimierung gibt es in anderen Python-Implementierungen wie Jython "
+"nicht, verlass dich also nicht darauf. Willst du effizient eine große Zahl "
+"von Strings zusammenfügen, wird weiterhin die String-"
+"Methode :meth:`~str.join` empfohlen. (Beigetragen von Armin Rigo.)"
 
 #: ../../whatsnew/2.4.rst:976
 msgid ""
@@ -1504,10 +2194,15 @@ msgid ""
 "used measurement of Python's performance.  Your own applications may show "
 "greater or smaller benefits from Python 2.4.)"
 msgstr ""
+"Im Ergebnis führt Python 2.4 dank der Optimierungen den Benchmark pystone "
+"etwa 5 % schneller aus als Python 2.3 und 35 % schneller als Python 2.2. "
+"(pystone ist kein besonders guter Benchmark, aber die am häufigsten "
+"verwendete Messung der Performance von Python. Deine eigenen Anwendungen "
+"profitieren von Python 2.4 vielleicht mehr oder weniger.)"
 
 #: ../../whatsnew/2.4.rst:992
 msgid "New, Improved, and Deprecated Modules"
-msgstr ""
+msgstr "Neue, verbesserte und veraltete Module"
 
 #: ../../whatsnew/2.4.rst:994
 msgid ""
@@ -1517,6 +2212,11 @@ msgid ""
 "source tree for a more complete list of changes, or look through the CVS "
 "logs for all the details."
 msgstr ""
+"Wie üblich erhielt die Standardbibliothek von Python eine Reihe von "
+"Verbesserungen und Fehlerkorrekturen. Hier eine unvollständige Liste der "
+"bemerkenswertesten Änderungen, alphabetisch nach Modulnamen sortiert. Eine "
+"vollständigere Liste der Änderungen findest du in der Datei :file:`Misc/"
+"NEWS` im Quellbaum, alle Details in den CVS-Protokollen."
 
 #: ../../whatsnew/2.4.rst:999
 msgid ""
@@ -1524,6 +2224,10 @@ msgid ""
 "parameter that lets you perform a limited number of passes through the "
 "polling loop.  The default is still to loop forever."
 msgstr ""
+"Die Funktion :func:`!loop` des Moduls :mod:`!asyncore` hat nun einen "
+"Parameter *count*, mit dem sich eine begrenzte Zahl von Durchläufen der "
+"Polling-Schleife ausführen lässt. Standardmäßig läuft die Schleife weiterhin "
+"endlos."
 
 #: ../../whatsnew/2.4.rst:1003
 msgid ""
@@ -1531,26 +2235,34 @@ msgid ""
 "Base64, Base32, and Base16 encoding and decoding, including optional case "
 "folding and optional alternative alphabets. (Contributed by Barry Warsaw.)"
 msgstr ""
+"Das Modul :mod:`base64` bietet nun vollständigere Unterstützung "
+"von :rfc:`3548` für Kodierung und Dekodierung in Base64, Base32 und Base16, "
+"einschließlich optionaler Angleichung der Groß-/Kleinschreibung und "
+"optionaler alternativer Alphabete. (Beigetragen von Barry Warsaw.)"
 
 #: ../../whatsnew/2.4.rst:1007
 msgid ""
 "The :mod:`bisect` module now has an underlying C implementation for improved "
 "performance. (Contributed by Dmitry Vasiliev.)"
 msgstr ""
+"Das Modul :mod:`bisect` hat nun für bessere Performance eine zugrunde "
+"liegende C-Implementierung. (Beigetragen von Dmitry Vasiliev.)"
 
 #: ../../whatsnew/2.4.rst:1010
 msgid ""
 "The CJKCodecs collections of East Asian codecs, maintained by Hye-Shik "
 "Chang, was integrated into 2.4.   The new encodings are:"
 msgstr ""
+"Die von Hye-Shik Chang gepflegte Sammlung ostasiatischer Codecs CJKCodecs "
+"wurde in 2.4 integriert. Die neuen Kodierungen sind:"
 
 #: ../../whatsnew/2.4.rst:1013
 msgid "Chinese (PRC): gb2312, gbk, gb18030, big5hkscs, hz"
-msgstr ""
+msgstr "Chinesisch (VR China): gb2312, gbk, gb18030, big5hkscs, hz"
 
 #: ../../whatsnew/2.4.rst:1015
 msgid "Chinese (ROC): big5, cp950"
-msgstr ""
+msgstr "Chinesisch (Republik China): big5, cp950"
 
 #: ../../whatsnew/2.4.rst:1017
 msgid ""
@@ -1558,16 +2270,21 @@ msgid ""
 "jp-1, iso-2022-jp-2, iso-2022-jp-3, iso-2022-jp-ext, iso-2022-jp-2004, shift-"
 "jis, shift-jisx0213, shift-jis-2004"
 msgstr ""
+"Japanisch: cp932, euc-jis-2004, euc-jp, euc-jisx0213, iso-2022-jp, iso-2022-"
+"jp-1, iso-2022-jp-2, iso-2022-jp-3, iso-2022-jp-ext, iso-2022-jp-2004, shift-"
+"jis, shift-jisx0213, shift-jis-2004"
 
 #: ../../whatsnew/2.4.rst:1021
 msgid "Korean: cp949, euc-kr, johab, iso-2022-kr"
-msgstr ""
+msgstr "Koreanisch: cp949, euc-kr, johab, iso-2022-kr"
 
 #: ../../whatsnew/2.4.rst:1023
 msgid ""
 "Some other new encodings were added: HP Roman8,  ISO_8859-11, ISO_8859-16, "
 "PCTP-154, and TIS-620."
 msgstr ""
+"Einige weitere neue Kodierungen wurden hinzugefügt: HP Roman8, ISO_8859-11, "
+"ISO_8859-16, PCTP-154 und TIS-620."
 
 #: ../../whatsnew/2.4.rst:1026
 msgid ""
@@ -1578,6 +2295,13 @@ msgid ""
 "it can and future calls will resume decoding where previous ones left off.  "
 "(Implemented by Walter Dörwald.)"
 msgstr ""
+"Die Codecs für UTF-8 und UTF-16 kommen nun besser mit unvollständigen "
+"Eingaben zurecht. Bisher versuchte die Klasse :class:`~codecs.StreamReader`, "
+"weitere Daten zu lesen, sodass sich das Dekodieren aus dem Datenstrom nicht "
+"fortsetzen ließ. Die Methode :meth:`~codecs.StreamReader.read` gibt nun so "
+"viele Daten zurück, wie sie kann, und spätere Aufrufe setzen das Dekodieren "
+"dort fort, wo die vorherigen aufgehört haben. (Implementiert von Walter "
+"Dörwald.)"
 
 #: ../../whatsnew/2.4.rst:1032
 msgid ""
@@ -1586,6 +2310,11 @@ msgid ""
 "type, :class:`~collections.deque`, a double-ended queue that supports "
 "efficiently adding and removing elements from either end::"
 msgstr ""
+"Es gibt ein neues Modul :mod:`collections` für verschiedene spezialisierte "
+"Collection-Datentypen. Derzeit enthält es nur einen "
+"Typ, :class:`~collections.deque`, eine doppelseitige Warteschlange, die "
+"effizientes Hinzufügen und Entfernen von Elementen an beiden Enden "
+"unterstützt::"
 
 #: ../../whatsnew/2.4.rst:1037
 msgid ""
@@ -1604,6 +2333,20 @@ msgid ""
 ">>> 'h' in d                # search the deque\n"
 "True"
 msgstr ""
+">>> from collections import deque\n"
+">>> d = deque('ghi')        # make a new deque with three items\n"
+">>> d.append('j')           # add a new entry to the right side\n"
+">>> d.appendleft('f')       # add a new entry to the left side\n"
+">>> d                       # show the representation of the deque\n"
+"deque(['f', 'g', 'h', 'i', 'j'])\n"
+">>> d.pop()                 # return and remove the rightmost item\n"
+"'j'\n"
+">>> d.popleft()             # return and remove the leftmost item\n"
+"'f'\n"
+">>> list(d)                 # list the contents of the deque\n"
+"['g', 'h', 'i']\n"
+">>> 'h' in d                # search the deque\n"
+"True"
 
 #: ../../whatsnew/2.4.rst:1052
 msgid ""
@@ -1611,6 +2354,9 @@ msgid ""
 "take advantage of :class:`collections.deque` for improved performance.  "
 "(Contributed by Raymond Hettinger.)"
 msgstr ""
+"Mehrere Module, etwa die Module :mod:`queue` und :mod:`threading`, nutzen "
+"nun :class:`collections.deque` für bessere Performance. (Beigetragen von "
+"Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:1056
 msgid ""
@@ -1621,6 +2367,12 @@ msgid ""
 "passed a *value* argument that isn't a string.   (Contributed by John "
 "Belmonte and David Goodger.)"
 msgstr ""
+"Die Klassen von :mod:`ConfigParser <configparser>` wurden leicht verbessert. "
+"Die Methode :meth:`~configparser.ConfigParser.read` gibt nun eine Liste der "
+"erfolgreich geparsten Dateien zurück, und die "
+"Methode :meth:`~configparser.ConfigParser.set` löst :exc:`TypeError` aus, "
+"wenn ihr ein Argument *value* übergeben wird, das kein String ist. "
+"(Beigetragen von John Belmonte und David Goodger.)"
 
 #: ../../whatsnew/2.4.rst:1061
 msgid ""
@@ -1629,6 +2381,10 @@ msgid ""
 "terminal supports transparency, this makes it possible to use a transparent "
 "background. (Contributed by Jörg Lehmann.)"
 msgstr ""
+"Das Modul :mod:`curses` unterstützt nun die ncurses-"
+"Erweiterung :func:`~curses.use_default_colors`. Auf Plattformen, deren "
+"Terminal Transparenz unterstützt, lässt sich damit ein transparenter "
+"Hintergrund verwenden. (Beigetragen von Jörg Lehmann.)"
 
 #: ../../whatsnew/2.4.rst:1066
 msgid ""
@@ -1636,6 +2392,9 @@ msgid ""
 "that creates an HTML table showing a side by side comparison of two versions "
 "of a text. (Contributed by Dan Gass.)"
 msgstr ""
+"Das Modul :mod:`difflib` enthält nun eine Klasse :class:`~difflib.HtmlDiff`, "
+"die eine HTML-Tabelle mit einem Vergleich zweier Textversionen nebeneinander "
+"erzeugt. (Beigetragen von Dan Gass.)"
 
 #: ../../whatsnew/2.4.rst:1070
 msgid ""
@@ -1648,6 +2407,14 @@ msgid ""
 "the :attr:`!defects` attribute of the message.  (Developed by Anthony "
 "Baxter, Barry Warsaw, Thomas Wouters, and others.)"
 msgstr ""
+"Das Paket :mod:`email` wurde auf Version 3.0 aktualisiert, die verschiedene "
+"veraltete APIs gestrichen und die Unterstützung für Python-Versionen vor 2.3 "
+"entfernt hat. Version 3.0 des Pakets verwendet einen neuen inkrementellen "
+"Parser für MIME-Nachrichten, verfügbar im Modul :mod:`!email.FeedParser`. "
+"Der neue Parser muss nicht die gesamte Nachricht in den Speicher lesen und "
+"löst keine Ausnahmen aus, wenn eine Nachricht fehlerhaft ist. Stattdessen "
+"vermerkt er alle Probleme im Attribut :attr:`!defects` der Nachricht. "
+"(Entwickelt von Anthony Baxter, Barry Warsaw, Thomas Wouters und anderen.)"
 
 #: ../../whatsnew/2.4.rst:1079
 msgid ""
@@ -1658,6 +2425,12 @@ msgid ""
 "smallest values in a dataset without the expense of a full sort.  "
 "(Contributed by Raymond Hettinger.)"
 msgstr ""
+"Das Modul :mod:`heapq` wurde nach C portiert. Die daraus resultierende "
+"zehnfache Geschwindigkeitssteigerung macht das Modul geeignet für die "
+"Verarbeitung großer Datenmengen. Außerdem hat das Modul zwei neue "
+"Funktionen, :func:`~heapq.nlargest` und :func:`~heapq.nsmallest`, die mit "
+"Heaps die N größten oder kleinsten Werte eines Datensatzes finden, ohne den "
+"Aufwand einer vollständigen Sortierung. (Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:1085
 msgid ""
@@ -1667,6 +2440,11 @@ msgid ""
 "MOVED_PERMANENTLY`; use pydoc to get a full list.  (Contributed by Andrew "
 "Eland.)"
 msgstr ""
+"Das Modul :mod:`httplib <http>` enthält nun Konstanten für HTTP-Statuscodes, "
+"die in verschiedenen HTTP-bezogenen RFC-Dokumenten definiert sind. Die "
+"Konstanten haben Namen wie :const:`!OK`, :const:`!CREATED`, :const:`!"
+"CONTINUE` und :const:`!MOVED_PERMANENTLY`. Eine vollständige Liste erhältst "
+"du mit pydoc. (Beigetragen von Andrew Eland.)"
 
 #: ../../whatsnew/2.4.rst:1091
 msgid ""
@@ -1674,6 +2452,10 @@ msgid ""
 "Yves Dionne) and new :meth:`~imaplib.IMAP4.deleteacl` "
 "and :meth:`~imaplib.IMAP4.myrights` methods (contributed by Arnaud Mazin)."
 msgstr ""
+"Das Modul :mod:`imaplib` unterstützt nun den IMAP-Befehl THREAD "
+"(beigesteuert von Yves Dionne) und die neuen "
+"Methoden :meth:`~imaplib.IMAP4.deleteacl` "
+"und :meth:`~imaplib.IMAP4.myrights` (beigesteuert von Arnaud Mazin)."
 
 #: ../../whatsnew/2.4.rst:1095
 msgid ""
@@ -1685,6 +2467,14 @@ msgid ""
 "subsequences which have matching values of the key, and returns a series of "
 "2-tuples containing the key value and an iterator over the subsequence."
 msgstr ""
+"Das Modul :mod:`itertools` hat eine Funktion ``groupby(iterable[, *func*])`` "
+"erhalten. *iterable* ist etwas, über das sich iterieren lässt, um einen "
+"Strom von Elementen zu erhalten, und der optionale Parameter *func* ist eine "
+"Funktion, die ein Element annimmt und einen Schlüsselwert zurückgibt. Fehlt "
+"er, ist der Schlüssel einfach das Element selbst. :func:`~itertools.groupby` "
+"gruppiert die Elemente dann in Teilfolgen mit übereinstimmendem "
+"Schlüsselwert und gibt eine Reihe von 2-Tupeln mit dem Schlüsselwert und "
+"einem Iterator über die Teilfolge zurück."
 
 #: ../../whatsnew/2.4.rst:1103
 msgid ""
@@ -1692,6 +2482,10 @@ msgid ""
 "whether a number is even or odd, so the result of :func:`~itertools.groupby` "
 "is to return consecutive runs of odd or even numbers. ::"
 msgstr ""
+"Ein Beispiel macht das klarer. Die Funktion *key* gibt einfach zurück, ob "
+"eine Zahl gerade oder ungerade ist, das Ergebnis "
+"von :func:`~itertools.groupby` sind also aufeinanderfolgende Läufe gerader "
+"oder ungerader Zahlen. ::"
 
 #: ../../whatsnew/2.4.rst:1107
 msgid ""
@@ -1707,6 +2501,17 @@ msgid ""
 "0 [12, 14]\n"
 ">>>"
 msgstr ""
+">>> import itertools\n"
+">>> L = [2, 4, 6, 7, 8, 9, 11, 12, 14]\n"
+">>> for key_val, it in itertools.groupby(L, lambda x: x % 2):\n"
+"...    print key_val, list(it)\n"
+"...\n"
+"0 [2, 4, 6]\n"
+"1 [7]\n"
+"0 [8]\n"
+"1 [9, 11]\n"
+"0 [12, 14]\n"
+">>>"
 
 #: ../../whatsnew/2.4.rst:1119
 msgid ""
@@ -1714,6 +2519,10 @@ msgid ""
 "for :func:`~itertools.groupby` is similar to the Unix ``uniq`` filter which "
 "makes it handy for eliminating, counting, or identifying duplicate elements::"
 msgstr ""
+":func:`~itertools.groupby` wird typischerweise mit sortierten Eingaben "
+"verwendet. Die Logik von :func:`~itertools.groupby` ähnelt dem Unix-Filter "
+"``uniq``, was sie praktisch macht, um doppelte Elemente zu entfernen, zu "
+"zählen oder zu erkennen::"
 
 #: ../../whatsnew/2.4.rst:1123
 msgid ""
@@ -1736,10 +2545,28 @@ msgid ""
 ">>> [(k, len(list(g))) for k, g in groupby(letters)]\n"
 "[('a', 5), ('b', 2), ('c', 1), ('d', 1), ('r', 2)]"
 msgstr ""
+">>> word = 'abracadabra'\n"
+">>> letters = sorted(word)   # Turn string into a sorted list of letters\n"
+">>> letters\n"
+"['a', 'a', 'a', 'a', 'a', 'b', 'b', 'c', 'd', 'r', 'r']\n"
+">>> for k, g in itertools.groupby(letters):\n"
+"...    print k, list(g)\n"
+"...\n"
+"a ['a', 'a', 'a', 'a', 'a']\n"
+"b ['b', 'b']\n"
+"c ['c']\n"
+"d ['d']\n"
+"r ['r', 'r']\n"
+">>> # List unique letters\n"
+">>> [k for k, g in groupby(letters)]\n"
+"['a', 'b', 'c', 'd', 'r']\n"
+">>> # Count letter occurrences\n"
+">>> [(k, len(list(g))) for k, g in groupby(letters)]\n"
+"[('a', 5), ('b', 2), ('c', 1), ('d', 1), ('r', 2)]"
 
 #: ../../whatsnew/2.4.rst:1142
 msgid "(Contributed by Hye-Shik Chang.)"
-msgstr ""
+msgstr "(Beigetragen von Hye-Shik Chang.)"
 
 #: ../../whatsnew/2.4.rst:1144
 msgid ""
@@ -1747,6 +2574,9 @@ msgid ""
 "returns *N* independent iterators that replicate *iterator*.  If *N* is "
 "omitted, the default is 2. ::"
 msgstr ""
+":mod:`itertools` hat außerdem eine Funktion namens ``tee(iterator, N)`` "
+"erhalten, die *N* unabhängige Iteratoren zurückgibt, die *iterator* "
+"nachbilden. Fehlt *N*, ist der Standardwert 2. ::"
 
 #: ../../whatsnew/2.4.rst:1148
 msgid ""
@@ -1760,6 +2590,15 @@ msgid ""
 ">>> list(i2)               # Run the second iterator to exhaustion\n"
 "[1, 2, 3]"
 msgstr ""
+">>> L = [1,2,3]\n"
+">>> i1, i2 = itertools.tee(L)\n"
+">>> i1,i2\n"
+"(<itertools.tee object at 0x402c2080>, <itertools.tee object at "
+"0x402c2090>)\n"
+">>> list(i1)               # Run the first iterator to exhaustion\n"
+"[1, 2, 3]\n"
+">>> list(i2)               # Run the second iterator to exhaustion\n"
+"[1, 2, 3]"
 
 #: ../../whatsnew/2.4.rst:1157
 msgid ""
@@ -1772,6 +2611,14 @@ msgid ""
 "applications include bookmarking, windowing, or lookahead iterators. "
 "(Contributed by Raymond Hettinger.)"
 msgstr ""
+"Beachte, dass :func:`~itertools.tee` Kopien der vom Iterator zurückgegebenen "
+"Werte vorhalten muss. Im schlimmsten Fall muss es alle vorhalten. Es sollte "
+"daher vorsichtig verwendet werden, wenn der vorauslaufende Iterator in einem "
+"langen Eingabestrom weit vor dem nachlaufenden liegen kann. Ist der Abstand "
+"groß, kannst du genauso gut :func:`list` verwenden. Laufen die Iteratoren "
+"dicht beieinander, ist :func:`~itertools.tee` ideal. Mögliche Anwendungen "
+"sind Lesezeichen, Fenster oder vorausschauende Iteratoren. (Beigetragen von "
+"Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:1166
 msgid ""
@@ -1780,6 +2627,11 @@ msgid ""
 "and a family of :func:`!l\\*gettext` functions that return messages in the "
 "chosen encoding. (Contributed by Gustavo Niemeyer.)"
 msgstr ""
+"Zum Modul :mod:`locale` wurde eine Reihe von Funktionen hinzugefügt, "
+"etwa :func:`~locale.bind_textdomain_codeset` zur Angabe einer bestimmten "
+"Kodierung und eine Familie von Funktionen :func:`!l\\*gettext`, die "
+"Meldungen in der gewählten Kodierung zurückgeben. (Beigetragen von Gustavo "
+"Niemeyer.)"
 
 #: ../../whatsnew/2.4.rst:1171
 msgid ""
@@ -1789,6 +2641,12 @@ msgid ""
 "but various keyword arguments can be specified to log to a particular file, "
 "change the logging format, or set the logging level. For example::"
 msgstr ""
+"Zur Funktion :func:`~logging.basicConfig` des Pakets :mod:`logging` wurden "
+"einige Schlüsselwortargumente hinzugefügt, um die Log-Konfiguration zu "
+"vereinfachen. Standardmäßig werden Meldungen auf den Standardfehlerkanal "
+"geloggt, es lassen sich aber verschiedene Schlüsselwortargumente angeben, um "
+"in eine bestimmte Datei zu loggen, das Log-Format zu ändern oder die Log-"
+"Stufe zu setzen. Zum Beispiel::"
 
 #: ../../whatsnew/2.4.rst:1177
 msgid ""
@@ -1797,6 +2655,10 @@ msgid ""
 "    level=0,  # Log all messages\n"
 "    format='%(levelname)s:%(process)d:%(thread)d:%(message)s')"
 msgstr ""
+"import logging\n"
+"logging.basicConfig(filename='/var/log/application.log',\n"
+"    level=0,  # Log all messages\n"
+"    format='%(levelname)s:%(process)d:%(thread)d:%(message)s')"
 
 #: ../../whatsnew/2.4.rst:1182
 msgid ""
@@ -1809,10 +2671,18 @@ msgid ""
 "new :class:`~logging.handlers.BaseRotatingHandler` class that can be used to "
 "implement other rotating handlers."
 msgstr ""
+"Weitere Neuerungen im Paket :mod:`logging` sind eine Hilfsmethode "
+"``log(level, msg)`` sowie eine "
+"Klasse :class:`~logging.handlers.TimedRotatingFileHandler`, die ihre "
+"Logdateien in festen Zeitabständen rotiert. Das Modul hatte "
+"bereits :class:`~logging.handlers.RotatingFileHandler`, das Logs rotierte, "
+"sobald die Datei eine bestimmte Größe überschritt. Beide Klassen leiten sich "
+"von einer neuen Klasse :class:`~logging.handlers.BaseRotatingHandler` ab, "
+"mit der sich weitere rotierende Handler implementieren lassen."
 
 #: ../../whatsnew/2.4.rst:1189
 msgid "(Changes implemented by Vinay Sajip.)"
-msgstr ""
+msgstr "(Änderungen implementiert von Vinay Sajip.)"
 
 #: ../../whatsnew/2.4.rst:1191
 msgid ""
@@ -1821,6 +2691,10 @@ msgid ""
 "primary effect is to make :file:`.pyc` files significantly smaller. "
 "(Contributed by Martin von Löwis.)"
 msgstr ""
+"Das Modul :mod:`marshal` teilt nun beim Entpacken einer Datenstruktur "
+"internierte Strings. Das kann bestimmte Pickle-Strings verkleinern, die "
+"Hauptwirkung ist aber, dass :file:`.pyc`-Dateien deutlich kleiner werden. "
+"(Beigetragen von Martin von Löwis.)"
 
 #: ../../whatsnew/2.4.rst:1196
 msgid ""
@@ -1829,6 +2703,10 @@ msgid ""
 "descriptions for a single group or for a range of groups. (Contributed by "
 "Jürgen A. Erhard.)"
 msgstr ""
+"Die Klasse :class:`!NNTP` des Moduls :mod:`!nntplib` hat die "
+"Methoden :meth:`!description` und :meth:`!descriptions` erhalten, um "
+"Newsgroup-Beschreibungen für eine einzelne Gruppe oder einen Bereich von "
+"Gruppen abzurufen. (Beigetragen von Jürgen A. Erhard.)"
 
 #: ../../whatsnew/2.4.rst:1200
 msgid ""
@@ -1838,6 +2716,12 @@ msgid ""
 "or item; these callables make excellent data extractors when used "
 "with :func:`map` or :func:`sorted`.  For example::"
 msgstr ""
+"Zum Modul :mod:`operator` wurden zwei neue Funktionen hinzugefügt, "
+"``attrgetter(attr)`` und ``itemgetter(index)``. Beide Funktionen geben "
+"aufrufbare Objekte zurück, die ein einzelnes Argument annehmen und das "
+"entsprechende Attribut bzw. Element zurückgeben. Zusammen mit :func:`map` "
+"oder :func:`sorted` eignen sich diese aufrufbaren Objekte hervorragend zum "
+"Herausziehen von Daten. Zum Beispiel::"
 
 #: ../../whatsnew/2.4.rst:1206
 msgid ""
@@ -1849,6 +2733,13 @@ msgid ""
 ">>> sorted(L, key=operator.itemgetter(1)) # Sort list by second tuple item\n"
 "[('d', 1), ('c', 2), ('b', 3), ('a', 4)]"
 msgstr ""
+">>> L = [('c', 2), ('d', 1), ('a', 4), ('b', 3)]\n"
+">>> map(operator.itemgetter(0), L)\n"
+"['c', 'd', 'a', 'b']\n"
+">>> map(operator.itemgetter(1), L)\n"
+"[2, 1, 4, 3]\n"
+">>> sorted(L, key=operator.itemgetter(1)) # Sort list by second tuple item\n"
+"[('d', 1), ('c', 2), ('b', 3), ('a', 4)]"
 
 #: ../../whatsnew/2.4.rst:1216
 msgid ""
@@ -1858,6 +2749,12 @@ msgid ""
 "can now include the string ``'%default'``, which will be replaced by the "
 "option's default value.  (Contributed by Greg Ward.)"
 msgstr ""
+"Das Modul :mod:`optparse` wurde auf verschiedene Weise aktualisiert. Das "
+"Modul leitet seine Meldungen nun durch :func:`gettext.gettext`, wodurch sich "
+"die Hilfe- und Fehlermeldungen von Optik internationalisieren lassen. "
+"Hilfemeldungen für Optionen können nun den String ``'%default'`` enthalten, "
+"der durch den Standardwert der Option ersetzt wird. (Beigetragen von Greg "
+"Ward.)"
 
 #: ../../whatsnew/2.4.rst:1222
 msgid ""
@@ -1868,6 +2765,13 @@ msgid ""
 "rfc822.formatdate`.  You may want to write new e-mail processing code with "
 "this in mind.  (Change implemented by Anthony Baxter.)"
 msgstr ""
+"Langfristig ist geplant, das Modul :mod:`!rfc822` in einem künftigen Python-"
+"Release zugunsten des Pakets :mod:`email` als veraltet zu markieren. Dazu "
+"wurde die Funktion :func:`email.Utils.formatdate <email.utils.formatdate>` "
+"so geändert, dass sie sich als Ersatz für :func:`!rfc822.formatdate` "
+"verwenden lässt. Das solltest du beim Schreiben von neuem Code zur E-Mail-"
+"Verarbeitung im Hinterkopf behalten. (Änderung implementiert von Anthony "
+"Baxter.)"
 
 #: ../../whatsnew/2.4.rst:1228
 msgid ""
@@ -1876,6 +2780,10 @@ msgid ""
 "to platform-specific sources of randomness such as :file:`/dev/urandom` on "
 "Linux or the Windows CryptoAPI.  (Contributed by Trevor Perrin.)"
 msgstr ""
+"Zum Modul :mod:`os` wurde eine neue Funktion ``urandom(n)`` hinzugefügt, die "
+"einen String mit *n* Bytes Zufallsdaten zurückgibt. Diese Funktion bietet "
+"Zugriff auf plattformspezifische Zufallsquellen wie :file:`/dev/urandom` "
+"unter Linux oder die Windows-CryptoAPI. (Beigetragen von Trevor Perrin.)"
 
 #: ../../whatsnew/2.4.rst:1233
 msgid ""
@@ -1885,24 +2793,36 @@ msgid ""
 "false if *path* is a symlink that points to a destination that doesn't "
 "exist. (Contributed by Beni Cherniavsky.)"
 msgstr ""
+"Eine weitere neue Funktion: ``os.path.lexists(path)`` gibt wahr zurück, wenn "
+"die durch *path* angegebene Datei existiert, ob sie ein symbolischer Link "
+"ist oder nicht. Das unterscheidet sich von der vorhandenen Funktion "
+"``os.path.exists(path)``, die falsch zurückgibt, wenn *path* ein "
+"symbolischer Link ist, der auf ein nicht existierendes Ziel zeigt. "
+"(Beigetragen von Beni Cherniavsky.)"
 
 #: ../../whatsnew/2.4.rst:1239
 msgid ""
 "A new :func:`~os.getsid` function was added to the :mod:`posix` module that "
 "underlies the :mod:`os` module. (Contributed by J. Raynor.)"
 msgstr ""
+"Zum Modul :mod:`posix`, das dem Modul :mod:`os` zugrunde liegt, wurde eine "
+"neue Funktion :func:`~os.getsid` hinzugefügt. (Beigetragen von J. Raynor.)"
 
 #: ../../whatsnew/2.4.rst:1242
 msgid ""
 "The :mod:`poplib` module now supports POP over SSL.  (Contributed by Hector "
 "Urtubia.)"
 msgstr ""
+"Das Modul :mod:`poplib` unterstützt nun POP über SSL. (Beigetragen von "
+"Hector Urtubia.)"
 
 #: ../../whatsnew/2.4.rst:1245
 msgid ""
 "The :mod:`profile` module can now profile C extension functions. "
 "(Contributed by Nick Bastin.)"
 msgstr ""
+"Das Modul :mod:`profile` kann nun Funktionen aus C-Erweiterungen "
+"profilieren. (Beigetragen von Nick Bastin.)"
 
 #: ../../whatsnew/2.4.rst:1248
 msgid ""
@@ -1913,6 +2833,11 @@ msgid ""
 "arbitrarily large random numbers more efficient.  (Contributed by Raymond "
 "Hettinger.)"
 msgstr ""
+"Das Modul :mod:`random` hat eine neue Methode namens ``getrandbits(N)``, die "
+"eine lange Ganzzahl mit *N* Bit zurückgibt. Die vorhandene "
+"Methode :meth:`~random.randrange` verwendet nun "
+"gegebenenfalls :meth:`~random.getrandbits`, wodurch das Erzeugen beliebig "
+"großer Zufallszahlen effizienter wird. (Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:1254
 msgid ""
@@ -1924,6 +2849,12 @@ msgid ""
 "group didn't match, the pattern *B* will be used instead. (Contributed by "
 "Gustavo Niemeyer.)"
 msgstr ""
+"Die vom Modul :mod:`re` akzeptierte Sprache für reguläre Ausdrücke wurde um "
+"einfache bedingte Ausdrücke erweitert, geschrieben als ``(?(group)A|B)``. "
+"*group* ist entweder eine numerische Gruppen-ID oder ein Gruppenname, der "
+"zuvor im Ausdruck mit ``(?P<group>...)`` definiert wurde. Hat die angegebene "
+"Gruppe gepasst, wird das Muster *A* gegen den String getestet, andernfalls "
+"stattdessen das Muster *B*. (Beigetragen von Gustavo Niemeyer.)"
 
 #: ../../whatsnew/2.4.rst:1261
 msgid ""
@@ -1938,6 +2869,16 @@ msgid ""
 "Python 2.4's regular expression engine can match this pattern without "
 "problems."
 msgstr ""
+"Dank einer gewaltigen Menge Arbeit von Gustavo Niemeyer ist das "
+"Modul :mod:`re` außerdem nicht mehr rekursiv. In einer rekursiven Engine für "
+"reguläre Ausdrücke verbrauchen bestimmte Muster viel Platz auf dem C-Stack, "
+"und der Stack konnte überlaufen. Hast du zum Beispiel einen 30000 Bytes "
+"langen String aus ``a``-Zeichen gegen den Ausdruck ``(a|b)+`` geprüft, wurde "
+"pro Zeichen ein Stack-Frame verbraucht. Python 2.3 versuchte, einen Stack-"
+"Überlauf zu erkennen und eine :exc:`RuntimeError`-Ausnahme auszulösen, "
+"bestimmte Muster konnten die Prüfung aber umgehen, und mit Pech stürzte "
+"Python mit einem Segmentation Fault ab. Die Engine für reguläre Ausdrücke in "
+"Python 2.4 kann dieses Muster problemlos verarbeiten."
 
 #: ../../whatsnew/2.4.rst:1271
 msgid ""
@@ -1947,6 +2888,11 @@ msgid ""
 "Python would quietly accept this, but 2.4 will raise a :exc:`RuntimeError` "
 "exception."
 msgstr ""
+"Das Modul :mod:`signal` prüft die Parameter der "
+"Funktion :func:`signal.signal` nun strenger. Zum Beispiel kannst du keinen "
+"Handler für das Signal :const:`~signal.SIGKILL` setzen. Frühere Python-"
+"Versionen akzeptierten das stillschweigend, 2.4 löst dagegen "
+"eine :exc:`RuntimeError`-Ausnahme aus."
 
 #: ../../whatsnew/2.4.rst:1276
 msgid ""
@@ -1955,6 +2901,10 @@ msgid ""
 "``getservbyport(port)`` looks up the service name for a given port number. "
 "(Contributed by Dave Cole and Barry Warsaw.)"
 msgstr ""
+"Zum Modul :mod:`socket` wurden zwei neue Funktionen "
+"hinzugefügt. :func:`~socket.socketpair` gibt ein Paar verbundener Sockets "
+"zurück, und ``getservbyport(port)`` schlägt den Dienstnamen zu einer "
+"Portnummer nach. (Beigetragen von Dave Cole und Barry Warsaw.)"
 
 #: ../../whatsnew/2.4.rst:1281
 msgid ""
@@ -1963,12 +2913,18 @@ msgid ""
 "multiple exit functions.  Eventually :func:`!sys.exitfunc` will become a "
 "purely internal interface, accessed only by :mod:`atexit`."
 msgstr ""
+"Die Funktion :func:`!sys.exitfunc` ist veraltet. Code sollte das vorhandene "
+"Modul :mod:`atexit` verwenden, das den Aufruf mehrerer Exit-Funktionen "
+"korrekt behandelt. Irgendwann wird :func:`!sys.exitfunc` eine rein interne "
+"Schnittstelle, auf die nur :mod:`atexit` zugreift."
 
 #: ../../whatsnew/2.4.rst:1286
 msgid ""
 "The :mod:`tarfile` module now generates GNU-format tar files by default. "
 "(Contributed by Lars Gustäbel.)"
 msgstr ""
+"Das Modul :mod:`tarfile` erzeugt nun standardmäßig tar-Dateien im GNU-"
+"Format. (Beigetragen von Lars Gustäbel.)"
 
 #: ../../whatsnew/2.4.rst:1289
 msgid ""
@@ -1976,6 +2932,10 @@ msgid ""
 "thread-local data.  The module contains a :class:`~threading.local` class "
 "whose attribute values are local to different threads. ::"
 msgstr ""
+"Das Modul :mod:`threading` bietet nun einen elegant einfachen Weg, Thread-"
+"lokale Daten zu unterstützen. Das Modul enthält eine "
+"Klasse :class:`~threading.local`, deren Attributwerte für verschiedene "
+"Threads lokal sind. ::"
 
 #: ../../whatsnew/2.4.rst:1293
 msgid ""
@@ -1985,6 +2945,11 @@ msgid ""
 "data.number = 42\n"
 "data.url = ('www.python.org', 80)"
 msgstr ""
+"import threading\n"
+"\n"
+"data = threading.local()\n"
+"data.number = 42\n"
+"data.url = ('www.python.org', 80)"
 
 #: ../../whatsnew/2.4.rst:1299
 msgid ""
@@ -1993,6 +2958,10 @@ msgid ""
 "subclass :class:`~threading.local` to initialize attributes or to add "
 "methods. (Contributed by Jim Fulton.)"
 msgstr ""
+"Andere Threads können den Attributen :attr:`!number` und :attr:`!url` eigene "
+"Werte zuweisen und sie abrufen. Du kannst :class:`~threading.local` "
+"ableiten, um Attribute zu initialisieren oder Methoden hinzuzufügen. "
+"(Beigetragen von Jim Fulton.)"
 
 #: ../../whatsnew/2.4.rst:1303
 msgid ""
@@ -2000,6 +2969,9 @@ msgid ""
 "collection during the timing loop.  This change makes consecutive timings "
 "more comparable.  (Contributed by Raymond Hettinger.)"
 msgstr ""
+"Das Modul :mod:`timeit` schaltet die periodische Garbage Collection während "
+"der Zeitmessschleife nun automatisch ab. Das macht aufeinanderfolgende "
+"Messungen besser vergleichbar. (Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:1307
 msgid ""
@@ -2008,6 +2980,10 @@ msgid ""
 "sockets, and regular expression pattern objects. (Contributed by Raymond "
 "Hettinger.)"
 msgstr ""
+"Das Modul :mod:`weakref` unterstützt nun eine größere Vielfalt von Objekten, "
+"darunter Python-Funktionen, Klasseninstanzen, Mengen, frozensets, Deques, "
+"Arrays, Dateien, Sockets und Musterobjekte regulärer Ausdrücke. (Beigetragen "
+"von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:1312
 msgid ""
@@ -2015,16 +2991,20 @@ msgid ""
 "extension for transmitting multiple XML-RPC calls in a single HTTP "
 "operation. (Contributed by Brian Quinlan.)"
 msgstr ""
+"Das Modul :mod:`xmlrpclib <xmlrpc.client>` unterstützt nun eine Multi-Call-"
+"Erweiterung, um mehrere XML-RPC-Aufrufe in einer einzigen HTTP-Operation zu "
+"übertragen. (Beigetragen von Brian Quinlan.)"
 
 #: ../../whatsnew/2.4.rst:1316
 msgid ""
 "The :mod:`!mpz`, :mod:`!rotor`, and :mod:`!xreadlines` modules have been "
 "removed."
 msgstr ""
+"Die Module :mod:`!mpz`, :mod:`!rotor` und :mod:`!xreadlines` wurden entfernt."
 
 #: ../../whatsnew/2.4.rst:1325
 msgid "cookielib"
-msgstr ""
+msgstr "cookielib"
 
 #: ../../whatsnew/2.4.rst:1327
 msgid ""
@@ -2035,6 +3015,13 @@ msgid ""
 "and fetches the cookie from the jar when connecting to the server. As in web "
 "browsers, policy objects control whether cookies are accepted or not."
 msgstr ""
+"Die Bibliothek :mod:`cookielib <http.cookiejar>` unterstützt die "
+"clientseitige Behandlung von HTTP-Cookies als Gegenstück zur serverseitigen "
+"Cookie-Unterstützung des Moduls :mod:`Cookie <http.cookies>`. Cookies werden "
+"in Cookie-Jars gespeichert. Die Bibliothek speichert vom Webserver "
+"angebotene Cookies transparent im Cookie-Jar und holt das Cookie beim "
+"Verbinden mit dem Server aus dem Jar. Wie in Webbrowsern steuern "
+"Richtlinienobjekte, ob Cookies akzeptiert werden oder nicht."
 
 #: ../../whatsnew/2.4.rst:1334
 msgid ""
@@ -2043,6 +3030,10 @@ msgid ""
 "applications can use the Mozilla or Lynx cookie files, and one that stores "
 "cookies in the same format as the Perl libwww library."
 msgstr ""
+"Um Cookies sitzungsübergreifend zu speichern, gibt es zwei Implementierungen "
+"von Cookie-Jars: eine, die Cookies im Netscape-Format speichert, sodass "
+"Anwendungen die Cookie-Dateien von Mozilla oder Lynx verwenden können, und "
+"eine, die Cookies im selben Format wie die Perl-Bibliothek libwww speichert."
 
 #: ../../whatsnew/2.4.rst:1339
 msgid ""
@@ -2051,14 +3042,18 @@ msgid ""
 "<http.cookiejar>`: :class:`~urllib.request.HTTPCookieProcessor` manages a "
 "cookie jar that is used when accessing URLs."
 msgstr ""
+":mod:`urllib2 <urllib.request>` wurde so geändert, dass es "
+"mit :mod:`cookielib <http.cookiejar>` "
+"zusammenarbeitet: :class:`~urllib.request.HTTPCookieProcessor` verwaltet "
+"einen Cookie-Jar, der beim Zugriff auf URLs verwendet wird."
 
 #: ../../whatsnew/2.4.rst:1343
 msgid "This module was contributed by John J. Lee."
-msgstr ""
+msgstr "Dieses Modul wurde von John J. Lee beigesteuert."
 
 #: ../../whatsnew/2.4.rst:1349
 msgid "doctest"
-msgstr ""
+msgstr "doctest"
 
 #: ../../whatsnew/2.4.rst:1351
 msgid ""
@@ -2067,12 +3062,18 @@ msgid ""
 "running :func:`doctest.testmod`, but the refactorings allow customizing the "
 "module's operation in various ways"
 msgstr ""
+"Das Modul :mod:`doctest` wurde dank Edward Loper und Tim Peters erheblich "
+"umstrukturiert. Testen kann weiterhin so einfach sein wie der Aufruf "
+"von :func:`doctest.testmod`, die Umstrukturierungen erlauben aber, die "
+"Arbeitsweise des Moduls auf verschiedene Weise anzupassen"
 
 #: ../../whatsnew/2.4.rst:1356
 msgid ""
 "The new :class:`~doctest.DocTestFinder` class extracts the tests from a "
 "given object's docstrings::"
 msgstr ""
+"Die neue Klasse :class:`~doctest.DocTestFinder` zieht die Tests aus den "
+"Docstrings eines gegebenen Objekts heraus::"
 
 #: ../../whatsnew/2.4.rst:1359
 msgid ""
@@ -2089,12 +3090,26 @@ msgid ""
 "# Get list of DocTest instances\n"
 "tests = finder.find(f)"
 msgstr ""
+"def f (x, y):\n"
+"    \"\"\">>> f(2,2)\n"
+"4\n"
+">>> f(3,2)\n"
+"6\n"
+"    \"\"\"\n"
+"    return x*y\n"
+"\n"
+"finder = doctest.DocTestFinder()\n"
+"\n"
+"# Get list of DocTest instances\n"
+"tests = finder.find(f)"
 
 #: ../../whatsnew/2.4.rst:1372
 msgid ""
 "The new :class:`~doctest.DocTestRunner` class then runs individual tests and "
 "can produce a summary of the results::"
 msgstr ""
+"Die neue Klasse :class:`~doctest.DocTestRunner` führt dann einzelne Tests "
+"aus und kann eine Zusammenfassung der Ergebnisse erzeugen::"
 
 #: ../../whatsnew/2.4.rst:1375
 msgid ""
@@ -2104,10 +3119,15 @@ msgid ""
 "\n"
 "runner.summarize(verbose=1)"
 msgstr ""
+"runner = doctest.DocTestRunner()\n"
+"for t in tests:\n"
+"    tried, failed = runner.run(t)\n"
+"\n"
+"runner.summarize(verbose=1)"
 
 #: ../../whatsnew/2.4.rst:1381
 msgid "The above example produces the following output::"
-msgstr ""
+msgstr "Das obige Beispiel erzeugt folgende Ausgabe::"
 
 #: ../../whatsnew/2.4.rst:1383
 msgid ""
@@ -2117,6 +3137,11 @@ msgid ""
 "2 passed and 0 failed.\n"
 "Test passed."
 msgstr ""
+"1 items passed all tests:\n"
+"   2 tests in f\n"
+"2 tests in 1 items.\n"
+"2 passed and 0 failed.\n"
+"Test passed."
 
 #: ../../whatsnew/2.4.rst:1389
 msgid ""
@@ -2126,6 +3151,12 @@ msgid ""
 "customize its behaviour; ambitious users can also write a completely new "
 "subclass of :class:`~doctest.OutputChecker`."
 msgstr ""
+":class:`~doctest.DocTestRunner` verwendet eine Instanz der "
+"Klasse :class:`~doctest.OutputChecker`, um die erwartete mit der "
+"tatsächlichen Ausgabe zu vergleichen. Diese Klasse nimmt eine Reihe "
+"verschiedener Flags an, die ihr Verhalten anpassen. Ehrgeizige Benutzer "
+"können auch eine völlig neue Unterklasse von :class:`~doctest.OutputChecker` "
+"schreiben."
 
 #: ../../whatsnew/2.4.rst:1394
 msgid ""
@@ -2134,6 +3165,10 @@ msgid ""
 "expected output matches any substring,  making it easier to accommodate "
 "outputs that vary in minor ways::"
 msgstr ""
+"Der Standard-Ausgabeprüfer bietet eine Reihe praktischer Funktionen. Mit dem "
+"Options-Flag :const:`doctest.ELLIPSIS` passt zum Beispiel eine Ellipse "
+"(``...``) in der erwarteten Ausgabe auf jeden beliebigen Teilstring, was den "
+"Umgang mit leicht variierenden Ausgaben erleichtert::"
 
 #: ../../whatsnew/2.4.rst:1399
 msgid ""
@@ -2143,10 +3178,16 @@ msgid ""
 ">>>\n"
 "\"\"\""
 msgstr ""
+"def o (n):\n"
+"    \"\"\">>> o(1)\n"
+"<__main__.C instance at 0x...>\n"
+">>>\n"
+"\"\"\""
 
 #: ../../whatsnew/2.4.rst:1405
 msgid "Another special string, ``<BLANKLINE>``, matches a blank line::"
 msgstr ""
+"Ein weiterer spezieller String, ``<BLANKLINE>``, passt auf eine Leerzeile::"
 
 #: ../../whatsnew/2.4.rst:1407
 msgid ""
@@ -2156,6 +3197,11 @@ msgid ""
 ">>>\n"
 "\"\"\""
 msgstr ""
+"def p (n):\n"
+"    \"\"\">>> p(1)\n"
+"<BLANKLINE>\n"
+">>>\n"
+"\"\"\""
 
 #: ../../whatsnew/2.4.rst:1413
 msgid ""
@@ -2164,6 +3210,10 @@ msgid ""
 "diffs), :const:`doctest.REPORT_CDIFF` (context diffs), "
 "or :const:`doctest.REPORT_NDIFF` (delta-style) option flags.  For example::"
 msgstr ""
+"Eine weitere neue Fähigkeit ist eine Diff-artige Anzeige der Ausgabe, indem "
+"man die Options-Flags :const:`doctest.REPORT_UDIFF` (Unified "
+"Diffs), :const:`doctest.REPORT_CDIFF` (Context Diffs) "
+"oder :const:`doctest.REPORT_NDIFF` (Delta-Stil) angibt. Zum Beispiel::"
 
 #: ../../whatsnew/2.4.rst:1418
 msgid ""
@@ -2178,12 +3228,24 @@ msgid ""
 "    for word in L[:n]:\n"
 "        print word"
 msgstr ""
+"def g (n):\n"
+"    \"\"\">>> g(4)\n"
+"here\n"
+"is\n"
+"a\n"
+"lengthy\n"
+">>>\"\"\"\n"
+"    L = 'here is a rather lengthy list of words'.split()\n"
+"    for word in L[:n]:\n"
+"        print word"
 
 #: ../../whatsnew/2.4.rst:1429
 msgid ""
 "Running the above function's tests with :const:`doctest.REPORT_UDIFF` "
 "specified, you get the following output:"
 msgstr ""
+"Führst du die Tests der obigen Funktion mit :const:`doctest.REPORT_UDIFF` "
+"aus, erhältst du folgende Ausgabe:"
 
 #: ../../whatsnew/2.4.rst:1432
 msgid ""
@@ -2199,14 +3261,26 @@ msgid ""
 "    +rather\n"
 "**********************************************************************"
 msgstr ""
+"**********************************************************************\n"
+"File \"t.py\", line 15, in g\n"
+"Failed example:\n"
+"    g(4)\n"
+"Differences (unified diff with -expected +actual):\n"
+"    @@ -2,3 +2,3 @@\n"
+"     is\n"
+"     a\n"
+"    -lengthy\n"
+"    +rather\n"
+"**********************************************************************"
 
 #: ../../whatsnew/2.4.rst:1450
 msgid "Build and C API Changes"
-msgstr ""
+msgstr "Änderungen am Build und an der C-API"
 
 #: ../../whatsnew/2.4.rst:1452
 msgid "Some of the changes to Python's build process and to the C API are:"
 msgstr ""
+"Zu den Änderungen am Build-Prozess von Python und an der C-API gehören:"
 
 #: ../../whatsnew/2.4.rst:1454
 msgid ""
@@ -2214,12 +3288,18 @@ msgid ""
 "extension functions: :c:macro:`Py_RETURN_NONE`, :c:macro:`Py_RETURN_TRUE`, "
 "and :c:macro:`Py_RETURN_FALSE`. (Contributed by Brett Cannon.)"
 msgstr ""
+"Drei neue Hilfsmakros wurden für häufige Rückgabewerte von "
+"Erweiterungsfunktionen "
+"hinzugefügt: :c:macro:`Py_RETURN_NONE`, :c:macro:`Py_RETURN_TRUE` "
+"und :c:macro:`Py_RETURN_FALSE`. (Beigetragen von Brett Cannon.)"
 
 #: ../../whatsnew/2.4.rst:1458
 msgid ""
 "Another new macro, :c:macro:`Py_CLEAR`,  decreases the reference count of "
 "*obj* and sets *obj* to the null pointer.  (Contributed by Jim Fulton.)"
 msgstr ""
+"Ein weiteres neues Makro, :c:macro:`Py_CLEAR`, verringert den Referenzzähler "
+"von *obj* und setzt *obj* auf den Nullzeiger. (Beigetragen von Jim Fulton.)"
 
 #: ../../whatsnew/2.4.rst:1461
 msgid ""
@@ -2227,6 +3307,9 @@ msgid ""
 "tuples from a variable length argument list of Python objects.  (Contributed "
 "by Raymond Hettinger.)"
 msgstr ""
+"Eine neue Funktion, ``PyTuple_Pack(N, obj1, obj2, ..., objN)``, erzeugt "
+"Tupel aus einer Argumentliste variabler Länge von Python-Objekten. "
+"(Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:1465
 msgid ""
@@ -2234,12 +3317,17 @@ msgid ""
 "lookups without masking exceptions raised during the look-up process. "
 "(Contributed by Raymond Hettinger.)"
 msgstr ""
+"Eine neue Funktion, ``PyDict_Contains(d, k)``, implementiert schnelles "
+"Nachschlagen in Dictionaries, ohne beim Nachschlagen ausgelöste Ausnahmen zu "
+"verdecken. (Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:1469
 msgid ""
 "The :c:macro:`Py_IS_NAN` macro returns 1 if its float or double argument *X* "
 "is a NaN.   (Contributed by Tim Peters.)"
 msgstr ""
+"Das Makro :c:macro:`Py_IS_NAN` gibt 1 zurück, wenn sein float- oder double-"
+"Argument *X* ein NaN ist. (Beigetragen von Tim Peters.)"
 
 #: ../../whatsnew/2.4.rst:1472
 msgid ""
@@ -2248,6 +3336,10 @@ msgid ""
 "been performed.  If this function  returns false, no lock operations are "
 "needed. (Contributed by Nick Coghlan.)"
 msgstr ""
+"C-Code kann unnötige Sperren vermeiden, indem er mit der neuen "
+"Funktion :c:func:`!PyEval_ThreadsInitialized` feststellt, ob überhaupt "
+"Thread-Operationen ausgeführt wurden. Gibt diese Funktion falsch zurück, "
+"sind keine Sperroperationen nötig. (Beigetragen von Nick Coghlan.)"
 
 #: ../../whatsnew/2.4.rst:1477
 msgid ""
@@ -2255,6 +3347,10 @@ msgid ""
 "as :c:func:`PyArg_ParseTupleAndKeywords` but takes a  :c:type:`va_list` "
 "instead of a number of arguments. (Contributed by Greg Chapman.)"
 msgstr ""
+"Eine neue Funktion, :c:func:`PyArg_VaParseTupleAndKeywords`, "
+"entspricht :c:func:`PyArg_ParseTupleAndKeywords`, nimmt aber "
+"eine :c:type:`va_list` statt mehrerer Argumente an. (Beigetragen von Greg "
+"Chapman.)"
 
 #: ../../whatsnew/2.4.rst:1481
 msgid ""
@@ -2263,6 +3359,10 @@ msgid ""
 "can halve the access time for a method such as :meth:`!set.__contains__`.  "
 "(Contributed by Raymond Hettinger.)"
 msgstr ""
+"Ein neues Methoden-Flag, :c:macro:`METH_COEXIST`, erlaubt einer in Slots "
+"definierten Funktion, neben einer gleichnamigen :c:type:`PyCFunction` zu "
+"existieren. Das kann die Zugriffszeit einer Methode wie :meth:`!"
+"set.__contains__` halbieren. (Beigetragen von Raymond Hettinger.)"
 
 #: ../../whatsnew/2.4.rst:1486
 msgid ""
@@ -2276,32 +3376,47 @@ msgid ""
 "platform, though that processor architecture doesn't call that register "
 "\"the TSC register\".  (Contributed by Jeremy Hylton.)"
 msgstr ""
+"Python lässt sich nun mit zusätzlichem Profiling für den Interpreter selbst "
+"bauen, gedacht als Hilfe für Entwickler des Python-Kerns. Mit :option:`!--"
+"enable-profiling` für das Skript :program:`configure` lässt sich der "
+"Interpreter mit :program:`gprof` profilieren, und die Option :option:`!--"
+"with-tsc` ermöglicht Profiling mit dem Time-Stamp-Counter-Register des "
+"Pentium. Beachte, dass die Option :option:`!--with-tsc` etwas unglücklich "
+"benannt ist, denn die Profiling-Funktion funktioniert auch auf der PowerPC-"
+"Plattform, obwohl diese Prozessorarchitektur das Register nicht „TSC-"
+"Register“ nennt. (Beigetragen von Jeremy Hylton.)"
 
 #: ../../whatsnew/2.4.rst:1496
 msgid ""
 "The :c:type:`!tracebackobject` type has been renamed to :c:type:`!"
 "PyTracebackObject`."
 msgstr ""
+"Der Typ :c:type:`!tracebackobject` wurde in :c:type:`!PyTracebackObject` "
+"umbenannt."
 
 #: ../../whatsnew/2.4.rst:1503
 msgid "Port-Specific Changes"
-msgstr ""
+msgstr "Plattformspezifische Änderungen"
 
 #: ../../whatsnew/2.4.rst:1505
 msgid ""
 "The Windows port now builds under MSVC++ 7.1 as well as version 6. "
 "(Contributed by Martin von Löwis.)"
 msgstr ""
+"Die Windows-Portierung lässt sich nun sowohl mit MSVC++ 7.1 als auch mit "
+"Version 6 bauen. (Beigetragen von Martin von Löwis.)"
 
 #: ../../whatsnew/2.4.rst:1512
 msgid "Porting to Python 2.4"
-msgstr ""
+msgstr "Portierung zu Python 2.4"
 
 #: ../../whatsnew/2.4.rst:1514
 msgid ""
 "This section lists previously described changes that may require changes to "
 "your code:"
 msgstr ""
+"Dieser Abschnitt listet bereits beschriebene Änderungen auf, die Änderungen "
+"an deinem Code erfordern können:"
 
 #: ../../whatsnew/2.4.rst:1517
 msgid ""
@@ -2309,6 +3424,10 @@ msgid ""
 "trigger a :exc:`FutureWarning` and return  a value limited to 32 or 64 bits; "
 "instead they return a long integer."
 msgstr ""
+"Linksverschiebungen und zu große hexadezimale/oktale Konstanten lösen "
+"keine :exc:`FutureWarning` mehr aus und geben keinen auf 32 oder 64 Bit "
+"beschränkten Wert mehr zurück. Stattdessen geben sie eine lange Ganzzahl "
+"zurück."
 
 #: ../../whatsnew/2.4.rst:1524
 msgid ""
@@ -2316,6 +3435,9 @@ msgid ""
 "empty list instead of raising a :exc:`TypeError` exception if called with no "
 "arguments."
 msgstr ""
+"Die eingebaute Funktion :func:`zip` und :func:`!itertools.izip` geben nun "
+"eine leere Liste zurück, statt eine :exc:`TypeError`-Ausnahme auszulösen, "
+"wenn sie ohne Argumente aufgerufen werden."
 
 #: ../../whatsnew/2.4.rst:1528
 msgid ""
@@ -2324,12 +3446,18 @@ msgid ""
 "module.  Two  instances of different classes will now always be unequal, "
 "and  relative comparisons (``<``, ``>``) will raise a :exc:`TypeError`."
 msgstr ""
+"Du kannst die vom Modul :mod:`datetime` bereitgestellten Instanzen "
+"von :class:`~datetime.date` und :class:`~datetime.datetime` nicht mehr "
+"vergleichen. Zwei Instanzen verschiedener Klassen sind nun immer ungleich, "
+"und relative Vergleiche (``<``, ``>``) lösen einen :exc:`TypeError` aus."
 
 #: ../../whatsnew/2.4.rst:1533
 msgid ""
 ":func:`!dircache.listdir` now passes exceptions to the caller instead of "
 "returning empty lists."
 msgstr ""
+":func:`!dircache.listdir` gibt Ausnahmen nun an den Aufrufer weiter, statt "
+"leere Listen zurückzugeben."
 
 #: ../../whatsnew/2.4.rst:1536
 msgid ""
@@ -2337,29 +3465,40 @@ msgid ""
 "used to receive the public and system IDs in the wrong order.  This has been "
 "corrected; applications relying on the wrong order need to be fixed."
 msgstr ""
+":meth:`LexicalHandler.startDTD <xml.sax.handler.LexicalHandler.startDTD>` "
+"erhielt die öffentlichen und System-IDs bisher in falscher Reihenfolge. Das "
+"wurde korrigiert; Anwendungen, die sich auf die falsche Reihenfolge "
+"verlassen, müssen angepasst werden."
 
 #: ../../whatsnew/2.4.rst:1541
 msgid ""
 ":func:`fcntl.ioctl` now warns if the *mutate*  argument is omitted and "
 "relevant."
 msgstr ""
+":func:`fcntl.ioctl` warnt nun, wenn das Argument *mutate* fehlt und relevant "
+"ist."
 
 #: ../../whatsnew/2.4.rst:1544
 msgid ""
 "The :mod:`tarfile` module now generates GNU-format tar files by default."
 msgstr ""
+"Das Modul :mod:`tarfile` erzeugt nun standardmäßig tar-Dateien im GNU-Format."
 
 #: ../../whatsnew/2.4.rst:1546
 msgid ""
 "Encountering a failure while importing a module no longer leaves a partially "
 "initialized module object in ``sys.modules``."
 msgstr ""
+"Ein Fehler beim Import eines Moduls hinterlässt kein teilweise "
+"initialisiertes Modulobjekt mehr in ``sys.modules``."
 
 #: ../../whatsnew/2.4.rst:1549
 msgid ""
 ":const:`None` is now a constant; code that binds a new value to  the name "
 "``None`` is now a syntax error."
 msgstr ""
+":const:`None` ist nun eine Konstante; Code, der den Namen ``None`` an einen "
+"neuen Wert bindet, ist nun ein Syntaxfehler."
 
 #: ../../whatsnew/2.4.rst:1552
 msgid ""
@@ -2368,10 +3507,14 @@ msgid ""
 "silently.  For example, you can no longer set a handler on "
 "the :const:`~signal.SIGKILL` signal."
 msgstr ""
+"Die Funktion :func:`signal.signal` löst bei bestimmten unzulässigen Werten "
+"nun eine :exc:`RuntimeError`-Ausnahme aus. Bisher gingen diese Fehler "
+"stillschweigend durch. Zum Beispiel kannst du keinen Handler mehr für das "
+"Signal :const:`~signal.SIGKILL` setzen."
 
 #: ../../whatsnew/2.4.rst:1562
 msgid "Acknowledgements"
-msgstr ""
+msgstr "Danksagungen"
 
 #: ../../whatsnew/2.4.rst:1564
 msgid ""
@@ -2380,11 +3523,15 @@ msgid ""
 "Koray Can, Hye-Shik Chang, Michael Dyck, Raymond Hettinger, Brian Hurt, "
 "Hamish Lawson, Fredrik Lundh, Sean Reifschneider, Sadruddin Rejeb."
 msgstr ""
+"Der Autor dankt folgenden Personen für Vorschläge, Korrekturen und Hilfe bei "
+"verschiedenen Entwürfen dieses Artikels: Koray Can, Hye-Shik Chang, Michael "
+"Dyck, Raymond Hettinger, Brian Hurt, Hamish Lawson, Fredrik Lundh, Sean "
+"Reifschneider, Sadruddin Rejeb."
 
 #: ../../whatsnew/2.4.rst:415
 msgid "universal newlines"
-msgstr ""
+msgstr "universelle Zeilenumbrüche"
 
 #: ../../whatsnew/2.4.rst:415
 msgid "What's new"
-msgstr ""
+msgstr "Was ist neu"
