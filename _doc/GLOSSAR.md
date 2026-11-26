@@ -33,6 +33,9 @@ Sprachen zur Verfügung.
 - Kapitelüberschriften der Form „… Services" werden zu „Dienste …":
   „Dienste der Python-Laufzeitumgebung", „Dienste zur Textverarbeitung",
   „Dienste für die Python-Sprache".
+- Fachbegriffe, die auch im Deutschen meist englisch heißen (z. B. „reentrant“),
+  werden beim ersten Vorkommen in einer Datei kurz übersetzt, mit dem
+  englischen Begriff in Klammern. Danach gilt der Fachbegriff.
 - Lieber ein etabliertes Lehnwort als eine selbstgebaute Eindeutschung.
   Ein Begriff muss nachschlagbar bleiben: Wer „Factory-Funktion" liest,
   findet beim Suchen etwas, wer „Fabrikfunktion" liest, nicht.
@@ -80,13 +83,17 @@ Codeblöcken sind dabei Falschmeldungen.
 |---|---|---|
 | archive member | Archiveintrag | nicht „Archivmitglied" |
 | auditing event | Auditing-Ereignis | „audit event" im Fließtext ohne Rolle → „Audit-Ereignis" |
+| barrier | Barriere | `threading` |
 | broadcast address | Broadcast-Adresse | |
 | built-in | integriert | nicht „eingebaut" |
 | canvas | Zeichenfläche | |
 | central directory | zentrales Verzeichnis | ZIP-Fachbegriff |
+| character reference | Zeichenreferenz | „entity reference" → „Entity-Referenz" |
 | code object | Code-Objekt | mit Bindestrich, nicht „Codeobjekt" |
 | comprehension | Comprehension | nie „Kompression" oder „Abstraktion" |
+| condition variable | Bedingungsvariable | `threading` |
 | convenience function | Hilfsfunktion | |
+| datagram | Datagramm | `asyncio`, UDP |
 | decompression bomb | Entpackbombe | „ZIP bomb" bleibt als benannter Verweis englisch |
 | decorator | Dekorator | nicht „Decorator", erst recht nicht „Dekorateur" |
 | dictionary | Dictionary | Plural „Dictionarys"; „dictionary view" → „Dictionary-View" |
@@ -94,13 +101,28 @@ Codeblöcken sind dabei Falschmeldungen.
 | event loop | Ereignisschleife | |
 | exploded / compressed (IP) | ausgeschrieben / verkürzt | |
 | factory function | Factory-Funktion | „factory" allein → „Factory", Plural „Factorys" |
+| filename extension | Dateiendung | nicht „Dateierweiterung" |
+| filter chain | Filterkette | `lzma` |
+| flow control | Flusskontrolle |  |
 | font | Schriftart | nicht „Schrift" |
 | free-threaded build | Build mit freien Threads | laut Glossar |
 | host mask | Hostmaske | |
+| integrity check | Integritätsprüfung | `lzma` |
+| interned (string) | internalisiert | `sys.intern` |
 | iterable | Iterable | nicht „iterierbares Objekt" |
 | lazy import | verzögerter Import | |
+| log record | Log-Record | `logging`; „Logger", „Handler", „Formatter", „Filter" bleiben englisch |
 | look and feel | Aussehen und Verhalten | |
+| mailbox | Mailbox | Maildir/mbox-Formate bleiben englisch |
 | main window | Hauptfenster | |
+| markup | Auszeichnung |  |
+| message (E-Mail) | Nachricht | `mailbox`, `imaplib` |
+| module spec / spec | Modulspezifikation / Spezifikation | laut `glossary.po`; `:term:`Spezifikation <module spec>`` |
+| processing instruction | Verarbeitungsanweisung | SGML/XML |
+| reentrant / reentrant lock | wiedereintrittsfähig (*reentrant*) / wiedereintrittsfähige Sperre (*reentrant lock*) | Nur beim ersten Vorkommen in einer Datei, danach der Fachbegriff „reentrant“ / „reentrante Sperre“. Nicht „wiederkehrend“ |
+| semaphore | Semaphor | `threading` |
+| start tag / end tag | Start-Tag / End-Tag | „Tag" bleibt englisch |
+| streaming protocol | Streaming-Protokoll | `asyncio` |
 | to match | passen auf | siehe „Zeichensetzung" zur Satzform |
 | a match | Fundstelle | das Ergebnis, nicht der Vorgang |
 | match object | Match-Objekt | |
@@ -122,8 +144,11 @@ Codeblöcken sind dabei Falschmeldungen.
 | themed widgets | Widgets mit Themes | |
 | thread state | Thread-Zustand | nicht „Thread-Status"; „attached" dazu → „angehängt" |
 | toplevel window | Toplevel-Fenster | |
+| transport | Transport | `asyncio`, bleibt englisch (Eigenname der API) |
+| type map | Typzuordnung | `mimetypes` |
 | universal newlines | universelle Zeilenumbrüche | |
 | unraisable exception | nicht weiterleitbare Ausnahme | beim ersten Vorkommen mit englischem Begriff in Klammern, danach kurz |
+| watermark (high/low) | Watermark (obere/untere) | `asyncio` |
 | wrapper | Hülle | |
 
 ### Kind-
