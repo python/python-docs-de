@@ -3609,7 +3609,7 @@ msgstr "Siehe auch: :term:`Namespace-Paket <namespace package>`."
 
 #: ../../glossary.rst:1414
 msgid "reentrant"
-msgstr "wiederkehrend"
+msgstr "wiedereintrittsfähig (reentrant)"
 
 #: ../../glossary.rst:1416
 msgid ""
