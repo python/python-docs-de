@@ -18,11 +18,11 @@ msgstr ""
 
 #: ../../library/lzma.rst:2
 msgid ":mod:`!lzma` --- Compression using the LZMA algorithm"
-msgstr ""
+msgstr ":mod:`!lzma` --- Kompression mit dem LZMA-Algorithmus"
 
 #: ../../library/lzma.rst:9
 msgid "**Source code:** :source:`Lib/lzma.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/lzma.py`"
 
 #: ../../library/lzma.rst:13
 msgid ""
@@ -31,6 +31,11 @@ msgid ""
 "file interface supporting the ``.xz`` and legacy ``.lzma`` file formats used "
 "by the :program:`xz` utility, as well as raw compressed streams."
 msgstr ""
+"Dieses Modul bietet Klassen und Hilfsfunktionen zum Komprimieren und "
+"Dekomprimieren von Daten mit dem Kompressionsalgorithmus LZMA. Enthalten ist "
+"außerdem eine Dateischnittstelle, die die vom Dienstprogramm :program:`xz` "
+"verwendeten Dateiformate ``.xz`` und das veraltete ``.lzma`` sowie rohe "
+"komprimierte Datenströme unterstützt."
 
 #: ../../library/lzma.rst:18
 msgid ""
@@ -39,6 +44,11 @@ msgid ""
 "are *not* thread-safe, so if you need to use a single :class:`LZMAFile` "
 "instance from multiple threads, it is necessary to protect it with a lock."
 msgstr ""
+"Die Schnittstelle dieses Moduls ähnelt stark der des Moduls :mod:`bz2`. "
+"Beachte, dass :class:`LZMAFile` und :class:`bz2.BZ2File` *nicht* thread-"
+"sicher sind. Wenn du also eine einzelne :class:`LZMAFile`-Instanz aus "
+"mehreren Threads verwenden musst, ist es nötig, sie mit einer Sperre zu "
+"schützen."
 
 #: ../../includes/optional-module.rst:1
 msgid ""
@@ -57,16 +67,21 @@ msgid ""
 "This exception is raised when an error occurs during compression or "
 "decompression, or while initializing the compressor/decompressor state."
 msgstr ""
+"Diese Ausnahme wird ausgelöst, wenn bei der Kompression oder Dekompression "
+"oder bei der Initialisierung des Kompressor- oder Dekompressor-Zustands ein "
+"Fehler auftritt."
 
 #: ../../library/lzma.rst:33
 msgid "Reading and writing compressed files"
-msgstr ""
+msgstr "Komprimierte Dateien lesen und schreiben"
 
 #: ../../library/lzma.rst:37
 msgid ""
 "Open an LZMA-compressed file in binary or text mode, returning a :term:`file "
 "object`."
 msgstr ""
+"Öffnet eine LZMA-komprimierte Datei im Binär- oder Textmodus und gibt "
+"ein :term:`Dateiobjekt <file object>` zurück."
 
 #: ../../library/lzma.rst:40
 msgid ""
@@ -75,6 +90,10 @@ msgid ""
 "object), in which case the named file is opened, or it can be an existing "
 "file object to read from or write to."
 msgstr ""
+"Das Argument *filename* kann entweder ein tatsächlicher Dateiname "
+"(als :class:`str`-, :class:`bytes`- oder :term:`pfadähnliches <path-like "
+"object>` Objekt angegeben) sein, dann wird die benannte Datei geöffnet, oder "
+"ein vorhandenes Dateiobjekt, aus dem gelesen oder in das geschrieben wird."
 
 #: ../../library/lzma.rst:45
 msgid ""
@@ -83,6 +102,10 @@ msgid ""
 "or ``\"rt\"``, ``\"wt\"``, ``\"xt\"``, or ``\"at\"`` for text mode. The "
 "default is ``\"rb\"``."
 msgstr ""
+"Das Argument *mode* kann für den Binärmodus ``\"r\"``, ``\"rb\"``, "
+"``\"w\"``, ``\"wb\"``, ``\"x\"``, ``\"xb\"``, ``\"a\"`` oder ``\"ab\"`` "
+"sein, für den Textmodus ``\"rt\"``, ``\"wt\"``, ``\"xt\"`` oder ``\"at\"``. "
+"Der Standardwert ist ``\"rb\"``."
 
 #: ../../library/lzma.rst:49 ../../library/lzma.rst:94
 msgid ""
@@ -90,12 +113,17 @@ msgid ""
 "the same meanings as for :class:`LZMADecompressor`. In this case, the "
 "*check* and *preset* arguments should not be used."
 msgstr ""
+"Beim Öffnen einer Datei zum Lesen haben die Argumente *format* und *filters* "
+"dieselbe Bedeutung wie bei :class:`LZMADecompressor`. In diesem Fall sollten "
+"die Argumente *check* und *preset* nicht verwendet werden."
 
 #: ../../library/lzma.rst:53 ../../library/lzma.rst:98
 msgid ""
 "When opening a file for writing, the *format*, *check*, *preset* and "
 "*filters* arguments have the same meanings as for :class:`LZMACompressor`."
 msgstr ""
+"Beim Öffnen einer Datei zum Schreiben haben die Argumente *format*, *check*, "
+"*preset* und *filters* dieselbe Bedeutung wie bei :class:`LZMACompressor`."
 
 #: ../../library/lzma.rst:56
 msgid ""
@@ -103,6 +131,10 @@ msgid ""
 "constructor: ``LZMAFile(filename, mode, ...)``. In this case, the "
 "*encoding*, *errors* and *newline* arguments must not be provided."
 msgstr ""
+"Im Binärmodus entspricht diese Funktion dem Konstruktor "
+"von :class:`LZMAFile`: ``LZMAFile(filename, mode, ...)``. In diesem Fall "
+"dürfen die Argumente *encoding*, *errors* und *newline* nicht angegeben "
+"werden."
 
 #: ../../library/lzma.rst:60
 msgid ""
@@ -110,18 +142,24 @@ msgid ""
 "an :class:`io.TextIOWrapper` instance with the specified encoding, error "
 "handling behavior, and line ending(s)."
 msgstr ""
+"Im Textmodus wird ein :class:`LZMAFile`-Objekt erzeugt und in "
+"eine :class:`io.TextIOWrapper`-Instanz verpackt, die die angegebene "
+"Kodierung, das angegebene Fehlerverhalten und die angegebenen Zeilenenden "
+"verwendet."
 
 #: ../../library/lzma.rst:64
 msgid "Added support for the ``\"x\"``, ``\"xb\"`` and ``\"xt\"`` modes."
 msgstr ""
+"Unterstützung für die Modi ``\"x\"``, ``\"xb\"`` und ``\"xt\"`` wurde "
+"hinzugefügt."
 
 #: ../../library/lzma.rst:67 ../../library/lzma.rst:140
 msgid "Accepts a :term:`path-like object`."
-msgstr ""
+msgstr "Akzeptiert ein :term:`pfadähnliches Objekt <path-like object>`."
 
 #: ../../library/lzma.rst:73
 msgid "Open an LZMA-compressed file in binary mode."
-msgstr ""
+msgstr "Öffnet eine LZMA-komprimierte Datei im Binärmodus."
 
 #: ../../library/lzma.rst:75
 msgid ""
@@ -132,6 +170,13 @@ msgid ""
 "object). When wrapping an existing file object, the wrapped file will not be "
 "closed when the :class:`LZMAFile` is closed."
 msgstr ""
+"Eine :class:`LZMAFile` kann ein bereits geöffnetes :term:`Dateiobjekt <file "
+"object>` umhüllen oder direkt auf einer benannten Datei arbeiten. Das "
+"Argument *filename* gibt entweder das zu umhüllende Dateiobjekt an oder den "
+"Namen der zu öffnenden Datei (als :class:`str`-, :class:`bytes`- "
+"oder :term:`pfadähnliches <path-like object>` Objekt). Wird ein vorhandenes "
+"Dateiobjekt umhüllt, wird die umhüllte Datei beim Schließen "
+"der :class:`LZMAFile` nicht geschlossen."
 
 #: ../../library/lzma.rst:82
 msgid ""
@@ -140,12 +185,18 @@ msgid ""
 "appending. These can equivalently be given as ``\"rb\"``, ``\"wb\"``, "
 "``\"xb\"`` and ``\"ab\"`` respectively."
 msgstr ""
+"Das Argument *mode* kann ``\"r\"`` zum Lesen (Standard), ``\"w\"`` zum "
+"Überschreiben, ``\"x\"`` für exklusives Erzeugen oder ``\"a\"`` zum Anhängen "
+"sein. Diese lassen sich gleichwertig auch als ``\"rb\"``, ``\"wb\"``, "
+"``\"xb\"`` und ``\"ab\"`` angeben."
 
 #: ../../library/lzma.rst:87
 msgid ""
 "If *filename* is a file object (rather than an actual file name), a mode of "
 "``\"w\"`` does not truncate the file, and is instead equivalent to ``\"a\"``."
 msgstr ""
+"Ist *filename* ein Dateiobjekt (und kein tatsächlicher Dateiname), kürzt der "
+"Modus ``\"w\"`` die Datei nicht, sondern entspricht stattdessen ``\"a\"``."
 
 #: ../../library/lzma.rst:90
 msgid ""
@@ -153,6 +204,9 @@ msgid ""
 "multiple separate compressed streams. These are transparently decoded as a "
 "single logical stream."
 msgstr ""
+"Beim Öffnen einer Datei zum Lesen kann die Eingabedatei aus mehreren "
+"getrennten, aneinandergehängten komprimierten Datenströmen bestehen. Diese "
+"werden transparent als ein einziger logischer Datenstrom dekodiert."
 
 #: ../../library/lzma.rst:101
 msgid ""
@@ -161,10 +215,16 @@ msgid ""
 "and :meth:`~io.IOBase.truncate`. Iteration and the :keyword:`with` statement "
 "are supported."
 msgstr ""
+":class:`LZMAFile` unterstützt alle von :class:`io.BufferedIOBase` "
+"festgelegten Mitglieder, außer :meth:`~io.BufferedIOBase.detach` "
+"und :meth:`~io.IOBase.truncate`. Iteration und die :keyword:`with`-Anweisung "
+"werden unterstützt."
 
 #: ../../library/lzma.rst:106
 msgid "The following method and attributes are also provided:"
 msgstr ""
+"Außerdem werden die folgende Methode und die folgenden Attribute "
+"bereitgestellt:"
 
 #: ../../library/lzma.rst:110
 msgid ""
@@ -172,6 +232,10 @@ msgid ""
 "of data will be returned, unless EOF has been reached. The exact number of "
 "bytes returned is unspecified (the *size* argument is ignored)."
 msgstr ""
+"Gibt gepufferte Daten zurück, ohne die Dateiposition voranzubringen. "
+"Mindestens ein Byte an Daten wird zurückgegeben, sofern nicht das Dateiende "
+"erreicht wurde. Die genaue Anzahl der zurückgegebenen Bytes ist nicht "
+"festgelegt (das Argument *size* wird ignoriert)."
 
 #: ../../library/lzma.rst:114
 msgid ""
@@ -180,41 +244,53 @@ msgid ""
 "object (e.g. if the :class:`LZMAFile` was constructed by passing a file "
 "object for *filename*)."
 msgstr ""
+"Der Aufruf von :meth:`peek` ändert die Dateiposition der :class:`LZMAFile` "
+"nicht, kann aber die Position des zugrunde liegenden Dateiobjekts ändern (z. "
+"B. wenn die :class:`LZMAFile` erzeugt wurde, indem ein Dateiobjekt für "
+"*filename* übergeben wurde)."
 
 #: ../../library/lzma.rst:121
 msgid "``'rb'`` for reading and ``'wb'`` for writing."
-msgstr ""
+msgstr "``'rb'`` zum Lesen und ``'wb'`` zum Schreiben."
 
 #: ../../library/lzma.rst:127
 msgid ""
 "The lzma file name.  Equivalent to the :attr:`~io.FileIO.name` attribute of "
 "the underlying :term:`file object`."
 msgstr ""
+"Der lzma-Dateiname. Entspricht dem Attribut :attr:`~io.FileIO.name` des "
+"zugrunde liegenden :term:`Dateiobjekts <file object>`."
 
 #: ../../library/lzma.rst:133
 msgid "Added support for the ``\"x\"`` and ``\"xb\"`` modes."
-msgstr ""
+msgstr "Unterstützung für die Modi ``\"x\"`` und ``\"xb\"`` wurde hinzugefügt."
 
 #: ../../library/lzma.rst:136
 msgid ""
 "The :meth:`~io.BufferedIOBase.read` method now accepts an argument of "
 "``None``."
 msgstr ""
+"Die Methode :meth:`~io.BufferedIOBase.read` akzeptiert jetzt das Argument "
+"``None``."
 
 #: ../../library/lzma.rst:145
 msgid "Compressing and decompressing data in memory"
-msgstr ""
+msgstr "Daten im Speicher komprimieren und dekomprimieren"
 
 #: ../../library/lzma.rst:149
 msgid ""
 "Create a compressor object, which can be used to compress data incrementally."
 msgstr ""
+"Erzeugt ein Kompressor-Objekt, mit dem sich Daten inkrementell komprimieren "
+"lassen."
 
 #: ../../library/lzma.rst:151
 msgid ""
 "For a more convenient way of compressing a single chunk of data, "
 "see :func:`compress`."
 msgstr ""
+"Eine bequemere Möglichkeit, einen einzelnen Datenblock zu komprimieren, "
+"bietet :func:`compress`."
 
 #: ../../library/lzma.rst:154
 msgid ""
@@ -222,6 +298,9 @@ msgid ""
 "Possible values are :const:`FORMAT_XZ` (the default), :const:`FORMAT_ALONE` "
 "and :const:`FORMAT_RAW`."
 msgstr ""
+"Das Argument *format* gibt an, welches Containerformat verwendet werden "
+"soll. Mögliche Werte sind :const:`FORMAT_XZ` (der "
+"Standardwert), :const:`FORMAT_ALONE` und :const:`FORMAT_RAW`."
 
 #: ../../library/lzma.rst:158
 msgid ""
@@ -231,11 +310,19 @@ msgid ""
 "are :const:`CHECK_NONE`, :const:`CHECK_CRC32`, :const:`CHECK_CRC64` (the "
 "default for :const:`FORMAT_XZ`) and :const:`CHECK_SHA256`."
 msgstr ""
+"Das Argument *check* gibt die Art der Integritätsprüfung an, die in die "
+"komprimierten Daten aufgenommen wird. Diese Prüfung wird beim Dekomprimieren "
+"verwendet, um sicherzustellen, dass die Daten nicht beschädigt wurden. "
+"Mögliche Werte "
+"sind :const:`CHECK_NONE`, :const:`CHECK_CRC32`, :const:`CHECK_CRC64` (der "
+"Standardwert für :const:`FORMAT_XZ`) und :const:`CHECK_SHA256`."
 
 #: ../../library/lzma.rst:164
 msgid ""
 "If the specified check is not supported, an :class:`LZMAError` is raised."
 msgstr ""
+"Wird die angegebene Prüfung nicht unterstützt, wird ein :class:`LZMAError` "
+"ausgelöst."
 
 #: ../../library/lzma.rst:166
 msgid ""
@@ -243,6 +330,9 @@ msgid ""
 "level (with the *preset* argument), or in detail as a custom filter chain "
 "(with the *filters* argument)."
 msgstr ""
+"Die Kompressionseinstellungen lassen sich entweder als voreingestellte "
+"Kompressionsstufe (mit dem Argument *preset*) oder im Detail als "
+"benutzerdefinierte Filterkette (mit dem Argument *filters*) angeben."
 
 #: ../../library/lzma.rst:170
 msgid ""
@@ -253,6 +343,12 @@ msgid ""
 "``6``). Higher presets produce smaller output, but make the compression "
 "process slower."
 msgstr ""
+"Das Argument *preset* (falls angegeben) sollte eine ganze Zahl zwischen "
+"``0`` und ``9`` (einschließlich) sein, optional per ODER mit der "
+"Konstante :const:`PRESET_EXTREME` verknüpft. Sind weder *preset* noch "
+"*filters* angegeben, wird standardmäßig :const:`PRESET_DEFAULT` verwendet "
+"(Voreinstellung ``6``). Höhere Voreinstellungen erzeugen kleinere Ausgaben, "
+"machen den Kompressionsvorgang aber langsamer."
 
 #: ../../library/lzma.rst:179
 msgid ""
@@ -262,12 +358,20 @@ msgid ""
 "an :class:`LZMACompressor` object can be as high as 800 MiB. For this "
 "reason, it is generally best to stick with the default preset."
 msgstr ""
+"Die Kompression mit höheren Voreinstellungen beansprucht nicht nur die CPU "
+"stärker, sondern braucht auch deutlich mehr Speicher (und erzeugt Ausgaben, "
+"die zum Dekomprimieren mehr Speicher brauchen). Mit der Voreinstellung ``9`` "
+"kann der Overhead eines :class:`LZMACompressor`-Objekts zum Beispiel bis zu "
+"800 MiB betragen. Deshalb ist es im Allgemeinen am besten, bei der "
+"Standardvoreinstellung zu bleiben."
 
 #: ../../library/lzma.rst:185
 msgid ""
 "The *filters* argument (if provided) should be a filter chain specifier. "
 "See :ref:`filter-chain-specs` for details."
 msgstr ""
+"Das Argument *filters* (falls angegeben) sollte ein Filterketten-"
+"Spezifizierer sein. Einzelheiten siehe :ref:`filter-chain-specs`."
 
 #: ../../library/lzma.rst:190
 msgid ""
@@ -277,28 +381,43 @@ msgid ""
 "and :meth:`flush`. The returned data should be concatenated with the output "
 "of any previous calls to :meth:`compress`."
 msgstr ""
+"Komprimiert *data* (ein :class:`bytes`-Objekt) und gibt ein :class:`bytes`-"
+"Objekt mit komprimierten Daten für mindestens einen Teil der Eingabe zurück. "
+"Ein Teil von *data* kann intern gepuffert werden, um in späteren Aufrufen "
+"von :meth:`compress` und :meth:`flush` verwendet zu werden. Die "
+"zurückgegebenen Daten sollten mit der Ausgabe aller früheren Aufrufe "
+"von :meth:`compress` aneinandergehängt werden."
 
 #: ../../library/lzma.rst:198
 msgid ""
 "Finish the compression process, returning a :class:`bytes` object containing "
 "any data stored in the compressor's internal buffers."
 msgstr ""
+"Schließt den Kompressionsvorgang ab und gibt ein :class:`bytes`-Objekt mit "
+"allen Daten zurück, die in den internen Puffern des Kompressors gespeichert "
+"sind."
 
 #: ../../library/lzma.rst:201
 msgid "The compressor cannot be used after this method has been called."
 msgstr ""
+"Der Kompressor kann nach dem Aufruf dieser Methode nicht mehr verwendet "
+"werden."
 
 #: ../../library/lzma.rst:206
 msgid ""
 "Create a decompressor object, which can be used to decompress data "
 "incrementally."
 msgstr ""
+"Erzeugt ein Dekompressor-Objekt, mit dem sich Daten inkrementell "
+"dekomprimieren lassen."
 
 #: ../../library/lzma.rst:209
 msgid ""
 "For a more convenient way of decompressing an entire compressed stream at "
 "once, see :func:`decompress`."
 msgstr ""
+"Eine bequemere Möglichkeit, einen vollständigen komprimierten Datenstrom auf "
+"einmal zu dekomprimieren, bietet :func:`decompress`."
 
 #: ../../library/lzma.rst:212
 msgid ""
@@ -307,6 +426,10 @@ msgid ""
 "``.lzma`` files. Other possible values "
 "are :const:`FORMAT_XZ`, :const:`FORMAT_ALONE`, and :const:`FORMAT_RAW`."
 msgstr ""
+"Das Argument *format* gibt das Containerformat an, das verwendet werden "
+"soll. Der Standardwert ist :const:`FORMAT_AUTO`, das sowohl ``.xz``- als "
+"auch ``.lzma``-Dateien dekomprimieren kann. Weitere mögliche Werte "
+"sind :const:`FORMAT_XZ`, :const:`FORMAT_ALONE` und :const:`FORMAT_RAW`."
 
 #: ../../library/lzma.rst:217
 msgid ""
@@ -315,6 +438,11 @@ msgid ""
 "will fail with an :class:`LZMAError` if it is not possible to decompress the "
 "input within the given memory limit."
 msgstr ""
+"Das Argument *memlimit* gibt eine Obergrenze (in Bytes) für die "
+"Speichermenge an, die der Dekompressor verwenden darf. Wird dieses Argument "
+"verwendet, schlägt die Dekompression mit einem :class:`LZMAError` fehl, wenn "
+"sich die Eingabe nicht innerhalb der angegebenen Speichergrenze "
+"dekomprimieren lässt."
 
 #: ../../library/lzma.rst:222
 msgid ""
@@ -323,6 +451,11 @@ msgid ""
 "is :const:`FORMAT_RAW`, but should not be used for other formats. "
 "See :ref:`filter-chain-specs` for more information about filter chains."
 msgstr ""
+"Das Argument *filters* gibt die Filterkette an, mit der der zu "
+"dekomprimierende Datenstrom erzeugt wurde. Dieses Argument ist erforderlich, "
+"wenn *format* gleich :const:`FORMAT_RAW` ist, sollte aber bei anderen "
+"Formaten nicht verwendet werden. Weitere Informationen zu Filterketten "
+"siehe :ref:`filter-chain-specs`."
 
 #: ../../library/lzma.rst:228
 msgid ""
@@ -331,6 +464,11 @@ msgid ""
 "decompress a multi-stream input with :class:`LZMADecompressor`, you must "
 "create a new decompressor for each stream."
 msgstr ""
+"Anders als :func:`decompress` und :class:`LZMAFile` verarbeitet diese Klasse "
+"Eingaben mit mehreren komprimierten Datenströmen nicht transparent. Um eine "
+"Eingabe mit mehreren Datenströmen mit :class:`LZMADecompressor` zu "
+"dekomprimieren, musst du für jeden Datenstrom einen neuen Dekompressor "
+"erzeugen."
 
 #: ../../library/lzma.rst:235
 msgid ""
@@ -339,6 +477,11 @@ msgid ""
 "to :meth:`decompress`. The returned data should be concatenated with the "
 "output of any previous calls to :meth:`decompress`."
 msgstr ""
+"Dekomprimiert *data* (ein :term:`Byte-ähnliches Objekt <bytes-like object>`) "
+"und gibt die unkomprimierten Daten als Bytes zurück. Ein Teil von *data* "
+"kann intern gepuffert werden, um in späteren Aufrufen von :meth:`decompress` "
+"verwendet zu werden. Die zurückgegebenen Daten sollten mit der Ausgabe aller "
+"früheren Aufrufe von :meth:`decompress` aneinandergehängt werden."
 
 #: ../../library/lzma.rst:241
 msgid ""
@@ -348,6 +491,12 @@ msgid ""
 "this case, the next call to :meth:`~.decompress` may provide *data* as "
 "``b''`` to obtain more of the output."
 msgstr ""
+"Ist *max_length* nicht negativ, werden höchstens *max_length* Bytes "
+"dekomprimierter Daten zurückgegeben. Wird dieses Limit erreicht und lässt "
+"sich weitere Ausgabe erzeugen, wird das Attribut :attr:`~.needs_input` auf "
+"``False`` gesetzt. In diesem Fall kann der nächste Aufruf "
+"von :meth:`~.decompress` *data* als ``b''`` übergeben, um mehr von der "
+"Ausgabe zu erhalten."
 
 #: ../../library/lzma.rst:248
 msgid ""
@@ -355,6 +504,9 @@ msgid ""
 "was less than *max_length* bytes, or because *max_length* was negative), "
 "the :attr:`~.needs_input` attribute will be set to ``True``."
 msgstr ""
+"Wurden alle Eingabedaten dekomprimiert und zurückgegeben (entweder weil es "
+"weniger als *max_length* Bytes waren oder weil *max_length* negativ war), "
+"wird das Attribut :attr:`~.needs_input` auf ``True`` gesetzt."
 
 #: ../../library/lzma.rst:253
 msgid ""
@@ -362,10 +514,14 @@ msgid ""
 "an :exc:`EOFError`.  Any data found after the end of the stream is ignored "
 "and saved in the :attr:`~.unused_data` attribute."
 msgstr ""
+"Der Versuch, Daten nach Erreichen des Datenstromendes zu dekomprimieren, "
+"löst einen :exc:`EOFError` aus. Alle Daten, die nach dem Ende des "
+"Datenstroms gefunden werden, werden ignoriert und im "
+"Attribut :attr:`~.unused_data` gespeichert."
 
 #: ../../library/lzma.rst:257
 msgid "Added the *max_length* parameter."
-msgstr ""
+msgstr "Der Parameter *max_length* wurde hinzugefügt."
 
 #: ../../library/lzma.rst:262
 msgid ""
@@ -373,63 +529,82 @@ msgid ""
 "be :const:`CHECK_UNKNOWN` until enough of the input has been decoded to "
 "determine what integrity check it uses."
 msgstr ""
+"Die ID der Integritätsprüfung, die der Eingabedatenstrom verwendet. Das "
+"kann :const:`CHECK_UNKNOWN` sein, bis genug von der Eingabe dekodiert wurde, "
+"um zu bestimmen, welche Integritätsprüfung verwendet wird."
 
 #: ../../library/lzma.rst:268
 msgid "``True`` if the end-of-stream marker has been reached."
-msgstr ""
+msgstr "``True``, wenn die Datenstromende-Markierung erreicht wurde."
 
 #: ../../library/lzma.rst:272
 msgid "Data found after the end of the compressed stream."
 msgstr ""
+"Daten, die nach dem Ende des komprimierten Datenstroms gefunden wurden."
 
 #: ../../library/lzma.rst:274
 msgid "Before the end of the stream is reached, this will be ``b\"\"``."
-msgstr ""
+msgstr "Bevor das Ende des Datenstroms erreicht wird, ist dies ``b\"\"``."
 
 #: ../../library/lzma.rst:278
 msgid ""
 "``False`` if the :meth:`.decompress` method can provide more decompressed "
 "data before requiring new uncompressed input."
 msgstr ""
+"``False``, wenn die Methode :meth:`.decompress` weitere dekomprimierte Daten "
+"liefern kann, bevor neue unkomprimierte Eingabe erforderlich ist."
 
 #: ../../library/lzma.rst:285
 msgid ""
 "Compress *data* (a :class:`bytes` object), returning the compressed data as "
 "a :class:`bytes` object."
 msgstr ""
+"Komprimiert *data* (ein :class:`bytes`-Objekt) und gibt die komprimierten "
+"Daten als :class:`bytes`-Objekt zurück."
 
 #: ../../library/lzma.rst:288
 msgid ""
 "See :class:`LZMACompressor` above for a description of the *format*, "
 "*check*, *preset* and *filters* arguments."
 msgstr ""
+"Eine Beschreibung der Argumente *format*, *check*, *preset* und *filters* "
+"siehe oben bei :class:`LZMACompressor`."
 
 #: ../../library/lzma.rst:294
 msgid ""
 "Decompress *data* (a :class:`bytes` object), returning the uncompressed data "
 "as a :class:`bytes` object."
 msgstr ""
+"Dekomprimiert *data* (ein :class:`bytes`-Objekt) und gibt die "
+"unkomprimierten Daten als :class:`bytes`-Objekt zurück."
 
 #: ../../library/lzma.rst:297
 msgid ""
 "If *data* is the concatenation of multiple distinct compressed streams, "
 "decompress all of these streams, and return the concatenation of the results."
 msgstr ""
+"Ist *data* die Aneinanderreihung mehrerer getrennter komprimierter "
+"Datenströme, werden alle diese Datenströme dekomprimiert und die "
+"aneinandergehängten Ergebnisse zurückgegeben."
 
 #: ../../library/lzma.rst:300
 msgid ""
 "See :class:`LZMADecompressor` above for a description of the *format*, "
 "*memlimit* and *filters* arguments."
 msgstr ""
+"Eine Beschreibung der Argumente *format*, *memlimit* und *filters* siehe "
+"oben bei :class:`LZMADecompressor`."
 
 #: ../../library/lzma.rst:305
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Verschiedenes"
 
 #: ../../library/lzma.rst:309
 msgid ""
 "Return ``True`` if the given integrity check is supported on this system."
 msgstr ""
+"Gibt ``True`` zurück, wenn die angegebene Integritätsprüfung auf diesem "
+"System unterstützt wird."
 
 #: ../../library/lzma.rst:311
 msgid ""
@@ -438,10 +613,14 @@ msgid ""
 "if you are using a version of :program:`liblzma` that was compiled with a "
 "limited feature set."
 msgstr ""
+":const:`CHECK_NONE` und :const:`CHECK_CRC32` werden immer "
+"unterstützt. :const:`CHECK_CRC64` und :const:`CHECK_SHA256` sind "
+"möglicherweise nicht verfügbar, wenn du eine Version von :program:`liblzma` "
+"verwendest, die mit eingeschränktem Funktionsumfang kompiliert wurde."
 
 #: ../../library/lzma.rst:320
 msgid "Specifying custom filter chains"
-msgstr ""
+msgstr "Benutzerdefinierte Filterketten angeben"
 
 #: ../../library/lzma.rst:322
 msgid ""
@@ -450,56 +629,63 @@ msgid ""
 "must contain the key ``\"id\"``, and may contain additional keys to specify "
 "filter-dependent options. Valid filter IDs are as follows:"
 msgstr ""
+"Ein Filterketten-Spezifizierer ist eine Sequenz von Dictionarys, wobei jedes "
+"Dictionary die ID und die Optionen eines einzelnen Filters enthält. Jedes "
+"Dictionary muss den Schlüssel ``\"id\"`` enthalten und kann weitere "
+"Schlüssel enthalten, die filterabhängige Optionen angeben. Gültige Filter-"
+"IDs sind:"
 
 #: ../../library/lzma.rst:327
 msgid "Compression filters:"
-msgstr ""
+msgstr "Kompressionsfilter:"
 
 #: ../../library/lzma.rst:329
 msgid ":const:`FILTER_LZMA1` (for use with :const:`FORMAT_ALONE`)"
-msgstr ""
+msgstr ":const:`FILTER_LZMA1` (zur Verwendung mit :const:`FORMAT_ALONE`)"
 
 #: ../../library/lzma.rst:330
 msgid ""
 ":const:`FILTER_LZMA2` (for use with :const:`FORMAT_XZ` "
 "and :const:`FORMAT_RAW`)"
 msgstr ""
+":const:`FILTER_LZMA2` (zur Verwendung mit :const:`FORMAT_XZ` "
+"und :const:`FORMAT_RAW`)"
 
 #: ../../library/lzma.rst:332
 msgid "Delta filter:"
-msgstr ""
+msgstr "Delta-Filter:"
 
 #: ../../library/lzma.rst:334
 msgid ":const:`FILTER_DELTA`"
-msgstr ""
+msgstr ":const:`FILTER_DELTA`"
 
 #: ../../library/lzma.rst:336
 msgid "Branch-Call-Jump (BCJ) filters:"
-msgstr ""
+msgstr "Branch-Call-Jump-Filter (BCJ):"
 
 #: ../../library/lzma.rst:338
 msgid ":const:`!FILTER_X86`"
-msgstr ""
+msgstr ":const:`!FILTER_X86`"
 
 #: ../../library/lzma.rst:339
 msgid ":const:`!FILTER_IA64`"
-msgstr ""
+msgstr ":const:`!FILTER_IA64`"
 
 #: ../../library/lzma.rst:340
 msgid ":const:`!FILTER_ARM`"
-msgstr ""
+msgstr ":const:`!FILTER_ARM`"
 
 #: ../../library/lzma.rst:341
 msgid ":const:`!FILTER_ARMTHUMB`"
-msgstr ""
+msgstr ":const:`!FILTER_ARMTHUMB`"
 
 #: ../../library/lzma.rst:342
 msgid ":const:`!FILTER_POWERPC`"
-msgstr ""
+msgstr ":const:`!FILTER_POWERPC`"
 
 #: ../../library/lzma.rst:343
 msgid ":const:`!FILTER_SPARC`"
-msgstr ""
+msgstr ":const:`!FILTER_SPARC`"
 
 #: ../../library/lzma.rst:345
 msgid ""
@@ -507,48 +693,61 @@ msgid ""
 "filter in the chain must be a compression filter, and any other filters must "
 "be delta or BCJ filters."
 msgstr ""
+"Eine Filterkette kann aus bis zu 4 Filtern bestehen und darf nicht leer "
+"sein. Der letzte Filter der Kette muss ein Kompressionsfilter sein, alle "
+"anderen Filter müssen Delta- oder BCJ-Filter sein."
 
 #: ../../library/lzma.rst:349
 msgid ""
 "Compression filters support the following options (specified as additional "
 "entries in the dictionary representing the filter):"
 msgstr ""
+"Kompressionsfilter unterstützen die folgenden Optionen (als zusätzliche "
+"Einträge in dem Dictionary angegeben, das den Filter darstellt):"
 
 #: ../../library/lzma.rst:352
 msgid ""
 "``preset``: A compression preset to use as a source of default values for "
 "options that are not specified explicitly."
 msgstr ""
+"``preset``: Eine Kompressionsvoreinstellung, die als Quelle für "
+"Standardwerte von Optionen dient, die nicht ausdrücklich angegeben sind."
 
 #: ../../library/lzma.rst:354
 msgid ""
 "``dict_size``: Dictionary size in bytes. This should be between 4 KiB and "
 "1.5 GiB (inclusive)."
 msgstr ""
+"``dict_size``: Dictionary-Größe in Bytes. Sie sollte zwischen 4 KiB und 1,5 "
+"GiB (einschließlich) liegen."
 
 #: ../../library/lzma.rst:356
 msgid "``lc``: Number of literal context bits."
-msgstr ""
+msgstr "``lc``: Anzahl der Literal-Kontextbits."
 
 #: ../../library/lzma.rst:357
 msgid ""
 "``lp``: Number of literal position bits. The sum ``lc + lp`` must be at most "
 "4."
 msgstr ""
+"``lp``: Anzahl der Literal-Positionsbits. Die Summe ``lc + lp`` darf "
+"höchstens 4 betragen."
 
 #: ../../library/lzma.rst:359
 msgid "``pb``: Number of position bits; must be at most 4."
-msgstr ""
+msgstr "``pb``: Anzahl der Positionsbits. Höchstens 4."
 
 #: ../../library/lzma.rst:360
 msgid "``mode``: :const:`MODE_FAST` or :const:`MODE_NORMAL`."
-msgstr ""
+msgstr "``mode``: :const:`MODE_FAST` oder :const:`MODE_NORMAL`."
 
 #: ../../library/lzma.rst:361
 msgid ""
 "``nice_len``: What should be considered a \"nice length\" for a match. This "
 "should be 273 or less."
 msgstr ""
+"``nice_len``: Was als „angenehme Länge“ für einen Treffer gelten soll. Das "
+"sollte 273 oder weniger sein."
 
 #: ../../library/lzma.rst:363
 msgid ""
@@ -556,12 +755,17 @@ msgid ""
 "-- :const:`MF_HC3`, :const:`MF_HC4`, :const:`MF_BT2`, :const:`MF_BT3`, "
 "or :const:`MF_BT4`."
 msgstr ""
+"``mf``: Welcher Match-Finder verwendet wird "
+"-- :const:`MF_HC3`, :const:`MF_HC4`, :const:`MF_BT2`, :const:`MF_BT3` "
+"oder :const:`MF_BT4`."
 
 #: ../../library/lzma.rst:365
 msgid ""
 "``depth``: Maximum search depth used by match finder. 0 (default) means to "
 "select automatically based on other filter options."
 msgstr ""
+"``depth``: Maximale Suchtiefe des Match-Finders. 0 (Standard) bedeutet, dass "
+"sie automatisch anhand der anderen Filteroptionen gewählt wird."
 
 #: ../../library/lzma.rst:368
 msgid ""
@@ -571,6 +775,12 @@ msgid ""
 "subtracted. The default is 1, i.e. take the differences between adjacent "
 "bytes."
 msgstr ""
+"Der Delta-Filter speichert die Unterschiede zwischen Bytes und erzeugt "
+"dadurch unter bestimmten Umständen eine sich stärker wiederholende Eingabe "
+"für den Kompressor. Er unterstützt eine Option, ``dist``. Sie gibt den "
+"Abstand zwischen den Bytes an, die voneinander subtrahiert werden. Der "
+"Standardwert ist 1, d. h., es werden die Unterschiede zwischen benachbarten "
+"Bytes gebildet."
 
 #: ../../library/lzma.rst:373
 msgid ""
@@ -581,30 +791,42 @@ msgid ""
 "specifies the address that should be mapped to the beginning of the input "
 "data. The default is 0."
 msgstr ""
+"Die BCJ-Filter sind dafür gedacht, auf Maschinencode angewendet zu werden. "
+"Sie wandeln relative Verzweigungen, Aufrufe und Sprünge im Code so um, dass "
+"sie absolute Adressierung verwenden, mit dem Ziel, die Redundanz zu erhöhen, "
+"die der Kompressor nutzen kann. Diese Filter unterstützen eine Option, "
+"``start_offset``. Sie gibt die Adresse an, die auf den Anfang der "
+"Eingabedaten abgebildet werden soll. Der Standardwert ist 0."
 
 #: ../../library/lzma.rst:381
 msgid "Constants"
-msgstr ""
+msgstr "Konstanten"
 
 #: ../../library/lzma.rst:383
 msgid ""
 "The following module-level constants are provided for use as the *format*, "
 "*check*, *preset* and *filters* arguments of the classes and functions above."
 msgstr ""
+"Die folgenden Konstanten auf Modulebene sind zur Verwendung als Argumente "
+"*format*, *check*, *preset* und *filters* der oben genannten Klassen und "
+"Funktionen vorgesehen."
 
 #: ../../library/lzma.rst:386
 msgid "Container formats:"
-msgstr ""
+msgstr "Containerformate:"
 
 #: ../../library/lzma.rst:390
 msgid "The ``.xz`` container format."
-msgstr ""
+msgstr "Das Containerformat ``.xz``."
 
 #: ../../library/lzma.rst:394
 msgid ""
 "The legacy ``.lzma`` container format.  This format is more limited than "
 "``.xz`` -- it does not support integrity checks or multiple filters."
 msgstr ""
+"Das veraltete Containerformat ``.lzma``. Dieses Format ist stärker "
+"eingeschränkt als ``.xz`` -- es unterstützt weder Integritätsprüfungen noch "
+"mehrere Filter."
 
 #: ../../library/lzma.rst:399
 msgid ""
@@ -614,36 +836,47 @@ msgid ""
 "data compressed in this manner cannot be decompressed "
 "using :const:`FORMAT_AUTO`."
 msgstr ""
+"Ein roher Datenstrom, der kein Containerformat verwendet. Dieser "
+"Formatbezeichner unterstützt keine Integritätsprüfungen und verlangt, dass "
+"du immer eine benutzerdefinierte Filterkette angibst (sowohl für die "
+"Kompression als auch für die Dekompression). Außerdem lassen sich auf diese "
+"Weise komprimierte Daten nicht mit :const:`FORMAT_AUTO` dekomprimieren."
 
 #: ../../library/lzma.rst:407
 msgid ""
 "Used for decompression only.  The container format is detected "
 "automatically, so that both ``.xz`` and ``.lzma`` files can be decompressed."
 msgstr ""
+"Nur für die Dekompression. Das Containerformat wird automatisch erkannt, "
+"sodass sich sowohl ``.xz``- als auch ``.lzma``-Dateien dekomprimieren lassen."
 
 #: ../../library/lzma.rst:410
 msgid "Integrity checks:"
-msgstr ""
+msgstr "Integritätsprüfungen:"
 
 #: ../../library/lzma.rst:414
 msgid ""
 "No integrity check.  This is the default (and the only acceptable value) "
 "for :const:`FORMAT_ALONE` and :const:`FORMAT_RAW`."
 msgstr ""
+"Keine Integritätsprüfung. Das ist der Standardwert (und der einzig zulässige "
+"Wert) für :const:`FORMAT_ALONE` und :const:`FORMAT_RAW`."
 
 #: ../../library/lzma.rst:419
 msgid "A 32-bit Cyclic Redundancy Check."
-msgstr ""
+msgstr "Eine 32-Bit-Prüfung mit zyklischer Redundanz (CRC)."
 
 #: ../../library/lzma.rst:423
 msgid ""
 "A 64-bit Cyclic Redundancy Check.  This is the default "
 "for :const:`FORMAT_XZ`."
 msgstr ""
+"Eine 64-Bit-Prüfung mit zyklischer Redundanz (CRC). Das ist der Standardwert "
+"für :const:`FORMAT_XZ`."
 
 #: ../../library/lzma.rst:428
 msgid "A 256-bit Secure Hash Algorithm."
-msgstr ""
+msgstr "Ein 256-Bit-Algorithmus für sichere Hashes (SHA)."
 
 #: ../../library/lzma.rst:432
 msgid ""
@@ -651,28 +884,36 @@ msgid ""
 "be the value of the :attr:`LZMADecompressor.check` attribute until enough of "
 "the input has been decoded."
 msgstr ""
+"Die von einem Datenstrom verwendete Integritätsprüfung konnte noch nicht "
+"bestimmt werden. Das kann der Wert des "
+"Attributs :attr:`LZMADecompressor.check` sein, bis genug von der Eingabe "
+"dekodiert wurde."
 
 #: ../../library/lzma.rst:438
 msgid "The largest supported integrity-check ID."
-msgstr ""
+msgstr "Die größte unterstützte ID einer Integritätsprüfung."
 
 #: ../../library/lzma.rst:440
 msgid "Compression presets:"
-msgstr ""
+msgstr "Kompressionsvoreinstellungen:"
 
 #: ../../library/lzma.rst:444
 msgid "The default compression preset, equivalent to preset level ``6``."
 msgstr ""
+"Die Standardvoreinstellung für die Kompression, entspricht der Stufe ``6``."
 
 #: ../../library/lzma.rst:448
 msgid ""
 "A flag that may be bitwise OR-ed with a preset level (``0`` to ``9``) to "
 "select a slower but more thorough variant of that preset."
 msgstr ""
+"Ein Flag, das bitweise per ODER mit einer Voreinstellungsstufe (``0`` bis "
+"``9``) verknüpft werden kann, um eine langsamere, aber gründlichere Variante "
+"dieser Voreinstellung zu wählen."
 
 #: ../../library/lzma.rst:451
 msgid "Filter IDs and options:"
-msgstr ""
+msgstr "Filter-IDs und Optionen:"
 
 #: ../../library/lzma.rst:456
 msgid ""
@@ -680,22 +921,29 @@ msgid ""
 "with :const:`FORMAT_ALONE`, while :const:`FILTER_LZMA2` is for use "
 "with :const:`FORMAT_XZ` and :const:`FORMAT_RAW`."
 msgstr ""
+"Die Kompressionsfilter LZMA1 und LZMA2. :const:`FILTER_LZMA1` ist zur "
+"Verwendung mit :const:`FORMAT_ALONE` gedacht, :const:`FILTER_LZMA2` zur "
+"Verwendung mit :const:`FORMAT_XZ` und :const:`FORMAT_RAW`."
 
 #: ../../library/lzma.rst:462
 msgid "The delta filter."
-msgstr ""
+msgstr "Der Delta-Filter."
 
 #: ../../library/lzma.rst:467
 msgid ""
 "Compression modes that may be used as the ``mode`` option of a filter "
 "specifier (see :ref:`filter-chain-specs`)."
 msgstr ""
+"Kompressionsmodi, die als Option ``mode`` eines Filterspezifizierers "
+"verwendet werden können (siehe :ref:`filter-chain-specs`)."
 
 #: ../../library/lzma.rst:476
 msgid ""
 "Match finders that may be used as the ``mf`` option of a filter specifier "
 "(see :ref:`filter-chain-specs`)."
 msgstr ""
+"Match-Finder, die als Option ``mf`` eines Filterspezifizierers verwendet "
+"werden können (siehe :ref:`filter-chain-specs`)."
 
 #: ../../library/lzma.rst:481
 msgid "Examples"
@@ -703,7 +951,7 @@ msgstr "Beispiele"
 
 #: ../../library/lzma.rst:483
 msgid "Reading in a compressed file::"
-msgstr ""
+msgstr "Eine komprimierte Datei einlesen::"
 
 #: ../../library/lzma.rst:485
 msgid ""
@@ -711,10 +959,13 @@ msgid ""
 "with lzma.open(\"file.xz\") as f:\n"
 "    file_content = f.read()"
 msgstr ""
+"import lzma\n"
+"with lzma.open(\"file.xz\") as f:\n"
+"    file_content = f.read()"
 
 #: ../../library/lzma.rst:489
 msgid "Creating a compressed file::"
-msgstr ""
+msgstr "Eine komprimierte Datei erstellen::"
 
 #: ../../library/lzma.rst:491
 msgid ""
@@ -723,10 +974,14 @@ msgid ""
 "with lzma.open(\"file.xz\", \"w\") as f:\n"
 "    f.write(data)"
 msgstr ""
+"import lzma\n"
+"data = b\"Insert Data Here\"\n"
+"with lzma.open(\"file.xz\", \"w\") as f:\n"
+"    f.write(data)"
 
 #: ../../library/lzma.rst:496
 msgid "Compressing data in memory::"
-msgstr ""
+msgstr "Daten im Speicher komprimieren::"
 
 #: ../../library/lzma.rst:498
 msgid ""
@@ -734,10 +989,13 @@ msgid ""
 "data_in = b\"Insert Data Here\"\n"
 "data_out = lzma.compress(data_in)"
 msgstr ""
+"import lzma\n"
+"data_in = b\"Insert Data Here\"\n"
+"data_out = lzma.compress(data_in)"
 
 #: ../../library/lzma.rst:502
 msgid "Incremental compression::"
-msgstr ""
+msgstr "Inkrementelle Kompression::"
 
 #: ../../library/lzma.rst:504
 msgid ""
@@ -750,10 +1008,18 @@ msgid ""
 "# Concatenate all the partial results:\n"
 "result = b\"\".join([out1, out2, out3, out4])"
 msgstr ""
+"import lzma\n"
+"lzc = lzma.LZMACompressor()\n"
+"out1 = lzc.compress(b\"Some data\\n\")\n"
+"out2 = lzc.compress(b\"Another piece of data\\n\")\n"
+"out3 = lzc.compress(b\"Even more data\\n\")\n"
+"out4 = lzc.flush()\n"
+"# Alle Teilergebnisse aneinanderhängen:\n"
+"result = b\"\".join([out1, out2, out3, out4])"
 
 #: ../../library/lzma.rst:513
 msgid "Writing compressed data to an already-open file::"
-msgstr ""
+msgstr "Komprimierte Daten in eine bereits geöffnete Datei schreiben::"
 
 #: ../../library/lzma.rst:515
 msgid ""
@@ -764,10 +1030,17 @@ msgid ""
 "        lzf.write(b\"This *will* be compressed\\n\")\n"
 "    f.write(b\"Not compressed\\n\")"
 msgstr ""
+"import lzma\n"
+"with open(\"file.xz\", \"wb\") as f:\n"
+"    f.write(b\"This data will not be compressed\\n\")\n"
+"    with lzma.open(f, \"w\") as lzf:\n"
+"        lzf.write(b\"This *will* be compressed\\n\")\n"
+"    f.write(b\"Not compressed\\n\")"
 
 #: ../../library/lzma.rst:522
 msgid "Creating a compressed file using a custom filter chain::"
 msgstr ""
+"Eine komprimierte Datei mit einer benutzerdefinierten Filterkette erstellen::"
 
 #: ../../library/lzma.rst:524
 msgid ""
@@ -779,3 +1052,10 @@ msgid ""
 "with lzma.open(\"file.xz\", \"w\", filters=my_filters) as f:\n"
 "    f.write(b\"blah blah blah\")"
 msgstr ""
+"import lzma\n"
+"my_filters = [\n"
+"    {\"id\": lzma.FILTER_DELTA, \"dist\": 5},\n"
+"    {\"id\": lzma.FILTER_LZMA2, \"preset\": 7 | lzma.PRESET_EXTREME},\n"
+"]\n"
+"with lzma.open(\"file.xz\", \"w\", filters=my_filters) as f:\n"
+"    f.write(b\"blah blah blah\")"
