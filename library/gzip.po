@@ -18,17 +18,20 @@ msgstr ""
 
 #: ../../library/gzip.rst:2
 msgid ":mod:`!gzip` --- Support for :program:`gzip` files"
-msgstr ""
+msgstr ":mod:`!gzip` --- Unterstützung für :program:`gzip`-Dateien"
 
 #: ../../library/gzip.rst:7
 msgid "**Source code:** :source:`Lib/gzip.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/gzip.py`"
 
 #: ../../library/gzip.rst:11
 msgid ""
 "This module provides a simple interface to compress and decompress files "
 "just like the GNU programs :program:`gzip` and :program:`gunzip` would."
 msgstr ""
+"Dieses Modul bietet eine einfache Schnittstelle, um Dateien zu komprimieren "
+"und zu dekomprimieren, so wie es die GNU-Programme :program:`gzip` "
+"und :program:`gunzip` tun."
 
 #: ../../includes/optional-module.rst:1
 msgid ""
@@ -44,7 +47,7 @@ msgstr ""
 
 #: ../../library/gzip.rst:16
 msgid "The data compression is provided by the :mod:`zlib` module."
-msgstr ""
+msgstr "Die Datenkompression stellt das Modul :mod:`zlib` bereit."
 
 #: ../../library/gzip.rst:18
 msgid ""
@@ -54,6 +57,12 @@ msgid ""
 "-format files, automatically compressing or decompressing the data so that "
 "it looks like an ordinary :term:`file object`."
 msgstr ""
+"Das Modul :mod:`!gzip` stellt die Klasse :class:`GzipFile` sowie die "
+"Hilfsfunktionen :func:`.open`, :func:`compress` und :func:`decompress` "
+"bereit. Die Klasse :class:`GzipFile` liest und schreibt Dateien "
+"im :program:`gzip`-Format und komprimiert oder dekomprimiert die Daten dabei "
+"automatisch, sodass sie wie ein gewöhnliches :term:`Dateiobjekt <file "
+"object>` aussehen."
 
 #: ../../library/gzip.rst:24
 msgid ""
@@ -61,16 +70,22 @@ msgid ""
 "the :program:`gzip` and :program:`gunzip` programs, such  as those produced "
 "by :program:`compress` and :program:`pack`, are not supported by this module."
 msgstr ""
+"Beachte, dass weitere Dateiformate, die sich mit den "
+"Programmen :program:`gzip` und :program:`gunzip` dekomprimieren lassen, etwa "
+"solche, die :program:`compress` und :program:`pack` erzeugen, von diesem "
+"Modul nicht unterstützt werden."
 
 #: ../../library/gzip.rst:28
 msgid "The module defines the following items:"
-msgstr ""
+msgstr "Das Modul definiert die folgenden Elemente:"
 
 #: ../../library/gzip.rst:33
 msgid ""
 "Open a gzip-compressed file in binary or text mode, returning a :term:`file "
 "object`."
 msgstr ""
+"Öffnet eine gzip-komprimierte Datei im Binär- oder Textmodus und gibt "
+"ein :term:`Dateiobjekt <file object>` zurück."
 
 #: ../../library/gzip.rst:36
 msgid ""
@@ -78,6 +93,9 @@ msgid ""
 "or :class:`bytes` object), or an existing file object to read from or write "
 "to."
 msgstr ""
+"Das Argument *filename* kann ein tatsächlicher Dateiname (ein :class:`str`- "
+"oder :class:`bytes`-Objekt) oder ein vorhandenes Dateiobjekt sein, aus dem "
+"gelesen oder in das geschrieben wird."
 
 #: ../../library/gzip.rst:39
 msgid ""
@@ -85,12 +103,17 @@ msgid ""
 "``'w'``, ``'wb'``, ``'x'`` or ``'xb'`` for binary mode, or ``'rt'``, "
 "``'at'``, ``'wt'``, or ``'xt'`` for text mode. The default is ``'rb'``."
 msgstr ""
+"Das Argument *mode* kann für den Binärmodus ``'r'``, ``'rb'``, ``'a'``, "
+"``'ab'``, ``'w'``, ``'wb'``, ``'x'`` oder ``'xb'`` sein, für den Textmodus "
+"``'rt'``, ``'at'``, ``'wt'`` oder ``'xt'``. Der Standardwert ist ``'rb'``."
 
 #: ../../library/gzip.rst:43
 msgid ""
 "The *compresslevel* argument is an integer from 0 to 9, as for "
 "the :class:`GzipFile` constructor."
 msgstr ""
+"Das Argument *compresslevel* ist eine ganze Zahl von 0 bis 9, wie beim "
+"Konstruktor von :class:`GzipFile`."
 
 #: ../../library/gzip.rst:46
 msgid ""
@@ -98,6 +121,10 @@ msgid ""
 "constructor: ``GzipFile(filename, mode, compresslevel)``. In this case, the "
 "*encoding*, *errors* and *newline* arguments must not be provided."
 msgstr ""
+"Im Binärmodus entspricht diese Funktion dem Konstruktor "
+"von :class:`GzipFile`: ``GzipFile(filename, mode, compresslevel)``. In "
+"diesem Fall dürfen die Argumente *encoding*, *errors* und *newline* nicht "
+"angegeben werden."
 
 #: ../../library/gzip.rst:50
 msgid ""
@@ -105,20 +132,28 @@ msgid ""
 "an :class:`io.TextIOWrapper` instance with the specified encoding, error "
 "handling behavior, and line ending(s)."
 msgstr ""
+"Im Textmodus wird ein :class:`GzipFile`-Objekt erzeugt und in "
+"eine :class:`io.TextIOWrapper`-Instanz verpackt, die die angegebene "
+"Kodierung, das angegebene Fehlerverhalten und die angegebenen Zeilenenden "
+"verwendet."
 
 #: ../../library/gzip.rst:54
 msgid ""
 "Added support for *filename* being a file object, support for text mode, and "
 "the *encoding*, *errors* and *newline* arguments."
 msgstr ""
+"Unterstützung dafür, dass *filename* ein Dateiobjekt ist, Unterstützung für "
+"den Textmodus sowie die Argumente *encoding*, *errors* und *newline* wurden "
+"hinzugefügt."
 
 #: ../../library/gzip.rst:58
 msgid "Added support for the ``'x'``, ``'xb'`` and ``'xt'`` modes."
 msgstr ""
+"Unterstützung für die Modi ``'x'``, ``'xb'`` und ``'xt'`` wurde hinzugefügt."
 
 #: ../../library/gzip.rst:61 ../../library/gzip.rst:184
 msgid "Accepts a :term:`path-like object`."
-msgstr ""
+msgstr "Akzeptiert ein :term:`pfadähnliches Objekt <path-like object>`."
 
 #: ../../library/gzip.rst:64 ../../library/gzip.rst:195
 #: ../../library/gzip.rst:225
@@ -127,6 +162,9 @@ msgid ""
 "default level used by most compression tools and a better tradeoff between "
 "speed and performance."
 msgstr ""
+"Die Standard-Kompressionsstufe wurde auf 6 gesenkt (von 9). Das ist die "
+"Standardstufe der meisten Kompressionswerkzeuge und ein besserer Kompromiss "
+"zwischen Geschwindigkeit und Leistung."
 
 #: ../../library/gzip.rst:71
 msgid ""
@@ -134,6 +172,9 @@ msgid ""
 "from :exc:`OSError`. :exc:`EOFError` and :exc:`zlib.error` can also be "
 "raised for invalid gzip files."
 msgstr ""
+"Eine Ausnahme, die bei ungültigen gzip-Dateien ausgelöst wird. Sie erbt "
+"von :exc:`OSError`. Bei ungültigen gzip-Dateien können auch :exc:`EOFError` "
+"und :exc:`zlib.error` ausgelöst werden."
 
 #: ../../library/gzip.rst:79
 msgid ""
@@ -142,6 +183,10 @@ msgid ""
 "the :meth:`~io.IOBase.truncate` method.  At least one of *fileobj* and "
 "*filename* must be given a non-trivial value."
 msgstr ""
+"Konstruktor der Klasse :class:`GzipFile`, die die meisten Methoden "
+"eines :term:`Dateiobjekts <file object>` simuliert, mit Ausnahme der "
+"Methode :meth:`~io.IOBase.truncate`. Mindestens eines von *fileobj* und "
+"*filename* muss einen nicht trivialen Wert erhalten."
 
 #: ../../library/gzip.rst:84
 msgid ""
@@ -150,6 +195,10 @@ msgid ""
 "It defaults to ``None``, in which case *filename* is opened to provide a "
 "file object."
 msgstr ""
+"Die neue Klasseninstanz basiert auf *fileobj*, das eine normale Datei, "
+"ein :class:`io.BytesIO`-Objekt oder ein beliebiges anderes Objekt sein kann, "
+"das eine Datei simuliert. Der Standardwert ist ``None``, in diesem Fall wird "
+"*filename* geöffnet, um ein Dateiobjekt bereitzustellen."
 
 #: ../../library/gzip.rst:89
 msgid ""
@@ -159,6 +208,12 @@ msgid ""
 "*fileobj*, if discernible; otherwise, it defaults to the empty string, and "
 "in this case the original filename is not included in the header."
 msgstr ""
+"Ist *fileobj* nicht ``None``, wird das Argument *filename* nur verwendet, um "
+"in den :program:`gzip`-Dateikopf aufgenommen zu werden, der den "
+"ursprünglichen Dateinamen der unkomprimierten Datei enthalten kann. "
+"Standardmäßig ist es der Dateiname von *fileobj*, sofern erkennbar. "
+"Andernfalls ist der Standardwert die leere Zeichenkette, und in diesem Fall "
+"wird der ursprüngliche Dateiname nicht in den Kopf aufgenommen."
 
 #: ../../library/gzip.rst:95
 msgid ""
@@ -169,6 +224,12 @@ msgid ""
 "*fileobj* will not be used.  It is better to always specify *mode* for "
 "writing."
 msgstr ""
+"Das Argument *mode* kann ``'r'``, ``'rb'``, ``'a'``, ``'ab'``, ``'w'``, "
+"``'wb'``, ``'x'`` oder ``'xb'`` sein, je nachdem, ob die Datei gelesen oder "
+"geschrieben wird. Standard ist der Modus von *fileobj*, sofern erkennbar. "
+"Andernfalls ist der Standardwert ``'rb'``. In künftigen Python-Versionen "
+"wird der Modus von *fileobj* nicht mehr verwendet. Es ist besser, zum "
+"Schreiben immer *mode* anzugeben."
 
 #: ../../library/gzip.rst:101
 msgid ""
@@ -176,6 +237,9 @@ msgid ""
 "file in text mode, use :func:`.open` (or wrap your :class:`GzipFile` with "
 "an :class:`io.TextIOWrapper`)."
 msgstr ""
+"Beachte, dass die Datei immer im Binärmodus geöffnet wird. Um eine "
+"komprimierte Datei im Textmodus zu öffnen, verwende :func:`.open` (oder "
+"verpacke dein :class:`GzipFile` in einen :class:`io.TextIOWrapper`)."
 
 #: ../../library/gzip.rst:105
 msgid ""
@@ -184,6 +248,10 @@ msgid ""
 "compression, and ``9`` is slowest and produces the most compression. ``0`` "
 "is no compression. The default is ``6``."
 msgstr ""
+"Das Argument *compresslevel* ist eine ganze Zahl von ``0`` bis ``9``, die "
+"die Kompressionsstufe steuert. ``1`` ist am schnellsten und komprimiert am "
+"wenigsten, ``9`` ist am langsamsten und komprimiert am stärksten. ``0`` "
+"bedeutet keine Kompression. Der Standardwert ist ``6``."
 
 #: ../../library/gzip.rst:110
 msgid ""
@@ -196,11 +264,21 @@ msgid ""
 "argument is outside the range ``0`` to ``2**32-1``, then the value ``0`` is "
 "used instead."
 msgstr ""
+"Das optionale Argument *mtime* ist der von gzip angeforderte Zeitstempel. "
+"Die Zeit ist im Unix-Format angegeben, d. h. in Sekunden seit 00:00:00 UTC "
+"am 1. Januar 1970. Setze *mtime* auf ``0``, um einen komprimierten "
+"Datenstrom zu erzeugen, der nicht von der Erstellungszeit abhängt. Wird "
+"*mtime* weggelassen oder ist es ``None``, wird die aktuelle Zeit verwendet. "
+"Liegt die aktuelle Zeit jedoch außerhalb des Bereichs von 00:00:00 UTC am 1. "
+"Januar 1970 bis 06:28:15 UTC am 7. Februar 2106, oder liegt ein ausdrücklich "
+"übergebenes Argument *mtime* außerhalb des Bereichs ``0`` bis ``2**32-1``, "
+"wird stattdessen der Wert ``0`` verwendet."
 
 #: ../../library/gzip.rst:119
 msgid ""
 "See below for the :attr:`mtime` attribute that is set when decompressing."
 msgstr ""
+"Siehe unten das Attribut :attr:`mtime`, das beim Dekomprimieren gesetzt wird."
 
 #: ../../library/gzip.rst:121
 msgid ""
@@ -210,6 +288,12 @@ msgid ""
 "writing as *fileobj*, and retrieve the resulting memory buffer using "
 "the :class:`io.BytesIO` object's :meth:`~io.BytesIO.getvalue` method."
 msgstr ""
+"Der Aufruf der Methode :meth:`!close` eines :class:`GzipFile`-Objekts "
+"schließt *fileobj* nicht, da du nach den komprimierten Daten möglicherweise "
+"weiteres Material anhängen möchtest. Dadurch kannst du auch ein zum "
+"Schreiben geöffnetes :class:`io.BytesIO`-Objekt als *fileobj* übergeben und "
+"den entstandenen Speicherpuffer mit der Methode :meth:`~io.BytesIO.getvalue` "
+"des :class:`io.BytesIO`-Objekts abrufen."
 
 #: ../../library/gzip.rst:127
 msgid ""
@@ -217,16 +301,24 @@ msgid ""
 "including iteration and the :keyword:`with` statement.  Only "
 "the :meth:`~io.IOBase.truncate` method isn't implemented."
 msgstr ""
+":class:`GzipFile` unterstützt die Schnittstelle :class:`io.BufferedIOBase`, "
+"einschließlich Iteration und der :keyword:`with`-Anweisung. Nur die "
+"Methode :meth:`~io.IOBase.truncate` ist nicht implementiert."
 
 #: ../../library/gzip.rst:131
 msgid ":class:`GzipFile` also provides the following method and attribute:"
 msgstr ""
+":class:`GzipFile` bietet außerdem die folgende Methode und das folgende "
+"Attribut:"
 
 #: ../../library/gzip.rst:135
 msgid ""
 "Read *n* uncompressed bytes without advancing the file position. The number "
 "of bytes returned may be more or less than requested."
 msgstr ""
+"Liest *n* unkomprimierte Bytes, ohne die Dateiposition voranzubringen. Die "
+"Anzahl der zurückgegebenen Bytes kann größer oder kleiner sein als "
+"angefordert."
 
 #: ../../library/gzip.rst:138
 msgid ""
@@ -235,14 +327,17 @@ msgid ""
 "object (e.g. if the :class:`GzipFile` was constructed with the *fileobj* "
 "parameter)."
 msgstr ""
+"Der Aufruf von :meth:`peek` ändert die Dateiposition des :class:`GzipFile` "
+"nicht, kann aber die Position des zugrunde liegenden Dateiobjekts ändern (z. "
+"B. wenn das :class:`GzipFile` mit dem Parameter *fileobj* erzeugt wurde)."
 
 #: ../../library/gzip.rst:147
 msgid "``'rb'`` for reading and ``'wb'`` for writing."
-msgstr ""
+msgstr "``'rb'`` zum Lesen und ``'wb'`` zum Schreiben."
 
 #: ../../library/gzip.rst:149
 msgid "In previous versions it was an integer ``1`` or ``2``."
-msgstr ""
+msgstr "In früheren Versionen war es eine ganze Zahl ``1`` oder ``2``."
 
 #: ../../library/gzip.rst:154
 msgid ""
@@ -251,6 +346,10 @@ msgid ""
 "the Unix epoch (00:00:00 UTC, January 1, 1970). The initial value before "
 "reading any headers is ``None``."
 msgstr ""
+"Beim Dekomprimieren wird dieses Attribut auf den letzten Zeitstempel im "
+"zuletzt gelesenen Kopf gesetzt. Es ist eine ganze Zahl mit der Anzahl der "
+"Sekunden seit der Unix-Epoche (00:00:00 UTC am 1. Januar 1970). Der "
+"Anfangswert vor dem Lesen von Köpfen ist ``None``."
 
 #: ../../library/gzip.rst:161
 msgid ""
@@ -258,24 +357,32 @@ msgid ""
 "Equivalent to the output of :func:`os.fspath` on the original input path, "
 "with no other normalization, resolution or expansion."
 msgstr ""
+"Der Pfad zur gzip-Datei auf dem Datenträger als :class:`str` "
+"oder :class:`bytes`. Entspricht der Ausgabe von :func:`os.fspath` auf dem "
+"ursprünglichen Eingabepfad, ohne weitere Normalisierung, Auflösung oder "
+"Erweiterung."
 
 #: ../../library/gzip.rst:165
 msgid ""
 "Support for the :keyword:`with` statement was added, along with the *mtime* "
 "constructor argument and :attr:`mtime` attribute."
 msgstr ""
+"Unterstützung für die :keyword:`with`-Anweisung wurde hinzugefügt, zusammen "
+"mit dem Konstruktorargument *mtime* und dem Attribut :attr:`mtime`."
 
 #: ../../library/gzip.rst:169
 msgid "Support for zero-padded and unseekable files was added."
 msgstr ""
+"Unterstützung für mit Nullen aufgefüllte und nicht positionierbare Dateien "
+"wurde hinzugefügt."
 
 #: ../../library/gzip.rst:172
 msgid "The :meth:`io.BufferedIOBase.read1` method is now implemented."
-msgstr ""
+msgstr "Die Methode :meth:`io.BufferedIOBase.read1` ist jetzt implementiert."
 
 #: ../../library/gzip.rst:175
 msgid "Added support for the ``'x'`` and ``'xb'`` modes."
-msgstr ""
+msgstr "Unterstützung für die Modi ``'x'`` und ``'xb'`` wurde hinzugefügt."
 
 #: ../../library/gzip.rst:178
 msgid ""
@@ -283,18 +390,26 @@ msgid ""
 "object>`. The :meth:`~io.BufferedIOBase.read` method now accepts an argument "
 "of ``None``."
 msgstr ""
+"Unterstützung für das Schreiben beliebiger :term:`Byte-ähnlicher Objekte "
+"<bytes-like object>` wurde hinzugefügt. Die "
+"Methode :meth:`~io.BufferedIOBase.read` akzeptiert jetzt das Argument "
+"``None``."
 
 #: ../../library/gzip.rst:187
 msgid ""
 "Opening :class:`GzipFile` for writing without specifying the *mode* argument "
 "is deprecated."
 msgstr ""
+"Das Öffnen von :class:`GzipFile` zum Schreiben ohne Angabe des Arguments "
+"*mode* ist veraltet."
 
 #: ../../library/gzip.rst:191
 msgid ""
 "Remove the ``filename`` attribute, use the :attr:`~GzipFile.name` attribute "
 "instead."
 msgstr ""
+"Das Attribut ``filename`` wurde entfernt, verwende stattdessen das "
+"Attribut :attr:`~GzipFile.name`."
 
 #: ../../library/gzip.rst:203
 msgid ""
@@ -303,10 +418,14 @@ msgid ""
 "the :class:`GzipFile` constructor above, but *mtime* defaults to 0 for "
 "reproducible output."
 msgstr ""
+"Komprimiert *data* und gibt ein :class:`bytes`-Objekt mit den komprimierten "
+"Daten zurück. *compresslevel* und *mtime* haben dieselbe Bedeutung wie beim "
+"oben beschriebenen Konstruktor von :class:`GzipFile`, aber *mtime* ist für "
+"reproduzierbare Ausgabe standardmäßig 0."
 
 #: ../../library/gzip.rst:209
 msgid "Added the *mtime* parameter for reproducible output."
-msgstr ""
+msgstr "Der Parameter *mtime* für reproduzierbare Ausgabe wurde hinzugefügt."
 
 #: ../../library/gzip.rst:211
 msgid ""
@@ -316,18 +435,29 @@ msgid ""
 "contain a gzip header \"OS\" byte value other than 255 \"unknown\" as "
 "supplied by the underlying zlib implementation."
 msgstr ""
+"Die Geschwindigkeit wurde verbessert, indem alle Daten auf einmal statt als "
+"Datenstrom komprimiert werden. Aufrufe mit *mtime* gleich ``0`` werden zur "
+"besseren Geschwindigkeit an :func:`zlib.compress` weitergegeben. In diesem "
+"Fall kann die Ausgabe im gzip-Kopf einen „OS“-Bytewert enthalten, der nicht "
+"255 („unknown“) ist, wie ihn die zugrunde liegende zlib-Implementierung "
+"liefert."
 
 #: ../../library/gzip.rst:218
 msgid ""
 "The gzip header OS byte is guaranteed to be set to 255 when this function is "
 "used as was the case in 3.10 and earlier."
 msgstr ""
+"Das OS-Byte im gzip-Kopf ist garantiert auf 255 gesetzt, wenn diese Funktion "
+"verwendet wird, wie es in 3.10 und früher der Fall war."
 
 #: ../../library/gzip.rst:221
 msgid ""
 "The *mtime* parameter now defaults to 0 for reproducible output. For the "
 "previous behaviour of using the current time, pass ``None`` to *mtime*."
 msgstr ""
+"Der Parameter *mtime* ist jetzt für reproduzierbare Ausgabe standardmäßig 0. "
+"Um das frühere Verhalten zu erhalten, bei dem die aktuelle Zeit verwendet "
+"wurde, übergib ``None`` für *mtime*."
 
 #: ../../library/gzip.rst:232
 msgid ""
@@ -337,20 +467,27 @@ msgid ""
 "certain to contain only one member the :func:`zlib.decompress` function with "
 "*wbits* set to 31 is faster."
 msgstr ""
+"Dekomprimiert *data* und gibt ein :class:`bytes`-Objekt mit den "
+"unkomprimierten Daten zurück. Diese Funktion kann gzip-Daten mit mehreren "
+"Mitgliedern dekomprimieren (mehrere aneinandergehängte gzip-Blöcke). Steht "
+"fest, dass die Daten nur ein Mitglied enthalten, ist die "
+"Funktion :func:`zlib.decompress` mit *wbits* gleich 31 schneller."
 
 #: ../../library/gzip.rst:239
 msgid ""
 "Speed is improved by decompressing members at once in memory instead of in a "
 "streamed fashion."
 msgstr ""
+"Die Geschwindigkeit wurde verbessert, indem Mitglieder auf einmal im "
+"Speicher statt als Datenstrom dekomprimiert werden."
 
 #: ../../library/gzip.rst:246
 msgid "Examples of usage"
-msgstr ""
+msgstr "Anwendungsbeispiele"
 
 #: ../../library/gzip.rst:248
 msgid "Example of how to read a compressed file::"
-msgstr ""
+msgstr "Beispiel, wie eine komprimierte Datei gelesen wird::"
 
 #: ../../library/gzip.rst:250
 msgid ""
@@ -358,10 +495,13 @@ msgid ""
 "with gzip.open('/home/joe/file.txt.gz', 'rb') as f:\n"
 "    file_content = f.read()"
 msgstr ""
+"import gzip\n"
+"with gzip.open('/home/joe/file.txt.gz', 'rb') as f:\n"
+"    file_content = f.read()"
 
 #: ../../library/gzip.rst:254
 msgid "Example of how to create a compressed GZIP file::"
-msgstr ""
+msgstr "Beispiel, wie eine komprimierte GZIP-Datei erstellt wird::"
 
 #: ../../library/gzip.rst:256
 msgid ""
@@ -370,10 +510,14 @@ msgid ""
 "with gzip.open('/home/joe/file.txt.gz', 'wb') as f:\n"
 "    f.write(content)"
 msgstr ""
+"import gzip\n"
+"content = b\"Lots of content here\"\n"
+"with gzip.open('/home/joe/file.txt.gz', 'wb') as f:\n"
+"    f.write(content)"
 
 #: ../../library/gzip.rst:261
 msgid "Example of how to GZIP compress an existing file::"
-msgstr ""
+msgstr "Beispiel, wie eine vorhandene Datei mit GZIP komprimiert wird::"
 
 #: ../../library/gzip.rst:263
 msgid ""
@@ -383,10 +527,15 @@ msgid ""
 "    with gzip.open('/home/joe/file.txt.gz', 'wb') as f_out:\n"
 "        shutil.copyfileobj(f_in, f_out)"
 msgstr ""
+"import gzip\n"
+"import shutil\n"
+"with open('/home/joe/file.txt', 'rb') as f_in:\n"
+"    with gzip.open('/home/joe/file.txt.gz', 'wb') as f_out:\n"
+"        shutil.copyfileobj(f_in, f_out)"
 
 #: ../../library/gzip.rst:269
 msgid "Example of how to GZIP compress a binary string::"
-msgstr ""
+msgstr "Beispiel, wie eine Binärzeichenkette mit GZIP komprimiert wird::"
 
 #: ../../library/gzip.rst:271
 msgid ""
@@ -394,63 +543,75 @@ msgid ""
 "s_in = b\"Lots of content here\"\n"
 "s_out = gzip.compress(s_in)"
 msgstr ""
+"import gzip\n"
+"s_in = b\"Lots of content here\"\n"
+"s_out = gzip.compress(s_in)"
 
 #: ../../library/gzip.rst:277
 msgid "Module :mod:`zlib`"
-msgstr ""
+msgstr "Modul :mod:`zlib`"
 
 #: ../../library/gzip.rst:278
 msgid ""
 "The basic data compression module needed to support the :program:`gzip` file "
 "format."
 msgstr ""
+"Das grundlegende Datenkompressionsmodul, das für die Unterstützung des "
+"Dateiformats :program:`gzip` nötig ist."
 
 #: ../../library/gzip.rst:281
 msgid ""
 "In case gzip (de)compression is a bottleneck, the `python-isal`_ package "
 "speeds up (de)compression with a mostly compatible API."
 msgstr ""
+"Falls die (De-)Kompression mit gzip ein Engpass ist, beschleunigt das Paket "
+"`python-isal`_ die (De-)Kompression mit einer weitgehend kompatiblen API."
 
 #: ../../library/gzip.rst:291
 msgid "Command-line interface"
-msgstr ""
+msgstr "Befehlszeilenschnittstelle"
 
 #: ../../library/gzip.rst:293
 msgid ""
 "The :mod:`!gzip` module provides a simple command line interface to compress "
 "or decompress files."
 msgstr ""
+"Das Modul :mod:`!gzip` bietet eine einfache Befehlszeilenschnittstelle zum "
+"Komprimieren oder Dekomprimieren von Dateien."
 
 #: ../../library/gzip.rst:296
 msgid "Once executed the :mod:`!gzip` module keeps the input file(s)."
 msgstr ""
+"Nach der Ausführung behält das Modul :mod:`!gzip` die Eingabedatei(en)."
 
 #: ../../library/gzip.rst:300
 msgid ""
 "Add a new command line interface with a usage. By default, when you will "
 "execute the CLI, the default compression level is 6."
 msgstr ""
+"Eine neue Befehlszeilenschnittstelle mit Hilfetext wurde hinzugefügt. Wenn "
+"du die CLI ausführst, ist die Standard-Kompressionsstufe 6."
 
 #: ../../library/gzip.rst:304
 msgid "Command-line options"
-msgstr ""
+msgstr "Befehlszeilenoptionen"
 
 #: ../../library/gzip.rst:308
 msgid "If *file* is not specified, read from :data:`sys.stdin`."
-msgstr ""
+msgstr "Ist *file* nicht angegeben, wird von :data:`sys.stdin` gelesen."
 
 #: ../../library/gzip.rst:312
 msgid "Indicates the fastest compression method (less compression)."
-msgstr ""
+msgstr "Gibt die schnellste Kompressionsmethode an (weniger Kompression)."
 
 #: ../../library/gzip.rst:316
 msgid "Indicates the slowest compression method (best compression)."
-msgstr ""
+msgstr "Gibt die langsamste Kompressionsmethode an (beste Kompression)."
 
 #: ../../library/gzip.rst:320
 msgid "Decompress the given file."
-msgstr ""
+msgstr "Dekomprimiert die angegebene Datei."
 
 #: ../../library/gzip.rst:324
 msgid "Show the help message."
-msgstr ""
+msgstr "Zeigt die Hilfemeldung an."
