@@ -22,11 +22,11 @@ msgstr ""
 
 #: ../../library/dis.rst:2
 msgid ":mod:`!dis` --- Disassembler for Python bytecode"
-msgstr ""
+msgstr ":mod:`!dis` --- Disassembler für Python-Bytecode"
 
 #: ../../library/dis.rst:7
 msgid "**Source code:** :source:`Lib/dis.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/dis.py`"
 
 #: ../../library/dis.rst:17
 msgid ""
@@ -35,6 +35,10 @@ msgid ""
 "is defined in the file :file:`Include/opcode.h` and used by the compiler and "
 "the interpreter."
 msgstr ""
+"Das Modul :mod:`!dis` unterstützt die Analyse von CPython-:term:`Bytecode "
+"<bytecode>` durch Disassemblieren. Der CPython-Bytecode, den dieses Modul "
+"als Eingabe nimmt, ist in der Datei :file:`Include/opcode.h` definiert und "
+"wird vom Compiler und vom Interpreter verwendet."
 
 #: ../../library/dis.rst:24
 msgid ""
@@ -43,18 +47,27 @@ msgid ""
 "between versions of Python.  Use of this module should not be considered to "
 "work across Python VMs or Python releases."
 msgstr ""
+"Bytecode ist ein Implementierungsdetail des CPython-Interpreters. Es gibt "
+"keine Garantien, dass Bytecode zwischen Python-Versionen nicht hinzugefügt, "
+"entfernt oder geändert wird. Die Verwendung dieses Moduls sollte nicht so "
+"betrachtet werden, als funktioniere sie über Python-VMs oder Python-Releases "
+"hinweg."
 
 #: ../../library/dis.rst:29
 msgid ""
 "Use 2 bytes for each instruction. Previously the number of bytes varied by "
 "instruction."
 msgstr ""
+"Es werden 2 Bytes pro Instruktion verwendet. Zuvor variierte die Anzahl der "
+"Bytes je nach Instruktion."
 
 #: ../../library/dis.rst:33
 msgid ""
 "The argument of jump, exception handling and loop instructions is now the "
 "instruction offset rather than the byte offset."
 msgstr ""
+"Das Argument von Sprung-, Ausnahmebehandlungs- und Schleifeninstruktionen "
+"ist jetzt der Instruktions-Offset und nicht der Byte-Offset."
 
 #: ../../library/dis.rst:37
 msgid ""
@@ -65,6 +78,13 @@ msgid ""
 "specialize it for different runtime conditions. The adaptive bytecode can be "
 "shown by passing ``adaptive=True``."
 msgstr ""
+"Einigen Instruktionen sind ein oder mehrere Inline-Cache-Einträge "
+"zugeordnet, die die Form von :opcode:`CACHE`-Instruktionen haben. Diese "
+"Instruktionen sind standardmäßig ausgeblendet, lassen sich aber anzeigen, "
+"indem ``show_caches=True`` an ein beliebiges Hilfsmittel von :mod:`!dis` "
+"übergeben wird. Außerdem passt der Interpreter den Bytecode jetzt an, um ihn "
+"für verschiedene Laufzeitbedingungen zu spezialisieren. Der adaptive "
+"Bytecode lässt sich anzeigen, indem ``adaptive=True`` übergeben wird."
 
 #: ../../library/dis.rst:45
 msgid ""
@@ -72,6 +92,9 @@ msgid ""
 "the instruction that appears immediately after the jump "
 "instruction's :opcode:`CACHE` entries."
 msgstr ""
+"Das Argument eines Sprungs ist der Offset der Zielinstruktion relativ zu der "
+"Instruktion, die unmittelbar nach den :opcode:`CACHE`-Einträgen der "
+"Sprunginstruktion steht."
 
 #: ../../library/dis.rst:50
 msgid ""
@@ -79,6 +102,9 @@ msgid ""
 "transparent for forward jumps but needs to be taken into account when "
 "reasoning about backward jumps."
 msgstr ""
+"Dadurch ist das Vorhandensein der :opcode:`CACHE`-Instruktionen bei "
+"Vorwärtssprüngen transparent, muss aber bei Überlegungen zu "
+"Rückwärtssprüngen berücksichtigt werden."
 
 #: ../../library/dis.rst:54
 msgid ""
@@ -86,32 +112,42 @@ msgid ""
 "targets and exception handlers. The ``-O`` command line option and the "
 "``show_offsets`` argument were added."
 msgstr ""
+"Die Ausgabe zeigt für Sprungziele und Ausnahmebehandler logische "
+"Beschriftungen statt Instruktions-Offsets. Die Befehlszeilenoption ``-O`` "
+"und das Argument ``show_offsets`` wurden hinzugefügt."
 
 #: ../../library/dis.rst:59
 msgid ""
 "The :option:`-P <dis --show-positions>` command-line option and the "
 "``show_positions`` argument were added."
 msgstr ""
+"Die Befehlszeilenoption :option:`-P <dis --show-positions>` und das Argument "
+"``show_positions`` wurden hinzugefügt."
 
 #: ../../library/dis.rst:63
 msgid "The :option:`-S <dis --specialized>` command-line option is added."
 msgstr ""
+"Die Befehlszeilenoption :option:`-S <dis --specialized>` wurde hinzugefügt."
 
 #: ../../library/dis.rst:65
 msgid "Example: Given the function :func:`!myfunc`::"
-msgstr ""
+msgstr "Beispiel: Gegeben sei die Funktion :func:`!myfunc`::"
 
 #: ../../library/dis.rst:67
 msgid ""
 "def myfunc(alist):\n"
 "    return len(alist)"
 msgstr ""
+"def myfunc(alist):\n"
+"    return len(alist)"
 
 #: ../../library/dis.rst:70
 msgid ""
 "the following command can be used to display the disassembly of :func:`!"
 "myfunc`:"
 msgstr ""
+"Mit dem folgenden Befehl lässt sich die Disassemblierung von :func:`!myfunc` "
+"anzeigen:"
 
 #: ../../library/dis.rst:73
 msgid ""
@@ -123,47 +159,55 @@ msgid ""
 "              CALL                     1\n"
 "              RETURN_VALUE"
 msgstr ""
+">>> dis.dis(myfunc)\n"
+"  2           RESUME                   0\n"
+"\n"
+"  3           LOAD_GLOBAL              1 (len + NULL)\n"
+"              LOAD_FAST_BORROW         0 (alist)\n"
+"              CALL                     1\n"
+"              RETURN_VALUE"
 
 #: ../../library/dis.rst:83
 msgid "(The \"2\" is a line number)."
-msgstr ""
+msgstr "(Die „2“ ist eine Zeilennummer.)"
 
 #: ../../library/dis.rst:88
 msgid "Command-line interface"
-msgstr ""
+msgstr "Befehlszeilenschnittstelle"
 
 #: ../../library/dis.rst:90
 msgid ""
 "The :mod:`!dis` module can be invoked as a script from the command line:"
 msgstr ""
+"Das Modul :mod:`!dis` kann als Skript von der Befehlszeile aufgerufen werden:"
 
 #: ../../library/dis.rst:92
 msgid "python -m dis [-h] [-C] [-O] [-P] [-S] [infile]"
-msgstr ""
+msgstr "python -m dis [-h] [-C] [-O] [-P] [-S] [infile]"
 
 #: ../../library/dis.rst:96
 msgid "The following options are accepted:"
-msgstr ""
+msgstr "Die folgenden Optionen werden akzeptiert:"
 
 #: ../../library/dis.rst:102
 msgid "Display usage and exit."
-msgstr ""
+msgstr "Zeigt die Verwendung an und beendet das Programm."
 
 #: ../../library/dis.rst:106
 msgid "Show inline caches."
-msgstr ""
+msgstr "Zeigt Inline-Caches an."
 
 #: ../../library/dis.rst:112
 msgid "Show offsets of instructions."
-msgstr ""
+msgstr "Zeigt Offsets von Instruktionen an."
 
 #: ../../library/dis.rst:118
 msgid "Show positions of instructions in the source code."
-msgstr ""
+msgstr "Zeigt Positionen von Instruktionen im Quellcode an."
 
 #: ../../library/dis.rst:124
 msgid "Show specialized bytecode."
-msgstr ""
+msgstr "Zeigt spezialisierten Bytecode an."
 
 #: ../../library/dis.rst:128
 msgid ""
@@ -171,10 +215,13 @@ msgid ""
 "stdout. Otherwise, disassembly is performed on compiled source code received "
 "from stdin."
 msgstr ""
+"Ist :file:`infile` angegeben, wird sein disassemblierter Code auf stdout "
+"geschrieben. Andernfalls wird der aus stdin empfangene kompilierte Quellcode "
+"disassembliert."
 
 #: ../../library/dis.rst:132
 msgid "Bytecode analysis"
-msgstr ""
+msgstr "Bytecode-Analyse"
 
 #: ../../library/dis.rst:136
 msgid ""
@@ -182,6 +229,9 @@ msgid ""
 "a :class:`Bytecode` object that provides easy access to details of the "
 "compiled code."
 msgstr ""
+"Die API zur Bytecode-Analyse erlaubt es, Teile von Python-Code in "
+"ein :class:`Bytecode`-Objekt einzuhüllen, das einfachen Zugriff auf Details "
+"des kompilierten Codes bietet."
 
 #: ../../library/dis.rst:144
 msgid ""
@@ -189,6 +239,10 @@ msgid ""
 "generator, coroutine, method, string of source code, or a code object (as "
 "returned by :func:`compile`)."
 msgstr ""
+"Analysiert den Bytecode, der einer Funktion, einem Generator, einem "
+"asynchronen Generator, einer Coroutine, einer Methode, einer Zeichenkette "
+"mit Quellcode oder einem Code-Objekt (wie von :func:`compile` zurückgegeben) "
+"entspricht."
 
 #: ../../library/dis.rst:148
 msgid ""
@@ -196,6 +250,10 @@ msgid ""
 "most notably :func:`get_instructions`, as iterating over a :class:`Bytecode` "
 "instance yields the bytecode operations as :class:`Instruction` instances."
 msgstr ""
+"Das ist ein praktischer Wrapper um viele der unten aufgeführten Funktionen, "
+"vor allem :func:`get_instructions`, da die Iteration über "
+"eine :class:`Bytecode`-Instanz die Bytecode-Operationen "
+"als :class:`Instruction`-Instanzen liefert."
 
 #: ../../library/dis.rst:152 ../../library/dis.rst:373
 msgid ""
@@ -204,6 +262,10 @@ msgid ""
 "source line information (if any) is taken directly from the disassembled "
 "code object."
 msgstr ""
+"Ist *first_line* nicht ``None``, gibt es die Zeilennummer an, die für die "
+"erste Quellzeile im disassemblierten Code gemeldet werden soll. Andernfalls "
+"werden die Informationen zur Quellzeile (falls vorhanden) direkt aus dem "
+"disassemblierten Code-Objekt entnommen."
 
 #: ../../library/dis.rst:157
 msgid ""
@@ -211,76 +273,95 @@ msgid ""
 "the disassembled code. Setting this means :meth:`.dis` will display a "
 "\"current instruction\" marker against the specified opcode."
 msgstr ""
+"Ist *current_offset* nicht ``None``, bezieht es sich auf einen Instruktions-"
+"Offset im disassemblierten Code. Wird es gesetzt, zeigt :meth:`.dis` an dem "
+"angegebenen Opcode eine Markierung „aktuelle Instruktion“ an."
 
 #: ../../library/dis.rst:161
 msgid ""
 "If *show_caches* is ``True``, :meth:`.dis` will display inline cache entries "
 "used by the interpreter to specialize the bytecode."
 msgstr ""
+"Ist *show_caches* ``True``, zeigt :meth:`.dis` Inline-Cache-Einträge an, die "
+"der Interpreter verwendet, um den Bytecode zu spezialisieren."
 
 #: ../../library/dis.rst:164
 msgid ""
 "If *adaptive* is ``True``, :meth:`.dis` will display specialized bytecode "
 "that may be different from the original bytecode."
 msgstr ""
+"Ist *adaptive* ``True``, zeigt :meth:`.dis` spezialisierten Bytecode an, der "
+"vom ursprünglichen Bytecode abweichen kann."
 
 #: ../../library/dis.rst:167
 msgid ""
 "If *show_offsets* is ``True``, :meth:`.dis` will include instruction offsets "
 "in the output."
 msgstr ""
+"Ist *show_offsets* ``True``, nimmt :meth:`.dis` Instruktions-Offsets in die "
+"Ausgabe auf."
 
 #: ../../library/dis.rst:170
 msgid ""
 "If *show_positions* is ``True``, :meth:`.dis` will include instruction "
 "source code positions in the output."
 msgstr ""
+"Ist *show_positions* ``True``, nimmt :meth:`.dis` Quellcode-Positionen der "
+"Instruktionen in die Ausgabe auf."
 
 #: ../../library/dis.rst:175
 msgid ""
 "Construct a :class:`Bytecode` instance from the given traceback, setting "
 "*current_offset* to the instruction responsible for the exception."
 msgstr ""
+"Erzeugt eine :class:`Bytecode`-Instanz aus dem angegebenen Traceback und "
+"setzt *current_offset* auf die Instruktion, die für die Ausnahme "
+"verantwortlich ist."
 
 #: ../../library/dis.rst:180
 msgid "The compiled code object."
-msgstr ""
+msgstr "Das kompilierte Code-Objekt."
 
 #: ../../library/dis.rst:184
 msgid "The first source line of the code object (if available)"
-msgstr ""
+msgstr "Die erste Quellzeile des Code-Objekts (falls verfügbar)"
 
 #: ../../library/dis.rst:188
 msgid ""
 "Return a formatted view of the bytecode operations (the same as printed "
 "by :func:`dis.dis`, but returned as a multi-line string)."
 msgstr ""
+"Gibt eine formatierte Ansicht der Bytecode-Operationen zurück (dasselbe, "
+"was :func:`dis.dis` ausgibt, aber als mehrzeilige Zeichenkette "
+"zurückgegeben)."
 
 #: ../../library/dis.rst:193
 msgid ""
 "Return a formatted multi-line string with detailed information about the "
 "code object, like :func:`code_info`."
 msgstr ""
+"Gibt wie :func:`code_info` eine formatierte mehrzeilige Zeichenkette mit "
+"detaillierten Informationen über das Code-Objekt zurück."
 
 #: ../../library/dis.rst:196 ../../library/dis.rst:242
 #: ../../library/dis.rst:295
 msgid "This can now handle coroutine and asynchronous generator objects."
-msgstr ""
+msgstr "Das kann jetzt Coroutinen- und asynchrone Generator-Objekte behandeln."
 
 #: ../../library/dis.rst:199 ../../library/dis.rst:298
 #: ../../library/dis.rst:320 ../../library/dis.rst:356
 #: ../../library/dis.rst:382
 msgid "Added the *show_caches* and *adaptive* parameters."
-msgstr ""
+msgstr "Die Parameter *show_caches* und *adaptive* wurden hinzugefügt."
 
 #: ../../library/dis.rst:202
 msgid "Added the *show_offsets* parameter"
-msgstr ""
+msgstr "Der Parameter *show_offsets* wurde hinzugefügt"
 
 #: ../../library/dis.rst:205 ../../library/dis.rst:304
 #: ../../library/dis.rst:326 ../../library/dis.rst:362
 msgid "Added the *show_positions* parameter."
-msgstr ""
+msgstr "Der Parameter *show_positions* wurde hinzugefügt."
 
 #: ../../library/dis.rst:208
 msgid "Example:"
@@ -298,10 +379,19 @@ msgid ""
 "CALL\n"
 "RETURN_VALUE"
 msgstr ""
+">>> bytecode = dis.Bytecode(myfunc)\n"
+">>> for instr in bytecode:\n"
+"...     print(instr.opname)\n"
+"...\n"
+"RESUME\n"
+"LOAD_GLOBAL\n"
+"LOAD_FAST_BORROW\n"
+"CALL\n"
+"RETURN_VALUE"
 
 #: ../../library/dis.rst:224
 msgid "Analysis functions"
-msgstr ""
+msgstr "Analysefunktionen"
 
 #: ../../library/dis.rst:226
 msgid ""
@@ -310,6 +400,10 @@ msgid ""
 "a single operation is being performed, so the intermediate analysis object "
 "isn't useful:"
 msgstr ""
+"Das Modul :mod:`!dis` definiert außerdem die folgenden Analysefunktionen, "
+"die die Eingabe direkt in die gewünschte Ausgabe umwandeln. Sie können "
+"nützlich sein, wenn nur eine einzelne Operation ausgeführt wird, sodass das "
+"Analyseobjekt als Zwischenschritt nicht nützlich ist:"
 
 #: ../../library/dis.rst:232
 msgid ""
@@ -317,6 +411,10 @@ msgid ""
 "for the supplied function, generator, asynchronous generator, coroutine, "
 "method, source code string or code object."
 msgstr ""
+"Gibt eine formatierte mehrzeilige Zeichenkette mit detaillierten "
+"Informationen zum Code-Objekt für die angegebene Funktion, den Generator, "
+"den asynchronen Generator, die Coroutine, die Methode, die Quellcode-"
+"Zeichenkette oder das Code-Objekt zurück."
 
 #: ../../library/dis.rst:236
 msgid ""
@@ -324,6 +422,9 @@ msgid ""
 "dependent and they may change arbitrarily across Python VMs or Python "
 "releases."
 msgstr ""
+"Beachte, dass der genaue Inhalt von Code-Info-Zeichenketten stark von der "
+"Implementierung abhängt und sich über Python-VMs oder Python-Releases hinweg "
+"beliebig ändern kann."
 
 #: ../../library/dis.rst:248
 msgid ""
@@ -331,17 +432,23 @@ msgid ""
 "source code string or code object to *file* (or ``sys.stdout`` if *file* is "
 "not specified)."
 msgstr ""
+"Gibt detaillierte Informationen zum Code-Objekt für die angegebene Funktion, "
+"Methode, Quellcode-Zeichenkette oder das Code-Objekt nach *file* aus (oder "
+"nach ``sys.stdout``, wenn *file* nicht angegeben ist)."
 
 #: ../../library/dis.rst:252
 msgid ""
 "This is a convenient shorthand for ``print(code_info(x), file=file)``, "
 "intended for interactive exploration at the interpreter prompt."
 msgstr ""
+"Das ist eine praktische Kurzform für ``print(code_info(x), file=file)``, "
+"gedacht für interaktives Erkunden an der Eingabeaufforderung des "
+"Interpreters."
 
 #: ../../library/dis.rst:257 ../../library/dis.rst:289
 #: ../../library/dis.rst:317 ../../library/dis.rst:353
 msgid "Added *file* parameter."
-msgstr ""
+msgstr "Der Parameter *file* wurde hinzugefügt."
 
 #: ../../library/dis.rst:264
 msgid ""
@@ -358,6 +465,20 @@ msgid ""
 "before being disassembled.  If no object is provided, this function "
 "disassembles the last traceback."
 msgstr ""
+"Disassembliert das Objekt *x*. *x* kann ein Modul, eine Klasse, eine "
+"Methode, eine Funktion, einen Generator, einen asynchronen Generator, eine "
+"Coroutine, ein Code-Objekt, eine Zeichenkette mit Quellcode oder eine Byte-"
+"Sequenz mit rohem Bytecode bezeichnen. Bei einem Modul werden alle "
+"Funktionen disassembliert. Bei einer Klasse werden alle Methoden "
+"disassembliert (einschließlich Klassen- und statischer Methoden). Bei einem "
+"Code-Objekt oder einer Sequenz mit rohem Bytecode wird eine Zeile pro "
+"Bytecode-Instruktion ausgegeben. Außerdem werden verschachtelte Code-Objekte "
+"rekursiv disassembliert. Dazu können Generatorausdrücke, verschachtelte "
+"Funktionen, die Rümpfe verschachtelter Klassen und die für :ref:`Annotation-"
+"Geltungsbereiche <annotation-scopes>` verwendeten Code-Objekte gehören. "
+"Zeichenketten werden vor dem Disassemblieren zuerst mit der integrierten "
+"Funktion :func:`compile` zu Code-Objekten kompiliert. Wird kein Objekt "
+"angegeben, disassembliert diese Funktion den letzten Traceback."
 
 #: ../../library/dis.rst:277 ../../library/dis.rst:314
 #: ../../library/dis.rst:350
@@ -365,33 +486,43 @@ msgid ""
 "The disassembly is written as text to the supplied *file* argument if "
 "provided and to ``sys.stdout`` otherwise."
 msgstr ""
+"Die Disassemblierung wird als Text in das angegebene Argument *file* "
+"geschrieben, sofern vorhanden, andernfalls nach ``sys.stdout``."
 
 #: ../../library/dis.rst:280
 msgid ""
 "The maximal depth of recursion is limited by *depth* unless it is ``None``. "
 "``depth=0`` means no recursion."
 msgstr ""
+"Die maximale Rekursionstiefe wird durch *depth* begrenzt, sofern es nicht "
+"``None`` ist. ``depth=0`` bedeutet keine Rekursion."
 
 #: ../../library/dis.rst:283
 msgid ""
 "If *show_caches* is ``True``, this function will display inline cache "
 "entries used by the interpreter to specialize the bytecode."
 msgstr ""
+"Ist *show_caches* ``True``, zeigt diese Funktion Inline-Cache-Einträge an, "
+"die der Interpreter verwendet, um den Bytecode zu spezialisieren."
 
 #: ../../library/dis.rst:286
 msgid ""
 "If *adaptive* is ``True``, this function will display specialized bytecode "
 "that may be different from the original bytecode."
 msgstr ""
+"Ist *adaptive* ``True``, zeigt diese Funktion spezialisierten Bytecode an, "
+"der vom ursprünglichen Bytecode abweichen kann."
 
 #: ../../library/dis.rst:292
 msgid "Implemented recursive disassembling and added *depth* parameter."
 msgstr ""
+"Rekursives Disassemblieren wurde implementiert, und der Parameter *depth* "
+"wurde hinzugefügt."
 
 #: ../../library/dis.rst:301 ../../library/dis.rst:323
 #: ../../library/dis.rst:359
 msgid "Added the *show_offsets* parameter."
-msgstr ""
+msgstr "Der Parameter *show_offsets* wurde hinzugefügt."
 
 #: ../../library/dis.rst:310
 msgid ""
@@ -399,12 +530,18 @@ msgid ""
 "traceback if none was passed.  The instruction causing the exception is "
 "indicated."
 msgstr ""
+"Disassembliert die Funktion an der Spitze des Stacks eines Tracebacks, wobei "
+"der letzte Traceback verwendet wird, wenn keiner übergeben wurde. Die "
+"Instruktion, die die Ausnahme verursacht hat, wird gekennzeichnet."
 
 #: ../../library/dis.rst:334
 msgid ""
 "Disassemble a code object, indicating the last instruction if *lasti* was "
 "provided.  The output is divided in the following columns:"
 msgstr ""
+"Disassembliert ein Code-Objekt und kennzeichnet die letzte Instruktion, "
+"falls *lasti* angegeben wurde. Die Ausgabe ist in die folgenden Spalten "
+"gegliedert:"
 
 #: ../../library/dis.rst:337
 msgid ""
@@ -412,52 +549,61 @@ msgid ""
 "is shown if *show_positions* is true. Otherwise (the default) only the line "
 "number is displayed."
 msgstr ""
+"die Quellcode-Position der Instruktion. Vollständige Positionsinformationen "
+"werden angezeigt, wenn *show_positions* wahr ist. Andernfalls (der Standard) "
+"wird nur die Zeilennummer angezeigt."
 
 #: ../../library/dis.rst:340
 msgid "the current instruction, indicated as ``-->``,"
-msgstr ""
+msgstr "die aktuelle Instruktion, gekennzeichnet als ``-->``,"
 
 #: ../../library/dis.rst:341
 msgid "a labelled instruction, indicated with ``>>``,"
-msgstr ""
+msgstr "eine beschriftete Instruktion, gekennzeichnet mit ``>>``,"
 
 #: ../../library/dis.rst:342
 msgid "the address of the instruction,"
-msgstr ""
+msgstr "die Adresse der Instruktion,"
 
 #: ../../library/dis.rst:343
 msgid "the operation code name,"
-msgstr ""
+msgstr "der Name des Operationscodes,"
 
 #: ../../library/dis.rst:344
 msgid "operation parameters, and"
-msgstr ""
+msgstr "Operationsparameter und"
 
 #: ../../library/dis.rst:345
 msgid "interpretation of the parameters in parentheses."
-msgstr ""
+msgstr "Interpretation der Parameter in Klammern."
 
 #: ../../library/dis.rst:347
 msgid ""
 "The parameter interpretation recognizes local and global variable names, "
 "constant values, branch targets, and compare operators."
 msgstr ""
+"Die Parameterinterpretation erkennt Namen lokaler und globaler Variablen, "
+"konstante Werte, Verzweigungsziele und Vergleichsoperatoren."
 
 #: ../../library/dis.rst:367
 msgid ""
 "Return an iterator over the instructions in the supplied function, method, "
 "source code string or code object."
 msgstr ""
+"Gibt einen Iterator über die Instruktionen in der angegebenen Funktion, "
+"Methode, Quellcode-Zeichenkette oder dem Code-Objekt zurück."
 
 #: ../../library/dis.rst:370
 msgid ""
 "The iterator generates a series of :class:`Instruction` named tuples giving "
 "the details of each operation in the supplied code."
 msgstr ""
+"Der Iterator erzeugt eine Reihe von :class:`Instruction`-benannten Tupeln, "
+"die die Details jeder Operation im angegebenen Code angeben."
 
 #: ../../library/dis.rst:378
 msgid "The *adaptive* parameter works as it does in :func:`~dis.dis`."
-msgstr ""
+msgstr "Der Parameter *adaptive* funktioniert wie in :func:`~dis.dis`."
 
 #: ../../library/dis.rst:385
 msgid ""
@@ -466,6 +612,10 @@ msgid ""
 "populated (regardless of the value of *show_caches*) and it no longer "
 "generates separate items for the cache entries."
 msgstr ""
+"Der Parameter *show_caches* ist veraltet und hat keine Wirkung. Der Iterator "
+"erzeugt die :class:`Instruction`-Instanzen mit befülltem Feld *cache_info* "
+"(unabhängig vom Wert von *show_caches*) und erzeugt keine getrennten "
+"Elemente mehr für die Cache-Einträge."
 
 #: ../../library/dis.rst:393
 msgid ""
@@ -474,10 +624,14 @@ msgid ""
 "starts of lines in the source code.  They are generated as ``(offset, "
 "lineno)`` pairs."
 msgstr ""
+"Diese Generatorfunktion verwendet die Methode :meth:`~codeobject.co_lines` "
+"des :ref:`Code-Objekts <code-objects>` *code*, um die Offsets zu finden, die "
+"Zeilenanfänge im Quellcode sind. Sie werden als Paare ``(offset, lineno)`` "
+"erzeugt."
 
 #: ../../library/dis.rst:398
 msgid "Line numbers can be decreasing. Before, they were always increasing."
-msgstr ""
+msgstr "Zeilennummern können abnehmen. Zuvor nahmen sie immer zu."
 
 #: ../../library/dis.rst:401
 msgid ""
@@ -485,21 +639,28 @@ msgid ""
 "the :attr:`~codeobject.co_firstlineno` and :attr:`!codeobject.co_lnotab` "
 "attributes of the :ref:`code object <code-objects>`."
 msgstr ""
+"Die Methode :meth:`~codeobject.co_lines` aus :pep:`626` wird statt der "
+"Attribute :attr:`~codeobject.co_firstlineno` und :attr:`!"
+"codeobject.co_lnotab` des :ref:`Code-Objekts <code-objects>` verwendet."
 
 #: ../../library/dis.rst:406
 msgid ""
 "Line numbers can be ``None`` for bytecode that does not map to source lines."
 msgstr ""
+"Zeilennummern können ``None`` sein bei Bytecode, der nicht auf Quellzeilen "
+"abgebildet wird."
 
 #: ../../library/dis.rst:412
 msgid ""
 "Detect all offsets in the raw compiled bytecode string *code* which are jump "
 "targets, and return a list of these offsets."
 msgstr ""
+"Erkennt alle Offsets in der rohen kompilierten Bytecode-Zeichenkette *code*, "
+"die Sprungziele sind, und gibt eine Liste dieser Offsets zurück."
 
 #: ../../library/dis.rst:418
 msgid "Compute the stack effect of *opcode* with argument *oparg*."
-msgstr ""
+msgstr "Berechnet den Stack-Effekt von *opcode* mit dem Argument *oparg*."
 
 #: ../../library/dis.rst:420
 msgid ""
@@ -508,10 +669,15 @@ msgid ""
 "return the stack effect of not jumping. And if *jump* is ``None`` (default), "
 "it will return the maximal stack effect of both cases."
 msgstr ""
+"Hat der Code ein Sprungziel und ist *jump* ``True``, "
+"gibt :func:`~stack_effect` den Stack-Effekt des Springens zurück. Ist *jump* "
+"``False``, gibt es den Stack-Effekt des Nichtspringens zurück. Und ist "
+"*jump* ``None`` (Standard), gibt es den maximalen Stack-Effekt beider Fälle "
+"zurück."
 
 #: ../../library/dis.rst:427
 msgid "Added *jump* parameter."
-msgstr ""
+msgstr "Der Parameter *jump* wurde hinzugefügt."
 
 #: ../../library/dis.rst:430
 msgid ""
@@ -520,103 +686,129 @@ msgid ""
 "is also no longer an error to pass an integer ``oparg`` when the ``opcode`` "
 "does not use it; the ``oparg`` in this case is ignored."
 msgstr ""
+"Wird ``oparg`` weggelassen (oder ist es ``None``), wird der Stack-Effekt "
+"jetzt für ``oparg=0`` zurückgegeben. Zuvor war das bei Opcodes, die ihr "
+"Argument verwenden, ein Fehler. Es ist auch kein Fehler mehr, eine "
+"ganzzahlige ``oparg`` zu übergeben, wenn der ``opcode`` sie nicht verwendet. "
+"In diesem Fall wird ``oparg`` ignoriert."
 
 #: ../../library/dis.rst:440
 msgid "Python Bytecode Instructions"
-msgstr ""
+msgstr "Python-Bytecode-Instruktionen"
 
 #: ../../library/dis.rst:442
 msgid ""
 "The :func:`get_instructions` function and :class:`Bytecode` class provide "
 "details of bytecode instructions as :class:`Instruction` instances:"
 msgstr ""
+"Die Funktion :func:`get_instructions` und die Klasse :class:`Bytecode` "
+"liefern Details zu Bytecode-Instruktionen als :class:`Instruction`-Instanzen:"
 
 #: ../../library/dis.rst:447
 msgid "Details for a bytecode operation"
-msgstr ""
+msgstr "Details zu einer Bytecode-Operation"
 
 #: ../../library/dis.rst:451
 msgid ""
 "numeric code for operation, corresponding to the opcode values listed below "
 "and the bytecode values in the :ref:`opcode_collections`."
 msgstr ""
+"numerischer Code der Operation, entsprechend den unten aufgeführten Opcode-"
+"Werten und den Bytecode-Werten in den :ref:`opcode_collections`."
 
 #: ../../library/dis.rst:457
 msgid "human readable name for operation"
-msgstr ""
+msgstr "menschenlesbarer Name der Operation"
 
 #: ../../library/dis.rst:462
 msgid ""
 "numeric code for the base operation if operation is specialized; otherwise "
 "equal to :data:`opcode`"
 msgstr ""
+"numerischer Code der Basisoperation, wenn die Operation spezialisiert ist, "
+"andernfalls gleich :data:`opcode`"
 
 #: ../../library/dis.rst:468
 msgid ""
 "human readable name for the base operation if operation is specialized; "
 "otherwise equal to :data:`opname`"
 msgstr ""
+"menschenlesbarer Name der Basisoperation, wenn die Operation spezialisiert "
+"ist, andernfalls gleich :data:`opname`"
 
 #: ../../library/dis.rst:474
 msgid "numeric argument to operation (if any), otherwise ``None``"
 msgstr ""
+"numerisches Argument der Operation (falls vorhanden), andernfalls ``None``"
 
 #: ../../library/dis.rst:478
 msgid "alias for :data:`arg`"
-msgstr ""
+msgstr "Alias für :data:`arg`"
 
 #: ../../library/dis.rst:482
 msgid "resolved arg value (if any), otherwise ``None``"
-msgstr ""
+msgstr "aufgelöster Argumentwert (falls vorhanden), andernfalls ``None``"
 
 #: ../../library/dis.rst:487
 msgid ""
 "human readable description of operation argument (if any), otherwise an "
 "empty string."
 msgstr ""
+"menschenlesbare Beschreibung des Operationsarguments (falls vorhanden), "
+"andernfalls eine leere Zeichenkette."
 
 #: ../../library/dis.rst:493
 msgid "start index of operation within bytecode sequence"
-msgstr ""
+msgstr "Startindex der Operation innerhalb der Bytecode-Sequenz"
 
 #: ../../library/dis.rst:498
 msgid ""
 "start index of operation within bytecode sequence, including prefixed "
 "``EXTENDED_ARG`` operations if present; otherwise equal to :data:`offset`"
 msgstr ""
+"Startindex der Operation innerhalb der Bytecode-Sequenz, einschließlich "
+"vorangestellter ``EXTENDED_ARG``-Operationen, falls vorhanden, andernfalls "
+"gleich :data:`offset`"
 
 #: ../../library/dis.rst:504
 msgid "start index of the cache entries following the operation"
-msgstr ""
+msgstr "Startindex der Cache-Einträge, die auf die Operation folgen"
 
 #: ../../library/dis.rst:509
 msgid "end index of the cache entries following the operation"
-msgstr ""
+msgstr "Endindex der Cache-Einträge, die auf die Operation folgen"
 
 #: ../../library/dis.rst:514
 msgid "``True`` if this opcode starts a source line, otherwise ``False``"
 msgstr ""
+"``True``, wenn dieser Opcode eine Quellzeile beginnt, andernfalls ``False``"
 
 #: ../../library/dis.rst:519
 msgid ""
 "source line number associated with this opcode (if any), otherwise ``None``"
 msgstr ""
+"Quellzeilennummer, die diesem Opcode zugeordnet ist (falls vorhanden), "
+"andernfalls ``None``"
 
 #: ../../library/dis.rst:524
 msgid "``True`` if other code jumps to here, otherwise ``False``"
-msgstr ""
+msgstr "``True``, wenn anderer Code hierher springt, andernfalls ``False``"
 
 #: ../../library/dis.rst:529
 msgid ""
 "bytecode index of the jump target if this is a jump operation, otherwise "
 "``None``"
 msgstr ""
+"Bytecode-Index des Sprungziels, wenn dies eine Sprungoperation ist, "
+"andernfalls ``None``"
 
 #: ../../library/dis.rst:535
 msgid ""
 ":class:`dis.Positions` object holding the start and end locations that are "
 "covered by this instruction."
 msgstr ""
+":class:`dis.Positions`-Objekt, das die Start- und Endpositionen enthält, die "
+"diese Instruktion abdeckt."
 
 #: ../../library/dis.rst:540
 msgid ""
@@ -625,14 +817,18 @@ msgid ""
 "cache format and data is the contents of the cache. ``cache_info`` is "
 "``None`` if the instruction does not have caches."
 msgstr ""
+"Informationen über die Cache-Einträge dieser Instruktion als Tripel der Form "
+"``(name, size, data)``, wobei ``name`` und ``size`` das Cache-Format "
+"beschreiben und data der Inhalt des Caches ist. ``cache_info`` ist ``None``, "
+"wenn die Instruktion keine Caches hat."
 
 #: ../../library/dis.rst:550
 msgid "Field ``positions`` is added."
-msgstr ""
+msgstr "Das Feld ``positions`` wurde hinzugefügt."
 
 #: ../../library/dis.rst:554
 msgid "Changed field ``starts_line``."
-msgstr ""
+msgstr "Das Feld ``starts_line`` wurde geändert."
 
 #: ../../library/dis.rst:556
 msgid ""
@@ -640,20 +836,25 @@ msgid ""
 "``baseopname``, ``baseopcode``, ``jump_target``, ``oparg``, ``line_number`` "
 "and ``cache_info``."
 msgstr ""
+"Die Felder ``start_offset``, ``cache_offset``, ``end_offset``, "
+"``baseopname``, ``baseopcode``, ``jump_target``, ``oparg``, ``line_number`` "
+"und ``cache_info`` wurden hinzugefügt."
 
 #: ../../library/dis.rst:563
 msgid ""
 "In case the information is not available, some fields might be ``None``."
 msgstr ""
+"Sind die Informationen nicht verfügbar, können einige Felder ``None`` sein."
 
 #: ../../library/dis.rst:573
 msgid ""
 "The Python compiler currently generates the following bytecode instructions."
 msgstr ""
+"Der Python-Compiler erzeugt derzeit die folgenden Bytecode-Instruktionen."
 
 #: ../../library/dis.rst:576
 msgid "**General instructions**"
-msgstr ""
+msgstr "**Allgemeine Instruktionen**"
 
 #: ../../library/dis.rst:578
 msgid ""
@@ -661,12 +862,17 @@ msgid ""
 "describe operations on it as if it was a Python list. The top of the stack "
 "corresponds to ``STACK[-1]`` in this language."
 msgstr ""
+"Im Folgenden bezeichnen wir den Interpreter-Stack als ``STACK`` und "
+"beschreiben Operationen darauf, als wäre er eine Python-Liste. Die Spitze "
+"des Stacks entspricht in dieser Sprache ``STACK[-1]``."
 
 #: ../../library/dis.rst:584
 msgid ""
 "Do nothing code.  Used as a placeholder by the bytecode optimizer, and to "
 "generate line tracing events."
 msgstr ""
+"Instruktion, die nichts tut. Wird vom Bytecode-Optimierer als Platzhalter "
+"und zum Erzeugen von Zeilenverfolgungs-Ereignissen verwendet."
 
 #: ../../library/dis.rst:590
 msgid ""
@@ -674,61 +880,76 @@ msgid ""
 "event:`BRANCH_LEFT` and :monitoring-event:`BRANCH_RIGHT` events "
 "for :mod:`sys.monitoring`."
 msgstr ""
+"Instruktion, die nichts tut. Wird vom Interpreter verwendet, um die "
+"Ereignisse :monitoring-event:`BRANCH_LEFT` und :monitoring-"
+"event:`BRANCH_RIGHT` für :mod:`sys.monitoring` aufzuzeichnen."
 
 #: ../../library/dis.rst:599
 msgid ""
 "Removes the iterator and the value pushed with it by :opcode:`GET_ITER` from "
 "the top of the stack."
 msgstr ""
+"Entfernt den Iterator und den mit ihm von :opcode:`GET_ITER` abgelegten Wert "
+"von der Spitze des Stacks."
 
 #: ../../library/dis.rst:604
 msgid "Two values are now removed."
-msgstr ""
+msgstr "Es werden jetzt zwei Werte entfernt."
 
 #: ../../library/dis.rst:610
 msgid "Removes the top-of-stack item::"
-msgstr ""
+msgstr "Entfernt das oberste Element des Stacks::"
 
 #: ../../library/dis.rst:612
 msgid "STACK.pop()"
-msgstr ""
+msgstr "STACK.pop()"
 
 #: ../../library/dis.rst:617
 msgid ""
 "Removes the top-of-stack item. Equivalent to ``POP_TOP``. Used to clean up "
 "at the end of loops, hence the name."
 msgstr ""
+"Entfernt das oberste Element des Stacks. Äquivalent zu ``POP_TOP``. Wird am "
+"Ende von Schleifen zum Aufräumen verwendet, daher der Name."
 
 #: ../../library/dis.rst:626
 msgid ""
 "Implements ``del STACK[-3:-1]``. Used to clean up when a generator exits."
 msgstr ""
+"Implementiert ``del STACK[-3:-1]``. Wird zum Aufräumen verwendet, wenn ein "
+"Generator beendet wird."
 
 #: ../../library/dis.rst:631
 msgid ""
 "The receiver and the value pushed with it by :opcode:`GET_ITER` are removed, "
 "instead of only the receiver."
 msgstr ""
+"Der Empfänger und der mit ihm von :opcode:`GET_ITER` abgelegte Wert werden "
+"entfernt, nicht nur der Empfänger."
 
 #: ../../library/dis.rst:638
 msgid ""
 "Push the i-th item to the top of the stack without removing it from its "
 "original location::"
 msgstr ""
+"Legt das i-te Element oben auf den Stack, ohne es von seiner ursprünglichen "
+"Stelle zu entfernen::"
 
 #: ../../library/dis.rst:641
 msgid ""
 "assert i > 0\n"
 "STACK.append(STACK[-i])"
 msgstr ""
+"assert i > 0\n"
+"STACK.append(STACK[-i])"
 
 #: ../../library/dis.rst:649
 msgid "Swap the top of the stack with the i-th element::"
-msgstr ""
+msgstr "Vertauscht die Spitze des Stacks mit dem i-ten Element::"
 
 #: ../../library/dis.rst:651
 msgid "STACK[-i], STACK[-1] = STACK[-1], STACK[-i]"
-msgstr ""
+msgstr "STACK[-i], STACK[-1] = STACK[-1], STACK[-i]"
 
 #: ../../library/dis.rst:658
 msgid ""
@@ -737,6 +958,11 @@ msgid ""
 "itself. It is automatically hidden by all ``dis`` utilities, but can be "
 "viewed with ``show_caches=True``."
 msgstr ""
+"Statt eine tatsächliche Instruktion zu sein, dient dieser Opcode dazu, "
+"zusätzlichen Platz zu markieren, damit der Interpreter nützliche Daten "
+"direkt im Bytecode selbst zwischenspeichern kann. Er wird von allen ``dis``-"
+"Hilfsmitteln automatisch ausgeblendet, lässt sich aber mit "
+"``show_caches=True`` anzeigen."
 
 #: ../../library/dis.rst:663
 msgid ""
@@ -744,6 +970,9 @@ msgid ""
 "expect to be followed by an exact number of caches, and will instruct the "
 "interpreter to skip over them at runtime."
 msgstr ""
+"Logisch gehört dieser Platz zur vorhergehenden Instruktion. Viele Opcodes "
+"erwarten, dass genau eine bestimmte Anzahl von Caches folgt, und weisen den "
+"Interpreter an, sie zur Laufzeit zu überspringen."
 
 #: ../../library/dis.rst:667
 msgid ""
@@ -751,39 +980,47 @@ msgid ""
 "be taken when reading or modifying raw, adaptive bytecode containing "
 "quickened data."
 msgstr ""
+"Befüllte Caches können wie beliebige Instruktionen aussehen, daher ist große "
+"Sorgfalt geboten, wenn man rohen, adaptiven Bytecode mit beschleunigten "
+"Daten liest oder ändert."
 
 #: ../../library/dis.rst:674
 msgid "**Unary operations**"
-msgstr ""
+msgstr "**Unäre Operationen**"
 
 #: ../../library/dis.rst:676
 msgid ""
 "Unary operations take the top of the stack, apply the operation, and push "
 "the result back on the stack."
 msgstr ""
+"Unäre Operationen nehmen die Spitze des Stacks, wenden die Operation an und "
+"legen das Ergebnis wieder auf den Stack."
 
 #: ../../library/dis.rst:682
 msgid "Implements ``STACK[-1] = -STACK[-1]``."
-msgstr ""
+msgstr "Implementiert ``STACK[-1] = -STACK[-1]``."
 
 #: ../../library/dis.rst:687
 msgid "Implements ``STACK[-1] = not STACK[-1]``."
-msgstr ""
+msgstr "Implementiert ``STACK[-1] = not STACK[-1]``."
 
 #: ../../library/dis.rst:689 ../../library/dis.rst:1397
 #: ../../library/dis.rst:1413
 msgid "This instruction now requires an exact :class:`bool` operand."
 msgstr ""
+"Diese Instruktion verlangt jetzt einen genauen :class:`bool`-Operanden."
 
 #: ../../library/dis.rst:695
 msgid "Implements ``STACK[-1] = ~STACK[-1]``."
-msgstr ""
+msgstr "Implementiert ``STACK[-1] = ~STACK[-1]``."
 
 #: ../../library/dis.rst:700
 msgid ""
 "Replaces ``STACK[-1]`` with an iterator for it and pushes a second value, "
 "which is used by :opcode:`FOR_ITER`, :opcode:`SEND` and :opcode:`POP_ITER`."
 msgstr ""
+"Ersetzt ``STACK[-1]`` durch einen Iterator dafür und legt einen zweiten Wert "
+"ab, den :opcode:`FOR_ITER`, :opcode:`SEND` und :opcode:`POP_ITER` verwenden."
 
 #: ../../library/dis.rst:703
 msgid ""
@@ -792,6 +1029,10 @@ msgid ""
 "index to start iterating from is pushed.  Otherwise, implements ``STACK[-1] "
 "= iter(STACK[-1])`` and pushes ``NULL``."
 msgstr ""
+"Bei einigen integrierten Sequenztypen wie :class:`list` und :class:`tuple` "
+"bleibt das Objekt selbst als „virtueller Iterator“ auf dem Stack, und der "
+"Index, ab dem iteriert wird, wird abgelegt. Andernfalls wird ``STACK[-1] = "
+"iter(STACK[-1])`` implementiert und ``NULL`` abgelegt."
 
 #: ../../library/dis.rst:708
 msgid ""
@@ -799,20 +1040,27 @@ msgid ""
 "a :term:`coroutine` object is left as is, unless the current code is a "
 "regular generator, in which case :exc:`TypeError` is raised."
 msgstr ""
+"Ist *yield_from* ungleich null, wird die Instruktion für ``yield from`` "
+"verwendet: Ein :term:`Coroutinen <coroutine>`-Objekt bleibt unverändert, es "
+"sei denn, der aktuelle Code ist ein gewöhnlicher Generator, dann "
+"wird :exc:`TypeError` ausgelöst."
 
 #: ../../library/dis.rst:712
 msgid ""
 "A second value is now pushed after the iterator.  The *yield_from* argument "
 "was added, replacing the ``GET_YIELD_FROM_ITER`` instruction."
 msgstr ""
+"Nach dem Iterator wird jetzt ein zweiter Wert abgelegt. Das Argument "
+"*yield_from* wurde hinzugefügt und ersetzt die Instruktion "
+"``GET_YIELD_FROM_ITER``."
 
 #: ../../library/dis.rst:719
 msgid "Implements ``STACK[-1] = bool(STACK[-1])``."
-msgstr ""
+msgstr "Implementiert ``STACK[-1] = bool(STACK[-1])``."
 
 #: ../../library/dis.rst:724
 msgid "**Binary and in-place operations**"
-msgstr ""
+msgstr "**Binäre und In-Place-Operationen**"
 
 #: ../../library/dis.rst:726
 msgid ""
@@ -820,6 +1068,9 @@ msgid ""
 "``STACK[-2]``). They perform the operation, then put the result back on the "
 "stack."
 msgstr ""
+"Binäre Operationen entfernen die obersten zwei Elemente vom Stack "
+"(``STACK[-1]`` und ``STACK[-2]``). Sie führen die Operation aus und legen "
+"dann das Ergebnis zurück auf den Stack."
 
 #: ../../library/dis.rst:729
 msgid ""
@@ -827,12 +1078,18 @@ msgid ""
 "place when ``STACK[-2]`` supports it, and the resulting ``STACK[-1]`` may be "
 "(but does not have to be) the original ``STACK[-2]``."
 msgstr ""
+"In-Place-Operationen sind wie binäre Operationen, aber die Operation wird an "
+"Ort und Stelle ausgeführt, wenn ``STACK[-2]`` das unterstützt, und das "
+"resultierende ``STACK[-1]`` kann das ursprüngliche ``STACK[-2]`` sein (muss "
+"aber nicht)."
 
 #: ../../library/dis.rst:736
 msgid ""
 "Implements the binary and in-place operators (depending on the value of "
 "*op*)::"
 msgstr ""
+"Implementiert die binären und In-Place-Operatoren (abhängig vom Wert von "
+"*op*)::"
 
 #: ../../library/dis.rst:739
 msgid ""
@@ -840,12 +1097,17 @@ msgid ""
 "lhs = STACK.pop()\n"
 "STACK.append(lhs op rhs)"
 msgstr ""
+"rhs = STACK.pop()\n"
+"lhs = STACK.pop()\n"
+"STACK.append(lhs op rhs)"
 
 #: ../../library/dis.rst:744
 msgid ""
 "With oparg :``NB_SUBSCR``, implements binary subscript (replaces opcode "
 "``BINARY_SUBSCR``)"
 msgstr ""
+"Mit oparg :``NB_SUBSCR`` implementiert es den binären Indexzugriff (ersetzt "
+"den Opcode ``BINARY_SUBSCR``)"
 
 #: ../../library/dis.rst:750 ../../library/dis.rst:760
 #: ../../library/dis.rst:768 ../../library/dis.rst:780
@@ -854,7 +1116,7 @@ msgstr ""
 #: ../../library/dis.rst:1095 ../../library/dis.rst:1240
 #: ../../library/dis.rst:1252 ../../library/dis.rst:1264
 msgid "Implements::"
-msgstr ""
+msgstr "Implements::"
 
 #: ../../library/dis.rst:752
 msgid ""
@@ -863,6 +1125,10 @@ msgid ""
 "value = STACK.pop()\n"
 "container[key] = value"
 msgstr ""
+"key = STACK.pop()\n"
+"container = STACK.pop()\n"
+"value = STACK.pop()\n"
+"container[key] = value"
 
 #: ../../library/dis.rst:762
 msgid ""
@@ -870,6 +1136,9 @@ msgid ""
 "container = STACK.pop()\n"
 "del container[key]"
 msgstr ""
+"key = STACK.pop()\n"
+"container = STACK.pop()\n"
+"del container[key]"
 
 #: ../../library/dis.rst:770
 msgid ""
@@ -878,6 +1147,10 @@ msgid ""
 "container = STACK.pop()\n"
 "STACK.append(container[start:end])"
 msgstr ""
+"end = STACK.pop()\n"
+"start = STACK.pop()\n"
+"container = STACK.pop()\n"
+"STACK.append(container[start:end])"
 
 #: ../../library/dis.rst:782
 msgid ""
@@ -887,10 +1160,15 @@ msgid ""
 "value = STACK.pop()\n"
 "container[start:end] = value"
 msgstr ""
+"end = STACK.pop()\n"
+"start = STACK.pop()\n"
+"container = STACK.pop()\n"
+"value = STACK.pop()\n"
+"container[start:end] = value"
 
 #: ../../library/dis.rst:791
 msgid "**Coroutine opcodes**"
-msgstr ""
+msgstr "**Coroutinen-Opcodes**"
 
 #: ../../library/dis.rst:795
 msgid ""
@@ -899,38 +1177,48 @@ msgid ""
 "generator object with the :data:`~inspect.CO_ITERABLE_COROUTINE` flag, or "
 "resolves ``o.__await__``."
 msgstr ""
+"Implementiert ``STACK[-1] = get_awaitable(STACK[-1])``, wobei "
+"``get_awaitable(o)`` ``o`` zurückgibt, wenn ``o`` ein Coroutinen-Objekt oder "
+"ein Generator-Objekt mit dem Flag :data:`~inspect.CO_ITERABLE_COROUTINE` "
+"ist, oder ``o.__await__`` auflöst."
 
 #: ../../library/dis.rst:800
 msgid ""
 "If the ``where`` operand is nonzero, it indicates where the instruction "
 "occurs:"
 msgstr ""
+"Ist der Operand ``where`` ungleich null, gibt er an, wo die Instruktion "
+"auftritt:"
 
 #: ../../library/dis.rst:803
 msgid "``1``: After a call to ``__aenter__``"
-msgstr ""
+msgstr "``1``: Nach einem Aufruf von ``__aenter__``"
 
 #: ../../library/dis.rst:804
 msgid "``2``: After a call to ``__aexit__``"
-msgstr ""
+msgstr "``2``: Nach einem Aufruf von ``__aexit__``"
 
 #: ../../library/dis.rst:808
 msgid "Previously, this instruction did not have an oparg."
-msgstr ""
+msgstr "Zuvor hatte diese Instruktion keine oparg."
 
 #: ../../library/dis.rst:814
 msgid "Implements ``STACK[-1] = STACK[-1].__aiter__()``."
-msgstr ""
+msgstr "Implementiert ``STACK[-1] = STACK[-1].__aiter__()``."
 
 #: ../../library/dis.rst:817
 msgid "Returning awaitable objects from ``__aiter__`` is no longer supported."
 msgstr ""
+"Das Zurückgeben abwartbarer Objekte aus ``__aiter__`` wird nicht mehr "
+"unterstützt."
 
 #: ../../library/dis.rst:824
 msgid ""
 "Implement ``STACK.append(get_awaitable(STACK[-1].__anext__()))`` to the "
 "stack. See ``GET_AWAITABLE`` for details about ``get_awaitable``."
 msgstr ""
+"Implementiert ``STACK.append(get_awaitable(STACK[-1].__anext__()))`` auf dem "
+"Stack. Einzelheiten zu ``get_awaitable`` siehe ``GET_AWAITABLE``."
 
 #: ../../library/dis.rst:832
 msgid ""
@@ -939,12 +1227,19 @@ msgid ""
 "and the raised exception in ``STACK[-1]``. Both are popped. If the exception "
 "is not :exc:`StopAsyncIteration`, it is re-raised."
 msgstr ""
+"Beendet eine :keyword:`async for`-Schleife. Behandelt eine Ausnahme, die "
+"beim Abwarten des nächsten Elements ausgelöst wurde. Der Stack enthält das "
+"asynchrone Iterable in ``STACK[-2]`` und die ausgelöste Ausnahme in "
+"``STACK[-1]``. Beide werden entfernt. Ist die Ausnahme "
+"nicht :exc:`StopAsyncIteration`, wird sie erneut ausgelöst."
 
 #: ../../library/dis.rst:839 ../../library/dis.rst:930
 #: ../../library/dis.rst:941
 msgid ""
 "Exception representation on the stack now consist of one, not three, items."
 msgstr ""
+"Die Darstellung von Ausnahmen auf dem Stack besteht jetzt aus einem, nicht "
+"aus drei Elementen."
 
 #: ../../library/dis.rst:845
 msgid ""
@@ -953,30 +1248,39 @@ msgid ""
 "``STACK[-1]`` is an instance of :exc:`StopIteration`, pop three values from "
 "the stack and push its ``value`` member.  Otherwise, re-raise ``STACK[-1]``."
 msgstr ""
+"Behandelt eine Ausnahme, die während eines Aufrufs "
+"von :meth:`~generator.throw` oder :meth:`~generator.close` durch den "
+"aktuellen Frame ausgelöst wurde. Ist ``STACK[-1]`` eine Instanz "
+"von :exc:`StopIteration`, werden drei Werte vom Stack entfernt und sein "
+"Mitglied ``value`` abgelegt. Andernfalls wird ``STACK[-1]`` erneut ausgelöst."
 
 #: ../../library/dis.rst:854
 msgid "**Miscellaneous opcodes**"
-msgstr ""
+msgstr "**Verschiedene Opcodes**"
 
 #: ../../library/dis.rst:860
 msgid ""
 "item = STACK.pop()\n"
 "set.add(STACK[-i], item)"
 msgstr ""
+"item = STACK.pop()\n"
+"set.add(STACK[-i], item)"
 
 #: ../../library/dis.rst:863
 msgid "Used to implement set comprehensions."
-msgstr ""
+msgstr "Wird verwendet, um Set Comprehensions zu implementieren."
 
 #: ../../library/dis.rst:870
 msgid ""
 "item = STACK.pop()\n"
 "list.append(STACK[-i], item)"
 msgstr ""
+"item = STACK.pop()\n"
+"list.append(STACK[-i], item)"
 
 #: ../../library/dis.rst:873
 msgid "Used to implement list comprehensions."
-msgstr ""
+msgstr "Wird verwendet, um List Comprehensions zu implementieren."
 
 #: ../../library/dis.rst:880
 msgid ""
@@ -984,16 +1288,21 @@ msgid ""
 "key = STACK.pop()\n"
 "dict.__setitem__(STACK[-i], key, value)"
 msgstr ""
+"value = STACK.pop()\n"
+"key = STACK.pop()\n"
+"dict.__setitem__(STACK[-i], key, value)"
 
 #: ../../library/dis.rst:884
 msgid "Used to implement dict comprehensions."
-msgstr ""
+msgstr "Wird verwendet, um Dictionary Comprehensions zu implementieren."
 
 #: ../../library/dis.rst:887
 msgid ""
 "Map value is ``STACK[-1]`` and map key is ``STACK[-2]``. Before, those were "
 "reversed."
 msgstr ""
+"Der Map-Wert ist ``STACK[-1]`` und der Map-Schlüssel ist ``STACK[-2]``. "
+"Zuvor war es umgekehrt."
 
 #: ../../library/dis.rst:891
 msgid ""
@@ -1002,30 +1311,38 @@ msgid ""
 "is popped off, the container object remains on the stack so that it is "
 "available for further iterations of the loop."
 msgstr ""
+"Bei allen Instruktionen :opcode:`SET_ADD`, :opcode:`LIST_APPEND` "
+"und :opcode:`MAP_ADD` wird der hinzugefügte Wert oder das Schlüssel-Wert-"
+"Paar vom Stack entfernt, das Container-Objekt bleibt aber auf dem Stack, "
+"damit es für weitere Durchläufe der Schleife verfügbar ist."
 
 #: ../../library/dis.rst:899
 msgid "Returns with ``STACK[-1]`` to the caller of the function."
-msgstr ""
+msgstr "Kehrt mit ``STACK[-1]`` zum Aufrufer der Funktion zurück."
 
 #: ../../library/dis.rst:904
 msgid "Yields ``STACK.pop()`` from a :term:`generator`."
-msgstr ""
+msgstr "Liefert ``STACK.pop()`` aus einem :term:`Generator <generator>`."
 
 #: ../../library/dis.rst:906
 msgid "oparg set to be the stack depth."
-msgstr ""
+msgstr "oparg ist auf die Stack-Tiefe gesetzt."
 
 #: ../../library/dis.rst:909
 msgid ""
 "oparg set to be the exception block depth, for efficient closing of "
 "generators."
 msgstr ""
+"oparg ist auf die Tiefe des Ausnahmeblocks gesetzt, für effizientes "
+"Schließen von Generatoren."
 
 #: ../../library/dis.rst:912
 msgid ""
 "oparg is ``1`` if this instruction is part of a yield-from or await, and "
 "``0`` otherwise."
 msgstr ""
+"oparg ist ``1``, wenn diese Instruktion Teil eines yield-from oder await "
+"ist, andernfalls ``0``."
 
 #: ../../library/dis.rst:918
 msgid ""
@@ -1034,11 +1351,17 @@ msgid ""
 "module body contains :term:`variable annotations <variable annotation>` "
 "statically."
 msgstr ""
+"Prüft, ob ``__annotations__`` in ``locals()`` definiert ist, und setzt es "
+"andernfalls auf ein leeres ``dict``. Dieser Opcode wird nur ausgegeben, wenn "
+"ein Klassen- oder Modulrumpf statisch :term:`Variablenannotationen <variable "
+"annotation>` enthält."
 
 #: ../../library/dis.rst:928
 msgid ""
 "Pops a value from the stack, which is used to restore the exception state."
 msgstr ""
+"Entfernt einen Wert vom Stack, der zur Wiederherstellung des "
+"Ausnahmezustands dient."
 
 #: ../../library/dis.rst:935
 msgid ""
@@ -1046,6 +1369,9 @@ msgid ""
 "pops an additional value from the stack which is used to "
 "set :attr:`~frame.f_lasti` of the current frame."
 msgstr ""
+"Löst die Ausnahme, die gerade an der Spitze des Stacks liegt, erneut aus. "
+"Ist oparg ungleich null, wird ein zusätzlicher Wert vom Stack entfernt, der "
+"zum Setzen von :attr:`~frame.f_lasti` des aktuellen Frames dient."
 
 #: ../../library/dis.rst:946
 msgid ""
@@ -1053,6 +1379,9 @@ msgid ""
 "stack. Pushes the value originally popped back to the stack. Used in "
 "exception handlers."
 msgstr ""
+"Entfernt einen Wert vom Stack. Legt die aktuelle Ausnahme oben auf den "
+"Stack. Legt den ursprünglich entfernten Wert zurück auf den Stack. Wird in "
+"Ausnahmebehandlern verwendet."
 
 #: ../../library/dis.rst:954
 msgid ""
@@ -1060,12 +1389,17 @@ msgid ""
 "is an exception matching ``STACK[-1]``. Pops ``STACK[-1]`` and pushes the "
 "boolean result of the test."
 msgstr ""
+"Führt den Ausnahmeabgleich für ``except`` durch. Prüft, ob ``STACK[-2]`` "
+"eine zu ``STACK[-1]`` passende Ausnahme ist. Entfernt ``STACK[-1]`` und legt "
+"das boolesche Ergebnis des Tests ab."
 
 #: ../../library/dis.rst:962
 msgid ""
 "Performs exception matching for ``except*``. Applies ``split(STACK[-1])`` on "
 "the exception group representing ``STACK[-2]``."
 msgstr ""
+"Führt den Ausnahmeabgleich für ``except*`` durch. Wendet "
+"``split(STACK[-1])`` auf die Ausnahmegruppe an, die ``STACK[-2]`` darstellt."
 
 #: ../../library/dis.rst:965
 msgid ""
@@ -1074,6 +1408,10 @@ msgid ""
 "subgroup. When there is no match, pops one item (the match type) and pushes "
 "``None``."
 msgstr ""
+"Bei einem Treffer werden zwei Elemente vom Stack entfernt und die nicht "
+"passende Untergruppe (``None`` bei vollständigem Treffer) gefolgt von der "
+"passenden Untergruppe abgelegt. Gibt es keinen Treffer, wird ein Element "
+"(der Treffertyp) entfernt und ``None`` abgelegt."
 
 #: ../../library/dis.rst:974
 msgid ""
@@ -1082,12 +1420,20 @@ msgid ""
 "call ``context_manager.__exit__(*exc_info())`` when an exception has "
 "occurred in a :keyword:`with` statement."
 msgstr ""
+"Ruft die Funktion an Position 4 des Stacks mit den Argumenten (type, val, "
+"tb) auf, die die Ausnahme an der Spitze des Stacks darstellen. Wird "
+"verwendet, um den Aufruf ``context_manager.__exit__(*exc_info())`` zu "
+"implementieren, wenn in einer :keyword:`with`-Anweisung eine Ausnahme "
+"aufgetreten ist."
 
 #: ../../library/dis.rst:981
 msgid ""
 "The ``__exit__`` function is in position 4 of the stack rather than 7. "
 "Exception representation on the stack now consist of one, not three, items."
 msgstr ""
+"Die Funktion ``__exit__`` liegt an Position 4 des Stacks statt an Position "
+"7. Die Darstellung von Ausnahmen auf dem Stack besteht jetzt aus einem, "
+"nicht aus drei Elementen."
 
 #: ../../library/dis.rst:988
 msgid ""
@@ -1095,18 +1441,27 @@ msgid ""
 "hardcoded list of constants supported by this instruction.  Used by "
 "the :keyword:`assert` statement to load :exc:`AssertionError`."
 msgstr ""
+"Legt eine gängige Konstante auf den Stack. Der Interpreter enthält eine fest "
+"einprogrammierte Liste der von dieser Instruktion unterstützten Konstanten. "
+"Wird von der :keyword:`assert`-Anweisung verwendet, um :exc:`AssertionError` "
+"zu laden."
 
 #: ../../library/dis.rst:997
 msgid ""
 "Pushes :func:`!builtins.__build_class__` onto the stack.  It is later called "
 "to construct a class."
 msgstr ""
+"Legt :func:`!builtins.__build_class__` auf den Stack. Sie wird später "
+"aufgerufen, um eine Klasse zu konstruieren."
 
 #: ../../library/dis.rst:1002
 msgid ""
 "Perform ``STACK.append(len(STACK[-1]))``. Used in :keyword:`match` "
 "statements where comparison with structure of pattern is needed."
 msgstr ""
+"Führt ``STACK.append(len(STACK[-1]))`` aus. Wird in :keyword:`match`-"
+"Anweisungen verwendet, wenn ein Vergleich mit der Struktur des Musters nötig "
+"ist."
 
 #: ../../library/dis.rst:1010
 msgid ""
@@ -1115,6 +1470,10 @@ msgid ""
 "its :c:member:`~PyTypeObject.tp_flags`), push ``True`` onto the stack.  "
 "Otherwise, push ``False``."
 msgstr ""
+"Ist ``STACK[-1]`` eine Instanz von :class:`collections.abc.Mapping` (oder "
+"technischer: wenn in ihrem :c:member:`~PyTypeObject.tp_flags` das "
+"Flag :c:macro:`Py_TPFLAGS_MAPPING` gesetzt ist), wird ``True`` auf den Stack "
+"gelegt. Andernfalls wird ``False`` abgelegt."
 
 #: ../../library/dis.rst:1020
 msgid ""
@@ -1124,6 +1483,11 @@ msgid ""
 "its :c:member:`~PyTypeObject.tp_flags`), push ``True`` onto the stack.  "
 "Otherwise, push ``False``."
 msgstr ""
+"Ist ``STACK[-1]`` eine Instanz von :class:`collections.abc.Sequence` und "
+"*keine* Instanz von :class:`str`/:class:`bytes`/:class:`bytearray` (oder "
+"technischer: wenn in ihrem :c:member:`~PyTypeObject.tp_flags` das "
+"Flag :c:macro:`Py_TPFLAGS_SEQUENCE` gesetzt ist), wird ``True`` auf den "
+"Stack gelegt. Andernfalls wird ``False`` abgelegt."
 
 #: ../../library/dis.rst:1030
 msgid ""
@@ -1132,12 +1496,18 @@ msgid ""
 "a :class:`tuple` containing the corresponding values. Otherwise, push "
 "``None``."
 msgstr ""
+"``STACK[-1]`` ist ein Tupel von Mapping-Schlüsseln, und ``STACK[-2]`` ist "
+"das Match-Subjekt. Enthält ``STACK[-2]`` alle Schlüssel in ``STACK[-1]``, "
+"wird ein :class:`tuple` mit den entsprechenden Werten abgelegt. Andernfalls "
+"wird ``None`` abgelegt."
 
 #: ../../library/dis.rst:1036 ../../library/dis.rst:1793
 msgid ""
 "Previously, this instruction also pushed a boolean value indicating success "
 "(``True``) or failure (``False``)."
 msgstr ""
+"Zuvor legte diese Instruktion auch einen booleschen Wert ab, der Erfolg "
+"(``True``) oder Misserfolg (``False``) anzeigte."
 
 #: ../../library/dis.rst:1043
 msgid ""
@@ -1146,6 +1516,10 @@ msgid ""
 "objects>`. The compiler tries to use :opcode:`STORE_FAST` "
 "or :opcode:`STORE_GLOBAL` if possible."
 msgstr ""
+"Implementiert ``name = STACK.pop()``. *namei* ist der Index von *name* im "
+"Attribut :attr:`~codeobject.co_names` des :ref:`Code-Objekts <code-"
+"objects>`. Der Compiler versucht, wenn möglich :opcode:`STORE_FAST` "
+"oder :opcode:`STORE_GLOBAL` zu verwenden."
 
 #: ../../library/dis.rst:1050
 msgid ""
@@ -1153,18 +1527,25 @@ msgid ""
 "into :attr:`~codeobject.co_names` attribute of the :ref:`code object <code-"
 "objects>`."
 msgstr ""
+"Implementiert ``del name``, wobei *namei* der Index im "
+"Attribut :attr:`~codeobject.co_names` des :ref:`Code-Objekts <code-objects>` "
+"ist."
 
 #: ../../library/dis.rst:1056
 msgid ""
 "Unpacks ``STACK[-1]`` into *count* individual values, which are put onto the "
 "stack right-to-left. Require there to be exactly *count* values.::"
 msgstr ""
+"Entpackt ``STACK[-1]`` in *count* einzelne Werte, die von rechts nach links "
+"auf den Stack gelegt werden. Verlangt, dass es genau *count* Werte gibt.::"
 
 #: ../../library/dis.rst:1059
 msgid ""
 "assert(len(STACK[-1]) == count)\n"
 "STACK.extend(STACK.pop()[:-count-1:-1])"
 msgstr ""
+"assert(len(STACK[-1]) == count)\n"
+"STACK.extend(STACK.pop()[:-count-1:-1])"
 
 #: ../../library/dis.rst:1065
 msgid ""
@@ -1173,10 +1554,14 @@ msgid ""
 "be smaller than the number of items in the iterable: one of the new values "
 "will be a list of all leftover items."
 msgstr ""
+"Implementiert die Zuweisung mit einem Stern-Ziel: Entpackt ein Iterable in "
+"``STACK[-1]`` in einzelne Werte, wobei die Gesamtzahl der Werte kleiner sein "
+"kann als die Anzahl der Elemente im Iterable: Einer der neuen Werte ist eine "
+"Liste aller übrigen Elemente."
 
 #: ../../library/dis.rst:1070
 msgid "The number of values before and after the list value is limited to 255."
-msgstr ""
+msgstr "Die Anzahl der Werte vor und nach dem Listenwert ist auf 255 begrenzt."
 
 #: ../../library/dis.rst:1072
 msgid ""
@@ -1186,12 +1571,20 @@ msgid ""
 "values where the low byte of *counts* is the number of values before the "
 "list value, the high byte of *counts* the number of values after it."
 msgstr ""
+"Die Anzahl der Werte vor dem Listenwert ist im Argument des Opcodes kodiert. "
+"Die Anzahl der Werte nach der Liste, falls vorhanden, wird mit einem "
+"``EXTENDED_ARG`` kodiert. Daher lässt sich das Argument als Zwei-Byte-Wert "
+"ansehen, wobei das niedrige Byte von *counts* die Anzahl der Werte vor dem "
+"Listenwert und das hohe Byte von *counts* die Anzahl der Werte danach ist."
 
 #: ../../library/dis.rst:1078
 msgid ""
 "The extracted values are put onto the stack right-to-left, i.e. ``a, *b, c = "
 "d`` will be stored after execution as ``STACK.extend((a, b, c))``."
 msgstr ""
+"Die extrahierten Werte werden von rechts nach links auf den Stack gelegt, d. "
+"h. ``a, *b, c = d`` wird nach der Ausführung als ``STACK.extend((a, b, c))`` "
+"gespeichert."
 
 #: ../../library/dis.rst:1086
 msgid ""
@@ -1199,47 +1592,63 @@ msgid ""
 "value = STACK.pop()\n"
 "obj.name = value"
 msgstr ""
+"obj = STACK.pop()\n"
+"value = STACK.pop()\n"
+"obj.name = value"
 
 #: ../../library/dis.rst:1090
 msgid ""
 "where *namei* is the index of name in :attr:`~codeobject.co_names` of "
 "the :ref:`code object <code-objects>`."
 msgstr ""
+"wobei *namei* der Index von name in :attr:`~codeobject.co_names` "
+"des :ref:`Code-Objekts <code-objects>` ist."
 
 #: ../../library/dis.rst:1097
 msgid ""
 "obj = STACK.pop()\n"
 "del obj.name"
 msgstr ""
+"obj = STACK.pop()\n"
+"del obj.name"
 
 #: ../../library/dis.rst:1100
 msgid ""
 "where *namei* is the index of name into :attr:`~codeobject.co_names` of "
 "the :ref:`code object <code-objects>`."
 msgstr ""
+"wobei *namei* der Index von name in :attr:`~codeobject.co_names` "
+"des :ref:`Code-Objekts <code-objects>` ist."
 
 #: ../../library/dis.rst:1106
 msgid "Works as :opcode:`STORE_NAME`, but stores the name as a global."
 msgstr ""
+"Funktioniert wie :opcode:`STORE_NAME`, speichert den Namen aber als globalen "
+"Namen."
 
 #: ../../library/dis.rst:1111
 msgid "Works as :opcode:`DELETE_NAME`, but deletes a global name."
 msgstr ""
+"Funktioniert wie :opcode:`DELETE_NAME`, löscht aber einen globalen Namen."
 
 #: ../../library/dis.rst:1116
 msgid "Pushes ``co_consts[consti]`` onto the stack."
-msgstr ""
+msgstr "Legt ``co_consts[consti]`` auf den Stack."
 
 #: ../../library/dis.rst:1121
 msgid ""
 "Pushes the integer ``i`` onto the stack. ``i`` must be in ``range(256)``"
 msgstr ""
+"Legt die ganze Zahl ``i`` auf den Stack. ``i`` muss in ``range(256)`` liegen"
 
 #: ../../library/dis.rst:1129
 msgid ""
 "Pushes the value associated with ``co_names[namei]`` onto the stack. The "
 "name is looked up within the locals, then the globals, then the builtins."
 msgstr ""
+"Legt den Wert, der ``co_names[namei]`` zugeordnet ist, auf den Stack. Der "
+"Name wird zuerst in den lokalen, dann in den globalen und dann in den "
+"integrierten Namen nachgeschlagen."
 
 #: ../../library/dis.rst:1135
 msgid ""
@@ -1247,6 +1656,10 @@ msgid ""
 "prepare namespace dictionaries for :opcode:`LOAD_FROM_DICT_OR_DEREF` "
 "and :opcode:`LOAD_FROM_DICT_OR_GLOBALS`."
 msgstr ""
+"Legt eine Referenz auf das Dictionary der lokalen Namen auf den Stack. Das "
+"wird verwendet, um Namensraum-Dictionarys "
+"für :opcode:`LOAD_FROM_DICT_OR_DEREF` "
+"und :opcode:`LOAD_FROM_DICT_OR_GLOBALS` vorzubereiten."
 
 #: ../../library/dis.rst:1144
 msgid ""
@@ -1256,6 +1669,12 @@ msgid ""
 "variables in :ref:`annotation scopes <annotation-scopes>` within class "
 "bodies."
 msgstr ""
+"Entfernt ein Mapping vom Stack und schlägt darin den Wert für "
+"``co_names[namei]`` nach. Wird der Name dort nicht gefunden, wird er in den "
+"globalen und dann in den integrierten Namen nachgeschlagen, ähnlich wie "
+"bei :opcode:`LOAD_GLOBAL`. Das wird zum Laden globaler Variablen "
+"in :ref:`Annotation-Geltungsbereichen <annotation-scopes>` innerhalb von "
+"Klassenrümpfen verwendet."
 
 #: ../../library/dis.rst:1155
 msgid ""
@@ -1263,6 +1682,9 @@ msgid ""
 "of strings and a tuple of interpolations and pushes the resulting object "
 "onto the stack::"
 msgstr ""
+"Konstruiert eine neue :class:`~string.templatelib.Template`-Instanz aus "
+"einem Tupel von Zeichenketten und einem Tupel von Interpolationen und legt "
+"das resultierende Objekt auf den Stack::"
 
 #: ../../library/dis.rst:1159
 msgid ""
@@ -1270,6 +1692,9 @@ msgid ""
 "strings = STACK.pop()\n"
 "STACK.append(_build_template(strings, interpolations))"
 msgstr ""
+"interpolations = STACK.pop()\n"
+"strings = STACK.pop()\n"
+"STACK.append(_build_template(strings, interpolations))"
 
 #: ../../library/dis.rst:1168
 msgid ""
@@ -1277,18 +1702,25 @@ msgid ""
 "value and its source expression and pushes the resulting object onto the "
 "stack."
 msgstr ""
+"Konstruiert eine neue :class:`~string.templatelib.Interpolation`-Instanz aus "
+"einem Wert und seinem Quellausdruck und legt das resultierende Objekt auf "
+"den Stack."
 
 #: ../../library/dis.rst:1172
 msgid ""
 "If no conversion or format specification is present, ``format`` is set to "
 "``2``."
 msgstr ""
+"Ist keine Umwandlung oder Formatangabe vorhanden, wird ``format`` auf ``2`` "
+"gesetzt."
 
 #: ../../library/dis.rst:1175
 msgid ""
 "If the low bit of ``format`` is set, it indicates that the interpolation "
 "contains a format specification."
 msgstr ""
+"Ist das niedrigste Bit von ``format`` gesetzt, zeigt das an, dass die "
+"Interpolation eine Formatangabe enthält."
 
 #: ../../library/dis.rst:1178
 msgid ""
@@ -1296,6 +1728,10 @@ msgid ""
 "a conversion. The value of ``format >> 2`` is the conversion type (``0`` for "
 "no conversion, ``1`` for ``!s``, ``2`` for ``!r``, and ``3`` for ``!a``)::"
 msgstr ""
+"Ist ``format >> 2`` ungleich null, zeigt das an, dass die Interpolation eine "
+"Umwandlung enthält. Der Wert von ``format >> 2`` ist der Umwandlungstyp "
+"(``0`` für keine Umwandlung, ``1`` für ``!s``, ``2`` für ``!r`` und ``3`` "
+"für ``!a``)::"
 
 #: ../../library/dis.rst:1183
 msgid ""
@@ -1309,12 +1745,23 @@ msgid ""
 "STACK.append(_build_interpolation(value, expression, conversion, "
 "format_spec))"
 msgstr ""
+"conversion = format >> 2\n"
+"if format & 1:\n"
+"    format_spec = STACK.pop()\n"
+"else:\n"
+"    format_spec = None\n"
+"expression = STACK.pop()\n"
+"value = STACK.pop()\n"
+"STACK.append(_build_interpolation(value, expression, conversion, "
+"format_spec))"
 
 #: ../../library/dis.rst:1197
 msgid ""
 "Creates a tuple consuming *count* items from the stack, and pushes the "
 "resulting tuple onto the stack::"
 msgstr ""
+"Erzeugt ein Tupel, das *count* Elemente vom Stack verbraucht, und legt das "
+"resultierende Tupel auf den Stack::"
 
 #: ../../library/dis.rst:1200
 msgid ""
@@ -1326,14 +1773,21 @@ msgid ""
 "\n"
 "STACK.append(value)"
 msgstr ""
+"if count == 0:\n"
+"    value = ()\n"
+"else:\n"
+"    value = tuple(STACK[-count:])\n"
+"    STACK = STACK[:-count]\n"
+"\n"
+"STACK.append(value)"
 
 #: ../../library/dis.rst:1211
 msgid "Works as :opcode:`BUILD_TUPLE`, but creates a list."
-msgstr ""
+msgstr "Funktioniert wie :opcode:`BUILD_TUPLE`, erzeugt aber eine Liste."
 
 #: ../../library/dis.rst:1216
 msgid "Works as :opcode:`BUILD_TUPLE`, but creates a set."
-msgstr ""
+msgstr "Funktioniert wie :opcode:`BUILD_TUPLE`, erzeugt aber eine Menge."
 
 #: ../../library/dis.rst:1221
 msgid ""
@@ -1341,58 +1795,75 @@ msgid ""
 "that the dictionary holds *count* entries: ``{..., STACK[-4]: STACK[-3], "
 "STACK[-2]: STACK[-1]}``."
 msgstr ""
+"Legt ein neues Dictionary-Objekt auf den Stack. Entfernt ``2 * count`` "
+"Elemente, sodass das Dictionary *count* Einträge enthält: ``{..., STACK[-4]: "
+"STACK[-3], STACK[-2]: STACK[-1]}``."
 
 #: ../../library/dis.rst:1225
 msgid ""
 "The dictionary is created from stack items instead of creating an empty "
 "dictionary pre-sized to hold *count* items."
 msgstr ""
+"Das Dictionary wird aus Stack-Elementen erzeugt, statt ein leeres Dictionary "
+"zu erzeugen, das vorab auf *count* Elemente dimensioniert ist."
 
 #: ../../library/dis.rst:1232
 msgid ""
 "Concatenates *count* strings from the stack and pushes the resulting string "
 "onto the stack."
 msgstr ""
+"Verkettet *count* Zeichenketten vom Stack und legt die resultierende "
+"Zeichenkette auf den Stack."
 
 #: ../../library/dis.rst:1242
 msgid ""
 "seq = STACK.pop()\n"
 "list.extend(STACK[-i], seq)"
 msgstr ""
+"seq = STACK.pop()\n"
+"list.extend(STACK[-i], seq)"
 
 #: ../../library/dis.rst:1245
 msgid "Used to build lists."
-msgstr ""
+msgstr "Wird verwendet, um Listen zu bauen."
 
 #: ../../library/dis.rst:1254
 msgid ""
 "seq = STACK.pop()\n"
 "set.update(STACK[-i], seq)"
 msgstr ""
+"seq = STACK.pop()\n"
+"set.update(STACK[-i], seq)"
 
 #: ../../library/dis.rst:1257
 msgid "Used to build sets."
-msgstr ""
+msgstr "Wird verwendet, um Mengen zu bauen."
 
 #: ../../library/dis.rst:1266
 msgid ""
 "map = STACK.pop()\n"
 "dict.update(STACK[-i], map)"
 msgstr ""
+"map = STACK.pop()\n"
+"dict.update(STACK[-i], map)"
 
 #: ../../library/dis.rst:1269
 msgid "Used to build dicts."
-msgstr ""
+msgstr "Wird verwendet, um Dictionarys zu bauen."
 
 #: ../../library/dis.rst:1276
 msgid "Like :opcode:`DICT_UPDATE` but raises an exception for duplicate keys."
 msgstr ""
+"Wie :opcode:`DICT_UPDATE`, löst aber bei doppelten Schlüsseln eine Ausnahme "
+"aus."
 
 #: ../../library/dis.rst:1283
 msgid ""
 "If the low bit of ``namei`` is not set, this replaces ``STACK[-1]`` with "
 "``getattr(STACK[-1], co_names[namei>>1])``."
 msgstr ""
+"Ist das niedrigste Bit von ``namei`` nicht gesetzt, ersetzt das "
+"``STACK[-1]`` durch ``getattr(STACK[-1], co_names[namei>>1])``."
 
 #: ../../library/dis.rst:1286
 msgid ""
@@ -1405,12 +1876,23 @@ msgid ""
 "Otherwise, ``NULL`` and the object returned by the attribute lookup are "
 "pushed."
 msgstr ""
+"Ist das niedrigste Bit von ``namei`` gesetzt, versucht das, eine Methode "
+"namens ``co_names[namei>>1]`` aus dem Objekt ``STACK[-1]`` zu laden. "
+"``STACK[-1]`` wird entfernt. Dieser Bytecode unterscheidet zwei Fälle: Hat "
+"``STACK[-1]`` eine Methode mit dem richtigen Namen, legt der Bytecode die "
+"ungebundene Methode und ``STACK[-1]`` ab. ``STACK[-1]`` wird "
+"von :opcode:`CALL` oder :opcode:`CALL_KW` beim Aufruf der ungebundenen "
+"Methode als erstes Argument (``self``) verwendet. Andernfalls werden "
+"``NULL`` und das von der Attributsuche zurückgegebene Objekt abgelegt."
 
 #: ../../library/dis.rst:1295
 msgid ""
 "If the low bit of ``namei`` is set, then a ``NULL`` or ``self`` is pushed to "
 "the stack before the attribute or unbound method respectively."
 msgstr ""
+"Ist das niedrigste Bit von ``namei`` gesetzt, wird ``NULL`` oder ``self`` "
+"vor dem Attribut beziehungsweise der ungebundenen Methode auf den Stack "
+"gelegt."
 
 #: ../../library/dis.rst:1302
 msgid ""
@@ -1418,28 +1900,34 @@ msgid ""
 "argument forms (e.g. ``super().method()``, ``super().attr`` and ``super(cls, "
 "self).method()``, ``super(cls, self).attr``)."
 msgstr ""
+"Dieser Opcode implementiert :func:`super`, sowohl in der Form ohne Argumente "
+"als auch in der mit zwei Argumenten (z. B. ``super().method()``, "
+"``super().attr`` und ``super(cls, self).method()``, ``super(cls, "
+"self).attr``)."
 
 #: ../../library/dis.rst:1306
 msgid "It pops three values from the stack (from top of stack down):"
-msgstr ""
+msgstr "Er entfernt drei Werte vom Stack (von der Spitze des Stacks abwärts):"
 
 #: ../../library/dis.rst:1308
 msgid "``self``: the first argument to the current method"
-msgstr ""
+msgstr "``self``: das erste Argument der aktuellen Methode"
 
 #: ../../library/dis.rst:1309
 msgid "``cls``: the class within which the current method was defined"
-msgstr ""
+msgstr "``cls``: die Klasse, in der die aktuelle Methode definiert wurde"
 
 #: ../../library/dis.rst:1310
 msgid "the global ``super``"
-msgstr ""
+msgstr "das globale ``super``"
 
 #: ../../library/dis.rst:1312
 msgid ""
 "With respect to its argument, it works similarly to :opcode:`LOAD_ATTR`, "
 "except that ``namei`` is shifted right by 2 bits instead of 1."
 msgstr ""
+"In Bezug auf sein Argument funktioniert er ähnlich wie :opcode:`LOAD_ATTR`, "
+"nur dass ``namei`` um 2 Bits statt um 1 nach rechts verschoben wird."
 
 #: ../../library/dis.rst:1315
 msgid ""
@@ -1447,12 +1935,19 @@ msgid ""
 "with :opcode:`LOAD_ATTR`, which results in pushing ``NULL`` and the loaded "
 "method. When it is unset a single value is pushed to the stack."
 msgstr ""
+"Das niedrigste Bit von ``namei`` signalisiert, dass versucht werden soll, "
+"eine Methode zu laden, wie bei :opcode:`LOAD_ATTR`, was dazu führt, dass "
+"``NULL`` und die geladene Methode abgelegt werden. Ist es nicht gesetzt, "
+"wird ein einzelner Wert auf den Stack gelegt."
 
 #: ../../library/dis.rst:1319
 msgid ""
 "The second-low bit of ``namei``, if set, means that this was a two-argument "
 "call to :func:`super` (unset means zero-argument)."
 msgstr ""
+"Das zweitniedrigste Bit von ``namei`` bedeutet, falls gesetzt, dass dies ein "
+"Aufruf von :func:`super` mit zwei Argumenten war (nicht gesetzt bedeutet "
+"ohne Argumente)."
 
 #: ../../library/dis.rst:1327
 msgid ""
@@ -1460,20 +1955,27 @@ msgid ""
 "``cmp_op[opname >> 5]``. If the fifth-lowest bit of ``opname`` is set "
 "(``opname & 16``), the result should be coerced to ``bool``."
 msgstr ""
+"Führt eine boolesche Operation aus. Der Name der Operation findet sich in "
+"``cmp_op[opname >> 5]``. Ist das fünftniedrigste Bit von ``opname`` gesetzt "
+"(``opname & 16``), soll das Ergebnis in ``bool`` umgewandelt werden."
 
 #: ../../library/dis.rst:1331
 msgid ""
 "The fifth-lowest bit of the oparg now indicates a forced conversion "
 "to :class:`bool`."
 msgstr ""
+"Das fünftniedrigste Bit der oparg zeigt jetzt eine erzwungene Umwandlung "
+"in :class:`bool` an."
 
 #: ../../library/dis.rst:1338
 msgid "Performs ``is`` comparison, or ``is not`` if ``invert`` is 1."
 msgstr ""
+"Führt den Vergleich ``is`` aus oder ``is not``, wenn ``invert`` gleich 1 ist."
 
 #: ../../library/dis.rst:1345
 msgid "Performs ``in`` comparison, or ``not in`` if ``invert`` is 1."
 msgstr ""
+"Führt den Vergleich ``in`` aus oder ``not in``, wenn ``invert`` gleich 1 ist."
 
 #: ../../library/dis.rst:1352
 msgid ""
@@ -1483,6 +1985,12 @@ msgid ""
 "current namespace is not affected: for a proper import statement, a "
 "subsequent :opcode:`STORE_FAST` instruction modifies the namespace."
 msgstr ""
+"Importiert das Modul ``co_names[namei]``. ``STACK[-1]`` und ``STACK[-2]`` "
+"werden entfernt und liefern die Argumente *fromlist* und *level* "
+"von :func:`__import__`. Das Modulobjekt wird auf den Stack gelegt. Der "
+"aktuelle Namensraum ist nicht betroffen: Bei einer richtigen Import-"
+"Anweisung ändert eine nachfolgende :opcode:`STORE_FAST`-Instruktion den "
+"Namensraum."
 
 #: ../../library/dis.rst:1360
 msgid ""
@@ -1490,24 +1998,30 @@ msgid ""
 "``STACK[-1]``. The resulting object is pushed onto the stack, to be "
 "subsequently stored by a :opcode:`STORE_FAST` instruction."
 msgstr ""
+"Lädt das Attribut ``co_names[namei]`` aus dem Modul in ``STACK[-1]``. Das "
+"resultierende Objekt wird auf den Stack gelegt, um anschließend von "
+"einer :opcode:`STORE_FAST`-Instruktion gespeichert zu werden."
 
 #: ../../library/dis.rst:1367
 msgid "Increments bytecode counter by *delta*."
-msgstr ""
+msgstr "Erhöht den Bytecode-Zähler um *delta*."
 
 #: ../../library/dis.rst:1372
 msgid "Decrements bytecode counter by *delta*. Checks for interrupts."
-msgstr ""
+msgstr "Verringert den Bytecode-Zähler um *delta*. Prüft auf Unterbrechungen."
 
 #: ../../library/dis.rst:1379
 msgid "Decrements bytecode counter by *delta*. Does not check for interrupts."
 msgstr ""
+"Verringert den Bytecode-Zähler um *delta*. Prüft nicht auf Unterbrechungen."
 
 #: ../../library/dis.rst:1386
 msgid ""
 "If ``STACK[-1]`` is true, increments the bytecode counter by *delta*. "
 "``STACK[-1]`` is popped."
 msgstr ""
+"Ist ``STACK[-1]`` wahr, wird der Bytecode-Zähler um *delta* erhöht. "
+"``STACK[-1]`` wird entfernt."
 
 #: ../../library/dis.rst:1389 ../../library/dis.rst:1405
 msgid ""
@@ -1515,29 +2029,38 @@ msgid ""
 "opcode is a pseudo-instruction, replaced in final bytecode by the directed "
 "versions (forward/backward)."
 msgstr ""
+"Die oparg ist jetzt ein relatives Delta statt eines absoluten Ziels. Dieser "
+"Opcode ist eine Pseudo-Instruktion, die im endgültigen Bytecode durch die "
+"gerichteten Versionen (vorwärts/rückwärts) ersetzt wird."
 
 #: ../../library/dis.rst:1394 ../../library/dis.rst:1410
 #: ../../library/dis.rst:1423 ../../library/dis.rst:1434
 msgid "This is no longer a pseudo-instruction."
-msgstr ""
+msgstr "Dies ist keine Pseudo-Instruktion mehr."
 
 #: ../../library/dis.rst:1402
 msgid ""
 "If ``STACK[-1]`` is false, increments the bytecode counter by *delta*. "
 "``STACK[-1]`` is popped."
 msgstr ""
+"Ist ``STACK[-1]`` falsch, wird der Bytecode-Zähler um *delta* erhöht. "
+"``STACK[-1]`` wird entfernt."
 
 #: ../../library/dis.rst:1418
 msgid ""
 "If ``STACK[-1]`` is not ``None``, increments the bytecode counter by "
 "*delta*. ``STACK[-1]`` is popped."
 msgstr ""
+"Ist ``STACK[-1]`` nicht ``None``, wird der Bytecode-Zähler um *delta* "
+"erhöht. ``STACK[-1]`` wird entfernt."
 
 #: ../../library/dis.rst:1429
 msgid ""
 "If ``STACK[-1]`` is ``None``, increments the bytecode counter by *delta*. "
 "``STACK[-1]`` is popped."
 msgstr ""
+"Ist ``STACK[-1]`` ``None``, wird der Bytecode-Zähler um *delta* erhöht. "
+"``STACK[-1]`` wird entfernt."
 
 #: ../../library/dis.rst:1439
 msgid ""
@@ -1549,16 +2072,25 @@ msgid ""
 "iterator indicates it is :term:`exhausted` then the byte code counter is "
 "incremented by *delta*."
 msgstr ""
+"``STACK[-2]`` ist ein :term:`Iterator <iterator>` (oder ein virtueller "
+"Iterator, siehe :opcode:`GET_ITER`), und ``STACK[-1]`` ist der mit ihm "
+"von :opcode:`GET_ITER` abgelegte Wert. Holt das nächste Element und ruft bei "
+"Bedarf die Methode :meth:`~iterator.__next__` des Iterators auf. Liefert das "
+"einen neuen Wert, wird er auf den Stack gelegt (wobei der Iterator darunter "
+"bleibt). Zeigt der Iterator an, dass er :term:`erschöpft <exhausted>` ist, "
+"wird der Bytecode-Zähler um *delta* erhöht."
 
 #: ../../library/dis.rst:1447
 msgid "Up until 3.11 the iterator was popped when it was exhausted."
-msgstr ""
+msgstr "Bis 3.11 wurde der Iterator entfernt, wenn er erschöpft war."
 
 #: ../../library/dis.rst:1450
 msgid ""
 "The iterator is now followed on the stack by the value pushed with it "
 "by :opcode:`GET_ITER`."
 msgstr ""
+"Auf den Iterator folgt auf dem Stack jetzt der mit ihm "
+"von :opcode:`GET_ITER` abgelegte Wert."
 
 #: ../../library/dis.rst:1456
 msgid ""
@@ -1566,44 +2098,59 @@ msgid ""
 "of ``namei`` is set, a ``NULL`` is pushed onto the stack after the global "
 "variable."
 msgstr ""
+"Lädt die globale Variable namens ``co_names[namei>>1]`` auf den Stack. Ist "
+"das niedrigste Bit von ``namei`` gesetzt, wird nach der globalen Variable "
+"ein ``NULL`` auf den Stack gelegt."
 
 #: ../../library/dis.rst:1460
 msgid "The low bit of ``namei`` indicates whether a ``NULL`` is pushed."
 msgstr ""
+"Das niedrigste Bit von ``namei`` gibt an, ob ein ``NULL`` abgelegt wird."
 
 #: ../../library/dis.rst:1463
 msgid ""
 "The ``NULL`` is pushed after the global variable, rather than before it."
-msgstr ""
+msgstr "Das ``NULL`` wird nach der globalen Variable abgelegt und nicht davor."
 
 #: ../../library/dis.rst:1468
 msgid ""
 "Pushes a reference to the local ``co_varnames[var_num]`` onto the stack."
 msgstr ""
+"Legt eine Referenz auf die lokale Variable ``co_varnames[var_num]`` auf den "
+"Stack."
 
 #: ../../library/dis.rst:1470
 msgid ""
 "This opcode is now only used in situations where the local variable is "
 "guaranteed to be initialized. It cannot raise :exc:`UnboundLocalError`."
 msgstr ""
+"Dieser Opcode wird jetzt nur noch in Situationen verwendet, in denen "
+"garantiert ist, dass die lokale Variable initialisiert ist. Er "
+"kann :exc:`UnboundLocalError` nicht auslösen."
 
 #: ../../library/dis.rst:1476
 msgid ""
 "Pushes a borrowed reference to the local ``co_varnames[var_num]`` onto the "
 "stack."
 msgstr ""
+"Legt eine geliehene Referenz auf die lokale Variable "
+"``co_varnames[var_num]`` auf den Stack."
 
 #: ../../library/dis.rst:1483
 msgid ""
 "Pushes references to ``co_varnames[var_nums >> 4]`` and "
 "``co_varnames[var_nums & 15]`` onto the stack."
 msgstr ""
+"Legt Referenzen auf ``co_varnames[var_nums >> 4]`` und "
+"``co_varnames[var_nums & 15]`` auf den Stack."
 
 #: ../../library/dis.rst:1491
 msgid ""
 "Pushes borrowed references to ``co_varnames[var_nums >> 4]`` and "
 "``co_varnames[var_nums & 15]`` onto the stack."
 msgstr ""
+"Legt geliehene Referenzen auf ``co_varnames[var_nums >> 4]`` und "
+"``co_varnames[var_nums & 15]`` auf den Stack."
 
 #: ../../library/dis.rst:1498
 msgid ""
@@ -1611,6 +2158,9 @@ msgid ""
 "raising an :exc:`UnboundLocalError` if the local variable has not been "
 "initialized."
 msgstr ""
+"Legt eine Referenz auf die lokale Variable ``co_varnames[var_num]`` auf den "
+"Stack und löst eine :exc:`UnboundLocalError` aus, wenn die lokale Variable "
+"nicht initialisiert wurde."
 
 #: ../../library/dis.rst:1506
 msgid ""
@@ -1618,16 +2168,22 @@ msgid ""
 "pushes ``NULL`` onto the stack if the local variable has not been "
 "initialized) and sets ``co_varnames[var_num]`` to ``NULL``."
 msgstr ""
+"Legt eine Referenz auf die lokale Variable ``co_varnames[var_num]`` auf den "
+"Stack (oder legt ``NULL`` auf den Stack, wenn die lokale Variable nicht "
+"initialisiert wurde) und setzt ``co_varnames[var_num]`` auf ``NULL``."
 
 #: ../../library/dis.rst:1514
 msgid "Stores ``STACK.pop()`` into the local ``co_varnames[var_num]``."
 msgstr ""
+"Speichert ``STACK.pop()`` in der lokalen Variable ``co_varnames[var_num]``."
 
 #: ../../library/dis.rst:1518
 msgid ""
 "Stores ``STACK[-1]`` into ``co_varnames[var_nums >> 4]`` and ``STACK[-2]`` "
 "into ``co_varnames[var_nums & 15]``."
 msgstr ""
+"Speichert ``STACK[-1]`` in ``co_varnames[var_nums >> 4]`` und ``STACK[-2]`` "
+"in ``co_varnames[var_nums & 15]``."
 
 #: ../../library/dis.rst:1525
 msgid ""
@@ -1635,28 +2191,38 @@ msgid ""
 "pushes a reference to the local ``co_varnames[var_nums & 15]`` onto the "
 "stack."
 msgstr ""
+"Speichert ``STACK.pop()`` in der lokalen Variable ``co_varnames[var_nums >> "
+"4]`` und legt eine Referenz auf die lokale Variable ``co_varnames[var_nums & "
+"15]`` auf den Stack."
 
 #: ../../library/dis.rst:1533
 msgid "Deletes local ``co_varnames[var_num]``."
-msgstr ""
+msgstr "Löscht die lokale Variable ``co_varnames[var_num]``."
 
 #: ../../library/dis.rst:1538
 msgid ""
 "Creates a new cell in slot ``i``.  If that slot is nonempty then that value "
 "is stored into the new cell."
 msgstr ""
+"Erzeugt eine neue Zelle in Slot ``i``. Ist dieser Slot nicht leer, wird "
+"dieser Wert in der neuen Zelle gespeichert."
 
 #: ../../library/dis.rst:1546
 msgid ""
 "Loads the cell contained in slot ``i`` of the \"fast locals\" storage. "
 "Pushes a reference to the object the cell contains on the stack."
 msgstr ""
+"Lädt die in Slot ``i`` des Speichers der „schnellen lokalen Variablen“ "
+"enthaltene Zelle. Legt eine Referenz auf das Objekt, das die Zelle enthält, "
+"auf den Stack."
 
 #: ../../library/dis.rst:1549 ../../library/dis.rst:1571
 #: ../../library/dis.rst:1582
 msgid ""
 "``i`` is no longer offset by the length of :attr:`~codeobject.co_varnames`."
 msgstr ""
+"``i`` wird nicht mehr um die Länge von :attr:`~codeobject.co_varnames` "
+"verschoben."
 
 #: ../../library/dis.rst:1555
 msgid ""
@@ -1668,18 +2234,30 @@ msgid ""
 "LOAD_CLASSDEREF`) and in :ref:`annotation scopes <annotation-scopes>` within "
 "class bodies."
 msgstr ""
+"Entfernt ein Mapping vom Stack und schlägt darin den Namen nach, der Slot "
+"``i`` des Speichers der „schnellen lokalen Variablen“ zugeordnet ist. Wird "
+"der Name dort nicht gefunden, wird er aus der in Slot ``i`` enthaltenen "
+"Zelle geladen, ähnlich wie bei :opcode:`LOAD_DEREF`. Das wird zum Laden "
+"von :term:`Closure-Variablen <closure variable>` in Klassenrümpfen (die "
+"früher :opcode:`!LOAD_CLASSDEREF` verwendeten) und in :ref:`Annotation-"
+"Geltungsbereichen <annotation-scopes>` innerhalb von Klassenrümpfen "
+"verwendet."
 
 #: ../../library/dis.rst:1568
 msgid ""
 "Stores ``STACK.pop()`` into the cell contained in slot ``i`` of the \"fast "
 "locals\" storage."
 msgstr ""
+"Speichert ``STACK.pop()`` in der Zelle, die in Slot ``i`` des Speichers der "
+"„schnellen lokalen Variablen“ enthalten ist."
 
 #: ../../library/dis.rst:1577
 msgid ""
 "Empties the cell contained in slot ``i`` of the \"fast locals\" storage. "
 "Used by the :keyword:`del` statement."
 msgstr ""
+"Leert die Zelle, die in Slot ``i`` des Speichers der „schnellen lokalen "
+"Variablen“ enthalten ist. Wird von der :keyword:`del`-Anweisung verwendet."
 
 #: ../../library/dis.rst:1588
 msgid ""
@@ -1687,49 +2265,59 @@ msgid ""
 "the closure into the frame. Removes the need for special code on the "
 "caller's side when calling closures."
 msgstr ""
+"Kopiert die ``n`` :term:`freien (Closure-)Variablen <closure variable>` aus "
+"der Closure in den Frame. Macht besonderen Code auf Seiten des Aufrufers "
+"beim Aufruf von Closures überflüssig."
 
 #: ../../library/dis.rst:1597
 msgid ""
 "Raises an exception using one of the 3 forms of the ``raise`` statement, "
 "depending on the value of *argc*:"
 msgstr ""
+"Löst je nach Wert von *argc* mit einer der 3 Formen der ``raise``-Anweisung "
+"eine Ausnahme aus:"
 
 #: ../../library/dis.rst:1600
 msgid "0: ``raise`` (re-raise previous exception)"
-msgstr ""
+msgstr "0: ``raise`` (vorherige Ausnahme erneut auslösen)"
 
 #: ../../library/dis.rst:1601
 msgid ""
 "1: ``raise STACK[-1]`` (raise exception instance or type at ``STACK[-1]``)"
 msgstr ""
+"1: ``raise STACK[-1]`` (Ausnahmeinstanz oder -typ in ``STACK[-1]`` auslösen)"
 
 #: ../../library/dis.rst:1602
 msgid ""
 "2: ``raise STACK[-2] from STACK[-1]`` (raise exception instance or type at "
 "``STACK[-2]`` with ``__cause__`` set to ``STACK[-1]``)"
 msgstr ""
+"2: ``raise STACK[-2] from STACK[-1]`` (Ausnahmeinstanz oder -typ in "
+"``STACK[-2]`` auslösen, wobei ``__cause__`` auf ``STACK[-1]`` gesetzt wird)"
 
 #: ../../library/dis.rst:1608
 msgid ""
 "Calls a callable object with the number of arguments specified by ``argc``. "
 "On the stack are (in ascending order):"
 msgstr ""
+"Ruft ein aufrufbares Objekt mit der durch ``argc`` angegebenen Anzahl von "
+"Argumenten auf. Auf dem Stack liegen (in aufsteigender Reihenfolge):"
 
 #: ../../library/dis.rst:1611 ../../library/dis.rst:1635
 msgid "The callable"
-msgstr ""
+msgstr "Das Callable"
 
 #: ../../library/dis.rst:1612 ../../library/dis.rst:1636
 msgid "``self`` or ``NULL``"
-msgstr ""
+msgstr "``self`` oder ``NULL``"
 
 #: ../../library/dis.rst:1613 ../../library/dis.rst:1637
 msgid "The remaining positional arguments"
-msgstr ""
+msgstr "Die übrigen Positionsargumente"
 
 #: ../../library/dis.rst:1615
 msgid "``argc`` is the total of the positional arguments, excluding ``self``."
-msgstr ""
+msgstr "``argc`` ist die Gesamtzahl der Positionsargumente ohne ``self``."
 
 #: ../../library/dis.rst:1617
 msgid ""
@@ -1737,28 +2325,37 @@ msgid ""
 "callable object with those arguments, and pushes the return value returned "
 "by the callable object."
 msgstr ""
+"``CALL`` entfernt alle Argumente und das aufrufbare Objekt vom Stack, ruft "
+"das aufrufbare Objekt mit diesen Argumenten auf und legt den vom aufrufbaren "
+"Objekt zurückgegebenen Rückgabewert ab."
 
 #: ../../library/dis.rst:1623
 msgid "The callable now always appears at the same position on the stack."
 msgstr ""
+"Das Callable erscheint jetzt immer an derselben Position auf dem Stack."
 
 #: ../../library/dis.rst:1626
 msgid "Calls with keyword arguments are now handled by :opcode:`CALL_KW`."
 msgstr ""
+"Aufrufe mit Schlüsselwortargumenten werden jetzt von :opcode:`CALL_KW` "
+"behandelt."
 
 #: ../../library/dis.rst:1632
 msgid ""
 "Calls a callable object with the number of arguments specified by ``argc``, "
 "including one or more named arguments. On the stack are (in ascending order):"
 msgstr ""
+"Ruft ein aufrufbares Objekt mit der durch ``argc`` angegebenen Anzahl von "
+"Argumenten auf, einschließlich eines oder mehrerer benannter Argumente. Auf "
+"dem Stack liegen (in aufsteigender Reihenfolge):"
 
 #: ../../library/dis.rst:1638
 msgid "The named arguments"
-msgstr ""
+msgstr "Die benannten Argumente"
 
 #: ../../library/dis.rst:1639
 msgid "A :class:`tuple` of keyword argument names"
-msgstr ""
+msgstr "Ein :class:`tuple` mit den Namen der Schlüsselwortargumente"
 
 #: ../../library/dis.rst:1641
 msgid ""
@@ -1766,6 +2363,9 @@ msgid ""
 "``self``. The length of the tuple of keyword argument names is the number of "
 "named arguments."
 msgstr ""
+"``argc`` ist die Gesamtzahl der Positions- und benannten Argumente ohne "
+"``self``. Die Länge des Tupels der Namen der Schlüsselwortargumente ist die "
+"Anzahl der benannten Argumente."
 
 #: ../../library/dis.rst:1644
 msgid ""
@@ -1773,6 +2373,10 @@ msgid ""
 "off the stack, calls the callable object with those arguments, and pushes "
 "the return value returned by the callable object."
 msgstr ""
+"``CALL_KW`` entfernt alle Argumente, die Schlüsselwortnamen und das "
+"aufrufbare Objekt vom Stack, ruft das aufrufbare Objekt mit diesen "
+"Argumenten auf und legt den vom aufrufbaren Objekt zurückgegebenen "
+"Rückgabewert ab."
 
 #: ../../library/dis.rst:1653
 msgid ""
@@ -1785,32 +2389,51 @@ msgid ""
 "callable object off the stack, calls the callable object with those "
 "arguments, and pushes the return value returned by the callable object."
 msgstr ""
+"Ruft ein aufrufbares Objekt mit einer variablen Menge von Positions- und "
+"Schlüsselwortargumenten auf. Ist das niedrigste Bit von *flags* gesetzt, "
+"enthält die Spitze des Stacks ein Mapping-Objekt mit zusätzlichen "
+"Schlüsselwortargumenten. Bevor das Callable aufgerufen wird, werden das "
+"Mapping-Objekt und das Iterable-Objekt jeweils „entpackt“ und ihr Inhalt als "
+"Schlüsselwort- beziehungsweise Positionsargumente übergeben. "
+"``CALL_FUNCTION_EX`` entfernt alle Argumente und das aufrufbare Objekt vom "
+"Stack, ruft das aufrufbare Objekt mit diesen Argumenten auf und legt den vom "
+"aufrufbaren Objekt zurückgegebenen Rückgabewert ab."
 
 #: ../../library/dis.rst:1668
 msgid ""
 "Pushes a ``NULL`` to the stack. Used in the call sequence to match the "
 "``NULL`` pushed by :opcode:`LOAD_ATTR` for non-method calls."
 msgstr ""
+"Legt ein ``NULL`` auf den Stack. Wird in der Aufrufsequenz verwendet, um dem "
+"``NULL`` zu entsprechen, das :opcode:`LOAD_ATTR` bei Nicht-Methodenaufrufen "
+"ablegt."
 
 #: ../../library/dis.rst:1677
 msgid ""
 "Pushes a new function object on the stack built from the code object at "
 "``STACK[-1]``."
 msgstr ""
+"Legt ein neues Funktionsobjekt auf den Stack, das aus dem Code-Objekt in "
+"``STACK[-1]`` gebaut wird."
 
 #: ../../library/dis.rst:1679
 msgid "Flag value ``0x04`` is a tuple of strings instead of dictionary"
 msgstr ""
+"Der Flag-Wert ``0x04`` ist ein Tupel von Zeichenketten statt eines "
+"Dictionarys"
 
 #: ../../library/dis.rst:1682
 msgid "Qualified name at ``STACK[-1]`` was removed."
-msgstr ""
+msgstr "Der qualifizierte Name in ``STACK[-1]`` wurde entfernt."
 
 #: ../../library/dis.rst:1685
 msgid ""
 "Extra function attributes on the stack, signaled by oparg flags, were "
 "removed. They now use :opcode:`SET_FUNCTION_ATTRIBUTE`."
 msgstr ""
+"Zusätzliche Funktionsattribute auf dem Stack, die durch oparg-Flags "
+"signalisiert wurden, wurden entfernt. Sie verwenden "
+"jetzt :opcode:`SET_FUNCTION_ATTRIBUTE`."
 
 #: ../../library/dis.rst:1692
 msgid ""
@@ -1819,39 +2442,55 @@ msgid ""
 "and leaves the function at ``STACK[-1]``. The flag determines which "
 "attribute to set:"
 msgstr ""
+"Setzt ein Attribut an einem Funktionsobjekt. Erwartet die Funktion in "
+"``STACK[-1]`` und den zu setzenden Attributwert in ``STACK[-2]``, verbraucht "
+"beide und lässt die Funktion in ``STACK[-1]``. Das Flag bestimmt, welches "
+"Attribut gesetzt wird:"
 
 #: ../../library/dis.rst:1696
 msgid ""
 "``0x01`` a tuple of default values for positional-only and positional-or-"
 "keyword parameters in positional order"
 msgstr ""
+"``0x01`` ein Tupel von Standardwerten für nur positionelle und positionelle-"
+"oder-Schlüsselwort-Parameter in positioneller Reihenfolge"
 
 #: ../../library/dis.rst:1698
 msgid "``0x02`` a dictionary of keyword-only parameters' default values"
 msgstr ""
+"``0x02`` ein Dictionary der Standardwerte der nur als Schlüsselwort "
+"verwendbaren Parameter"
 
 #: ../../library/dis.rst:1699
 msgid "``0x04`` a tuple of strings containing parameters' annotations"
 msgstr ""
+"``0x04`` ein Tupel von Zeichenketten mit den Annotationen der Parameter"
 
 #: ../../library/dis.rst:1700
 msgid "``0x08`` a tuple containing cells for free variables, making a closure"
 msgstr ""
+"``0x08`` ein Tupel mit Zellen für freie Variablen, das eine Closure bildet"
 
 #: ../../library/dis.rst:1701
 msgid "``0x10`` the :term:`annotate function` for the function object"
 msgstr ""
+"``0x10`` die :term:`Annotate-Funktion <annotate function>` für das "
+"Funktionsobjekt"
 
 #: ../../library/dis.rst:1705
 msgid ""
 "Added ``0x10`` to indicate the annotate function for the function object."
 msgstr ""
+"``0x10`` wurde hinzugefügt, um die Annotate-Funktion für das Funktionsobjekt "
+"anzugeben."
 
 #: ../../library/dis.rst:1713
 msgid ""
 "Pushes a slice object on the stack.  *argc* must be 2 or 3.  If it is 2, "
 "implements::"
 msgstr ""
+"Legt ein Slice-Objekt auf den Stack. *argc* muss 2 oder 3 sein. Ist es 2, "
+"wird implementiert::"
 
 #: ../../library/dis.rst:1715
 msgid ""
@@ -1859,10 +2498,13 @@ msgid ""
 "start = STACK.pop()\n"
 "STACK.append(slice(start, end))"
 msgstr ""
+"end = STACK.pop()\n"
+"start = STACK.pop()\n"
+"STACK.append(slice(start, end))"
 
 #: ../../library/dis.rst:1719
 msgid "if it is 3, implements::"
-msgstr ""
+msgstr "wenn es 3 ist, wird implementiert::"
 
 #: ../../library/dis.rst:1721
 msgid ""
@@ -1871,10 +2513,14 @@ msgid ""
 "start = STACK.pop()\n"
 "STACK.append(slice(start, end, step))"
 msgstr ""
+"step = STACK.pop()\n"
+"end = STACK.pop()\n"
+"start = STACK.pop()\n"
+"STACK.append(slice(start, end, step))"
 
 #: ../../library/dis.rst:1726
 msgid "See the :func:`slice` built-in function for more information."
-msgstr ""
+msgstr "Weitere Informationen siehe die integrierte Funktion :func:`slice`."
 
 #: ../../library/dis.rst:1731
 msgid ""
@@ -1883,10 +2529,15 @@ msgid ""
 "argument. For each opcode, at most three prefixal ``EXTENDED_ARG`` are "
 "allowed, forming an argument from two-byte to four-byte."
 msgstr ""
+"Stellt jedem Opcode voran, dessen Argument zu groß ist, um in das "
+"standardmäßige eine Byte zu passen. *ext* enthält ein zusätzliches Byte, das "
+"als höhere Bits im Argument dient. Für jeden Opcode sind höchstens drei "
+"vorangestellte ``EXTENDED_ARG`` erlaubt, die ein Argument von zwei bis vier "
+"Bytes bilden."
 
 #: ../../library/dis.rst:1739
 msgid "Convert value to a string, depending on ``oparg``::"
-msgstr ""
+msgstr "Wandelt je nach ``oparg`` einen Wert in eine Zeichenkette um::"
 
 #: ../../library/dis.rst:1741
 msgid ""
@@ -1894,27 +2545,32 @@ msgid ""
 "result = func(value)\n"
 "STACK.append(result)"
 msgstr ""
+"value = STACK.pop()\n"
+"result = func(value)\n"
+"STACK.append(result)"
 
 #: ../../library/dis.rst:1745
 msgid "``oparg == 1``: call :func:`str` on *value*"
-msgstr ""
+msgstr "``oparg == 1``: ruft :func:`str` auf *value* auf"
 
 #: ../../library/dis.rst:1746
 msgid "``oparg == 2``: call :func:`repr` on *value*"
-msgstr ""
+msgstr "``oparg == 2``: ruft :func:`repr` auf *value* auf"
 
 #: ../../library/dis.rst:1747
 msgid "``oparg == 3``: call :func:`ascii` on *value*"
-msgstr ""
+msgstr "``oparg == 3``: ruft :func:`ascii` auf *value* auf"
 
 #: ../../library/dis.rst:1749 ../../library/dis.rst:1762
 #: ../../library/dis.rst:1775
 msgid "Used for implementing formatted string literals (f-strings)."
 msgstr ""
+"Wird zur Implementierung von formatierten Zeichenkettenliteralen (f-Strings) "
+"verwendet."
 
 #: ../../library/dis.rst:1756
 msgid "Formats the value on top of stack::"
-msgstr ""
+msgstr "Formatiert den Wert an der Spitze des Stacks::"
 
 #: ../../library/dis.rst:1758
 msgid ""
@@ -1922,10 +2578,13 @@ msgid ""
 "result = value.__format__(\"\")\n"
 "STACK.append(result)"
 msgstr ""
+"value = STACK.pop()\n"
+"result = value.__format__(\"\")\n"
+"STACK.append(result)"
 
 #: ../../library/dis.rst:1768
 msgid "Formats the given value with the given format spec::"
-msgstr ""
+msgstr "Formatiert den angegebenen Wert mit der angegebenen Formatangabe::"
 
 #: ../../library/dis.rst:1770
 msgid ""
@@ -1934,6 +2593,10 @@ msgid ""
 "result = value.__format__(spec)\n"
 "STACK.append(result)"
 msgstr ""
+"spec = STACK.pop()\n"
+"value = STACK.pop()\n"
+"result = value.__format__(spec)\n"
+"STACK.append(result)"
 
 #: ../../library/dis.rst:1782
 msgid ""
@@ -1941,6 +2604,9 @@ msgid ""
 "class being matched against, and ``STACK[-3]`` is the match subject.  "
 "*count* is the number of positional sub-patterns."
 msgstr ""
+"``STACK[-1]`` ist ein Tupel von Schlüsselwort-Attributnamen, ``STACK[-2]`` "
+"ist die Klasse, gegen die abgeglichen wird, und ``STACK[-3]`` ist das Match-"
+"Subjekt. *count* ist die Anzahl der positionellen Teilmuster."
 
 #: ../../library/dis.rst:1786
 msgid ""
@@ -1949,44 +2615,58 @@ msgid ""
 "required by *count* and ``STACK[-1]``, push a tuple of extracted attributes. "
 "Otherwise, push ``None``."
 msgstr ""
+"Entfernt ``STACK[-1]``, ``STACK[-2]`` und ``STACK[-3]``. Ist ``STACK[-3]`` "
+"eine Instanz von ``STACK[-2]`` und hat die durch *count* und ``STACK[-1]`` "
+"verlangten positionellen und Schlüsselwort-Attribute, wird ein Tupel der "
+"extrahierten Attribute abgelegt. Andernfalls wird ``None`` abgelegt."
 
 #: ../../library/dis.rst:1800
 msgid "A no-op. Performs internal tracing, debugging and optimization checks."
 msgstr ""
+"Eine Nulloperation. Führt interne Prüfungen für Tracing, Debugging und "
+"Optimierung durch."
 
 #: ../../library/dis.rst:1802
 msgid ""
 "The ``context`` operand consists of two parts. The lowest two bits indicate "
 "where the ``RESUME`` occurs:"
 msgstr ""
+"Der Operand ``context`` besteht aus zwei Teilen. Die untersten zwei Bits "
+"zeigen an, wo das ``RESUME`` auftritt:"
 
 #: ../../library/dis.rst:1805
 msgid ""
 "``0`` The start of a function, which is neither a generator, coroutine nor "
 "an async generator"
 msgstr ""
+"``0`` Der Beginn einer Funktion, die weder ein Generator noch eine Coroutine "
+"noch ein asynchroner Generator ist"
 
 #: ../../library/dis.rst:1807
 msgid "``1`` After a ``yield`` expression"
-msgstr ""
+msgstr "``1`` Nach einem ``yield``-Ausdruck"
 
 #: ../../library/dis.rst:1808
 msgid "``2`` After a ``yield from`` expression"
-msgstr ""
+msgstr "``2`` Nach einem ``yield from``-Ausdruck"
 
 #: ../../library/dis.rst:1809
 msgid "``3`` After an ``await`` expression"
-msgstr ""
+msgstr "``3`` Nach einem ``await``-Ausdruck"
 
 #: ../../library/dis.rst:1811
 msgid ""
 "The next bit is ``1`` if the RESUME is at except-depth ``1``, and ``0`` "
 "otherwise."
 msgstr ""
+"Das nächste Bit ist ``1``, wenn das RESUME bei Ausnahmetiefe ``1`` liegt, "
+"andernfalls ``0``."
 
 #: ../../library/dis.rst:1816
 msgid "The oparg value changed to include information about except-depth"
 msgstr ""
+"Der Wert von oparg wurde geändert, um Informationen zur Ausnahmetiefe "
+"aufzunehmen"
 
 #: ../../library/dis.rst:1822
 msgid ""
@@ -1994,6 +2674,10 @@ msgid ""
 "Used as first opcode of in code object for the above mentioned callables. "
 "Clear the current frame and return the newly created generator."
 msgstr ""
+"Erzeugt aus dem aktuellen Frame einen Generator, eine Coroutine oder einen "
+"asynchronen Generator. Wird als erster Opcode im Code-Objekt der genannten "
+"Aufrufbaren verwendet. Leert den aktuellen Frame und gibt den neu erzeugten "
+"Generator zurück."
 
 #: ../../library/dis.rst:1831
 msgid ""
@@ -2002,6 +2686,10 @@ msgid ""
 "receiver by :opcode:`GET_ITER`; if the receiver is a virtual iterator, it is "
 "advanced as by :opcode:`FOR_ITER`."
 msgstr ""
+"Äquivalent zu ``STACK[-1] = STACK[-3].send(STACK[-1])``. Wird in ``yield "
+"from``- und ``await``-Anweisungen verwendet. ``STACK[-2]`` ist der mit dem "
+"Empfänger von :opcode:`GET_ITER` abgelegte Wert. Ist der Empfänger ein "
+"virtueller Iterator, wird er wie von :opcode:`FOR_ITER` weitergeschaltet."
 
 #: ../../library/dis.rst:1836
 msgid ""
@@ -2009,12 +2697,17 @@ msgid ""
 "push the exception's ``value`` attribute, and increment the bytecode counter "
 "by *delta*."
 msgstr ""
+"Löst der Aufruf :exc:`StopIteration` aus, wird der oberste Wert vom Stack "
+"entfernt, das Attribut ``value`` der Ausnahme abgelegt und der Bytecode-"
+"Zähler um *delta* erhöht."
 
 #: ../../library/dis.rst:1842
 msgid ""
 "The receiver is now at ``STACK[-3]``, followed by the value pushed with it "
 "by :opcode:`GET_ITER`."
 msgstr ""
+"Der Empfänger liegt jetzt in ``STACK[-3]``, gefolgt von dem mit ihm "
+"von :opcode:`GET_ITER` abgelegten Wert."
 
 #: ../../library/dis.rst:1849
 msgid ""
@@ -2022,18 +2715,25 @@ msgid ""
 "opcodes in the range [0,255] which don't use their argument and those that "
 "do (``< HAVE_ARGUMENT`` and ``>= HAVE_ARGUMENT``, respectively)."
 msgstr ""
+"Das ist nicht wirklich ein Opcode. Er kennzeichnet die Trennlinie zwischen "
+"Opcodes im Bereich [0,255], die ihr Argument nicht verwenden, und solchen, "
+"die es verwenden (``< HAVE_ARGUMENT`` beziehungsweise ``>= HAVE_ARGUMENT``)."
 
 #: ../../library/dis.rst:1853
 msgid ""
 "If your application uses pseudo instructions or specialized instructions, "
 "use the :data:`hasarg` collection instead."
 msgstr ""
+"Verwendet deine Anwendung Pseudo-Instruktionen oder spezialisierte "
+"Instruktionen, verwende stattdessen die Sammlung :data:`hasarg`."
 
 #: ../../library/dis.rst:1856
 msgid ""
 "Now every instruction has an argument, but opcodes ``< HAVE_ARGUMENT`` "
 "ignore it. Before, only opcodes ``>= HAVE_ARGUMENT`` had an argument."
 msgstr ""
+"Jetzt hat jede Instruktion ein Argument, aber Opcodes ``< HAVE_ARGUMENT`` "
+"ignorieren es. Zuvor hatten nur Opcodes ``>= HAVE_ARGUMENT`` ein Argument."
 
 #: ../../library/dis.rst:1860
 msgid ""
@@ -2041,10 +2741,13 @@ msgid ""
 "not true that comparison with ``HAVE_ARGUMENT`` indicates whether they use "
 "their arg."
 msgstr ""
+"Pseudo-Instruktionen wurden zum Modul :mod:`!dis` hinzugefügt, und für sie "
+"gilt nicht, dass der Vergleich mit ``HAVE_ARGUMENT`` anzeigt, ob sie ihr "
+"Argument verwenden."
 
 #: ../../library/dis.rst:1865
 msgid "Use :data:`hasarg` instead."
-msgstr ""
+msgstr "Verwende stattdessen :data:`hasarg`."
 
 #: ../../library/dis.rst:1870
 msgid ""
@@ -2052,14 +2755,18 @@ msgid ""
 "argument and sets ``STACK[-1]`` to the result. Used to implement "
 "functionality that is not performance critical."
 msgstr ""
+"Ruft eine intrinsische Funktion mit einem Argument auf. Übergibt "
+"``STACK[-1]`` als Argument und setzt ``STACK[-1]`` auf das Ergebnis. Wird "
+"verwendet, um Funktionalität zu implementieren, die nicht leistungskritisch "
+"ist."
 
 #: ../../library/dis.rst:1874 ../../library/dis.rst:1928
 msgid "The operand determines which intrinsic function is called:"
-msgstr ""
+msgstr "Der Operand bestimmt, welche intrinsische Funktion aufgerufen wird:"
 
 #: ../../library/dis.rst:1877 ../../library/dis.rst:1931
 msgid "Operand"
-msgstr ""
+msgstr "Operand"
 
 #: ../../library/dis.rst:1877 ../../library/dis.rst:1931
 msgid "Description"
@@ -2067,95 +2774,96 @@ msgstr "Beschreibung"
 
 #: ../../library/dis.rst:1879
 msgid "``INTRINSIC_1_INVALID``"
-msgstr ""
+msgstr "``INTRINSIC_1_INVALID``"
 
 #: ../../library/dis.rst:1879 ../../library/dis.rst:1933
 msgid "Not valid"
-msgstr ""
+msgstr "Ungültig"
 
 #: ../../library/dis.rst:1881
 msgid "``INTRINSIC_PRINT``"
-msgstr ""
+msgstr "``INTRINSIC_PRINT``"
 
 #: ../../library/dis.rst:1881
 msgid "Prints the argument to standard out. Used in the REPL."
 msgstr ""
+"Gibt das Argument auf der Standardausgabe aus. Wird in der REPL verwendet."
 
 #: ../../library/dis.rst:1884
 msgid "``INTRINSIC_IMPORT_STAR``"
-msgstr ""
+msgstr "``INTRINSIC_IMPORT_STAR``"
 
 #: ../../library/dis.rst:1884
 msgid "Performs ``import *`` for the named module."
-msgstr ""
+msgstr "Führt ``import *`` für das benannte Modul aus."
 
 #: ../../library/dis.rst:1887
 msgid "``INTRINSIC_STOPITERATION_ERROR``"
-msgstr ""
+msgstr "``INTRINSIC_STOPITERATION_ERROR``"
 
 #: ../../library/dis.rst:1887
 msgid "Extracts the return value from a ``StopIteration`` exception."
-msgstr ""
+msgstr "Extrahiert den Rückgabewert aus einer ``StopIteration``-Ausnahme."
 
 #: ../../library/dis.rst:1890
 msgid "``INTRINSIC_ASYNC_GEN_WRAP``"
-msgstr ""
+msgstr "``INTRINSIC_ASYNC_GEN_WRAP``"
 
 #: ../../library/dis.rst:1890
 msgid "Wraps an async generator value"
-msgstr ""
+msgstr "Umhüllt einen Wert eines asynchronen Generators"
 
 #: ../../library/dis.rst:1892
 msgid "``INTRINSIC_UNARY_POSITIVE``"
-msgstr ""
+msgstr "``INTRINSIC_UNARY_POSITIVE``"
 
 #: ../../library/dis.rst:1892
 msgid "Performs the unary ``+`` operation"
-msgstr ""
+msgstr "Führt die unäre Operation ``+`` aus"
 
 #: ../../library/dis.rst:1895
 msgid "``INTRINSIC_LIST_TO_TUPLE``"
-msgstr ""
+msgstr "``INTRINSIC_LIST_TO_TUPLE``"
 
 #: ../../library/dis.rst:1895
 msgid "Converts a list to a tuple"
-msgstr ""
+msgstr "Wandelt eine Liste in ein Tupel um"
 
 #: ../../library/dis.rst:1897
 msgid "``INTRINSIC_TYPEVAR``"
-msgstr ""
+msgstr "``INTRINSIC_TYPEVAR``"
 
 #: ../../library/dis.rst:1897
 msgid "Creates a :class:`typing.TypeVar`"
-msgstr ""
+msgstr "Erzeugt ein :class:`typing.TypeVar`"
 
 #: ../../library/dis.rst:1899
 msgid "``INTRINSIC_PARAMSPEC``"
-msgstr ""
+msgstr "``INTRINSIC_PARAMSPEC``"
 
 #: ../../library/dis.rst:1899
 msgid "Creates a :class:`typing.ParamSpec`"
-msgstr ""
+msgstr "Erzeugt ein :class:`typing.ParamSpec`"
 
 #: ../../library/dis.rst:1902
 msgid "``INTRINSIC_TYPEVARTUPLE``"
-msgstr ""
+msgstr "``INTRINSIC_TYPEVARTUPLE``"
 
 #: ../../library/dis.rst:1902
 msgid "Creates a :class:`typing.TypeVarTuple`"
-msgstr ""
+msgstr "Erzeugt ein :class:`typing.TypeVarTuple`"
 
 #: ../../library/dis.rst:1905
 msgid "``INTRINSIC_SUBSCRIPT_GENERIC``"
-msgstr ""
+msgstr "``INTRINSIC_SUBSCRIPT_GENERIC``"
 
 #: ../../library/dis.rst:1905
 msgid "Returns :class:`typing.Generic` subscripted with the argument"
-msgstr ""
+msgstr "Gibt :class:`typing.Generic` mit dem Argument als Index zurück"
 
 #: ../../library/dis.rst:1908
 msgid "``INTRINSIC_TYPEALIAS``"
-msgstr ""
+msgstr "``INTRINSIC_TYPEALIAS``"
 
 #: ../../library/dis.rst:1908
 msgid ""
@@ -2163,12 +2871,17 @@ msgid ""
 "statement. The argument is a tuple of the type alias's name, type "
 "parameters, and value."
 msgstr ""
+"Erzeugt ein :class:`typing.TypeAliasType`, das in der :keyword:`type`-"
+"Anweisung verwendet wird. Das Argument ist ein Tupel aus dem Namen, den "
+"Typparametern und dem Wert des Typalias."
 
 #: ../../library/dis.rst:1920
 msgid ""
 "Calls an intrinsic function with two arguments. Used to implement "
 "functionality that is not performance critical::"
 msgstr ""
+"Ruft eine intrinsische Funktion mit zwei Argumenten auf. Wird verwendet, um "
+"Funktionalität zu implementieren, die nicht leistungskritisch ist::"
 
 #: ../../library/dis.rst:1923
 msgid ""
@@ -2177,42 +2890,48 @@ msgid ""
 "result = intrinsic2(arg1, arg2)\n"
 "STACK.append(result)"
 msgstr ""
+"arg2 = STACK.pop()\n"
+"arg1 = STACK.pop()\n"
+"result = intrinsic2(arg1, arg2)\n"
+"STACK.append(result)"
 
 #: ../../library/dis.rst:1933
 msgid "``INTRINSIC_2_INVALID``"
-msgstr ""
+msgstr "``INTRINSIC_2_INVALID``"
 
 #: ../../library/dis.rst:1935
 msgid "``INTRINSIC_PREP_RERAISE_STAR``"
-msgstr ""
+msgstr "``INTRINSIC_PREP_RERAISE_STAR``"
 
 #: ../../library/dis.rst:1935
 msgid "Calculates the :exc:`ExceptionGroup` to raise from a ``try-except*``."
 msgstr ""
+"Berechnet die :exc:`ExceptionGroup`, die aus einem ``try-except*`` ausgelöst "
+"werden soll."
 
 #: ../../library/dis.rst:1939
 msgid "``INTRINSIC_TYPEVAR_WITH_BOUND``"
-msgstr ""
+msgstr "``INTRINSIC_TYPEVAR_WITH_BOUND``"
 
 #: ../../library/dis.rst:1939
 msgid "Creates a :class:`typing.TypeVar` with a bound."
-msgstr ""
+msgstr "Erzeugt ein :class:`typing.TypeVar` mit einer Schranke."
 
 #: ../../library/dis.rst:1942
 msgid "``INTRINSIC_TYPEVAR_WITH_CONSTRAINTS``"
-msgstr ""
+msgstr "``INTRINSIC_TYPEVAR_WITH_CONSTRAINTS``"
 
 #: ../../library/dis.rst:1942
 msgid "Creates a :class:`typing.TypeVar` with constraints."
-msgstr ""
+msgstr "Erzeugt ein :class:`typing.TypeVar` mit Einschränkungen."
 
 #: ../../library/dis.rst:1946
 msgid "``INTRINSIC_SET_FUNCTION_TYPE_PARAMS``"
-msgstr ""
+msgstr "``INTRINSIC_SET_FUNCTION_TYPE_PARAMS``"
 
 #: ../../library/dis.rst:1946
 msgid "Sets the ``__type_params__`` attribute of a function."
-msgstr ""
+msgstr "Setzt das Attribut ``__type_params__`` einer Funktion."
 
 #: ../../library/dis.rst:1955
 msgid ""
@@ -2221,10 +2940,14 @@ msgid ""
 "STACK[-1]`` on the stack. If ``type(STACK[-1]).__xxx__`` is not a method, "
 "leave ``STACK[-1].__xxx__; NULL`` on the stack."
 msgstr ""
+"Führt eine Suche nach einer speziellen Methode auf ``STACK[-1]`` durch. Ist "
+"``type(STACK[-1]).__xxx__`` eine Methode, bleibt ``type(STACK[-1]).__xxx__; "
+"STACK[-1]`` auf dem Stack. Ist ``type(STACK[-1]).__xxx__`` keine Methode, "
+"bleibt ``STACK[-1].__xxx__; NULL`` auf dem Stack."
 
 #: ../../library/dis.rst:1964
 msgid "**Pseudo-instructions**"
-msgstr ""
+msgstr "**Pseudo-Instruktionen**"
 
 #: ../../library/dis.rst:1966
 msgid ""
@@ -2232,6 +2955,9 @@ msgid ""
 "compiler but are replaced by real opcodes or removed before bytecode is "
 "generated."
 msgstr ""
+"Diese Opcodes erscheinen nicht im Python-Bytecode. Sie werden vom Compiler "
+"verwendet, aber durch echte Opcodes ersetzt oder entfernt, bevor Bytecode "
+"erzeugt wird."
 
 #: ../../library/dis.rst:1971
 msgid ""
@@ -2239,6 +2965,10 @@ msgid ""
 "occurs, the value stack level is restored to its current state and control "
 "is transferred to the exception handler at ``target``."
 msgstr ""
+"Richtet einen Ausnahmebehandler für den folgenden Codeblock ein. Tritt eine "
+"Ausnahme auf, wird die Ebene des Wert-Stacks auf ihren aktuellen Zustand "
+"zurückgesetzt, und die Kontrolle wird an den Ausnahmebehandler bei "
+"``target`` übergeben."
 
 #: ../../library/dis.rst:1978
 msgid ""
@@ -2248,6 +2978,12 @@ msgid ""
 "frame are restored to their current state, and control is transferred to the "
 "exception handler at ``target``."
 msgstr ""
+"Wie ``SETUP_FINALLY``, legt aber bei einer Ausnahme auch die letzte "
+"Instruktion (``lasti``) auf den Stack, damit ``RERAISE`` sie "
+"wiederherstellen kann. Tritt eine Ausnahme auf, werden die Ebene des Wert-"
+"Stacks und die letzte Instruktion des Frames auf ihren aktuellen Zustand "
+"zurückgesetzt, und die Kontrolle wird an den Ausnahmebehandler bei "
+"``target`` übergeben."
 
 #: ../../library/dis.rst:1987
 msgid ""
@@ -2255,6 +2991,9 @@ msgid ""
 "from the stack before control is transferred to the exception handler at "
 "``target``."
 msgstr ""
+"Wie ``SETUP_CLEANUP``, aber bei einer Ausnahme wird ein weiteres Element vom "
+"Stack entfernt, bevor die Kontrolle an den Ausnahmebehandler bei ``target`` "
+"übergeben wird."
 
 #: ../../library/dis.rst:1991
 msgid ""
@@ -2263,49 +3002,63 @@ msgid ""
 "manager's :meth:`~object.__enter__` or :meth:`~object.__aenter__` to the "
 "stack."
 msgstr ""
+"Diese Variante wird in :keyword:`with`- und :keyword:`async with`-"
+"Konstrukten verwendet, die den Rückgabewert von :meth:`~object.__enter__` "
+"oder :meth:`~object.__aenter__` des Kontextmanagers auf den Stack legen."
 
 #: ../../library/dis.rst:1998
 msgid ""
 "Marks the end of the code block associated with the last ``SETUP_FINALLY``, "
 "``SETUP_CLEANUP`` or ``SETUP_WITH``."
 msgstr ""
+"Markiert das Ende des Codeblocks, der zum letzten ``SETUP_FINALLY``, "
+"``SETUP_CLEANUP`` oder ``SETUP_WITH`` gehört."
 
 #: ../../library/dis.rst:2005
 msgid ""
 "Undirected relative jump instructions which are replaced by their directed "
 "(forward/backward) counterparts by the assembler."
 msgstr ""
+"Ungerichtete relative Sprunginstruktionen, die der Assembler durch ihre "
+"gerichteten (vorwärts/rückwärts) Gegenstücke ersetzt."
 
 #: ../../library/dis.rst:2011
 msgid ""
 "Conditional jumps which do not impact the stack. Replaced by the sequence "
 "``COPY 1``, ``TO_BOOL``, ``POP_JUMP_IF_TRUE/FALSE``."
 msgstr ""
+"Bedingte Sprünge, die den Stack nicht beeinflussen. Ersetzt durch die "
+"Sequenz ``COPY 1``, ``TO_BOOL``, ``POP_JUMP_IF_TRUE/FALSE``."
 
 #: ../../library/dis.rst:2016
 msgid ""
 "Pushes a reference to the cell contained in slot ``i`` of the \"fast "
 "locals\" storage."
 msgstr ""
+"Legt eine Referenz auf die Zelle, die in Slot ``i`` des Speichers der "
+"„schnellen lokalen Variablen“ enthalten ist, auf den Stack."
 
 #: ../../library/dis.rst:2019
 msgid ""
 "Note that ``LOAD_CLOSURE`` is replaced with ``LOAD_FAST`` in the assembler."
 msgstr ""
+"Beachte, dass ``LOAD_CLOSURE`` im Assembler durch ``LOAD_FAST`` ersetzt wird."
 
 #: ../../library/dis.rst:2021
 msgid "This opcode is now a pseudo-instruction."
-msgstr ""
+msgstr "Dieser Opcode ist jetzt eine Pseudo-Instruktion."
 
 #: ../../library/dis.rst:2028
 msgid "Opcode collections"
-msgstr ""
+msgstr "Opcode-Sammlungen"
 
 #: ../../library/dis.rst:2030
 msgid ""
 "These collections are provided for automatic introspection of bytecode "
 "instructions:"
 msgstr ""
+"Diese Sammlungen dienen der automatischen Introspektion von Bytecode-"
+"Instruktionen:"
 
 #: ../../library/dis.rst:2033
 msgid ""
@@ -2313,26 +3066,29 @@ msgid ""
 "instructions as well. These are opcodes with values ``>= MIN_PSEUDO_OPCODE`` "
 "and ``>= MIN_INSTRUMENTED_OPCODE``."
 msgstr ""
+"Die Sammlungen enthalten jetzt auch Pseudo-Instruktionen und instrumentierte "
+"Instruktionen. Das sind Opcodes mit Werten ``>= MIN_PSEUDO_OPCODE`` und ``>= "
+"MIN_INSTRUMENTED_OPCODE``."
 
 #: ../../library/dis.rst:2040
 msgid "Sequence of operation names, indexable using the bytecode."
-msgstr ""
+msgstr "Sequenz von Operationsnamen, indizierbar über den Bytecode."
 
 #: ../../library/dis.rst:2045
 msgid "Dictionary mapping operation names to bytecodes."
-msgstr ""
+msgstr "Dictionary, das Operationsnamen auf Bytecodes abbildet."
 
 #: ../../library/dis.rst:2050
 msgid "Sequence of all compare operation names."
-msgstr ""
+msgstr "Sequenz aller Namen von Vergleichsoperationen."
 
 #: ../../library/dis.rst:2055
 msgid "Sequence of bytecodes that use their argument."
-msgstr ""
+msgstr "Sequenz von Bytecodes, die ihr Argument verwenden."
 
 #: ../../library/dis.rst:2062
 msgid "Sequence of bytecodes that access a constant."
-msgstr ""
+msgstr "Sequenz von Bytecodes, die auf eine Konstante zugreifen."
 
 #: ../../library/dis.rst:2067
 msgid ""
@@ -2342,42 +3098,49 @@ msgid ""
 "from this scope.  It does *not* include references to global or builtin "
 "scopes."
 msgstr ""
+"Sequenz von Bytecodes, die auf eine :term:`freie (Closure-)Variable <closure "
+"variable>` zugreifen. „Frei“ bezieht sich in diesem Zusammenhang auf Namen "
+"im aktuellen Geltungsbereich, auf die innere Geltungsbereiche verweisen, "
+"oder auf Namen in äußeren Geltungsbereichen, auf die von diesem "
+"Geltungsbereich aus verwiesen wird. Sie schließt Verweise auf globale oder "
+"integrierte Geltungsbereiche *nicht* ein."
 
 #: ../../library/dis.rst:2075
 msgid "Sequence of bytecodes that access an attribute by name."
-msgstr ""
+msgstr "Sequenz von Bytecodes, die über den Namen auf ein Attribut zugreifen."
 
 #: ../../library/dis.rst:2080
 msgid "Sequence of bytecodes that have a jump target. All jumps are relative."
 msgstr ""
+"Sequenz von Bytecodes, die ein Sprungziel haben. Alle Sprünge sind relativ."
 
 #: ../../library/dis.rst:2087
 msgid "Sequence of bytecodes that access a local variable."
-msgstr ""
+msgstr "Sequenz von Bytecodes, die auf eine lokale Variable zugreifen."
 
 #: ../../library/dis.rst:2092
 msgid "Sequence of bytecodes of Boolean operations."
-msgstr ""
+msgstr "Sequenz von Bytecodes boolescher Operationen."
 
 #: ../../library/dis.rst:2096
 msgid "Sequence of bytecodes that set an exception handler."
-msgstr ""
+msgstr "Sequenz von Bytecodes, die einen Ausnahmebehandler setzen."
 
 #: ../../library/dis.rst:2103
 msgid "Sequence of bytecodes that have a relative jump target."
-msgstr ""
+msgstr "Sequenz von Bytecodes, die ein relatives Sprungziel haben."
 
 #: ../../library/dis.rst:2105
 msgid "All jumps are now relative. Use :data:`hasjump`."
-msgstr ""
+msgstr "Alle Sprünge sind jetzt relativ. Verwende :data:`hasjump`."
 
 #: ../../library/dis.rst:2111
 msgid "Sequence of bytecodes that have an absolute jump target."
-msgstr ""
+msgstr "Sequenz von Bytecodes, die ein absolutes Sprungziel haben."
 
 #: ../../library/dis.rst:2113
 msgid "All jumps are now relative. This list is empty."
-msgstr ""
+msgstr "Alle Sprünge sind jetzt relativ. Diese Liste ist leer."
 
 #: ../../library/dis.rst:1711
 msgid "built-in function"
