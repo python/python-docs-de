@@ -22,11 +22,11 @@ msgstr ""
 
 #: ../../library/asyncio-protocol.rst:9
 msgid "Transports and Protocols"
-msgstr ""
+msgstr "Transports und Protokolle"
 
 #: ../../library/asyncio-protocol.rst:12
 msgid "Preface"
-msgstr ""
+msgstr "Vorwort"
 
 #: ../../library/asyncio-protocol.rst:13
 msgid ""
@@ -35,16 +35,24 @@ msgid ""
 "style and enable high-performance implementations of network or IPC "
 "protocols (e.g. HTTP)."
 msgstr ""
+"Transports und Protokolle werden von den **Low-Level**-APIs der "
+"Ereignisschleife verwendet, etwa :meth:`loop.create_connection`. Sie nutzen "
+"einen Callback-basierten Programmierstil und ermöglichen leistungsfähige "
+"Implementierungen von Netzwerk- oder IPC-Protokollen (z. B. HTTP)."
 
 #: ../../library/asyncio-protocol.rst:18
 msgid ""
 "Essentially, transports and protocols should only be used in libraries and "
 "frameworks and never in high-level asyncio applications."
 msgstr ""
+"Im Wesentlichen sollten Transports und Protokolle nur in Bibliotheken und "
+"Frameworks verwendet werden und nie in High-Level-asyncio-Anwendungen."
 
 #: ../../library/asyncio-protocol.rst:22
 msgid "This documentation page covers both `Transports`_ and `Protocols`_."
 msgstr ""
+"Diese Dokumentationsseite behandelt sowohl `Transports`_ als auch "
+"`Protocols`_."
 
 #: ../../library/asyncio-protocol.rst:25
 msgid "Introduction"
@@ -56,6 +64,9 @@ msgid ""
 "transmitted, while the protocol determines *which* bytes to transmit (and to "
 "some extent when)."
 msgstr ""
+"Auf der obersten Ebene befasst sich der Transport damit, *wie* Bytes "
+"übertragen werden, während das Protokoll bestimmt, *welche* Bytes übertragen "
+"werden (und bis zu einem gewissen Grad wann)."
 
 #: ../../library/asyncio-protocol.rst:30
 msgid ""
@@ -63,12 +74,18 @@ msgid ""
 "a socket (or similar I/O endpoint) while a protocol is an abstraction for an "
 "application, from the transport's point of view."
 msgstr ""
+"Anders gesagt: Ein Transport ist eine Abstraktion für einen Socket (oder "
+"einen ähnlichen E/A-Endpunkt), ein Protokoll ist aus Sicht des Transports "
+"eine Abstraktion für eine Anwendung."
 
 #: ../../library/asyncio-protocol.rst:35
 msgid ""
 "Yet another view is the transport and protocol interfaces together define an "
 "abstract interface for using network I/O and interprocess I/O."
 msgstr ""
+"Eine weitere Sichtweise: Die Schnittstellen von Transport und Protokoll "
+"definieren zusammen eine abstrakte Schnittstelle für die Verwendung von "
+"Netzwerk-E/A und Interprozess-E/A."
 
 #: ../../library/asyncio-protocol.rst:39
 msgid ""
@@ -76,6 +93,9 @@ msgid ""
 "the protocol calls transport methods to send data, while the transport calls "
 "protocol methods to pass it data that has been received."
 msgstr ""
+"Zwischen Transport- und Protokollobjekten besteht immer eine 1:1-Beziehung: "
+"Das Protokoll ruft Transport-Methoden auf, um Daten zu senden, während der "
+"Transport Protokoll-Methoden aufruft, um ihm empfangene Daten zu übergeben."
 
 #: ../../library/asyncio-protocol.rst:44
 msgid ""
@@ -85,6 +105,12 @@ msgid ""
 "represented by a *Transport* object. Such methods usually return a tuple of "
 "``(transport, protocol)``."
 msgstr ""
+"Die meisten verbindungsorientierten Methoden der Ereignisschleife "
+"(etwa :meth:`loop.create_connection`) akzeptieren üblicherweise ein Argument "
+"*protocol_factory*, das verwendet wird, um ein *Protocol*-Objekt für eine "
+"angenommene Verbindung zu erzeugen, die durch ein *Transport*-Objekt "
+"dargestellt wird. Solche Methoden geben normalerweise ein Tupel "
+"``(transport, protocol)`` zurück."
 
 #: ../../library/asyncio-protocol.rst:51
 msgid "Contents"
@@ -92,7 +118,7 @@ msgstr "Inhalt"
 
 #: ../../library/asyncio-protocol.rst:52
 msgid "This documentation page contains the following sections:"
-msgstr ""
+msgstr "Diese Dokumentationsseite enthält die folgenden Abschnitte:"
 
 #: ../../library/asyncio-protocol.rst:54
 msgid ""
@@ -100,6 +126,9 @@ msgid ""
 "asyncio :class:`BaseTransport`, :class:`ReadTransport`, :class:`WriteTransport`, :class:`Transport`, :class:`DatagramTransport`, "
 "and :class:`SubprocessTransport` classes."
 msgstr ""
+"Der Abschnitt `Transports`_ dokumentiert die asyncio-"
+"Klassen :class:`BaseTransport`, :class:`ReadTransport`, :class:`WriteTransport`, :class:`Transport`, :class:`DatagramTransport` "
+"und :class:`SubprocessTransport`."
 
 #: ../../library/asyncio-protocol.rst:59
 msgid ""
@@ -107,57 +136,72 @@ msgid ""
 "asyncio :class:`BaseProtocol`, :class:`Protocol`, :class:`BufferedProtocol`, :class:`DatagramProtocol`, "
 "and :class:`SubprocessProtocol` classes."
 msgstr ""
+"Der Abschnitt `Protocols`_ dokumentiert die asyncio-"
+"Klassen :class:`BaseProtocol`, :class:`Protocol`, :class:`BufferedProtocol`, :class:`DatagramProtocol` "
+"und :class:`SubprocessProtocol`."
 
 #: ../../library/asyncio-protocol.rst:63
 msgid ""
 "The `Examples`_ section showcases how to work with transports, protocols, "
 "and low-level event loop APIs."
 msgstr ""
+"Der Abschnitt `Examples`_ zeigt, wie man mit Transports, Protokollen und den "
+"Low-Level-APIs der Ereignisschleife arbeitet."
 
 #: ../../library/asyncio-protocol.rst:70
 msgid "Transports"
-msgstr ""
+msgstr "Transports"
 
 #: ../../library/asyncio-protocol.rst:72
 msgid "**Source code:** :source:`Lib/asyncio/transports.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/asyncio/transports.py`"
 
 #: ../../library/asyncio-protocol.rst:76
 msgid ""
 "Transports are classes provided by :mod:`asyncio` in order to abstract "
 "various kinds of communication channels."
 msgstr ""
+"Transports sind Klassen, die :mod:`asyncio` bereitstellt, um verschiedene "
+"Arten von Kommunikationskanälen zu abstrahieren."
 
 #: ../../library/asyncio-protocol.rst:79
 msgid ""
 "Transport objects are always instantiated by an :ref:`asyncio event loop "
 "<asyncio-event-loop>`."
 msgstr ""
+"Transport-Objekte werden immer von einer :ref:`asyncio-Ereignisschleife "
+"<asyncio-event-loop>` instanziiert."
 
 #: ../../library/asyncio-protocol.rst:82
 msgid ""
 "asyncio implements transports for TCP, UDP, SSL, and subprocess pipes. The "
 "methods available on a transport depend on the transport's kind."
 msgstr ""
+"asyncio implementiert Transports für TCP, UDP, SSL und Subprozess-Pipes. "
+"Welche Methoden ein Transport bietet, hängt von seiner Art ab."
 
 #: ../../library/asyncio-protocol.rst:85
 msgid ""
 "The transport classes are :ref:`not thread safe <asyncio-multithreading>`."
 msgstr ""
+"Die Transport-Klassen sind :ref:`nicht thread-sicher <asyncio-"
+"multithreading>`."
 
 #: ../../library/asyncio-protocol.rst:89
 msgid "Transports Hierarchy"
-msgstr ""
+msgstr "Hierarchie der Transports"
 
 #: ../../library/asyncio-protocol.rst:93
 msgid ""
 "Base class for all transports.  Contains methods that all asyncio transports "
 "share."
 msgstr ""
+"Basisklasse für alle Transports. Enthält Methoden, die alle asyncio-"
+"Transports gemeinsam haben."
 
 #: ../../library/asyncio-protocol.rst:98
 msgid "A base transport for write-only connections."
-msgstr ""
+msgstr "Ein Basis-Transport für Verbindungen, in die nur geschrieben wird."
 
 #: ../../library/asyncio-protocol.rst:100
 msgid ""
@@ -165,10 +209,14 @@ msgid ""
 "the :meth:`loop.connect_write_pipe` event loop method and are also used by "
 "subprocess-related methods like :meth:`loop.subprocess_exec`."
 msgstr ""
+"Instanzen der Klasse *WriteTransport* werden von der "
+"Methode :meth:`loop.connect_write_pipe` der Ereignisschleife zurückgegeben "
+"und auch von Subprozess-bezogenen Methoden wie :meth:`loop.subprocess_exec` "
+"verwendet."
 
 #: ../../library/asyncio-protocol.rst:107
 msgid "A base transport for read-only connections."
-msgstr ""
+msgstr "Ein Basis-Transport für Verbindungen, aus denen nur gelesen wird."
 
 #: ../../library/asyncio-protocol.rst:109
 msgid ""
@@ -176,11 +224,17 @@ msgid ""
 "the :meth:`loop.connect_read_pipe` event loop method and are also used by "
 "subprocess-related methods like :meth:`loop.subprocess_exec`."
 msgstr ""
+"Instanzen der Klasse *ReadTransport* werden von der "
+"Methode :meth:`loop.connect_read_pipe` der Ereignisschleife zurückgegeben "
+"und auch von Subprozess-bezogenen Methoden wie :meth:`loop.subprocess_exec` "
+"verwendet."
 
 #: ../../library/asyncio-protocol.rst:116
 msgid ""
 "Interface representing a bidirectional transport, such as a TCP connection."
 msgstr ""
+"Schnittstelle, die einen bidirektionalen Transport darstellt, etwa eine TCP-"
+"Verbindung."
 
 #: ../../library/asyncio-protocol.rst:119
 msgid ""
@@ -188,6 +242,9 @@ msgid ""
 "function, passing it a protocol factory and other information necessary to "
 "create the transport and protocol."
 msgstr ""
+"Der Benutzer instanziiert einen Transport nicht direkt. Stattdessen ruft er "
+"eine Hilfsfunktion auf und übergibt ihr eine Protokoll-Factory und weitere "
+"Informationen, die zum Erzeugen von Transport und Protokoll nötig sind."
 
 #: ../../library/asyncio-protocol.rst:123
 msgid ""
@@ -196,36 +253,47 @@ msgid ""
 "like :meth:`loop.create_connection`, :meth:`loop.create_unix_connection`, :meth:`loop.create_server`, :meth:`loop.sendfile`, "
 "etc."
 msgstr ""
+"Instanzen der Klasse *Transport* werden von Methoden der Ereignisschleife "
+"wie :meth:`loop.create_connection`, :meth:`loop.create_unix_connection`, :meth:`loop.create_server`, :meth:`loop.sendfile` "
+"usw. zurückgegeben oder von ihnen verwendet."
 
 #: ../../library/asyncio-protocol.rst:131
 msgid "A transport for datagram (UDP) connections."
-msgstr ""
+msgstr "Ein Transport für Datagramm-Verbindungen (UDP)."
 
 #: ../../library/asyncio-protocol.rst:133
 msgid ""
 "Instances of the *DatagramTransport* class are returned from "
 "the :meth:`loop.create_datagram_endpoint` event loop method."
 msgstr ""
+"Instanzen der Klasse *DatagramTransport* werden von der "
+"Methode :meth:`loop.create_datagram_endpoint` der Ereignisschleife "
+"zurückgegeben."
 
 #: ../../library/asyncio-protocol.rst:139
 msgid ""
 "An abstraction to represent a connection between a parent and its child OS "
 "process."
 msgstr ""
+"Eine Abstraktion, die eine Verbindung zwischen einem Elternprozess und "
+"seinem Kind-Betriebssystemprozess darstellt."
 
 #: ../../library/asyncio-protocol.rst:142
 msgid ""
 "Instances of the *SubprocessTransport* class are returned from event loop "
 "methods :meth:`loop.subprocess_shell` and :meth:`loop.subprocess_exec`."
 msgstr ""
+"Instanzen der Klasse *SubprocessTransport* werden von den "
+"Methoden :meth:`loop.subprocess_shell` und :meth:`loop.subprocess_exec` der "
+"Ereignisschleife zurückgegeben."
 
 #: ../../library/asyncio-protocol.rst:148
 msgid "Base Transport"
-msgstr ""
+msgstr "Basis-Transport"
 
 #: ../../library/asyncio-protocol.rst:152
 msgid "Close the transport."
-msgstr ""
+msgstr "Schließt den Transport."
 
 #: ../../library/asyncio-protocol.rst:154
 msgid ""
@@ -235,20 +303,32 @@ msgid ""
 "<BaseProtocol.connection_lost>` method will be called with :const:`None` as "
 "its argument. The transport should not be used once it is closed."
 msgstr ""
+"Hat der Transport einen Puffer für ausgehende Daten, werden die gepufferten "
+"Daten asynchron geleert. Es werden keine Daten mehr empfangen. Nachdem alle "
+"gepufferten Daten geleert wurden, wird die "
+"Methode :meth:`protocol.connection_lost() <BaseProtocol.connection_lost>` "
+"des Protokolls mit :const:`None` als Argument aufgerufen. Der Transport "
+"sollte nach dem Schließen nicht mehr verwendet werden."
 
 #: ../../library/asyncio-protocol.rst:164
 msgid "Return ``True`` if the transport is closing or is closed."
 msgstr ""
+"Gibt ``True`` zurück, wenn der Transport gerade geschlossen wird oder "
+"bereits geschlossen ist."
 
 #: ../../library/asyncio-protocol.rst:168
 msgid "Return information about the transport or underlying resources it uses."
 msgstr ""
+"Gibt Informationen über den Transport oder die zugrunde liegenden Ressourcen "
+"zurück, die er verwendet."
 
 #: ../../library/asyncio-protocol.rst:171
 msgid ""
 "*name* is a string representing the piece of transport-specific information "
 "to get."
 msgstr ""
+"*name* ist eine Zeichenkette, die die abzurufende transportspezifische "
+"Information bezeichnet."
 
 #: ../../library/asyncio-protocol.rst:174
 msgid ""
@@ -256,12 +336,18 @@ msgid ""
 "the transport does not support querying it with the given third-party event "
 "loop implementation or on the current platform."
 msgstr ""
+"*default* ist der Wert, der zurückgegeben wird, wenn die Information nicht "
+"verfügbar ist oder wenn der Transport mit der gegebenen Ereignisschleifen-"
+"Implementierung eines Drittanbieters oder auf der aktuellen Plattform das "
+"Abfragen nicht unterstützt."
 
 #: ../../library/asyncio-protocol.rst:179
 msgid ""
 "For example, the following code attempts to get the underlying socket object "
 "of the transport::"
 msgstr ""
+"Der folgende Code versucht zum Beispiel, das zugrunde liegende Socket-Objekt "
+"des Transports zu erhalten::"
 
 #: ../../library/asyncio-protocol.rst:182
 msgid ""
@@ -269,34 +355,43 @@ msgid ""
 "if sock is not None:\n"
 "    print(sock.getsockopt(...))"
 msgstr ""
+"sock = transport.get_extra_info('socket')\n"
+"if sock is not None:\n"
+"    print(sock.getsockopt(...))"
 
 #: ../../library/asyncio-protocol.rst:186
 msgid "Categories of information that can be queried on some transports:"
 msgstr ""
+"Kategorien von Informationen, die bei einigen Transports abgefragt werden "
+"können:"
 
 #: ../../library/asyncio-protocol.rst:188
 msgid "socket:"
-msgstr ""
+msgstr "Socket:"
 
 #: ../../library/asyncio-protocol.rst:190
 msgid ""
 "``'peername'``: the remote address to which the socket is connected, result "
 "of :meth:`socket.socket.getpeername` (``None`` on error)"
 msgstr ""
+"``'peername'``: die entfernte Adresse, mit der der Socket verbunden ist, "
+"Ergebnis von :meth:`socket.socket.getpeername` (``None`` bei einem Fehler)"
 
 #: ../../library/asyncio-protocol.rst:194
 msgid "``'socket'``: :class:`socket.socket` instance"
-msgstr ""
+msgstr "``'socket'``: :class:`socket.socket`-Instanz"
 
 #: ../../library/asyncio-protocol.rst:196
 msgid ""
 "``'sockname'``: the socket's own address, result "
 "of :meth:`socket.socket.getsockname`"
 msgstr ""
+"``'sockname'``: die eigene Adresse des Sockets, Ergebnis "
+"von :meth:`socket.socket.getsockname`"
 
 #: ../../library/asyncio-protocol.rst:199
 msgid "SSL socket:"
-msgstr ""
+msgstr "SSL-Socket:"
 
 #: ../../library/asyncio-protocol.rst:201
 msgid ""
@@ -304,6 +399,9 @@ msgid ""
 "``None`` if the connection isn't compressed; result "
 "of :meth:`ssl.SSLSocket.compression`"
 msgstr ""
+"``'compression'``: der verwendete Kompressionsalgorithmus als Zeichenkette "
+"oder ``None``, wenn die Verbindung nicht komprimiert ist. Ergebnis "
+"von :meth:`ssl.SSLSocket.compression`"
 
 #: ../../library/asyncio-protocol.rst:205
 msgid ""
@@ -311,58 +409,67 @@ msgid ""
 "used, the version of the SSL protocol that defines its use, and the number "
 "of secret bits being used; result of :meth:`ssl.SSLSocket.cipher`"
 msgstr ""
+"``'cipher'``: ein Tupel aus drei Werten mit dem Namen der verwendeten "
+"Chiffre, der Version des SSL-Protokolls, das ihre Verwendung definiert, und "
+"der Anzahl der verwendeten geheimen Bits. Ergebnis "
+"von :meth:`ssl.SSLSocket.cipher`"
 
 #: ../../library/asyncio-protocol.rst:210
 msgid ""
 "``'peercert'``: peer certificate; result of :meth:`ssl.SSLSocket.getpeercert`"
 msgstr ""
+"``'peercert'``: Zertifikat der Gegenstelle. Ergebnis "
+"von :meth:`ssl.SSLSocket.getpeercert`"
 
 #: ../../library/asyncio-protocol.rst:213
 msgid "``'sslcontext'``: :class:`ssl.SSLContext` instance"
-msgstr ""
+msgstr "``'sslcontext'``: :class:`ssl.SSLContext`-Instanz"
 
 #: ../../library/asyncio-protocol.rst:215
 msgid ""
 "``'ssl_object'``: :class:`ssl.SSLObject` or :class:`ssl.SSLSocket` instance"
 msgstr ""
+"``'ssl_object'``: :class:`ssl.SSLObject`- oder :class:`ssl.SSLSocket`-Instanz"
 
 #: ../../library/asyncio-protocol.rst:218
 msgid "pipe:"
-msgstr ""
+msgstr "Pipe:"
 
 #: ../../library/asyncio-protocol.rst:220
 msgid "``'pipe'``: pipe object"
-msgstr ""
+msgstr "``'pipe'``: Pipe-Objekt"
 
 #: ../../library/asyncio-protocol.rst:222
 msgid "subprocess:"
-msgstr ""
+msgstr "Subprozess:"
 
 #: ../../library/asyncio-protocol.rst:224
 msgid "``'subprocess'``: :class:`subprocess.Popen` instance"
-msgstr ""
+msgstr "``'subprocess'``: :class:`subprocess.Popen`-Instanz"
 
 #: ../../library/asyncio-protocol.rst:228
 msgid "Set a new protocol."
-msgstr ""
+msgstr "Setzt ein neues Protokoll."
 
 #: ../../library/asyncio-protocol.rst:230
 msgid ""
 "Switching protocol should only be done when both protocols are documented to "
 "support the switch."
 msgstr ""
+"Das Wechseln des Protokolls sollte nur erfolgen, wenn beide Protokolle laut "
+"Dokumentation den Wechsel unterstützen."
 
 #: ../../library/asyncio-protocol.rst:235
 msgid "Return the current protocol."
-msgstr ""
+msgstr "Gibt das aktuelle Protokoll zurück."
 
 #: ../../library/asyncio-protocol.rst:239
 msgid "Read-only Transports"
-msgstr ""
+msgstr "Nur lesende Transports"
 
 #: ../../library/asyncio-protocol.rst:243
 msgid "Return ``True`` if the transport is receiving new data."
-msgstr ""
+msgstr "Gibt ``True`` zurück, wenn der Transport neue Daten empfängt."
 
 #: ../../library/asyncio-protocol.rst:249
 msgid ""
@@ -370,12 +477,18 @@ msgid ""
 "protocol's :meth:`protocol.data_received() <Protocol.data_received>` method "
 "until :meth:`resume_reading` is called."
 msgstr ""
+"Hält das empfangende Ende des Transports an. Bis :meth:`resume_reading` "
+"aufgerufen wird, werden keine Daten an die "
+"Methode :meth:`protocol.data_received() <Protocol.data_received>` des "
+"Protokolls übergeben."
 
 #: ../../library/asyncio-protocol.rst:253
 msgid ""
 "The method is idempotent, i.e. it can be called when the transport is "
 "already paused or closed."
 msgstr ""
+"Die Methode ist idempotent, d. h., sie kann aufgerufen werden, wenn der "
+"Transport bereits angehalten oder geschlossen ist."
 
 #: ../../library/asyncio-protocol.rst:259
 msgid ""
@@ -383,16 +496,21 @@ msgid ""
 "<Protocol.data_received>` method will be called once again if some data is "
 "available for reading."
 msgstr ""
+"Setzt das empfangende Ende fort. Die Methode :meth:`protocol.data_received() "
+"<Protocol.data_received>` des Protokolls wird erneut aufgerufen, wenn Daten "
+"zum Lesen verfügbar sind."
 
 #: ../../library/asyncio-protocol.rst:263
 msgid ""
 "The method is idempotent, i.e. it can be called when the transport is "
 "already reading."
 msgstr ""
+"Die Methode ist idempotent, d. h., sie kann aufgerufen werden, wenn der "
+"Transport bereits liest."
 
 #: ../../library/asyncio-protocol.rst:269
 msgid "Write-only Transports"
-msgstr ""
+msgstr "Nur schreibende Transports"
 
 #: ../../library/asyncio-protocol.rst:273
 msgid ""
@@ -401,30 +519,44 @@ msgid ""
 "protocol's :meth:`protocol.connection_lost() <BaseProtocol.connection_lost>` "
 "method will eventually be called with :const:`None` as its argument."
 msgstr ""
+"Schließt den Transport sofort, ohne auf den Abschluss ausstehender "
+"Operationen zu warten. Gepufferte Daten gehen verloren. Es werden keine "
+"Daten mehr empfangen. Die Methode :meth:`protocol.connection_lost() "
+"<BaseProtocol.connection_lost>` des Protokolls wird schließlich "
+"mit :const:`None` als Argument aufgerufen."
 
 #: ../../library/asyncio-protocol.rst:281
 msgid ""
 "Return :const:`True` if the transport "
 "supports :meth:`~WriteTransport.write_eof`, :const:`False` if not."
 msgstr ""
+"Gibt :const:`True` zurück, wenn der "
+"Transport :meth:`~WriteTransport.write_eof` unterstützt, "
+"andernfalls :const:`False`."
 
 #: ../../library/asyncio-protocol.rst:286
 msgid "Return the current size of the output buffer used by the transport."
 msgstr ""
+"Gibt die aktuelle Größe des vom Transport verwendeten Ausgabepuffers zurück."
 
 #: ../../library/asyncio-protocol.rst:290
 msgid ""
 "Get the *high* and *low* watermarks for write flow control. Return a tuple "
 "``(low, high)`` where *low* and *high* are positive number of bytes."
 msgstr ""
+"Ruft die *obere* und *untere* Watermark für die Flusskontrolle beim "
+"Schreiben ab. Gibt ein Tupel ``(low, high)`` zurück, wobei *low* und *high* "
+"positive Byte-Anzahlen sind."
 
 #: ../../library/asyncio-protocol.rst:294
 msgid "Use :meth:`set_write_buffer_limits` to set the limits."
-msgstr ""
+msgstr "Verwende :meth:`set_write_buffer_limits`, um die Grenzen zu setzen."
 
 #: ../../library/asyncio-protocol.rst:300
 msgid "Set the *high* and *low* watermarks for write flow control."
 msgstr ""
+"Setzt die *obere* und *untere* Watermark für die Flusskontrolle beim "
+"Schreiben."
 
 #: ../../library/asyncio-protocol.rst:302
 msgid ""
@@ -434,6 +566,12 @@ msgid ""
 "are called. If specified, the low watermark must be less than or equal to "
 "the high watermark.  Neither *high* nor *low* can be negative."
 msgstr ""
+"Diese beiden Werte (in Byte gemessen) steuern, wann die "
+"Methoden :meth:`protocol.pause_writing() <BaseProtocol.pause_writing>` "
+"und :meth:`protocol.resume_writing() <BaseProtocol.resume_writing>` des "
+"Protokolls aufgerufen werden. Falls angegeben, muss die untere Watermark "
+"kleiner oder gleich der oberen Watermark sein. Weder *high* noch *low* "
+"dürfen negativ sein."
 
 #: ../../library/asyncio-protocol.rst:310
 msgid ""
@@ -442,6 +580,10 @@ msgid ""
 "paused, :meth:`~BaseProtocol.resume_writing` is called when the buffer size "
 "becomes less than or equal to the *low* value."
 msgstr ""
+":meth:`~BaseProtocol.pause_writing` wird aufgerufen, wenn die Puffergröße "
+"größer oder gleich dem Wert *high* wird. Wurde das Schreiben angehalten, "
+"wird :meth:`~BaseProtocol.resume_writing` aufgerufen, wenn die Puffergröße "
+"kleiner oder gleich dem Wert *low* wird."
 
 #: ../../library/asyncio-protocol.rst:315
 msgid ""
@@ -454,14 +596,26 @@ msgid ""
 "buffer is empty. Use of zero for either limit is generally sub-optimal as it "
 "reduces opportunities for doing I/O and computation concurrently."
 msgstr ""
+"Die Standardwerte sind implementierungsspezifisch. Wird nur die obere "
+"Watermark angegeben, ist die untere standardmäßig ein "
+"implementierungsspezifischer Wert, der kleiner oder gleich der oberen "
+"Watermark ist. Wird *high* auf null gesetzt, wird auch *low* auf null "
+"gezwungen, und :meth:`~BaseProtocol.pause_writing` wird immer aufgerufen, "
+"sobald der Puffer nicht leer ist. Wird *low* auf null gesetzt, "
+"wird :meth:`~BaseProtocol.resume_writing` erst aufgerufen, wenn der Puffer "
+"leer ist. Null für eine der beiden Grenzen zu verwenden ist im Allgemeinen "
+"nicht optimal, da es die Möglichkeiten verringert, E/A und Berechnungen "
+"gleichzeitig auszuführen."
 
 #: ../../library/asyncio-protocol.rst:326
 msgid "Use :meth:`~WriteTransport.get_write_buffer_limits` to get the limits."
 msgstr ""
+"Verwende :meth:`~WriteTransport.get_write_buffer_limits`, um die Grenzen "
+"abzurufen."
 
 #: ../../library/asyncio-protocol.rst:331
 msgid "Write some *data* bytes to the transport."
-msgstr ""
+msgstr "Schreibt einige Bytes *data* in den Transport."
 
 #: ../../library/asyncio-protocol.rst:333
 #: ../../library/asyncio-protocol.rst:362
@@ -469,6 +623,8 @@ msgid ""
 "This method does not block; it buffers the data and arranges for it to be "
 "sent out asynchronously."
 msgstr ""
+"Diese Methode blockiert nicht. Sie puffert die Daten und sorgt dafür, dass "
+"sie asynchron gesendet werden."
 
 #: ../../library/asyncio-protocol.rst:338
 msgid ""
@@ -476,22 +632,30 @@ msgid ""
 "functionally equivalent to calling :meth:`write` on each element yielded by "
 "the iterable, but may be implemented more efficiently."
 msgstr ""
+"Schreibt eine Liste (oder ein beliebiges Iterable) von Daten-Bytes in den "
+"Transport. Das ist funktional gleichwertig dazu, :meth:`write` für jedes vom "
+"Iterable gelieferte Element aufzurufen, kann aber effizienter implementiert "
+"sein."
 
 #: ../../library/asyncio-protocol.rst:345
 msgid ""
 "Close the write end of the transport after flushing all buffered data. Data "
 "may still be received."
 msgstr ""
+"Schließt das Schreibende des Transports, nachdem alle gepufferten Daten "
+"geleert wurden. Daten können weiterhin empfangen werden."
 
 #: ../../library/asyncio-protocol.rst:348
 msgid ""
 "This method can raise :exc:`NotImplementedError` if the transport (e.g. SSL) "
 "doesn't support half-closed connections."
 msgstr ""
+"Diese Methode kann :exc:`NotImplementedError` auslösen, wenn der Transport "
+"(z. B. SSL) halb geschlossene Verbindungen nicht unterstützt."
 
 #: ../../library/asyncio-protocol.rst:353
 msgid "Datagram Transports"
-msgstr ""
+msgstr "Datagramm-Transports"
 
 #: ../../library/asyncio-protocol.rst:357
 msgid ""
@@ -499,6 +663,9 @@ msgid ""
 "dependent target address).  If *addr* is :const:`None`, the data is sent to "
 "the target address given on transport creation."
 msgstr ""
+"Sendet die Bytes *data* an die entfernte Gegenstelle, die *addr* angibt "
+"(eine transportabhängige Zieladresse). Ist *addr* :const:`None`, werden die "
+"Daten an die beim Erzeugen des Transports angegebene Zieladresse gesendet."
 
 #: ../../library/asyncio-protocol.rst:365
 msgid ""
@@ -506,6 +673,10 @@ msgid ""
 "datagram. The buffer size calculation used for flow control is also updated "
 "to account for the datagram header."
 msgstr ""
+"Diese Methode kann mit einem leeren Bytes-Objekt aufgerufen werden, um ein "
+"Datagramm der Länge null zu senden. Die für die Flusskontrolle verwendete "
+"Berechnung der Puffergröße wird ebenfalls aktualisiert, um den Datagramm-"
+"Header zu berücksichtigen."
 
 #: ../../library/asyncio-protocol.rst:372
 msgid ""
@@ -514,42 +685,58 @@ msgid ""
 "protocol's :meth:`protocol.connection_lost() <BaseProtocol.connection_lost>` "
 "method will eventually be called with :const:`None` as its argument."
 msgstr ""
+"Schließt den Transport sofort, ohne auf den Abschluss ausstehender "
+"Operationen zu warten. Gepufferte Daten gehen verloren. Es werden keine "
+"Daten mehr empfangen. Die Methode :meth:`protocol.connection_lost() "
+"<BaseProtocol.connection_lost>` des Protokolls wird schließlich "
+"mit :const:`None` als Argument aufgerufen."
 
 #: ../../library/asyncio-protocol.rst:382
 msgid "Subprocess Transports"
-msgstr ""
+msgstr "Subprozess-Transports"
 
 #: ../../library/asyncio-protocol.rst:386
 msgid "Return the subprocess process id as an integer."
-msgstr ""
+msgstr "Gibt die Prozess-ID des Subprozesses als ganze Zahl zurück."
 
 #: ../../library/asyncio-protocol.rst:390
 msgid ""
 "Return the transport for the communication pipe corresponding to the integer "
 "file descriptor *fd*:"
 msgstr ""
+"Gibt den Transport für den Kommunikationskanal zurück, der dem ganzzahligen "
+"Dateideskriptor *fd* entspricht:"
 
 #: ../../library/asyncio-protocol.rst:393
 msgid ""
 "``0``: writable streaming transport of the standard input (*stdin*), "
 "or :const:`None` if the subprocess was not created with ``stdin=PIPE``"
 msgstr ""
+"``0``: beschreibbarer Streaming-Transport der Standardeingabe (*stdin*) "
+"oder :const:`None`, wenn der Subprozess nicht mit ``stdin=PIPE`` erzeugt "
+"wurde"
 
 #: ../../library/asyncio-protocol.rst:395
 msgid ""
 "``1``: readable streaming transport of the standard output (*stdout*), "
 "or :const:`None` if the subprocess was not created with ``stdout=PIPE``"
 msgstr ""
+"``1``: lesbarer Streaming-Transport der Standardausgabe (*stdout*) "
+"oder :const:`None`, wenn der Subprozess nicht mit ``stdout=PIPE`` erzeugt "
+"wurde"
 
 #: ../../library/asyncio-protocol.rst:397
 msgid ""
 "``2``: readable streaming transport of the standard error (*stderr*), "
 "or :const:`None` if the subprocess was not created with ``stderr=PIPE``"
 msgstr ""
+"``2``: lesbarer Streaming-Transport der Standardfehlerausgabe (*stderr*) "
+"oder :const:`None`, wenn der Subprozess nicht mit ``stderr=PIPE`` erzeugt "
+"wurde"
 
 #: ../../library/asyncio-protocol.rst:399
 msgid "other *fd*: :const:`None`"
-msgstr ""
+msgstr "anderer *fd*: :const:`None`"
 
 #: ../../library/asyncio-protocol.rst:403
 msgid ""
@@ -557,30 +744,37 @@ msgid ""
 "hasn't returned, which is similar to the :attr:`subprocess.Popen.returncode` "
 "attribute."
 msgstr ""
+"Gibt den Rückgabecode des Subprozesses als ganze Zahl zurück "
+"oder :const:`None`, wenn er noch nicht beendet ist. Das ähnelt dem "
+"Attribut :attr:`subprocess.Popen.returncode`."
 
 #: ../../library/asyncio-protocol.rst:409
 msgid "Kill the subprocess."
-msgstr ""
+msgstr "Beendet den Subprozess gewaltsam."
 
 #: ../../library/asyncio-protocol.rst:411
 msgid ""
 "On POSIX systems, the function sends SIGKILL to the subprocess. On Windows, "
 "this method is an alias for :meth:`terminate`."
 msgstr ""
+"Auf POSIX-Systemen sendet die Funktion SIGKILL an den Subprozess. Unter "
+"Windows ist diese Methode ein Alias für :meth:`terminate`."
 
 #: ../../library/asyncio-protocol.rst:414
 msgid "See also :meth:`subprocess.Popen.kill`."
-msgstr ""
+msgstr "Siehe auch :meth:`subprocess.Popen.kill`."
 
 #: ../../library/asyncio-protocol.rst:418
 msgid ""
 "Send the *signal* number to the subprocess, as "
 "in :meth:`subprocess.Popen.send_signal`."
 msgstr ""
+"Sendet die Signalnummer *signal* an den Subprozess, wie "
+"bei :meth:`subprocess.Popen.send_signal`."
 
 #: ../../library/asyncio-protocol.rst:423
 msgid "Stop the subprocess."
-msgstr ""
+msgstr "Hält den Subprozess an."
 
 #: ../../library/asyncio-protocol.rst:425
 msgid ""
@@ -588,28 +782,35 @@ msgid ""
 "subprocess. On Windows, the Windows API function :c:func:`!TerminateProcess` "
 "is called to stop the subprocess."
 msgstr ""
+"Auf POSIX-Systemen sendet diese Methode :py:const:`~signal.SIGTERM` an den "
+"Subprozess. Unter Windows wird die Windows-API-Funktion :c:func:`!"
+"TerminateProcess` aufgerufen, um den Subprozess zu beenden."
 
 #: ../../library/asyncio-protocol.rst:429
 msgid "See also :meth:`subprocess.Popen.terminate`."
-msgstr ""
+msgstr "Siehe auch :meth:`subprocess.Popen.terminate`."
 
 #: ../../library/asyncio-protocol.rst:433
 msgid "Kill the subprocess by calling the :meth:`kill` method."
 msgstr ""
+"Beendet den Subprozess gewaltsam, indem die Methode :meth:`kill` aufgerufen "
+"wird."
 
 #: ../../library/asyncio-protocol.rst:435
 msgid ""
 "If the subprocess hasn't returned yet, and close transports of *stdin*, "
 "*stdout*, and *stderr* pipes."
 msgstr ""
+"Ist der Subprozess noch nicht beendet, werden außerdem die Transports der "
+"Pipes *stdin*, *stdout* und *stderr* geschlossen."
 
 #: ../../library/asyncio-protocol.rst:442
 msgid "Protocols"
-msgstr ""
+msgstr "Protokolle"
 
 #: ../../library/asyncio-protocol.rst:444
 msgid "**Source code:** :source:`Lib/asyncio/protocols.py`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/asyncio/protocols.py`"
 
 #: ../../library/asyncio-protocol.rst:448
 msgid ""
@@ -617,6 +818,10 @@ msgid ""
 "implement network protocols.  Those classes are meant to be used together "
 "with :ref:`transports <asyncio-transport>`."
 msgstr ""
+"asyncio stellt eine Reihe abstrakter Basisklassen bereit, die zur "
+"Implementierung von Netzwerkprotokollen verwendet werden sollen. Diese "
+"Klassen sind dafür gedacht, zusammen mit :ref:`Transports <asyncio-"
+"transport>` verwendet zu werden."
 
 #: ../../library/asyncio-protocol.rst:452
 msgid ""
@@ -625,47 +830,60 @@ msgid ""
 "certain events, for example when some data is received. A base protocol "
 "method should be called by the corresponding transport."
 msgstr ""
+"Unterklassen abstrakter Basisprotokoll-Klassen können einige oder alle "
+"Methoden implementieren. Alle diese Methoden sind Callbacks: Sie werden von "
+"Transports bei bestimmten Ereignissen aufgerufen, zum Beispiel wenn Daten "
+"empfangen werden. Eine Basisprotokoll-Methode sollte vom entsprechenden "
+"Transport aufgerufen werden."
 
 #: ../../library/asyncio-protocol.rst:459
 msgid "Base Protocols"
-msgstr ""
+msgstr "Basisprotokolle"
 
 #: ../../library/asyncio-protocol.rst:463
 msgid "Base protocol with methods that all protocols share."
-msgstr ""
+msgstr "Basisprotokoll mit Methoden, die alle Protokolle gemeinsam haben."
 
 #: ../../library/asyncio-protocol.rst:467
 msgid ""
 "The base class for implementing streaming protocols (TCP, Unix sockets, etc)."
 msgstr ""
+"Die Basisklasse zur Implementierung von Streaming-Protokollen (TCP, Unix-"
+"Sockets usw.)."
 
 #: ../../library/asyncio-protocol.rst:472
 msgid ""
 "A base class for implementing streaming protocols with manual control of the "
 "receive buffer."
 msgstr ""
+"Eine Basisklasse zur Implementierung von Streaming-Protokollen mit manueller "
+"Kontrolle über den Empfangspuffer."
 
 #: ../../library/asyncio-protocol.rst:477
 msgid "The base class for implementing datagram (UDP) protocols."
-msgstr ""
+msgstr "Die Basisklasse zur Implementierung von Datagramm-Protokollen (UDP)."
 
 #: ../../library/asyncio-protocol.rst:481
 msgid ""
 "The base class for implementing protocols communicating with child processes "
 "(unidirectional pipes)."
 msgstr ""
+"Die Basisklasse zur Implementierung von Protokollen, die mit Kindprozessen "
+"kommunizieren (unidirektionale Pipes)."
 
 #: ../../library/asyncio-protocol.rst:486
 msgid "Base Protocol"
-msgstr ""
+msgstr "Basisprotokoll"
 
 #: ../../library/asyncio-protocol.rst:488
 msgid "All asyncio protocols can implement Base Protocol callbacks."
 msgstr ""
+"Alle asyncio-Protokolle können die Callbacks des Basisprotokolls "
+"implementieren."
 
 #: ../../library/asyncio-protocol.rst:491
 msgid "Connection Callbacks"
-msgstr ""
+msgstr "Verbindungs-Callbacks"
 
 #: ../../library/asyncio-protocol.rst:492
 msgid ""
@@ -673,20 +891,27 @@ msgid ""
 "successful connection.  All other protocol callbacks can only be called "
 "between those two methods."
 msgstr ""
+"Verbindungs-Callbacks werden bei allen Protokollen aufgerufen, und zwar "
+"genau einmal pro erfolgreicher Verbindung. Alle anderen Protokoll-Callbacks "
+"können nur zwischen diesen beiden Methoden aufgerufen werden."
 
 #: ../../library/asyncio-protocol.rst:498
 msgid "Called when a connection is made."
-msgstr ""
+msgstr "Wird aufgerufen, wenn eine Verbindung hergestellt wird."
 
 #: ../../library/asyncio-protocol.rst:500
 msgid ""
 "The *transport* argument is the transport representing the connection.  The "
 "protocol is responsible for storing the reference to its transport."
 msgstr ""
+"Das Argument *transport* ist der Transport, der die Verbindung darstellt. "
+"Das Protokoll ist dafür verantwortlich, die Referenz auf seinen Transport zu "
+"speichern."
 
 #: ../../library/asyncio-protocol.rst:506
 msgid "Called when the connection is lost or closed."
 msgstr ""
+"Wird aufgerufen, wenn die Verbindung verloren geht oder geschlossen wird."
 
 #: ../../library/asyncio-protocol.rst:508
 msgid ""
@@ -694,30 +919,41 @@ msgid ""
 "means a regular EOF is received, or the connection was aborted or closed by "
 "this side of the connection."
 msgstr ""
+"Das Argument ist entweder ein Ausnahmeobjekt oder :const:`None`. Letzteres "
+"bedeutet, dass ein reguläres EOF empfangen wurde oder die Verbindung von "
+"dieser Seite aus abgebrochen oder geschlossen wurde."
 
 #: ../../library/asyncio-protocol.rst:514
 msgid "Flow Control Callbacks"
-msgstr ""
+msgstr "Callbacks zur Flusskontrolle"
 
 #: ../../library/asyncio-protocol.rst:515
 msgid ""
 "Flow control callbacks can be called by transports to pause or resume "
 "writing performed by the protocol."
 msgstr ""
+"Callbacks zur Flusskontrolle können von Transports aufgerufen werden, um das "
+"vom Protokoll ausgeführte Schreiben anzuhalten oder fortzusetzen."
 
 #: ../../library/asyncio-protocol.rst:518
 msgid ""
 "See the documentation of the :meth:`~WriteTransport.set_write_buffer_limits` "
 "method for more details."
 msgstr ""
+"Weitere Einzelheiten siehe die Dokumentation der "
+"Methode :meth:`~WriteTransport.set_write_buffer_limits`."
 
 #: ../../library/asyncio-protocol.rst:523
 msgid "Called when the transport's buffer goes over the high watermark."
 msgstr ""
+"Wird aufgerufen, wenn der Puffer des Transports die obere Watermark "
+"überschreitet."
 
 #: ../../library/asyncio-protocol.rst:527
 msgid "Called when the transport's buffer drains below the low watermark."
 msgstr ""
+"Wird aufgerufen, wenn sich der Puffer des Transports unter die untere "
+"Watermark leert."
 
 #: ../../library/asyncio-protocol.rst:529
 msgid ""
@@ -725,6 +961,9 @@ msgid ""
 "watermark, :meth:`~BaseProtocol.pause_writing` is not called: the buffer "
 "size must go strictly over."
 msgstr ""
+"Entspricht die Puffergröße der oberen Watermark, "
+"wird :meth:`~BaseProtocol.pause_writing` nicht aufgerufen: Die Puffergröße "
+"muss sie echt überschreiten."
 
 #: ../../library/asyncio-protocol.rst:533
 msgid ""
@@ -732,10 +971,14 @@ msgid ""
 "size is equal or lower than the low watermark.  These end conditions are "
 "important to ensure that things go as expected when either mark is zero."
 msgstr ""
+"Umgekehrt wird :meth:`~BaseProtocol.resume_writing` aufgerufen, wenn die "
+"Puffergröße gleich der unteren Watermark oder kleiner ist. Diese "
+"Randbedingungen sind wichtig, damit alles wie erwartet funktioniert, wenn "
+"eine der Marken null ist."
 
 #: ../../library/asyncio-protocol.rst:540
 msgid "Streaming Protocols"
-msgstr ""
+msgstr "Streaming-Protokolle"
 
 #: ../../library/asyncio-protocol.rst:542
 msgid ""
@@ -744,12 +987,18 @@ msgid ""
 "and :meth:`loop.connect_write_pipe` accept factories that return streaming "
 "protocols."
 msgstr ""
+"Methoden der Ereignisschleife "
+"wie :meth:`loop.create_server`, :meth:`loop.create_unix_server`, :meth:`loop.create_connection`, :meth:`loop.create_unix_connection`, :meth:`loop.connect_accepted_socket`, :meth:`loop.connect_read_pipe` "
+"und :meth:`loop.connect_write_pipe` akzeptieren Factorys, die Streaming-"
+"Protokolle zurückgeben."
 
 #: ../../library/asyncio-protocol.rst:550
 msgid ""
 "Called when some data is received.  *data* is a non-empty bytes object "
 "containing the incoming data."
 msgstr ""
+"Wird aufgerufen, wenn Daten empfangen werden. *data* ist ein nicht leeres "
+"Bytes-Objekt mit den eingehenden Daten."
 
 #: ../../library/asyncio-protocol.rst:553
 msgid ""
@@ -758,12 +1007,18 @@ msgid ""
 "make your parsing generic and flexible. However, data is always received in "
 "the correct order."
 msgstr ""
+"Ob die Daten gepuffert, in Blöcke zerlegt oder neu zusammengesetzt werden, "
+"hängt vom Transport ab. Im Allgemeinen solltest du dich nicht auf bestimmte "
+"Semantik verlassen und stattdessen dein Parsing generisch und flexibel "
+"gestalten. Die Daten werden jedoch immer in der richtigen Reihenfolge "
+"empfangen."
 
 #: ../../library/asyncio-protocol.rst:558
 msgid ""
 "The method can be called an arbitrary number of times while a connection is "
 "open."
 msgstr ""
+"Die Methode kann bei geöffneter Verbindung beliebig oft aufgerufen werden."
 
 #: ../../library/asyncio-protocol.rst:561
 msgid ""
@@ -771,6 +1026,9 @@ msgid ""
 "at most once.  Once ``eof_received()`` is called, ``data_received()`` is not "
 "called anymore."
 msgstr ""
+":meth:`protocol.eof_received() <Protocol.eof_received>` wird jedoch "
+"höchstens einmal aufgerufen. Sobald ``eof_received()`` aufgerufen wurde, "
+"wird ``data_received()`` nicht mehr aufgerufen."
 
 #: ../../library/asyncio-protocol.rst:567
 msgid ""
@@ -778,6 +1036,10 @@ msgid ""
 "by calling :meth:`transport.write_eof() <WriteTransport.write_eof>`, if the "
 "other end also uses asyncio)."
 msgstr ""
+"Wird aufgerufen, wenn die Gegenseite signalisiert, dass sie keine Daten mehr "
+"sendet (zum Beispiel durch den Aufruf von :meth:`transport.write_eof() "
+"<WriteTransport.write_eof>`, wenn die Gegenseite ebenfalls asyncio "
+"verwendet)."
 
 #: ../../library/asyncio-protocol.rst:572
 msgid ""
@@ -787,6 +1049,11 @@ msgid ""
 "the default implementation returns ``None``, it implicitly closes the "
 "connection."
 msgstr ""
+"Diese Methode kann einen falschen Wert zurückgeben (einschließlich "
+"``None``), dann schließt sich der Transport selbst. Gibt die Methode dagegen "
+"einen wahren Wert zurück, entscheidet das verwendete Protokoll, ob der "
+"Transport geschlossen wird. Da die Standardimplementierung ``None`` "
+"zurückgibt, schließt sie die Verbindung implizit."
 
 #: ../../library/asyncio-protocol.rst:578
 msgid ""
@@ -794,11 +1061,14 @@ msgid ""
 "which case returning true from this method will result in the connection "
 "being closed."
 msgstr ""
+"Einige Transports, darunter SSL, unterstützen halb geschlossene Verbindungen "
+"nicht. In diesem Fall führt die Rückgabe eines wahren Werts aus dieser "
+"Methode dazu, dass die Verbindung geschlossen wird."
 
 #: ../../library/asyncio-protocol.rst:583
 #: ../../library/asyncio-protocol.rst:641
 msgid "State machine:"
-msgstr ""
+msgstr "Zustandsautomat:"
 
 #: ../../library/asyncio-protocol.rst:585
 msgid ""
@@ -807,16 +1077,22 @@ msgid ""
 "    [-> eof_received]?\n"
 "-> connection_lost -> end"
 msgstr ""
+"start -> connection_made\n"
+"    [-> data_received]*\n"
+"    [-> eof_received]?\n"
+"-> connection_lost -> end"
 
 #: ../../library/asyncio-protocol.rst:594
 msgid "Buffered Streaming Protocols"
-msgstr ""
+msgstr "Gepufferte Streaming-Protokolle"
 
 #: ../../library/asyncio-protocol.rst:598
 msgid ""
 "Buffered Protocols can be used with any event loop method that supports "
 "`Streaming Protocols`_."
 msgstr ""
+"Gepufferte Protokolle lassen sich mit jeder Methode der Ereignisschleife "
+"verwenden, die `Streaming Protocols`_ unterstützt."
 
 #: ../../library/asyncio-protocol.rst:601
 msgid ""
@@ -827,15 +1103,24 @@ msgid ""
 "data.  Sophisticated protocol implementations can significantly reduce the "
 "number of buffer allocations."
 msgstr ""
+"Implementierungen von ``BufferedProtocol`` erlauben die ausdrückliche "
+"manuelle Zuweisung und Kontrolle des Empfangspuffers. Ereignisschleifen "
+"können dann den vom Protokoll bereitgestellten Puffer verwenden, um "
+"unnötiges Kopieren von Daten zu vermeiden. Das kann bei Protokollen, die "
+"große Datenmengen empfangen, zu einer spürbaren Leistungsverbesserung "
+"führen. Ausgefeilte Protokoll-Implementierungen können die Anzahl der "
+"Pufferzuweisungen deutlich verringern."
 
 #: ../../library/asyncio-protocol.rst:608
 msgid ""
 "The following callbacks are called on :class:`BufferedProtocol` instances:"
 msgstr ""
+"Die folgenden Callbacks werden bei :class:`BufferedProtocol`-Instanzen "
+"aufgerufen:"
 
 #: ../../library/asyncio-protocol.rst:613
 msgid "Called to allocate a new receive buffer."
-msgstr ""
+msgstr "Wird aufgerufen, um einen neuen Empfangspuffer zuzuweisen."
 
 #: ../../library/asyncio-protocol.rst:615
 msgid ""
@@ -844,26 +1129,37 @@ msgid ""
 "suggests.  When set to -1, the buffer size can be arbitrary. It is an error "
 "to return a buffer with a zero size."
 msgstr ""
+"*sizehint* ist die empfohlene Mindestgröße für den zurückgegebenen Puffer. "
+"Es ist zulässig, kleinere oder größere Puffer zurückzugeben, als *sizehint* "
+"vorschlägt. Bei -1 kann die Puffergröße beliebig sein. Es ist ein Fehler, "
+"einen Puffer der Größe null zurückzugeben."
 
 #: ../../library/asyncio-protocol.rst:620
 msgid ""
 "``get_buffer()`` must return an object implementing the :ref:`buffer "
 "protocol <bufferobjects>`."
 msgstr ""
+"``get_buffer()`` muss ein Objekt zurückgeben, das das :ref:`Pufferprotokoll "
+"<bufferobjects>` implementiert."
 
 #: ../../library/asyncio-protocol.rst:625
 msgid "Called when the buffer was updated with the received data."
 msgstr ""
+"Wird aufgerufen, wenn der Puffer mit den empfangenen Daten aktualisiert "
+"wurde."
 
 #: ../../library/asyncio-protocol.rst:627
 msgid "*nbytes* is the total number of bytes that were written to the buffer."
 msgstr ""
+"*nbytes* ist die Gesamtzahl der Bytes, die in den Puffer geschrieben wurden."
 
 #: ../../library/asyncio-protocol.rst:631
 msgid ""
 "See the documentation of the :meth:`protocol.eof_received() "
 "<Protocol.eof_received>` method."
 msgstr ""
+"Siehe die Dokumentation der Methode :meth:`protocol.eof_received() "
+"<Protocol.eof_received>`."
 
 #: ../../library/asyncio-protocol.rst:635
 msgid ""
@@ -873,6 +1169,11 @@ msgid ""
 "called, :meth:`~BufferedProtocol.get_buffer` "
 "and :meth:`~BufferedProtocol.buffer_updated` won't be called after it."
 msgstr ""
+":meth:`~BufferedProtocol.get_buffer` kann während einer Verbindung beliebig "
+"oft aufgerufen werden. :meth:`protocol.eof_received() "
+"<Protocol.eof_received>` wird jedoch höchstens einmal aufgerufen, und wenn "
+"es aufgerufen wird, werden :meth:`~BufferedProtocol.get_buffer` "
+"und :meth:`~BufferedProtocol.buffer_updated` danach nicht mehr aufgerufen."
 
 #: ../../library/asyncio-protocol.rst:643
 msgid ""
@@ -883,16 +1184,25 @@ msgid ""
 "    [-> eof_received]?\n"
 "-> connection_lost -> end"
 msgstr ""
+"start -> connection_made\n"
+"    [-> get_buffer\n"
+"        [-> buffer_updated]?\n"
+"    ]*\n"
+"    [-> eof_received]?\n"
+"-> connection_lost -> end"
 
 #: ../../library/asyncio-protocol.rst:654
 msgid "Datagram Protocols"
-msgstr ""
+msgstr "Datagramm-Protokolle"
 
 #: ../../library/asyncio-protocol.rst:656
 msgid ""
 "Datagram Protocol instances should be constructed by protocol factories "
 "passed to the :meth:`loop.create_datagram_endpoint` method."
 msgstr ""
+"Instanzen von Datagramm-Protokollen sollten von Protokoll-Factorys erzeugt "
+"werden, die an die Methode :meth:`loop.create_datagram_endpoint` übergeben "
+"werden."
 
 #: ../../library/asyncio-protocol.rst:661
 msgid ""
@@ -900,12 +1210,17 @@ msgid ""
 "incoming data.  *addr* is the address of the peer sending the data; the "
 "exact format depends on the transport."
 msgstr ""
+"Wird aufgerufen, wenn ein Datagramm empfangen wird. *data* ist ein Bytes-"
+"Objekt mit den eingehenden Daten. *addr* ist die Adresse der Gegenstelle, "
+"die die Daten sendet. Das genaue Format hängt vom Transport ab."
 
 #: ../../library/asyncio-protocol.rst:667
 msgid ""
 "Called when a previous send or receive operation raises "
 "an :class:`OSError`.  *exc* is the :class:`OSError` instance."
 msgstr ""
+"Wird aufgerufen, wenn ein früherer Sende- oder Empfangsvorgang "
+"einen :class:`OSError` auslöst. *exc* ist die :class:`OSError`-Instanz."
 
 #: ../../library/asyncio-protocol.rst:670
 msgid ""
@@ -913,6 +1228,10 @@ msgid ""
 "detects that a datagram could not be delivered to its recipient. In many "
 "conditions though, undeliverable datagrams will be silently dropped."
 msgstr ""
+"Diese Methode wird nur unter seltenen Umständen aufgerufen, wenn der "
+"Transport (z. B. UDP) erkennt, dass ein Datagramm nicht an seinen Empfänger "
+"zugestellt werden konnte. Unter vielen Umständen werden nicht zustellbare "
+"Datagramme jedoch stillschweigend verworfen."
 
 #: ../../library/asyncio-protocol.rst:677
 msgid ""
@@ -920,6 +1239,10 @@ msgid ""
 "datagram protocols, because there is no reliable way to detect send failures "
 "caused by writing too many packets."
 msgstr ""
+"Auf BSD-Systemen (macOS, FreeBSD usw.) wird die Flusskontrolle für Datagramm-"
+"Protokolle nicht unterstützt, da es keine zuverlässige Möglichkeit gibt, "
+"Sendefehler zu erkennen, die dadurch entstehen, dass zu viele Pakete "
+"geschrieben werden."
 
 #: ../../library/asyncio-protocol.rst:681
 msgid ""
@@ -928,10 +1251,15 @@ msgid ""
 "not be raised; if it is raised, it will be reported "
 "to :meth:`DatagramProtocol.error_received` but otherwise ignored."
 msgstr ""
+"Der Socket scheint immer „bereit“ zu sein, und überzählige Pakete werden "
+"verworfen. Ein :class:`OSError` mit ``errno`` gleich :const:`errno.ENOBUFS` "
+"wird möglicherweise ausgelöst oder auch nicht. Wird er ausgelöst, wird er "
+"an :meth:`DatagramProtocol.error_received` gemeldet, andernfalls aber "
+"ignoriert."
 
 #: ../../library/asyncio-protocol.rst:690
 msgid "Subprocess Protocols"
-msgstr ""
+msgstr "Subprozess-Protokolle"
 
 #: ../../library/asyncio-protocol.rst:692
 msgid ""
@@ -939,38 +1267,47 @@ msgid ""
 "passed to the :meth:`loop.subprocess_exec` and :meth:`loop.subprocess_shell` "
 "methods."
 msgstr ""
+"Instanzen von Subprozess-Protokollen sollten von Protokoll-Factorys erzeugt "
+"werden, die an die Methoden :meth:`loop.subprocess_exec` "
+"und :meth:`loop.subprocess_shell` übergeben werden."
 
 #: ../../library/asyncio-protocol.rst:698
 msgid ""
 "Called when the child process writes data into its stdout or stderr pipe."
 msgstr ""
+"Wird aufgerufen, wenn der Kindprozess Daten in seine Pipe stdout oder stderr "
+"schreibt."
 
 #: ../../library/asyncio-protocol.rst:701
 msgid "*fd* is the integer file descriptor of the pipe."
-msgstr ""
+msgstr "*fd* ist der ganzzahlige Dateideskriptor der Pipe."
 
 #: ../../library/asyncio-protocol.rst:703
 msgid "*data* is a non-empty bytes object containing the received data."
-msgstr ""
+msgstr "*data* ist ein nicht leeres Bytes-Objekt mit den empfangenen Daten."
 
 #: ../../library/asyncio-protocol.rst:707
 msgid ""
 "Called when one of the pipes communicating with the child process is closed."
 msgstr ""
+"Wird aufgerufen, wenn eine der Pipes zur Kommunikation mit dem Kindprozess "
+"geschlossen wird."
 
 #: ../../library/asyncio-protocol.rst:710
 msgid "*fd* is the integer file descriptor that was closed."
-msgstr ""
+msgstr "*fd* ist der ganzzahlige Dateideskriptor, der geschlossen wurde."
 
 #: ../../library/asyncio-protocol.rst:714
 msgid "Called when the child process has exited."
-msgstr ""
+msgstr "Wird aufgerufen, wenn der Kindprozess beendet wurde."
 
 #: ../../library/asyncio-protocol.rst:716
 msgid ""
 "It can be called before :meth:`~SubprocessProtocol.pipe_data_received` "
 "and :meth:`~SubprocessProtocol.pipe_connection_lost` methods."
 msgstr ""
+"Sie kann vor den Methoden :meth:`~SubprocessProtocol.pipe_data_received` "
+"und :meth:`~SubprocessProtocol.pipe_connection_lost` aufgerufen werden."
 
 #: ../../library/asyncio-protocol.rst:721
 msgid "Examples"
@@ -978,13 +1315,15 @@ msgstr "Beispiele"
 
 #: ../../library/asyncio-protocol.rst:726
 msgid "TCP Echo Server"
-msgstr ""
+msgstr "TCP-Echo-Server"
 
 #: ../../library/asyncio-protocol.rst:728
 msgid ""
 "Create a TCP echo server using the :meth:`loop.create_server` method, send "
 "back received data, and close the connection::"
 msgstr ""
+"Erzeugt einen TCP-Echo-Server mit der Methode :meth:`loop.create_server`, "
+"sendet empfangene Daten zurück und schließt die Verbindung::"
 
 #: ../../library/asyncio-protocol.rst:731
 msgid ""
@@ -1023,22 +1362,60 @@ msgid ""
 "\n"
 "asyncio.run(main())"
 msgstr ""
+"import asyncio\n"
+"\n"
+"\n"
+"class EchoServerProtocol(asyncio.Protocol):\n"
+"    def connection_made(self, transport):\n"
+"        peername = transport.get_extra_info('peername')\n"
+"        print(f'Connection from {peername}')\n"
+"        self.transport = transport\n"
+"\n"
+"    def data_received(self, data):\n"
+"        message = data.decode()\n"
+"        print(f'Data received: {message!r}')\n"
+"\n"
+"        print(f'Send: {message!r}')\n"
+"        self.transport.write(data)\n"
+"\n"
+"        print('Close the client socket')\n"
+"        self.transport.close()\n"
+"\n"
+"\n"
+"async def main():\n"
+"    # Get a reference to the event loop as we plan to use\n"
+"    # low-level APIs.\n"
+"    loop = asyncio.get_running_loop()\n"
+"\n"
+"    server = await loop.create_server(\n"
+"        EchoServerProtocol,\n"
+"        '127.0.0.1', 8888)\n"
+"\n"
+"    async with server:\n"
+"        await server.serve_forever()\n"
+"\n"
+"\n"
+"asyncio.run(main())"
 
 #: ../../library/asyncio-protocol.rst:769
 msgid ""
 "The :ref:`TCP echo server using streams <asyncio-tcp-echo-server-streams>` "
 "example uses the high-level :func:`asyncio.start_server` function."
 msgstr ""
+"Das Beispiel :ref:`TCP-Echo-Server mit Streams <asyncio-tcp-echo-server-"
+"streams>` verwendet die High-Level-Funktion :func:`asyncio.start_server`."
 
 #: ../../library/asyncio-protocol.rst:775
 msgid "TCP Echo Client"
-msgstr ""
+msgstr "TCP-Echo-Client"
 
 #: ../../library/asyncio-protocol.rst:777
 msgid ""
 "A TCP echo client using the :meth:`loop.create_connection` method, sends "
 "data, and waits until the connection is closed::"
 msgstr ""
+"Ein TCP-Echo-Client, der die Methode :meth:`loop.create_connection` "
+"verwendet, Daten sendet und wartet, bis die Verbindung geschlossen wird::"
 
 #: ../../library/asyncio-protocol.rst:780
 msgid ""
@@ -1084,22 +1461,67 @@ msgid ""
 "\n"
 "asyncio.run(main())"
 msgstr ""
+"import asyncio\n"
+"\n"
+"\n"
+"class EchoClientProtocol(asyncio.Protocol):\n"
+"    def __init__(self, message, on_con_lost):\n"
+"        self.message = message\n"
+"        self.on_con_lost = on_con_lost\n"
+"\n"
+"    def connection_made(self, transport):\n"
+"        transport.write(self.message.encode())\n"
+"        print(f'Data sent: {message!r}')\n"
+"\n"
+"    def data_received(self, data):\n"
+"        print(f'Data received: {data.decode()!r}')\n"
+"\n"
+"    def connection_lost(self, exc):\n"
+"        print('The server closed the connection')\n"
+"        self.on_con_lost.set_result(True)\n"
+"\n"
+"\n"
+"async def main():\n"
+"    # Get a reference to the event loop as we plan to use\n"
+"    # low-level APIs.\n"
+"    loop = asyncio.get_running_loop()\n"
+"\n"
+"    on_con_lost = loop.create_future()\n"
+"    message = 'Hello World!'\n"
+"\n"
+"    transport, protocol = await loop.create_connection(\n"
+"        lambda: EchoClientProtocol(message, on_con_lost),\n"
+"        '127.0.0.1', 8888)\n"
+"\n"
+"    # Wait until the protocol signals that the connection\n"
+"    # is lost and close the transport.\n"
+"    try:\n"
+"        await on_con_lost\n"
+"    finally:\n"
+"        transport.close()\n"
+"\n"
+"\n"
+"asyncio.run(main())"
 
 #: ../../library/asyncio-protocol.rst:825
 msgid ""
 "The :ref:`TCP echo client using streams <asyncio-tcp-echo-client-streams>` "
 "example uses the high-level :func:`asyncio.open_connection` function."
 msgstr ""
+"Das Beispiel :ref:`TCP-Echo-Client mit Streams <asyncio-tcp-echo-client-"
+"streams>` verwendet die High-Level-Funktion :func:`asyncio.open_connection`."
 
 #: ../../library/asyncio-protocol.rst:832
 msgid "UDP Echo Server"
-msgstr ""
+msgstr "UDP-Echo-Server"
 
 #: ../../library/asyncio-protocol.rst:834
 msgid ""
 "A UDP echo server, using the :meth:`loop.create_datagram_endpoint` method, "
 "sends back received data::"
 msgstr ""
+"Ein UDP-Echo-Server, der die Methode :meth:`loop.create_datagram_endpoint` "
+"verwendet, sendet empfangene Daten zurück::"
 
 #: ../../library/asyncio-protocol.rst:837
 msgid ""
@@ -1138,16 +1560,53 @@ msgid ""
 "\n"
 "asyncio.run(main())"
 msgstr ""
+"import asyncio\n"
+"\n"
+"\n"
+"class EchoServerProtocol:\n"
+"    def connection_made(self, transport):\n"
+"        self.transport = transport\n"
+"\n"
+"    def datagram_received(self, data, addr):\n"
+"        message = data.decode()\n"
+"        print(f'Received {message!r} from {addr}')\n"
+"        print(f'Send {message!r} to {addr}')\n"
+"        self.transport.sendto(data, addr)\n"
+"\n"
+"\n"
+"async def main():\n"
+"    print(\"Starting UDP server\")\n"
+"\n"
+"    # Get a reference to the event loop as we plan to use\n"
+"    # low-level APIs.\n"
+"    loop = asyncio.get_running_loop()\n"
+"\n"
+"    # One protocol instance will be created to serve all\n"
+"    # client requests.\n"
+"    transport, protocol = await loop.create_datagram_endpoint(\n"
+"        EchoServerProtocol,\n"
+"        local_addr=('127.0.0.1', 9999))\n"
+"\n"
+"    try:\n"
+"        await asyncio.sleep(3600)  # Serve for 1 hour.\n"
+"    finally:\n"
+"        transport.close()\n"
+"\n"
+"\n"
+"asyncio.run(main())"
 
 #: ../../library/asyncio-protocol.rst:876
 msgid "UDP Echo Client"
-msgstr ""
+msgstr "UDP-Echo-Client"
 
 #: ../../library/asyncio-protocol.rst:878
 msgid ""
 "A UDP echo client, using the :meth:`loop.create_datagram_endpoint` method, "
 "sends data and closes the transport when it receives the answer::"
 msgstr ""
+"Ein UDP-Echo-Client, der die Methode :meth:`loop.create_datagram_endpoint` "
+"verwendet, sendet Daten und schließt den Transport, wenn er die Antwort "
+"erhält::"
 
 #: ../../library/asyncio-protocol.rst:881
 msgid ""
@@ -1199,16 +1658,65 @@ msgid ""
 "\n"
 "asyncio.run(main())"
 msgstr ""
+"import asyncio\n"
+"\n"
+"\n"
+"class EchoClientProtocol:\n"
+"    def __init__(self, message, on_con_lost):\n"
+"        self.message = message\n"
+"        self.on_con_lost = on_con_lost\n"
+"        self.transport = None\n"
+"\n"
+"    def connection_made(self, transport):\n"
+"        self.transport = transport\n"
+"        print('Send:', self.message)\n"
+"        self.transport.sendto(self.message.encode())\n"
+"\n"
+"    def datagram_received(self, data, addr):\n"
+"        print(\"Received:\", data.decode())\n"
+"\n"
+"        print(\"Close the socket\")\n"
+"        self.transport.close()\n"
+"\n"
+"    def error_received(self, exc):\n"
+"        print('Error received:', exc)\n"
+"\n"
+"    def connection_lost(self, exc):\n"
+"        print(\"Connection closed\")\n"
+"        self.on_con_lost.set_result(True)\n"
+"\n"
+"\n"
+"async def main():\n"
+"    # Get a reference to the event loop as we plan to use\n"
+"    # low-level APIs.\n"
+"    loop = asyncio.get_running_loop()\n"
+"\n"
+"    on_con_lost = loop.create_future()\n"
+"    message = \"Hello World!\"\n"
+"\n"
+"    transport, protocol = await loop.create_datagram_endpoint(\n"
+"        lambda: EchoClientProtocol(message, on_con_lost),\n"
+"        remote_addr=('127.0.0.1', 9999))\n"
+"\n"
+"    try:\n"
+"        await on_con_lost\n"
+"    finally:\n"
+"        transport.close()\n"
+"\n"
+"\n"
+"asyncio.run(main())"
 
 #: ../../library/asyncio-protocol.rst:933
 msgid "Connecting Existing Sockets"
-msgstr ""
+msgstr "Bestehende Sockets verbinden"
 
 #: ../../library/asyncio-protocol.rst:935
 msgid ""
 "Wait until a socket receives data using the :meth:`loop.create_connection` "
 "method with a protocol::"
 msgstr ""
+"Wartet, bis ein Socket Daten empfängt, mit der "
+"Methode :meth:`loop.create_connection` und einem Protokoll::"
 
 #: ../../library/asyncio-protocol.rst:938
 msgid ""
@@ -1261,6 +1769,54 @@ msgid ""
 "\n"
 "asyncio.run(main())"
 msgstr ""
+"import asyncio\n"
+"import socket\n"
+"\n"
+"\n"
+"class MyProtocol(asyncio.Protocol):\n"
+"\n"
+"    def __init__(self, on_con_lost):\n"
+"        self.transport = None\n"
+"        self.on_con_lost = on_con_lost\n"
+"\n"
+"    def connection_made(self, transport):\n"
+"        self.transport = transport\n"
+"\n"
+"    def data_received(self, data):\n"
+"        print(\"Received:\", data.decode())\n"
+"\n"
+"        # We are done: close the transport;\n"
+"        # connection_lost() will be called automatically.\n"
+"        self.transport.close()\n"
+"\n"
+"    def connection_lost(self, exc):\n"
+"        # The socket has been closed\n"
+"        self.on_con_lost.set_result(True)\n"
+"\n"
+"\n"
+"async def main():\n"
+"    # Get a reference to the event loop as we plan to use\n"
+"    # low-level APIs.\n"
+"    loop = asyncio.get_running_loop()\n"
+"    on_con_lost = loop.create_future()\n"
+"\n"
+"    # Create a pair of connected sockets\n"
+"    rsock, wsock = socket.socketpair()\n"
+"\n"
+"    # Register the socket to wait for data.\n"
+"    transport, protocol = await loop.create_connection(\n"
+"        lambda: MyProtocol(on_con_lost), sock=rsock)\n"
+"\n"
+"    # Simulate the reception of data from the network.\n"
+"    loop.call_soon(wsock.send, 'abc'.encode())\n"
+"\n"
+"    try:\n"
+"        await protocol.on_con_lost\n"
+"    finally:\n"
+"        transport.close()\n"
+"        wsock.close()\n"
+"\n"
+"asyncio.run(main())"
 
 #: ../../library/asyncio-protocol.rst:989
 msgid ""
@@ -1268,6 +1824,9 @@ msgid ""
 "<asyncio_example_watch_fd>` example uses the low-"
 "level :meth:`loop.add_reader` method to register an FD."
 msgstr ""
+"Das Beispiel :ref:`Einen Dateideskriptor auf Leseereignisse überwachen "
+"<asyncio_example_watch_fd>` verwendet die Low-Level-"
+"Methode :meth:`loop.add_reader`, um einen Dateideskriptor zu registrieren."
 
 #: ../../library/asyncio-protocol.rst:993
 msgid ""
@@ -1275,20 +1834,27 @@ msgid ""
 "<asyncio_example_create_connection-streams>` example uses high-level streams "
 "created by the :func:`open_connection` function in a coroutine."
 msgstr ""
+"Das Beispiel :ref:`Einen offenen Socket registrieren, um mit Streams auf "
+"Daten zu warten <asyncio_example_create_connection-streams>` verwendet High-"
+"Level-Streams, die die Funktion :func:`open_connection` in einer Coroutine "
+"erzeugt hat."
 
 #: ../../library/asyncio-protocol.rst:1000
 msgid "loop.subprocess_exec() and SubprocessProtocol"
-msgstr ""
+msgstr "loop.subprocess_exec() und SubprocessProtocol"
 
 #: ../../library/asyncio-protocol.rst:1002
 msgid ""
 "An example of a subprocess protocol used to get the output of a subprocess "
 "and to wait for the subprocess exit."
 msgstr ""
+"Ein Beispiel für ein Subprozess-Protokoll, das die Ausgabe eines "
+"Subprozesses abruft und auf dessen Ende wartet."
 
 #: ../../library/asyncio-protocol.rst:1005
 msgid "The subprocess is created by the :meth:`loop.subprocess_exec` method::"
 msgstr ""
+"Der Subprozess wird mit der Methode :meth:`loop.subprocess_exec` erzeugt::"
 
 #: ../../library/asyncio-protocol.rst:1007
 msgid ""
@@ -1350,9 +1916,68 @@ msgid ""
 "date = asyncio.run(get_date())\n"
 "print(f\"Current date: {date}\")"
 msgstr ""
+"import asyncio\n"
+"import sys\n"
+"\n"
+"class DateProtocol(asyncio.SubprocessProtocol):\n"
+"    def __init__(self, exit_future):\n"
+"        self.exit_future = exit_future\n"
+"        self.output = bytearray()\n"
+"        self.pipe_closed = False\n"
+"        self.exited = False\n"
+"\n"
+"    def pipe_connection_lost(self, fd, exc):\n"
+"        self.pipe_closed = True\n"
+"        self.check_for_exit()\n"
+"\n"
+"    def pipe_data_received(self, fd, data):\n"
+"        self.output.extend(data)\n"
+"\n"
+"    def process_exited(self):\n"
+"        self.exited = True\n"
+"        # process_exited() method can be called before\n"
+"        # pipe_connection_lost() method: wait until both methods are\n"
+"        # called.\n"
+"        self.check_for_exit()\n"
+"\n"
+"    def check_for_exit(self):\n"
+"        if self.pipe_closed and self.exited:\n"
+"            self.exit_future.set_result(True)\n"
+"\n"
+"async def get_date():\n"
+"    # Get a reference to the event loop as we plan to use\n"
+"    # low-level APIs.\n"
+"    loop = asyncio.get_running_loop()\n"
+"\n"
+"    code = 'import datetime as dt; print(dt.datetime.now())'\n"
+"    exit_future = asyncio.Future(loop=loop)\n"
+"\n"
+"    # Create the subprocess controlled by DateProtocol;\n"
+"    # redirect the standard output into a pipe.\n"
+"    transport, protocol = await loop.subprocess_exec(\n"
+"        lambda: DateProtocol(exit_future),\n"
+"        sys.executable, '-c', code,\n"
+"        stdin=None, stderr=None)\n"
+"\n"
+"    # Wait for the subprocess exit using the process_exited()\n"
+"    # method of the protocol.\n"
+"    await exit_future\n"
+"\n"
+"    # Close the stdout pipe.\n"
+"    transport.close()\n"
+"\n"
+"    # Read the output which was collected by the\n"
+"    # pipe_data_received() method of the protocol.\n"
+"    data = bytes(protocol.output)\n"
+"    return data.decode('ascii').rstrip()\n"
+"\n"
+"date = asyncio.run(get_date())\n"
+"print(f\"Current date: {date}\")"
 
 #: ../../library/asyncio-protocol.rst:1065
 msgid ""
 "See also the :ref:`same example <asyncio_example_create_subprocess_exec>` "
 "written using high-level APIs."
 msgstr ""
+"Siehe auch das :ref:`gleiche Beispiel "
+"<asyncio_example_create_subprocess_exec>`, geschrieben mit High-Level-APIs."
