@@ -505,9 +505,9 @@ msgid ""
 "ERROR:root:Error occurred\n"
 "CRITICAL:root:Critical error -- shutting down"
 msgstr ""
-"WARNUNG:root:Warnung: Konfigurationsdatei „server.conf“ nicht gefunden\n"
-"FEHLER:root:Es ist ein Fehler aufgetreten\n"
-"KRITISCH:root:Kritischer Fehler – System wird heruntergefahren"
+"WARNING:root:Warning:config file server.conf not found\n"
+"ERROR:root:Error occurred\n"
+"CRITICAL:root:Critical error -- shutting down"
 
 #: ../../tutorial/stdlib2.rst:233
 msgid ""
