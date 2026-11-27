@@ -23,16 +23,19 @@ msgstr ""
 #: ../../library/curses.rst:2
 msgid ":mod:`!curses` --- Terminal handling for character-cell displays"
 msgstr ""
+":mod:`!curses` --- Terminalbehandlung für zeichenzellenbasierte Anzeigen"
 
 #: ../../library/curses.rst:8
 msgid "**Source code:** :source:`Lib/curses`"
-msgstr ""
+msgstr "**Quellcode:** :source:`Lib/curses`"
 
 #: ../../library/curses.rst:12
 msgid ""
 "The :mod:`!curses` module provides an interface to the curses library, the "
 "de-facto standard for portable advanced terminal handling."
 msgstr ""
+"Das Modul :mod:`!curses` bietet eine Schnittstelle zur curses-Bibliothek, "
+"dem De-facto-Standard für portable, fortgeschrittene Terminalbehandlung."
 
 #: ../../library/curses.rst:15
 msgid ""
@@ -41,16 +44,23 @@ msgid ""
 "extension module is designed to match the API of ncurses, an open-source "
 "curses library hosted on Linux and the BSD variants of Unix."
 msgstr ""
+"Obwohl curses am häufigsten in der Unix-Umgebung verwendet wird, gibt es "
+"Versionen für Windows, DOS und möglicherweise auch andere Systeme. Dieses "
+"Erweiterungsmodul ist so entworfen, dass es der API von ncurses entspricht, "
+"einer Open-Source-curses-Bibliothek, die auf Linux und den BSD-Varianten von "
+"Unix gehostet wird."
 
 #: ../../library/curses.rst:24 ../../includes/wasm-mobile-notavail.rst:3
 msgid "Availability"
-msgstr ""
+msgstr "Verfügbarkeit"
 
 #: ../../includes/wasm-mobile-notavail.rst:5
 msgid ""
 "This module is not supported on :ref:`mobile platforms <mobile-"
 "availability>` or :ref:`WebAssembly platforms <wasm-availability>`."
 msgstr ""
+"Dieses Modul wird auf :ref:`mobilen Plattformen <mobile-availability>` "
+"oder :ref:`WebAssembly-Plattformen <wasm-availability>` nicht unterstützt."
 
 #: ../../includes/optional-module.rst:1
 msgid ""
@@ -71,12 +81,19 @@ msgid ""
 "integer is the code of a single encoded byte, optionally combined with "
 "attributes and a color pair, as returned by :meth:`window.inch`."
 msgstr ""
+"Wann immer die Dokumentation ein *Zeichen* erwähnt, kann es als ganze Zahl, "
+"als Unicode-Zeichenkette mit einem Zeichen oder als Byte-Zeichenkette mit "
+"einem Byte angegeben werden. Eine ganze Zahl ist der Code eines einzelnen "
+"kodierten Bytes, optional kombiniert mit Attributen und einem Farbpaar, wie "
+"es :meth:`window.inch` zurückgibt."
 
 #: ../../library/curses.rst:33
 msgid ""
 "Whenever the documentation mentions a *character string* it can be specified "
 "as a Unicode string or a byte string."
 msgstr ""
+"Wann immer die Dokumentation eine *Zeichenkette* erwähnt, kann sie als "
+"Unicode-Zeichenkette oder als Byte-Zeichenkette angegeben werden."
 
 #: ../../library/curses.rst:38
 msgid ""
@@ -87,44 +104,58 @@ msgid ""
 "and :meth:`~window.refresh`) release the :term:`GIL`, unsynchronized use "
 "from several threads can then crash the interpreter. Serialize the calls."
 msgstr ""
+"Ob curses aus mehreren Threads verwendet werden darf, hängt von der zugrunde "
+"liegenden Bibliothek und davon ab, wie sie gebaut wurde. In vielen "
+"Implementierungen, auch im Standard-Build von ncurses, wird der "
+"Bildschirmzustand gemeinsam genutzt und ist nicht thread-sicher. Da die "
+"blockierenden und die Aktualisierungsmethoden (etwa :meth:`~window.getch` "
+"und :meth:`~window.refresh`) den :term:`GIL` freigeben, kann "
+"unsynchronisierte Verwendung aus mehreren Threads dann den Interpreter zum "
+"Absturz bringen. Serialisiere die Aufrufe."
 
 #: ../../library/curses.rst:50
 msgid "Module :mod:`curses.ascii`"
-msgstr ""
+msgstr "Modul :mod:`curses.ascii`"
 
 #: ../../library/curses.rst:51
 msgid ""
 "Utilities for working with ASCII characters, regardless of your locale "
 "settings."
 msgstr ""
+"Hilfsmittel für die Arbeit mit ASCII-Zeichen, unabhängig von deinen "
+"Lokaleinstellungen."
 
 #: ../../library/curses.rst:53
 msgid "Module :mod:`curses.panel`"
-msgstr ""
+msgstr "Modul :mod:`curses.panel`"
 
 #: ../../library/curses.rst:54
 msgid "A panel stack extension that adds depth to  curses windows."
-msgstr ""
+msgstr "Eine Panel-Stack-Erweiterung, die curses-Fenstern Tiefe hinzufügt."
 
 #: ../../library/curses.rst:56
 msgid "Module :mod:`curses.textpad`"
-msgstr ""
+msgstr "Modul :mod:`curses.textpad`"
 
 #: ../../library/curses.rst:57
 msgid ""
 "Editable text widget for curses supporting  :program:`Emacs`\\ -like "
 "bindings."
 msgstr ""
+"Bearbeitbares Text-Widget für curses, das Tastenbelegungen im Stil "
+"von :program:`Emacs` unterstützt."
 
 #: ../../library/curses.rst:59
 msgid ":ref:`curses-howto`"
-msgstr ""
+msgstr ":ref:`curses-howto`"
 
 #: ../../library/curses.rst:60
 msgid ""
 "Tutorial material on using curses with Python, by Andrew Kuchling and Eric "
 "Raymond."
 msgstr ""
+"Tutorial-Material zur Verwendung von curses mit Python von Andrew Kuchling "
+"und Eric Raymond."
 
 #: ../../library/curses.rst:67
 msgid "Functions"
@@ -132,11 +163,13 @@ msgstr "Funktionen"
 
 #: ../../library/curses.rst:69
 msgid "The module :mod:`!curses` defines the following exception:"
-msgstr ""
+msgstr "Das Modul :mod:`!curses` definiert die folgende Ausnahme:"
 
 #: ../../library/curses.rst:74
 msgid "Exception raised when a curses library function returns an error."
 msgstr ""
+"Ausnahme, die ausgelöst wird, wenn eine Funktion der curses-Bibliothek einen "
+"Fehler zurückgibt."
 
 #: ../../library/curses.rst:78
 msgid ""
@@ -144,16 +177,22 @@ msgid ""
 "default to the current cursor location. Whenever *attr* is optional, it "
 "defaults to :const:`A_NORMAL`."
 msgstr ""
+"Wann immer die Argumente *x* oder *y* einer Funktion oder Methode optional "
+"sind, ist ihr Standard die aktuelle Cursor-Position. Wann immer *attr* "
+"optional ist, ist der Standard :const:`A_NORMAL`."
 
 #: ../../library/curses.rst:82
 msgid "The module :mod:`!curses` defines the following functions:"
-msgstr ""
+msgstr "Das Modul :mod:`!curses` definiert die folgenden Funktionen:"
 
 #: ../../library/curses.rst:87
 msgid ""
 "Allow use of default values for colors on terminals supporting this feature. "
 "Use this to support transparency in your application."
 msgstr ""
+"Erlaubt die Verwendung von Standardwerten für Farben auf Terminals, die "
+"diese Funktion unterstützen. Verwende dies, um Transparenz in deiner "
+"Anwendung zu unterstützen."
 
 #: ../../library/curses.rst:90
 msgid ""
@@ -162,14 +201,18 @@ msgid ""
 "default background and ``init_pair(x, -1, COLOR_BLUE)`` will initialize pair "
 "*x* as default foreground on blue."
 msgstr ""
+"Weist der Farbnummer ``-1`` die Standard-Vordergrund-/Hintergrundfarben des "
+"Terminals zu. ``init_pair(x, COLOR_RED, -1)`` initialisiert das Paar *x* "
+"also als Rot auf dem Standardhintergrund, und ``init_pair(x, -1, "
+"COLOR_BLUE)`` initialisiert das Paar *x* als Standardvordergrund auf Blau."
 
 #: ../../library/curses.rst:95
 msgid "Change the definition of the color-pair ``0`` to ``(fg, bg)``."
-msgstr ""
+msgstr "Ändert die Definition des Farbpaars ``0`` in ``(fg, bg)``."
 
 #: ../../library/curses.rst:97
 msgid "This is an ncurses extension."
-msgstr ""
+msgstr "Das ist eine ncurses-Erweiterung."
 
 #: ../../library/curses.rst:104
 msgid ""
@@ -178,16 +221,23 @@ msgid ""
 "reasons; in former times, it was used to  write output loops for time delays "
 "and occasionally to change interfaces depending on the line speed."
 msgstr ""
+"Gibt die Ausgabegeschwindigkeit des Terminals in Bit pro Sekunde zurück. Bei "
+"Software-Terminalemulatoren hat sie einen festen hohen Wert. Aus "
+"historischen Gründen enthalten: Früher wurde sie verwendet, um "
+"Ausgabeschleifen für Zeitverzögerungen zu schreiben und gelegentlich die "
+"Schnittstellen je nach Leitungsgeschwindigkeit zu ändern."
 
 #: ../../library/curses.rst:112
 msgid "Emit a short attention sound."
-msgstr ""
+msgstr "Gibt einen kurzen Aufmerksamkeitston aus."
 
 #: ../../library/curses.rst:117
 msgid ""
 "Return ``True`` or ``False``, depending on whether the programmer can change "
 "the colors displayed by the terminal."
 msgstr ""
+"Gibt ``True`` oder ``False`` zurück, je nachdem, ob der Programmierer die "
+"vom Terminal angezeigten Farben ändern kann."
 
 #: ../../library/curses.rst:123
 msgid ""
@@ -198,6 +248,13 @@ msgid ""
 "calling program.  Calling first :func:`raw` then :func:`cbreak` leaves the "
 "terminal in cbreak mode."
 msgstr ""
+"Wechselt in den cbreak-Modus. Im cbreak-Modus (manchmal „rare“-Modus "
+"genannt) ist die normale Zeilenpufferung des tty abgeschaltet, und Zeichen "
+"stehen einzeln zum Lesen zur Verfügung. Anders als im raw-Modus behalten "
+"Sonderzeichen (Interrupt, Quit, Suspend und Flusskontrolle) jedoch ihre "
+"Wirkung auf den tty-Treiber und das aufrufende Programm. Wird "
+"zuerst :func:`raw` und dann :func:`cbreak` aufgerufen, bleibt das Terminal "
+"im cbreak-Modus."
 
 #: ../../library/curses.rst:132
 msgid ""
@@ -207,6 +264,12 @@ msgid ""
 "will be between ``0`` (no component) and ``1000`` (maximum amount of "
 "component).  Raise an exception if the color is not supported."
 msgstr ""
+"Gibt die Intensität der Rot-, Grün- und Blau-Komponenten (RGB) der Farbe "
+"*color_number* zurück, die zwischen ``0`` und ``COLORS - 1`` liegen muss. "
+"Gibt ein 3-Tupel mit den R-, G- und B-Werten der angegebenen Farbe zurück, "
+"die zwischen ``0`` (keine Komponente) und ``1000`` (maximaler Anteil der "
+"Komponente) liegen. Löst eine Ausnahme aus, wenn die Farbe nicht unterstützt "
+"wird."
 
 #: ../../library/curses.rst:141
 msgid ""
@@ -216,6 +279,11 @@ msgid ""
 "other :const:`!A_\\*` attributes.  :func:`pair_number` is the counterpart to "
 "this function."
 msgstr ""
+"Gibt den Attributwert zur Anzeige von Text im angegebenen Farbpaar zurück. "
+"Es werden nur die ersten 256 Farbpaare unterstützt. Dieser Attributwert "
+"lässt sich mit :const:`A_STANDOUT`, :const:`A_REVERSE` und den "
+"anderen :const:`!A_\\*`-Attributen kombinieren. :func:`pair_number` ist das "
+"Gegenstück zu dieser Funktion."
 
 #: ../../library/curses.rst:150
 msgid ""
@@ -225,6 +293,12 @@ msgid ""
 "exception.  On many terminals, the \"visible\" mode is an underline cursor "
 "and the \"very visible\" mode is a block cursor."
 msgstr ""
+"Setzt den Cursor-Zustand. *visibility* kann auf ``0``, ``1`` oder ``2`` "
+"gesetzt werden, für unsichtbar, normal oder sehr sichtbar. Unterstützt das "
+"Terminal die angeforderte Sichtbarkeit, wird der vorherige Cursor-Zustand "
+"zurückgegeben, andernfalls wird eine Ausnahme ausgelöst. Auf vielen "
+"Terminals ist der „sichtbare“ Modus ein Unterstrich-Cursor und der „sehr "
+"sichtbare“ Modus ein Block-Cursor."
 
 #: ../../library/curses.rst:159
 msgid ""
@@ -233,6 +307,10 @@ msgid ""
 "for when the program is not in curses.)  Subsequent calls "
 "to :func:`reset_prog_mode` will restore this mode."
 msgstr ""
+"Speichert den aktuellen Terminalmodus als „Programm“-Modus, den Modus, wenn "
+"das laufende Programm curses verwendet. (Sein Gegenstück ist der „Shell“-"
+"Modus, wenn das Programm curses nicht verwendet.) Nachfolgende Aufrufe "
+"von :func:`reset_prog_mode` stellen diesen Modus wieder her."
 
 #: ../../library/curses.rst:167
 msgid ""
@@ -241,10 +319,15 @@ msgid ""
 "mode, when the program is using curses capabilities.) Subsequent calls "
 "to :func:`reset_shell_mode` will restore this mode."
 msgstr ""
+"Speichert den aktuellen Terminalmodus als „Shell“-Modus, den Modus, wenn das "
+"laufende Programm curses nicht verwendet. (Sein Gegenstück ist der "
+"„Programm“-Modus, wenn das Programm curses-Fähigkeiten verwendet.) "
+"Nachfolgende Aufrufe von :func:`reset_shell_mode` stellen diesen Modus "
+"wieder her."
 
 #: ../../library/curses.rst:175
 msgid "Insert an *ms* millisecond pause in output."
-msgstr ""
+msgstr "Fügt in die Ausgabe eine Pause von *ms* Millisekunden ein."
 
 #: ../../library/curses.rst:180
 msgid ""
@@ -253,6 +336,11 @@ msgid ""
 "representing the desired next state.  The :func:`doupdate` function updates "
 "the physical screen to match the virtual screen."
 msgstr ""
+"Aktualisiert den physischen Bildschirm. Die curses-Bibliothek hält zwei "
+"Datenstrukturen, eine, die den aktuellen Inhalt des physischen Bildschirms "
+"darstellt, und einen virtuellen Bildschirm, der den gewünschten nächsten "
+"Zustand darstellt. Die Funktion :func:`doupdate` aktualisiert den physischen "
+"Bildschirm so, dass er dem virtuellen Bildschirm entspricht."
 
 #: ../../library/curses.rst:185
 msgid ""
@@ -264,16 +352,28 @@ msgid ""
 "issuing :meth:`!noutrefresh` calls on all windows, followed by a "
 "single :func:`!doupdate`."
 msgstr ""
+"Der virtuelle Bildschirm kann durch einen Aufruf "
+"von :meth:`~window.noutrefresh` aktualisiert werden, nachdem "
+"Schreiboperationen wie :meth:`~window.addstr` auf einem Fenster ausgeführt "
+"wurden. Der normale Aufruf :meth:`~window.refresh` ist einfach :meth:`!"
+"noutrefresh` gefolgt von :func:`!doupdate`. Müssen mehrere Fenster "
+"aktualisiert werden, lässt sich die Leistung steigern und möglicherweise das "
+"Bildschirmflackern verringern, indem man :meth:`!noutrefresh` für alle "
+"Fenster aufruft, gefolgt von einem einzigen :func:`!doupdate`."
 
 #: ../../library/curses.rst:195
 msgid ""
 "Enter echo mode.  In echo mode, each character input is echoed to the screen "
 "as it is entered."
 msgstr ""
+"Wechselt in den Echo-Modus. Im Echo-Modus wird jedes eingegebene Zeichen bei "
+"der Eingabe auf dem Bildschirm wiedergegeben."
 
 #: ../../library/curses.rst:201
 msgid "De-initialize the library, and return terminal to normal status."
 msgstr ""
+"Deinitialisiert die Bibliothek und versetzt das Terminal in den normalen "
+"Zustand zurück."
 
 #: ../../library/curses.rst:206
 msgid ""
@@ -281,6 +381,10 @@ msgid ""
 "Unix operating systems this is a property of the controlling tty of the "
 "curses program, and is not set by the curses library itself."
 msgstr ""
+"Gibt das aktuelle Löschzeichen des Benutzers als Bytes-Objekt mit einem Byte "
+"zurück. Unter Unix-Betriebssystemen ist das eine Eigenschaft des steuernden "
+"tty des curses-Programms und wird nicht von der curses-Bibliothek selbst "
+"gesetzt."
 
 #: ../../library/curses.rst:213
 msgid ""
@@ -292,6 +396,15 @@ msgid ""
 "current line, and so are screen updates.  This may be used for enabling "
 "character-at-a-time  line editing without touching the rest of the screen."
 msgstr ""
+"Die Routine :func:`.filter` muss, falls verwendet, vor dem Aufruf "
+"von :func:`initscr` aufgerufen werden. Die Wirkung ist, dass während der "
+"Initialisierung :envvar:`LINES` auf ``1`` gesetzt wird, die Fähigkeiten "
+"``clear``, ``cup``, ``cud``, ``cud1``, ``cuu1``, ``cuu``, ``vpa`` "
+"deaktiviert werden und die Zeichenkette ``home`` auf den Wert von ``cr`` "
+"gesetzt wird. Dadurch ist der Cursor auf die aktuelle Zeile beschränkt, "
+"ebenso die Bildschirmaktualisierungen. Das lässt sich verwenden, um "
+"zeichenweises Zeilenbearbeiten zu ermöglichen, ohne den Rest des Bildschirms "
+"anzufassen."
 
 #: ../../library/curses.rst:223
 msgid ""
@@ -299,12 +412,19 @@ msgid ""
 "back in a short interval.  Some people prefer such as 'visible bell' to the "
 "audible attention signal produced by :func:`beep`."
 msgstr ""
+"Lässt den Bildschirm aufblitzen. Das heißt, er wird auf inverse Darstellung "
+"umgeschaltet und nach kurzer Zeit wieder zurück. Manche Leute bevorzugen so "
+"eine „sichtbare Glocke“ gegenüber dem akustischen Aufmerksamkeitssignal, "
+"das :func:`beep` erzeugt."
 
 #: ../../library/curses.rst:230
 msgid ""
 "Flush all input buffers.  This throws away any  typeahead  that  has been "
 "typed by the user and has not yet been processed by the program."
 msgstr ""
+"Leert alle Eingabepuffer. Dadurch werden alle Tastatureingaben verworfen, "
+"die der Benutzer vorab getippt hat und die das Programm noch nicht "
+"verarbeitet hat."
 
 #: ../../library/curses.rst:236
 msgid ""
@@ -318,12 +438,24 @@ msgid ""
 "from 1 to "
 "5: :const:`BUTTONn_PRESSED`, :const:`BUTTONn_RELEASED`, :const:`BUTTONn_CLICKED`, :const:`BUTTONn_DOUBLE_CLICKED`, :const:`BUTTONn_TRIPLE_CLICKED`, :const:`BUTTON_SHIFT`, :const:`BUTTON_CTRL`, :const:`BUTTON_ALT`."
 msgstr ""
+"Nachdem :meth:`~window.getch` :const:`KEY_MOUSE` zurückgegeben hat, um ein "
+"Mausereignis zu signalisieren, sollte diese Methode aufgerufen werden, um "
+"das in die Warteschlange gestellte Mausereignis abzurufen, das als 5-Tupel "
+"``(id, x, y, z, bstate)`` dargestellt wird. *id* ist ein ID-Wert, der zur "
+"Unterscheidung mehrerer Geräte dient, und *x*, *y*, *z* sind die Koordinaten "
+"des Ereignisses. (*z* wird derzeit nicht verwendet.) *bstate* ist ein "
+"ganzzahliger Wert, dessen Bits gesetzt werden, um die Art des Ereignisses "
+"anzugeben, und der das bitweise ODER einer oder mehrerer der folgenden "
+"Konstanten ist, wobei *n* die Tastennummer von 1 bis 5 "
+"ist: :const:`BUTTONn_PRESSED`, :const:`BUTTONn_RELEASED`, :const:`BUTTONn_CLICKED`, :const:`BUTTONn_DOUBLE_CLICKED`, :const:`BUTTONn_TRIPLE_CLICKED`, :const:`BUTTON_SHIFT`, :const:`BUTTON_CTRL`, :const:`BUTTON_ALT`."
 
 #: ../../library/curses.rst:247 ../../library/curses.rst:1926
 msgid ""
 "The ``BUTTON5_*`` constants are now exposed if they are provided by the "
 "underlying curses library."
 msgstr ""
+"Die Konstanten ``BUTTON5_*`` werden jetzt bereitgestellt, wenn die zugrunde "
+"liegende curses-Bibliothek sie bietet."
 
 #: ../../library/curses.rst:254
 msgid ""
@@ -331,6 +463,9 @@ msgid ""
 "x)``.  If :meth:`leaveok <window.leaveok>` is currently ``True``, then "
 "return ``(-1, -1)``."
 msgstr ""
+"Gibt die aktuellen Koordinaten des Cursors auf dem virtuellen Bildschirm als "
+"Tupel ``(y, x)`` zurück. Ist :meth:`leaveok <window.leaveok>` derzeit "
+"``True``, wird ``(-1, -1)`` zurückgegeben."
 
 #: ../../library/curses.rst:260
 msgid ""
@@ -339,12 +474,19 @@ msgid ""
 "a new window using that data, returning the new window object.  The *file* "
 "argument must be a file object opened for reading in binary mode."
 msgstr ""
+"Liest fensterbezogene Daten, die ein früherer Aufruf "
+"von :meth:`window.putwin` in der Datei gespeichert hat. Die Routine erzeugt "
+"und initialisiert dann mit diesen Daten ein neues Fenster und gibt das neue "
+"Fensterobjekt zurück. Das Argument *file* muss ein zum Lesen im Binärmodus "
+"geöffnetes Dateiobjekt sein."
 
 #: ../../library/curses.rst:268
 msgid ""
 "Return ``True`` if the terminal can display colors; otherwise, return "
 "``False``."
 msgstr ""
+"Gibt ``True`` zurück, wenn das Terminal Farben darstellen kann, andernfalls "
+"``False``."
 
 #: ../../library/curses.rst:272
 msgid ""
@@ -352,10 +494,14 @@ msgid ""
 "``False``. Extended color support allows more than 256 color pairs for "
 "terminals that support more than 16 colors (for example, xterm-256color)."
 msgstr ""
+"Gibt ``True`` zurück, wenn das Modul erweiterte Farben unterstützt, "
+"andernfalls ``False``. Die Unterstützung erweiterter Farben erlaubt mehr als "
+"256 Farbpaare bei Terminals, die mehr als 16 Farben unterstützen (zum "
+"Beispiel xterm-256color)."
 
 #: ../../library/curses.rst:276
 msgid "Extended color support requires ncurses version 6.1 or later."
-msgstr ""
+msgstr "Die Unterstützung erweiterter Farben erfordert ncurses ab Version 6.1."
 
 #: ../../library/curses.rst:282
 msgid ""
@@ -363,6 +509,9 @@ msgid ""
 "capabilities. This function is included for historical reasons only, as all "
 "modern software terminal emulators have such capabilities."
 msgstr ""
+"Gibt ``True`` zurück, wenn das Terminal Fähigkeiten zum Einfügen und Löschen "
+"von Zeichen hat. Diese Funktion ist nur aus historischen Gründen enthalten, "
+"da alle modernen Software-Terminalemulatoren solche Fähigkeiten haben."
 
 #: ../../library/curses.rst:289
 msgid ""
@@ -371,12 +520,18 @@ msgid ""
 "historical reasons only, as all modern software terminal emulators have such "
 "capabilities."
 msgstr ""
+"Gibt ``True`` zurück, wenn das Terminal Fähigkeiten zum Einfügen und Löschen "
+"von Zeilen hat oder sie mit Scroll-Bereichen simulieren kann. Diese Funktion "
+"ist nur aus historischen Gründen enthalten, da alle modernen Software-"
+"Terminalemulatoren solche Fähigkeiten haben."
 
 #: ../../library/curses.rst:297
 msgid ""
 "Take a key value *ch*, and return ``True`` if the current terminal type "
 "recognizes a key with that value."
 msgstr ""
+"Nimmt einen Tastenwert *ch* und gibt ``True`` zurück, wenn der aktuelle "
+"Terminaltyp eine Taste mit diesem Wert erkennt."
 
 #: ../../library/curses.rst:303
 msgid ""
@@ -388,6 +543,14 @@ msgid ""
 "must be a number between ``1`` and ``255``. Use :func:`nocbreak` to leave "
 "half-delay mode."
 msgstr ""
+"Wird für den Halbverzögerungsmodus verwendet, der dem cbreak-Modus ähnelt, "
+"indem vom Benutzer getippte Zeichen sofort für das Programm verfügbar sind. "
+"Wurde jedoch nach einer Blockierung von *tenths* Zehntelsekunden nichts "
+"getippt, gibt :meth:`~window.getch` ``-1`` zurück, "
+"während :meth:`~window.getkey` "
+"und :meth:`~window.get_wch` :exc:`curses.error` auslösen. Der Wert von "
+"*tenths* muss eine Zahl zwischen ``1`` und ``255`` sein. "
+"Verwende :func:`nocbreak`, um den Halbverzögerungsmodus zu verlassen."
 
 #: ../../library/curses.rst:314
 msgid ""
@@ -400,6 +563,14 @@ msgid ""
 "op on most terminals; it is active only if :func:`can_change_color` returns "
 "``True``."
 msgstr ""
+"Ändert die Definition einer Farbe. Übergeben werden die Nummer der zu "
+"ändernden Farbe, gefolgt von drei RGB-Werten (für die Anteile der Rot-, "
+"Grün- und Blau-Komponenten). Der Wert von *color_number* muss zwischen ``0`` "
+"und ``COLORS - 1`` liegen. Jeder der Werte *r*, *g*, *b* muss zwischen ``0`` "
+"und ``1000`` liegen. Wird :func:`init_color` verwendet, ändern sich alle "
+"Vorkommen dieser Farbe auf dem Bildschirm sofort auf die neue Definition. "
+"Diese Funktion tut auf den meisten Terminals nichts und ist nur aktiv, "
+"wenn :func:`can_change_color` ``True`` zurückgibt."
 
 #: ../../library/curses.rst:325
 msgid ""
@@ -414,23 +585,38 @@ msgid ""
 "refreshed and all occurrences of that color-pair are changed to the new "
 "definition."
 msgstr ""
+"Ändert die Definition eines Farbpaars. Es nimmt drei Argumente: die Nummer "
+"des zu ändernden Farbpaars, die Nummer der Vordergrundfarbe und die Nummer "
+"der Hintergrundfarbe. Der Wert von *pair_number* muss zwischen ``1`` und "
+"``COLOR_PAIRS - 1`` liegen (das Farbpaar ``0`` kann nur "
+"von :func:`use_default_colors` und :func:`assume_default_colors` geändert "
+"werden). Der Wert der Argumente *fg* und *bg* muss zwischen ``0`` und "
+"``COLORS - 1`` liegen oder, nach dem Aufruf von :func:`!use_default_colors` "
+"oder :func:`!assume_default_colors`, ``-1`` sein. Wurde das Farbpaar zuvor "
+"initialisiert, wird der Bildschirm aktualisiert, und alle Vorkommen dieses "
+"Farbpaars werden auf die neue Definition geändert."
 
 #: ../../library/curses.rst:340
 msgid ""
 "Initialize the library. Return a :ref:`window <curses-window-objects>` "
 "object which represents the whole screen."
 msgstr ""
+"Initialisiert die Bibliothek. Gibt ein :ref:`Fenster <curses-window-"
+"objects>`-Objekt zurück, das den gesamten Bildschirm darstellt."
 
 #: ../../library/curses.rst:343
 msgid ""
 "See :func:`setupterm` for a caveat about calling it before this function."
 msgstr ""
+"Einen Vorbehalt zum Aufruf vor dieser Funktion siehe :func:`setupterm`."
 
 #: ../../library/curses.rst:347
 msgid ""
 "If there is an error opening the terminal, the underlying curses library may "
 "cause the interpreter to exit."
 msgstr ""
+"Tritt beim Öffnen des Terminals ein Fehler auf, kann die zugrunde liegende "
+"curses-Bibliothek den Interpreter beenden."
 
 #: ../../library/curses.rst:353
 msgid ""
@@ -438,18 +624,25 @@ msgid ""
 "will flush all output in the terminal driver queue.  If *flag* is ``False``, "
 "no flushing is done."
 msgstr ""
+"Ist *flag* ``True``, leert das Drücken einer Unterbrechungstaste (Interrupt, "
+"Break oder Quit) die gesamte Ausgabe in der Warteschlange des "
+"Terminaltreibers. Ist *flag* ``False``, wird nichts geleert."
 
 #: ../../library/curses.rst:360
 msgid ""
 "Return ``True`` if :func:`resize_term` would modify the window structure, "
 "``False`` otherwise."
 msgstr ""
+"Gibt ``True`` zurück, wenn :func:`resize_term` die Fensterstruktur ändern "
+"würde, andernfalls ``False``."
 
 #: ../../library/curses.rst:366
 msgid ""
 "Return ``True`` if :func:`endwin` has been called (that is, the  curses "
 "library has been deinitialized)."
 msgstr ""
+"Gibt ``True`` zurück, wenn :func:`endwin` aufgerufen wurde (das heißt, die "
+"curses-Bibliothek wurde deinitialisiert)."
 
 #: ../../library/curses.rst:372
 msgid ""
@@ -461,10 +654,17 @@ msgid ""
 "of the prefix ``b'M-'`` followed by the name of the corresponding ASCII "
 "character."
 msgstr ""
+"Gibt den Namen der Taste mit der Nummer *k* als Bytes-Objekt zurück. Der "
+"Name einer Taste, die ein druckbares ASCII-Zeichen erzeugt, ist das Zeichen "
+"der Taste. Der Name einer Tastenkombination mit Strg ist ein Bytes-Objekt "
+"aus zwei Bytes, bestehend aus einem Zirkumflex (``b'^'``) gefolgt vom "
+"entsprechenden druckbaren ASCII-Zeichen. Der Name einer Tastenkombination "
+"mit Alt (128--255) ist ein Bytes-Objekt aus dem Präfix ``b'M-'`` gefolgt vom "
+"Namen des entsprechenden ASCII-Zeichens."
 
 #: ../../library/curses.rst:379
 msgid "Raise a :exc:`ValueError` if *k* is negative."
-msgstr ""
+msgstr "Löst eine :exc:`ValueError` aus, wenn *k* negativ ist."
 
 #: ../../library/curses.rst:384
 msgid ""
@@ -472,6 +672,10 @@ msgid ""
 "Under Unix operating systems this is a property of the controlling tty of "
 "the curses program, and is not set by the curses library itself."
 msgstr ""
+"Gibt das aktuelle Zeilenlöschzeichen des Benutzers als Bytes-Objekt mit "
+"einem Byte zurück. Unter Unix-Betriebssystemen ist das eine Eigenschaft des "
+"steuernden tty des curses-Programms und wird nicht von der curses-Bibliothek "
+"selbst gesetzt."
 
 #: ../../library/curses.rst:391
 msgid ""
@@ -479,12 +683,18 @@ msgid ""
 "current terminal.  The maximum length of a verbose description is 128 "
 "characters.  It is defined only after the call to :func:`initscr`."
 msgstr ""
+"Gibt ein Bytes-Objekt mit dem terminfo-Feld für den langen Namen zurück, das "
+"das aktuelle Terminal beschreibt. Die maximale Länge einer ausführlichen "
+"Beschreibung beträgt 128 Zeichen. Es ist erst nach dem Aufruf "
+"von :func:`initscr` definiert."
 
 #: ../../library/curses.rst:398
 msgid ""
 "If *flag* is ``True``, allow 8-bit characters to be input.  If *flag* is "
 "``False``,  allow only 7-bit chars."
 msgstr ""
+"Ist *flag* ``True``, wird die Eingabe von 8-Bit-Zeichen erlaubt. Ist *flag* "
+"``False``, werden nur 7-Bit-Zeichen erlaubt."
 
 #: ../../library/curses.rst:404
 msgid ""
@@ -494,6 +704,11 @@ msgid ""
 "sixth of a second. Use a negative *interval* to obtain the interval value "
 "without changing it."
 msgstr ""
+"Legt die maximale Zeit in Millisekunden fest, die zwischen Drücken und "
+"Loslassen verstreichen darf, damit sie als Klick erkannt werden, und gibt "
+"den vorherigen Intervallwert zurück. Der Standardwert ist 166 Millisekunden, "
+"also eine Sechstelsekunde. Verwende ein negatives *interval*, um den "
+"Intervallwert zu erhalten, ohne ihn zu ändern."
 
 #: ../../library/curses.rst:412
 msgid ""
@@ -503,16 +718,24 @@ msgid ""
 "previous value of the mouse event mask.  If this function is never called, "
 "no mouse events are ever reported."
 msgstr ""
+"Legt die zu meldenden Mausereignisse fest und gibt ein Tupel ``(availmask, "
+"oldmask)`` zurück. *availmask* gibt an, welche der angegebenen "
+"Mausereignisse gemeldet werden können, bei vollständigem Fehlschlag gibt sie "
+"``0`` zurück. *oldmask* ist der vorherige Wert der Mausereignismaske. Wird "
+"diese Funktion nie aufgerufen, werden nie Mausereignisse gemeldet."
 
 #: ../../library/curses.rst:421
 msgid "Sleep for *ms* milliseconds."
-msgstr ""
+msgstr "Wartet *ms* Millisekunden."
 
 #: ../../library/curses.rst:426
 msgid ""
 "Create and return a pointer to a new pad data structure with the given "
 "number of lines and columns.  Return a pad as a window object."
 msgstr ""
+"Erzeugt einen Zeiger auf eine neue Pad-Datenstruktur mit der angegebenen "
+"Anzahl von Zeilen und Spalten und gibt ihn zurück. Gibt ein Pad als "
+"Fensterobjekt zurück."
 
 #: ../../library/curses.rst:429
 msgid ""
@@ -529,18 +752,36 @@ msgid ""
 "and the *s* arguments define a clipping box on the screen within which the "
 "pad region is to be displayed."
 msgstr ""
+"Ein Pad ist wie ein Fenster, nur dass es nicht durch die Bildschirmgröße "
+"beschränkt ist und nicht unbedingt einem bestimmten Teil des Bildschirms "
+"zugeordnet ist. Pads lassen sich verwenden, wenn ein großes Fenster "
+"gebraucht wird und nur ein Teil des Fensters jeweils auf dem Bildschirm "
+"erscheint. Automatische Aktualisierungen von Pads (etwa durch Scrollen oder "
+"die Wiedergabe von Eingaben) finden nicht statt. Die "
+"Methoden :meth:`~window.refresh` und :meth:`~window.noutrefresh` eines Pads "
+"brauchen 6 Argumente, um den anzuzeigenden Teil des Pads und die für die "
+"Anzeige zu verwendende Stelle auf dem Bildschirm anzugeben. Die Argumente "
+"sind *pminrow*, *pmincol*, *sminrow*, *smincol*, *smaxrow*, *smaxcol*. Die "
+"*p*-Argumente beziehen sich auf die obere linke Ecke des anzuzeigenden Pad-"
+"Bereichs, und die *s*-Argumente definieren einen Beschneidungskasten auf dem "
+"Bildschirm, innerhalb dessen der Pad-Bereich angezeigt wird."
 
 #: ../../library/curses.rst:445
 msgid ""
 "Return a new :ref:`window <curses-window-objects>`, whose left-upper corner "
 "is at  ``(begin_y, begin_x)``, and whose height/width is  *nlines*/*ncols*."
 msgstr ""
+"Gibt ein neues :ref:`Fenster <curses-window-objects>` zurück, dessen obere "
+"linke Ecke bei ``(begin_y, begin_x)`` liegt und dessen Höhe/Breite *nlines*/"
+"*ncols* beträgt."
 
 #: ../../library/curses.rst:448
 msgid ""
 "By default, the window will extend from the  specified position to the lower "
 "right corner of the screen."
 msgstr ""
+"Standardmäßig reicht das Fenster von der angegebenen Position bis zur "
+"unteren rechten Ecke des Bildschirms."
 
 #: ../../library/curses.rst:454
 msgid ""
@@ -548,19 +789,29 @@ msgid ""
 "input, and translates newline into return and line-feed on output. Newline "
 "mode is initially on."
 msgstr ""
+"Wechselt in den Zeilenumbruchmodus. Dieser Modus übersetzt die Eingabetaste "
+"bei der Eingabe in einen Zeilenumbruch und übersetzt bei der Ausgabe einen "
+"Zeilenumbruch in Wagenrücklauf und Zeilenvorschub. Der Zeilenumbruchmodus "
+"ist anfangs eingeschaltet."
 
 #: ../../library/curses.rst:458
 msgid "If *flag* is ``False``, the effect is the same as calling :func:`nonl`."
 msgstr ""
+"Ist *flag* ``False``, ist die Wirkung dieselbe wie beim Aufruf "
+"von :func:`nonl`."
 
 #: ../../library/curses.rst:463
 msgid ""
 "Leave cbreak mode.  Return to normal \"cooked\" mode with line buffering."
 msgstr ""
+"Verlässt den cbreak-Modus. Kehrt in den normalen „cooked“-Modus mit "
+"Zeilenpufferung zurück."
 
 #: ../../library/curses.rst:468
 msgid "Leave echo mode.  Echoing of input characters is turned off."
 msgstr ""
+"Verlässt den Echo-Modus. Die Wiedergabe eingegebener Zeichen wird "
+"abgeschaltet."
 
 #: ../../library/curses.rst:473
 msgid ""
@@ -571,6 +822,14 @@ msgid ""
 "translation off, curses can sometimes speed up vertical motion a little; "
 "also, it will be able to detect the return key on input."
 msgstr ""
+"Verlässt den Zeilenumbruchmodus. Deaktiviert die Übersetzung der "
+"Eingabetaste in einen Zeilenumbruch bei der Eingabe und die Low-Level-"
+"Übersetzung eines Zeilenumbruchs in Zeilenumbruch/Wagenrücklauf bei der "
+"Ausgabe (das ändert aber nicht das Verhalten von ``addch('\\n')``, das auf "
+"dem virtuellen Bildschirm immer das Äquivalent von Wagenrücklauf und "
+"Zeilenvorschub bewirkt). Ist die Übersetzung abgeschaltet, kann curses "
+"vertikale Bewegungen manchmal etwas beschleunigen. Außerdem kann es die "
+"Eingabetaste bei der Eingabe erkennen."
 
 #: ../../library/curses.rst:483
 msgid ""
@@ -580,10 +839,18 @@ msgid ""
 "handler if you want output to continue as though the interrupt had not "
 "occurred, after the handler exits."
 msgstr ""
+"Wird die Routine :func:`!noqiflush` verwendet, wird das normale Leeren der "
+"Eingabe- und Ausgabewarteschlangen, die mit den Zeichen ``INTR``, ``QUIT`` "
+"und ``SUSP`` verbunden sind, nicht durchgeführt. Du möchtest :func:`!"
+"noqiflush` vielleicht in einem Signalbehandler aufrufen, wenn die Ausgabe "
+"weiterlaufen soll, als wäre die Unterbrechung nicht aufgetreten, nachdem der "
+"Behandler beendet wurde."
 
 #: ../../library/curses.rst:491
 msgid "Leave raw mode. Return to normal \"cooked\" mode with line buffering."
 msgstr ""
+"Verlässt den raw-Modus. Kehrt in den normalen „cooked“-Modus mit "
+"Zeilenpufferung zurück."
 
 #: ../../library/curses.rst:496
 msgid ""
@@ -591,12 +858,17 @@ msgid ""
 "pair. The value of *pair_number* must be between ``0`` and ``COLOR_PAIRS - "
 "1``."
 msgstr ""
+"Gibt ein Tupel ``(fg, bg)`` mit den Farben des angeforderten Farbpaars "
+"zurück. Der Wert von *pair_number* muss zwischen ``0`` und ``COLOR_PAIRS - "
+"1`` liegen."
 
 #: ../../library/curses.rst:502
 msgid ""
 "Return the number of the color-pair set by the attribute value "
 "*attr*. :func:`color_pair` is the counterpart to this function."
 msgstr ""
+"Gibt die Nummer des Farbpaars zurück, das durch den Attributwert *attr* "
+"gesetzt ist. :func:`color_pair` ist das Gegenstück zu dieser Funktion."
 
 #: ../../library/curses.rst:508
 msgid ""
@@ -604,12 +876,17 @@ msgid ""
 "terminfo capability, a bytes object, for the current terminal. Note that the "
 "output of :func:`putp` always goes to standard output."
 msgstr ""
+"Äquivalent zu ``tputs(str, 1, putchar)``. Gibt den Wert einer angegebenen "
+"terminfo-Fähigkeit, ein Bytes-Objekt, für das aktuelle Terminal aus. "
+"Beachte, dass die Ausgabe von :func:`putp` immer auf die Standardausgabe "
+"geht."
 
 #: ../../library/curses.rst:512 ../../library/curses.rst:657
 #: ../../library/curses.rst:667 ../../library/curses.rst:677
 #: ../../library/curses.rst:687
 msgid ":func:`setupterm` (or :func:`initscr`) must be called first."
 msgstr ""
+":func:`setupterm` (oder :func:`initscr`) muss zuerst aufgerufen werden."
 
 #: ../../library/curses.rst:517
 msgid ""
@@ -617,6 +894,10 @@ msgid ""
 "If *flag* is ``True``, or no argument is provided, the queues will be "
 "flushed when these control characters are read."
 msgstr ""
+"Ist *flag* ``False``, ist die Wirkung dieselbe wie beim Aufruf "
+"von :func:`noqiflush`. Ist *flag* ``True`` oder wird kein Argument "
+"angegeben, werden die Warteschlangen geleert, wenn diese Steuerzeichen "
+"gelesen werden."
 
 #: ../../library/curses.rst:524
 msgid ""
@@ -624,24 +905,34 @@ msgid ""
 "interrupt, quit, suspend, and flow control keys are turned off; characters "
 "are presented to curses input functions one by one."
 msgstr ""
+"Wechselt in den raw-Modus. Im raw-Modus sind die normale Zeilenpufferung und "
+"die Verarbeitung der Tasten für Interrupt, Quit, Suspend und Flusskontrolle "
+"abgeschaltet. Zeichen werden den curses-Eingabefunktionen einzeln "
+"präsentiert."
 
 #: ../../library/curses.rst:531
 msgid ""
 "Restore the  terminal  to \"program\" mode, as previously saved  "
 "by :func:`def_prog_mode`."
 msgstr ""
+"Stellt das Terminal im „Programm“-Modus wieder her, wie er zuvor "
+"von :func:`def_prog_mode` gespeichert wurde."
 
 #: ../../library/curses.rst:537
 msgid ""
 "Restore the  terminal  to \"shell\" mode, as previously saved  "
 "by :func:`def_shell_mode`."
 msgstr ""
+"Stellt das Terminal im „Shell“-Modus wieder her, wie er zuvor "
+"von :func:`def_shell_mode` gespeichert wurde."
 
 #: ../../library/curses.rst:543
 msgid ""
 "Restore the state of the terminal modes to what it was at the last call "
 "to :func:`savetty`."
 msgstr ""
+"Stellt den Zustand der Terminalmodi so wieder her, wie er beim letzten "
+"Aufruf von :func:`savetty` war."
 
 #: ../../library/curses.rst:549
 msgid ""
@@ -652,6 +943,13 @@ msgid ""
 "windows.  However, due to the calling convention of pads, it is not possible "
 "to resize these without additional interaction with the application."
 msgstr ""
+"Backend-Funktion, die :func:`resizeterm` verwendet und die den Großteil der "
+"Arbeit erledigt. Beim Ändern der Fenstergrößen füllt :func:`resize_term` die "
+"erweiterten Bereiche mit Leerzeichen. Die aufrufende Anwendung sollte diese "
+"Bereiche mit passenden Daten füllen. Die Funktion :func:`!resize_term` "
+"versucht, die Größe aller Fenster zu ändern. Wegen der Aufrufkonvention von "
+"Pads ist es jedoch nicht möglich, deren Größe ohne zusätzliche Interaktion "
+"mit der Anwendung zu ändern."
 
 #: ../../library/curses.rst:559
 msgid ""
@@ -659,16 +957,22 @@ msgid ""
 "adjusts other bookkeeping data used by the curses library that record the "
 "window dimensions (in particular the SIGWINCH handler)."
 msgstr ""
+"Ändert die Größe der Standard- und aktuellen Fenster auf die angegebenen "
+"Abmessungen und passt weitere Buchhaltungsdaten an, die die curses-"
+"Bibliothek verwendet und die die Fensterabmessungen festhalten (insbesondere "
+"den SIGWINCH-Behandler)."
 
 #: ../../library/curses.rst:566
 msgid ""
 "Save the current state of the terminal modes in a buffer, usable "
 "by :func:`resetty`."
 msgstr ""
+"Speichert den aktuellen Zustand der Terminalmodi in einem Puffer, der "
+"von :func:`resetty` verwendet werden kann."
 
 #: ../../library/curses.rst:571
 msgid "Retrieves the value set by :func:`set_escdelay`."
-msgstr ""
+msgstr "Ruft den von :func:`set_escdelay` gesetzten Wert ab."
 
 #: ../../library/curses.rst:577
 msgid ""
@@ -676,22 +980,31 @@ msgid ""
 "to distinguish between an individual escape character entered on the "
 "keyboard from escape sequences sent by cursor and function keys."
 msgstr ""
+"Legt die Anzahl der Millisekunden fest, die nach dem Lesen eines Escape-"
+"Zeichens gewartet wird, um ein einzelnes, auf der Tastatur eingegebenes "
+"Escape-Zeichen von Escape-Sequenzen zu unterscheiden, die Cursor- und "
+"Funktionstasten senden."
 
 #: ../../library/curses.rst:585
 msgid "Retrieves the value set by :func:`set_tabsize`."
-msgstr ""
+msgstr "Ruft den von :func:`set_tabsize` gesetzten Wert ab."
 
 #: ../../library/curses.rst:591
 msgid ""
 "Sets the number of columns used by the curses library when converting a tab "
 "character to spaces as it adds the tab to a window."
 msgstr ""
+"Legt die Anzahl der Spalten fest, die die curses-Bibliothek verwendet, wenn "
+"sie ein Tabulatorzeichen beim Hinzufügen zu einem Fenster in Leerzeichen "
+"umwandelt."
 
 #: ../../library/curses.rst:598
 msgid ""
 "Set the virtual screen cursor to *y*, *x*. If *y* and *x* are both ``-1``, "
 "then :meth:`leaveok <window.leaveok>` is set ``True``."
 msgstr ""
+"Setzt den Cursor des virtuellen Bildschirms auf *y*, *x*. Sind *y* und *x* "
+"beide ``-1``, wird :meth:`leaveok <window.leaveok>` auf ``True`` gesetzt."
 
 #: ../../library/curses.rst:604
 msgid ""
@@ -701,6 +1014,12 @@ msgid ""
 "initialization sequences will be sent; if not supplied or ``-1``, the file "
 "descriptor for ``sys.stdout`` will be used."
 msgstr ""
+"Initialisiert das Terminal. *term* ist eine Zeichenkette mit dem "
+"Terminalnamen oder ``None``. Ist es weggelassen oder ``None``, wird der Wert "
+"der Umgebungsvariable :envvar:`TERM` verwendet. *fd* ist der "
+"Dateideskriptor, an den alle Initialisierungssequenzen gesendet werden. Ist "
+"er nicht angegeben oder ``-1``, wird der Dateideskriptor von ``sys.stdout`` "
+"verwendet."
 
 #: ../../library/curses.rst:610
 msgid ""
@@ -708,6 +1027,9 @@ msgid ""
 "terminfo database entry could not be read.  If the terminal has already been "
 "initialized, this function has no effect."
 msgstr ""
+"Löst eine :exc:`curses.error` aus, wenn das Terminal nicht gefunden oder "
+"sein Eintrag in der terminfo-Datenbank nicht gelesen werden konnte. Wurde "
+"das Terminal bereits initialisiert, hat diese Funktion keine Wirkung."
 
 #: ../../library/curses.rst:616
 msgid ""
@@ -715,6 +1037,9 @@ msgid ""
 "that :func:`setupterm` allocated: the curses library keeps only a single "
 "current terminal and does not free the previously allocated one."
 msgstr ""
+"Der Aufruf von :func:`initscr` nach :func:`setupterm` verliert das Terminal, "
+"das :func:`setupterm` angelegt hat: Die curses-Bibliothek hält nur ein "
+"einziges aktuelles Terminal und gibt das zuvor angelegte nicht frei."
 
 #: ../../library/curses.rst:624
 msgid ""
@@ -722,6 +1047,9 @@ msgid ""
 "color manipulation routine is called.  It is good practice to call this "
 "routine right after :func:`initscr`."
 msgstr ""
+"Muss aufgerufen werden, wenn der Programmierer Farben verwenden will, und "
+"bevor irgendeine andere Routine zur Farbmanipulation aufgerufen wird. Es ist "
+"gute Praxis, diese Routine direkt nach :func:`initscr` aufzurufen."
 
 #: ../../library/curses.rst:628
 msgid ""
@@ -732,6 +1060,12 @@ msgid ""
 "support.  It also restores the colors on the terminal to the values they had "
 "when the terminal was just turned on."
 msgstr ""
+":func:`start_color` initialisiert acht Grundfarben (Schwarz, Rot, Grün, "
+"Gelb, Blau, Magenta, Cyan und Weiß) und zwei globale Variablen im "
+"Modul :mod:`!curses`, :const:`COLORS` und :const:`COLOR_PAIRS`, die die "
+"maximale Anzahl von Farben und Farbpaaren enthalten, die das Terminal "
+"unterstützen kann. Außerdem stellt es die Farben auf dem Terminal auf die "
+"Werte zurück, die sie hatten, als das Terminal gerade eingeschaltet wurde."
 
 #: ../../library/curses.rst:637
 msgid ""
@@ -739,6 +1073,9 @@ msgid ""
 "information is useful when a curses program needs complete control over the "
 "appearance of the screen."
 msgstr ""
+"Gibt ein logisches ODER aller vom Terminal unterstützten Videoattribute "
+"zurück. Diese Information ist nützlich, wenn ein curses-Programm "
+"vollständige Kontrolle über das Aussehen des Bildschirms braucht."
 
 #: ../../library/curses.rst:644
 msgid ""
@@ -747,6 +1084,10 @@ msgid ""
 "variable if none was given. Some curses libraries truncate it to 14 "
 "characters."
 msgstr ""
+"Gibt den Namen des verwendeten Terminals als Bytes-Objekt zurück. Das ist "
+"der Name, der an :func:`setupterm` übergeben wurde, oder der Wert der "
+"Umgebungsvariable :envvar:`TERM`, falls keiner angegeben wurde. Einige "
+"curses-Bibliotheken kürzen ihn auf 14 Zeichen."
 
 #: ../../library/curses.rst:652
 msgid ""
@@ -755,6 +1096,10 @@ msgid ""
 "*capname* is not a Boolean capability, or ``0`` if it is canceled or absent "
 "from the terminal description."
 msgstr ""
+"Gibt den Wert der booleschen Fähigkeit, die dem terminfo-Fähigkeitsnamen "
+"*capname* entspricht, als ganze Zahl zurück. Gibt den Wert ``-1`` zurück, "
+"wenn *capname* keine boolesche Fähigkeit ist, oder ``0``, wenn sie "
+"aufgehoben ist oder in der Terminalbeschreibung fehlt."
 
 #: ../../library/curses.rst:662
 msgid ""
@@ -763,6 +1108,10 @@ msgid ""
 "*capname* is not a numeric capability, or ``-1`` if it is canceled or absent "
 "from the terminal description."
 msgstr ""
+"Gibt den Wert der numerischen Fähigkeit, die dem terminfo-Fähigkeitsnamen "
+"*capname* entspricht, als ganze Zahl zurück. Gibt den Wert ``-2`` zurück, "
+"wenn *capname* keine numerische Fähigkeit ist, oder ``-1``, wenn sie "
+"aufgehoben ist oder in der Terminalbeschreibung fehlt."
 
 #: ../../library/curses.rst:672
 msgid ""
@@ -771,6 +1120,10 @@ msgid ""
 "is not a terminfo \"string capability\", or is canceled or absent from the "
 "terminal description."
 msgstr ""
+"Gibt den Wert der Zeichenketten-Fähigkeit, die dem terminfo-Fähigkeitsnamen "
+"*capname* entspricht, als Bytes-Objekt zurück. Gibt ``None`` zurück, wenn "
+"*capname* keine terminfo-„Zeichenketten-Fähigkeit“ ist oder aufgehoben ist "
+"oder in der Terminalbeschreibung fehlt."
 
 #: ../../library/curses.rst:682
 msgid ""
@@ -780,12 +1133,19 @@ msgid ""
 "``b'\\033[6;4H'``, the exact result depending on terminal type.  Up to nine "
 "integer parameters may be supplied."
 msgstr ""
+"Instanziiert das Bytes-Objekt *str* mit den angegebenen Parametern, wobei "
+"*str* eine parametrisierte Byte-Zeichenkette aus der terminfo-Datenbank sein "
+"sollte. Zum Beispiel könnte ``tparm(tigetstr(\"cup\"), 5, 3)`` "
+"``b'\\033[6;4H'`` ergeben, das genaue Ergebnis hängt vom Terminaltyp ab. Es "
+"können bis zu neun ganzzahlige Parameter angegeben werden."
 
 #: ../../library/curses.rst:692
 msgid ""
 "Specify that the file descriptor *fd* be used for typeahead checking.  If "
 "*fd* is ``-1``, then no typeahead checking is done."
 msgstr ""
+"Gibt an, dass der Dateideskriptor *fd* zur Typeahead-Prüfung verwendet "
+"werden soll. Ist *fd* ``-1``, wird keine Typeahead-Prüfung durchgeführt."
 
 #: ../../library/curses.rst:695
 msgid ""
@@ -796,6 +1156,13 @@ msgid ""
 "advance. This function allows specifying a different file descriptor for "
 "typeahead checking."
 msgstr ""
+"Die curses-Bibliothek führt eine „Zeilenausbruch-Optimierung“ durch, indem "
+"sie beim Aktualisieren des Bildschirms regelmäßig nach Typeahead sucht. Wird "
+"Eingabe gefunden und kommt sie von einem tty, wird die aktuelle "
+"Aktualisierung verschoben, bis refresh oder doupdate erneut aufgerufen wird, "
+"was eine schnellere Reaktion auf vorab getippte Befehle erlaubt. Diese "
+"Funktion erlaubt es, einen anderen Dateideskriptor für die Typeahead-Prüfung "
+"anzugeben."
 
 #: ../../library/curses.rst:704
 msgid ""
@@ -804,46 +1171,62 @@ msgid ""
 "represented as a caret followed by the character, for example as ``b'^C'``. "
 "Printing characters are left as they are."
 msgstr ""
+"Gibt ein Bytes-Objekt zurück, das eine druckbare Darstellung des Zeichens "
+"*ch* ist. Alle Attribute und das Farbpaar werden ignoriert. Steuerzeichen "
+"werden als Zirkumflex gefolgt vom Zeichen dargestellt, zum Beispiel als "
+"``b'^C'``. Druckbare Zeichen bleiben unverändert."
 
 #: ../../library/curses.rst:712
 msgid "Push *ch* so the next :meth:`~window.getch` will return it."
-msgstr ""
+msgstr "Legt *ch* ab, sodass das nächste :meth:`~window.getch` es zurückgibt."
 
 #: ../../library/curses.rst:714
 msgid ""
 "*ch* may be an integer (a key code or the code of an encoded byte), a byte, "
 "or a string of length 1 which encodes to a single byte."
 msgstr ""
+"*ch* kann eine ganze Zahl (ein Tastencode oder der Code eines kodierten "
+"Bytes), ein Byte oder eine Zeichenkette der Länge 1 sein, die zu einem "
+"einzelnen Byte kodiert wird."
 
 #: ../../library/curses.rst:719
 msgid "Only one *ch* can be pushed before :meth:`!getch` is called."
 msgstr ""
+"Es kann nur ein *ch* abgelegt werden, bevor :meth:`!getch` aufgerufen wird."
 
 #: ../../library/curses.rst:724
 msgid ""
 "Update the :const:`LINES` and :const:`COLS` module variables. Useful for "
 "detecting manual screen resize."
 msgstr ""
+"Aktualisiert die Modulvariablen :const:`LINES` und :const:`COLS`. Nützlich, "
+"um manuelles Ändern der Bildschirmgröße zu erkennen."
 
 #: ../../library/curses.rst:732
 msgid "Push *ch* so the next :meth:`~window.get_wch` will return it."
 msgstr ""
+"Legt *ch* ab, sodass das nächste :meth:`~window.get_wch` es zurückgibt."
 
 #: ../../library/curses.rst:734
 msgid ""
 "*ch* may be an integer (a character code, not a key code) or a string of "
 "length 1."
 msgstr ""
+"*ch* kann eine ganze Zahl (ein Zeichencode, kein Tastencode) oder eine "
+"Zeichenkette der Länge 1 sein."
 
 #: ../../library/curses.rst:739
 msgid "Only one *ch* can be pushed before :meth:`!get_wch` is called."
 msgstr ""
+"Es kann nur ein *ch* abgelegt werden, bevor :meth:`!get_wch` aufgerufen wird."
 
 #: ../../library/curses.rst:746
 msgid ""
 "Push a :const:`KEY_MOUSE` event onto the input queue, associating the given "
 "state data with it."
 msgstr ""
+"Legt ein Ereignis :const:`KEY_MOUSE` in die Eingabewarteschlange und ordnet "
+"ihm die angegebenen Zustandsdaten zu."
 
 #: ../../library/curses.rst:752
 msgid ""
@@ -854,10 +1237,17 @@ msgid ""
 "or if curses is running in a window (in which case default behavior would be "
 "to use the window size if :envvar:`LINES` and :envvar:`COLUMNS` are not set)."
 msgstr ""
+"Falls verwendet, sollte diese Funktion vor dem Aufruf von :func:`initscr` "
+"oder newterm aufgerufen werden. Ist *flag* ``False``, werden die in der "
+"terminfo-Datenbank angegebenen Werte für Zeilen und Spalten verwendet, auch "
+"wenn die Umgebungsvariablen :envvar:`LINES` und :envvar:`COLUMNS` "
+"(standardmäßig verwendet) gesetzt sind oder curses in einem Fenster läuft "
+"(in diesem Fall wäre das Standardverhalten, die Fenstergröße zu verwenden, "
+"wenn :envvar:`LINES` und :envvar:`COLUMNS` nicht gesetzt sind)."
 
 #: ../../library/curses.rst:762
 msgid "Equivalent to ``assume_default_colors(-1, -1)``."
-msgstr ""
+msgstr "Äquivalent zu ``assume_default_colors(-1, -1)``."
 
 #: ../../library/curses.rst:767
 msgid ""
@@ -872,16 +1262,30 @@ msgid ""
 "On exit (whether normally or by exception) it restores cooked mode, turns on "
 "echo, and disables the terminal keypad."
 msgstr ""
+"Initialisiert curses und ruft ein anderes aufrufbares Objekt *func* auf, das "
+"der Rest deiner Anwendung sein sollte, die curses verwendet. Löst die "
+"Anwendung eine Ausnahme aus, stellt diese Funktion das Terminal in einen "
+"vernünftigen Zustand zurück, bevor sie die Ausnahme erneut auslöst und einen "
+"Traceback erzeugt. Dem aufrufbaren Objekt *func* wird dann das Hauptfenster "
+"„stdscr“ als erstes Argument übergeben, gefolgt von allen weiteren "
+"an :func:`!wrapper` übergebenen Argumenten. Vor dem Aufruf von *func* "
+"schaltet :func:`!wrapper` den cbreak-Modus ein, schaltet das Echo aus, "
+"aktiviert das Terminal-Keypad und initialisiert Farben, wenn das Terminal "
+"Farben unterstützt. Beim Beenden (ob normal oder durch eine Ausnahme) stellt "
+"es den cooked-Modus wieder her, schaltet das Echo ein und deaktiviert das "
+"Terminal-Keypad."
 
 #: ../../library/curses.rst:781
 msgid "Window objects"
-msgstr ""
+msgstr "Fensterobjekte"
 
 #: ../../library/curses.rst:785
 msgid ""
 "Window objects, as returned by :func:`initscr` and :func:`newwin` above, "
 "have the following methods and attributes:"
 msgstr ""
+"Fensterobjekte, wie sie :func:`initscr` und :func:`newwin` oben zurückgeben, "
+"haben die folgenden Methoden und Attribute:"
 
 #: ../../library/curses.rst:792
 msgid ""
@@ -889,6 +1293,10 @@ msgid ""
 "character previously painted at that location.  By default, the character "
 "position and attributes are the current settings for the window object."
 msgstr ""
+"Zeichnet das Zeichen *ch* bei ``(y, x)`` mit den Attributen *attr* und "
+"überschreibt dabei jedes Zeichen, das zuvor an dieser Stelle gezeichnet "
+"wurde. Standardmäßig sind Zeichenposition und Attribute die aktuellen "
+"Einstellungen des Fensterobjekts."
 
 #: ../../library/curses.rst:798
 msgid ""
@@ -896,18 +1304,27 @@ msgid ""
 "Attempting to write to the lower-right corner of a window, subwindow, or pad "
 "will cause an exception to be raised after the character is printed."
 msgstr ""
+"Das Schreiben außerhalb des Fensters, Unterfensters oder Pads löst "
+"eine :exc:`curses.error` aus. Der Versuch, in die untere rechte Ecke eines "
+"Fensters, Unterfensters oder Pads zu schreiben, führt dazu, dass nach der "
+"Ausgabe des Zeichens eine Ausnahme ausgelöst wird."
 
 #: ../../library/curses.rst:806
 msgid ""
 "Paint at most *n* characters of the character string *str* at ``(y, x)`` "
 "with attributes *attr*, overwriting anything previously on the display."
 msgstr ""
+"Zeichnet höchstens *n* Zeichen der Zeichenkette *str* bei ``(y, x)`` mit den "
+"Attributen *attr* und überschreibt dabei alles, was zuvor auf der Anzeige "
+"war."
 
 #: ../../library/curses.rst:814
 msgid ""
 "Paint the character string *str* at ``(y, x)`` with attributes *attr*, "
 "overwriting anything previously on the display."
 msgstr ""
+"Zeichnet die Zeichenkette *str* bei ``(y, x)`` mit den Attributen *attr* und "
+"überschreibt dabei alles, was zuvor auf der Anzeige war."
 
 #: ../../library/curses.rst:819
 msgid ""
@@ -915,6 +1332,10 @@ msgid ""
 "Attempting to write to the lower-right corner of a window, subwindow, or pad "
 "will cause an exception to be raised after the string is printed."
 msgstr ""
+"Das Schreiben außerhalb des Fensters, Unterfensters oder Pads "
+"löst :exc:`curses.error` aus. Der Versuch, in die untere rechte Ecke eines "
+"Fensters, Unterfensters oder Pads zu schreiben, führt dazu, dass nach der "
+"Ausgabe der Zeichenkette eine Ausnahme ausgelöst wird."
 
 #: ../../library/curses.rst:823
 msgid ""
@@ -924,24 +1345,36 @@ msgid ""
 "calling :meth:`!addstr` with a *str* that has embedded newlines; instead, "
 "call :meth:`!addstr` separately for each line."
 msgstr ""
+"Ein Fehler in ncurses, dem Backend dieses Python-Moduls, konnte beim Ändern "
+"der Fenstergröße Segfaults verursachen. Das wurde in ncurses-6.1-20190511 "
+"behoben. Wenn du bei einer früheren ncurses-Version bleiben musst, kannst du "
+"ihn vermeiden, indem du :meth:`!addstr` nicht mit einem *str* aufrufst, das "
+"eingebettete Zeilenumbrüche enthält. Rufe stattdessen :meth:`!addstr` für "
+"jede Zeile getrennt auf."
 
 #: ../../library/curses.rst:832
 msgid ""
 "Remove attribute *attr* from the \"background\" set applied to all writes to "
 "the current window."
 msgstr ""
+"Entfernt das Attribut *attr* aus der „Hintergrund“-Menge, die auf alle "
+"Schreibvorgänge im aktuellen Fenster angewendet wird."
 
 #: ../../library/curses.rst:838
 msgid ""
 "Add attribute *attr* to the \"background\" set applied to all writes to the "
 "current window."
 msgstr ""
+"Fügt das Attribut *attr* zur „Hintergrund“-Menge hinzu, die auf alle "
+"Schreibvorgänge im aktuellen Fenster angewendet wird."
 
 #: ../../library/curses.rst:844
 msgid ""
 "Set the \"background\" set of attributes to *attr*.  This set is initially "
 "``0`` (no attributes)."
 msgstr ""
+"Setzt die „Hintergrund“-Menge der Attribute auf *attr*. Diese Menge ist "
+"anfangs ``0`` (keine Attribute)."
 
 #: ../../library/curses.rst:850
 msgid ""
@@ -949,18 +1382,25 @@ msgid ""
 "attributes *attr*.  The change is then applied to every character position "
 "in that window:"
 msgstr ""
+"Setzt die Hintergrundeigenschaft des Fensters auf das Zeichen *ch* mit den "
+"Attributen *attr*. Die Änderung wird dann auf jede Zeichenposition in diesem "
+"Fenster angewendet:"
 
 #: ../../library/curses.rst:854
 msgid ""
 "The attribute of every character in the window  is changed to the new "
 "background attribute."
 msgstr ""
+"Das Attribut jedes Zeichens im Fenster wird auf das neue Hintergrundattribut "
+"geändert."
 
 #: ../../library/curses.rst:857
 msgid ""
 "Wherever  the  former background character appears, it is changed to the new "
 "background character."
 msgstr ""
+"Überall dort, wo das frühere Hintergrundzeichen erscheint, wird es auf das "
+"neue Hintergrundzeichen geändert."
 
 #: ../../library/curses.rst:863
 msgid ""
@@ -972,6 +1412,14 @@ msgid ""
 "the character and moves with the character through any scrolling and insert/"
 "delete line/character operations."
 msgstr ""
+"Setzt den Hintergrund des Fensters. Der Hintergrund eines Fensters besteht "
+"aus einem Zeichen und einer beliebigen Kombination von Attributen. Der "
+"Attributteil des Hintergrunds wird (per ODER) mit allen nicht leeren Zeichen "
+"kombiniert, die in das Fenster geschrieben werden. Sowohl der Zeichen- als "
+"auch der Attributteil des Hintergrunds werden mit den leeren Zeichen "
+"kombiniert. Der Hintergrund wird zu einer Eigenschaft des Zeichens und "
+"bewegt sich mit dem Zeichen durch alle Scroll- und Einfüge-/Lösch-"
+"Operationen für Zeilen und Zeichen."
 
 #: ../../library/curses.rst:873
 msgid ""
@@ -979,6 +1427,9 @@ msgid ""
 "character to use for a specific part of the border; see the table below for "
 "more details."
 msgstr ""
+"Zeichnet einen Rahmen um die Ränder des Fensters. Jeder Parameter gibt das "
+"Zeichen an, das für einen bestimmten Teil des Rahmens verwendet wird. "
+"Weitere Einzelheiten siehe die Tabelle unten."
 
 #: ../../library/curses.rst:879
 msgid ""
@@ -986,10 +1437,13 @@ msgid ""
 "for that parameter.  Keyword parameters can *not* be used.  The defaults are "
 "listed in this table:"
 msgstr ""
+"Ein Wert ``0`` für einen beliebigen Parameter führt dazu, dass für diesen "
+"Parameter das Standardzeichen verwendet wird. Schlüsselwortparameter können "
+"*nicht* verwendet werden. Die Standardwerte stehen in dieser Tabelle:"
 
 #: ../../library/curses.rst:884
 msgid "Parameter"
-msgstr ""
+msgstr "Parameter"
 
 #: ../../library/curses.rst:884
 msgid "Description"
@@ -997,95 +1451,95 @@ msgstr "Beschreibung"
 
 #: ../../library/curses.rst:884
 msgid "Default value"
-msgstr ""
+msgstr "Standardwert"
 
 #: ../../library/curses.rst:886
 msgid "*ls*"
-msgstr ""
+msgstr "*ls*"
 
 #: ../../library/curses.rst:886
 msgid "Left side"
-msgstr ""
+msgstr "Linke Seite"
 
 #: ../../library/curses.rst:886 ../../library/curses.rst:888
 msgid ":const:`ACS_VLINE`"
-msgstr ""
+msgstr ":const:`ACS_VLINE`"
 
 #: ../../library/curses.rst:888
 msgid "*rs*"
-msgstr ""
+msgstr "*rs*"
 
 #: ../../library/curses.rst:888
 msgid "Right side"
-msgstr ""
+msgstr "Rechte Seite"
 
 #: ../../library/curses.rst:890
 msgid "*ts*"
-msgstr ""
+msgstr "*ts*"
 
 #: ../../library/curses.rst:890
 msgid "Top"
-msgstr ""
+msgstr "Oben"
 
 #: ../../library/curses.rst:890 ../../library/curses.rst:892
 msgid ":const:`ACS_HLINE`"
-msgstr ""
+msgstr ":const:`ACS_HLINE`"
 
 #: ../../library/curses.rst:892
 msgid "*bs*"
-msgstr ""
+msgstr "*bs*"
 
 #: ../../library/curses.rst:892
 msgid "Bottom"
-msgstr ""
+msgstr "Unten"
 
 #: ../../library/curses.rst:894
 msgid "*tl*"
-msgstr ""
+msgstr "*tl*"
 
 #: ../../library/curses.rst:894
 msgid "Upper-left corner"
-msgstr ""
+msgstr "Obere linke Ecke"
 
 #: ../../library/curses.rst:894
 msgid ":const:`ACS_ULCORNER`"
-msgstr ""
+msgstr ":const:`ACS_ULCORNER`"
 
 #: ../../library/curses.rst:896
 msgid "*tr*"
-msgstr ""
+msgstr "*tr*"
 
 #: ../../library/curses.rst:896
 msgid "Upper-right corner"
-msgstr ""
+msgstr "Obere rechte Ecke"
 
 #: ../../library/curses.rst:896
 msgid ":const:`ACS_URCORNER`"
-msgstr ""
+msgstr ":const:`ACS_URCORNER`"
 
 #: ../../library/curses.rst:898
 msgid "*bl*"
-msgstr ""
+msgstr "*bl*"
 
 #: ../../library/curses.rst:898
 msgid "Bottom-left corner"
-msgstr ""
+msgstr "Untere linke Ecke"
 
 #: ../../library/curses.rst:898
 msgid ":const:`ACS_LLCORNER`"
-msgstr ""
+msgstr ":const:`ACS_LLCORNER`"
 
 #: ../../library/curses.rst:900
 msgid "*br*"
-msgstr ""
+msgstr "*br*"
 
 #: ../../library/curses.rst:900
 msgid "Bottom-right corner"
-msgstr ""
+msgstr "Untere rechte Ecke"
 
 #: ../../library/curses.rst:900
 msgid ":const:`ACS_LRCORNER`"
-msgstr ""
+msgstr ":const:`ACS_LRCORNER`"
 
 #: ../../library/curses.rst:906
 msgid ""
@@ -1093,6 +1547,9 @@ msgid ""
 "and *bs* are *horch*.  The default corner characters are always used by this "
 "function."
 msgstr ""
+"Ähnlich wie :meth:`border`, aber *ls* und *rs* sind beide *vertch*, und *ts* "
+"und *bs* sind beide *horch*. Die Standard-Eckzeichen werden von dieser "
+"Funktion immer verwendet."
 
 #: ../../library/curses.rst:915
 msgid ""
@@ -1103,46 +1560,67 @@ msgid ""
 "will be touched using the :meth:`touchline` method so that the contents will "
 "be redisplayed by the next window refresh."
 msgstr ""
+"Setzt die Attribute von *num* Zeichen an der aktuellen Cursor-Position oder "
+"an der Position ``(y, x)``, falls angegeben. Ist *num* nicht angegeben oder "
+"``-1``, wird das Attribut für alle Zeichen bis zum Ende der Zeile gesetzt. "
+"Diese Funktion bewegt den Cursor auf die Position ``(y, x)``, falls "
+"angegeben. Die geänderte Zeile wird mit der Methode :meth:`touchline` als "
+"berührt markiert, sodass der Inhalt bei der nächsten Aktualisierung des "
+"Fensters neu angezeigt wird."
 
 #: ../../library/curses.rst:925
 msgid ""
 "Like :meth:`erase`, but also cause the whole window to be repainted upon "
 "next call to :meth:`refresh`."
 msgstr ""
+"Wie :meth:`erase`, bewirkt aber außerdem, dass beim nächsten Aufruf "
+"von :meth:`refresh` das gesamte Fenster neu gezeichnet wird."
 
 #: ../../library/curses.rst:931
 msgid ""
 "If *flag* is ``True``, the next call to :meth:`refresh` will clear the "
 "window completely."
 msgstr ""
+"Ist *flag* ``True``, leert der nächste Aufruf von :meth:`refresh` das "
+"Fenster vollständig."
 
 #: ../../library/curses.rst:937
 msgid ""
 "Erase from cursor to the end of the window: all lines below the cursor are "
 "deleted, and then the equivalent of :meth:`clrtoeol` is performed."
 msgstr ""
+"Löscht vom Cursor bis zum Ende des Fensters: Alle Zeilen unterhalb des "
+"Cursors werden gelöscht, und dann wird das Äquivalent von :meth:`clrtoeol` "
+"ausgeführt."
 
 #: ../../library/curses.rst:943
 msgid "Erase from cursor to the end of the line."
-msgstr ""
+msgstr "Löscht vom Cursor bis zum Ende der Zeile."
 
 #: ../../library/curses.rst:948
 msgid ""
 "Update the current cursor position of all the ancestors of the window to "
 "reflect the current cursor position of the window."
 msgstr ""
+"Aktualisiert die aktuelle Cursor-Position aller Vorfahren des Fensters, "
+"sodass sie die aktuelle Cursor-Position des Fensters widerspiegelt."
 
 #: ../../library/curses.rst:954
 msgid ""
 "Delete the character under the cursor, or at ``(y, x)`` if specified.  All "
 "characters to the right on the same line are shifted one position left."
 msgstr ""
+"Löscht das Zeichen unter dem Cursor oder bei ``(y, x)``, falls angegeben. "
+"Alle Zeichen rechts davon in derselben Zeile werden um eine Position nach "
+"links verschoben."
 
 #: ../../library/curses.rst:960
 msgid ""
 "Delete the line under the cursor. All following lines are moved up by one "
 "line."
 msgstr ""
+"Löscht die Zeile unter dem Cursor. Alle folgenden Zeilen werden um eine "
+"Zeile nach oben verschoben."
 
 #: ../../library/curses.rst:966
 msgid ""
@@ -1151,12 +1629,18 @@ msgid ""
 "the origin of the window, rather than relative to the entire screen.  Return "
 "a window object for the derived window."
 msgstr ""
+"Eine Abkürzung für „derive window“ (Fenster ableiten). :meth:`derwin` ist "
+"dasselbe wie der Aufruf von :meth:`subwin`, nur dass *begin_y* und *begin_x* "
+"relativ zum Ursprung des Fensters sind statt relativ zum gesamten "
+"Bildschirm. Gibt ein Fensterobjekt für das abgeleitete Fenster zurück."
 
 #: ../../library/curses.rst:974
 msgid ""
 "Add character *ch* with attribute *attr*, and immediately  "
 "call :meth:`refresh` on the window."
 msgstr ""
+"Fügt das Zeichen *ch* mit dem Attribut *attr* hinzu und ruft "
+"sofort :meth:`refresh` für das Fenster auf."
 
 #: ../../library/curses.rst:980
 msgid ""
@@ -1165,10 +1649,14 @@ msgid ""
 "useful for determining what subset of the screen windows enclose the "
 "location of a mouse event."
 msgstr ""
+"Prüft, ob das angegebene Paar bildschirmrelativer Zeichenzellen-Koordinaten "
+"vom angegebenen Fenster umschlossen wird, und gibt ``True`` oder ``False`` "
+"zurück. Das ist nützlich, um zu bestimmen, welche Teilmenge der "
+"Bildschirmfenster die Position eines Mausereignisses umschließt."
 
 #: ../../library/curses.rst:985
 msgid "Previously it returned ``1`` or ``0`` instead of ``True`` or ``False``."
-msgstr ""
+msgstr "Früher gab sie ``1`` oder ``0`` statt ``True`` oder ``False`` zurück."
 
 #: ../../library/curses.rst:991
 msgid ""
@@ -1178,20 +1666,29 @@ msgid ""
 "for example with :meth:`window.subwin`. By default, current locale encoding "
 "is used (see :func:`locale.getencoding`)."
 msgstr ""
+"Kodierung, die verwendet wird, um die Zeichenketten-Argumente der Methoden "
+"zu kodieren und ihre Ergebnisse bei einem Build ohne Unterstützung für "
+"Breitzeichen zu dekodieren. Das Attribut encoding wird vom Elternfenster "
+"geerbt, wenn ein Unterfenster erzeugt wird, zum Beispiel "
+"mit :meth:`window.subwin`. Standardmäßig wird die aktuelle Kodierung der "
+"Lokale verwendet (siehe :func:`locale.getencoding`)."
 
 #: ../../library/curses.rst:1002
 msgid "Clear the window."
-msgstr ""
+msgstr "Leert das Fenster."
 
 #: ../../library/curses.rst:1007
 msgid "Return a tuple ``(y, x)`` of coordinates of upper-left corner."
 msgstr ""
+"Gibt ein Tupel ``(y, x)`` mit den Koordinaten der oberen linken Ecke zurück."
 
 #: ../../library/curses.rst:1012
 msgid ""
 "Return the given window's current background character/attribute pair. Its "
 "components can be extracted like those of :meth:`inch`."
 msgstr ""
+"Gibt das aktuelle Hintergrundzeichen-/Attributpaar des angegebenen Fensters "
+"zurück. Seine Komponenten lassen sich wie die von :meth:`inch` extrahieren."
 
 #: ../../library/curses.rst:1018
 msgid ""
@@ -1201,6 +1698,12 @@ msgid ""
 "return ``-1`` if the read is non-blocking or times out (see :meth:`nodelay` "
 "and :meth:`timeout`)."
 msgstr ""
+"Liest einen Tastendruck, nachdem der Cursor auf *y*, *x* bewegt wurde, falls "
+"angegeben, und gibt ihn als ganze Zahl zurück. Das Fenster wird zuerst "
+"aktualisiert, wenn es kein Pad ist und seit der letzten Aktualisierung "
+"geändert wurde. Wartet, bis eine Taste gedrückt wird, oder gibt ``-1`` "
+"zurück, wenn das Lesen nicht blockierend ist oder in ein Timeout läuft "
+"(siehe :meth:`nodelay` und :meth:`timeout`)."
 
 #: ../../library/curses.rst:1025
 msgid ""
@@ -1209,6 +1712,11 @@ msgid ""
 "calls. For example, in a UTF-8 locale ``'é'`` is read as ``195``, then "
 "``169``. Use :meth:`get_wch` to read it as a single character."
 msgstr ""
+"Eine gewöhnliche Taste wird als Code eines einzelnen Bytes ihrer Kodierung "
+"in der aktuellen Lokale zurückgegeben, sodass ein mit mehreren Bytes "
+"kodiertes Zeichen mehrere Aufrufe braucht. In einer UTF-8-Lokale wird "
+"``'é'`` zum Beispiel als ``195`` gelesen, dann ``169``. "
+"Verwende :meth:`get_wch`, um es als einzelnes Zeichen zu lesen."
 
 #: ../../library/curses.rst:1031
 msgid ""
@@ -1218,12 +1726,20 @@ msgid ""
 "sequence does not arrive in time (see :meth:`notimeout` "
 "and :func:`set_escdelay`), their bytes are returned one at a time."
 msgstr ""
+"Im Keypad-Modus (siehe :meth:`keypad`) werden Funktionstasten und andere "
+"Sondertasten als eine der :ref:`KEY_*-Konstanten <curses-key-constants>` "
+"zurückgegeben, die sich nicht mit einer gewöhnlichen Taste verwechseln "
+"lassen. Andernfalls, oder wenn ihre Escape-Sequenz nicht rechtzeitig "
+"eintrifft (siehe :meth:`notimeout` und :func:`set_escdelay`), werden ihre "
+"Bytes einzeln zurückgegeben."
 
 #: ../../library/curses.rst:1038 ../../library/curses.rst:1058
 msgid ""
 "In echo mode (see :func:`echo`) the key is added to the window as "
 "by :meth:`addch`; special keys are not echoed."
 msgstr ""
+"Im Echo-Modus (siehe :func:`echo`) wird die Taste wie durch :meth:`addch` "
+"zum Fenster hinzugefügt. Sondertasten werden nicht wiedergegeben."
 
 #: ../../library/curses.rst:1044
 msgid ""
@@ -1233,6 +1749,12 @@ msgid ""
 "pressed, or raise :exc:`error` if the read is non-blocking or times out "
 "(see :meth:`nodelay` and :meth:`timeout`)."
 msgstr ""
+"Liest einen Tastendruck, nachdem der Cursor auf *y*, *x* bewegt wurde, falls "
+"angegeben, und gibt ihn als :class:`str` mit einem Zeichen zurück. Das "
+"Fenster wird zuerst aktualisiert, wenn es kein Pad ist und seit der letzten "
+"Aktualisierung geändert wurde. Wartet, bis eine Taste gedrückt wird, oder "
+"löst :exc:`error` aus, wenn das Lesen nicht blockierend ist oder in ein "
+"Timeout läuft (siehe :meth:`nodelay` und :meth:`timeout`)."
 
 #: ../../library/curses.rst:1051
 msgid ""
@@ -1242,6 +1764,11 @@ msgid ""
 "(see :meth:`notimeout` and :func:`set_escdelay`), their characters are "
 "returned one at a time."
 msgstr ""
+"Im Keypad-Modus (siehe :meth:`keypad`) werden Funktionstasten und andere "
+"Sondertasten als eine der :ref:`KEY_*-Konstanten <curses-key-constants>` "
+"zurückgegeben, eine ganze Zahl. Andernfalls, oder wenn ihre Escape-Sequenz "
+"nicht rechtzeitig eintrifft (siehe :meth:`notimeout` "
+"und :func:`set_escdelay`), werden ihre Zeichen einzeln zurückgegeben."
 
 #: ../../library/curses.rst:1066
 msgid ""
@@ -1250,10 +1777,15 @@ msgid ""
 "special key as its name, such as ``'KEY_UP'`` (see :func:`keyname`). "
 "Raise :exc:`error` instead of returning ``-1`` if there is no input."
 msgstr ""
+"Liest einen Tastendruck wie :meth:`getch`, gibt ihn aber als :class:`str` "
+"zurück: eine gewöhnliche Taste als Zeichenkette mit einem Zeichen, wobei das "
+"Byte als Latin-1 dekodiert wird, und eine Sondertaste mit ihrem Namen, etwa "
+"``'KEY_UP'`` (siehe :func:`keyname`). Löst :exc:`error` aus, statt ``-1`` "
+"zurückzugeben, wenn keine Eingabe vorliegt."
 
 #: ../../library/curses.rst:1074
 msgid "Return a tuple ``(y, x)`` of the height and width of the window."
-msgstr ""
+msgstr "Gibt ein Tupel ``(y, x)`` mit Höhe und Breite des Fensters zurück."
 
 #: ../../library/curses.rst:1079
 msgid ""
@@ -1261,6 +1793,9 @@ msgid ""
 "window as a tuple ``(y, x)``.  Return ``(-1, -1)`` if this window has no "
 "parent."
 msgstr ""
+"Gibt die Anfangskoordinaten dieses Fensters relativ zu seinem Elternfenster "
+"als Tupel ``(y, x)`` zurück. Gibt ``(-1, -1)`` zurück, wenn dieses Fenster "
+"kein Elternfenster hat."
 
 #: ../../library/curses.rst:1089
 msgid ""
@@ -1269,16 +1804,23 @@ msgid ""
 "object, in the encoding of the current locale and without the terminating "
 "newline. At most *n* bytes are read; *n* defaults to and cannot exceed 2047."
 msgstr ""
+"Liest eine Eingabezeile vom Benutzer mit einfacher Zeilenbearbeitung, "
+"nachdem der Cursor auf *y*, *x* bewegt wurde, falls angegeben. Gibt sie als "
+"Bytes-Objekt in der Kodierung der aktuellen Lokale und ohne den "
+"abschließenden Zeilenumbruch zurück. Es werden höchstens *n* Bytes gelesen. "
+"*n* ist standardmäßig 2047 und darf diesen Wert nicht überschreiten."
 
 #: ../../library/curses.rst:1096 ../../library/curses.rst:1202
 msgid "The maximum value for *n* was increased from 1023 to 2047."
-msgstr ""
+msgstr "Der Maximalwert für *n* wurde von 1023 auf 2047 erhöht."
 
 #: ../../library/curses.rst:1102
 msgid ""
 "Return a tuple ``(y, x)`` of current cursor position  relative to the "
 "window's upper-left corner."
 msgstr ""
+"Gibt ein Tupel ``(y, x)`` mit der aktuellen Cursor-Position relativ zur "
+"oberen linken Ecke des Fensters zurück."
 
 #: ../../library/curses.rst:1109
 msgid ""
@@ -1286,6 +1828,9 @@ msgid ""
 "of the character *ch* with attributes *attr*.  The line stops at the right "
 "edge of the window if fewer than *n* cells are available."
 msgstr ""
+"Zeigt eine horizontale Linie ab ``(y, x)`` mit der Länge *n* an, die aus dem "
+"Zeichen *ch* mit den Attributen *attr* besteht. Die Linie endet am rechten "
+"Rand des Fensters, wenn weniger als *n* Zellen verfügbar sind."
 
 #: ../../library/curses.rst:1116
 msgid ""
@@ -1294,12 +1839,19 @@ msgid ""
 "character insertion and deletion is enabled.  When curses is first "
 "initialized, use of character insert/delete is enabled by default."
 msgstr ""
+"Ist *flag* ``False``, zieht curses die Hardware-Funktion des Terminals zum "
+"Einfügen/Löschen von Zeichen nicht mehr in Betracht. Ist *flag* ``True``, "
+"wird die Verwendung von Zeicheneinfügung und -löschung aktiviert. Wenn "
+"curses zum ersten Mal initialisiert wird, ist die Verwendung von Zeichen "
+"einfügen/löschen standardmäßig aktiviert."
 
 #: ../../library/curses.rst:1124
 msgid ""
 "If *flag* is ``True``, :mod:`!curses` will try to use hardware line editing "
 "facilities.  Otherwise, curses will not use them."
 msgstr ""
+"Ist *flag* ``True``, versucht :mod:`!curses`, Hardware-Funktionen zur "
+"Zeilenbearbeitung zu verwenden. Andernfalls verwendet curses sie nicht."
 
 #: ../../library/curses.rst:1130
 msgid ""
@@ -1308,6 +1860,11 @@ msgid ""
 "yourself. However, it may degrade performance considerably, due to repeated "
 "calls to wrefresh.  This option is disabled by default."
 msgstr ""
+"Ist *flag* ``True``, führt jede Änderung im Fensterbild automatisch zu einer "
+"Aktualisierung des Fensters. Du musst :meth:`refresh` nicht mehr selbst "
+"aufrufen. Das kann die Leistung jedoch erheblich verschlechtern, wegen "
+"wiederholter Aufrufe von wrefresh. Diese Option ist standardmäßig "
+"deaktiviert."
 
 #: ../../library/curses.rst:1138
 msgid ""
@@ -1320,6 +1877,14 @@ msgid ""
 "current locale has a character byte of ``0``; use :meth:`instr` to read such "
 "characters."
 msgstr ""
+"Gibt das Zeichen an der angegebenen Position im Fenster zurück. Die unteren "
+"8 Bits sind das eigentliche Zeichen und die oberen Bits die Attribute. "
+"Extrahiere sie mit den Bitmasken :data:`A_CHARTEXT` und :data:`A_ATTRIBUTES` "
+"und das Farbpaar mit :func:`pair_number`. Das Zeichen-Byte ist das in der "
+"Lokale kodierte Byte des Zeichens der Zelle, konsistent mit :meth:`instr`. "
+"Bei einem Build mit Breitzeichen-Unterstützung hat ein Zeichen, das in der "
+"aktuellen Lokale nicht in ein einzelnes Byte passt, das Zeichen-Byte ``0``. "
+"Verwende :meth:`instr`, um solche Zeichen zu lesen."
 
 #: ../../library/curses.rst:1152
 msgid ""
@@ -1329,6 +1894,11 @@ msgid ""
 "line being lost. The cursor position does not change (after moving to *y*, "
 "*x*, if specified)."
 msgstr ""
+"Fügt das Zeichen *ch* mit den Attributen *attr* vor dem Zeichen unter dem "
+"Cursor ein oder bei ``(y, x)``, falls angegeben. Alle Zeichen rechts vom "
+"Cursor werden um eine Position nach rechts verschoben, wobei das am "
+"weitesten rechts stehende Zeichen der Zeile verloren geht. Die Cursor-"
+"Position ändert sich nicht (nach dem Bewegen auf *y*, *x*, falls angegeben)."
 
 #: ../../library/curses.rst:1161
 msgid ""
@@ -1338,12 +1908,19 @@ msgid ""
 "up.  The bottom *nlines* lines are cleared.  The current cursor position "
 "remains the same."
 msgstr ""
+"Fügt *nlines* Zeilen in das angegebene Fenster über der aktuellen Zeile ein. "
+"Die untersten *nlines* Zeilen gehen verloren. Bei negativem *nlines* werden "
+"*nlines* Zeilen gelöscht, beginnend mit der Zeile unter dem Cursor, und die "
+"verbleibenden Zeilen nach oben verschoben. Die untersten *nlines* Zeilen "
+"werden geleert. Die aktuelle Cursor-Position bleibt gleich."
 
 #: ../../library/curses.rst:1170
 msgid ""
 "Insert a blank line under the cursor. All following lines are moved down by "
 "one line."
 msgstr ""
+"Fügt eine leere Zeile unter dem Cursor ein. Alle folgenden Zeilen werden um "
+"eine Zeile nach unten verschoben."
 
 #: ../../library/curses.rst:1177
 msgid ""
@@ -1354,6 +1931,12 @@ msgid ""
 "lost. The cursor position does not change (after moving to *y*, *x*, if "
 "specified)."
 msgstr ""
+"Fügt eine Zeichenkette (so viele Zeichen, wie in die Zeile passen) vor dem "
+"Zeichen unter dem Cursor ein, bis zu *n* Zeichen. Ist *n* negativ, wird die "
+"gesamte Zeichenkette eingefügt. Alle Zeichen rechts vom Cursor werden nach "
+"rechts verschoben, wobei die am weitesten rechts stehenden Zeichen der Zeile "
+"verloren gehen. Die Cursor-Position ändert sich nicht (nach dem Bewegen auf "
+"*y*, *x*, falls angegeben)."
 
 #: ../../library/curses.rst:1187
 msgid ""
@@ -1363,6 +1946,11 @@ msgid ""
 "lost.  The cursor position does not change (after moving to *y*, *x*, if "
 "specified)."
 msgstr ""
+"Fügt eine Zeichenkette (so viele Zeichen, wie in die Zeile passen) vor dem "
+"Zeichen unter dem Cursor ein. Alle Zeichen rechts vom Cursor werden nach "
+"rechts verschoben, wobei die am weitesten rechts stehenden Zeichen der Zeile "
+"verloren gehen. Die Cursor-Position ändert sich nicht (nach dem Bewegen auf "
+"*y*, *x*, falls angegeben)."
 
 #: ../../library/curses.rst:1196
 msgid ""
@@ -1371,6 +1959,11 @@ msgid ""
 "in the encoding of the current locale. Attributes and color pairs are "
 "stripped. At most *n* bytes are read; *n* defaults to and cannot exceed 2047."
 msgstr ""
+"Liest den Text des Fensters ab der aktuellen Cursor-Position oder ab *y*, "
+"*x*, falls angegeben, bis zum Ende der Zeile und gibt ihn als Bytes-Objekt "
+"in der Kodierung der aktuellen Lokale zurück. Attribute und Farbpaare werden "
+"entfernt. Es werden höchstens *n* Bytes gelesen. *n* ist standardmäßig 2047 "
+"und darf diesen Wert nicht überschreiten."
 
 #: ../../library/curses.rst:1208
 msgid ""
@@ -1378,12 +1971,18 @@ msgid ""
 "to :meth:`refresh`; otherwise return ``False``.  Raise a :exc:`curses.error` "
 "exception if *line* is not valid for the given window."
 msgstr ""
+"Gibt ``True`` zurück, wenn die angegebene Zeile seit dem letzten Aufruf "
+"von :meth:`refresh` geändert wurde, andernfalls ``False``. Löst "
+"eine :exc:`curses.error`-Ausnahme aus, wenn *line* für das angegebene "
+"Fenster nicht gültig ist."
 
 #: ../../library/curses.rst:1215
 msgid ""
 "Return ``True`` if the specified window was modified since the last call "
 "to :meth:`refresh`; otherwise return ``False``."
 msgstr ""
+"Gibt ``True`` zurück, wenn das angegebene Fenster seit dem letzten Aufruf "
+"von :meth:`refresh` geändert wurde, andernfalls ``False``."
 
 #: ../../library/curses.rst:1221
 msgid ""
@@ -1393,22 +1992,32 @@ msgid ""
 "mode is disabled by default, but :func:`wrapper` enables it for the main "
 "window."
 msgstr ""
+"Ist *flag* ``True``, werden Escape-Sequenzen, die einige Tasten (Keypad, "
+"Funktionstasten) erzeugen, von :mod:`!curses` interpretiert. Ist *flag* "
+"``False``, bleiben Escape-Sequenzen unverändert im Eingabestrom. Der Keypad-"
+"Modus ist standardmäßig deaktiviert, :func:`wrapper` aktiviert ihn aber für "
+"das Hauptfenster."
 
 #: ../../library/curses.rst:1230
 msgid ""
 "If *flag* is ``True``, cursor is left where it is on update, instead of "
 "being at \"cursor position.\"  This reduces cursor movement where possible."
 msgstr ""
+"Ist *flag* ``True``, bleibt der Cursor bei einer Aktualisierung dort, wo er "
+"ist, statt an der „Cursor-Position“ zu stehen. Das verringert, wo möglich, "
+"Cursor-Bewegungen."
 
 #: ../../library/curses.rst:1233
 msgid ""
 "If *flag* is ``False``, cursor will always be at \"cursor position\" after "
 "an update."
 msgstr ""
+"Ist *flag* ``False``, steht der Cursor nach einer Aktualisierung immer an "
+"der „Cursor-Position“."
 
 #: ../../library/curses.rst:1238
 msgid "Move cursor to ``(new_y, new_x)``."
-msgstr ""
+msgstr "Bewegt den Cursor nach ``(new_y, new_x)``."
 
 #: ../../library/curses.rst:1243
 msgid ""
@@ -1416,30 +2025,41 @@ msgid ""
 "the window are not changed.  This routine is used to display different parts "
 "of the parent window at the same physical position on the screen."
 msgstr ""
+"Bewegt das Fenster innerhalb seines Elternfensters. Die bildschirmrelativen "
+"Parameter des Fensters ändern sich nicht. Diese Routine wird verwendet, um "
+"verschiedene Teile des Elternfensters an derselben physischen Position auf "
+"dem Bildschirm anzuzeigen."
 
 #: ../../library/curses.rst:1250
 msgid "Move the window so its upper-left corner is at ``(new_y, new_x)``."
 msgstr ""
+"Bewegt das Fenster so, dass seine obere linke Ecke bei ``(new_y, new_x)`` "
+"liegt."
 
 #: ../../library/curses.rst:1252
 msgid ""
 "Moving the window so that any part of it would be off the screen is an "
 "error: the window is not moved and :exc:`curses.error` is raised."
 msgstr ""
+"Das Bewegen des Fensters, sodass irgendein Teil davon außerhalb des "
+"Bildschirms läge, ist ein Fehler: Das Fenster wird nicht bewegt, "
+"und :exc:`curses.error` wird ausgelöst."
 
 #: ../../library/curses.rst:1258
 msgid "If *flag* is ``True``, :meth:`getch` will be non-blocking."
-msgstr ""
+msgstr "Ist *flag* ``True``, ist :meth:`getch` nicht blockierend."
 
 #: ../../library/curses.rst:1263
 msgid "If *flag* is ``True``, escape sequences will not be timed out."
-msgstr ""
+msgstr "Ist *flag* ``True``, laufen Escape-Sequenzen nicht in ein Timeout."
 
 #: ../../library/curses.rst:1265
 msgid ""
 "If *flag* is ``False``, after a few milliseconds, an escape sequence will "
 "not be interpreted, and will be left in the input stream as is."
 msgstr ""
+"Ist *flag* ``False``, wird eine Escape-Sequenz nach einigen Millisekunden "
+"nicht interpretiert und bleibt unverändert im Eingabestrom."
 
 #: ../../library/curses.rst:1272
 msgid ""
@@ -1447,6 +2067,10 @@ msgid ""
 "representing the desired state of the window, but does not force an update "
 "of the physical screen.  To accomplish that, call  :func:`doupdate`."
 msgstr ""
+"Markiert für die Aktualisierung, wartet aber. Diese Funktion aktualisiert "
+"die Datenstruktur, die den gewünschten Zustand des Fensters darstellt, "
+"erzwingt aber keine Aktualisierung des physischen Bildschirms. Um das zu "
+"erreichen, rufe :func:`doupdate` auf."
 
 #: ../../library/curses.rst:1276
 msgid ""
@@ -1454,6 +2078,9 @@ msgid ""
 "window is a pad created with :func:`newpad`; they have the same meaning as "
 "for :meth:`refresh`."
 msgstr ""
+"Die 6 Argumente können nur angegeben werden und sind dann erforderlich, wenn "
+"das Fenster ein mit :func:`newpad` erzeugtes Pad ist. Sie haben dieselbe "
+"Bedeutung wie bei :meth:`refresh`."
 
 #: ../../library/curses.rst:1283
 msgid ""
@@ -1462,6 +2089,10 @@ msgid ""
 "which means that the current background character does not overwrite the old "
 "contents of *destwin*."
 msgstr ""
+"Legt das Fenster über *destwin*. Die Fenster müssen nicht gleich groß sein, "
+"es wird nur der überlappende Bereich kopiert. Dieses Kopieren ist nicht "
+"destruktiv, das heißt, das aktuelle Hintergrundzeichen überschreibt den "
+"alten Inhalt von *destwin* nicht."
 
 #: ../../library/curses.rst:1288
 msgid ""
@@ -1470,6 +2101,10 @@ msgid ""
 "coordinates of the source window, and the other variables mark a rectangle "
 "in the destination window."
 msgstr ""
+"Um feinkörnige Kontrolle über den kopierten Bereich zu erhalten, lässt sich "
+"die zweite Form von :meth:`overlay` verwenden. *sminrow* und *smincol* sind "
+"die Koordinaten der oberen linken Ecke des Quellfensters, und die anderen "
+"Variablen markieren ein Rechteck im Zielfenster."
 
 #: ../../library/curses.rst:1296
 msgid ""
@@ -1478,6 +2113,10 @@ msgid ""
 "destructive, which means that the current background character overwrites "
 "the old contents of *destwin*."
 msgstr ""
+"Überschreibt *destwin* mit dem Fenster. Die Fenster müssen nicht gleich groß "
+"sein, in diesem Fall wird nur der überlappende Bereich kopiert. Dieses "
+"Kopieren ist destruktiv, das heißt, das aktuelle Hintergrundzeichen "
+"überschreibt den alten Inhalt von *destwin*."
 
 #: ../../library/curses.rst:1301
 msgid ""
@@ -1486,30 +2125,43 @@ msgid ""
 "coordinates of the source window, the other variables mark a rectangle in "
 "the destination window."
 msgstr ""
+"Um feinkörnige Kontrolle über den kopierten Bereich zu erhalten, lässt sich "
+"die zweite Form von :meth:`overwrite` verwenden. *sminrow* und *smincol* "
+"sind die Koordinaten der oberen linken Ecke des Quellfensters, die anderen "
+"Variablen markieren ein Rechteck im Zielfenster."
 
 #: ../../library/curses.rst:1309
 msgid ""
 "Write all data associated with the window into the provided file object.  "
 "This information can be later retrieved using the :func:`getwin` function."
 msgstr ""
+"Schreibt alle dem Fenster zugeordneten Daten in das angegebene Dateiobjekt. "
+"Diese Information lässt sich später mit der Funktion :func:`getwin` abrufen."
 
 #: ../../library/curses.rst:1315
 msgid ""
 "Indicate that the *num* screen lines, starting at line *beg*, are corrupted "
 "and should be completely redrawn on the next :meth:`refresh` call."
 msgstr ""
+"Gibt an, dass die *num* Bildschirmzeilen ab Zeile *beg* beschädigt sind und "
+"beim nächsten Aufruf von :meth:`refresh` vollständig neu gezeichnet werden "
+"sollen."
 
 #: ../../library/curses.rst:1321
 msgid ""
 "Touch the entire window, causing it to be completely redrawn on the "
 "next :meth:`refresh` call."
 msgstr ""
+"Berührt das gesamte Fenster, sodass es beim nächsten Aufruf "
+"von :meth:`refresh` vollständig neu gezeichnet wird."
 
 #: ../../library/curses.rst:1327
 msgid ""
 "Update the display immediately (sync actual screen with previous drawing/"
 "deleting methods)."
 msgstr ""
+"Aktualisiert die Anzeige sofort (gleicht den tatsächlichen Bildschirm mit "
+"den vorherigen Zeichen-/Löschmethoden ab)."
 
 #: ../../library/curses.rst:1330
 msgid ""
@@ -1525,6 +2177,17 @@ msgid ""
 "Negative values of *pminrow*, *pmincol*, *sminrow*, or *smincol* are treated "
 "as if they were zero."
 msgstr ""
+"Die 6 Argumente können nur angegeben werden und sind dann erforderlich, wenn "
+"das Fenster ein mit :func:`newpad` erzeugtes Pad ist. Die zusätzlichen "
+"Parameter sind nötig, um anzugeben, welcher Teil des Pads und des "
+"Bildschirms betroffen ist. *pminrow* und *pmincol* geben die obere linke "
+"Ecke des im Pad anzuzeigenden Rechtecks an. *sminrow*, *smincol*, *smaxrow* "
+"und *smaxcol* geben die Ränder des auf dem Bildschirm anzuzeigenden "
+"Rechtecks an. Die untere rechte Ecke des im Pad anzuzeigenden Rechtecks wird "
+"aus den Bildschirmkoordinaten berechnet, da die Rechtecke gleich groß sein "
+"müssen. Beide Rechtecke müssen vollständig in ihren jeweiligen Strukturen "
+"enthalten sein. Negative Werte von *pminrow*, *pmincol*, *sminrow* oder "
+"*smincol* werden behandelt, als wären sie null."
 
 #: ../../library/curses.rst:1344
 msgid ""
@@ -1533,6 +2196,11 @@ msgid ""
 "the window's data is filled with blanks that have the current background "
 "rendition (as set by :meth:`bkgdset`) merged into them."
 msgstr ""
+"Reserviert den Speicher für ein curses-Fenster neu, um seine Abmessungen an "
+"die angegebenen Werte anzupassen. Ist eine der Abmessungen größer als die "
+"aktuellen Werte, werden die Daten des Fensters mit Leerzeichen aufgefüllt, "
+"in die die aktuelle Hintergrunddarstellung (wie von :meth:`bkgdset` gesetzt) "
+"eingemischt ist."
 
 #: ../../library/curses.rst:1352
 msgid ""
@@ -1541,6 +2209,10 @@ msgid ""
 "Raise :exc:`curses.error` unless scrolling has been enabled for the window "
 "with :meth:`scrollok`."
 msgstr ""
+"Scrollt den Bildschirm oder den Scroll-Bereich. Scrollt um *lines* Zeilen "
+"nach oben, wenn *lines* positiv ist, oder nach unten, wenn es negativ ist. "
+"Löst :exc:`curses.error` aus, es sei denn, das Scrollen wurde für das "
+"Fenster mit :meth:`scrollok` aktiviert."
 
 #: ../../library/curses.rst:1360
 msgid ""
@@ -1551,22 +2223,33 @@ msgid ""
 "the window is scrolled up one line.  Note that in order to get the physical "
 "scrolling effect on the terminal, it is also necessary to call :meth:`idlok`."
 msgstr ""
+"Steuert, was passiert, wenn der Cursor eines Fensters über den Rand des "
+"Fensters oder Scroll-Bereichs hinaus bewegt wird, entweder als Ergebnis "
+"eines Zeilenumbruchs in der untersten Zeile oder durch Tippen des letzten "
+"Zeichens der letzten Zeile. Ist *flag* ``False``, bleibt der Cursor in der "
+"untersten Zeile. Ist *flag* ``True``, wird das Fenster um eine Zeile nach "
+"oben gescrollt. Beachte, dass man zusätzlich :meth:`idlok` aufrufen muss, um "
+"den physischen Scroll-Effekt auf dem Terminal zu erhalten."
 
 #: ../../library/curses.rst:1370
 msgid ""
 "Set the scrolling region from line *top* to line *bottom*. All scrolling "
 "actions will take place in this region."
 msgstr ""
+"Setzt den Scroll-Bereich von Zeile *top* bis Zeile *bottom*. Alle Scroll-"
+"Aktionen finden in diesem Bereich statt."
 
 #: ../../library/curses.rst:1376
 msgid ""
 "Turn off the standout attribute.  On some terminals this has the side effect "
 "of turning off all attributes."
 msgstr ""
+"Schaltet das Attribut „standout“ aus. Auf manchen Terminals hat das den "
+"Nebeneffekt, dass alle Attribute ausgeschaltet werden."
 
 #: ../../library/curses.rst:1382
 msgid "Turn on attribute *A_STANDOUT*."
-msgstr ""
+msgstr "Schaltet das Attribut *A_STANDOUT* ein."
 
 #: ../../library/curses.rst:1388
 msgid ""
@@ -1575,6 +2258,11 @@ msgid ""
 "parent pad (unlike :meth:`subwin`, which uses screen coordinates).  This "
 "method is only available for pads created with :func:`newpad`."
 msgstr ""
+"Gibt ein Unter-Pad zurück, dessen obere linke Ecke bei ``(begin_y, "
+"begin_x)`` liegt und dessen Breite/Höhe *ncols*/*nlines* beträgt. Die "
+"Koordinaten sind relativ zum Eltern-Pad (anders als bei :meth:`subwin`, das "
+"Bildschirmkoordinaten verwendet). Diese Methode ist nur für Pads verfügbar, "
+"die mit :func:`newpad` erzeugt wurden."
 
 #: ../../library/curses.rst:1397
 msgid ""
@@ -1582,12 +2270,17 @@ msgid ""
 "coordinates ``(begin_y, begin_x)``, and whose width/height is *ncols*/"
 "*nlines*."
 msgstr ""
+"Gibt ein Unterfenster zurück, dessen obere linke Ecke bei den "
+"bildschirmrelativen Koordinaten ``(begin_y, begin_x)`` liegt und dessen "
+"Breite/Höhe *ncols*/*nlines* beträgt."
 
 #: ../../library/curses.rst:1400
 msgid ""
 "By default, the sub-window will extend from the specified position to the "
 "lower right corner of the window."
 msgstr ""
+"Standardmäßig reicht das Unterfenster von der angegebenen Position bis zur "
+"unteren rechten Ecke des Fensters."
 
 #: ../../library/curses.rst:1406
 msgid ""
@@ -1595,18 +2288,25 @@ msgid ""
 "ancestor windows.  This routine is called by :meth:`refresh`, so it should "
 "almost never be necessary to call it manually."
 msgstr ""
+"Berührt jede Stelle im Fenster, die in einem seiner Vorfahrenfenster berührt "
+"wurde. Diese Routine wird von :meth:`refresh` aufgerufen, daher sollte es "
+"fast nie nötig sein, sie manuell aufzurufen."
 
 #: ../../library/curses.rst:1413
 msgid ""
 "If *flag* is ``True``, then :meth:`syncup` is called automatically whenever "
 "there is a change in the window."
 msgstr ""
+"Ist *flag* ``True``, wird :meth:`syncup` automatisch aufgerufen, sobald sich "
+"im Fenster etwas ändert."
 
 #: ../../library/curses.rst:1419
 msgid ""
 "Touch all locations in ancestors of the window that have been changed in  "
 "the window."
 msgstr ""
+"Berührt alle Stellen in Vorfahren des Fensters, die im Fenster geändert "
+"wurden."
 
 #: ../../library/curses.rst:1425
 msgid ""
@@ -1617,6 +2317,13 @@ msgid ""
 "then :meth:`getch` will block for *delay* milliseconds, and return ``-1`` if "
 "there is still no input at the end of that time."
 msgstr ""
+"Legt das blockierende oder nicht blockierende Leseverhalten für das Fenster "
+"fest. Ist *delay* negativ, wird blockierendes Lesen verwendet (das "
+"unbegrenzt auf Eingabe wartet). Ist *delay* null, wird nicht blockierendes "
+"Lesen verwendet, und :meth:`getch` gibt ``-1`` zurück, wenn keine Eingabe "
+"wartet. Ist *delay* positiv, blockiert :meth:`getch` für *delay* "
+"Millisekunden und gibt ``-1`` zurück, wenn am Ende dieser Zeit immer noch "
+"keine Eingabe vorliegt."
 
 #: ../../library/curses.rst:1435
 msgid ""
@@ -1625,48 +2332,62 @@ msgid ""
 "having been changed (*changed*\\ ``=True``) or unchanged (*changed*\\ "
 "``=False``)."
 msgstr ""
+"Tut so, als wären *count* Zeilen geändert worden, beginnend mit Zeile "
+"*start*. Ist *changed* angegeben, legt es fest, ob die betroffenen Zeilen "
+"als geändert (*changed*\\ ``=True``) oder als unverändert (*changed*\\ "
+"``=False``) markiert werden."
 
 #: ../../library/curses.rst:1442
 msgid ""
 "Pretend the whole window has been changed, for purposes of drawing "
 "optimizations."
 msgstr ""
+"Tut so, als wäre das ganze Fenster geändert worden, zum Zweck von "
+"Zeichenoptimierungen."
 
 #: ../../library/curses.rst:1448
 msgid ""
 "Mark all lines in  the  window  as unchanged since the last call "
 "to :meth:`refresh`."
 msgstr ""
+"Markiert alle Zeilen im Fenster als seit dem letzten Aufruf "
+"von :meth:`refresh` unverändert."
 
 #: ../../library/curses.rst:1455
 msgid ""
 "Display a vertical line starting at ``(y, x)`` with length *n* consisting of "
 "the character *ch* with attributes *attr*."
 msgstr ""
+"Zeigt eine vertikale Linie ab ``(y, x)`` mit der Länge *n* an, die aus dem "
+"Zeichen *ch* mit den Attributen *attr* besteht."
 
 #: ../../library/curses.rst:1460
 msgid "Constants"
-msgstr ""
+msgstr "Konstanten"
 
 #: ../../library/curses.rst:1462
 msgid "The :mod:`!curses` module defines the following data members:"
-msgstr ""
+msgstr "Das Modul :mod:`!curses` definiert die folgenden Datenmitglieder:"
 
 #: ../../library/curses.rst:1467
 msgid ""
 "Some curses routines  that  return  an integer, such "
 "as :meth:`~window.getch`, return :const:`ERR` upon failure."
 msgstr ""
+"Einige curses-Routinen, die eine ganze Zahl zurückgeben, "
+"etwa :meth:`~window.getch`, geben bei einem Fehler :const:`ERR` zurück."
 
 #: ../../library/curses.rst:1473
 msgid ""
 "Some curses routines  that  return  an integer, such as  :func:`napms`, "
 "return :const:`OK` upon success."
 msgstr ""
+"Einige curses-Routinen, die eine ganze Zahl zurückgeben, etwa :func:`napms`, "
+"geben bei Erfolg :const:`OK` zurück."
 
 #: ../../library/curses.rst:1479
 msgid "A bytes object representing the current version of the module."
-msgstr ""
+msgstr "Ein Bytes-Objekt, das die aktuelle Version des Moduls darstellt."
 
 #: ../../library/curses.rst:1484
 msgid ""
@@ -1675,22 +2396,31 @@ msgid ""
 "components can also be accessed by name,  so ``curses.ncurses_version[0]`` "
 "is equivalent to ``curses.ncurses_version.major`` and so on."
 msgstr ""
+"Ein benanntes Tupel mit den drei Komponenten der Version der ncurses-"
+"Bibliothek: *major*, *minor* und *patch*. Alle Werte sind ganze Zahlen. Auf "
+"die Komponenten kann auch über den Namen zugegriffen werden, "
+"``curses.ncurses_version[0]`` ist also äquivalent zu "
+"``curses.ncurses_version.major`` und so weiter."
 
 #: ../../library/curses.rst:1489
 msgid "Availability: if the ncurses library is used."
-msgstr ""
+msgstr "Verfügbarkeit: wenn die ncurses-Bibliothek verwendet wird."
 
 #: ../../library/curses.rst:1495
 msgid ""
 "The maximum number of colors the terminal can support. It is defined only "
 "after the call to :func:`start_color`."
 msgstr ""
+"Die maximale Anzahl von Farben, die das Terminal unterstützen kann. Sie ist "
+"erst nach dem Aufruf von :func:`start_color` definiert."
 
 #: ../../library/curses.rst:1500
 msgid ""
 "The maximum number of color pairs the terminal can support. It is defined "
 "only after the call to :func:`start_color`."
 msgstr ""
+"Die maximale Anzahl von Farbpaaren, die das Terminal unterstützen kann. Sie "
+"ist erst nach dem Aufruf von :func:`start_color` definiert."
 
 #: ../../library/curses.rst:1505
 msgid ""
@@ -1698,6 +2428,10 @@ msgid ""
 "after the call to :func:`initscr`. Updated "
 "by :func:`update_lines_cols`, :func:`resizeterm` and :func:`resize_term`."
 msgstr ""
+"Die Breite des Bildschirms, das heißt die Anzahl der Spalten. Sie ist erst "
+"nach dem Aufruf von :func:`initscr` definiert. Wird "
+"von :func:`update_lines_cols`, :func:`resizeterm` und :func:`resize_term` "
+"aktualisiert."
 
 #: ../../library/curses.rst:1512
 msgid ""
@@ -1705,16 +2439,22 @@ msgid ""
 "after the call to :func:`initscr`. Updated "
 "by :func:`update_lines_cols`, :func:`resizeterm` and :func:`resize_term`."
 msgstr ""
+"Die Höhe des Bildschirms, das heißt die Anzahl der Zeilen. Sie ist erst nach "
+"dem Aufruf von :func:`initscr` definiert. Wird "
+"von :func:`update_lines_cols`, :func:`resizeterm` und :func:`resize_term` "
+"aktualisiert."
 
 #: ../../library/curses.rst:1518
 msgid ""
 "Some constants are available to specify character cell attributes. The exact "
 "constants available are system dependent."
 msgstr ""
+"Einige Konstanten stehen zur Verfügung, um Attribute von Zeichenzellen "
+"anzugeben. Welche Konstanten genau verfügbar sind, hängt vom System ab."
 
 #: ../../library/curses.rst:1522
 msgid "Attribute"
-msgstr ""
+msgstr "Attribut"
 
 #: ../../library/curses.rst:1522 ../../library/curses.rst:1567
 #: ../../library/curses.rst:1815 ../../library/curses.rst:1907
@@ -1723,271 +2463,276 @@ msgstr "Bedeutung"
 
 #: ../../library/curses.rst:1524
 msgid "Alternate character set mode"
-msgstr ""
+msgstr "Alternativer Zeichensatzmodus"
 
 #: ../../library/curses.rst:1526
 msgid "Blink mode"
-msgstr ""
+msgstr "Blinkmodus"
 
 #: ../../library/curses.rst:1528
 msgid "Bold mode"
-msgstr ""
+msgstr "Fettmodus"
 
 #: ../../library/curses.rst:1530
 msgid "Dim mode"
-msgstr ""
+msgstr "Gedimmter Modus"
 
 #: ../../library/curses.rst:1532
 msgid "Invisible or blank mode"
-msgstr ""
+msgstr "Unsichtbarer oder leerer Modus"
 
 #: ../../library/curses.rst:1534
 msgid "Italic mode"
-msgstr ""
+msgstr "Kursivmodus"
 
 #: ../../library/curses.rst:1536
 msgid "Normal attribute"
-msgstr ""
+msgstr "Normales Attribut"
 
 #: ../../library/curses.rst:1538
 msgid "Protected mode"
-msgstr ""
+msgstr "Geschützter Modus"
 
 #: ../../library/curses.rst:1540
 msgid "Reverse background and foreground colors"
-msgstr ""
+msgstr "Hintergrund- und Vordergrundfarben vertauschen"
 
 #: ../../library/curses.rst:1543
 msgid "Standout mode"
-msgstr ""
+msgstr "Standout-Modus (Hervorhebung)"
 
 #: ../../library/curses.rst:1545
 msgid "Underline mode"
-msgstr ""
+msgstr "Unterstreichungsmodus"
 
 #: ../../library/curses.rst:1547
 msgid "Horizontal highlight"
-msgstr ""
+msgstr "Horizontale Hervorhebung"
 
 #: ../../library/curses.rst:1549
 msgid "Left highlight"
-msgstr ""
+msgstr "Linke Hervorhebung"
 
 #: ../../library/curses.rst:1551
 msgid "Low highlight"
-msgstr ""
+msgstr "Untere Hervorhebung"
 
 #: ../../library/curses.rst:1553
 msgid "Right highlight"
-msgstr ""
+msgstr "Rechte Hervorhebung"
 
 #: ../../library/curses.rst:1555
 msgid "Top highlight"
-msgstr ""
+msgstr "Obere Hervorhebung"
 
 #: ../../library/curses.rst:1557
 msgid "Vertical highlight"
-msgstr ""
+msgstr "Vertikale Hervorhebung"
 
 #: ../../library/curses.rst:1560
 msgid "``A_ITALIC`` was added."
-msgstr ""
+msgstr "``A_ITALIC`` wurde hinzugefügt."
 
 #: ../../library/curses.rst:1563
 msgid ""
 "Several constants are available to extract corresponding attributes returned "
 "by some methods."
 msgstr ""
+"Mehrere Konstanten stehen zur Verfügung, um entsprechende Attribute zu "
+"extrahieren, die einige Methoden zurückgeben."
 
 #: ../../library/curses.rst:1567
 msgid "Bit-mask"
-msgstr ""
+msgstr "Bitmaske"
 
 #: ../../library/curses.rst:1569
 msgid "Bit-mask to extract attributes"
-msgstr ""
+msgstr "Bitmaske zum Extrahieren von Attributen"
 
 #: ../../library/curses.rst:1572
 msgid "Bit-mask to extract a character"
-msgstr ""
+msgstr "Bitmaske zum Extrahieren eines Zeichens"
 
 #: ../../library/curses.rst:1575
 msgid "Bit-mask to extract color-pair field information"
-msgstr ""
+msgstr "Bitmaske zum Extrahieren der Informationen des Farbpaar-Felds"
 
 #: ../../library/curses.rst:1581
 msgid ""
 "Keys are referred to by integer constants with names starting with  "
 "``KEY_``. The exact keycaps available are system dependent."
 msgstr ""
+"Auf Tasten wird über ganzzahlige Konstanten verwiesen, deren Namen mit "
+"``KEY_`` beginnen. Welche Tastenkappen genau verfügbar sind, hängt vom "
+"System ab."
 
 #: ../../library/curses.rst:1587
 msgid "Key constant"
-msgstr ""
+msgstr "Tastenkonstante"
 
 #: ../../library/curses.rst:1587
 msgid "Key"
-msgstr ""
+msgstr "Taste"
 
 #: ../../library/curses.rst:1589
 msgid "Minimum key value"
-msgstr ""
+msgstr "Minimaler Tastenwert"
 
 #: ../../library/curses.rst:1591
 msgid "Break key (unreliable)"
-msgstr ""
+msgstr "Break-Taste (unzuverlässig)"
 
 #: ../../library/curses.rst:1593
 msgid "Down-arrow"
-msgstr ""
+msgstr "Pfeil nach unten"
 
 #: ../../library/curses.rst:1595
 msgid "Up-arrow"
-msgstr ""
+msgstr "Pfeil nach oben"
 
 #: ../../library/curses.rst:1597
 msgid "Left-arrow"
-msgstr ""
+msgstr "Pfeil nach links"
 
 #: ../../library/curses.rst:1599
 msgid "Right-arrow"
-msgstr ""
+msgstr "Pfeil nach rechts"
 
 #: ../../library/curses.rst:1601
 msgid "Home key (upward+left arrow)"
-msgstr ""
+msgstr "Pos1-Taste (Pfeil nach oben und links)"
 
 #: ../../library/curses.rst:1603
 msgid "Backspace (unreliable)"
-msgstr ""
+msgstr "Rücktaste (unzuverlässig)"
 
 #: ../../library/curses.rst:1605
 msgid "Function keys.  Up to 64 function keys are supported."
-msgstr ""
+msgstr "Funktionstasten. Bis zu 64 Funktionstasten werden unterstützt."
 
 #: ../../library/curses.rst:1608
 msgid "Value of function key *n*"
-msgstr ""
+msgstr "Wert der Funktionstaste *n*"
 
 #: ../../library/curses.rst:1610
 msgid "Delete line"
-msgstr ""
+msgstr "Zeile löschen"
 
 #: ../../library/curses.rst:1612
 msgid "Insert line"
-msgstr ""
+msgstr "Zeile einfügen"
 
 #: ../../library/curses.rst:1614
 msgid "Delete character"
-msgstr ""
+msgstr "Zeichen löschen"
 
 #: ../../library/curses.rst:1616
 msgid "Insert char or enter insert mode"
-msgstr ""
+msgstr "Zeichen einfügen oder Einfügemodus betreten"
 
 #: ../../library/curses.rst:1618
 msgid "Exit insert char mode"
-msgstr ""
+msgstr "Einfügemodus für Zeichen verlassen"
 
 #: ../../library/curses.rst:1620
 msgid "Clear screen"
-msgstr ""
+msgstr "Bildschirm leeren"
 
 #: ../../library/curses.rst:1622
 msgid "Clear to end of screen"
-msgstr ""
+msgstr "Bis zum Ende des Bildschirms leeren"
 
 #: ../../library/curses.rst:1624
 msgid "Clear to end of line"
-msgstr ""
+msgstr "Bis zum Ende der Zeile leeren"
 
 #: ../../library/curses.rst:1626
 msgid "Scroll 1 line forward"
-msgstr ""
+msgstr "1 Zeile vorwärts scrollen"
 
 #: ../../library/curses.rst:1628
 msgid "Scroll 1 line backward (reverse)"
-msgstr ""
+msgstr "1 Zeile rückwärts scrollen (umgekehrt)"
 
 #: ../../library/curses.rst:1630
 msgid "Next page"
-msgstr ""
+msgstr "Nächste Seite"
 
 #: ../../library/curses.rst:1632
 msgid "Previous page"
-msgstr ""
+msgstr "Vorherige Seite"
 
 #: ../../library/curses.rst:1634
 msgid "Set tab"
-msgstr ""
+msgstr "Tabulator setzen"
 
 #: ../../library/curses.rst:1636
 msgid "Clear tab"
-msgstr ""
+msgstr "Tabulator löschen"
 
 #: ../../library/curses.rst:1638
 msgid "Clear all tabs"
-msgstr ""
+msgstr "Alle Tabulatoren löschen"
 
 #: ../../library/curses.rst:1640
 msgid "Enter or send (unreliable)"
-msgstr ""
+msgstr "Eingabe oder Senden (unzuverlässig)"
 
 #: ../../library/curses.rst:1642
 msgid "Soft (partial) reset (unreliable)"
-msgstr ""
+msgstr "Weicher (teilweiser) Reset (unzuverlässig)"
 
 #: ../../library/curses.rst:1644
 msgid "Reset or hard reset (unreliable)"
-msgstr ""
+msgstr "Reset oder harter Reset (unzuverlässig)"
 
 #: ../../library/curses.rst:1646
 msgid "Print"
-msgstr ""
+msgstr "Drucken"
 
 #: ../../library/curses.rst:1648
 msgid "Home down or bottom (lower left)"
-msgstr ""
+msgstr "Nach unten oder zum unteren Ende (unten links)"
 
 #: ../../library/curses.rst:1650
 msgid "Upper left of keypad"
-msgstr ""
+msgstr "Oben links auf dem Keypad"
 
 #: ../../library/curses.rst:1652
 msgid "Upper right of keypad"
-msgstr ""
+msgstr "Oben rechts auf dem Keypad"
 
 #: ../../library/curses.rst:1654
 msgid "Center of keypad"
-msgstr ""
+msgstr "Mitte des Keypads"
 
 #: ../../library/curses.rst:1656
 msgid "Lower left of keypad"
-msgstr ""
+msgstr "Unten links auf dem Keypad"
 
 #: ../../library/curses.rst:1658
 msgid "Lower right of keypad"
-msgstr ""
+msgstr "Unten rechts auf dem Keypad"
 
 #: ../../library/curses.rst:1660
 msgid "Back tab"
-msgstr ""
+msgstr "Rück-Tabulator"
 
 #: ../../library/curses.rst:1662
 msgid "Beg (beginning)"
-msgstr ""
+msgstr "Beg (Anfang)"
 
 #: ../../library/curses.rst:1664
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: ../../library/curses.rst:1666
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 #: ../../library/curses.rst:1668
 msgid "Cmd (command)"
-msgstr ""
+msgstr "Cmd (Befehl)"
 
 #: ../../library/curses.rst:1670
 msgid "Copy"
@@ -1995,215 +2740,215 @@ msgstr "Kopieren"
 
 #: ../../library/curses.rst:1672
 msgid "Create"
-msgstr ""
+msgstr "Erzeugen"
 
 #: ../../library/curses.rst:1674
 msgid "End"
-msgstr ""
+msgstr "Ende"
 
 #: ../../library/curses.rst:1676
 msgid "Exit"
-msgstr ""
+msgstr "Beenden"
 
 #: ../../library/curses.rst:1678
 msgid "Find"
-msgstr ""
+msgstr "Suchen"
 
 #: ../../library/curses.rst:1680
 msgid "Help"
-msgstr ""
+msgstr "Hilfe"
 
 #: ../../library/curses.rst:1682
 msgid "Mark"
-msgstr ""
+msgstr "Markieren"
 
 #: ../../library/curses.rst:1684
 msgid "Message"
-msgstr ""
+msgstr "Meldung"
 
 #: ../../library/curses.rst:1686
 msgid "Move"
-msgstr ""
+msgstr "Verschieben"
 
 #: ../../library/curses.rst:1688
 msgid "Next"
-msgstr ""
+msgstr "Weiter"
 
 #: ../../library/curses.rst:1690
 msgid "Open"
-msgstr ""
+msgstr "Öffnen"
 
 #: ../../library/curses.rst:1692
 msgid "Options"
-msgstr ""
+msgstr "Optionen"
 
 #: ../../library/curses.rst:1694
 msgid "Prev (previous)"
-msgstr ""
+msgstr "Prev (vorherige)"
 
 #: ../../library/curses.rst:1696
 msgid "Redo"
-msgstr ""
+msgstr "Wiederholen"
 
 #: ../../library/curses.rst:1698
 msgid "Ref (reference)"
-msgstr ""
+msgstr "Ref (Referenz)"
 
 #: ../../library/curses.rst:1700
 msgid "Refresh"
-msgstr ""
+msgstr "Aktualisieren"
 
 #: ../../library/curses.rst:1702
 msgid "Replace"
-msgstr ""
+msgstr "Ersetzen"
 
 #: ../../library/curses.rst:1704
 msgid "Restart"
-msgstr ""
+msgstr "Neustart"
 
 #: ../../library/curses.rst:1706
 msgid "Resume"
-msgstr ""
+msgstr "Fortsetzen"
 
 #: ../../library/curses.rst:1708
 msgid "Save"
-msgstr ""
+msgstr "Speichern"
 
 #: ../../library/curses.rst:1710
 msgid "Shifted Beg (beginning)"
-msgstr ""
+msgstr "Umschalt+Beg (Anfang)"
 
 #: ../../library/curses.rst:1712
 msgid "Shifted Cancel"
-msgstr ""
+msgstr "Umschalt+Abbrechen"
 
 #: ../../library/curses.rst:1714
 msgid "Shifted Command"
-msgstr ""
+msgstr "Umschalt+Befehl"
 
 #: ../../library/curses.rst:1716
 msgid "Shifted Copy"
-msgstr ""
+msgstr "Umschalt+Kopieren"
 
 #: ../../library/curses.rst:1718
 msgid "Shifted Create"
-msgstr ""
+msgstr "Umschalt+Erzeugen"
 
 #: ../../library/curses.rst:1720
 msgid "Shifted Delete char"
-msgstr ""
+msgstr "Umschalt+Zeichen löschen"
 
 #: ../../library/curses.rst:1722
 msgid "Shifted Delete line"
-msgstr ""
+msgstr "Umschalt+Zeile löschen"
 
 #: ../../library/curses.rst:1724
 msgid "Select"
-msgstr ""
+msgstr "Auswählen"
 
 #: ../../library/curses.rst:1726
 msgid "Shifted End"
-msgstr ""
+msgstr "Umschalt+Ende"
 
 #: ../../library/curses.rst:1728
 msgid "Shifted Clear line"
-msgstr ""
+msgstr "Umschalt+Zeile leeren"
 
 #: ../../library/curses.rst:1730
 msgid "Shifted Exit"
-msgstr ""
+msgstr "Umschalt+Beenden"
 
 #: ../../library/curses.rst:1732
 msgid "Shifted Find"
-msgstr ""
+msgstr "Umschalt+Suchen"
 
 #: ../../library/curses.rst:1734
 msgid "Shifted Help"
-msgstr ""
+msgstr "Umschalt+Hilfe"
 
 #: ../../library/curses.rst:1736
 msgid "Shifted Home"
-msgstr ""
+msgstr "Umschalt+Pos1"
 
 #: ../../library/curses.rst:1738
 msgid "Shifted Input"
-msgstr ""
+msgstr "Umschalt+Eingabe"
 
 #: ../../library/curses.rst:1740
 msgid "Shifted Left arrow"
-msgstr ""
+msgstr "Umschalt+Pfeil nach links"
 
 #: ../../library/curses.rst:1742
 msgid "Shifted Message"
-msgstr ""
+msgstr "Umschalt+Meldung"
 
 #: ../../library/curses.rst:1744
 msgid "Shifted Move"
-msgstr ""
+msgstr "Umschalt+Verschieben"
 
 #: ../../library/curses.rst:1746
 msgid "Shifted Next"
-msgstr ""
+msgstr "Umschalt+Weiter"
 
 #: ../../library/curses.rst:1748
 msgid "Shifted Options"
-msgstr ""
+msgstr "Umschalt+Optionen"
 
 #: ../../library/curses.rst:1750
 msgid "Shifted Prev"
-msgstr ""
+msgstr "Umschalt+Prev"
 
 #: ../../library/curses.rst:1752
 msgid "Shifted Print"
-msgstr ""
+msgstr "Umschalt+Drucken"
 
 #: ../../library/curses.rst:1754
 msgid "Shifted Redo"
-msgstr ""
+msgstr "Umschalt+Wiederholen"
 
 #: ../../library/curses.rst:1756
 msgid "Shifted Replace"
-msgstr ""
+msgstr "Umschalt+Ersetzen"
 
 #: ../../library/curses.rst:1758
 msgid "Shifted Right arrow"
-msgstr ""
+msgstr "Umschalt+Pfeil nach rechts"
 
 #: ../../library/curses.rst:1760
 msgid "Shifted Resume"
-msgstr ""
+msgstr "Umschalt+Fortsetzen"
 
 #: ../../library/curses.rst:1762
 msgid "Shifted Save"
-msgstr ""
+msgstr "Umschalt+Speichern"
 
 #: ../../library/curses.rst:1764
 msgid "Shifted Suspend"
-msgstr ""
+msgstr "Umschalt+Anhalten"
 
 #: ../../library/curses.rst:1766
 msgid "Shifted Undo"
-msgstr ""
+msgstr "Umschalt+Rückgängig"
 
 #: ../../library/curses.rst:1768
 msgid "Suspend"
-msgstr ""
+msgstr "Anhalten"
 
 #: ../../library/curses.rst:1770
 msgid "Undo"
-msgstr ""
+msgstr "Rückgängig"
 
 #: ../../library/curses.rst:1772
 msgid "Mouse event has occurred"
-msgstr ""
+msgstr "Ein Mausereignis ist aufgetreten"
 
 #: ../../library/curses.rst:1774
 msgid "Terminal resize event"
-msgstr ""
+msgstr "Ereignis zur Größenänderung des Terminals"
 
 #: ../../library/curses.rst:1776
 msgid "Maximum key value"
-msgstr ""
+msgstr "Maximaler Tastenwert"
 
 #: ../../library/curses.rst:1779
 msgid ""
@@ -2217,63 +2962,72 @@ msgid ""
 "keyboards may have only ten function keys); also, the following keypad "
 "mappings are standard:"
 msgstr ""
+"Auf VT100-Terminals und ihren Software-Emulationen, etwa X-"
+"Terminalemulatoren, sind normalerweise mindestens vier Funktionstasten "
+"(:const:`KEY_F1 <KEY_Fn>`, :const:`KEY_F2 <KEY_Fn>`, :const:`KEY_F3 "
+"<KEY_Fn>`, :const:`KEY_F4 <KEY_Fn>`) verfügbar, und die Pfeiltasten sind auf "
+"naheliegende Weise auf :const:`KEY_UP`, :const:`KEY_DOWN`, :const:`KEY_LEFT` "
+"und :const:`KEY_RIGHT` abgebildet. Hat dein Rechner eine PC-Tastatur, kannst "
+"du sicher Pfeiltasten und zwölf Funktionstasten erwarten (ältere PC-"
+"Tastaturen haben möglicherweise nur zehn Funktionstasten). Außerdem sind die "
+"folgenden Keypad-Zuordnungen Standard:"
 
 #: ../../library/curses.rst:1788
 msgid "Keycap"
-msgstr ""
+msgstr "Tastenkappe"
 
 #: ../../library/curses.rst:1788 ../../library/curses.rst:1933
 #: ../../library/curses.rst:2059
 msgid "Constant"
-msgstr ""
+msgstr "Constant"
 
 #: ../../library/curses.rst:1790
 msgid ":kbd:`Insert`"
-msgstr ""
+msgstr ":kbd:`Insert`"
 
 #: ../../library/curses.rst:1790
 msgid "KEY_IC"
-msgstr ""
+msgstr "KEY_IC"
 
 #: ../../library/curses.rst:1792
 msgid ":kbd:`Delete`"
-msgstr ""
+msgstr ":kbd:`Delete`"
 
 #: ../../library/curses.rst:1792
 msgid "KEY_DC"
-msgstr ""
+msgstr "KEY_DC"
 
 #: ../../library/curses.rst:1794
 msgid ":kbd:`Home`"
-msgstr ""
+msgstr ":kbd:`Home`"
 
 #: ../../library/curses.rst:1794
 msgid "KEY_HOME"
-msgstr ""
+msgstr "KEY_HOME"
 
 #: ../../library/curses.rst:1796
 msgid ":kbd:`End`"
-msgstr ""
+msgstr ":kbd:`End`"
 
 #: ../../library/curses.rst:1796
 msgid "KEY_END"
-msgstr ""
+msgstr "KEY_END"
 
 #: ../../library/curses.rst:1798
 msgid ":kbd:`Page Up`"
-msgstr ""
+msgstr ":kbd:`Page Up`"
 
 #: ../../library/curses.rst:1798
 msgid "KEY_PPAGE"
-msgstr ""
+msgstr "KEY_PPAGE"
 
 #: ../../library/curses.rst:1800
 msgid ":kbd:`Page Down`"
-msgstr ""
+msgstr ":kbd:`Page Down`"
 
 #: ../../library/curses.rst:1800
 msgid "KEY_NPAGE"
-msgstr ""
+msgstr "KEY_NPAGE"
 
 #: ../../library/curses.rst:1805
 msgid ""
@@ -2282,271 +3036,277 @@ msgid ""
 "software emulations such as X terminals.  When there is no graphic "
 "available, curses falls back on a crude printable ASCII approximation."
 msgstr ""
+"In der folgenden Tabelle stehen Zeichen aus dem alternativen Zeichensatz. "
+"Diese sind vom VT100-Terminal geerbt und stehen im Allgemeinen auf Software-"
+"Emulationen wie X-Terminals zur Verfügung. Ist keine Grafik verfügbar, "
+"greift curses auf eine grobe druckbare ASCII-Annäherung zurück."
 
 #: ../../library/curses.rst:1812
 msgid "These are available only after :func:`initscr` has  been called."
-msgstr ""
+msgstr "Diese stehen erst nach dem Aufruf von :func:`initscr` zur Verfügung."
 
 #: ../../library/curses.rst:1815
 msgid "ACS code"
-msgstr ""
+msgstr "ACS code"
 
 #: ../../library/curses.rst:1817
 msgid "alternate name for upper-right corner"
-msgstr ""
+msgstr "alternativer Name für die obere rechte Ecke"
 
 #: ../../library/curses.rst:1819
 msgid "solid square block"
-msgstr ""
+msgstr "massiver quadratischer Block"
 
 #: ../../library/curses.rst:1821
 msgid "board of squares"
-msgstr ""
+msgstr "Quadratbrett"
 
 #: ../../library/curses.rst:1823
 msgid "alternate name for horizontal line"
-msgstr ""
+msgstr "alternativer Name für die horizontale Linie"
 
 #: ../../library/curses.rst:1825
 msgid "alternate name for upper-left corner"
-msgstr ""
+msgstr "alternativer Name für die obere linke Ecke"
 
 #: ../../library/curses.rst:1827
 msgid "alternate name for top tee"
-msgstr ""
+msgstr "alternativer Name für das obere T-Stück"
 
 #: ../../library/curses.rst:1829
 msgid "bottom tee"
-msgstr ""
+msgstr "unteres T-Stück"
 
 #: ../../library/curses.rst:1831
 msgid "bullet"
-msgstr ""
+msgstr "Aufzählungspunkt"
 
 #: ../../library/curses.rst:1833
 msgid "checker board (stipple)"
-msgstr ""
+msgstr "Schachbrettmuster (gepunktet)"
 
 #: ../../library/curses.rst:1835
 msgid "arrow pointing down"
-msgstr ""
+msgstr "Pfeil nach unten"
 
 #: ../../library/curses.rst:1837
 msgid "degree symbol"
-msgstr ""
+msgstr "Gradzeichen"
 
 #: ../../library/curses.rst:1839
 msgid "diamond"
-msgstr ""
+msgstr "Raute"
 
 #: ../../library/curses.rst:1841
 msgid "greater-than-or-equal-to"
-msgstr ""
+msgstr "größer oder gleich"
 
 #: ../../library/curses.rst:1843
 msgid "horizontal line"
-msgstr ""
+msgstr "horizontale Linie"
 
 #: ../../library/curses.rst:1845
 msgid "lantern symbol"
-msgstr ""
+msgstr "Laternensymbol"
 
 #: ../../library/curses.rst:1847
 msgid "left arrow"
-msgstr ""
+msgstr "Pfeil nach links"
 
 #: ../../library/curses.rst:1849
 msgid "less-than-or-equal-to"
-msgstr ""
+msgstr "kleiner oder gleich"
 
 #: ../../library/curses.rst:1851
 msgid "lower-left corner"
-msgstr ""
+msgstr "untere linke Ecke"
 
 #: ../../library/curses.rst:1853
 msgid "lower-right corner"
-msgstr ""
+msgstr "untere rechte Ecke"
 
 #: ../../library/curses.rst:1855
 msgid "left tee"
-msgstr ""
+msgstr "linkes T-Stück"
 
 #: ../../library/curses.rst:1857
 msgid "not-equal sign"
-msgstr ""
+msgstr "Ungleichzeichen"
 
 #: ../../library/curses.rst:1859
 msgid "letter pi"
-msgstr ""
+msgstr "Buchstabe Pi"
 
 #: ../../library/curses.rst:1861
 msgid "plus-or-minus sign"
-msgstr ""
+msgstr "Plus-Minus-Zeichen"
 
 #: ../../library/curses.rst:1863
 msgid "big plus sign"
-msgstr ""
+msgstr "großes Pluszeichen"
 
 #: ../../library/curses.rst:1865
 msgid "right arrow"
-msgstr ""
+msgstr "Pfeil nach rechts"
 
 #: ../../library/curses.rst:1867
 msgid "right tee"
-msgstr ""
+msgstr "rechtes T-Stück"
 
 #: ../../library/curses.rst:1869
 msgid "scan line 1"
-msgstr ""
+msgstr "Scanline 1"
 
 #: ../../library/curses.rst:1871
 msgid "scan line 3"
-msgstr ""
+msgstr "Scanline 3"
 
 #: ../../library/curses.rst:1873
 msgid "scan line 7"
-msgstr ""
+msgstr "Scanline 7"
 
 #: ../../library/curses.rst:1875
 msgid "scan line 9"
-msgstr ""
+msgstr "Scanline 9"
 
 #: ../../library/curses.rst:1877
 msgid "alternate name for lower-right corner"
-msgstr ""
+msgstr "alternativer Name für die untere rechte Ecke"
 
 #: ../../library/curses.rst:1879
 msgid "alternate name for vertical line"
-msgstr ""
+msgstr "alternativer Name für die vertikale Linie"
 
 #: ../../library/curses.rst:1881
 msgid "alternate name for right tee"
-msgstr ""
+msgstr "alternativer Name für das rechte T-Stück"
 
 #: ../../library/curses.rst:1883
 msgid "alternate name for lower-left corner"
-msgstr ""
+msgstr "alternativer Name für die untere linke Ecke"
 
 #: ../../library/curses.rst:1885
 msgid "alternate name for bottom tee"
-msgstr ""
+msgstr "alternativer Name für das untere T-Stück"
 
 #: ../../library/curses.rst:1887
 msgid "alternate name for left tee"
-msgstr ""
+msgstr "alternativer Name für das linke T-Stück"
 
 #: ../../library/curses.rst:1889
 msgid "alternate name for crossover or big plus"
-msgstr ""
+msgstr "alternativer Name für die Kreuzung oder das große Plus"
 
 #: ../../library/curses.rst:1891
 msgid "pound sterling"
-msgstr ""
+msgstr "Pfund Sterling"
 
 #: ../../library/curses.rst:1893
 msgid "top tee"
-msgstr ""
+msgstr "oberes T-Stück"
 
 #: ../../library/curses.rst:1895
 msgid "up arrow"
-msgstr ""
+msgstr "Pfeil nach oben"
 
 #: ../../library/curses.rst:1897
 msgid "upper-left corner"
-msgstr ""
+msgstr "obere linke Ecke"
 
 #: ../../library/curses.rst:1899
 msgid "upper-right corner"
-msgstr ""
+msgstr "obere rechte Ecke"
 
 #: ../../library/curses.rst:1901
 msgid "vertical line"
-msgstr ""
+msgstr "vertikale Linie"
 
 #: ../../library/curses.rst:1904
 msgid ""
 "The following table lists mouse button constants used by :meth:`getmouse`:"
 msgstr ""
+"Die folgende Tabelle listet Konstanten für Maustasten auf, "
+"die :meth:`getmouse` verwendet:"
 
 #: ../../library/curses.rst:1907
 msgid "Mouse button constant"
-msgstr ""
+msgstr "Konstante der Maustaste"
 
 #: ../../library/curses.rst:1909
 msgid "Mouse button *n* pressed"
-msgstr ""
+msgstr "Maustaste *n* gedrückt"
 
 #: ../../library/curses.rst:1911
 msgid "Mouse button *n* released"
-msgstr ""
+msgstr "Maustaste *n* losgelassen"
 
 #: ../../library/curses.rst:1913
 msgid "Mouse button *n* clicked"
-msgstr ""
+msgstr "Maustaste *n* geklickt"
 
 #: ../../library/curses.rst:1915
 msgid "Mouse button *n* double clicked"
-msgstr ""
+msgstr "Maustaste *n* doppelt geklickt"
 
 #: ../../library/curses.rst:1917
 msgid "Mouse button *n* triple clicked"
-msgstr ""
+msgstr "Maustaste *n* dreifach geklickt"
 
 #: ../../library/curses.rst:1919
 msgid "Shift was down during button state change"
-msgstr ""
+msgstr "Umschalt war bei der Änderung des Tastenzustands gedrückt"
 
 #: ../../library/curses.rst:1921
 msgid "Control was down during button state change"
-msgstr ""
+msgstr "Strg war bei der Änderung des Tastenzustands gedrückt"
 
 #: ../../library/curses.rst:1923
 msgid "Alt was down during button state change"
-msgstr ""
+msgstr "Alt war bei der Änderung des Tastenzustands gedrückt"
 
 #: ../../library/curses.rst:1930
 msgid "The following table lists the predefined colors:"
-msgstr ""
+msgstr "Die folgende Tabelle listet die vordefinierten Farben auf:"
 
 #: ../../library/curses.rst:1933
 msgid "Color"
-msgstr ""
+msgstr "Farbe"
 
 #: ../../library/curses.rst:1935
 msgid "Black"
-msgstr ""
+msgstr "Schwarz"
 
 #: ../../library/curses.rst:1937
 msgid "Blue"
-msgstr ""
+msgstr "Blau"
 
 #: ../../library/curses.rst:1939
 msgid "Cyan (light greenish blue)"
-msgstr ""
+msgstr "Cyan (helles Grünlichblau)"
 
 #: ../../library/curses.rst:1941
 msgid "Green"
-msgstr ""
+msgstr "Grün"
 
 #: ../../library/curses.rst:1943
 msgid "Magenta (purplish red)"
-msgstr ""
+msgstr "Magenta (Purpurrot)"
 
 #: ../../library/curses.rst:1945
 msgid "Red"
-msgstr ""
+msgstr "Rot"
 
 #: ../../library/curses.rst:1947
 msgid "White"
-msgstr ""
+msgstr "Weiß"
 
 #: ../../library/curses.rst:1949
 msgid "Yellow"
-msgstr ""
+msgstr "Gelb"
 
 #: ../../library/curses.rst:1954
 msgid ":mod:`!curses.textpad` --- Text input widget for curses programs"
-msgstr ""
+msgstr ":mod:`!curses.textpad` --- Texteingabe-Widget für curses-Programme"
 
 #: ../../library/curses.rst:1959
 msgid ""
@@ -2557,10 +3317,17 @@ msgid ""
 "a rectangle-drawing function useful for framing text boxes or for other "
 "purposes."
 msgstr ""
+"Das Modul :mod:`!curses.textpad` bietet eine Klasse :class:`Textbox`, die "
+"elementare Textbearbeitung in einem curses-Fenster behandelt und eine Reihe "
+"von Tastenbelegungen unterstützt, die denen von Emacs ähneln (und damit auch "
+"denen von Netscape Navigator, BBedit 6.x, FrameMaker und vielen anderen "
+"Programmen). Das Modul bietet außerdem eine Funktion zum Zeichnen von "
+"Rechtecken, die sich zum Einrahmen von Textboxen oder für andere Zwecke "
+"eignet."
 
 #: ../../library/curses.rst:1965
 msgid "The module :mod:`!curses.textpad` defines the following function:"
-msgstr ""
+msgstr "Das Modul :mod:`!curses.textpad` definiert die folgende Funktion:"
 
 #: ../../library/curses.rst:1970
 msgid ""
@@ -2573,14 +3340,22 @@ msgid ""
 "(including xterm and most other software terminal emulators).  Otherwise it "
 "will be drawn with ASCII  dashes, vertical bars, and plus signs."
 msgstr ""
+"Zeichnet ein Rechteck. Das erste Argument muss ein Fensterobjekt sein, die "
+"übrigen Argumente sind Koordinaten relativ zu diesem Fenster. Das zweite und "
+"dritte Argument sind die y- und x-Koordinate der oberen linken Ecke des zu "
+"zeichnenden Rechtecks, das vierte und fünfte Argument die y- und x-"
+"Koordinate der unteren rechten Ecke. Das Rechteck wird auf Terminals, die "
+"das erlauben (einschließlich xterm und den meisten anderen Software-"
+"Terminalemulatoren), mit VT100/IBM-PC-Rahmenzeichen gezeichnet. Andernfalls "
+"wird es mit ASCII-Strichen, senkrechten Strichen und Pluszeichen gezeichnet."
 
 #: ../../library/curses.rst:1983
 msgid "Textbox objects"
-msgstr ""
+msgstr "Textbox-Objekte"
 
 #: ../../library/curses.rst:1985
 msgid "You can instantiate a :class:`Textbox` object as follows:"
-msgstr ""
+msgstr "Du kannst ein :class:`Textbox`-Objekt wie folgt instanziieren:"
 
 #: ../../library/curses.rst:1990
 msgid ""
@@ -2592,10 +3367,17 @@ msgid ""
 "of the containing window, with coordinates ``(0, 0)``. The "
 "instance's :attr:`stripspaces` flag is initially on."
 msgstr ""
+"Gibt ein Textbox-Widget-Objekt zurück. Das Argument *win* sollte ein "
+"curses-:ref:`Fenster <curses-window-objects>`-Objekt sein, in dem die "
+"Textbox enthalten sein soll. Ist *insert_mode* wahr, fügt die Textbox "
+"getippte Zeichen ein und verschiebt vorhandenen Text nach rechts, statt ihn "
+"zu überschreiben. Der Bearbeitungs-Cursor der Textbox steht anfangs in der "
+"oberen linken Ecke des enthaltenden Fensters, mit den Koordinaten ``(0, "
+"0)``. Das Flag :attr:`stripspaces` der Instanz ist anfangs eingeschaltet."
 
 #: ../../library/curses.rst:1998
 msgid ":class:`Textbox` objects have the following methods:"
-msgstr ""
+msgstr ":class:`Textbox`-Objekte haben die folgenden Methoden:"
 
 #: ../../library/curses.rst:2003
 msgid ""
@@ -2607,6 +3389,14 @@ msgid ""
 "This method returns the window contents as a string; whether blanks in the "
 "window are included is affected by the :attr:`stripspaces` attribute."
 msgstr ""
+"Das ist der Einstiegspunkt, den du normalerweise verwendest. Er akzeptiert "
+"Bearbeitungs-Tastendrücke, bis einer der Beendigungs-Tastendrücke eingegeben "
+"wird. Ist *validate* angegeben, muss es eine Funktion sein. Sie wird für "
+"jeden eingegebenen Tastendruck mit dem Tastendruck als Parameter aufgerufen, "
+"und die Befehlsverteilung erfolgt anhand des Ergebnisses. Gibt sie einen "
+"falschen Wert zurück, wird der Tastendruck ignoriert. Diese Methode gibt den "
+"Fensterinhalt als Zeichenkette zurück. Ob Leerzeichen im Fenster "
+"eingeschlossen sind, wird vom Attribut :attr:`stripspaces` beeinflusst."
 
 #: ../../library/curses.rst:2015
 msgid ""
@@ -2614,162 +3404,177 @@ msgid ""
 "``0`` if a termination keystroke was processed.  Here are the supported "
 "special keystrokes:"
 msgstr ""
+"Verarbeitet einen einzelnen Befehls-Tastendruck. Gibt ``1`` zurück, um die "
+"Bearbeitung fortzusetzen, oder ``0``, wenn ein Beendigungs-Tastendruck "
+"verarbeitet wurde. Hier sind die unterstützten besonderen Tastendrücke:"
 
 #: ../../library/curses.rst:2020 ../../library/curses.rst:2059
 msgid "Keystroke"
-msgstr ""
+msgstr "Keystroke"
 
 #: ../../library/curses.rst:2020
 msgid "Action"
-msgstr ""
+msgstr "Aktion"
 
 #: ../../library/curses.rst:2022
 msgid ":kbd:`Control-A`"
-msgstr ""
+msgstr ":kbd:`Control-A`"
 
 #: ../../library/curses.rst:2022
 msgid "Go to left edge of window."
-msgstr ""
+msgstr "Zum linken Rand des Fensters gehen."
 
 #: ../../library/curses.rst:2024 ../../library/curses.rst:2061
 msgid ":kbd:`Control-B`"
-msgstr ""
+msgstr ":kbd:`Control-B`"
 
 #: ../../library/curses.rst:2024
 msgid "Cursor left, wrapping to previous line if appropriate."
-msgstr ""
+msgstr "Cursor nach links, bei Bedarf in die vorherige Zeile umbrechen."
 
 #: ../../library/curses.rst:2027
 msgid ":kbd:`Control-D`"
-msgstr ""
+msgstr ":kbd:`Control-D`"
 
 #: ../../library/curses.rst:2027
 msgid "Delete character under cursor."
-msgstr ""
+msgstr "Zeichen unter dem Cursor löschen."
 
 #: ../../library/curses.rst:2029
 msgid ":kbd:`Control-E`"
-msgstr ""
+msgstr ":kbd:`Control-E`"
 
 #: ../../library/curses.rst:2029
 msgid "Go to right edge (stripspaces off) or end of line (stripspaces on)."
 msgstr ""
+"Zum rechten Rand gehen (stripspaces aus) oder zum Zeilenende (stripspaces "
+"an)."
 
 #: ../../library/curses.rst:2032 ../../library/curses.rst:2063
 msgid ":kbd:`Control-F`"
-msgstr ""
+msgstr ":kbd:`Control-F`"
 
 #: ../../library/curses.rst:2032
 msgid "Cursor right, wrapping to next line when appropriate."
-msgstr ""
+msgstr "Cursor nach rechts, bei Bedarf in die nächste Zeile umbrechen."
 
 #: ../../library/curses.rst:2035
 msgid ":kbd:`Control-G`"
-msgstr ""
+msgstr ":kbd:`Control-G`"
 
 #: ../../library/curses.rst:2035
 msgid "Terminate, returning the window contents."
-msgstr ""
+msgstr "Beenden und den Fensterinhalt zurückgeben."
 
 #: ../../library/curses.rst:2037
 msgid ":kbd:`Control-H`"
-msgstr ""
+msgstr ":kbd:`Control-H`"
 
 #: ../../library/curses.rst:2037
 msgid "Delete character backward."
-msgstr ""
+msgstr "Zeichen rückwärts löschen."
 
 #: ../../library/curses.rst:2039
 msgid ":kbd:`Control-J`"
-msgstr ""
+msgstr ":kbd:`Control-J`"
 
 #: ../../library/curses.rst:2039
 msgid ""
 "Terminate if the window is 1 line, otherwise move to the start of the next "
 "line."
 msgstr ""
+"Beenden, wenn das Fenster 1 Zeile hat, andernfalls zum Anfang der nächsten "
+"Zeile gehen."
 
 #: ../../library/curses.rst:2043
 msgid ":kbd:`Control-K`"
-msgstr ""
+msgstr ":kbd:`Control-K`"
 
 #: ../../library/curses.rst:2043
 msgid "If line is blank, delete it, otherwise clear to end of line."
 msgstr ""
+"Ist die Zeile leer, sie löschen, andernfalls bis zum Zeilenende leeren."
 
 #: ../../library/curses.rst:2046
 msgid ":kbd:`Control-L`"
-msgstr ""
+msgstr ":kbd:`Control-L`"
 
 #: ../../library/curses.rst:2046
 msgid "Refresh screen."
-msgstr ""
+msgstr "Bildschirm aktualisieren."
 
 #: ../../library/curses.rst:2048 ../../library/curses.rst:2067
 msgid ":kbd:`Control-N`"
-msgstr ""
+msgstr ":kbd:`Control-N`"
 
 #: ../../library/curses.rst:2048
 msgid "Cursor down; move down one line."
-msgstr ""
+msgstr "Cursor nach unten, eine Zeile nach unten gehen."
 
 #: ../../library/curses.rst:2050
 msgid ":kbd:`Control-O`"
-msgstr ""
+msgstr ":kbd:`Control-O`"
 
 #: ../../library/curses.rst:2050
 msgid "Insert a blank line at cursor location."
-msgstr ""
+msgstr "Eine leere Zeile an der Cursor-Position einfügen."
 
 #: ../../library/curses.rst:2052 ../../library/curses.rst:2065
 msgid ":kbd:`Control-P`"
-msgstr ""
+msgstr ":kbd:`Control-P`"
 
 #: ../../library/curses.rst:2052
 msgid "Cursor up; move up one line."
-msgstr ""
+msgstr "Cursor nach oben, eine Zeile nach oben gehen."
 
 #: ../../library/curses.rst:2055
 msgid ""
 "Move operations do nothing if the cursor is at an edge where the movement is "
 "not possible.  The following synonyms are supported where possible:"
 msgstr ""
+"Bewegungsoperationen tun nichts, wenn der Cursor an einem Rand steht, an dem "
+"die Bewegung nicht möglich ist. Die folgenden Synonyme werden, wo möglich, "
+"unterstützt:"
 
 #: ../../library/curses.rst:2061
 msgid ":const:`~curses.KEY_LEFT`"
-msgstr ""
+msgstr ":const:`~curses.KEY_LEFT`"
 
 #: ../../library/curses.rst:2063
 msgid ":const:`~curses.KEY_RIGHT`"
-msgstr ""
+msgstr ":const:`~curses.KEY_RIGHT`"
 
 #: ../../library/curses.rst:2065
 msgid ":const:`~curses.KEY_UP`"
-msgstr ""
+msgstr ":const:`~curses.KEY_UP`"
 
 #: ../../library/curses.rst:2067
 msgid ":const:`~curses.KEY_DOWN`"
-msgstr ""
+msgstr ":const:`~curses.KEY_DOWN`"
 
 #: ../../library/curses.rst:2069
 msgid ":const:`~curses.KEY_BACKSPACE`"
-msgstr ""
+msgstr ":const:`~curses.KEY_BACKSPACE`"
 
 #: ../../library/curses.rst:2069
 msgid ":kbd:`Control-h`"
-msgstr ""
+msgstr ":kbd:`Control-h`"
 
 #: ../../library/curses.rst:2072
 msgid ""
 "All other keystrokes are treated as a command to insert the given character "
 "and move right (with line wrapping)."
 msgstr ""
+"Alle anderen Tastendrücke werden als Befehl behandelt, das angegebene "
+"Zeichen einzufügen und nach rechts zu gehen (mit Zeilenumbruch)."
 
 #: ../../library/curses.rst:2078
 msgid ""
 "Return the window contents as a string; whether blanks in the window are "
 "included is affected by the :attr:`stripspaces` member."
 msgstr ""
+"Gibt den Fensterinhalt als Zeichenkette zurück. Ob Leerzeichen im Fenster "
+"eingeschlossen sind, wird vom Mitglied :attr:`stripspaces` beeinflusst."
 
 #: ../../library/curses.rst:2084
 msgid ""
@@ -2779,3 +3584,9 @@ msgid ""
 "that line instead, and trailing blanks are stripped when the window contents "
 "are gathered."
 msgstr ""
+"Dieses Attribut ist ein Flag, das die Interpretation von Leerzeichen im "
+"Fenster steuert. Ist es eingeschaltet, werden nachgestellte Leerzeichen "
+"jeder Zeile ignoriert. Jede Cursorbewegung, die den Cursor auf einem "
+"nachgestellten Leerzeichen landen ließe, geht stattdessen zum Ende dieser "
+"Zeile, und nachgestellte Leerzeichen werden entfernt, wenn der Fensterinhalt "
+"gesammelt wird."
